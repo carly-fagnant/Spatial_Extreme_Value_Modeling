@@ -1,0 +1,52 @@
+Flow Title=Storage Routing Flows
+Program Version=4.10
+Number of Profiles= 8 
+Profile Names=0.2,0.4,0.6,0.8,1,1.2,1.5,2
+River Rch & RM=U106-00-00,U106-00-00_0006 ,34736.9 
+     196     392     588     784     980    1176    1470    1960
+River Rch & RM=U106-00-00,U106-00-00_0006 ,30145.7 
+     650    1300    1951    2601    3251    3901    4877    6502
+River Rch & RM=U106-00-00,U106-00-00_0006 ,22853.56
+    1252    2503    3755    5006    6258    7510    9387   12516
+River Rch & RM=U106-00-00,U106-00-00_0006 ,17659.51
+    1788    3575    5363    7150    8938   10726   13407   17876
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 1 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 2 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 3 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 4 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 5 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 6 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 7 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+Boundary for River Rch & Prof#=U106-00-00,U106-00-00_0006 , 8 
+Up Type= 0 
+Dn Type= 3 
+Dn Slope=0.0004
+DSS Import StartDate=
+DSS Import StartTime=
+DSS Import EndDate=
+DSS Import EndTime=
+DSS Import GetInterval= 0 
+DSS Import Interval=
+DSS Import GetPeak= 0 
+DSS Import FillOption= 0 

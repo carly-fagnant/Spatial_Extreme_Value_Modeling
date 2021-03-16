@@ -1,0 +1,268 @@
+Meteorology: 1% Event
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:54:44
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: TSARP-1%,M3 1% Basin,K100_L100_1_PCT
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1.00
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67.00
+     Depth: 0.0
+     Depth: 2.2000
+     Depth: 4.2000
+     Depth: 5.5000
+     Depth: 6.5000
+     Depth: 8.5000
+     Depth: 10.200
+     Depth: 12.400
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: K145A1
+End:
+
+Subbasin: K145A2
+End:
+
+Subbasin: K145B
+End:
+
+Subbasin: K145C
+End:
+
+Subbasin: K145D
+End:
+
+Subbasin: K100A
+End:
+
+Subbasin: K100B
+End:
+
+Subbasin: K166A
+End:
+
+Subbasin: K166B
+End:
+
+Subbasin: K166C
+End:
+
+Subbasin: K166D
+End:
+
+Subbasin: K166E
+End:
+
+Subbasin: K166F
+End:
+
+Subbasin: K166G
+End:
+
+Subbasin: K166H
+End:
+
+Subbasin: K100C
+End:
+
+Subbasin: K100D
+End:
+
+Subbasin: K100F
+End:
+
+Subbasin: K100G
+End:
+
+Subbasin: K100H
+End:
+
+Subbasin: K172A
+End:
+
+Subbasin: K160C
+End:
+
+Subbasin: K160A
+End:
+
+Subbasin: K160B
+End:
+
+Subbasin: K100I
+End:
+
+Subbasin: K157A
+End:
+
+Subbasin: K157B
+End:
+
+Subbasin: K155A
+End:
+
+Subbasin: K100J
+End:
+
+Subbasin: K100K
+End:
+
+Subbasin: K159A
+End:
+
+Subbasin: K100L
+End:
+
+Subbasin: K152A
+End:
+
+Subbasin: K100M
+End:
+
+Subbasin: K100N1
+End:
+
+Subbasin: K100N2
+End:
+
+Subbasin: L100A1
+End:
+
+Subbasin: L100A2
+End:
+
+Subbasin: L114B
+End:
+
+Subbasin: L114A
+End:
+
+Subbasin: L112A
+End:
+
+Subbasin: L100C
+End:
+
+Subbasin: L100D
+End:
+
+Subbasin: L100E
+End:
+
+Subbasin: L100F
+End:
+
+Subbasin: L100B
+End:
+
+Subbasin: K142A
+End:
+
+Subbasin: K142B
+End:
+
+Subbasin: K100O2
+End:
+
+Subbasin: K100O1
+End:
+
+Subbasin: K140A
+End:
+
+Subbasin: K100P
+End:
+
+Subbasin: K100Q
+End:
+
+Subbasin: K133A
+End:
+
+Subbasin: K100R
+End:
+
+Subbasin: K131B
+End:
+
+Subbasin: K131A1
+End:
+
+Subbasin: K131A2
+End:
+
+Subbasin: K131C
+End:
+
+Subbasin: K100S1
+End:
+
+Subbasin: K124A
+End:
+
+Subbasin: K124B
+End:
+
+Subbasin: K124C
+End:
+
+Subbasin: K120B
+End:
+
+Subbasin: K100T
+End:
+
+Subbasin: K120A
+End:
+
+Subbasin: K100U
+End:
+
+Subbasin: K116A
+End:
+
+Subbasin: K100V
+End:
+
+Subbasin: K112A
+End:
+
+Subbasin: K111A1
+End:
+
+Subbasin: K111A2
+End:
+
+Subbasin: K111A3
+End:
+
+Subbasin: K111A4
+End:
+
+Subbasin: K100X
+End:
+
+Subbasin: K160D
+End:
+
+Subbasin: K100S2
+End:
+
+Subbasin: L120A
+End:
+
+Subbasin: L120B
+End:

@@ -1,0 +1,52 @@
+Run: 0.2%_24HR
+     Default Description: Yes
+     Log File: 0.2__24HR.log
+     DSS File: LOMRO100_00_00.dss
+     Basin: O100-00-00
+     Precip: 0.2%_24HR
+     Control: Control 15
+     Precip Last Execution Date: 6 October 2014
+     Precip Last Execution Time: 15:26:19
+     Basin Last Execution Date: 6 October 2014
+     Basin Last Execution Time: 15:26:20
+End:
+
+Run: 1%_24HR
+     Default Description: Yes
+     Log File: 1__24HR.log
+     DSS File: LOMRO100_00_00.dss
+     Basin: O100-00-00
+     Precip: 1%_24HR
+     Control: Control 15
+     Precip Last Execution Date: 6 October 2014
+     Precip Last Execution Time: 15:26:24
+     Basin Last Execution Date: 6 October 2014
+     Basin Last Execution Time: 15:26:25
+End:
+
+Run: 10%_24HR
+     Default Description: Yes
+     Log File: 10__24HR.log
+     DSS File: LOMRO100_00_00.dss
+     Basin: O100-00-00
+     Precip: 10%_24HR
+     Control: Control 15
+     Precip Last Execution Date: 6 October 2014
+     Precip Last Execution Time: 15:26:30
+     Basin Last Execution Date: 6 October 2014
+     Basin Last Execution Time: 15:26:31
+End:
+
+Run: 2%_24HR
+     Default Description: Yes
+     Log File: 2__24HR.log
+     DSS File: LOMRO100_00_00.dss
+     Basin: O100-00-00
+     Precip: 2%_24HR
+     Control: Control 15
+     Precip Last Execution Date: 6 October 2014
+     Precip Last Execution Time: 15:26:34
+     Basin Last Execution Date: 6 October 2014
+     Basin Last Execution Time: 15:26:35
+End:
+

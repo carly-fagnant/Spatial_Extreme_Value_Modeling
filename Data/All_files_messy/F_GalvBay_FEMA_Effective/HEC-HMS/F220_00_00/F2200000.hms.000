@@ -1,0 +1,50 @@
+Project: F2200000
+     Description: HCFCD Unit # F220-00-00                                                                                                                             10,2,1,0.2 % Events                                                                                                                                              Filename: F2200000.hms                                                                                                                              Prepared by: Dannenbaum Engineering Corp.   Date: September 2003                                                                                Reviewed by: Brown & Gay Engineers   Date: September 2003                                                                                                    STATUS: Final                                                                                                                                                                           Tropical Storm Allison Recovery Project
+     Version: 2.2.1
+     Default DSS File Name: F2200000.dss
+End:
+
+Precipitation: 1% (100-YR)
+     FileName: 1___100_YR_.met
+     Description: 1% (100-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 10% (10-YR)
+     FileName: 10___10_YR_.met
+     Description: 10% (10-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 2% (50-YR)
+     FileName: 2___50_YR_.met
+     Description: 2% (50-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 0.2% (500-YR)
+     FileName: 0.2___500_YR_.met
+     Description: 0.2% (500-YR) Frequency Storm Event - Region 3
+End:
+
+Basin: f220_basin
+     FileName: f220_basin.basin
+     Description: 
+End:
+
+Control: JAN_2002
+     FileName: JAN_2002.control
+     Description: January 2002 Control Specifications (5-MIN)
+End:
+
+
+Default Attributes: 
+     Default Basin Unit System: English
+     Default Meteorology Unit System: English
+     Default Loss Rate: Green and Ampt
+     Default Transform: Clark
+     Default Baseflow: None
+     Default Route: Modified Puls
+     Default Precip: Frequency Based Hypothetical
+     Enable Flow Ratio: No
+     Enable Evapotranspiration: No
+     Compute Local Flow At Junctions: No
+     Missing Flow To Zero: No
+End: 

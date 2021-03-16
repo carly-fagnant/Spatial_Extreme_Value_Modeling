@@ -1,0 +1,242 @@
+Plan Title=Effective Floodway 2019 (Re-Study)
+Program Version=4.10
+Short Identifier=Eff+ReStudy FW                                                              
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U120-00-00      
+Encroach Reach=U120-00-00_0003 
+Encroach Node=19078.15
+       1  600.15  704.74
+Encroach Node=18208.46
+       1  844.71  938.36
+Encroach Node=18025.04
+       1  474.93  573.62
+Encroach Node=17455.63
+       1  753.95  850.62
+Encroach Node=17436.38
+       1  761.17  859.96
+Encroach Node=17413.48
+       1  731.51  831.31
+Encroach Node=17027.36
+       1  639.23     743
+Encroach Node=16098.47
+       1 1083.01 1192.34
+Encroach Node=16076.21
+       1 1124.99 1235.63
+Encroach Node=15958.48
+       1 1115.22 1249.89
+Encroach Node=15904.44
+       1 1134.97 1263.12
+Encroach Node=15024.47
+       1  590.88  715.04
+Encroach Node=14577.79
+       1  605.56  722.46
+Encroach Node=13914.49
+       1  303.32  435.27
+Encroach Node=12983.14
+       1  441.24  571.71
+Encroach Node=12936.39
+       1  471.52  568.95
+Encroach Node=12881.45
+       1  471.52  583.52
+Encroach Node=12864.04
+       1  461.66  602.95
+Encroach Node=12848   
+       1   451.8  578.66
+Encroach Node=12652.78
+       1  474.66   610.1
+Encroach Node=11780.53
+       1  317.59  444.71
+Encroach Node=11619.05
+       1  295.86  418.79
+Encroach Node=11542.75
+       1  295.86  413.81
+Encroach Node=11213.5 
+       1  408.94  538.07
+Encroach Node=10937.51
+       1   408.9  539.05
+Encroach Node=10913.84
+       1   408.9  539.05
+Encroach Node=10473.05
+       1  442.03  566.03
+Encroach Node=9957.791
+       1   407.2  542.03
+Encroach Node=8902.806
+       1  476.38  600.96
+Encroach Node=8091.412
+       1  381.99  501.69
+Encroach Node=7994.904
+       1     377  491.71
+Encroach Node=7883.304
+       1  393.99  542.57
+Encroach Node=7745.163
+       1  374.42  532.57
+Encroach Node=7660.303
+       1  372.94  522.12
+Encroach Node=7542.502
+       1  453.76  578.41
+Encroach Node=7360.69 
+       1   539.9  663.54
+Encroach Node=6817.104
+       1   83.53  206.38
+Encroach Node=5915.036
+       1   83.88  207.22
+Encroach Node=4916.15 
+       1  122.57  240.97
+Encroach Node=3978.517
+       1  274.07   392.7
+Encroach Node=3608.501
+       1  325.82  438.94
+Encroach Node=3387.121
+       1   308.3  415.81
+Encroach Node=2871.229
+       1  328.15  446.57
+Encroach Node=2597.571
+       1  472.65  584.45
+Encroach Node=2407.601
+       1  380.37  477.71
+Encroach Node=2096.011
+       1  239.42  353.77
+Encroach Node=2013.345
+       1  267.21   371.1
+Encroach Node=1924.927
+       1  289.02  408.61
+Encroach Node=1622.732
+       1  350.18  465.05
+Encroach Node=1125.422
+       1  270.35  359.44
+Encroach Node=997.7322
+       1     310     435
+Encroach Node=948.8668
+       1     310     440
+Encroach Node=873.4696
+       1  214.92  371.19
+Encroach Node=783.011 
+       1  219.91  376.17
+Encroach Node=736.1243
+       1  226.89  365.54
+Encroach Node=628.7742
+       1   217.5  346.71
+Encroach Node=534.5508
+       1  149.85  279.06
+Encroach Node=307.2545
+       1  181.12  310.08
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

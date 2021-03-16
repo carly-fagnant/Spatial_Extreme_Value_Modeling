@@ -1,0 +1,10 @@
+NOTE 10184:  Began computing simulation run "500YR" at time 11May2017, 17:08:26.
+NOTE 20364:  Found no parameter problems in meteorologic model "Rain_500YR".
+WARNING 20041:  NOAA criteria for storms with less than 1% exceedence frequency are only valid using data from Atlas 14.
+NOTE 40040:  The basin model contains 2 outlets: U1000000_0069_J, T1011300_0000_OUT
+NOTE 40049:  Found no parameter problems in basin model "U100_Basin_500YR".
+NOTE 10172:  Meteorologic model "Rain_500YR" needs to be computed.
+NOTE 40257:  Reservoir "U506_05_00" used a minimum time step of 100 seconds.
+WARNING 42803:  Computed diversion flow exceeded inflow for 896 time intervals at element "U2010801_0000_D"; diversion flow set to inflow.
+WARNING 42803:  Computed diversion flow exceeded inflow for 891 time intervals at element "U1010700_0033_D"; diversion flow set to inflow.
+NOTE 10185:  Finished computing simulation run "500YR" at time 11May2017, 17:08:35.

@@ -1,0 +1,65 @@
+Project: J100-00-00
+     Description: HCFCD Unit # J100_100_00
+     Version: 3.3
+     DSS File Name: j100_100_01.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 10%_24HR
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10%_24HR
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 
+End:
+
+Basin: J1000000_02PCT
+     FileName: J1000000_02PCT.basin
+     Description: 
+End:
+
+Basin: J1000000_10PCT
+     FileName: J1000000_10PCT.basin
+     Description: 
+End:
+
+Basin: J1000000_1PCT
+     FileName: J1000000_1PCT.basin
+     Description: 
+End:
+
+Basin: J1000000_2PCT
+     FileName: J1000000_2PCT.basin
+     Description: 
+End:
+
+Control: CONTROL15
+     FileName: CONTROL15.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

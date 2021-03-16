@@ -1,0 +1,5 @@
+NOTE 10184:  Began computing simulation run "10%_24HR" at time 19Jan2010, 13:03:21.
+NOTE 20364:  Found no parameter problems in meteorologic model "10%_24HR".
+NOTE 40049:  Found no parameter problems in basin model "O200-00-00".
+WARNING 42803:  Computed diversion flow exceeded inflow for 233 time intervals at element "O2000000_9901_D"; diversion flow set to inflow.
+NOTE 10185:  Finished computing simulation run "10%_24HR" at time 19Jan2010, 13:03:21.

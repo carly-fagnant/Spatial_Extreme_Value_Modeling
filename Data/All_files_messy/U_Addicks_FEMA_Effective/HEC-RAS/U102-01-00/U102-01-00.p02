@@ -1,0 +1,172 @@
+Plan Title=Effective Floodway 2019 (Re-Study)
+Program Version=4.10
+Short Identifier=Eff+ReStudy FW                                                              
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U102-01-00      
+Encroach Reach=U102-01-00_0006 
+Encroach Node=9263.177
+       1  288.56  368.17
+Encroach Node=8301.525
+       1  313.48  398.07
+Encroach Node=7814.029
+       1  214.63  303.92
+Encroach Node=7807.646
+       1  207.07  306.64
+Encroach Node=7786.81 
+       1  177.31  321.89
+Encroach Node=7757.207
+       1  189.06  320.74
+Encroach Node=7451.575
+       1  179.13  330.31
+Encroach Node=7366.426
+       1  275.72  434.42
+Encroach Node=7345.693
+       1   286.6  430.83
+Encroach Node=6456.532
+       1  304.37  439.09
+Encroach Node=5352.208
+       1  299.38  449.07
+Encroach Node=4464.653
+       1   99.55  248.88
+Encroach Node=3391.267
+       1  229.52  444.08
+Encroach Node=2965.148
+       1  381.22  611.03
+Encroach Node=2775.49 
+       1  375.97  698.14
+Encroach Node=2481.255
+       1  332.76  576.13
+Encroach Node=2146.282
+       1 1142.51 1296.97
+Encroach Node=2041.704
+       1 1201.11 1360.68
+Encroach Node=1081.651
+       1 1336.38 2039.41
+Encroach Node=1032.373
+       1 1457.92 2041.29
+Encroach Node=919.8665
+       1 1462.81 2046.17
+Encroach Node=845.0081
+       1 1398.69 1570.98
+Encroach Node=561.271 
+       1 1245.07 1441.26
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

@@ -1,0 +1,595 @@
+Plan Title=Effective FW 2021
+Program Version=4.10
+Short Identifier=PostPrj+LOMR FW                                                 
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,82591.49, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,81731.22, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,81073.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,80119.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78904.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78687.62, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78672.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78654.82, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78422.85, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,77603.52, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,76413.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,74758.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,74313.45, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,73108.58, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,71949.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,71324.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,69870.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,69031.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68924.32, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68899.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68877.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68441.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,67625.08, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,66253.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,65864.54, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,65139.42, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,64170.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63598.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63543.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63482.86, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63435.61, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63182.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,62613.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,61507.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,60176.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,59168.92, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,58086.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57213.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57093.08, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57037.9 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56832.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56666.18, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56470.21, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56194.89, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56132.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55887.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55580.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55351.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,54885.61, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,54244.41, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,53109.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52414.93, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52204.51, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52104.96, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52072.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52014.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51929.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51782.55, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51146.17, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51047.25, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,50998.88, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,49965.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,48859.02, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,47847.21, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,47111.71, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46984.47, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46926.72, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46873.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46507.83, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46401.06, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46387.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46369.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46304.02, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,45910.1 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,45379.92, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,44394.45, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,43344.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,42393.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41585.04, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41483.83, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41408.37, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41354.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,40963.29, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,40319   , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,39300.46, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,38178.64, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37416.59, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37245.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37207.97, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37157.18, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,36534.81, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,35899.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,34772.93, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,33548.85, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,33198.41, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,32860.97, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,32501.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31927.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31627.03, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31554.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31502.26, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30893.76, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30519.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30460.96, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30404.01, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,29758.59, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,28717.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,27577.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,26703.26, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,25612.09, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24471.49, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24458.73, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24381.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24132.54, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24113.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23852.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23538.14, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23202.72, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,22713.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,21190.79, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,20750.87, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,19692.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,20750.87, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,21190.79, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,22713.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23202.72, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23538.14, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,23852.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24113.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24132.54, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24381.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24458.73, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,24471.49, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,25612.09, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,26703.26, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,27577.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,28717.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,29758.59, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30404.01, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30460.96, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30519.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,30893.76, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31502.26, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31554.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31627.03, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,31927.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,32501.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,32860.97, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,33198.41, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,33548.85, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,34772.93, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,35899.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,36534.81, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37157.18, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37207.97, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37245.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,37416.59, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,38178.64, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,39300.46, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,40319   , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,40963.29, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41354.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41408.37, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41483.83, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,41585.04, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,42393.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,43344.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,44394.45, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,45379.92, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,45910.1 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46304.02, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46369.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46387.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46401.06, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46507.83, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46873.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46926.72, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,46984.47, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,47111.71, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,47847.21, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,48859.02, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,49965.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,50998.88, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51047.25, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51146.17, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51782.55, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,51929.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52014.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52072.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52104.96, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52204.51, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,52414.93, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,53109.38, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,54244.41, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,54885.61, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55351.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55580.36, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,55887.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56132.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56194.89, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56470.21, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56666.18, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,56832.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57037.9 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57093.08, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,57213.66, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,58086.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,59168.92, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,60176.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,61507.56, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,62613.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63182.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63435.61, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63482.86, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63543.31, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,63598.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,64170.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,65139.42, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,65864.54, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,66253.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,67625.08, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68441.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68877.77, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68899.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,68924.32, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,69031.07, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,69870.13, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,71324.16, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,71949.68, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,73108.58, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,74313.45, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,74758.11, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,76413.3 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,77603.52, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78422.85, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78654.82, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78672.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78687.62, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,78904.98, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,80119.4 , 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,81073.43, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,81731.22, 10 , 1 , 10 
+Vel Dist Location=U102-00-00      ,U102-00-00_0197 ,82591.49, 10 , 1 , 10 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U102-00-00      
+Encroach Reach=U102-00-00_0197 
+Encroach Node=82591.49
+       1 3797.94 9294.98
+Encroach Node=81731.22
+       1 3743.44 8789.76
+Encroach Node=81073.43
+       1 4146.85 8218.86
+Encroach Node=80119.4 
+       1 5297.11 8081.26
+Encroach Node=78904.98
+       1 5767.11 7670.39
+Encroach Node=78687.62
+       1  6799.4 8433.22
+Encroach Node=78654.82
+       1    6666 8462.04
+Encroach Node=78422.85
+       1 6836.01 8568.32
+Encroach Node=77603.52
+       1 7600.85 9147.44
+Encroach Node=76413.3 
+       1 6769.15 8339.68
+Encroach Node=74758.11
+       1 6472.97 8699.84
+Encroach Node=74313.45
+       1 7389.25 9280.23
+Encroach Node=73108.58
+       1 8012.5910470.83
+Encroach Node=71949.68
+       1 9148.97 11214.4
+Encroach Node=71324.16
+       1 9888.2911701.93
+Encroach Node=69870.13
+       1  9113.810636.73
+Encroach Node=69031.07
+       1 8226.07 9314.17
+Encroach Node=68924.32
+       1 7095.46    9196
+Encroach Node=68877.77
+       1    7010  9135.8
+Encroach Node=68441.07
+       1    6516 8546.17
+Encroach Node=67625.08
+       1 6198.77  8491.9
+Encroach Node=66253.16
+       1 6385.56 8418.97
+Encroach Node=65864.54
+       1 6322.07 8254.99
+Encroach Node=65139.42
+       1 6161.87 8289.26
+Encroach Node=64170.07
+       1    6658 8350.06
+Encroach Node=63598.3 
+       1 6868.63 8373.14
+Encroach Node=63543.31
+       1    6868    8585
+Encroach Node=63435.61
+       1 6850.12 8584.14
+Encroach Node=63182.11
+       1 6902.27 8615.27
+Encroach Node=62613.3 
+       1 7061.44 8684.28
+Encroach Node=61507.56
+       1 7090.43 9176.47
+Encroach Node=60176.11
+       1 7086.82 9408.62
+Encroach Node=59168.92
+       1 3864.16 5432.35
+Encroach Node=58086.16
+       1 3872.03    5329
+Encroach Node=57213.66
+       1 4233.76    5355
+Encroach Node=57093.08
+       1 3959.33 5291.12
+Encroach Node=57037.9 
+       1 3912.72    5255
+Encroach Node=56832.31
+       1 3884.72 5300.58
+Encroach Node=56666.18
+       1 4060.52 5294.44
+Encroach Node=56470.21
+       1 4110.67 5275.07
+Encroach Node=56194.89
+       1 4100.06 5274.84
+Encroach Node=56132.66
+       1 4084.76 5250.26
+Encroach Node=55887.13
+       1 4361.06 5161.69
+Encroach Node=55580.36
+       1 4444.97 5069.92
+Encroach Node=55351.98
+       1 4606.58 5131.03
+Encroach Node=54885.61
+       1 2698.11 2924.17
+Encroach Node=54244.41
+       1 2169.34 2321.92
+Encroach Node=53109.38
+       1 4446.19 4592.53
+Encroach Node=52414.93
+       1 4277.47 4431.54
+Encroach Node=52204.51
+       1 4269.68 4433.68
+Encroach Node=52104.96
+       1 4342.53 4548.89
+Encroach Node=52014.66
+       1 4362.17 4539.06
+Encroach Node=51929.68
+       1 4281.09 4497.69
+Encroach Node=51782.55
+       1 4321.44 4520.92
+Encroach Node=51146.17
+       1  3903.5 4129.87
+Encroach Node=50998.88
+       1 3963.46 4139.79
+Encroach Node=49965.56
+       1 3452.23 3599.82
+Encroach Node=48859.02
+       1 2501.05 2629.06
+Encroach Node=47847.21
+       1 2057.92 2239.85
+Encroach Node=47111.71
+       1 1861.37 2014.37
+Encroach Node=46984.47
+       1 1645.46 1779.37
+Encroach Node=46873.4 
+       1 1645.46 1774.42
+Encroach Node=46507.83
+       1 2022.65 2186.74
+Encroach Node=46401.06
+       1  1988.9  2156.9
+Encroach Node=46387.11
+       1 2074.44  2240.4
+Encroach Node=46369.31
+       1 2074.44  2240.4
+Encroach Node=46304.02
+       1 2064.55 2230.64
+Encroach Node=45910.1 
+       1 1994.46 2193.63
+Encroach Node=45379.92
+       1 1767.77 1923.81
+Encroach Node=44394.45
+       1 1824.25 1972.72
+Encroach Node=43344.77
+       1 1732.72 1883.76
+Encroach Node=42393.07
+       1 1411.83 1578.72
+Encroach Node=41585.04
+       1 1862.17 2009.96
+Encroach Node=41483.83
+       1 1771.96 1934.77
+Encroach Node=41354.38
+       1 1786.86 1944.53
+Encroach Node=40963.29
+       1 1219.99 1388.92
+Encroach Node=40319   
+       1 2665.81 2835.93
+Encroach Node=39300.46
+       1  2806.8 2983.28
+Encroach Node=38178.64
+       1 2438.81 2608.03
+Encroach Node=37416.59
+       1 1044.05 1207.82
+Encroach Node=37245.13
+       1 1253.17 1405.84
+Encroach Node=37157.18
+       1 1233.62 1405.84
+Encroach Node=36534.81
+       1 1971.09 2140.77
+Encroach Node=35899.56
+       1 1857.35 2032.23
+Encroach Node=34772.93
+       1 2081.87 2319.51
+Encroach Node=33548.85
+       1 2194.66 2455.06
+Encroach Node=33198.41
+       1  1586.1 2314.43
+Encroach Node=32860.97
+       1 1584.42 2103.68
+Encroach Node=32501.36
+       1 1727.93 1890.68
+Encroach Node=31927.16
+       1  949.51 1118.31
+Encroach Node=31627.03
+       1  779.07  973.43
+Encroach Node=31502.26
+       1  798.98 1038.33
+Encroach Node=30893.76
+       1 1155.21 1374.12
+Encroach Node=30519.31
+       1 1128.69 1342.58
+Encroach Node=30404.01
+       1 1158.66  1357.4
+Encroach Node=29758.59
+       1 1303.23 1487.27
+Encroach Node=28717.43
+       1 2435.92 2632.93
+Encroach Node=27577.4 
+       1 2857.58 3028.98
+Encroach Node=25612.09
+       1 2836.66 2959.83
+Encroach Node=24471.49
+       1 3413.83 3603.61
+Encroach Node=24458.73
+       1 3433.81 3623.59
+Encroach Node=24381.77
+       1 3413.79 3593.61
+Encroach Node=24132.54
+       1 3527.39 3707.18
+Encroach Node=24113.3 
+       1 3562.35 3747.12
+Encroach Node=23852.4 
+       1 3421.54 3616.26
+Encroach Node=23538.14
+       1 3163.75  3358.4
+Encroach Node=23202.72
+       1 2894.84 3089.83
+Encroach Node=22713.43
+       1 3421.05 3625.58
+Encroach Node=21190.79
+       1 1488.01 3219.76
+Encroach Node=20750.87
+       1 1492.21 3217.74
+Encroach Node=19692.43
+       1 1588.33 3107.28
+BEGIN DESCRIPTION:
+FEMA Effective Floodway November 2019 + LOMR 20-06-2070P
+Post-Project Condition
+END DESCRIPTION:
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

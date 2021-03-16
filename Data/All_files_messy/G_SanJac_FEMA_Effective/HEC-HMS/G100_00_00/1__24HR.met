@@ -1,0 +1,58 @@
+Meteorology: 1%_24HR
+     Description: 1% (100-YR) Frequency Storm Event - Region 3
+     Last Modified Date: 25 June 2007
+     Last Modified Time: 16:30:30
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: G1000000_1%
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 1.2
+     Depth: 2.1
+     Depth: 4.3
+     Depth: 5.7
+     Depth: 6.8
+     Depth: 9.1
+     Depth: 11.1
+     Depth: 13.5
+End:
+
+Subbasin: G100A
+End:
+
+Subbasin: G100B
+End:
+
+Subbasin: G100C
+End:
+
+Subbasin: G100D
+End:
+
+Subbasin: G100E
+End:
+
+Subbasin: G100F
+End:
+
+Subbasin: G100G
+End:
+
+Subbasin: G100H
+End:
+
+Subbasin: G100I
+End:
+
+Subbasin: G100J
+End:

@@ -1,0 +1,52 @@
+Run: J1000000_02%
+     Default Description: Yes
+     Log File: J1000000_02_.log
+     DSS File: j100_100_01.dss
+     Basin: J1000000_02PCT
+     Precip: 0.2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 24 February 2010
+     Precip Last Execution Time: 14:11:44
+     Basin Last Execution Date: 24 February 2010
+     Basin Last Execution Time: 14:11:45
+End:
+
+Run: J1000000_1%
+     Default Description: Yes
+     Log File: J1000000_1_.log
+     DSS File: j100_100_01.dss
+     Basin: J1000000_1PCT
+     Precip: 1%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 24 February 2010
+     Precip Last Execution Time: 15:48:25
+     Basin Last Execution Date: 24 February 2010
+     Basin Last Execution Time: 15:48:27
+End:
+
+Run: J1000000_10%
+     Default Description: Yes
+     Log File: J1000000_10_.log
+     DSS File: j100_100_01.dss
+     Basin: J1000000_10PCT
+     Precip: 10%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 24 February 2010
+     Precip Last Execution Time: 14:10:28
+     Basin Last Execution Date: 24 February 2010
+     Basin Last Execution Time: 14:10:29
+End:
+
+Run: J1000000_2%
+     Description: Basin: J1000000_2PCT  &  Met: 2%_24HR  &  Control: CONTROL15
+     Log File: J1000000_2_.log
+     DSS File: j100_100_01.dss
+     Basin: J1000000_2PCT
+     Precip: 2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 24 February 2010
+     Precip Last Execution Time: 14:11:06
+     Basin Last Execution Date: 24 February 2010
+     Basin Last Execution Time: 14:11:07
+End:
+

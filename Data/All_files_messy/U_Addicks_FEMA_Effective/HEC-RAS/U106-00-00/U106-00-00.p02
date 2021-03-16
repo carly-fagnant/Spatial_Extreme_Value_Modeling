@@ -1,0 +1,336 @@
+Plan Title=Effective Floodway 2019 (Re-Study)
+Program Version=4.10
+Short Identifier=Eff+ ReStudy FW                                                             
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U106-00-00      
+Encroach Reach=U106-00-00_0006 
+Encroach Node=34736.9 
+       1  269.84  384.77
+Encroach Node=33978.27
+       1  264.87  379.81
+Encroach Node=33232.65
+       1  264.56  379.37
+Encroach Node=32538.94
+       1   260.8  380.81
+Encroach Node=32158.55
+       1  923.88 1053.72
+Encroach Node=31892.18
+       1 1137.08 1226.85
+Encroach Node=31295.21
+       1 1726.81 1811.18
+Encroach Node=30906.18
+       1 2135.01 2227.85
+Encroach Node=30251.07
+       1 1504.49 1633.14
+Encroach Node=30237.72
+       1 1496.69 1626.84
+Encroach Node=30163.92
+       1 1491.71 1597.59
+Encroach Node=30145.7 
+       1 1498.92 1603.83
+Encroach Node=29925.7 
+       1 1157.86 1236.93
+Encroach Node=28984.21
+       1  647.26  745.22
+Encroach Node=28885.46
+       1  681.54  774.61
+Encroach Node=28808.57
+       1  671.22   763.1
+Encroach Node=28676.88
+       1  666.33  758.32
+Encroach Node=28596.48
+       1  704.27  799.26
+Encroach Node=28491.74
+       1  859.12  943.67
+Encroach Node=28110.07
+       1  753.24  836.46
+Encroach Node=27792.54
+       1  691.02  782.72
+Encroach Node=27664.41
+       1   686.1  797.04
+Encroach Node=27344.77
+       1   769.9  872.46
+Encroach Node=27238.83
+       1  815.62  965.93
+Encroach Node=27203.95
+       1  800.64  949.07
+Encroach Node=27108.55
+       1  793.14  945.59
+Encroach Node=27032.86
+       1  784.99  915.95
+Encroach Node=26660.09
+       1  822.81  936.42
+Encroach Node=26124.21
+       1  681.88  804.95
+Encroach Node=24973.88
+       1  691.67  819.07
+Encroach Node=24659.03
+       1  430.29  549.82
+Encroach Node=24544.18
+       1   443.5  563.09
+Encroach Node=24439.49
+       1  434.76   554.7
+Encroach Node=23995.34
+       1  570.86   698.5
+Encroach Node=23852.47
+       1  515.95  635.62
+Encroach Node=23788.41
+       1  522.23  641.98
+Encroach Node=23712.13
+       1  436.61   601.4
+Encroach Node=23589.06
+       1  374.69  504.58
+Encroach Node=23506.34
+       1  354.61  489.45
+Encroach Node=22853.56
+       1  342.96   470.5
+Encroach Node=22164.43
+       1  822.52  955.83
+Encroach Node=22005.4 
+       1  757.29  921.36
+Encroach Node=21941.71
+       1  757.29  936.25
+Encroach Node=21939.22
+       1  757.29  936.25
+Encroach Node=21928.05
+       1  772.19  921.36
+Encroach Node=21901.5 
+       1  767.22  906.47
+Encroach Node=21273.96
+       1  752.99  886.54
+Encroach Node=20985.72
+       1  749.23  908.22
+Encroach Node=20274.23
+       1 1174.46 1343.75
+Encroach Node=20114.5 
+       1 1121.07  1322.2
+Encroach Node=20066.32
+       1  1116.1 1317.33
+Encroach Node=19978.63
+       1 1136.94 1315.46
+Encroach Node=19902.81
+       1 1135.34 1324.49
+Encroach Node=19722.39
+       1 1228.51 1407.09
+Encroach Node=19379.8 
+       1 1256.61 1434.16
+Encroach Node=19149.03
+       1 1218.04 1397.62
+Encroach Node=18008.87
+       1 1134.98 1319.73
+Encroach Node=17829.24
+       1 1251.46  1445.5
+Encroach Node=17815.82
+       1 1232.62  1454.3
+Encroach Node=17675.65
+       1 1242.43 1469.18
+Encroach Node=17659.51
+       1  1225.9 1460.08
+Encroach Node=17099   
+       1   495.4  678.25
+Encroach Node=16293.39
+       1  324.15  503.25
+Encroach Node=15604.09
+       1 1016.55 1213.61
+Encroach Node=15471.62
+       1 1286.81 1515.31
+Encroach Node=15434.33
+       1 1286.81 1500.56
+Encroach Node=15350.12
+       1 1093.24 1299.83
+Encroach Node=15320.28
+       1 1088.44 1324.45
+Encroach Node=14811.87
+       1 1094.56 1269.17
+Encroach Node=14194.91
+       1 1490.81 1655.17
+Encroach Node=14061.19
+       1 1452.55 1624.54
+Encroach Node=14003.57
+       1 1452.55 1619.61
+Encroach Node=13646.79
+       1 1587.41 1764.46
+Encroach Node=13005.42
+       1 1340.94 1518.19
+Encroach Node=12230.04
+       1 1888.42 2070.04
+Encroach Node=11675.06
+       1 2287.33 2494.55
+Encroach Node=11568.75
+       1 1769.67 1924.19
+Encroach Node=11515.39
+       1 1759.75 1914.83
+Encroach Node=11005.42
+       1 1761.66 1938.85
+Encroach Node=10050.94
+       1 1144.98 1307.89
+Encroach Node=10025.62
+       1 1144.98 1303.07
+Encroach Node=10009.41
+       1 1121.48 1333.94
+Encroach Node=9878.908
+       1 1141.42 1324.13
+Encroach Node=9856.587
+       1 1142.32  1330.1
+Encroach Node=9832.995
+       1 1142.32 1310.13
+Encroach Node=9619.335
+       1 1114.95 1274.02
+Encroach Node=9578.745
+       1 1119.92 1284.02
+Encroach Node=8794.251
+       1 1452.62 1600.98
+Encroach Node=8163.752
+       1 1574.43 1720.86
+Encroach Node=7905.084
+       1  1561.4 1720.97
+Encroach Node=7388.485
+       1 1339.89 1489.23
+Encroach Node=7093.843
+       1 1425.33 1618.87
+Encroach Node=6479.06 
+       1 1412.58 1717.03
+Encroach Node=5787.579
+       1 1158.86  1343.4
+Encroach Node=5054.988
+       1 1131.91 1310.47
+Encroach Node=4135.911
+       1 1117.45  1310.2
+Encroach Node=3194.384
+       1 1240.11 1423.77
+Encroach Node=3027.574
+       1 1072.07 1271.65
+Encroach Node=2904.468
+       1 1081.69 1286.44
+Encroach Node=2393.094
+       1 1151.36 1339.31
+Encroach Node=1884.233
+       1 1017.18 1211.03
+Encroach Node=1354.328
+       1  911.51 1103.68
+Encroach Node=1154.309
+       1  798.86 1014.14
+Encroach Node=1145.811
+       1  798.86 1017.35
+Encroach Node=575.5177
+       1  480.08  702.47
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

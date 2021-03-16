@@ -1,0 +1,50 @@
+Project: O2000000
+     Description: HCFCD Unit # O200-00-00
+     Version: 3.3
+     DSS File Name: O2000000.dss
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% (100-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% (50-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% (10-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% (500-Year) Frequency Storm Event - Region 3
+End:
+
+Basin: O200-00-00
+     FileName: O200_00_00.basin
+     Description: Spring Gully (O200-00-00) watershed
+End:
+
+Control: Control 5 min
+     FileName: Control_5_min.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

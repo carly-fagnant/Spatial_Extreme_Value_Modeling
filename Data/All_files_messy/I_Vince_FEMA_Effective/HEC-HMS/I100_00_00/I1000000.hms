@@ -1,0 +1,50 @@
+Project: I1000000
+     Description: HCFCD Unit # I100-00-00
+     Version: 3.3
+     DSS File Name: I1000000.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 
+End:
+
+Precipitation: 1% _24HR
+     FileName: 1___24HR.met
+     Description: 
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 
+End:
+
+Basin: I100_00_00
+     FileName: I100_00_00.basin
+     Description: Vince & Little Vince Bayous (I100-00-00 & I101-00-00) watershed
+End:
+
+Control: Control 5 min
+     FileName: Control_5_min.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

@@ -1,0 +1,323 @@
+Meteorology: 1PCT_24HR
+     Description: 1% (100-YR) Frequency Storm Event (Region 2)
+     Last Modified Date: 3 January 2008
+     Last Modified Time: 16:15:55
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: P1000000
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 1.2000
+     Depth: 2.1000
+     Depth: 4.3000
+     Depth: 5.7000
+     Depth: 6.7000
+     Depth: 8.9000
+     Depth: 10.800
+     Depth: 13.200
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: P13005A
+End:
+
+Subbasin: P130B
+End:
+
+Subbasin: P13008A
+End:
+
+Subbasin: P100A
+End:
+
+Subbasin: P161A
+End:
+
+Subbasin: P100B
+End:
+
+Subbasin: P100C
+End:
+
+Subbasin: P100D
+End:
+
+Subbasin: P100E
+End:
+
+Subbasin: P152A
+End:
+
+Subbasin: P100G
+End:
+
+Subbasin: P100H
+End:
+
+Subbasin: P147B
+End:
+
+Subbasin: P100I
+End:
+
+Subbasin: P100J
+End:
+
+Subbasin: P100K
+End:
+
+Subbasin: P100L
+End:
+
+Subbasin: P100M
+End:
+
+Subbasin: P100N
+End:
+
+Subbasin: P100O
+End:
+
+Subbasin: P100P
+End:
+
+Subbasin: P100Q
+End:
+
+Subbasin: P100R
+End:
+
+Subbasin: P114A
+End:
+
+Subbasin: P100S
+End:
+
+Subbasin: P100T
+End:
+
+Subbasin: P100U
+End:
+
+Subbasin: P100V
+End:
+
+Subbasin: P107A
+End:
+
+Subbasin: P109A
+End:
+
+Subbasin: P110A
+End:
+
+Subbasin: P121A
+End:
+
+Subbasin: P125A
+End:
+
+Subbasin: P126A
+End:
+
+Subbasin: P127A
+End:
+
+Subbasin: P13002A
+End:
+
+Subbasin: P1300202A
+End:
+
+Subbasin: P13002B
+End:
+
+Subbasin: P13003A
+End:
+
+Subbasin: P13005D
+End:
+
+Subbasin: P13007A
+End:
+
+Subbasin: P13009A
+End:
+
+Subbasin: P130A
+End:
+
+Subbasin: P130C
+End:
+
+Subbasin: P130D
+End:
+
+Subbasin: P130E
+End:
+
+Subbasin: P130F
+End:
+
+Subbasin: P130G
+End:
+
+Subbasin: P130H
+End:
+
+Subbasin: P133A
+End:
+
+Subbasin: P133B
+End:
+
+Subbasin: P138A
+End:
+
+Subbasin: P138B
+End:
+
+Subbasin: P140B
+End:
+
+Subbasin: P145A
+End:
+
+Subbasin: P14503B
+End:
+
+Subbasin: P145E
+End:
+
+Subbasin: P146A
+End:
+
+Subbasin: P148A
+End:
+
+Subbasin: P156A
+End:
+
+Subbasin: P156B
+End:
+
+Subbasin: P118A
+End:
+
+Subbasin: P118B
+End:
+
+Subbasin: P11831C
+End:
+
+Subbasin: P118C
+End:
+
+Subbasin: P11823A
+End:
+
+Subbasin: P118D
+End:
+
+Subbasin: P11818A
+End:
+
+Subbasin: P118E
+End:
+
+Subbasin: P11814A
+End:
+
+Subbasin: P118F
+End:
+
+Subbasin: P118G
+End:
+
+Subbasin: P147A
+End:
+
+Subbasin: P114B
+End:
+
+Subbasin: P114C
+End:
+
+Subbasin: P11831A
+End:
+
+Subbasin: P11831B
+End:
+
+Subbasin: P14503C
+End:
+
+Subbasin: P14503A
+End:
+
+Subbasin: P140A
+End:
+
+Subbasin: P1300502A
+End:
+
+Subbasin: P155A
+End:
+
+Subbasin: P1300301A
+End:
+
+Subbasin: P145B
+End:
+
+Subbasin: P245A
+End:
+
+Subbasin: P151A
+End:
+
+Subbasin: P100W
+End:
+
+Subbasin: P13005B
+End:
+
+Subbasin: P13005C
+End:
+
+Subbasin: P100F
+End:
+
+Subbasin: P145C
+End:
+
+Subbasin: P145D
+End:
+
+Subbasin: P140C
+End:
+
+Subbasin: P140D
+End:
+
+Subbasin: P1300502B
+End:
+
+Subbasin: P125B
+End:
+
+Subbasin: P107B
+End:

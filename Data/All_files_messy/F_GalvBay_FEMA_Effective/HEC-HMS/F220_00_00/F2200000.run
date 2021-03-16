@@ -1,0 +1,52 @@
+Run: F2200000_0.2%
+     Description: Basin: f220_basin  &  Met: 0.2% (500-YR)  &  Control: Control 1
+     Log File: F2200000_0.2_.log
+     DSS File: F2200000.dss
+     Basin: F220-00-00
+     Precip: 0.2%_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 28 July 2009
+     Precip Last Execution Time: 19:20:39
+     Basin Last Execution Date: 28 July 2009
+     Basin Last Execution Time: 19:20:40
+End:
+
+Run: F2200000_1%
+     Description: Basin: f220_basin  &  Met: 1% (100-YR)  &  Control: Control 1
+     Log File: F2200000_1_.log
+     DSS File: F2200000.dss
+     Basin: F220-00-00
+     Precip: 1% _24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:41:01
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:41:02
+End:
+
+Run: F2200000_10%
+     Description: Basin: f220_basin  &  Met: 10% (10-YR)  &  Control: Control 1
+     Log File: F2200000_10_.log
+     DSS File: F2200000.dss
+     Basin: F220-00-00
+     Precip: 10%_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:40:30
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:40:30
+End:
+
+Run: F2200000_2%
+     Description: Basin: f220_basin  &  Met: 2% (50-YR)  &  Control: Control 1
+     Log File: F2200000_2_.log
+     DSS File: F2200000.dss
+     Basin: F220-00-00
+     Precip: 2% _24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:41:15
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:41:15
+End:
+

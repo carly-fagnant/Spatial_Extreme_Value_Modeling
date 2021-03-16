@@ -1,0 +1,45 @@
+Proj Title=U100-00-00
+Current Plan=p02
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Flow File=f01
+Flow File=f02
+Flow File=f03
+Plan File=p01
+Plan File=p02
+Plan File=p03
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+Langham Creek (U100-00-00)
+(Flood Hazard & Floodway) Model
+10-, 2-, 1-, and 0.2% Events
+FILENAME: U100_00_00.prj
+PREPARED BY:  LAN                                 DATE: 03/13/2014
+REVIEWED BY: LJA                                   DATE: 03/14/2014
+This model is not yet approved by FEMA however it will be approved and become effective shortly.  
+Therefore any LOMR/CLOMR must duplicate their project using this model and submit along with the effective 
+model when submitting for LOMR/CLOMR review.
+Please contact HCFCD if you have any questions.  Brian Edmondson: Brian.Edmondson@hcfcd.org or phone at 713-684-4110
+STATUS: Final
+ADDICKS WATERSHED MODEL UPDATE
+HARRIS COUNTY, TEXAS
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=.\Models\Hydraulics\3 - Third Submittal\Restudy-Hydraulics-Duplicate Effective\U100-00-00\U100_00_00.
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Reach=U100-00-00      ,U100-00-00_0383 
+GIS Export Profiles= 1 
+       3

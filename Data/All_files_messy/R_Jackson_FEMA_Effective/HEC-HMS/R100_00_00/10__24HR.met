@@ -1,0 +1,88 @@
+Precip: 10%_24HR
+     Description: 10% (10-YR) Frequency Storm - Region 3
+     Last Modified Date: 29 June 2007
+     Last Modified Time: 09:41:49
+     Version: 2.2.1
+     Default DSS File Name: R100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 10
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.9
+     Depth: 1.5
+     Depth: 2.9
+     Depth: 3.7
+     Depth: 4.2
+     Depth: 5.3
+     Depth: 6.4
+     Depth: 7.8
+End:
+
+Subbasin: r100a
+End:
+
+Subbasin: r100b
+End:
+
+Subbasin: r100c
+End:
+
+Subbasin: r100d
+End:
+
+Subbasin: r100e
+End:
+
+Subbasin: r1020301a
+End:
+
+Subbasin: r1020301b
+End:
+
+Subbasin: r10203a
+End:
+
+Subbasin: r10206a
+End:
+
+Subbasin: r10209a
+End:
+
+Subbasin: r10213a
+End:
+
+Subbasin: r10213b
+End:
+
+Subbasin: r102a
+End:
+
+Subbasin: r102b
+End:
+
+Subbasin: r102c
+End:
+
+Subbasin: r102d
+End:
+
+Subbasin: r102e
+End:
+
+Subbasin: r103a
+End:
+
+Subbasin: r106a
+End:
+
+Subbasin: r106b
+End:

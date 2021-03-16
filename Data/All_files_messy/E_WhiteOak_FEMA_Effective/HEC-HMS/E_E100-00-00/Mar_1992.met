@@ -1,0 +1,316 @@
+Meteorology: Mar 1992
+     Last Modified Date: 26 September 2011
+     Last Modified Time: 18:22:33
+     Version: 3.5
+     Unit System: English
+     Precipitation Method: Specified Average
+     Short-Wave Radiation Method: None
+     Long-Wave Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+     Use Basin Model: E100-00-00
+End:
+
+Precip Method Parameters: Specified Average
+     Allow Depth Override: Yes
+     Set Missing Data to Zero: Yes
+End:
+
+Subbasin: E100A
+     Gage: 1170-March1992
+     Total Storm Precipitation: 2
+
+     Begin Snow: None
+End:
+
+Subbasin: E100B
+     Gage: 1170-March1992
+     Total Storm Precipitation: 2.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E132A
+     Gage: 1160-March1992
+     Total Storm Precipitation: 2.1
+
+     Begin Snow: None
+End:
+
+Subbasin: E100C
+     Gage: 550-March1992
+     Total Storm Precipitation: 2.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E100D
+     Gage: 550-March1992
+     Total Storm Precipitation: 2.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E100E
+     Gage: 550-March1992
+     Total Storm Precipitation: 3.8
+
+     Begin Snow: None
+End:
+
+Subbasin: E135A
+     Gage: 550-March1992
+     Total Storm Precipitation: 3.4
+
+     Begin Snow: None
+End:
+
+Subbasin: E127A
+     Gage: 550-March1992
+     Total Storm Precipitation: 4.2
+
+     Begin Snow: None
+End:
+
+Subbasin: E100F
+     Gage: 550-March1992
+     Total Storm Precipitation: 5
+
+     Begin Snow: None
+End:
+
+Subbasin: E141A
+     Gage: 1670-March1992
+     Total Storm Precipitation: 3.1
+
+     Begin Snow: None
+End:
+
+Subbasin: E125A
+     Gage: 550-March1992
+     Total Storm Precipitation: 4.1
+
+     Begin Snow: None
+End:
+
+Subbasin: E124A
+     Gage: 550-March1992
+     Total Storm Precipitation: 5.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E122A
+     Gage: 1670-March1992
+     Total Storm Precipitation: 3.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E122B
+     Gage: 540-March1992
+     Total Storm Precipitation: 5.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E100H
+     Gage: 540-March1992
+     Total Storm Precipitation: 6
+
+     Begin Snow: None
+End:
+
+Subbasin: E121A
+     Gage: 540-March1992
+     Total Storm Precipitation: 5
+
+     Begin Snow: None
+End:
+
+Subbasin: E121B
+     Gage: 540-March1992
+     Total Storm Precipitation: 5.6
+
+     Begin Snow: None
+End:
+
+Subbasin: E100I
+     Gage: 540-March1992
+     Total Storm Precipitation: 6.5
+
+     Begin Snow: None
+End:
+
+Subbasin: E117A
+     Gage: 550-March1992
+     Total Storm Precipitation: 6.2
+
+     Begin Snow: None
+End:
+
+Subbasin: E117B
+     Gage: 590-March1992
+     Total Storm Precipitation: 6.7
+
+     Begin Snow: None
+End:
+
+Subbasin: E117C
+     Gage: 590-March1992
+     Total Storm Precipitation: 6.2
+
+     Begin Snow: None
+End:
+
+Subbasin: E100J
+     Gage: 580-March1992
+     Total Storm Precipitation: 6
+
+     Begin Snow: None
+End:
+
+Subbasin: E115A
+     Gage: 590-March1992
+     Total Storm Precipitation: 7.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E115B
+     Gage: 580-March1992
+     Total Storm Precipitation: 6.4
+
+     Begin Snow: None
+End:
+
+Subbasin: E100L
+     Gage: 580-March1992
+     Total Storm Precipitation: 6
+
+     Begin Snow: None
+End:
+
+Subbasin: E100K
+     Gage: 580-March1992
+     Total Storm Precipitation: 5.2
+
+     Begin Snow: None
+End:
+
+Subbasin: E100M
+     Gage: 580-March1992
+     Total Storm Precipitation: 6.4
+
+     Begin Snow: None
+End:
+
+Subbasin: E100N
+     Gage: 520-March1992
+     Total Storm Precipitation: 6.4
+
+     Begin Snow: None
+End:
+
+Subbasin: E100O
+     Gage: 520-March1992
+     Total Storm Precipitation: 4.8
+
+     Begin Snow: None
+End:
+
+Subbasin: E101A
+     Gage: 570-March1992
+     Total Storm Precipitation: 6.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E101B
+     Gage: 570-March1992
+     Total Storm Precipitation: 6.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E101C
+     Gage: 570-March1992
+     Total Storm Precipitation: 6.5
+
+     Begin Snow: None
+End:
+
+Subbasin: E101D
+     Gage: 570-March1992
+     Total Storm Precipitation: 4.9
+
+     Begin Snow: None
+End:
+
+Subbasin: E101E
+     Gage: 560-March1992
+     Total Storm Precipitation: 4.5
+
+     Begin Snow: None
+End:
+
+Subbasin: E101F
+     Gage: 560-March1992
+     Total Storm Precipitation: 4.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E101G
+     Gage: 560-March1992
+     Total Storm Precipitation: 4.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E101H
+     Gage: 560-March1992
+     Total Storm Precipitation: 4
+
+     Begin Snow: None
+End:
+
+Subbasin: E100P
+     Gage: 520-March1992
+     Total Storm Precipitation: 4
+
+     Begin Snow: None
+End:
+
+Subbasin: E100G1
+     Gage: 540-March1992
+     Total Storm Precipitation: 6.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E100G2
+     Gage: 540-March1992
+     Total Storm Precipitation: 6.3
+
+     Begin Snow: None
+End:
+
+Subbasin: E200A
+     Gage: 550-March1992
+     Total Storm Precipitation: 3.8
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B1
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B2
+     Gage: 550-March1992
+     Total Storm Precipitation: 4.5
+
+     Begin Snow: None
+End:

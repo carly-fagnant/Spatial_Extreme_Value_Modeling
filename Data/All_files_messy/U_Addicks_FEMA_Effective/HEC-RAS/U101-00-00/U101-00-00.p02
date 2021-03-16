@@ -1,0 +1,528 @@
+Plan Title=Effective Floodway 2019 (FW)
+Program Version=4.10
+Short Identifier=Eff+ReStudy+FW                                                              
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 5 , 3 , 5 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U101-00-00      
+Encroach Reach=U101-00-00_0193 
+Encroach Node=100145.7
+       1 2054.59 2652.02
+Encroach Node=99757.7 
+       1 1980.71 2641.06
+Encroach Node=99692.97
+       1 1967.96 2627.65
+Encroach Node=99596.47
+       1 1954.17  2624.7
+Encroach Node=99553.45
+       1 1958.89 2634.14
+Encroach Node=99118.3 
+       1 1868.85 2628.47
+Encroach Node=99068.97
+       1 1863.82 2633.39
+Encroach Node=98764.82
+       1 1468.37 2642.03
+Encroach Node=97700.91
+       1 1367.24 3976.27
+Encroach Node=97686.69
+       1 2686.92 5272.84
+Encroach Node=97642.79
+       1 2698.85 5286.45
+Encroach Node=97503.91
+       1 2718.71 5277.34
+Encroach Node=97192.83
+       1  2761.4 5275.48
+Encroach Node=97174.13
+       1 2756.89 5339.33
+Encroach Node=97085.78
+       1 2754.55  5343.6
+Encroach Node=96591.66
+       1 2748.87 5278.21
+Encroach Node=96527.58
+       1 2748.08  5282.1
+Encroach Node=96475.77
+       1 2748.38  5282.1
+Encroach Node=96297.05
+       1 2744.34 5273.58
+Encroach Node=96254.03
+       1 2745.93 5269.01
+Encroach Node=96040.27
+       1 2748.98 5282.34
+Encroach Node=95995.92
+       1 2751.15 5272.36
+Encroach Node=95871.22
+       1 2752.48 5281.95
+Encroach Node=95830.44
+       1 2753.29 5276.91
+Encroach Node=95752.84
+       1 2756.31 5272.11
+Encroach Node=95657.73
+       1 2757.58 5277.02
+Encroach Node=95644.5 
+       1 2757.84 5281.63
+Encroach Node=95594.33
+       1 2759.69 5276.87
+Encroach Node=95524.92
+       1 2760.76 5281.75
+Encroach Node=95322.02
+       1 1461.41 3917.95
+Encroach Node=95282.95
+       1 1475.37 3913.49
+Encroach Node=95173.02
+       1 1515.98 3915.68
+Encroach Node=95119.43
+       1  1578.1 3906.47
+Encroach Node=95097.17
+       1 1676.74 3905.27
+Encroach Node=95061.74
+       1 1731.99 3910.24
+Encroach Node=95003.93
+       1  1764.2 3913.14
+Encroach Node=94207.76
+       1 2747.41 3481.71
+Encroach Node=93287.06
+       1 2550.56 3492.93
+Encroach Node=92350.25
+       1 2989.53 3653.35
+Encroach Node=92305.42
+       1 3016.16 3673.12
+Encroach Node=92256.93
+       1 3027.53 3689.57
+Encroach Node=92245.8 
+       1  3027.8 3692.31
+Encroach Node=92205.4 
+       1 3027.18 3711.44
+Encroach Node=91938.92
+       1 3188.27 3875.19
+Encroach Node=91578.98
+       1 3015.24 3758.33
+Encroach Node=91508.91
+       1  2957.1 3730.02
+Encroach Node=91417.91
+       1 2872.99  3664.5
+Encroach Node=90641.11
+       1 2447.16 3499.83
+Encroach Node=90590.89
+       1 2457.49 3501.16
+Encroach Node=89839.63
+       1  1973.9 2795.82
+Encroach Node=89791.85
+       1 1988.85 2846.37
+Encroach Node=89744.73
+       1 1864.26 2895.39
+Encroach Node=89694.23
+       1 2002.77 2943.07
+Encroach Node=89543.23
+       1 1966.98 3110.48
+Encroach Node=89492.98
+       1 1957.03 3172.88
+Encroach Node=89441.95
+       1 1944.55 3230.07
+Encroach Node=89398.27
+       1 1926.84 3273.56
+Encroach Node=88725.2 
+       1 1983.96 3955.73
+Encroach Node=87583.91
+       1 1976.98 4141.03
+Encroach Node=87239.7 
+       1 1904.03 4170.84
+Encroach Node=86968.8 
+       1 1737.64 4347.98
+Encroach Node=86895.63
+       1 1664.23 4315.78
+Encroach Node=86647.11
+       1 2131.04 4943.33
+Encroach Node=85743.88
+       1 1940.56 4723.42
+Encroach Node=84739.7 
+       1  674.42 2883.92
+Encroach Node=83615.02
+       1  510.91    3093
+Encroach Node=83574.32
+       1  502.95 3071.81
+Encroach Node=83514.11
+       1  993.58 3323.67
+Encroach Node=82999.61
+       1 3217.76 4915.32
+Encroach Node=82000.36
+       1 3161.08 4093.66
+Encroach Node=81188.76
+       1 2716.37 4148.96
+Encroach Node=81071.45
+       1 2427.07 4080.03
+Encroach Node=80941.05
+       1    2324 4044.86
+Encroach Node=80800.84
+       1 1660.05 3563.22
+Encroach Node=79906.94
+       1 1533.66 3323.53
+Encroach Node=79155.22
+       1 1513.48 3236.06
+Encroach Node=78183.56
+       1 2204.93 3473.69
+Encroach Node=77207.09
+       1  2110.1 2985.56
+Encroach Node=76083.47
+       1  2025.8 2848.44
+Encroach Node=75178.59
+       1 1128.93 2512.27
+Encroach Node=74013.76
+       1 1088.35 2689.48
+Encroach Node=73983.55
+       1 1101.26 2695.05
+Encroach Node=73928.7 
+       1 1092.25 2687.32
+Encroach Node=73904.55
+       1 1114.09 2703.81
+Encroach Node=72447.08
+       1 1629.93 2714.52
+Encroach Node=71547.45
+       1 2029.07 2685.72
+Encroach Node=70595.77
+       1  1729.9 2822.74
+Encroach Node=69231.29
+       1 1991.86 3270.35
+Encroach Node=68228.34
+       1  2295.8 3483.01
+Encroach Node=67376.78
+       1 2388.15 3643.29
+Encroach Node=67342.94
+       1 2412.67 3654.13
+Encroach Node=67186.98
+       1 2417.16 3656.06
+Encroach Node=66963   
+       1 3120.32 4207.49
+Encroach Node=65976.19
+       1 2142.08 3534.63
+Encroach Node=65202.7 
+       1 1905.66 3404.69
+Encroach Node=64431.81
+       1 1890.08 3160.45
+Encroach Node=64170.88
+       1 1943.47 3069.33
+Encroach Node=64099.09
+       1 1929.43 2932.08
+Encroach Node=64044.47
+       1 1965.66 2898.68
+Encroach Node=63870.36
+       1 2081.83 2742.55
+Encroach Node=63281.11
+       1 1994.77  2721.2
+Encroach Node=62473.67
+       1 2256.69 3065.66
+Encroach Node=62112.98
+       1 2714.46 3554.88
+Encroach Node=61300.01
+       1 2902.78 3863.89
+Encroach Node=61062.95
+       1 3210.95 4040.33
+Encroach Node=60100.05
+       1 3113.59 3739.64
+Encroach Node=60076.41
+       1 3144.58 3754.21
+Encroach Node=60012.43
+       1  3147.3 3732.76
+Encroach Node=59985.94
+       1 3145.52 3724.12
+Encroach Node=59580.12
+       1 2959.28 3735.13
+Encroach Node=58910.02
+       1 3689.66 4538.29
+Encroach Node=58579.48
+       1 3891.83    4716
+Encroach Node=57954.2 
+       1 3866.24 4946.26
+Encroach Node=57379.89
+       1  3445.5 4392.33
+Encroach Node=56593.08
+       1 3070.46 3839.19
+Encroach Node=55716.98
+       1 2419.65  2781.9
+Encroach Node=54496.94
+       1 2134.43 2522.01
+Encroach Node=53801.16
+       1 2315.88 2472.63
+Encroach Node=53721.16
+       1 2343.41 2458.21
+Encroach Node=53611.05
+       1 2225.41 2411.37
+Encroach Node=53572.32
+       1 1793.24 1956.22
+Encroach Node=53530.98
+       1 1879.15 2016.13
+Encroach Node=53423.02
+       1 1868.35  1999.8
+Encroach Node=53419.87
+       1 1863.16 2002.63
+Encroach Node=53409.96
+       1  1861.4 1995.96
+Encroach Node=53339.23
+       1 1844.54 1950.48
+Encroach Node=53226.12
+       1  1775.7 1899.51
+Encroach Node=53121.04
+       1 1713.43 1834.37
+Encroach Node=52062.53
+       1 1217.68    1373
+Encroach Node=51513.27
+       1 1449.03 1647.87
+Encroach Node=50911.78
+       1 1815.76 2023.83
+Encroach Node=50735.53
+       1  1759.2 2023.31
+Encroach Node=50632.55
+       1 1698.63 1938.44
+Encroach Node=49800.39
+       1 2034.75 2251.57
+Encroach Node=49123.86
+       1  991.24 1242.99
+Encroach Node=48890.5 
+       1   928.2 1158.79
+Encroach Node=48759.05
+       1 1002.53 1170.16
+Encroach Node=48099.26
+       1 1533.31 1723.25
+Encroach Node=47700.77
+       1 1680.17 1851.24
+Encroach Node=47546.16
+       1 1724.47 1898.82
+Encroach Node=47176.75
+       1 1159.45 1320.69
+Encroach Node=46896.98
+       1  1543.9 1718.36
+Encroach Node=46603.5 
+       1 1923.96 2098.49
+Encroach Node=46472.27
+       1 2305.85 2536.66
+Encroach Node=46335.09
+       1 2286.01  2512.3
+Encroach Node=45896.04
+       1 2190.73 2405.01
+Encroach Node=45743.27
+       1 2212.71 2433.69
+Encroach Node=45377.89
+       1 2292.44 2632.12
+Encroach Node=44351.62
+       1 2504.33 2753.45
+Encroach Node=43550   
+       1 2373.84 2648.08
+Encroach Node=42980.1 
+       1 2466.97 2802.01
+Encroach Node=42786.2 
+       1 2397.16 2704.35
+Encroach Node=42713.65
+       1 2382.18 2649.48
+Encroach Node=42135.18
+       1 2521.39 2828.62
+Encroach Node=41930.96
+       1 2382.09 2803.85
+Encroach Node=40683.68
+       1 2456.34 3014.06
+Encroach Node=40002.11
+       1 1986.89 2420.94
+Encroach Node=39070.47
+       1 2397.61  2855.8
+Encroach Node=38548.08
+       1 2419.37 2698.59
+Encroach Node=38347.6 
+       1 2464.37 2780.93
+Encroach Node=38316.57
+       1 2465.32 2777.64
+Encroach Node=37581.29
+       1 2357.48 2825.89
+Encroach Node=37364.75
+       1 2249.18 2628.52
+Encroach Node=37219.4 
+       1 2227.58 2531.09
+Encroach Node=36591.11
+       1 2170.02 2478.36
+Encroach Node=35792.36
+       1 1900.37  2219.8
+Encroach Node=34769.88
+       1 1438.06 1742.65
+Encroach Node=34393.11
+       1 1425.89  1734.1
+Encroach Node=33847.35
+       1  1773.9 2114.79
+Encroach Node=33813.64
+       1 1823.86 2099.88
+Encroach Node=33778.27
+       1 1818.86 2094.91
+Encroach Node=33737.95
+       1 1793.88 2084.97
+Encroach Node=33420.95
+       1 2012.32 2319.29
+Encroach Node=32152.3 
+       1 2155.34 3134.19
+Encroach Node=31747.41
+       1 2206.46 3169.24
+Encroach Node=31447.05
+       1 2163.72 3432.16
+Encroach Node=31343.59
+       1 2158.67 3466.43
+Encroach Node=31253.61
+       1 1886.33 3495.67
+Encroach Node=31076.4 
+       1 1766.92 3476.88
+Encroach Node=30385.92
+       1 1663.98 3433.81
+Encroach Node=29947.52
+       1 1662.15 3606.52
+Encroach Node=29898.14
+       1 1629.99 3869.15
+Encroach Node=29812.82
+       1 1630.78 3939.04
+Encroach Node=29699.63
+       1 1637.18 4421.99
+Encroach Node=29249.24
+       1 1623.68 4609.16
+Encroach Node=28913.98
+       1  1754.1 4953.18
+Encroach Node=27746.61
+       1 1679.93 4879.99
+Encroach Node=26767.03
+       1 1667.46 4811.78
+Encroach Node=26701.34
+       1 1655.67 4821.42
+Encroach Node=26611.14
+       1 1691.38 4863.07
+Encroach Node=26316.96
+       1 1917.76 4802.64
+Encroach Node=25395.09
+       1  2410.6 5069.76
+Encroach Node=24933.98
+       1 2625.27 4826.34
+Encroach Node=24646.42
+       1 2771.69 4661.78
+Encroach Node=24472.12
+       1 2807.36 4609.15
+Encroach Node=24324.98
+       1 2845.54 4126.61
+Encroach Node=23269.93
+       1 2710.33 4043.38
+Encroach Node=22132.32
+       1 2416.94 3750.54
+Encroach Node=21398.91
+       1 2423.83 3740.54
+Encroach Node=20720.25
+       1  2624.3 4043.05
+Encroach Node=19300.97
+       1 2800.95 4104.74
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

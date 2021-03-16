@@ -1,0 +1,50 @@
+Project: N100_00_00
+     Description: FEMA EFFECTIVE + LOMR 13-06-4399P
+     Version: 3.3
+     DSS File Name: N100_00_00.dss
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: Region 3 2% Flood
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: Region 3 1% Flood
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: Region 3 10% Flood
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: Region 3 .2% Flood
+End:
+
+Basin: N100-00-00
+     FileName: N100_00_00.basin
+     Description: 
+End:
+
+Control: CONTROL15
+     FileName: CONTROL15.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: None
+     Default Erosion Method: None
+     Default Route Method: Modified Puls
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

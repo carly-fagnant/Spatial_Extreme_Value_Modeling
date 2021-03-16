@@ -1,0 +1,2392 @@
+Basin: E100-00-00
+     Last Modified Date: 26 November 2018
+     Last Modified Time: 17:18:36
+     Version: 3.5
+     Filepath Separator: \
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Reach: E1000000_0562_R
+     Description: from hec-ras sta.65068 to sta.56231
+     Canvas X: 3091059.8205693145
+     Canvas Y: 1.3871853014513627E7
+     From Canvas X: 3089231.4122068877
+     From Canvas Y: 1.3875238955925526E7
+     Label X: -17.0
+     Label Y: 32.0
+     Downstream: E1000000_0562_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10013_r
+     Channel Loss: None
+End:
+
+Subbasin: E100I
+     Canvas X: 3093009.4023341364
+     Canvas Y: 1.3874625291067094E7
+     Label X: -1.0
+     Label Y: 18.0
+     Area: 2.9709
+     Downstream: E1000000_0562_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 19.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.70388
+     Storage Coefficient: 4.53348
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0562_J
+     Description: Combine hydrographs at cole creek, e117-00-00 (sta. 559+49), RS 56231
+     Canvas X: 3091059.8205693145
+     Canvas Y: 1.3871853014513627E7
+     Label X: 20.0
+     Label Y: 0.0
+     Downstream: E1000000_0558_J
+End:
+
+Reach: E2170000_9901_R
+     Description: overland routing of diversion from white oak bayou to cole creek the bottom widths for the overland flow routing were modified as follows: 100-year frequency          3300 feet 50-year frequency           2000 feet 10-year frequency            150 feet
+     Canvas X: 3072828.518
+     Canvas Y: 1.3875685284E7
+     From Canvas X: 3066656.848663243
+     From Canvas Y: 1.3881747930092745E7
+     Label X: 20.0
+     Label Y: -6.0
+     Downstream: E1170000_0019_J
+
+     Route: Lag
+     Lag: 346
+     Channel Loss: None
+End:
+
+Subbasin: E117A
+     Description: compute runoff hydrograph for sub-area e117a at e117#1 (guhn road)
+     Canvas X: 3063203.3
+     Canvas Y: 1.38767553E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 5.2262
+     Downstream: E1170000_0019_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.3
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.4177
+     Storage Coefficient: 7.8835
+
+     Baseflow: None
+End:
+
+Junction: E1170000_0019_J
+     Description: combined runoff from e117a and overflow from white oak bayou, RS 19349
+     Canvas X: 3072828.518
+     Canvas Y: 1.3875685284E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1170000_0096_R
+End:
+
+Reach: E1170000_0096_R
+     Description: from hec-ras sta.19343.5 to sta.9599.3
+     Canvas X: 3081730.466
+     Canvas Y: 1.3873611044E7
+     From Canvas X: 3072828.518
+     From Canvas Y: 1.3875685284E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1170000_0008_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1172_r
+     Channel Loss: None
+End:
+
+Subbasin: E117B
+     Description: compute runoff hydrograph for sub-area e117b at e117#2 (deihl road)
+     Canvas X: 3078913.75
+     Canvas Y: 1.387668124E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.6679
+     Downstream: E1170000_0008_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 36.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.77885
+     Storage Coefficient: 3.9776
+
+     Baseflow: None
+End:
+
+Junction: E1170000_0008_J
+     Description: combine 2 hydrographs at diehl road, RS 8307
+     Canvas X: 3081730.466
+     Canvas Y: 1.3873611044E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1170000_0009_R
+End:
+
+Reach: E1170000_0009_R
+     Description: from hec-ras sta.9726.8 to sta.922.4
+     Canvas X: 3088554.223924508
+     Canvas Y: 1.387205617099834E7
+     From Canvas X: 3081730.466
+     From Canvas Y: 1.3873611044E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1170000_0001_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1173_r
+     Channel Loss: None
+End:
+
+Subbasin: E117C
+     Description: compute runoff hydrograph for sub-area e117c at e117#3 (mouth)
+     Canvas X: 3083166.539
+     Canvas Y: 1.3875654704E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.7593
+     Downstream: E1170000_0001_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 34.6
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.67563
+     Storage Coefficient: 2.4763
+
+     Baseflow: None
+End:
+
+Junction: E1170000_0001_J
+     Description: combine 2 hydrographs at e117#3 (mouth), RS 111
+     Canvas X: 3088554.223924508
+     Canvas Y: 1.387205617099834E7
+     Label X: -15.0
+     Label Y: -39.0
+     Downstream: E1000000_0558_J
+End:
+
+Junction: E1000000_0558_J
+     Description: Combine hydrographs dwnst of cole creek, e117-00-00 (sta. 559+49)RS 55757
+     Canvas X: 3091578.998252473
+     Canvas Y: 1.3870543783834359E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0479_R
+End:
+
+Reach: E1000000_0479_R
+     Description: from hec-ras sta.56231 to sta.47857
+     Canvas X: 3092589.357161417
+     Canvas Y: 1.3865070520423312E7
+     From Canvas X: 3091578.998252473
+     From Canvas Y: 1.3870543783834359E7
+     Label X: 17.0
+     Label Y: 0.0
+     Downstream: E1000000_0479_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10014_r
+     Channel Loss: None
+End:
+
+Subbasin: E100J
+     Canvas X: 3098085.788
+     Canvas Y: 1.3871233885E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.9506
+     Downstream: E1000000_0479_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.90079
+     Storage Coefficient: 3.7884
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0479_J
+     Description: Combine hydrographs, RS 47857
+     Canvas X: 3092589.357161417
+     Canvas Y: 1.3865070520423312E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0468_J
+End:
+
+Subbasin: E115A
+     Description: compute runoff hydrograph for sub-area e115a at e115#1 (hollister road)
+     Canvas X: 3066414.4
+     Canvas Y: 1.3867243E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 5.8397
+     Downstream: E1150000_0008_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.80958
+     Storage Coefficient: 3.5129
+
+     Baseflow: None
+End:
+
+Reach: E1150000_0008_R
+     Description: from hec-ras sta.18527.6 to sta.794.3
+     Canvas X: 3088814.599246984
+     Canvas Y: 1.3864975654607985E7
+     From Canvas X: 3075297.644
+     From Canvas Y: 1.3863536057E7
+     Label X: -178.0
+     Label Y: 12.0
+     Downstream: E1150000_0008_J
+
+     Route: Modified Puls
+     Number of Reaches: 5
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1152_r
+     Channel Loss: None
+End:
+
+Subbasin: E115B
+     Description: compute runoff hydrograph for sub-area e115b at e115#2 (mouth)  5.78982528345312
+     Canvas X: 3083959.363
+     Canvas Y: 1.38622211E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 5.7898
+     Downstream: E1150000_0008_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 41.4
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.0803
+     Storage Coefficient: 3.6164
+
+     Baseflow: None
+End:
+
+Junction: E1150000_0008_J
+     Description: combine 2 hydrographs at e115#2 (mouth), RS 794.3
+     Canvas X: 3088814.599246984
+     Canvas Y: 1.3864975654607985E7
+     Label X: -58.0
+     Label Y: 15.0
+     Downstream: E1000000_0468_J
+End:
+
+Junction: E1000000_0468_J
+     Description: Combine hydrographs at brickhouse gully, e115 (sta. 466+54), RS 47857
+     Canvas X: 3092702.2218751474
+     Canvas Y: 1.3863761289744044E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0357_R
+End:
+
+Reach: E1000000_0357_R
+     Description: from hec-ras sta.47857 to sta.35718
+     Canvas X: 3100038.4282675995
+     Canvas Y: 1.3856899115149258E7
+     From Canvas X: 3092702.2218751474
+     From Canvas Y: 1.3863761289744044E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0357_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10015_r
+     Channel Loss: None
+End:
+
+Subbasin: E100L
+     Canvas X: 3091257.858
+     Canvas Y: 1.3859312656E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.2817
+     Downstream: E1000000_0357_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 47.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.22445
+     Storage Coefficient: 1.3988
+
+     Baseflow: None
+End:
+
+Subbasin: E100K
+     Canvas X: 3101308.694
+     Canvas Y: 1.3863233195E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.4333
+     Downstream: E1000000_0357_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.48913
+     Storage Coefficient: 5.7254
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0357_J
+     Description: Combine hydrographs at lazybrook (sta. 382+16), RS 35718
+     Canvas X: 3100038.4282675995
+     Canvas Y: 1.3856899115149258E7
+     Label X: 16.0
+     Label Y: -2.0
+     Downstream: E1000000_0282_R
+End:
+
+Reach: E1000000_0282_R
+     Description: from hec-ras sta.35718 to sta.28190
+     Canvas X: 3104734.838
+     Canvas Y: 1.3852211142E7
+     From Canvas X: 3100038.4282675995
+     From Canvas Y: 1.3856899115149258E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0282_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10016_r
+     Channel Loss: None
+End:
+
+Subbasin: E100M
+     Canvas X: 3097744.568
+     Canvas Y: 1.3854037749E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.3742
+     Downstream: E1000000_0282_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 37.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.47461
+     Storage Coefficient: 1.7271
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0282_J
+     Description: Combine hydrographs at lazybrook (sta. 285+52), RS 28190
+     Canvas X: 3104734.838
+     Canvas Y: 1.3852211142E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0168_R
+End:
+
+Reach: E1000000_0168_R
+     Description: from hec-ras sta.28190 to sta.16831
+     Canvas X: 3111927.051
+     Canvas Y: 1.3846686689E7
+     From Canvas X: 3104734.838
+     From Canvas Y: 1.3852211142E7
+     Label X: 16.0
+     Label Y: 1.0
+     Downstream: E1000000_0168_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10017_r
+     Channel Loss: None
+End:
+
+Subbasin: E100N
+     Canvas X: 3102876.909
+     Canvas Y: 1.3849190538E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.9477
+     Downstream: E1000000_0168_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 35.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.63223
+     Storage Coefficient: 2.3909
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0168_J
+     Description: Combine hydrographs near heights blvd  (sta. 169+34), RS 16831
+     Canvas X: 3111927.051
+     Canvas Y: 1.3846686689E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0070_R
+End:
+
+Reach: E1000000_0070_R
+     Description: from hec-ras sta.16831 to sta.6975
+     Canvas X: 3118999.7001742464
+     Canvas Y: 1.384802961223625E7
+     From Canvas X: 3111927.051
+     From Canvas Y: 1.3846686689E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0070_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10018_r
+     Channel Loss: None
+End:
+
+Subbasin: E100O
+     Canvas X: 3115658.9046478374
+     Canvas Y: 1.3850128895911628E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.8307
+     Downstream: E1000000_0070_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.3
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.36381
+     Storage Coefficient: 1.5624
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0070_J
+     Description: Combine hydrographs upst of little white oak bayou, e101 (sta. 74+52), RS 6975
+     Canvas X: 3118999.7001742464
+     Canvas Y: 1.384802961223625E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0069_J
+End:
+
+Subbasin: E101A
+     Description: da e101a hyd klotz/asssociates, inc. job no. 126-01  (e101 drainage study)
+     Canvas X: 3104017.101
+     Canvas Y: 1.3881050215E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.4516
+     Downstream: E1010000_0307_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.80016
+     Storage Coefficient: 6.431
+
+     Baseflow: None
+End:
+
+Reach: E1010000_0307_R
+     Description: from hec-ras sta.35522.4 to  sta.30969.7
+     Canvas X: 3110380.908
+     Canvas Y: 1.387019719E7
+     From Canvas X: 3108648.92
+     From Canvas Y: 1.3874186701E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0310_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1012_r
+     Channel Loss: None
+End:
+
+Subbasin: E101B
+     Description: da e101b hyd
+     Canvas X: 3104943.465
+     Canvas Y: 1.3871828684E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.32
+     Downstream: E1010000_0310_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 25.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.55982
+     Storage Coefficient: 2.8399
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0310_J
+     Description: Combine a and b (sta.31310), RS 30984
+     Canvas X: 3110380.908
+     Canvas Y: 1.387019719E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0274_R
+End:
+
+Reach: E1010000_0274_R
+     Description: from hec-ras sta.30969.7 to  sta.27446.2
+     Canvas X: 3113146.562
+     Canvas Y: 1.3867388323E7
+     From Canvas X: 3110380.908
+     From Canvas Y: 1.387019719E7
+     Label X: -48.0
+     Label Y: -11.0
+     Downstream: E1010000_0263_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1013_r
+     Channel Loss: None
+End:
+
+Subbasin: E101C
+     Description: da e101c hyd
+     Canvas X: 3113778.0
+     Canvas Y: 1.38755306E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 4.3149
+     Downstream: E1010000_0263_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.8
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.52499
+     Storage Coefficient: 7.1149
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0263_J
+     Description: combine a,b, and c (sta.27031), RS 26304
+     Canvas X: 3113146.562
+     Canvas Y: 1.3867388323E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0242_R
+End:
+
+Reach: E1010000_0242_R
+     Description: from hec-ras sta.27446.2 to  sta.24164.4
+     Canvas X: 3116907.846
+     Canvas Y: 1.3865687133E7
+     From Canvas X: 3113146.562
+     From Canvas Y: 1.3867388323E7
+     Label X: -98.0
+     Label Y: -28.0
+     Downstream: E1010000_0242_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1014_r
+     Channel Loss: None
+End:
+
+Subbasin: E101D
+     Description: da e101d hyd
+     Canvas X: 3119175.781
+     Canvas Y: 1.3869344345E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.0592
+     Downstream: E1010000_0242_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.45097
+     Storage Coefficient: 3.3307
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0242_J
+     Description: combine a,b,c, and d (sta.24495), RS 24176
+     Canvas X: 3116907.846
+     Canvas Y: 1.3865687133E7
+     Label X: 16.0
+     Label Y: -7.0
+     Downstream: E1010000_0207_R
+End:
+
+Reach: E1010000_0207_R
+     Description: from hec-ras sta.24164.4 to  sta.20700.9
+     Canvas X: 3119193.163
+     Canvas Y: 1.3862083364E7
+     From Canvas X: 3116907.846
+     From Canvas Y: 1.3865687133E7
+     Label X: -2.0
+     Label Y: 20.0
+     Downstream: E1010000_0207_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1015_r
+     Channel Loss: None
+End:
+
+Subbasin: E101E
+     Description: da e101e hyp
+     Canvas X: 3123681.278
+     Canvas Y: 1.3865259923E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.586
+     Downstream: E1010000_0207_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 34.2
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.51496
+     Storage Coefficient: 3.4235
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0207_J
+     Description: combine a,b,c,d, and e (sta.20300), RS 20705
+     Canvas X: 3119193.163
+     Canvas Y: 1.3862083364E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0160_R
+End:
+
+Reach: E1010000_0160_R
+     Description: from hec-ras sta.20700.9 to  sta.15992.9
+     Canvas X: 3117868.444
+     Canvas Y: 1.3859194884E7
+     From Canvas X: 3119193.163
+     From Canvas Y: 1.3862083364E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0160_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1016_r
+     Channel Loss: None
+End:
+
+Subbasin: E101F
+     Description: da e101f hyd
+     Canvas X: 3114796.607
+     Canvas Y: 1.3861765005E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.8284
+     Downstream: E1010000_0160_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.35982
+     Storage Coefficient: 4.9887
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0160_J
+     Description: combine a,b,c,d,e, and f(sta.16208), RS 15999
+     Canvas X: 3117868.444
+     Canvas Y: 1.3859194884E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0090_R
+End:
+
+Reach: E1010000_0090_R
+     Description: from hec-ras sta.15992.9 to  sta.8996.7
+     Canvas X: 3120860.079
+     Canvas Y: 1.3853427731E7
+     From Canvas X: 3117868.444
+     From Canvas Y: 1.3859194884E7
+     Label X: 15.0
+     Label Y: 0.0
+     Downstream: E1010000_0090_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1017_r
+     Channel Loss: None
+End:
+
+Subbasin: E101G
+     Description: da e101g hyd
+     Canvas X: 3116679.6
+     Canvas Y: 1.38571432E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.6458
+     Downstream: E1010000_0090_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 29.6
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.40871
+     Storage Coefficient: 3.5358
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0090_J
+     Description: combine a,b,c,d,e,f, and g(sta.9426), RS 9000
+     Canvas X: 3120860.079
+     Canvas Y: 1.3853427731E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1010000_0306_R
+End:
+
+Reach: E1010000_0306_R
+     Description: from hec-ras sta.8996.7 to  sta.305.5
+     Canvas X: 3120338.695
+     Canvas Y: 1.3848594177E7
+     From Canvas X: 3120860.079
+     From Canvas Y: 1.3853427731E7
+     Label X: 16.0
+     Label Y: 1.0
+     Downstream: E1010000_0003_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1018_r
+     Channel Loss: None
+End:
+
+Subbasin: E101H
+     Description: da e101h hyd
+     Canvas X: 3124565.534
+     Canvas Y: 1.3854143557E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.8125
+     Downstream: E1010000_0003_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 29.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.895
+     Storage Coefficient: 6.6024
+
+     Baseflow: None
+End:
+
+Junction: E1010000_0003_J
+     Description: At little white oak at mouth combine a,b,c,d,e,f,g, and h(sta.0), RS 306
+     Canvas X: 3120338.695
+     Canvas Y: 1.3848594177E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0069_J
+End:
+
+Junction: E1000000_0069_J
+     Description: Combine hydrographs dwnst of little white oak bayou (sta. 74+52), RS 6898
+     Canvas X: 3121440.305
+     Canvas Y: 1.384746753E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0002_R
+End:
+
+Reach: E1000000_0002_R
+     Description: from hec-ras sta.6975 to sta.173
+     Canvas X: 3124403.356666443
+     Canvas Y: 1.384398560720497E7
+     From Canvas X: 3121440.305
+     From Canvas Y: 1.384746753E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0002_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10019_r
+     Channel Loss: None
+End:
+
+Subbasin: E100P
+     Canvas X: 3119502.532
+     Canvas Y: 1.3845855083E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.1934
+     Downstream: E1000000_0002_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 26.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.24414
+     Storage Coefficient: 1.7064
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0002_J
+     Description: Combine hydrographs at the mouth of white oak bayou (e100-00-00), RS 173
+     Canvas X: 3124403.356666443
+     Canvas Y: 1.384398560720497E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Subbasin: E121A
+     Description: compute runoff hydrograph for sub-area e121a at e121#1 (w. mt. houston)
+     Canvas X: 3076406.8
+     Canvas Y: 1.3898322E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 4.2943
+     Downstream: E1210000_0004_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 26.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.18956
+     Storage Coefficient: 7.59389
+
+     Baseflow: None
+End:
+
+Reach: E1210000_0004_R
+     Description: from hec-ras sta.14540 to sta.385.5
+     Canvas X: 3088262.0687775477
+     Canvas Y: 1.3881782215210814E7
+     From Canvas X: 3086495.203642323
+     From Canvas Y: 1.3889633495105257E7
+     Label X: 6.0
+     Label Y: 29.0
+     Downstream: E1210000_0012_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1212_r_LOMR
+     Channel Loss: None
+End:
+
+Subbasin: E121B
+     Description: compute runoff hydrograph for sub-area e121b at e121#2 (mouth)
+     Canvas X: 3091745.441
+     Canvas Y: 1.3884710212E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.7472
+     Downstream: E1210000_0012_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 21.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.66569
+     Storage Coefficient: 2.91113
+
+     Baseflow: None
+End:
+
+Junction: E1210000_0012_J
+     Description: combine 2 hydrographs at e121#2 (mouth), RS 1197
+     Canvas X: 3088262.0687775477
+     Canvas Y: 1.3881782215210814E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0638_J
+End:
+
+Subbasin: E100H
+     Canvas X: 3082184.515146504
+     Canvas Y: 1.3885967655605325E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.5942
+     Downstream: E1000000_0651_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 40.2
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.00955
+     Storage Coefficient: 6.93985
+
+     Baseflow: None
+End:
+
+Subbasin: E122B
+     Canvas X: 3072508.202
+     Canvas Y: 1.3892164512E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.9107
+     Downstream: E1220000_0000_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 22.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.88783
+     Storage Coefficient: 3.5295
+
+     Baseflow: None
+End:
+
+Subbasin: E122A
+     Canvas X: 3069454.962
+     Canvas Y: 1.3899265014E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.4524
+     Downstream: E1220000_0000_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.2146
+     Storage Coefficient: 4.2349
+
+     Baseflow: None
+End:
+
+Reach: E1220000_0000_R
+     Description: e1222 from e1221
+     Canvas X: 3078264.323471183
+     Canvas Y: 1.3883886113613036E7
+     From Canvas X: 3074359.753
+     From Canvas Y: 1.3893998518E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1220000_0000_J
+
+     Route: Lag
+     Lag: 90
+     Channel Loss: None
+End:
+
+Junction: E1220000_0000_J
+     Description: Combine hydrographs at mouth of e122-00-00, RS 3.533
+     Canvas X: 3078264.323471183
+     Canvas Y: 1.3883886113613036E7
+     Label X: 2.0
+     Label Y: 21.0
+     Downstream: E1000000_0771_J
+End:
+
+Reservoir: E500-03-00
+     Description: regional detention basin e500-03-00
+     Canvas X: 3074106.6469436055
+     Canvas Y: 1.3881129510092935E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0816_J
+
+     Route: Modified Puls
+     Routing Curve: Storage-Outflow
+     Initial Outflow Equals Inflow: Yes
+     Storage-Outflow Table: e500-03-00
+End:
+
+Subbasin: E124A
+     Description: compute runoff hydrograph for sub-area e124a at e124#1 (mouth)
+     Canvas X: 3073331.6191589385
+     Canvas Y: 1.3885585484315572E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.5621
+     Downstream: E1000000_0826_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 25.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.85242
+     Storage Coefficient: 1.883
+
+     Baseflow: None
+End:
+
+Reservoir: E500-02-00
+     Description: regional detention basin e500-02-00
+     Canvas X: 3068856.4735349054
+     Canvas Y: 1.3881861814063283E7
+     Label X: -40.0
+     Label Y: -24.0
+     Downstream: E1000000_0866_J
+
+     Route: Modified Puls
+     Routing Curve: Storage-Outflow
+     Initial Outflow Equals Inflow: Yes
+     Storage-Outflow Table: e500-02-00
+End:
+
+Subbasin: E125A
+     Description: compute runoff hydrograph for sub-area e125a at e125#1 (mouth)
+     Canvas X: 3066906.286556601
+     Canvas Y: 1.3887009253726201E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.3982
+     Downstream: E1000000_0905_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 17.9
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.1747
+     Storage Coefficient: 7.3061
+
+     Baseflow: None
+End:
+
+Subbasin: E141B2
+     Canvas X: 3065951.7647971013
+     Canvas Y: 1.388890932484768E7
+     Label X: 12.0
+     Label Y: 24.0
+     Area: 0.5248
+     Downstream: E1410000_0003_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 34.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.13772
+     Storage Coefficient: 2.3273
+
+     Baseflow: None
+End:
+
+Subbasin: E141A
+     Canvas X: 3060101.8221063786
+     Canvas Y: 1.3900293597748574E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.9755
+     Downstream: E1410000_0048_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 15.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.6795
+     Storage Coefficient: 5.1025
+
+     Baseflow: None
+End:
+
+Reach: E1410000_0048_R
+     Canvas X: 3062597.709341488
+     Canvas Y: 1.3892234639250895E7
+     From Canvas X: 3061443.871618253
+     From Canvas Y: 1.3896699329396902E7
+     Downstream: E1410000_0048_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: E1000000_0048_R
+     Channel Loss: None
+End:
+
+Subbasin: E141B1
+     Canvas X: 3065446.8920202632
+     Canvas Y: 1.3895965711806435E7
+     From Canvas X: -661.8146199132316
+     From Canvas Y: 2359.5129927340895
+     Label X: 12.0
+     Label Y: 24.0
+     Area: 0.8506
+     Downstream: E1410000_0048_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 28.8
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.67497
+     Storage Coefficient: 7.8664
+
+     Baseflow: None
+End:
+
+Junction: E1410000_0048_J
+     Canvas X: 3062597.709341488
+     Canvas Y: 1.3892234639250895E7
+     Downstream: E1410000_0046_J
+End:
+
+Junction: E1410000_0046_J
+     Canvas X: 3063276.0861697677
+     Canvas Y: 1.3890674372545851E7
+     Downstream: E1410000_0003_R
+End:
+
+Reach: E1410000_0003_R
+     Description: Station 13589.5 to 4061.8 (D/S E141B1)
+     Canvas X: 3064567.5865136543
+     Canvas Y: 1.3886490117343644E7
+     From Canvas X: 3063276.0861697677
+     From Canvas Y: 1.3890674372545851E7
+     Downstream: E1410000_0003_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1412_r
+     Channel Loss: None
+End:
+
+Junction: E1410000_0003_J
+     Description: Combine hydrographs at mouth of e141-00-00, RS 281.3
+     Canvas X: 3064567.5865136543
+     Canvas Y: 1.3886490117343644E7
+     Label X: 3.0
+     Label Y: 13.0
+     Downstream: E1000000_0936_J
+End:
+
+Subbasin: E100A
+     Canvas X: 3034141.7
+     Canvas Y: 1.39042622E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.0076
+     Downstream: E1000000_1210_R
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 23.5
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.4996
+     Storage Coefficient: 6.8778
+
+     Baseflow: None
+End:
+
+Reach: E1000000_1210_R
+     Description: from hec-ras sta.129818 to sta.121010
+     Canvas X: 3043801.627
+     Canvas Y: 1.3898144319E7
+     From Canvas X: 3038676.267845889
+     From Canvas Y: 1.3901010644E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_1210_J
+
+     Route: Modified Puls
+     Number of Reaches: 5
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1002_r
+     Channel Loss: None
+End:
+
+Subbasin: E100B
+     Canvas X: 3040394.9125314807
+     Canvas Y: 1.3898833121337658E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.7506
+     Downstream: E1000000_1210_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 13.4
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.91914
+     Storage Coefficient: 2.22334
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1210_J
+     Description: Combine hydrographs at e132-00-00 confluence, RS 121010
+     Canvas X: 3043801.627
+     Canvas Y: 1.3898144319E7
+     Label X: 15.0
+     Label Y: 17.0
+     Downstream: E1000000_1203_J
+End:
+
+Subbasin: E132A
+     Canvas X: 3044619.8
+     Canvas Y: 1.3905076814E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.0677
+     Downstream: E1000000_1203_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 19.4
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.88529
+     Storage Coefficient: 6.0495
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1203_J
+     Description: Combine hydrographs downstream of e132-00-00 (sta. 1189+50), RS 120253
+     Canvas X: 3046135.146
+     Canvas Y: 1.3899928774E7
+     Label X: 17.0
+     Label Y: 14.0
+     Downstream: E5001200_Outfall
+End:
+
+Junction: E5001200_Outfall
+     Description: Pseudo Node for E5001200 Detention Pond
+     Canvas X: 3047264.21340594
+     Canvas Y: 1.38993220502587E7
+     Downstream: E1000000_1167_R
+End:
+
+Reach: E1000000_1167_R
+     Description: from hec-ras sta.121010 to sta.116659
+     Canvas X: 3050207.426
+     Canvas Y: 1.3896881986E7
+     From Canvas X: 3047264.21340594
+     From Canvas Y: 1.38993220502587E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_1167_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1003_r
+     Channel Loss: None
+End:
+
+Subbasin: E100C
+     Canvas X: 3044799.9
+     Canvas Y: 1.38970584E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.166
+     Downstream: E1000000_1167_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 23.8
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.50530
+     Storage Coefficient: 4.51908
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1167_J
+     Description: Combine hydrographs at e135-00-00 confluence, RS 116659
+     Canvas X: 3050207.426
+     Canvas Y: 1.3896881986E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E5001100_Outfall
+End:
+
+Junction: E5001100_Outfall
+     Description: Pseudo Node for E5001100 Detention Pond
+     Canvas X: 3051031.9483536123
+     Canvas Y: 1.3895937474797232E7
+     Downstream: E1000000_1105_R
+End:
+
+Reach: E1000000_1105_R
+     Description: from hec-ras sta.116659 to sta.110454
+     Canvas X: 3055019.942700695
+     Canvas Y: 1.389310763043269E7
+     From Canvas X: 3051031.9483536123
+     From Canvas Y: 1.3895937474797232E7
+     Label X: -47.0
+     Label Y: -13.0
+     Downstream: E1000000_1105_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1004_r
+     Channel Loss: None
+End:
+
+Subbasin: E100D
+     Canvas X: 3054672.2
+     Canvas Y: 1.38995365E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.8870
+     Downstream: E1000000_1105_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.0
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.64409
+     Storage Coefficient: 4.44052
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1105_J
+     Description: RS 110454
+     Canvas X: 3055019.942700695
+     Canvas Y: 1.389310763043269E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_1056_R
+End:
+
+Reach: E1000000_1056_R
+     Description: from hec-ras sta.110454 to sta.105640
+     Canvas X: 3055800.8481965605
+     Canvas Y: 1.3889872450521247E7
+     From Canvas X: 3055019.942700695
+     From Canvas Y: 1.389310763043269E7
+     Label X: 8.0
+     Label Y: -2.0
+     Downstream: E1000000_1056_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1005_r
+     Channel Loss: None
+End:
+
+Subbasin: E100E
+     Canvas X: 3052258.88398317
+     Canvas Y: 1.3892019940634876E7
+     Label X: -2.0
+     Label Y: 23.0
+     Area: 1.3962
+     Downstream: E1000000_1056_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 39.1
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.29187
+     Storage Coefficient: 5.04508
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1056_J
+     Description: Combine e100e1 and e100e2, RS 105640
+     Canvas X: 3055800.8481965605
+     Canvas Y: 1.3889872450521247E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_1045_J
+End:
+
+Subbasin: E135A
+     Canvas X: 3047442.2
+     Canvas Y: 1.38908293E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.4054
+     Downstream: E1000000_1045_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 35.8
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 1.437
+     Storage Coefficient: 5.7347
+
+     Baseflow: None
+End:
+
+Subbasin: E200A
+     Canvas X: 3058767.767691648
+     Canvas Y: 1.3891125409467189E7
+     Area: 0.4324
+     Downstream: E1000000_1045_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.4
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.57858
+     Storage Coefficient: 5.0336
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1045_J
+     Description: RS 104527
+     Canvas X: 3056191.300944493
+     Canvas Y: 1.3888728981759444E7
+     Label X: 18.0
+     Label Y: -2.0
+     Downstream: E5350100_Outfall
+End:
+
+Junction: E5350100_Outfall
+     Description: Pseudo Node for E5350100 Detention Pond
+     Canvas X: 3057034.780304142
+     Canvas Y: 1.3888274285073152E7
+     Downstream: E1000000_1007_R
+End:
+
+Reach: E1000000_1007_R
+     Description: from hec-ras sta.105640 to sta.100723
+     Canvas X: 3058366.680540119
+     Canvas Y: 1.3886971944393747E7
+     From Canvas X: 3057034.780304142
+     From Canvas Y: 1.3888274285073152E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_1007_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1007_r1
+     Channel Loss: None
+End:
+
+Subbasin: E127A
+     Canvas X: 3050620.4
+     Canvas Y: 1.38862626E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.2416
+     Downstream: E1000000_1007_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 31.2
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.69609
+     Storage Coefficient: 6.0682
+
+     Baseflow: None
+End:
+
+Junction: E1000000_1007_J
+     Description: RS 100723
+     Canvas X: 3058366.680540119
+     Canvas Y: 1.3886971944393747E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0941_R
+End:
+
+Reach: E1000000_0941_R
+     Description: from hec-ras sta.100723 to sta.94401
+     Canvas X: 3062469.169966584
+     Canvas Y: 1.3885104302005308E7
+     From Canvas X: 3058366.680540119
+     From Canvas Y: 1.3886971944393747E7
+     Label X: -107.0
+     Label Y: -36.0
+     Downstream: E1000000_0941_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1007_r2
+     Channel Loss: None
+End:
+
+Subbasin: E100F
+     Canvas X: 3060452.5202198657
+     Canvas Y: 1.3883851316859929E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.0432
+     Downstream: E1000000_0941_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 19.8
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.70494
+     Storage Coefficient: 2.64695
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0941_J
+     Description: RS 94401
+     Canvas X: 3062469.169966584
+     Canvas Y: 1.3885104302005308E7
+     Label X: -40.0
+     Label Y: 34.0
+     Downstream: E5001000S_Outfall
+End:
+
+Junction: E5001000S_Outfall
+     Description: Pseudo Node for E5001000S Detention Pond
+     Canvas X: 3062727.5128989313
+     Canvas Y: 1.388500096483237E7
+     Downstream: E5001000N_Outfall
+End:
+
+Junction: E5001000N_Outfall
+     Description: Pseudo Node for E5001000N Detention Pond
+     Canvas X: 3063037.5244177473
+     Canvas Y: 1.3884758122475963E7
+     Downstream: E1000000_0936_J
+End:
+
+Junction: E1000000_0936_J
+     Description: Combine hydrographs at confluence of e141 and e100 (sta.947+04), RS 93454
+     Canvas X: 3064552.981589735
+     Canvas Y: 1.3884540895069195E7
+     Label X: -72.0
+     Label Y: -26.0
+     Downstream: E1000000_0913_R
+End:
+
+Reach: E1000000_0913_R
+     Description: from hec-ras sta.94401 to sta.91339
+     Canvas X: 3065778.613129419
+     Canvas Y: 1.388420336520369E7
+     From Canvas X: 3064552.981589735
+     From Canvas Y: 1.3884540895069195E7
+     Label X: -59.0
+     Label Y: 21.0
+     Downstream: E1000000_0913_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1008_r
+     Channel Loss: None
+End:
+
+Junction: E1000000_0913_J
+     Canvas X: 3065778.613129419
+     Canvas Y: 1.388420336520369E7
+     Downstream: E1000000_0905_J
+End:
+
+Junction: E1000000_0905_J
+     Description: Combine hydrographs dwnst of rolling fork, e125-00-00 (sta. 914+06), RS 90490
+     Canvas X: 3066535.2740828376
+     Canvas Y: 1.3883841483878141E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0905_D
+End:
+
+Diversion: E1000000_0905_D
+     Description: RS 154.1
+     Canvas X: 3066944.202030867
+     Canvas Y: 1.3883055797674892E7
+     Label X: -138.0
+     Label Y: -26.0
+     Downstream: E1000000_0876_R
+     Divert To: E2170000_9901_R
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: e1008_d
+     End Diverter:
+End:
+
+Reach: E1000000_0876_R
+     Description: from hec-ras sta.91339 to sta.87610
+     Canvas X: 3068262.4349547713
+     Canvas Y: 1.3882953229715433E7
+     From Canvas X: 3066944.202030867
+     From Canvas Y: 1.3883055797674892E7
+     Label X: -92.0
+     Label Y: -55.0
+     Downstream: E1000000_0876_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1008a_r
+     Channel Loss: None
+End:
+
+Junction: E1000000_0876_J
+     Description: RS 87610
+     Canvas X: 3068262.4349547713
+     Canvas Y: 1.3882953229715433E7
+     Label X: -66.0
+     Label Y: -41.0
+     Downstream: E1000000_0861_Outfall
+End:
+
+Junction: E1000000_0861_Outfall
+     Description: Pseudo Node for E5000100 Detention Pond
+     Canvas X: 3068782.184565253
+     Canvas Y: 1.3883005577370983E7
+     Downstream: E1000000_0872_SW
+End:
+
+Diversion: E1000000_0872_SW
+     Description: RS 87171
+     Canvas X: 3069255.702830241
+     Canvas Y: 1.3882851848952923E7
+     Label X: -43.0
+     Label Y: 22.0
+     Downstream: E1000000_0866_J
+     Divert To: E500-02-00
+
+     Diverter: None
+     End Diverter:
+End:
+
+Junction: E1000000_0866_J
+     Description: RS 86621; Outfall for E5000200
+     Canvas X: 3069729.6305389907
+     Canvas Y: 1.3882784118492045E7
+     Label X: -5.0
+     Label Y: -24.0
+     Downstream: E1000000_0838_R
+End:
+
+Reach: E1000000_0838_R
+     Description: from hec-ras sta.87610 to sta.83815
+     Canvas X: 3072440.519349735
+     Canvas Y: 1.3882805187354982E7
+     From Canvas X: 3069729.6305389907
+     From Canvas Y: 1.3882784118492045E7
+     Label X: -81.0
+     Label Y: 22.0
+     Downstream: E1000000_0838_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e1009_r
+     Channel Loss: None
+End:
+
+Subbasin: E100G1
+     Canvas X: 3071640.7998187873
+     Canvas Y: 1.3881376228078466E7
+     Area: 1.0694
+     Downstream: E1000000_0838_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 28.7
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.59776
+     Storage Coefficient: 8.32056
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0838_J
+     Description: Combine hydrographs downstream of e124-00-00 (sta. 835+62), RS 83815
+     Canvas X: 3072440.519349735
+     Canvas Y: 1.3882805187354982E7
+     Label X: -61.0
+     Label Y: 35.0
+     Downstream: E1000000_0826_J
+End:
+
+Junction: E1000000_0826_J
+     Description: Combine hydrographs at e122-00-00 confluence, RS 82633
+     Canvas X: 3073481.3588858033
+     Canvas Y: 1.3882649441064209E7
+     Label X: 4.0
+     Label Y: 18.0
+     Downstream: E1000000_0826_SW
+End:
+
+Diversion: E1000000_0826_SW
+     Description: RS 82633
+     Canvas X: 3073433.2598044337
+     Canvas Y: 1.3882187689883063E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0816_J
+     Divert To: E500-03-00
+
+     Diverter: None
+     End Diverter:
+End:
+
+Junction: E1000000_0816_J
+     Description: RS 81638
+     Canvas X: 3074859.5091267796
+     Canvas Y: 1.3881935524947952E7
+     Label X: 21.0
+     Label Y: -28.0
+     Downstream: E1000000_0773_R
+End:
+
+Reach: E1000000_0773_R
+     Description: from hec-ras sta.83815 to sta.77333
+     Canvas X: 3078701.391370523
+     Canvas Y: 1.3883083046671651E7
+     From Canvas X: 3074859.5091267796
+     From Canvas Y: 1.3881935524947952E7
+     Label X: -32.0
+     Label Y: -20.0
+     Downstream: E1000000_0773_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10010_r
+     Channel Loss: None
+End:
+
+Subbasin: E100G2
+     Canvas X: 3076286.1445655073
+     Canvas Y: 1.3879457706416847E7
+     Area: 0.9267
+     Downstream: E1000000_0773_J
+
+     Canopy: SMA
+     Initial Canopy Storage Percent: 0.0
+     Canopy Maximum Storage: 0.1
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.6
+     Initial Content: 0.067
+     Saturated Content: 0.46
+     Wetting Front Suction: 3.553
+     Hydraulic Conductivity: 0.032
+
+     Transform: Clark
+     Time of Concentration: 0.20459
+     Storage Coefficient: 4.31166
+
+     Baseflow: None
+End:
+
+Junction: E1000000_0773_J
+     Description: Combine hydrographs downstream of e122-00-00 (sta. 765+40), RS 77333
+     Canvas X: 3078701.391370523
+     Canvas Y: 1.3883083046671651E7
+     Label X: 1.0
+     Label Y: 21.0
+     Downstream: E1000000_0771_J
+End:
+
+Junction: E1000000_0771_J
+     Canvas X: 3080205.6348887538
+     Canvas Y: 1.388255958405031E7
+     Downstream: E1000000_0651_R
+End:
+
+Reach: E1000000_0651_R
+     Description: from hec-ras sta.77333 to sta.65068
+     Canvas X: 3087719.0250429055
+     Canvas Y: 1.3879008637364108E7
+     From Canvas X: 3080205.6348887538
+     From Canvas Y: 1.388255958405031E7
+     Label X: -26.0
+     Label Y: 14.0
+     Downstream: E1000000_0651_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: e10012_r
+     Channel Loss: None
+End:
+
+Junction: E1000000_0651_J
+     Description: RS 65068
+     Canvas X: 3087719.0250429055
+     Canvas Y: 1.3879008637364108E7
+     Downstream: E1000000_0638_J
+End:
+
+Junction: E1000000_0638_J
+     Description: Combine hydrographs dwnst of vogel creek, e121-00-00 (sta. 633+42), RS 63780
+     Canvas X: 3088667.0886382377
+     Canvas Y: 1.3878376594967222E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0639_SW
+End:
+
+Diversion: E1000000_0639_SW
+     Description: RS 63870
+     Canvas X: 3089163.6933786497
+     Canvas Y: 1.3877496250200126E7
+     Label X: 15.0
+     Label Y: 0.0
+     Downstream: E1000000_0629_J
+     Divert To: E500-06-00
+
+     Diverter: None
+     End Diverter:
+End:
+
+Reservoir: E500-06-00
+     Description: regional detention basin e500-06-00
+     Canvas X: 3091782.1547371866
+     Canvas Y: 1.3876638478375778E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: E1000000_0629_J
+
+     Route: Modified Puls
+     Routing Curve: Storage-Outflow
+     Initial Outflow Equals Inflow: Yes
+     Storage-Outflow Table: e500-06-00
+End:
+
+Junction: E1000000_0629_J
+     Description: RS 62890
+     Canvas X: 3089231.4122068877
+     Canvas Y: 1.3875238955925526E7
+     Label X: 1.0
+     Label Y: 3.0
+     Downstream: E1000000_0562_R
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.3886348743007133E7
+     Last View S: 1.3879812329402016E7
+     Last View W: 3066956.3654241236
+     Last View E: 3076205.390675362
+     Maximum View N: 1.3910886395812187E7
+     Maximum View S: 1.3838113739427933E7
+     Maximum View W: 3025551.4357700003
+     Maximum View E: 3133155.79823
+     Extent Method: Elements
+     Buffer: 19
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Fix Hydrologic Order: No
+End:

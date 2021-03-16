@@ -1,0 +1,1472 @@
+Gage Manager: E100_00_00
+     Version: 3.5
+     Filepath Separator: \
+End:
+
+Gage: Det-E500-02-00 (CI-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-02-00 (CI-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-02-00 (CI-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-02-00 (CI-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-02-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-02-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-03-00 (CE-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-03-00 (CE-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-03-00 (CE-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-03-00 (CE-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-03-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-03-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-06-00 (CE-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-06-00 (CE-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-06-00 (CE-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-06-00 (CE-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-06-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-06-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-02-00 (CE-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-02-00 (CE-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-02-00 (CE-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-02-00 (CE-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-02-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-02-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-03-00 (CE-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-03-00 (CE-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-03-00 (CE-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-03-00 (CE-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-03-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-03-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-06-00 (CE-0.2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-06-00 (CE-0.2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-06-00 (CE-1%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-06-00 (CE-1%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-06-00 (CE-10%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-06-00 (CE-10%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-02-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-02-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-03-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-03-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Det-E500-06-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DET-E500-06-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-02-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-02-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-03-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-03-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: Div-E500-06-00 (CE-2%)
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //DIV-E500-06-00 (CE-2%)/FLOW//15MIN/GAGE/
+End:
+
+Gage: 1160-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //1160-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 1160-Sept1998
+     Description: Gage 1160 Incremental Rainfall for Sept 10, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 10 September 1998, 00:00
+     End Time: 13 September 1998, 14:30
+     DSS File: E100_00_00.dss
+     Pathname: //1160-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 1170-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //1170-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 1670-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //1670-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 1670-Sept1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 10 September 1998, 08:00
+     End Time: 13 September 1998, 10:00
+     DSS File: E100_00_00.dss
+     Pathname: //1670-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 2220-Sept1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 12 September 1998, 00:00
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     DSS File: E100_00_00.dss
+     Pathname: //2220-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 2250-Sept1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 05:00
+     End Time: 12 September 1998, 02:45
+     DSS File: E100_00_00.dss
+     Pathname: //2250-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 520-March1992
+     Description: Gage 520 Incremental Rainfall for March 4, 1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //520-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 520-Sept1998
+     Description: Gage 520 Incremental Rainfall for Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 18:00
+     End Time: 12 September 1998, 03:00
+     DSS File: E100_00_00.dss
+     Pathname: //520-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 530-Sept1998
+     Description: Gage 530 Incremental Rainfall for Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 08:00
+     End Time: 12 September 1998, 03:30
+     DSS File: E100_00_00.dss
+     Pathname: //530-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 540-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //540-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 550-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //550-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 550-Sept1998
+     Description: Gage 550 Incremental Rainfall for Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 10 September 1998, 00:00
+     End Time: 14 September 1998, 01:45
+     DSS File: E100_00_00.dss
+     Pathname: //550-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 560-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //560-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 560-Sept1998
+     Description: Gage 560 Incremental Rainfall for Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 17:00
+     End Time: 12 September 1998, 04:45
+     DSS File: E100_00_00.dss
+     Pathname: //560-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 570-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //570-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 570-Sept1998
+     Description: Gage 570 Incremental Rainfall on Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 12:00
+     End Time: 13 September 1998, 12:15
+     DSS File: E100_00_00.dss
+     Pathname: //570-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 580-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //580-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 580-Sept1998
+     Description: Gage 580 Incremental Rainfall for Sept 9,1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     Start Time: 9 September 1998, 21:00
+     End Time: 12 September 1998, 01:15
+     DSS File: E100_00_00.dss
+     Pathname: //580-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 590-March1992
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 March 1992, 00:00
+     End Time: 6 March 1992, 00:30
+     DSS File: E100_00_00.dss
+     Pathname: //590-MARCH1992/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 590-Sept1998
+     Description: Gage 590 Incremental Rainfall Sept 9, 1998
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 8 September 1998, 15:00
+     End Time: 14 September 1998, 01:45
+     DSS File: E100_00_00.dss
+     Pathname: //590-SEPT1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100C2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100C2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100D2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100D2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100E12001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100E12001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100E22001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100E22001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100F2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100F2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100G2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100G2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100H2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100H2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100I2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100I2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100J2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100J2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100K2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100K2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100L2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100L2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100M2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100M2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100N2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100N2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100O2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100O2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E100P2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E100P2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101C2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101C2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101D2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101D2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101E2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101E2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101F2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101F2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101G2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101G2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E101H2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E101H2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E115A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E115A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E115B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E115B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E117A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E117A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E117B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E117B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E117C2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E117C2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E121A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E121A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E121B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E121B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E122A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E122A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E122B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E122B2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E124A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E124A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E125A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E125A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E127A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E127A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E132A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E132A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E135A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E135A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E141A2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E141A2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: E141B2001
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: IN
+     Data Type: PER-CUM
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: E100_00_00.dss
+     Pathname: //E141B2001/PRECIP-INC//15MIN/GAGE/
+End:
+

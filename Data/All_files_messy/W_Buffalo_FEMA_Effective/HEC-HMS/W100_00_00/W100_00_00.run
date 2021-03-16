@@ -1,0 +1,52 @@
+Run: W100-00-00 (0.2%)
+     Default Description: Yes
+     Log File: W100_00_00__0.2__.log
+     DSS File: W100_00_00.dss
+     Basin: W100-00-00 (0.2%)
+     Precip: W1000000_0.2%
+     Control: Control_15
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:13:45
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:13:50
+End:
+
+Run: W100-00-00 (1%)
+     Default Description: Yes
+     Log File: W100_00_00__1__.log
+     DSS File: W100_00_00.dss
+     Basin: W100-00-00 (1%)
+     Precip: W1000000_1%
+     Control: Control_15
+     Precip Last Execution Date: 20 January 2010
+     Precip Last Execution Time: 20:24:46
+     Basin Last Execution Date: 20 January 2010
+     Basin Last Execution Time: 20:24:47
+End:
+
+Run: W100-00-00 (10%)
+     Default Description: Yes
+     Log File: W100_00_00__10__.log
+     DSS File: W100_00_00.dss
+     Basin: W100-00-00 (10%)
+     Precip: W1000000_10%
+     Control: Control_15
+     Precip Last Execution Date: 20 January 2010
+     Precip Last Execution Time: 20:23:47
+     Basin Last Execution Date: 20 January 2010
+     Basin Last Execution Time: 20:23:49
+End:
+
+Run: W100-00-00 (2%)
+     Default Description: Yes
+     Log File: W100_00_00__2__.log
+     DSS File: W100_00_00.dss
+     Basin: W100-00-00 2%
+     Precip: W1000000_2%
+     Control: Control_15
+     Precip Last Execution Date: 20 January 2010
+     Precip Last Execution Time: 20:24:24
+     Basin Last Execution Date: 20 January 2010
+     Basin Last Execution Time: 20:24:26
+End:
+

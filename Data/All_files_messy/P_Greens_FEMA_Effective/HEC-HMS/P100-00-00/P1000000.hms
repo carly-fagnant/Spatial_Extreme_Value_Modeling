@@ -1,0 +1,50 @@
+Project: P1000000
+     Description: FEMA Effective June 09, 2014
+     Version: 3.3
+     DSS File Name: P1000000.dss
+End:
+
+Precipitation: 0.2PCT_24HR
+     FileName: 0.2PCT_24HR.met
+     Description: 0.2% (500-YR) Frequency Storm Event (Region 2)
+End:
+
+Precipitation: 10PCT_24HR
+     FileName: 10PCT_24HR.met
+     Description: 10% (10-YR) Frequency Storm Event (Region 2)
+End:
+
+Precipitation: 1PCT_24HR
+     FileName: 1PCT_24HR.met
+     Description: 1% (100-YR) Frequency Storm Event (Region 2)
+End:
+
+Precipitation: 2PCT_24HR
+     FileName: 2PCT_24HR.met
+     Description: 2% (50-YR) Frequency Storm Event (Region 2)
+End:
+
+Basin: P1000000
+     FileName: P1000000.basin
+     Description: green's & hall's bayous (p100-00-00 & p118-00-00) watershed
+End:
+
+Control: Control 5 Min
+     FileName: Control_5_Min.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

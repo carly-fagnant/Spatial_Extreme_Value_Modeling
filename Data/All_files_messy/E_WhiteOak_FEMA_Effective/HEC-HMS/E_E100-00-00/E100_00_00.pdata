@@ -1,0 +1,478 @@
+Paired Data Manager: E100_00_00
+     Version: 3.5
+     Filepath Separator: \
+End:
+
+Table: E500-02-00 (CE)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-02-00 (CE)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: e500-02-00(Jun 2001)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-02-00(JUN 2001)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: e500-03-00(Jun 2001)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-03-00(JUN 2001)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: e500-06-00(Jun 2001)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-06-00(JUN 2001)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: E500-03-00 (CE)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-03-00 (CE)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: E500-06-00 (CE)
+     Table Type: Elevation-Storage
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-06-00 (CE)/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: e1008_d
+     Table Type: Inflow-Diversion
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1008_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: E1000000_0048_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1000000_0048_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10010_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10010_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10011_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10011_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10012_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10012_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10013_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10013_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10014_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10014_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10015_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10015_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10016_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10016_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10017_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10017_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10018_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10018_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e10019_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E10019_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1002_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1002_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1003_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1003_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1004_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1004_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1005_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1005_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1007_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1007_R1/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1007_r2
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1007_R2/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1008_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1008_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1008a_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1008A_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1009_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1009_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1012_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1012_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1013_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1013_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1014_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1014_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1015_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1015_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1016_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1016_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1017_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1017_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1018_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1018_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1152_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1152_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1172_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1172_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1173_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1173_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1212_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1212_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1412_r
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1412_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: e500-02-00
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-02-00/STORAGE-FLOW///TABLE/
+End:
+
+Table: e500-03-00
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-03-00/STORAGE-FLOW///TABLE/
+End:
+
+Table: e500-06-00
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E500-06-00/STORAGE-FLOW///TABLE/
+End:
+
+Table: e1212_r_LOMR
+     Table Type: Storage-Outflow
+     Last Modified Date: 7 November 2016
+     Last Modified Time: 21:09:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: E100_00_00.dss
+     Pathname: //E1212_R_LOMR/STORAGE-FLOW///TABLE/
+End:
+

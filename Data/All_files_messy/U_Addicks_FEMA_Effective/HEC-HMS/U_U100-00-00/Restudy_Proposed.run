@@ -1,0 +1,52 @@
+Run: 010YR
+     Default Description: Yes
+     Log File: 010YR.log
+     DSS File: Restudy_Proposed.dss
+     Basin: U100_Basin_010YR
+     Precip: Rain_010YR
+     Control: JAN_2011
+     Precip Last Execution Date: 2 February 2021
+     Precip Last Execution Time: 20:28:44
+     Basin Last Execution Date: 2 February 2021
+     Basin Last Execution Time: 20:28:48
+End:
+
+Run: 050YR
+     Default Description: Yes
+     Log File: 050YR.log
+     DSS File: Restudy_Proposed.dss
+     Basin: U100_Basin_050YR
+     Precip: Rain_050YR
+     Control: JAN_2011
+     Precip Last Execution Date: 2 February 2021
+     Precip Last Execution Time: 20:29:28
+     Basin Last Execution Date: 2 February 2021
+     Basin Last Execution Time: 20:29:34
+End:
+
+Run: 100YR
+     Default Description: Yes
+     Log File: 100YR.log
+     DSS File: Restudy_Proposed.dss
+     Basin: U100_Basin_100YR
+     Precip: Rain_100YR
+     Control: JAN_2011
+     Precip Last Execution Date: 2 February 2021
+     Precip Last Execution Time: 20:29:46
+     Basin Last Execution Date: 2 February 2021
+     Basin Last Execution Time: 20:29:52
+End:
+
+Run: 500YR
+     Default Description: Yes
+     Log File: 500YR.log
+     DSS File: Restudy_Proposed.dss
+     Basin: U100_Basin_500YR
+     Precip: Rain_500YR
+     Control: JAN_2011
+     Precip Last Execution Date: 11 May 2017
+     Precip Last Execution Time: 22:08:27
+     Basin Last Execution Date: 11 May 2017
+     Basin Last Execution Time: 22:08:35
+End:
+

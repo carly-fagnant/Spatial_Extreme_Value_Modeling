@@ -1,0 +1,52 @@
+Run: 0.2_PCT
+     Default Description: Yes
+     Log File: 0.2_PCT.log
+     DSS File: K100_LOMR.dss
+     Basin: K100_L100_0.2_PCT
+     Precip: 0.2% Event
+     Control: Jun 2001
+     Precip Last Execution Date: 21 January 2011
+     Precip Last Execution Time: 17:27:36
+     Basin Last Execution Date: 21 January 2011
+     Basin Last Execution Time: 17:27:36
+End:
+
+Run: 1_PCT
+     Default Description: Yes
+     Log File: 1_PCT.log
+     DSS File: K100_LOMR.dss
+     Basin: K100_L100_1_PCT
+     Precip: 1% Event
+     Control: Jun 2001
+     Precip Last Execution Date: 21 January 2011
+     Precip Last Execution Time: 17:37:27
+     Basin Last Execution Date: 21 January 2011
+     Basin Last Execution Time: 17:37:45
+End:
+
+Run: 10_PCT
+     Default Description: Yes
+     Log File: 10_PCT.log
+     DSS File: K100_LOMR.dss
+     Basin: K100_L100_10_PCT
+     Precip: 10% Event
+     Control: Jun 2001
+     Precip Last Execution Date: 5 April 2010
+     Precip Last Execution Time: 17:28:38
+     Basin Last Execution Date: 5 April 2010
+     Basin Last Execution Time: 17:28:54
+End:
+
+Run: 2_PCT
+     Default Description: Yes
+     Log File: 2_PCT.log
+     DSS File: K100_LOMR.dss
+     Basin: K100_L100_2_PCT
+     Precip: 2% Event
+     Control: Jun 2001
+     Precip Last Execution Date: 5 April 2010
+     Precip Last Execution Time: 17:38:06
+     Basin Last Execution Date: 5 April 2010
+     Basin Last Execution Time: 17:38:21
+End:
+

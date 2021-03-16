@@ -1,0 +1,67 @@
+Trial Name: l100#4_c1_Oct1994-Loss_2
+     Trial ID: Oct1994-Loss_2
+     Optimization Run: Oct1994-Loss
+     Location: l100#4_c1
+     Trial Number: 2
+     Description: Optimize all loss parameters according to US of USGS gage at Cypress-RoseHill
+     Last Optimization Date: 5 May 2005
+     Last Optimization Time: 08:56:20
+End: 
+
+Optimize Location: l100#4_c1
+     Search Method: Univariate Gradient
+     Objective Function: Percent Error in Volume
+     Start Time: 15 October 1994,  00:00
+     End Time: 31 October 1994,  00:00
+     Percent Missing Flow: 0.000000
+
+     Objective Function Value: 0.0992387
+
+     Simulated Peak Flow:    9196.4
+      Observed Peak Flow:    8042.0
+*             Difference:    1154.4
+
+     Simulated Time of Peak: 17 October 1994,  19:30
+      Observed Time of Peak: 18 October 1994,  01:00
+*                Difference: -330 minutes
+
+     Simulated Volume:     25000
+      Observed Volume:     24994
+*          Difference:         7
+
+     Component: All Subbasins
+     Parameter: Init Loss Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+     Optimized Value: 2.250
+     Sensitivity: -46.24
+
+     Component: All Subbasins
+     Parameter: Moist Deficit Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+     Optimized Value: 2.319
+     Sensitivity: -69.76
+
+     Component: All Subbasins
+     Parameter: WetFront Suct Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+     Optimized Value: 1.000
+     Sensitivity: -69.76
+
+     Component: All Subbasins
+     Parameter: Hydr Cond Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+     Optimized Value: 1.000
+     Sensitivity: -83.85
+End:

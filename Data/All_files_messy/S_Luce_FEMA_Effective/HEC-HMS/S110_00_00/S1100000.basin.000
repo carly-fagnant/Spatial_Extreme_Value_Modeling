@@ -1,0 +1,110 @@
+Basin: S1100000
+     Description: Shook Gully (S110-00-00) watershed
+     Last Modified Date: 28 June 2007
+     Last Modified Time: 01:55:52
+     Version: 2.2.1
+     Default DSS File Name: J:\WR\Projects\461362.01 HCFCD MOMA\WR\HCFCD-FEMA Models\Task6-Final\Models-HECHMS-2.2.1\For Farah\S-Luce Bayou\Hydrology-HMS\S110-00-00\S1100000.dss
+     Unit System: English
+     Map File: s110-map.map
+End:
+
+Reach: S1100000_0006_R	
+     Description: RS 11018 to RS 578
+     Canvas X: 3203300.394
+     Canvas Y: 13955820.429
+     From Canvas X: 3209495.534
+     From Canvas Y: 13956078.560
+     Label X: -13
+     Label Y: -17
+     Downstream: S1100000_0006_J
+
+     Route: Modified Puls
+     Number of Reaches: 7
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: rt_s110#1-s110#2(S110_basin)
+     Routing Table in DSS: Yes
+End:
+
+Subbasin: S110B	
+     Canvas X: 3209753.665
+     Canvas Y: 13959047.065
+     Label X: 16
+     Label Y: 0
+     Area: 1.332
+     Downstream: S1100000_0006_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 6.026
+     Initial Loss: 0.1
+     Moisture Deficit: 0.436
+     Wetting Front Suction: 3.5
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.84
+     Storage Coefficient: 4.93
+
+     Baseflow: None
+End:
+
+Subbasin: S110A
+     Canvas X: 3215963.196
+     Canvas Y: 13959229.342
+     Label X: 16
+     Label Y: 0
+     Area: 1.92
+     Downstream: S1100000_0110_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.519
+     Initial Loss: 0.1
+     Moisture Deficit: 0.436
+     Wetting Front Suction: 3.5
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.12
+     Storage Coefficient: 6.9
+
+     Baseflow: None
+End:
+
+Junction: S1100000_0110_J
+     Description: node s110#1
+     Canvas X: 3212334.973
+     Canvas Y: 13955465.500
+     Label X: 24
+     Label Y: -1
+     Downstream: S1100000_0083_D
+End:
+
+Junction: S1100000_0006_J
+     Description: node s110#2
+     Canvas X: 3203300.394
+     Canvas Y: 13955820.429
+     Label X: -24
+     Label Y: 18
+End:
+
+Diversion: S1100000_0083_D
+     Canvas X: 3209495.534
+     Canvas Y: 13956078.560
+     Label X: -41
+     Label Y: -52
+     Downstream: S1100000_0006_R	
+     Inflow Diversion Table Name: diversion-1(S110_basin)
+     Diversion Table in DSS: Yes
+End:
+
+Default Attributes: 
+     Default Basin Unit System: English
+     Default Meteorology Unit System: SI
+     Default Loss Rate: Green and Ampt
+     Default Transform: Clark
+     Default Baseflow: None
+     Default Route: Modified Puls
+     Enable Flow Ratio: No
+     Enable Evapotranspiration: No
+     Compute Local Flow At Junctions: Yes
+     Missing Flow To Zero: No
+End: 

@@ -1,0 +1,46 @@
+Proj Title=U102-00-00 (Update)
+Current Plan=p01
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Flow File=f01
+Flow File=f02
+Plan File=p01
+Plan File=p02
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+Bear Creek (U102-00-00)
+(Flood Hazard & Floodway) Model
+10-, 2-, 1-, and 0.2% Events
+FILENAME: U102_00_00.prj
+PREPARED BY:  LAN                                 DATE: 03/13/2014
+REVIEWED BY: LJA                                   DATE: 03/14/2014
+STATUS: Final
+ADDICKS WATERSHED MODEL UPDATE
+HARRIS COUNTY, TEXAS
+
+Update1:
+The effective FEMA hydraulic model for unit number U102-00-00 has been updated by FEMA LOMR 20-06-2070P with an effective date of XX/XX/XXXX.
+
+Update2:
+The effective FEMA hydraulic model for unit number U102-00-00 has been updated by FEMA LOMR 20-06-2933P with an effective date of 05/17/2021.
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS File=dss
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Reach=U102-00-00      ,U102-00-00_0197 
+GIS Export Profiles= 2 
+       1       2

@@ -1,0 +1,52 @@
+Run: H100000_10%
+     Default Description: Yes
+     Log File: H100000_10_.log
+     DSS File: H100_00_00.dss
+     Basin: H1000000
+     Precip: 10%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:34:09
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:34:10
+End:
+
+Run: H1000000_.2%
+     Default Description: Yes
+     Log File: H1000000_.2_.log
+     DSS File: H100_00_00.dss
+     Basin: H1000000
+     Precip: 0.2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 13:51:30
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 13:51:31
+End:
+
+Run: H1000000_1%
+     Default Description: Yes
+     Log File: H1000000_1_.log
+     DSS File: H100_00_00.dss
+     Basin: H1000000
+     Precip: 1%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:34:45
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:34:46
+End:
+
+Run: H1000000_2%
+     Default Description: Yes
+     Log File: H1000000_2_.log
+     DSS File: H100_00_00.dss
+     Basin: H1000000
+     Precip: 2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:34:30
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:34:31
+End:
+

@@ -1,0 +1,5 @@
+NOTE 10184:  Began computing simulation run "J1000000_02%" at time 24Feb2010, 08:11:44.
+NOTE 20364:  Found no parameter problems in meteorologic model "0.2%_24HR".
+WARNING 20041:  NOAA criteria for storms with less than 1% exceedence frequency are only valid using data from Atlas 14.
+NOTE 40049:  Found no parameter problems in basin model "J1000000_02PCT".
+NOTE 10185:  Finished computing simulation run "J1000000_02%" at time 24Feb2010, 08:11:45.

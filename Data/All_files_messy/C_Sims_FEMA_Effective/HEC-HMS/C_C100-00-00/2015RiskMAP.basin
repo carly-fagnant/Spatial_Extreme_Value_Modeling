@@ -1,0 +1,2301 @@
+Basin: 2015RiskMAP
+     Description: UPDATED SV-SQ FOR UPPER BASIN AND GOLF COURSE
+     Last Modified Date: 13 July 2015
+     Last Modified Time: 19:31:11
+     Version: 4.0
+     Filepath Separator: \
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Compute Local Flow At Junctions: No
+
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Junction: C1000000_0003_J
+     Description: RS 344.1
+     Canvas X: 3161600.31821015
+     Canvas Y: 1.3826382402065717E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Subbasin: C102B
+     Canvas X: 3154783.6510253423
+     Canvas Y: 1.3827218718469163E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.09
+     Downstream: C1020000_0010_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 68.48
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.34
+     Storage Coefficient: 1.45
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0068_J
+     Description: RS 6834.3
+     Canvas X: 3157785.85203485
+     Canvas Y: 1.3823963995879417E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0003_R
+End:
+
+Subbasin: C100C
+     Canvas X: 3089729.1232124306
+     Canvas Y: 1.3793892262545729E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.84
+     Downstream: C1000000_0972_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 26.17
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.47
+     Storage Coefficient: 6.67
+
+     Baseflow: None
+End:
+
+Subbasin: C100B
+     Canvas X: 3082116.137
+     Canvas Y: 1.3793062198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.84
+     Downstream: C1000000_1039_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 36.37
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.19
+     Storage Coefficient: 3.65
+
+     Baseflow: None
+End:
+
+Subbasin: C100A
+     Canvas X: 3074720.021135968
+     Canvas Y: 1.3789201055306297E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.26
+     Downstream: C1000000_1131_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.34
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.54
+     Storage Coefficient: 6.99
+
+     Baseflow: None
+End:
+
+Junction: C1000000_1131_J
+     Description: RS 113102.6
+     Canvas X: 3075759.6203579544
+     Canvas Y: 1.37915956051797E7
+     Label X: -85.0
+     Label Y: 37.0
+     Downstream: C1000000_1089_R
+End:
+
+Reach: C1000000_1089_R
+     Description: FROM STA. 112793.8 TO 108876.3
+     Canvas X: 3081036.9668043624
+     Canvas Y: 1.3791700233410152E7
+     From Canvas X: 3075759.6203579544
+     From Canvas Y: 1.37915956051797E7
+     Label X: -50.0
+     Label Y: 22.0
+     Downstream: C1000000_1089_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_1089_R
+     Channel Loss: None
+End:
+
+Subbasin: C162
+     Canvas X: 3078999.212
+     Canvas Y: 1.3787811333E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.97
+     Downstream: C1000000_1089_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.32
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.59
+     Storage Coefficient: 6.36
+
+     Baseflow: None
+End:
+
+Junction: C1000000_1089_J
+     Description: RS 108876.3
+     Canvas X: 3081036.9668043624
+     Canvas Y: 1.3791700233410152E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_1047_R
+End:
+
+Reach: C1000000_1047_R
+     Description: FROM STA. 108876.3 TO 104687.2
+     Canvas X: 3083954.1252944074
+     Canvas Y: 1.379197407000526E7
+     From Canvas X: 3081036.9668043624
+     From Canvas Y: 1.3791700233410152E7
+     Label X: 16.0
+     Label Y: -27.0
+     Downstream: C1000000_1047_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_1047_R
+     Channel Loss: None
+End:
+
+Junction: C1000000_1047_J
+     Description: RS 104687.2
+     Canvas X: 3083954.1252944074
+     Canvas Y: 1.379197407000526E7
+     Label X: -149.0
+     Label Y: 18.0
+     Downstream: C1000000_1039_R
+End:
+
+Reach: C1000000_1039_R
+     Description: FROM STA. 104687.2 TO 103850.6
+     Canvas X: 3084999.8218653165
+     Canvas Y: 1.379197407000526E7
+     From Canvas X: 3083954.1252944074
+     From Canvas Y: 1.379197407000526E7
+     Label X: -56.0
+     Label Y: -47.0
+     Downstream: C1000000_1039_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_1039_R
+     Channel Loss: None
+End:
+
+Junction: C1000000_1039_J
+     Description: RS 102854.9
+     Canvas X: 3084999.8218653165
+     Canvas Y: 1.379197407000526E7
+     Label X: -15.0
+     Label Y: 26.0
+     Downstream: C1000000_1030_R
+End:
+
+Reach: C1000000_1030_R
+     Description: FROM STA. 103850.6 TO 103023.2
+     Canvas X: 3086280.067199794
+     Canvas Y: 1.3792003388600707E7
+     From Canvas X: 3084999.8218653165
+     From Canvas Y: 1.379197407000526E7
+     Label X: -86.0
+     Label Y: -26.0
+     Downstream: C1000000_1030_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_1030_R
+     Channel Loss: None
+End:
+
+Junction: C1000000_1030_J
+     Canvas X: 3086280.067199794
+     Canvas Y: 1.3792003388600707E7
+     Label X: -43.0
+     Label Y: -51.0
+     Downstream: C1000000_1029_SW
+End:
+
+Diversion: C1000000_1029_SW
+     Description: C500-01 Regional Basin Side Weir
+     Canvas X: 3087042.3506813915
+     Canvas Y: 1.3792003388600707E7
+     Label X: 0.0
+     Label Y: 1.0
+     Downstream: C500-01_1029_J
+     Divert To: C500_01_00
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: C500-01
+     End Diverter:
+End:
+
+Reservoir: C500_01_00
+     Description: BLUE RIDGE BASIN
+     Canvas X: 3088229.73957856
+     Canvas Y: 1.3789529302576274E7
+     Label X: -38.0
+     Label Y: -23.0
+     Downstream: C500-01_1029_J
+
+     Route: Modified Puls
+     Routing Curve: Storage-Elevation-Outflow
+     Initial Elevation: 47.5
+     Storage-Outflow Table: C500-01
+     Elevation-Storage Table: 1033Existing
+     Primary Table: Storage-Outflow
+End:
+
+Junction: C500-01_1029_J
+     Canvas X: 3087674.87361951
+     Canvas Y: 1.379182114023322E7
+     Downstream: C1000000_0972_R
+End:
+
+Reach: C1000000_0972_R
+     Description: FROM STA. 103023.2 TO 97158.7
+     Canvas X: 3091760.090136423
+     Canvas Y: 1.3790009137179635E7
+     From Canvas X: 3087674.87361951
+     From Canvas Y: 1.379182114023322E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0972_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0972_R
+     Channel Loss: None
+End:
+
+Junction: C1000000_0972_J
+     Description: RS 97158.7
+     Canvas X: 3091760.090136423
+     Canvas Y: 1.3790009137179635E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0947_R
+End:
+
+Reach: C1000000_0947_R
+     Description: FROM STA. 97158.7 TO 94709.2
+     Canvas X: 3094015.988667084
+     Canvas Y: 1.3789677404358884E7
+     From Canvas X: 3091760.090136423
+     From Canvas Y: 1.3790009137179635E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0947_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0947_R
+     Channel Loss: None
+End:
+
+Subbasin: C147B
+     Canvas X: 3080317.842808207
+     Canvas Y: 1.3778937080875114E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.71
+     Downstream: C1470000_9901_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 29.35
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.76
+     Storage Coefficient: 6.72
+
+     Baseflow: None
+End:
+
+Junction: C1470000_9901_J
+     Description: Assumed US end of ditch C147-00-00 extended (no cap) junction for Subarea C147B. No xsec data.
+     Canvas X: 3085798.141
+     Canvas Y: 1.3779650155E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1470000_0033_J
+End:
+
+Subbasin: C147A
+     Canvas X: 3073890.4
+     Canvas Y: 1.3782554482E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.82
+     Downstream: C1470200_9901_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 39.71
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.54
+     Storage Coefficient: 6.61
+
+     Baseflow: None
+End:
+
+Junction: C1470200_9901_J
+     Description: Assumed US end of ditch C147-02-00 extended (no cap) junction for Subarea C147A. No xsec data.
+     Canvas X: 3080497.744
+     Canvas Y: 1.3783788821E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1470000_0033_J
+End:
+
+Junction: C1470000_0033_J
+     Description: RS 3348.4
+     Canvas X: 3089228.525805639
+     Canvas Y: 1.3783443740818888E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1470000_0040_R
+End:
+
+Reach: C1470000_0040_R
+     Description: FROMS STA.9416.5 TO STA. 3983.2
+     Canvas X: 3090708.287116933
+     Canvas Y: 1.3786822529146342E7
+     From Canvas X: 3089228.525805639
+     From Canvas Y: 1.3783443740818888E7
+     Label X: -128.0
+     Label Y: 10.0
+     Downstream: C1470000_0040_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1470000_0040_R
+     Channel Loss: None
+End:
+
+Subbasin: C147C
+     Description: Sub-area C147C was moved from downstream of Reach C1470000_007_R to upstream of the same reach by URS Corporation on 05/08.
+     Canvas X: 3090872.098580857
+     Canvas Y: 1.3782982022945253E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.73
+     Downstream: C1470000_0040_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 34.33
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.97
+     Storage Coefficient: 3.65
+
+     Baseflow: None
+End:
+
+Junction: C1470000_0040_J
+     Description: RS 2612.1
+     Canvas X: 3090708.287116933
+     Canvas Y: 1.3786822529146342E7
+     Label X: -148.0
+     Label Y: 3.0
+     Downstream: C1470000-0025_R
+End:
+
+Reach: C1470000-0025_R
+     Description: FROMS STA. 3983.2 TO STA. 2487.1
+     Canvas X: 3092705.9648871804
+     Canvas Y: 1.3786970505277472E7
+     From Canvas X: 3090708.287116933
+     From Canvas Y: 1.3786822529146342E7
+     Label X: -88.0
+     Label Y: 25.0
+     Downstream: C1470000_0025_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1470000_0025_R
+     Channel Loss: None
+End:
+
+Junction: C1470000_0025_J
+     Description: Routing through C5147-01 Basin
+     Canvas X: 3092705.9648871804
+     Canvas Y: 1.3786970505277472E7
+     Label X: -72.0
+     Label Y: -55.0
+     Downstream: C1470000_0007_R
+End:
+
+Reach: C1470000_0007_R
+     Description: FROM STA. 2487.1 TO STA. 746.0
+     Canvas X: 3093818.2459935243
+     Canvas Y: 1.378897819746889E7
+     From Canvas X: 3092705.9648871804
+     From Canvas Y: 1.3786970505277472E7
+     Label X: -128.0
+     Label Y: 10.0
+     Downstream: C1470000_0007_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1470000_0007_R
+     Channel Loss: None
+End:
+
+Junction: C1470000_0007_J
+     Description: RS 746.0
+     Canvas X: 3093818.2459935243
+     Canvas Y: 1.378897819746889E7
+     Label X: -167.0
+     Label Y: 5.0
+     Downstream: C1000000_0947_J
+End:
+
+Junction: C1000000_0947_J
+     Description: RS 94709.2
+     Canvas X: 3094015.988667084
+     Canvas Y: 1.3789677404358884E7
+     Label X: 16.0
+     Label Y: 3.0
+     Downstream: C1000000_0924_R
+End:
+
+Reach: C1000000_0924_R
+     Description: FROM STA. 94709.2 TO 92449.2
+     Canvas X: 3096062.618498115
+     Canvas Y: 1.3789274580446698E7
+     From Canvas X: 3094015.988667084
+     From Canvas Y: 1.3789677404358884E7
+     Label X: -87.0
+     Label Y: -10.0
+     Downstream: C1000000_0924_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0924_R
+     Channel Loss: None
+End:
+
+Subbasin: C145A
+     Canvas X: 3090969.562
+     Canvas Y: 1.3777846605E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.86
+     Downstream: C1450000_9902_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 47.50
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.43
+     Storage Coefficient: 6.61
+
+     Baseflow: None
+End:
+
+Junction: C1450000_9902_J
+     Description: US end of ditch C145-00-00 junction with Subarea C145A. No xsec data.
+     Canvas X: 3094372.194
+     Canvas Y: 1.3781639599E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1450000_9901_J
+End:
+
+Subbasin: C145B
+     Canvas X: 3096969.0386284837
+     Canvas Y: 1.3785883325450676E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.28
+     Downstream: C1450000_9901_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 35.02
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.23
+     Storage Coefficient: 5.33
+
+     Baseflow: None
+End:
+
+Junction: C1450000_9901_J
+     Description: DS end of ditch C145-00-00 near confluence with C100-00-00. No xsec data.
+     Canvas X: 3096030.0306824204
+     Canvas Y: 1.3788101419081695E7
+     Label X: 14.0
+     Label Y: 4.0
+     Downstream: C1000000_0924_J
+End:
+
+Junction: C1000000_0924_J
+     Description: RS 92449.2
+     Canvas X: 3096062.618498115
+     Canvas Y: 1.3789274580446698E7
+     Label X: 16.0
+     Label Y: -18.0
+     Downstream: C1000000_0905_R
+End:
+
+Reach: C1000000_0905_R
+     Description: FROM STA. 92449.2 TO 90514.2
+     Canvas X: 3097518.043
+     Canvas Y: 1.3789623538E7
+     From Canvas X: 3096062.618498115
+     From Canvas Y: 1.3789274580446698E7
+     Label X: -14.0
+     Label Y: 18.0
+     Downstream: C1000000_0905_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0905_R
+     Channel Loss: None
+End:
+
+Subbasin: C100D
+     Canvas X: 3098133.9699596013
+     Canvas Y: 1.3788242445831928E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.42
+     Downstream: C1000000_0905_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.339
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 36.90
+     Initial Content: 0.078
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.052
+
+     Transform: Clark
+     Time of Concentration: 0.79
+     Storage Coefficient: 4.97
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0905_J
+     Description: RS 90514.2
+     Canvas X: 3097518.043
+     Canvas Y: 1.3789623538E7
+     Label X: 7.0
+     Label Y: -3.0
+     Downstream: C1000000_0887_R
+End:
+
+Reach: C1000000_0887_R
+     Description: FROM STA. 90514.2 TO 88689.3
+     Canvas X: 3100282.740630552
+     Canvas Y: 1.378974710377427E7
+     From Canvas X: 3097518.043
+     From Canvas Y: 1.3789623538E7
+     Label X: -58.0
+     Label Y: 25.0
+     Downstream: C1000000_0887_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0887_R
+     Channel Loss: None
+End:
+
+Subbasin: C144A
+     Canvas X: 3098256.137
+     Canvas Y: 1.3783327198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.02
+     Downstream: C1000000_0887_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 28.57
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.35
+     Storage Coefficient: 5.25
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0887_J
+     Description: RS 88689.3
+     Canvas X: 3100282.740630552
+     Canvas Y: 1.378974710377427E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0850_R
+End:
+
+Reach: C1000000_0850_R
+     Description: FROM STA. 88689.3 TO 84978.4
+     Canvas X: 3103261.3616591115
+     Canvas Y: 1.3790204653648296E7
+     From Canvas X: 3100282.740630552
+     From Canvas Y: 1.378974710377427E7
+     Label X: -80.0
+     Label Y: 25.0
+     Downstream: C1000000_0850_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0850_R
+     Channel Loss: None
+End:
+
+Subbasin: C143A
+     Canvas X: 3102501.137
+     Canvas Y: 1.3785067198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.98
+     Downstream: C1000000_0850_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.44
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.33
+     Storage Coefficient: 5.57
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0850_J
+     Description: RS 84978.4
+     Canvas X: 3103261.3616591115
+     Canvas Y: 1.3790204653648296E7
+     Label X: -36.0
+     Label Y: 31.0
+     Downstream: C1000000_0819_R
+End:
+
+Reach: C1000000_0819_R
+     Description: FROM STA. 84978.4 TO 81854.3
+     Canvas X: 3105561.5570687726
+     Canvas Y: 1.3790508104702009E7
+     From Canvas X: 3103261.3616591115
+     From Canvas Y: 1.3790204653648296E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0819_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0819_R
+     Channel Loss: None
+End:
+
+Subbasin: C100E
+     Canvas X: 3098783.535
+     Canvas Y: 1.3796438474E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.24
+     Downstream: C1000000_0819_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 46.96
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 1.98
+     Storage Coefficient: 4.77
+
+     Baseflow: None
+End:
+
+Subbasin: C161
+     Canvas X: 3103675.471875284
+     Canvas Y: 1.3800193407046951E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.39
+     Downstream: C1000000_0819_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 20.46
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 1.35
+     Storage Coefficient: 7.86
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0819_J
+     Description: RS 81854.3
+     Canvas X: 3105561.5570687726
+     Canvas Y: 1.3790508104702009E7
+     Label X: 18.0
+     Label Y: 0.0
+     Downstream: C1000000_0755_R
+End:
+
+Reach: C1000000_0755_R
+     Description: FROM STA. 81854.3 TO 75449.6
+     Canvas X: 3110659.084618742
+     Canvas Y: 1.3794025398711488E7
+     From Canvas X: 3105561.5570687726
+     From Canvas Y: 1.3790508104702009E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0755_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0755_R
+     Channel Loss: None
+End:
+
+Subbasin: C137A
+     Canvas X: 3107541.137
+     Canvas Y: 1.3797697198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.56
+     Downstream: C1000000_0755_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 29.47
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.36
+     Storage Coefficient: 5.04
+
+     Baseflow: None
+End:
+
+Subbasin: C100F
+     Canvas X: 3108501.137
+     Canvas Y: 1.3787512198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.58
+     Downstream: C1000000_0755_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 29.90
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 1.26
+     Storage Coefficient: 4.64
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0755_J
+     Description: RS 75449.6
+     Canvas X: 3110659.084618742
+     Canvas Y: 1.3794025398711488E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0696_R
+End:
+
+Reach: C1000000_0696_R
+     Description: FROM STA. 75449.6 TO 69611.8
+     Canvas X: 3114958.177402093
+     Canvas Y: 1.3795546982902091E7
+     From Canvas X: 3110659.084618742
+     From Canvas Y: 1.3794025398711488E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0696_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0696_R
+     Channel Loss: None
+End:
+
+Subbasin: C100G
+     Canvas X: 3112266.137
+     Canvas Y: 1.3796482198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.23
+     Downstream: C1000000_0696_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 10.25
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.53
+     Storage Coefficient: 7.01
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0696_J
+     Description: RS 69611.8
+     Canvas X: 3114958.177402093
+     Canvas Y: 1.3795546982902091E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0623_R
+End:
+
+Reach: C1000000_0623_R
+     Description: FROM STA. 69611.8 TO 62254.1
+     Canvas X: 3118140.778409528
+     Canvas Y: 1.379449501299988E7
+     From Canvas X: 3114958.177402093
+     From Canvas Y: 1.3795546982902091E7
+     Label X: -115.0
+     Label Y: 32.0
+     Downstream: C1000000_6454_SW
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0623_R
+     Channel Loss: None
+End:
+
+Diversion: C1000000_6454_SW
+     Description: C500-03 Regional Basin Side Weir
+     Canvas X: 3118140.778409528
+     Canvas Y: 1.379449501299988E7
+     Label X: -102.0
+     Label Y: -40.0
+     Downstream: C500_03_J
+     Divert To: C500_03_00
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: C500-03
+     End Diverter:
+End:
+
+Reservoir: C500_03_00
+     Description: HILL AT SIMS DETENTION BASIN
+     Canvas X: 3119490.033526611
+     Canvas Y: 1.3795777911307925E7
+     Label X: 6.0
+     Label Y: -13.0
+     Downstream: C500_03_J
+
+     Route: Modified Puls
+     Routing Curve: Storage-Elevation-Outflow
+     Initial Outflow Equals Inflow: Yes
+     Storage-Outflow Table: C500-03
+     Elevation-Storage Table: C500-03
+     Primary Table: Storage-Outflow
+End:
+
+Junction: C500_03_J
+     Canvas X: 3118914.941181625
+     Canvas Y: 1.3797038690679625E7
+     Downstream: C1000000_0623_J
+End:
+
+Subbasin: C132A
+     Canvas X: 3118574.500964983
+     Canvas Y: 1.3800002639318312E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 4.07
+     Downstream: C1000000_0623_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 22.35
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.79
+     Storage Coefficient: 11.92
+
+     Baseflow: None
+End:
+
+Subbasin: C134A
+     Canvas X: 3121692.386759363
+     Canvas Y: 1.3796862482911116E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.03
+     Downstream: C1000000_0623_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 15.40
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 2.76
+     Storage Coefficient: 11.47
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0623_J
+     Description: RS 62254.1
+     Canvas X: 3120190.741739549
+     Canvas Y: 1.379889888194358E7
+     Downstream: C1000000_0574_R
+End:
+
+Reach: C1000000_0574_R
+     Description: FROM STA. 62254.1 TO 57376.6
+     Canvas X: 3123103.59
+     Canvas Y: 1.3800484441E7
+     From Canvas X: 3120190.741739549
+     From Canvas Y: 1.379889888194358E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0574_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0574_R
+     Channel Loss: None
+End:
+
+Subbasin: C127A
+     Canvas X: 3124016.9714714284
+     Canvas Y: 1.3797958007477129E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.14
+     Downstream: C1000000_0574_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.19
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.45
+     Storage Coefficient: 3.92
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0574_J
+     Description: RS 57376.6
+     Canvas X: 3123103.59
+     Canvas Y: 1.3800484441E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0551_R
+End:
+
+Reach: C1000000_0551_R
+     Description: FROM STA. 57376.6 TO 55054.7
+     Canvas X: 3125934.3135871147
+     Canvas Y: 1.380186394608537E7
+     From Canvas X: 3123103.59
+     From Canvas Y: 1.3800484441E7
+     Label X: -151.0
+     Label Y: 12.0
+     Downstream: C1000000_0551_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0551_R
+     Channel Loss: None
+End:
+
+Subbasin: C100H
+     Canvas X: 3123093.676
+     Canvas Y: 1.3805240421E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.98
+     Downstream: C1000000_0551_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 41.19
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.54
+     Storage Coefficient: 2.89
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0551_J
+     Description: RS 55054.7
+     Canvas X: 3125934.3135871147
+     Canvas Y: 1.380186394608537E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0481_R
+End:
+
+Reach: C1000000_0481_R
+     Description: FROM STA. 55054.7 TO 48062.3
+     Canvas X: 3131808.945
+     Canvas Y: 1.3800300301E7
+     From Canvas X: 3125934.3135871147
+     From Canvas Y: 1.380186394608537E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0481_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0481_R
+     Channel Loss: None
+End:
+
+Subbasin: C100I
+     Canvas X: 3128302.992
+     Canvas Y: 1.3797276755E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.79
+     Downstream: C1000000_0481_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 40.43
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.60
+     Storage Coefficient: 4.02
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0481_J
+     Description: RS 48062.3
+     Canvas X: 3131808.945
+     Canvas Y: 1.3800300301E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0431_R
+End:
+
+Reach: C1000000_0431_R
+     Description: FROM STA. 48062.3 TO 43139
+     Canvas X: 3135860.563
+     Canvas Y: 1.3802530898E7
+     From Canvas X: 3131808.945
+     From Canvas Y: 1.3800300301E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0431_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0431_R
+     Channel Loss: None
+End:
+
+Subbasin: C118A
+     Canvas X: 3131511.911
+     Canvas Y: 1.3808892489E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.87
+     Downstream: C1000000_0431_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.87
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.81
+     Storage Coefficient: 4.59
+
+     Baseflow: None
+End:
+
+Subbasin: C123A
+     Canvas X: 3133093.167
+     Canvas Y: 1.3794043386E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.44
+     Downstream: C1000000_0431_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.61
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.98
+     Storage Coefficient: 4.90
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0431_J
+     Description: RS 43139
+     Canvas X: 3135860.563
+     Canvas Y: 1.3802530898E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0393_R
+End:
+
+Reach: C1000000_0393_R
+     Description: FROM STA. 43139 TO 39332.8
+     Canvas X: 3138682.5203657458
+     Canvas Y: 1.3804155968857424E7
+     From Canvas X: 3135860.563
+     From Canvas Y: 1.3802530898E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0393_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0393_R
+     Channel Loss: None
+End:
+
+Subbasin: C120A
+     Canvas X: 3139341.137
+     Canvas Y: 1.3794997198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.23
+     Downstream: C1000000_0393_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 22.53
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.66
+     Storage Coefficient: 5.10
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0393_J
+     Description: RS 39332.8
+     Canvas X: 3138682.5203657458
+     Canvas Y: 1.3804155968857424E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0276_R
+End:
+
+Reach: C1000000_0276_R
+     Description: FROM STA. 39332.8 TO 27576.8
+     Canvas X: 3146656.851
+     Canvas Y: 1.3811391467E7
+     From Canvas X: 3138682.5203657458
+     From Canvas Y: 1.3804155968857424E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0276_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0276_R
+     Channel Loss: None
+End:
+
+Subbasin: C100J
+     Canvas X: 3143391.137
+     Canvas Y: 1.3806292198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 6.27
+     Downstream: C1000000_0276_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 44.77
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 1.64
+     Storage Coefficient: 15.58
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0276_J
+     Description: RS 27576.8
+     Canvas X: 3146656.851
+     Canvas Y: 1.3811391467E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0207_R
+End:
+
+Reach: C1000000_0207_R
+     Description: FROM STA. 27576.8 TO 20732
+     Canvas X: 3151522.2266076626
+     Canvas Y: 1.3813499266228005E7
+     From Canvas X: 3146656.851
+     From Canvas Y: 1.3811391467E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0207_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0207_R
+     Channel Loss: None
+End:
+
+Subbasin: C100K
+     Canvas X: 3150081.137
+     Canvas Y: 1.3798117198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.76
+     Downstream: C1650000_9901_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 38.93
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.85
+     Storage Coefficient: 3.93
+
+     Baseflow: None
+End:
+
+Junction: C1650000_9901_J
+     Description: US end of ditch C165-00-00 junction with Subarea C100K. No xsec data.
+     Canvas X: 3152601.598
+     Canvas Y: 1.3805703657E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0207_J
+End:
+
+Junction: C1000000_0207_J
+     Description: RS 20732
+     Canvas X: 3151522.2266076626
+     Canvas Y: 1.3813499266228005E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0151_R
+End:
+
+Reach: C1000000_0151_R
+     Description: FROM STA. 20732 TO 15118.2
+     Canvas X: 3154373.099
+     Canvas Y: 1.3817293865E7
+     From Canvas X: 3151522.2266076626
+     From Canvas Y: 1.3813499266228005E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0151_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0151_R
+     Channel Loss: None
+End:
+
+Subbasin: C100L
+     Canvas X: 3155555.2447427395
+     Canvas Y: 1.3815145869686048E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.38
+     Downstream: C1000000_0151_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 53.81
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.76
+     Storage Coefficient: 2.95
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0151_J
+     Description: RS 15118.2
+     Canvas X: 3154373.099
+     Canvas Y: 1.3817293865E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0130_R
+End:
+
+Reach: C1000000_0130_R
+     Description: FROM STA. 15118.2 TO 13009
+     Canvas X: 3155262.467
+     Canvas Y: 1.3819270279E7
+     From Canvas X: 3154373.099
+     From Canvas Y: 1.3817293865E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0130_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0130_R
+     Channel Loss: None
+End:
+
+Subbasin: C106G
+     Canvas X: 3161713.375
+     Canvas Y: 1.3817941731E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.07
+     Downstream: C1060000_0003_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.67
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.77
+     Storage Coefficient: 3.11
+
+     Baseflow: None
+End:
+
+Subbasin: C106C
+     Canvas X: 3167757.45
+     Canvas Y: 1.380794951E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.89
+     Downstream: C1060000_0138_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.370
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.28
+     Initial Content: 0.071
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.064
+
+     Transform: Clark
+     Time of Concentration: 0.48
+     Storage Coefficient: 2.01
+
+     Baseflow: None
+End:
+
+Subbasin: C106D
+     Canvas X: 3161916.137
+     Canvas Y: 1.3801222198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.86
+     Downstream: C1060000_0138_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.370
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.49
+     Initial Content: 0.071
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.064
+
+     Transform: Clark
+     Time of Concentration: 0.71
+     Storage Coefficient: 4.63
+
+     Baseflow: None
+End:
+
+Subbasin: C106B
+     Canvas X: 3167826.137
+     Canvas Y: 1.3798972198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.02
+     Downstream: C1060000_0210_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.370
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 48.52
+     Initial Content: 0.071
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.064
+
+     Transform: Clark
+     Time of Concentration: 0.83
+     Storage Coefficient: 5.00
+
+     Baseflow: None
+End:
+
+Subbasin: C106A
+     Canvas X: 3173061.137
+     Canvas Y: 1.3800157198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.82
+     Downstream: C1060800_0033_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.370
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.05
+     Initial Content: 0.071
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.064
+
+     Transform: Clark
+     Time of Concentration: 0.52
+     Storage Coefficient: 3.60
+
+     Baseflow: None
+End:
+
+Junction: C1060800_0033_J
+     Description: RS 3287.4
+     Canvas X: 3167343.044
+     Canvas Y: 1.380421279E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0210_J
+End:
+
+Junction: C1060000_0210_J
+     Description: RS 21050.3
+     Canvas X: 3165242.259
+     Canvas Y: 1.3806363985E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0138_R
+End:
+
+Reach: C1060000_0138_R
+     Description: FROM STA. 21050.3 TO STA. 13835.3
+     Canvas X: 3162292.608
+     Canvas Y: 1.3811640582E7
+     From Canvas X: 3165242.259
+     From Canvas Y: 1.3806363985E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0138_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1060000_0138_R
+     Channel Loss: None
+End:
+
+Junction: C1060000_0138_J
+     Description: RS 13835.3
+     Canvas X: 3162292.608
+     Canvas Y: 1.3811640582E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0078_R
+End:
+
+Reach: C1060000_0078_R
+     Description: FROM STA. 13835.3 TO STA. 7825.3
+     Canvas X: 3159900.114
+     Canvas Y: 1.3816032284E7
+     From Canvas X: 3162292.608
+     From Canvas Y: 1.3811640582E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0078_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1060000_0078_R
+     Channel Loss: None
+End:
+
+Subbasin: C106F
+     Canvas X: 3155421.137
+     Canvas Y: 1.3807987198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.02
+     Downstream: C1060100_0008_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 53.24
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.85
+     Storage Coefficient: 5.27
+
+     Baseflow: None
+End:
+
+Subbasin: C106E
+     Canvas X: 3156951.137
+     Canvas Y: 1.3798057198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.78
+     Downstream: C1060100_0166_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.22
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.62
+     Storage Coefficient: 5.76
+
+     Baseflow: None
+End:
+
+Junction: C1060100_0166_J
+     Description: RS 16613.5
+     Canvas X: 3155238.276
+     Canvas Y: 1.3802868525E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060100_0008_R
+End:
+
+Reach: C1060100_0008_R
+     Description: FROM STA. 16613.5 TO STA. 820.3
+     Canvas X: 3159762.063
+     Canvas Y: 1.3815907677E7
+     From Canvas X: 3155238.276
+     From Canvas Y: 1.3802868525E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060100_0008_J
+
+     Route: Modified Puls
+     Number of Reaches: 9
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1060100_0008_R
+     Channel Loss: None
+End:
+
+Junction: C1060100_0008_J
+     Description: RS 820.3
+     Canvas X: 3159762.063
+     Canvas Y: 1.3815907677E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0078_J
+End:
+
+Junction: C1060000_0078_J
+     Description: RS 7825.3
+     Canvas X: 3159900.114
+     Canvas Y: 1.3816032284E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0003_R
+End:
+
+Reach: C1060000_0003_R
+     Description: FROM STA. 7825.3 TO STA. 297.6
+     Canvas X: 3158005.9484262313
+     Canvas Y: 1.3818778198689355E7
+     From Canvas X: 3159900.114
+     From Canvas Y: 1.3816032284E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1060000_0003_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1060000_0003_R
+     Channel Loss: None
+End:
+
+Junction: C1060000_0003_J
+     Description: RS 297.6
+     Canvas X: 3158005.9484262313
+     Canvas Y: 1.3818778198689355E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0130_J
+End:
+
+Junction: C1000000_0130_J
+     Description: RS 13009
+     Canvas X: 3155262.467
+     Canvas Y: 1.3819270279E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0118_R
+End:
+
+Reach: C1000000_0118_R
+     Description: FROM STA. 13009 TO 11812.4
+     Canvas X: 3154625.434
+     Canvas Y: 1.3820570947E7
+     From Canvas X: 3155262.467
+     From Canvas Y: 1.3819270279E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0118_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0118_R
+     Channel Loss: None
+End:
+
+Subbasin: C103A
+     Canvas X: 3148845.344
+     Canvas Y: 1.3818356043E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.61
+     Downstream: C1000000_0118_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 61.70
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.36
+     Storage Coefficient: 1.74
+
+     Baseflow: None
+End:
+
+Junction: C1020000_0094_J
+     Description: RS 9385.8
+     Canvas X: 3148926.137
+     Canvas Y: 1.3821292198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1020000_0010_R
+End:
+
+Subbasin: C102A
+     Canvas X: 3142679.412
+     Canvas Y: 1.3821378081E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.90
+     Downstream: C1020000_0094_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 63.06
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 0.86
+     Storage Coefficient: 11.53
+
+     Baseflow: None
+End:
+
+Junction: C1000000_0118_J
+     Description: RS 11812.4
+     Canvas X: 3154625.434
+     Canvas Y: 1.3820570947E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0068_R
+End:
+
+Reach: C1000000_0003_R
+     Description: FROM STA. 6834.3 TO 344.1
+     Canvas X: 3161600.31821015
+     Canvas Y: 1.3826382402065717E7
+     From Canvas X: 3157785.85203485
+     From Canvas Y: 1.3823963995879417E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0003_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0003_R
+     Channel Loss: None
+End:
+
+Reach: C1000000_0068_R
+     Description: FROM STA. 11812.4 TO 6834.3
+     Canvas X: 3157785.85203485
+     Canvas Y: 1.3823963995879417E7
+     From Canvas X: 3154625.434
+     From Canvas Y: 1.3820570947E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0068_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1000000_0068_R
+     Channel Loss: None
+End:
+
+Reach: C1020000_0010_R
+     Description: FROM STA. 9385.8 TO STA. 994.8
+     Canvas X: 3156411.012320216
+     Canvas Y: 1.3826040284428049E7
+     From Canvas X: 3148926.137
+     From Canvas Y: 1.3821292198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1020000_0010_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: C1020000_0010_R
+     Channel Loss: None
+End:
+
+Junction: C1020000_0010_J
+     Description: RS 994.8
+     Canvas X: 3156411.012320216
+     Canvas Y: 1.3826040284428049E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: C1000000_0068_J
+End:
+
+Subbasin: C100M
+     Canvas X: 3165569.9377214573
+     Canvas Y: 1.3825446247211294E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.76
+     Downstream: C1000000_0003_J
+
+     Canopy: Simple
+     Plant Uptake Method: None
+     Initial Canopy Storage Percent: 0.0
+     Canopy Storage Capacity: 0.319
+     Crop Coefficient: 1.0
+     End Canopy:
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 59.93
+     Initial Content: 0.075
+     Saturated Content: 0.46
+     Wetting Front Suction: 12.450
+     Hydraulic Conductivity: 0.072
+
+     Transform: Clark
+     Time of Concentration: 1.66
+     Storage Coefficient: 5.30
+
+     Baseflow: None
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.381784077902304E7
+     Last View S: 1.3796241654629735E7
+     Last View W: 3117237.1864543613
+     Last View E: 3145441.8683077535
+     Maximum View N: 1.383215592981608E7
+     Maximum View S: 1.3772909393653084E7
+     Maximum View W: 3063973.3263
+     Maximum View E: 3182978.2107
+     Extent Method: Elements
+     Buffer: 20
+     Draw Icons: Yes
+     Draw Icon Labels: Name
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Fix Hydrologic Order: No
+     Map: hms.map.MapGeoMap
+     Map File Name: mapfile.map
+     Minimum Scale: -2147483648
+     Maximum Scale: 2147483647
+     Map Shown: Yes
+End:

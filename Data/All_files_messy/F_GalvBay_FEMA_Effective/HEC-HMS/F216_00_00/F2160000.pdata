@@ -1,0 +1,26 @@
+Paired Data Manager: F2160000
+     Version: 3.3
+End:
+
+Table: F2160000_0021_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:46:10
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: F2160000.dss
+     Pathname: //F2160000_0021_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: F2160000_0005_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:45:53
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: F2160000.dss
+     Pathname: //F2160000_0005_R/STORAGE-FLOW///TABLE/
+End:
+

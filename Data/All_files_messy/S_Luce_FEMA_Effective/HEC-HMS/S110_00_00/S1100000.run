@@ -1,0 +1,52 @@
+Run: S1100000_0.2%
+     Default Description: Yes
+     Log File: S1100000_0.2_.log
+     DSS File: S1100000.dss
+     Basin: S1100000
+     Precip: 0.2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 22 July 2009
+     Precip Last Execution Time: 19:53:11
+     Basin Last Execution Date: 22 July 2009
+     Basin Last Execution Time: 19:53:12
+End:
+
+Run: S1100000_1%
+     Default Description: Yes
+     Log File: S1100000_1_.log
+     DSS File: S1100000.dss
+     Basin: S1100000
+     Precip: 1%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:58:17
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:58:17
+End:
+
+Run: S1100000_10%
+     Default Description: Yes
+     Log File: S1100000_10_.log
+     DSS File: S1100000.dss
+     Basin: S1100000
+     Precip: 10%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:57:45
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:57:45
+End:
+
+Run: S1100000_2%
+     Default Description: Yes
+     Log File: S1100000_2_.log
+     DSS File: S1100000.dss
+     Basin: S1100000
+     Precip: 2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:58:02
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:58:02
+End:
+

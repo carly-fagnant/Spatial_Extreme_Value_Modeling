@@ -1,0 +1,13 @@
+NOTE 10184:  Began computing simulation run "T1000000_10%" at time 19Jan2010, 15:40:25.
+NOTE 20364:  Found no parameter problems in meteorologic model "10%_24HR".
+WARNING 41052:  The results may not be accurate for reach "T1000000_9906_R" because the slope is less than 0.0004.
+WARNING 41052:  The results may not be accurate for reach "T1010000_9901_R" because the slope is less than 0.0004.
+WARNING 41052:  The results may not be accurate for reach "T1090000_9901_R" because the slope is less than 0.0004.
+NOTE 40049:  Found no parameter problems in basin model "T100_10PCT".
+NOTE 41054:  Routing parameters for reach "T1000000_9906_R": Delta t (sec) 878  Delta x (ft) 2,994.7125
+NOTE 41054:  Routing parameters for reach "T1000000_9905_R": Delta t (sec) 900  Delta x (ft) 6,404.5
+NOTE 41054:  Routing parameters for reach "T1000000_9904_R": Delta t (sec) 900  Delta x (ft) 3,798.8
+NOTE 41054:  Routing parameters for reach "T1010000_9901_R": Delta t (sec) 900  Delta x (ft) 1,917.95
+NOTE 41054:  Routing parameters for reach "T1090000_9901_R": Delta t (sec) 900  Delta x (ft) 2,065.2333
+NOTE 41054:  Routing parameters for reach "T1000000_9901_R": Delta t (sec) 837.2  Delta x (ft) 4,535.1
+NOTE 10185:  Finished computing simulation run "T1000000_10%" at time 19Jan2010, 15:40:26.

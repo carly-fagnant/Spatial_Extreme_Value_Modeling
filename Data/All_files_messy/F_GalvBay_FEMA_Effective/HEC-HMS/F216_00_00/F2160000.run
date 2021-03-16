@@ -1,0 +1,52 @@
+Run: F2160000_0.2%
+     Default Description: Yes
+     Log File: F2160000_0.2_.log
+     DSS File: F2160000.dss
+     Basin: F216-00-00
+     Precip: 0.2%_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 28 July 2009
+     Precip Last Execution Time: 19:07:48
+     Basin Last Execution Date: 28 July 2009
+     Basin Last Execution Time: 19:07:49
+End:
+
+Run: F2160000_1%
+     Default Description: Yes
+     Log File: F2160000_1_.log
+     DSS File: F2160000.dss
+     Basin: F216-00-00
+     Precip: 1%_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:39:42
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:39:42
+End:
+
+Run: F2160000_10%
+     Default Description: Yes
+     Log File: F2160000_10_.log
+     DSS File: F2160000.dss
+     Basin: F216-00-00
+     Precip: 10%_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:39:18
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:39:18
+End:
+
+Run: F2160000_2%
+     Default Description: Yes
+     Log File: F2160000_2_.log
+     DSS File: F2160000.dss
+     Basin: F216-00-00
+     Precip: 2% _24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 22:39:31
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 22:39:31
+End:
+

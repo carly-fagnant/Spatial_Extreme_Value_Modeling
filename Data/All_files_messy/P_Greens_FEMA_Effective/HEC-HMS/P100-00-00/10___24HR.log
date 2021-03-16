@@ -1,0 +1,31 @@
+NOTE 10184:  Began computing simulation run "10% _24HR" at time 20Jun2014, 11:40:55.
+NOTE 20364:  Found no parameter problems in meteorologic model "10PCT_24HR".
+NOTE 40049:  Found no parameter problems in basin model "P1000000".
+NOTE 40368:  Reached maximum diversion volume of 480.3 at diversion "P1000000_1972_D".
+WARNING 40802:  Total inflow to reach "P1180000_0643_R" is zero.
+WARNING 40257:  Reservoir "P530_0831" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_0831" may not submerge outlet 1 sufficiently for pressure flow to prevail during 190 time intervals.
+WARNING 40257:  Reservoir "P530_08_32" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_32" may not submerge outlet 1 sufficiently for pressure flow to prevail during 165 time intervals.
+WARNING 40257:  Reservoir "P530_08_33" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_33" may not submerge outlet 1 sufficiently for pressure flow to prevail during 203 time intervals.
+WARNING 40257:  Reservoir "P530_08_34" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_34" may not submerge outlet 1 sufficiently for pressure flow to prevail during 134 time intervals.
+WARNING 42803:  Computed diversion flow exceeded inflow for 142 time intervals at element "P1300800_0201_D"; diversion flow set to inflow.
+WARNING 40257:  Reservoir "P530_08_11" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_11" may not submerge outlet 1 sufficiently for pressure flow to prevail during 307 time intervals.
+WARNING 40257:  Reservoir "P530_08_12" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_12" may not submerge outlet 1 sufficiently for pressure flow to prevail during 158 time intervals.
+WARNING 40257:  Reservoir "P530_08_13" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_13" may not submerge outlet 1 sufficiently for pressure flow to prevail during 296 time intervals.
+WARNING 40257:  Reservoir "P530_08_21" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_21" may not submerge outlet 1 sufficiently for pressure flow to prevail during 181 time intervals.
+WARNING 40257:  Reservoir "P530_08_22" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_22" may not submerge outlet 1 sufficiently for pressure flow to prevail during 173 time intervals.
+WARNING 40257:  Reservoir "P530_08_23" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_23" may not submerge outlet 1 sufficiently for pressure flow to prevail during 197 time intervals.
+WARNING 40257:  Reservoir "P530_08_24" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_24" may not submerge outlet 1 sufficiently for pressure flow to prevail during 191 time intervals.
+WARNING 40257:  Reservoir "P530_08_25" used a minimum time step of 1 seconds.
+WARNING 41307:  Water surface in reservoir "P530_08_25" may not submerge outlet 1 sufficiently for pressure flow to prevail during 171 time intervals.
+NOTE 10185:  Finished computing simulation run "10% _24HR" at time 20Jun2014, 11:41:15.

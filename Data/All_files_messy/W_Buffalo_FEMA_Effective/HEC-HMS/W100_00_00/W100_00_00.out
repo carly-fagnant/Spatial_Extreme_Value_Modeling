@@ -1,0 +1,16 @@
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/W-Buffalo_Bayou/2007_W/2007_Effective_W/Hydrology/W100_00_00/W100_00_00.dss
+                       Unit:   71;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/W-Buffalo_Bayou/2007_W/2007_Effective_W/Hydrology/W100_00_00/E100_Inflows.dss
+                       Unit:   72;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZCLOSE Unit:   71,   File: S:/Operations/M3 Models/M3 Directory Structure/W-Buffalo_Bayou/2
+               Pointer Utilization:  6.66
+               Number of Records:   3384
+               File Size: 394277.5  Kbytes
+               Percent Inactive:  78.2
+
+    -----DSS---ZCLOSE Unit:   72,   File: S:/Operations/M3 Models/M3 Directory Structure/W-Buffalo_Bayou/2
+               Pointer Utilization:  0.12
+               Number of Records:      8
+               File Size:    404.8  Kbytes
+               Percent Inactive:  52.7
+

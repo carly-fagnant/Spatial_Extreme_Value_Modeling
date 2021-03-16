@@ -1,0 +1,100 @@
+Run: 0.2%(500YR) RUN
+     Default Description: Yes
+     Log File: 0.2__500YR__RUN.log
+     DSS File: A1000000.dss
+     Basin: A100_0.2PCT
+     Precip: 0.2%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 May 2014
+     Precip Last Execution Time: 20:46:02
+     Basin Last Execution Date: 8 May 2014
+     Basin Last Execution Time: 20:46:28
+End:
+
+Run: 0.2%(500YR)RUN_Revised
+     Default Description: Yes
+     Log File: 0.2__500YR_RUN_Revised.log
+     DSS File: A1000000.dss
+     Basin: A100_0.2PCT_Revised
+     Precip: 0.2%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 May 2014
+     Precip Last Execution Time: 21:29:39
+     Basin Last Execution Date: 8 May 2014
+     Basin Last Execution Time: 21:30:04
+End:
+
+Run: 1%(100YR)RUN
+     Description: Basin: A100_1PCT  &  Met: 1%_24HR  &  Control: Control 5
+     Log File: A100B100_1_.log
+     DSS File: A1000000.dss
+     Basin: A100_1PCT
+     Precip: 1%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 9 May 2014
+     Precip Last Execution Time: 15:03:57
+     Basin Last Execution Date: 9 May 2014
+     Basin Last Execution Time: 15:04:22
+End:
+
+Run: 1%(100YR)RUN_Revised
+     Default Description: Yes
+     Log File: 1__100YR_RUN_Revised.log
+     DSS File: A1000000.dss
+     Basin: A100_1PCT_Revised
+     Precip: 1%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 9 May 2014
+     Precip Last Execution Time: 14:54:25
+     Basin Last Execution Date: 9 May 2014
+     Basin Last Execution Time: 14:54:49
+End:
+
+Run: 10%(10YR)RUN
+     Description: Basin: A100_10PCT  &  Met: 10%_24HR  &  Control: Control 5
+     Log File: A100B100_10_.log
+     DSS File: A1000000.dss
+     Basin: A100_10PCT
+     Precip: 10%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 15 January 2010
+     Precip Last Execution Time: 16:39:33
+     Basin Last Execution Date: 15 January 2010
+     Basin Last Execution Time: 13:54:55
+End:
+
+Run: 10%(10YR)RUN_Revised
+     Default Description: Yes
+     Log File: 10__10YR_RUN_Revised.log
+     DSS File: A1000000.dss
+     Basin: A100_10PCT_Revised
+     Precip: 10%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 9 May 2014
+     Precip Last Execution Time: 14:52:52
+     Basin Last Execution Date: 9 May 2014
+     Basin Last Execution Time: 14:53:16
+End:
+
+Run: 2%(50YR)RUN
+     Default Description: Yes
+     Log File: 2__50YR_RUN.log
+     DSS File: A1000000.dss
+     Basin: A100_2PCT
+     Precip: 2%_24HR
+     Control: Control 5
+End:
+
+Run: 2%(50YR)RUN_Revised
+     Default Description: Yes
+     Log File: 2__50YR_RUN_Revised.log
+     DSS File: A1000000.dss
+     Basin: A100_2PCT_Revised
+     Precip: 2%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 9 May 2014
+     Precip Last Execution Time: 14:46:21
+     Basin Last Execution Date: 9 May 2014
+     Basin Last Execution Time: 14:46:47
+End:
+

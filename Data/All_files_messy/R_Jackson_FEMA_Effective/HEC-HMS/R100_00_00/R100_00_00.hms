@@ -1,0 +1,50 @@
+Project: R100-00-00
+     Description: HCFCD Unit # R100-00-00
+     Version: 3.3
+     DSS File Name: R100_00_00.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% (500-YR) Frequency Storm - Region 3
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% (100-YR) Frequency Storm - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% (10-YR) Frequency Storm - Region 3
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% (50-YR) Frequency Storm - Region 3
+End:
+
+Basin: R100-00-00
+     FileName: R100_00_00.basin
+     Description: 
+End:
+
+Control: CONTROL5
+     FileName: CONTROL5.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

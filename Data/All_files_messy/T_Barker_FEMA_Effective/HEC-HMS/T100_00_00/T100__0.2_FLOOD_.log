@@ -1,0 +1,14 @@
+NOTE 10184:  Began computing simulation run "T1000000_0.2%" at time 19Jan2010, 15:46:25.
+NOTE 20364:  Found no parameter problems in meteorologic model "0.2%_24HR".
+WARNING 20041:  NOAA criteria for storms with less than 1% exceedence frequency are only valid using data from Atlas 14.
+WARNING 41052:  The results may not be accurate for reach "T1000000_9906_R" because the slope is less than 0.0004.
+WARNING 41052:  The results may not be accurate for reach "T1010000_9901_R" because the slope is less than 0.0004.
+WARNING 41052:  The results may not be accurate for reach "T1090000_9901_R" because the slope is less than 0.0004.
+NOTE 40049:  Found no parameter problems in basin model "T100_0.2PCT".
+NOTE 41054:  Routing parameters for reach "T1000000_9906_R": Delta t (sec) 900  Delta x (ft) 4,791.54
+NOTE 41054:  Routing parameters for reach "T1000000_9905_R": Delta t (sec) 864  Delta x (ft) 6,404.5
+NOTE 41054:  Routing parameters for reach "T1000000_9904_R": Delta t (sec) 850.4  Delta x (ft) 5,065.0667
+NOTE 41054:  Routing parameters for reach "T1010000_9901_R": Delta t (sec) 705.9  Delta x (ft) 1,917.95
+NOTE 41054:  Routing parameters for reach "T1090000_9901_R": Delta t (sec) 900  Delta x (ft) 3,097.85
+NOTE 41054:  Routing parameters for reach "T1000000_9901_R": Delta t (sec) 795.6  Delta x (ft) 6,046.8
+NOTE 10185:  Finished computing simulation run "T1000000_0.2%" at time 19Jan2010, 15:46:26.

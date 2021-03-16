@@ -1,0 +1,18 @@
+Begin execution of run: T100 (10%); 4 March 2003,  12:12:20
+     Basin Model: T100-00-00 (10%); Meteorologic Model: REGION2 10% FLOOD; Control Specifications: JAN03
+WARNING:  Muskingum-Cunge routing may not be accurate when energy slope is less than 0.0004; Reach T100F REACH
+WARNING:  Muskingum-Cunge routing may not be accurate when energy slope is less than 0.0004; Reach T101H#2 REACH
+WARNING:  Muskingum-Cunge routing may not be accurate when energy slope is less than 0.0004; Reach T109A  REACH
+NOTE:  Muskingum-Cunge parameters for reach T100F REACH
+     delta t = 854 sec,  delta x = 3423 ft
+NOTE:  Muskingum-Cunge parameters for reach T100G REACH
+     delta t = 900 sec,  delta x = 6405 ft
+NOTE:  Muskingum-Cunge parameters for reach T100H REACH
+     delta t = 900 sec,  delta x = 4341 ft
+NOTE:  Muskingum-Cunge parameters for reach T101H#2 REACH
+     delta t = 900 sec,  delta x = 1918 ft
+NOTE:  Muskingum-Cunge parameters for reach T109A  REACH
+     delta t = 900 sec,  delta x = 2065 ft
+NOTE:  Muskingum-Cunge parameters for reach T100I REACH
+     delta t = 809 sec,  delta x = 4535 ft
+End execution of run: T100 (10%);  4 March 2003,  12:12:25

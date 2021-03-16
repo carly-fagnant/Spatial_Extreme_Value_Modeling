@@ -1,0 +1,267 @@
+Precip: 2%_24HR
+     Last Modified Date: 27 June 2003
+     Last Modified Time: 16:03:05
+     Version: 2.2.1
+     Default DSS File Name: D100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 1.1
+     Depth: 1.9
+     Depth: 3.8
+     Depth: 5.0
+     Depth: 5.8
+     Depth: 7.6
+     Depth: 9.2
+     Depth: 11.3
+End:
+
+Subbasin: D100A
+End:
+
+Subbasin: D100B
+End:
+
+Subbasin: D100C
+End:
+
+Subbasin: D129A
+End:
+
+Subbasin: D129B
+End:
+
+Subbasin: D100D
+End:
+
+Subbasin: D100E
+End:
+
+Subbasin: D126A
+End:
+
+Subbasin: D124A
+End:
+
+Subbasin: D122A
+End:
+
+Subbasin: D122B
+End:
+
+Subbasin: D100F
+End:
+
+Subbasin: D142A
+End:
+
+Subbasin: D120A
+End:
+
+Subbasin: D120B
+End:
+
+Subbasin: D100G
+End:
+
+Subbasin: CITYA
+End:
+
+Subbasin: D100H
+End:
+
+Subbasin: D118A
+End:
+
+Subbasin: D118B
+End:
+
+Subbasin: D118C
+End:
+
+Subbasin: D118D
+End:
+
+Subbasin: D118E
+End:
+
+Subbasin: D100I
+End:
+
+Subbasin: D133A
+End:
+
+Subbasin: D140A
+End:
+
+Subbasin: D140B
+End:
+
+Subbasin: D140C1
+End:
+
+Subbasin: D11202
+End:
+
+Subbasin: D11209
+End:
+
+Subbasin: D140C2
+End:
+
+Subbasin: D100J
+End:
+
+Subbasin: D13904
+End:
+
+Subbasin: D139A
+End:
+
+Subbasin: D100K
+End:
+
+Subbasin: D112A1
+End:
+
+Subbasin: D112A2
+End:
+
+Subbasin: D112A3
+End:
+
+Subbasin: D112A4
+End:
+
+Subbasin: D112A5
+End:
+
+Subbasin: D112B1
+End:
+
+Subbasin: D112B2
+End:
+
+Subbasin: D112B3
+End:
+
+Subbasin: D112B4
+End:
+
+Subbasin: D115A
+End:
+
+Subbasin: D113A
+End:
+
+Subbasin: D100L
+End:
+
+Subbasin: D111A
+End:
+
+Subbasin: D100M
+End:
+
+Subbasin: D100N
+End:
+
+Subbasin: D109A
+End:
+
+Subbasin: D100O
+End:
+
+Subbasin: D100P
+End:
+
+Subbasin: D105A
+End:
+
+Subbasin: D100Q
+End:
+
+Subbasin: D103A
+End:
+
+Subbasin: D100R
+End:
+
+Subbasin: D109-11
+End:
+
+Subbasin: D109-01
+End:
+
+Subbasin: D109-02
+End:
+
+Subbasin: D109-03
+End:
+
+Subbasin: D109-05
+End:
+
+Subbasin: D109-04
+End:
+
+Subbasin: D109-06
+End:
+
+Subbasin: D109-13
+End:
+
+Subbasin: D109-10
+End:
+
+Subbasin: D109-09
+End:
+
+Subbasin: D109-07
+End:
+
+Subbasin: D109-08
+End:
+
+Subbasin: D109-14
+End:
+
+Subbasin: D109-16
+End:
+
+Subbasin: D109-15
+End:
+
+Subbasin: D109-17
+End:
+
+Subbasin: D109-12
+End:
+
+Subbasin: D100E1
+End:
+
+Subbasin: D118B2
+End:
+
+Subbasin: D100E2
+End:
+
+Subbasin: D118B1
+End:
+
+Subbasin: D132A
+End:
+
+Subbasin: D132B
+End:

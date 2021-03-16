@@ -1,0 +1,23 @@
+Begin execution of run: D1000000_1%; 28 June 2007,  20:45:13
+     Basin Model: D1000000; Meteorologic Model: 1%_24HR; Control Specifications: Control15
+WARNING:  Control specifications time interval is greater than duration of
+     maximum intensity; precipitation data will be accumulated.
+WARNING: Error in computing Clark Unit Hydrograph for D11209;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D13904;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D112A1;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D112A3;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D112A4;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D112A5;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D112B2;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for D100M;
+     Time of Concentration increased to one time interval: .25 hr
+NOTE:  Muskingum-Cunge parameters for reach D1400000_0000_R
+     delta t = 853 sec,  delta x = 2300 ft
+End execution of run: D1000000_1%;  28 June 2007,  20:45:44

@@ -1,0 +1,42 @@
+Begin execution of run: 2%(50YR) RUN; 28 June 2007,  01:19:28
+     Basin Model: A100_2PCT; Meteorologic Model: 2%_24HR; Control Specifications: Control15
+WARNING:  Control specifications time interval is greater than duration of
+     maximum intensity; precipitation data will be accumulated.
+WARNING: Error in computing Clark Unit Hydrograph for B10404D;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104D;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104F;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104G;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104H;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B106B;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B106C;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B111A;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B111B;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B114A;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100E;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100F;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100G;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100H;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100I;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100J;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for A11906B;
+     Time of Concentration increased to one time interval: .25 hr
+ERROR: Error in computing initial storage for B504_04_00;
+     Not enough x-y pairs for interpolation;
+     Function: InterpolateLinear  Error number: 15
+End execution of run: 2%(50YR) RUN;  28 June 2007,  01:19:33

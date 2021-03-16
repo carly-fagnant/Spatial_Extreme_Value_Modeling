@@ -1,0 +1,71 @@
+Project: Restudy_Proposed
+     Description: Restudy Miramesa, 14-06-1909P, TXHAR2001
+     Version: 3.4
+     DSS File Name: Restudy_Proposed.dss
+End:
+
+Precipitation: Rain_002YR
+     FileName: Rain_002YR.met
+     Description: Region 1 Rainfall - 50% (2-Year)
+End:
+
+Precipitation: Rain_005YR
+     FileName: Rain_005YR.met
+     Description: Region 1 Rainfall - 20% (5-Year)
+End:
+
+Precipitation: Rain_010YR
+     FileName: Rain_010YR.met
+     Description: Region 1 Rainfall - 10% (10-Year)
+End:
+
+Precipitation: Rain_025YR
+     FileName: Rain_025YR.met
+     Description: Region 1 Rainfall - 4% (25-Year)
+End:
+
+Precipitation: Rain_050YR
+     FileName: Rain_050YR.met
+     Description: Region 1 Rainfall - 2% (50-Year)
+End:
+
+Precipitation: Rain_100YR
+     FileName: Rain_100YR.met
+     Description: Region 1 Rainfall - 1% (100-Year)
+End:
+
+Precipitation: Rain_250YR
+     FileName: Rain_250YR.met
+     Description: Region 1 Rainfall - 0.4% (250-Year)
+End:
+
+Precipitation: Rain_500YR
+     FileName: Rain_500YR.met
+     Description: Region 1 Rainfall - 0.2% (500-Year)
+End:
+
+Basin: U100_Basin_010YR
+     FileName: U100_Basin_010YR.basin
+     Description: Addicks Reservoir (10-Year)
+End:
+
+Basin: U100_Basin_050YR
+     FileName: U100_Basin_050YR.basin
+     Description: Addicks Reservoir (50-Year)
+End:
+
+Basin: U100_Basin_100YR
+     FileName: U100_Basin_100YR.basin
+     Description: Addicks Reservoir (100-Year)
+End:
+
+Basin: U100_Basin_500YR
+     FileName: U100_Basin_500YR.basin
+     Description: Addicks Reservoir (500-Year)
+End:
+
+Control: JAN_2011
+     FileName: JAN_2011.control
+     Description: January 1-8, 2011
+End:
+

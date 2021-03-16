@@ -1,0 +1,66 @@
+Project: K100 LOMR
+     Description: Cypress Creek LOMR HMS Model
+     Version: 3.4
+     DSS File Name: K100_LOMR.dss
+End:
+
+Precipitation: 0.2% Event
+     FileName: 0.2__Event.met
+     Description: 
+End:
+
+Precipitation: 1% Event
+     FileName: 1__Event.met
+     Description: 
+End:
+
+Precipitation: 10% Event
+     FileName: 10__Event.met
+     Description: 
+End:
+
+Precipitation: 2% Event
+     FileName: 2__Event.met
+     Description: 
+End:
+
+Basin: K100_L100_0.2_PCT
+     FileName: K100_L100_0.2_PCT.basin
+     Description: 
+End:
+
+Basin: K100_L100_1_PCT
+     FileName: K100_L100_1_PCT.basin
+     Description: 
+End:
+
+Basin: K100_L100_10_PCT
+     FileName: K100_L100_10_PCT.basin
+     Description: 
+End:
+
+Basin: K100_L100_2_PCT
+     FileName: K100_L100_2_PCT.basin
+     Description: 
+End:
+
+Control: Base
+     FileName: Base.control
+     Description: Control Specification for Frequency Events
+End:
+
+Control: Jun 2001
+     FileName: Jun_2001.control
+     Description: 
+End:
+
+Control: Oct 1994
+     FileName: Oct_1994.control
+     Description: 
+End:
+
+Control: Oct 1998
+     FileName: Oct_1998.control
+     Description: 
+End:
+

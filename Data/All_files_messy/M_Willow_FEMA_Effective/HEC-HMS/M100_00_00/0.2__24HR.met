@@ -1,0 +1,102 @@
+Precip: 0.2%_24HR
+     Last Modified Date: 29 June 2007
+     Last Modified Time: 09:23:34
+     Version: 2.2.1
+     Default DSS File Name: M100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 0.2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 2.7000
+     Depth: 5.5000
+     Depth: 7.5000
+     Depth: 9.0000
+     Depth: 12.200
+     Depth: 14.700
+     Depth: 17.700
+End:
+
+Subbasin: M100A_B
+End:
+
+Subbasin: M128A
+End:
+
+Subbasin: M100D
+End:
+
+Subbasin: M1000I
+End:
+
+Subbasin: M100E
+End:
+
+Subbasin: M124B_C
+End:
+
+Subbasin: M100F1
+End:
+
+Subbasin: M100G
+End:
+
+Subbasin: M116A_C
+End:
+
+Subbasin: M100H
+End:
+
+Subbasin: M112B_C
+End:
+
+Subbasin: M100I
+End:
+
+Subbasin: M109B
+End:
+
+Subbasin: M108A_B
+End:
+
+Subbasin: M100J
+End:
+
+Subbasin: M104A
+End:
+
+Subbasin: M100K
+End:
+
+Subbasin: M101A_B
+End:
+
+Subbasin: M100C
+End:
+
+Subbasin: M124A
+End:
+
+Subbasin: M100F3
+End:
+
+Subbasin: M100F2
+End:
+
+Subbasin: M112A
+End:
+
+Subbasin: M109A
+End:
+
+Subbasin: M1000J
+End:

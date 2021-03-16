@@ -1,0 +1,52 @@
+Run: T1000000_0.2%
+     Description: Basin: T100_0.2PCT  &  Met: 0.2%_24HR  &  Control: CONTROL15
+     Log File: T100__0.2_FLOOD_.log
+     DSS File: T100_00_00.dss
+     Basin: T100_0.2PCT
+     Precip: 0.2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 21:07:44
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 21:07:46
+End:
+
+Run: T1000000_1%
+     Description: Basin: T100_1PCT  &  Met: 1%_24HR  &  Control: CONTROL15
+     Log File: T100__1__FLOOD_.log
+     DSS File: T100_00_00.dss
+     Basin: T100_1PCT
+     Precip: 1%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 21:06:53
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 21:06:54
+End:
+
+Run: T1000000_10%
+     Description: Basin: T100_10PCT  &  Met: 10%_24HR  &  Control: CONTROL15
+     Log File: T100__10_FLOOD_.log
+     DSS File: T100_00_00.dss
+     Basin: T100_10PCT
+     Precip: 10%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 21:40:25
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 21:40:26
+End:
+
+Run: T1000000_2%
+     Description: Basin: T100_2PCT  &  Met: 2%_24HR  &  Control: CONTROL15
+     Log File: T100__2_FLOOD_.log
+     DSS File: T100_00_00.dss
+     Basin: T100_2PCT
+     Precip: 2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 21:06:30
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 21:06:31
+End:
+

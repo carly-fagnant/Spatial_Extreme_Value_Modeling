@@ -1,0 +1,114 @@
+Paired Data Manager: G1000000
+     Version: 3.3
+End:
+
+Table: G1000000_0007_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:40:32
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0007_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0064_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:11:22
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0064_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0140_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:13:54
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0140_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0249_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:00
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0249_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0321_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:06
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0321_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0399_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:12
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0399_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0485_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:17
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0485_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0533_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:22
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0533_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0563_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:26
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0563_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: G1000000_0746_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 29 July 2009
+     Last Modified Time: 20:14:31
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: G1000000.dss
+     Pathname: //G1000000_0746_R/STORAGE-FLOW///TABLE/
+End:
+

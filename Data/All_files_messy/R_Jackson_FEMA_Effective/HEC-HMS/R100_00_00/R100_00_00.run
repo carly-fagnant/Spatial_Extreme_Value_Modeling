@@ -1,0 +1,52 @@
+Run: R1000000_0.2%
+     Description: Basin: R100-00-00  &  Met: 0.2%_24HR  &  Control: CONTROL15
+     Log File: 0.2__Run.log
+     DSS File: R100_00_00.dss
+     Basin: R100-00-00
+     Precip: 0.2%_24HR
+     Control: CONTROL5
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:11:21
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:11:23
+End:
+
+Run: R1000000_1%
+     Description: Basin: R100-00-00  &  Met: 1%_24HR  &  Control: CONTROL15
+     Log File: 1__Run.log
+     DSS File: R100_00_00.dss
+     Basin: R100-00-00
+     Precip: 1%_24HR
+     Control: CONTROL5
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:11:27
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:11:29
+End:
+
+Run: R1000000_10%
+     Description: Basin: R100-00-00  &  Met: 10%_24HR  &  Control: CONTROL15
+     Log File: 10__Run.log
+     DSS File: R100_00_00.dss
+     Basin: R100-00-00
+     Precip: 10%_24HR
+     Control: CONTROL5
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:11:33
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:11:34
+End:
+
+Run: R1000000_2%
+     Description: Basin: R100-00-00  &  Met: 2%_24HR  &  Control: CONTROL15
+     Log File: 2__Run.log
+     DSS File: R100_00_00.dss
+     Basin: R100-00-00
+     Precip: 2%_24HR
+     Control: CONTROL5
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:11:39
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:11:41
+End:
+

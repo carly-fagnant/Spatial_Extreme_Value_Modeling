@@ -1,0 +1,5 @@
+Begin execution of run: 1998-Opt-Tc&R; 6 May 2005,  17:16:13
+     Basin Model: Oct 1998-R2; Meteorologic Model: Oct 1998; Control Specifications: Oct 1998
+WARNING: Error in computing Clark Unit Hydrograph for l120b;
+     Clark storage parameter increased to 0.5 time interval: .125 hr
+End execution of run: 1998-Opt-Tc&R;  6 May 2005,  17:19:18

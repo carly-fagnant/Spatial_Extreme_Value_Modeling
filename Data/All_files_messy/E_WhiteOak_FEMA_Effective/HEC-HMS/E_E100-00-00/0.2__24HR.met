@@ -1,0 +1,246 @@
+Meteorology: 0.2%_24HR
+     Last Modified Date: 26 September 2011
+     Last Modified Time: 18:22:32
+     Version: 3.5
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Short-Wave Radiation Method: None
+     Long-Wave Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+     Use Basin Model: E100-00-00
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 0.2
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.000000
+     Depth: 2.6
+     Depth: 5.5
+     Depth: 7.6
+     Depth: 9.2
+     Depth: 12.8
+     Depth: 15.5
+     Depth: 18.9
+End:
+
+Subbasin: E100G1
+
+     Begin Snow: None
+End:
+
+Subbasin: E100E
+
+     Begin Snow: None
+End:
+
+Subbasin: E200A
+
+     Begin Snow: None
+End:
+
+Subbasin: E101A
+
+     Begin Snow: None
+End:
+
+Subbasin: E101B
+
+     Begin Snow: None
+End:
+
+Subbasin: E101C
+
+     Begin Snow: None
+End:
+
+Subbasin: E101D
+
+     Begin Snow: None
+End:
+
+Subbasin: E101E
+
+     Begin Snow: None
+End:
+
+Subbasin: E101F
+
+     Begin Snow: None
+End:
+
+Subbasin: E101G
+
+     Begin Snow: None
+End:
+
+Subbasin: E101H
+
+     Begin Snow: None
+End:
+
+Subbasin: E115A
+
+     Begin Snow: None
+End:
+
+Subbasin: E115B
+
+     Begin Snow: None
+End:
+
+Subbasin: E117A
+
+     Begin Snow: None
+End:
+
+Subbasin: E117B
+
+     Begin Snow: None
+End:
+
+Subbasin: E117C
+
+     Begin Snow: None
+End:
+
+Subbasin: E100A
+
+     Begin Snow: None
+End:
+
+Subbasin: E100B
+
+     Begin Snow: None
+End:
+
+Subbasin: E100C
+
+     Begin Snow: None
+End:
+
+Subbasin: E100D
+
+     Begin Snow: None
+End:
+
+Subbasin: E100F
+
+     Begin Snow: None
+End:
+
+Subbasin: E100H
+
+     Begin Snow: None
+End:
+
+Subbasin: E100I
+
+     Begin Snow: None
+End:
+
+Subbasin: E100J
+
+     Begin Snow: None
+End:
+
+Subbasin: E100K
+
+     Begin Snow: None
+End:
+
+Subbasin: E100L
+
+     Begin Snow: None
+End:
+
+Subbasin: E100M
+
+     Begin Snow: None
+End:
+
+Subbasin: E100N
+
+     Begin Snow: None
+End:
+
+Subbasin: E100O
+
+     Begin Snow: None
+End:
+
+Subbasin: E100P
+
+     Begin Snow: None
+End:
+
+Subbasin: E121A
+
+     Begin Snow: None
+End:
+
+Subbasin: E121B
+
+     Begin Snow: None
+End:
+
+Subbasin: E122A
+
+     Begin Snow: None
+End:
+
+Subbasin: E122B
+
+     Begin Snow: None
+End:
+
+Subbasin: E125A
+
+     Begin Snow: None
+End:
+
+Subbasin: E127A
+
+     Begin Snow: None
+End:
+
+Subbasin: E132A
+
+     Begin Snow: None
+End:
+
+Subbasin: E135A
+
+     Begin Snow: None
+End:
+
+Subbasin: E141A
+
+     Begin Snow: None
+End:
+
+Subbasin: E100G2
+
+     Begin Snow: None
+End:
+
+Subbasin: E124A
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B1
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B2
+
+     Begin Snow: None
+End:

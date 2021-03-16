@@ -1,0 +1,58 @@
+Trial Name: m100#9_c1_Opt 1994 ( DS GAGE)_1
+     Trial ID: Opt 1994 ( DS GAGE)_1
+     Optimization Run: Opt 1994 ( DS GAGE)
+     Location: m100#9_c1
+     Trial Number: 1
+     Description: downstream loss rate calibration based on 1994 Storm
+     Last Optimization Date: 20 November 2002
+     Last Optimization Time: 08:04:34
+End: 
+
+Optimize Location: m100#9_c1
+     Search Method: Univariate Gradient
+     Objective Function: Peak-Weighted RMS Error
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     Percent Missing Flow: 0.000000
+
+     Objective Function Value: 771.78
+
+     Simulated Peak Flow:    3212.9
+      Observed Peak Flow:    4070.0
+*             Difference:    -857.1
+
+     Simulated Time of Peak: 18 October 1994,  09:00
+      Observed Time of Peak: 18 October 1994,  14:30
+*                Difference: -330 minutes
+
+     Simulated Volume:     13311
+      Observed Volume:          
+*          Difference:          
+
+     Component: All Subbasins
+     Parameter: Moist Deficit Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.95
+     Maximum Constraint: 1.1
+     Locked: No
+     Optimized Value: 0.956
+     Sensitivity: 0.03
+
+     Component: All Subbasins
+     Parameter: Hydr Cond Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.3
+     Maximum Constraint: 118
+     Locked: No
+     Optimized Value: 0.318
+     Sensitivity: 0.11
+
+     Component: All Subbasins
+     Parameter: WetFront Suct Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.45
+     Maximum Constraint: 2.7
+     Locked: No
+     Optimized Value: 0.486
+     Sensitivity: 0.03
+End:

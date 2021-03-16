@@ -1,0 +1,50 @@
+Project: 0100_00_00
+     Description: Effective 1/22/2013
+     Version: 3.3
+     DSS File Name: 0100_00_00.dss
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% (100-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% (50-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% (10-Year) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% (500-Year) Frequency Storm Event - Region 3
+End:
+
+Basin: O100-00-00
+     FileName: O100_00_00.basin
+     Description: goose creek (o100-00-00) watershed
+End:
+
+Control: Control 15
+     FileName: Control_15.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: English
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: None
+     Default Erosion Method: None
+     Default Route Method: Modified Puls
+     Default Gain Loss Method: None
+     Default Precip Method: Frequency Based Hypothetical
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

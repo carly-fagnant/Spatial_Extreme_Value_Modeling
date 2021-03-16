@@ -1,0 +1,52 @@
+Run: Q1000000_0.2%
+     Default Description: Yes
+     Log File: Q1000000_0.2_.log
+     DSS File: Q100_00_00.dss
+     Basin: Q1000000_0.2PCT
+     Precip: 0.2%_24HR
+     Control: Control 5 MIN
+     Precip Last Execution Date: 4 October 2016
+     Precip Last Execution Time: 18:44:40
+     Basin Last Execution Date: 4 October 2016
+     Basin Last Execution Time: 18:44:42
+End:
+
+Run: Q1000000_1%
+     Default Description: Yes
+     Log File: Q1000000_1_.log
+     DSS File: Q100_00_00.dss
+     Basin: Q1000000_1PCT
+     Precip: 1%_24HR
+     Control: Control 5 MIN
+     Precip Last Execution Date: 4 October 2016
+     Precip Last Execution Time: 18:38:59
+     Basin Last Execution Date: 4 October 2016
+     Basin Last Execution Time: 18:39:08
+End:
+
+Run: Q1000000_10%
+     Default Description: Yes
+     Log File: Q1000000_10_.log
+     DSS File: Q100_00_00.dss
+     Basin: Q1000000_10PCT
+     Precip: 10%_24HR
+     Control: Control 5 MIN
+     Precip Last Execution Date: 4 October 2016
+     Precip Last Execution Time: 18:39:35
+     Basin Last Execution Date: 4 October 2016
+     Basin Last Execution Time: 18:39:43
+End:
+
+Run: Q1000000_2%
+     Default Description: Yes
+     Log File: Q1000000_2_.log
+     DSS File: Q100_00_00.dss
+     Basin: Q1000000_2PCT
+     Precip: 2%_24HR
+     Control: Control 5 MIN
+     Precip Last Execution Date: 4 October 2016
+     Precip Last Execution Time: 18:40:21
+     Basin Last Execution Date: 4 October 2016
+     Basin Last Execution Time: 18:40:31
+End:
+

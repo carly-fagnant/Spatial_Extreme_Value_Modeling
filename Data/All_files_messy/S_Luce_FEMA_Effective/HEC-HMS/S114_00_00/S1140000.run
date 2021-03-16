@@ -1,0 +1,52 @@
+Run: S1140000_0.2%
+     Default Description: Yes
+     Log File: S1140000_0.2_.log
+     DSS File: S1140000.dss
+     Basin: S1140000
+     Precip: 0.2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 6 August 2009
+     Precip Last Execution Time: 14:57:27
+     Basin Last Execution Date: 6 August 2009
+     Basin Last Execution Time: 14:57:27
+End:
+
+Run: S1140000_1%
+     Default Description: Yes
+     Log File: S1140000_1_.log
+     DSS File: S1140000.dss
+     Basin: S1140000
+     Precip: 1%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:59:26
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:59:26
+End:
+
+Run: S1140000_10%
+     Default Description: Yes
+     Log File: S1140000_10_.log
+     DSS File: S1140000.dss
+     Basin: S1140000
+     Precip: 10%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:58:59
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:58:59
+End:
+
+Run: S1140000_2%
+     Default Description: Yes
+     Log File: S1140000_2_.log
+     DSS File: S1140000.dss
+     Basin: S1140000
+     Precip: 2%_24HR
+     Control: Control15
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 20:59:16
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 20:59:16
+End:
+

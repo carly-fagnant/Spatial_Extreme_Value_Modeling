@@ -1,0 +1,732 @@
+Gage Manager: G1000000
+     Version: 3.3
+End:
+
+Gage: C100_0.2
+     Last Modified Date: 4 August 2009
+     Last Modified Time: 21:20:48
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: C100_Inflow.dss
+     Pathname: //C100_0.2%/FLOW/31MAY2007/5MIN/0.2%/
+End:
+
+Gage: C100_1
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 13:14:07
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: C100_Inflow.dss
+     Pathname: //C100_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: C100_10
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 13:14:27
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: C100_Inflow.dss
+     Pathname: //C100_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: C100_2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 13:14:49
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: C100_Inflow.dss
+     Pathname: //C100_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: D100_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:51:44
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: D100Inflow.dss
+     Pathname: //D100_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: D100_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:52:04
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: D100Inflow.dss
+     Pathname: //D100_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: D100_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:52:31
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: D100Inflow.dss
+     Pathname: //D100_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: D100_2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:19:49
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: D100Inflow.dss
+     Pathname: //D100_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G104_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:53:28
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G104Inflow.dss
+     Pathname: //G104_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G104_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:53:54
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G104Inflow.dss
+     Pathname: //G104_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G104_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:54:18
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G104Inflow.dss
+     Pathname: //G104_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G104_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:54:44
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G104Inflow.dss
+     Pathname: //G104_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G105_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:55:03
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G105Inflow.dss
+     Pathname: //G105_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G105_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:55:35
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G105Inflow.dss
+     Pathname: //G105_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G105_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:56:46
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G105Inflow.dss
+     Pathname: //G105_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G105_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:57:07
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G105Inflow.dss
+     Pathname: //G105_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G108_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:57:20
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G108Inflow.dss
+     Pathname: //G108_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G108_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:57:41
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G108Inflow.dss
+     Pathname: //G108_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G108_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:57:55
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G108Inflow.dss
+     Pathname: //G108_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G108_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:58:14
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G108Inflow.dss
+     Pathname: //G108_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G109_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:58:37
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G109Inflow.dss
+     Pathname: //G109_0.2/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G109_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:58:52
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G109Inflow.dss
+     Pathname: //G109_1/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G109_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:59:13
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G109Inflow.dss
+     Pathname: //G109_10/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G109_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:59:27
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G109Inflow.dss
+     Pathname: //G109_2/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G110_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:59:41
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G110Inflow.dss
+     Pathname: //G110_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G110_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 13:59:58
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G110Inflow.dss
+     Pathname: //G110_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G110_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:00:12
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G110Inflow.dss
+     Pathname: //G110_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G110_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:00:29
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G110Inflow.dss
+     Pathname: //G110_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: G112_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:00:45
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G112Inflow.dss
+     Pathname: //G112_0.2/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G112_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:01:02
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G112Inflow.dss
+     Pathname: //G112_1/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G112_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:01:19
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G112Inflow.dss
+     Pathname: //G112_10/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: G112_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:01:31
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: G112Inflow.dss
+     Pathname: //G112_2/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: H100_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:01:53
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: H100Inflow.dss
+     Pathname: //H100_0.2/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: H100_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:02:10
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: H100Inflow.dss
+     Pathname: //H100_1/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: H100_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:02:27
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: H100Inflow.dss
+     Pathname: //H100_10/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: H100_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:02:36
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: H100Inflow.dss
+     Pathname: //H100_2/FLOW//15MIN/GAGE/
+End:
+
+Gage: I100_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:02:50
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: I100Inflow.dss
+     Pathname: //I100_0.2/FLOW//5MIN/GAGE/
+End:
+
+Gage: I100_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:03:06
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: I100Inflow.dss
+     Pathname: //I100_1/FLOW//5MIN/GAGE/
+End:
+
+Gage: I100_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:03:15
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: I100Inflow.dss
+     Pathname: //I100_10/FLOW//5MIN/GAGE/
+End:
+
+Gage: I100_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:03:25
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: I100Inflow.dss
+     Pathname: //I100_2/FLOW//5MIN/GAGE/
+End:
+
+Gage: N100_0.2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:03:46
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: N100Inflow.dss
+     Pathname: //N100_0.2/FLOW//15MIN/GAGE/
+End:
+
+Gage: N100_1
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:03:57
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: N100Inflow.dss
+     Pathname: //N100_1/FLOW//15MIN/GAGE/
+End:
+
+Gage: N100_10
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:04:02
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: N100Inflow.dss
+     Pathname: //N100_10/FLOW//15MIN/GAGE/
+End:
+
+Gage: N100_2
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:04:09
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: N100Inflow.dss
+     Pathname: //N100_2/FLOW//15MIN/GAGE/
+End:
+
+Gage: P100_0.2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:20:27
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: P100Inflow.dss
+     Pathname: //P100_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: P100_1
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:20:44
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: P100Inflow.dss
+     Pathname: //P100_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: P100_10
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:20:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: P100Inflow.dss
+     Pathname: //P100_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: P100_2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:21:18
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: P100Inflow.dss
+     Pathname: //P100_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: W100_0.2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 13:15:44
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: W100Inflow.dss
+     Pathname: //W100_0.2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: W100_1
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:21:45
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: W100Inflow.dss
+     Pathname: //W100_1/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: W100_10
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:27:30
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: W100Inflow.dss
+     Pathname: //W100_10/FLOW/31MAY2007/5MIN/GAGE/
+End:
+
+Gage: W100_2
+     Last Modified Date: 5 August 2009
+     Last Modified Time: 16:27:45
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 02:45
+     DSS File: W100Inflow.dss
+     Pathname: //W100_2/FLOW/31MAY2007/5MIN/GAGE/
+End:
+

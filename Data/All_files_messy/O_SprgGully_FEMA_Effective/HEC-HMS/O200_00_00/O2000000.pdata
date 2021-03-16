@@ -1,0 +1,70 @@
+Paired Data Manager: O2000000
+     Version: 3.3
+End:
+
+Table: O2000000_0094_D
+     Table Type: Inflow-Diversion
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:15
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_0094_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: O2000000_9901_D
+     Table Type: Inflow-Diversion
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:18
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_9901_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: O2000000_0017_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:03
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_0017_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: O2000000_0070_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_0070_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: O2000000_0094_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:10
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_0094_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: O2000000_0131_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 6 August 2009
+     Last Modified Time: 13:51:12
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: O2000000.dss
+     Pathname: //O2000000_0131_R/STORAGE-FLOW///TABLE/
+End:
+

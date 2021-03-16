@@ -1,0 +1,200 @@
+Basin: G112_basin
+     Description: Panther Creek (G112-00-00) watershed
+     Last Modified Date: 25 June 2009
+     Last Modified Time: 18:39:01
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: Yes
+     Allow Blending: No
+     Compute Local Flow At Junctions: Yes
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: G112A
+     Canvas X: 3157560.0
+     Canvas Y: 1.38368452E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.864
+     Downstream: G1120000_9901_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 40.9
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.27
+     Storage Coefficient: 1.84
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G112B
+     Canvas X: 3161634.929
+     Canvas Y: 1.3835915047E7
+     Label X: -16.0
+     Label Y: -30.0
+     Area: 0.727
+     Downstream: G1120000_0028_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.4
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.4
+     Storage Coefficient: 1.49
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G112C
+     Canvas X: 3162019.0
+     Canvas Y: 1.38326017E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.371
+     Downstream: G1120000_0006_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 57.8
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.31
+     Storage Coefficient: 1.09
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: G1120000_9901_J
+     Description: No HEC-RAS XS - Main Street
+     Canvas X: 3161301.696
+     Canvas Y: 1.3836927484E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1120000_0028_R
+End:
+
+Junction: G1120000_0028_J
+     Description: STA. 2797.907 - Clinton Drive
+     Canvas X: 3164777.871
+     Canvas Y: 1.3833296813E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1120000_0006_R
+End:
+
+Junction: G1120000_0006_J
+     Description: STA. 603.723 @ mouth (confluence with Houston Ship Channel)
+     Canvas X: 3165323.874
+     Canvas Y: 1.3830961244E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Reach: G1120000_0028_R
+     Description: G1120000_9901_J to RS 2797
+     Canvas X: 3164777.871
+     Canvas Y: 1.3833296813E7
+     From Canvas X: 3161301.696
+     From Canvas Y: 1.3836927484E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1120000_0028_J
+
+     Route: Muskingum Cunge
+     Channel: 8-point
+     Length: 6600
+     Energy Slope: .00096178
+     Left Overbank Mannings n: 0.15
+     Main Channel Mannings n: 0.015
+     Right Overbank Mannings n: 0.15
+     Cross Section Name: G1120000_0028_R
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: G1120000_0006_R
+     Description: RS 2797 to RS 603
+     Canvas X: 3165323.874
+     Canvas Y: 1.3830961244E7
+     From Canvas X: 3164777.871
+     From Canvas Y: 1.3833296813E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1120000_0006_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1120000_0006_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.38407081549211E7
+     Last View S: 1.38301982773803E7
+     Last View W: 3153122.080499271
+     Last View E: 3166404.367067789
+     Maximum View N: 1.38407081549211E7
+     Maximum View S: 1.38301982773803E7
+     Maximum View W: 3153122.080499271
+     Maximum View E: 3166404.367067789
+     Extent Method: Elements Maps
+     Buffer: 10
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Map: hms.map.MapGeoMap
+     Map File Name: G112-MAP.map
+     Map Shown: Yes
+End:

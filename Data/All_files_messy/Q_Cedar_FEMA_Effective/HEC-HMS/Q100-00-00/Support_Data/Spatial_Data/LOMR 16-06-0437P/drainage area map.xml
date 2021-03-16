@@ -1,0 +1,577 @@
+<FrameworkConfig TagName="FrameworkConfig" Name="FrameworkConfig" AliasName="FrameworkConfig">
+  <DefaultConfig>
+    <TemplateView TagName="TemplateView">
+      <ApLayers TagName="ApLayers" />
+    </TemplateView>
+    <ProgParams>
+      <RasterLocation />
+      <VectorLocation />
+      <SchemaDatabaseLocation />
+      <DllPath>C:\windows\assembly\GAC_MSIL\ESRI.APWR.ApFramework\1.0.0.0__0e46c6306d55f57a\</DllPath>
+      <HelpFileName />
+      <Debug>31</Debug>
+      <LoadedDateTime>2/26/2016 9:05:49 AM</LoadedDateTime>
+    </ProgParams>
+  </DefaultConfig>
+  <GeoRASConfig TagName="GeoRASConfig" Name="GeoRASConfig" AliasName="GeoRASConfig" XmlLocation="file:///C:/Program Files (x86)/HEC/HEC-GeoRAS/bin/HEC-GeoRAS.xml">
+    <TemplateView TagName="TemplateView">
+      <ApLayers TagName="ApLayers">
+        <ApLayer Name="TerrainTin" TagName="TerrainTin" AliasName="TerrainTin" Desc="Terrain TIN" FeatureType="0" ShapeType="7" CanCreate="0" LayerType="4" TargetLocation="" TargetDataset="" />
+        <ApLayer Name="TerrainDEM" TagName="TerrainDEM" AliasName="TerrainDEM" Desc="Terrain DEM" FeatureType="0" ShapeType="7" CanCreate="0" LayerType="1" TargetLocation="" TargetDataset="" />
+        <ApLayer Name="River" TagName="Stream2d" AliasName="StreamCenterline" Desc="Stream Centerline" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="FromNode" TagName="FromNode" AliasName="FromNode" Desc="FromNode" Type="0" FieldWidth="5" Decimals="0" AllowNull="0" />
+            <ApField Name="ToNode" TagName="ToNode" AliasName="ToNode" Desc="ToNode" Type="0" FieldWidth="5" Decimals="0" AllowNull="0" />
+            <ApField Name="ArcLength" TagName="ArcLength" AliasName="ArcLength" Desc="ArcLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="FromSta" TagName="FromSta" AliasName="FromSta" Desc="FromSta" Type="2" FieldWidth="13" Decimals="4" AllowNull="1" />
+            <ApField Name="ToSta" TagName="ToSta" AliasName="ToSta" Desc="ToSta" Type="2" FieldWidth="13" Decimals="4" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="TerrainTiles" TagName="TerrainTiles" AliasName="TerrainTiles" Desc="Terrain Tiles" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="TerrainType" TagName="TerrainType" AliasName="TerrainType" Desc="Terrain Type" Type="0" FieldWidth="1" Decimals="0" AllowNull="0" />
+            <ApField Name="TileName" TagName="TileName" AliasName="TileName" Desc="Tile Name" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+            <ApField Name="TileDirectory" TagName="TileDirectory" AliasName="TileDirectory" Desc="Tile Directory" Type="4" FieldWidth="200" Decimals="0" AllowNull="0" />
+            <ApField Name="Statistics" TagName="Statistics" AliasName="Statistics" Desc="Statistics" Type="4" FieldWidth="200" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Stream3d" TagName="Stream3d" AliasName="StreamProfile" Desc="Stream Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="Riv2DID" TagName="Riv2DID" AliasName="Riv2DID" Desc="2D River HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="NodesTable" TagName="NodesTable" AliasName="NodesTable" Desc="NodesTable" FeatureType="0" ShapeType="0" CanCreate="3" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="NodeID" TagName="NodeID" AliasName="NodeID" Desc="NodeID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="X" TagName="X" AliasName="X" Desc="X Coordinate" Type="2" FieldWidth="7" Decimals="2" AllowNull="0" />
+            <ApField Name="Y" TagName="Y" AliasName="Y" Desc="Y Coordinate" Type="2" FieldWidth="7" Decimals="2" AllowNull="0" />
+            <ApField Name="Z" TagName="Z" AliasName="Z" Desc="Z Coordinate" Type="2" FieldWidth="7" Decimals="2" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="XSCutLines" TagName="XSCutLines" AliasName="XSCutLines" Desc="XS Cut Lines" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="13" Decimals="4" AllowNull="0" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="LeftBank" TagName="LeftBank" AliasName="LeftBank" Desc="LeftBank" Type="2" FieldWidth="7" Decimals="5" AllowNull="1" />
+            <ApField Name="RightBank" TagName="RightBank" AliasName="RightBank" Desc="RightBank" Type="2" FieldWidth="7" Decimals="5" AllowNull="1" />
+            <ApField Name="LLength" TagName="LLength" AliasName="LLength" Desc="LLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="ChLength" TagName="ChLength" AliasName="ChLength" Desc="ChLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="RLength" TagName="RLength" AliasName="RLength" Desc="RLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="XSCutLines3D" TagName="XSCutLines3D" AliasName="XSCutLines3D" Desc="XS Cut Lines Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="XS2DID" TagName="XS2DID" AliasName="XS2DID" Desc="2D XS HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="XS3DUpdated" TagName="XS3DUpdated" AliasName="XS3DUpdated" Desc="XS Cut Lines Updated" FeatureType="1" ShapeType="3" CanCreate="8" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="13" Decimals="4" AllowNull="0" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="LeftBank" TagName="LeftBank" AliasName="LeftBank" Desc="LeftBank" Type="2" FieldWidth="7" Decimals="5" AllowNull="1" />
+            <ApField Name="RightBank" TagName="RightBank" AliasName="RightBank" Desc="RightBank" Type="2" FieldWidth="7" Decimals="5" AllowNull="1" />
+            <ApField Name="LLength" TagName="LLength" AliasName="LLength" Desc="LLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="ChLength" TagName="ChLength" AliasName="ChLength" Desc="ChLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="RLength" TagName="RLength" AliasName="RLength" Desc="RLength" Type="2" FieldWidth="10" Decimals="3" AllowNull="1" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="BathymetryPoints" TagName="BathymetryPoints" AliasName="BathymetryPoints" Desc="Bathymetry Points" FeatureType="1" ShapeType="1" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="" AllowNull="True">
+          <ApFields TagName="ApFields">
+            <!--<ApField Name="Elevation" TagName="Elevation" AliasName="Elevation" Desc="Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0">
+          </ApField>-->
+            <ApField Name="ElevUpdate" TagName="ElevUpdate" AliasName="ElevUpdate" Desc="Elevation Update" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="BathymetryExtent" TagName="BathymetryExtent" AliasName="BathymetryExtent" Desc="Bathymetry Extent" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields" />
+        </ApLayer>
+        <ApLayer Name="XSExtent" TagName="XSExtent" AliasName="XSExtent" Desc="XS Extent" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields" />
+        </ApLayer>
+        <ApLayer Name="Banks" TagName="BankLines" AliasName="Banks" Desc="Bank Lines" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields" />
+        </ApLayer>
+        <ApLayer Name="BankPoints" TagName="BankPoints" AliasName="BankPoints" Desc="Bank Points" FeatureType="1" ShapeType="1" CanCreate="1" LayerType="0" TargetLocation="" TargetDataset="" AllowNull="True">
+          <ApFields TagName="ApFields">
+            <ApField Name="BankPosition" TagName="Position" AliasName="BankPosition" Desc="BankPosition" Type="2" FieldWidth="10" Decimals="6" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Flowpaths" TagName="Flowpaths" AliasName="Flowpaths" Desc="Flow Path Centerlines" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="LineType" TagName="LineType" AliasName="LineType" Desc="LineType" Type="4" FieldWidth="7" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Bridges" TagName="Bridges" AliasName="Bridges" Desc="Bridges/Culverts" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="13" Decimals="4" AllowNull="0" />
+            <ApField Name="USDistance" TagName="USDistance" AliasName="USDistance" Desc="Upstream Distance" Type="2" FieldWidth="5" Decimals="1" AllowNull="0" />
+            <ApField Name="TopWidth" TagName="TopWidth" AliasName="TopWidth" Desc="Top Width" Type="2" FieldWidth="6" Decimals="1" AllowNull="0" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Bridges3D" TagName="Bridges3D" AliasName="Bridges3D" Desc="Bridges/Culverts Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="BC2DID" TagName="BC2DID" AliasName="BC2DID" Desc="2D Bridge HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="InlineStructures" TagName="InlineStructures" AliasName="InlineStructures" Desc="Inline Structures" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="13" Decimals="4" AllowNull="0" />
+            <ApField Name="USDistance" TagName="USDistance" AliasName="USDistance" Desc="Upstream Distance" Type="2" FieldWidth="5" Decimals="1" AllowNull="0" />
+            <ApField Name="TopWidth" TagName="TopWidth" AliasName="TopWidth" Desc="Top Width" Type="2" FieldWidth="6" Decimals="1" AllowNull="0" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="InlineStructures3D" TagName="InlineStructures3D" AliasName="InlineStructures3D" Desc="Inline Structures Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="IS2DID" TagName="IS2DID" AliasName="IS2DID" Desc="2D Inline Weir HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LateralStructures" TagName="LateralStructures" AliasName="LateralStructures" Desc="Lateral Structures" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="RiverCode" TagName="RiverCode" AliasName="River" Desc="RiverCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ReachCode" TagName="ReachCode" AliasName="Reach" Desc="ReachCode" Type="4" FieldWidth="16" Decimals="0" AllowNull="0" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="13" Decimals="4" AllowNull="0" />
+            <ApField Name="USDistance" TagName="USDistance" AliasName="USDistance" Desc="Upstream Distance" Type="2" FieldWidth="5" Decimals="1" AllowNull="0" />
+            <ApField Name="TopWidth" TagName="TopWidth" AliasName="TopWidth" Desc="Top Width" Type="2" FieldWidth="6" Decimals="1" AllowNull="0" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LateralStructures3D" TagName="LateralStructures3D" AliasName="LateralStructures3D" Desc="Lateral Structure Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="LS2DID" TagName="LS2DID" AliasName="LS2DID" Desc="2D Lateral Structure HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LandUse" TagName="LandUse" AliasName="LandUse" Desc="Land Use" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="LUCode" TagName="LUCode" AliasName="LUCode" Desc="LUCode" Type="4" FieldWidth="32" Decimals="0" AllowNull="1" />
+            <ApField Name="N_Value" TagName="N_Value" AliasName="N_Value" Desc="Manning Coefficient" Type="2" FieldWidth="5" Decimals="3" AllowNull="1" Required="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Manning" TagName="Manning" AliasName="Manning" Desc="XS Manning Table" FeatureType="0" ShapeType="0" CanCreate="3" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="XS2DID" TagName="XS2DID" AliasName="XS2DID" Desc="XS2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="Fraction" TagName="Fraction" AliasName="Fraction" Desc="Fraction" Type="2" FieldWidth="7" Decimals="5" AllowNull="0" />
+            <ApField Name="N_Value" TagName="N_Value" AliasName="N_Value" Desc="Manning Coefficient" Type="2" FieldWidth="5" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LUManning" TagName="LUManning" AliasName="LUManning" Desc="LU Manning" FeatureType="0" ShapeType="0" CanCreate="3" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="LUCode" TagName="LUCode" AliasName="LUCode" Desc="LUCode" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+            <ApField Name="N_Value" TagName="N_Value" AliasName="N_Value" Desc="Manning Coefficient" Type="2" FieldWidth="5" Decimals="3" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Levees" TagName="Levees" AliasName="Levees" Desc="Levee Alignment" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LeveePoints" TagName="LeveePoints" AliasName="LeveePoints" Desc="Levee Points" FeatureType="1" ShapeType="1" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="" AllowNull="True">
+          <ApFields TagName="ApFields">
+            <ApField Name="LeveeID" TagName="LeveeID" AliasName="LeveeID" Desc="LeveeID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="ProfileM" TagName="ProfileM" AliasName="Station" Desc="ProfileM" Type="2" FieldWidth="10" Decimals="3" AllowNull="0" />
+            <ApField Name="Elevation" TagName="Elevation" AliasName="Elevation" Desc="Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="Levees3D" TagName="Levees3D" AliasName="Levees3D" Desc="Levee Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="Lev2DID" TagName="Lev2DID" AliasName="Lev2DID" Desc="2D Levees HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="LeveePositions" TagName="LeveePositions" AliasName="LeveePositions" Desc="LeveePositions" FeatureType="0" ShapeType="0" CanCreate="3" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="Lev2DID" TagName="Lev2DID" AliasName="Lev2DID" Desc="Lev2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="XS2DID" TagName="XS2DID" AliasName="XS2DID" Desc="XS2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="Fraction" TagName="Fraction" AliasName="Fraction" Desc="Fraction" Type="2" FieldWidth="8" Decimals="5" AllowNull="0" />
+            <ApField Name="GrndElev" TagName="GrndElev" AliasName="GrndElev" Desc="GrndElev" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="Elevation" TagName="Elevation" AliasName="Elevation" Desc="Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="IneffAreas" TagName="IneffAreas" AliasName="IneffAreas" Desc="Ineffective Flow Areas" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="IneffectivePositions" TagName="IneffectivePositions" AliasName="IneffectivePositions" Desc="Ineffective Positions" FeatureType="0" ShapeType="7" CanCreate="2" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="XS2DID" TagName="XS2DID" AliasName="XS2DID" Desc="XS2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="IA2DID" TagName="IA2DID" AliasName="IA2DID" Desc="IA2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="BegFrac" TagName="BegFrac" AliasName="BegFrac" Desc="BegFrac" Type="2" FieldWidth="7" Decimals="5" AllowNull="0" />
+            <ApField Name="EndFrac" TagName="EndFrac" AliasName="EndFrac" Desc="EndFrac" Type="2" FieldWidth="7" Decimals="5" AllowNull="0" />
+            <ApField Name="BegElev" TagName="BegElev" AliasName="BegElev" Desc="Beginning Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="EndElev" TagName="EndElev" AliasName="EndElev" Desc="Ending Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="UserElev" TagName="UserElev" AliasName="UserElev" Desc="User Specified Trigger Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="BlockedObs" TagName="BlockedObs" AliasName="BlockedObs" Desc="Blocked Obstructions" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="BlockedPositions" TagName="BlockedPositions" AliasName="BlockedPositions" Desc="Blocked Positions" FeatureType="0" ShapeType="7" CanCreate="2" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="XS2DID" TagName="XS2DID" AliasName="XS2DID" Desc="XS2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="BO2DID" TagName="BO2DID" AliasName="BO2DID" Desc="BO2DID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="BegFrac" TagName="BegFrac" AliasName="BegFrac" Desc="BegFrac" Type="2" FieldWidth="7" Decimals="5" AllowNull="0" />
+            <ApField Name="EndFrac" TagName="EndFrac" AliasName="EndFrac" Desc="EndFrac" Type="2" FieldWidth="7" Decimals="5" AllowNull="0" />
+            <ApField Name="BegElev" TagName="BegElev" AliasName="BegElev" Desc="Beginning Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="EndElev" TagName="EndElev" AliasName="EndElev" Desc="Ending Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="UserElev" TagName="UserElev" AliasName="UserElev" Desc="User Specified Trigger Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="StorageAreas" TagName="StorArea" AliasName="StorageAreas" Desc="Storage Areas" FeatureType="1" ShapeType="4" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="MaxElev" TagName="MaxElev" AliasName="MaxElev" Desc="Maximum Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="MinElev" TagName="MinElev" AliasName="MinElev" Desc="Minimum Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="UserElev" TagName="UserElev" AliasName="UserElev" Desc="User-Specified Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="ElevVol" TagName="EV" AliasName="ElevVol" Desc="Elevation Volume Table" FeatureType="0" ShapeType="7" CanCreate="3" LayerType="10" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="SAID" TagName="SAID" AliasName="SAID" Desc="SAID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="Elevation" TagName="Elevation" AliasName="Elevation" Desc="Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+            <ApField Name="Volume" TagName="Volume" AliasName="Volume" Desc="Volume" Type="2" FieldWidth="11" Decimals="1" AllowNull="0" />
+            <ApField Name="Area" TagName="Area" AliasName="Area" Desc="Area" Type="2" FieldWidth="11" Decimals="1" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="StoragePts" TagName="StorageAreaPts" AliasName="StorageAreaPts" Desc="Storage Area Points" FeatureType="1" ShapeType="1" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="SAID" TagName="SAID" AliasName="SAID" Desc="SAID" Type="1" FieldWidth="8" Decimals="0" AllowNull="0" />
+            <ApField Name="Elevation" TagName="Elevation" AliasName="Elevation" Desc="Elevation" Type="2" FieldWidth="8" Decimals="3" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="SAConnections" TagName="SAConnections" AliasName="SAConnections" Desc="Storage Area Connections" FeatureType="1" ShapeType="3" CanCreate="0" LayerType="0" TargetLocation="" TargetDataset="">
+          <ApFields TagName="ApFields">
+            <ApField Name="HydroID" TagName="HydroID" AliasName="HydroID" Desc="HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="USSA" TagName="USSA" AliasName="USSA" Desc="USSA" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="DSSA" TagName="DSSA" AliasName="DSSA" Desc="DSSA" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+            <ApField Name="TopWidth" TagName="TopWidth" AliasName="TopWidth" Desc="Top Width" Type="2" FieldWidth="6" Decimals="1" AllowNull="0" />
+            <ApField Name="NodeName" TagName="NodeName" AliasName="NodeName" Desc="NodeName" Type="4" FieldWidth="32" Decimals="0" AllowNull="0" />
+          </ApFields>
+        </ApLayer>
+        <ApLayer Name="SAConnections3D" TagName="SAConnections3D" AliasName="SAConnectionsProfile" Desc="SA Connections Profiles" FeatureType="1" ShapeType="3" CanCreate="3" LayerType="0" TargetLocation="" TargetDataset="" HasZ="1">
+          <ApFields TagName="ApFields">
+            <ApField Name="SAC2DID" TagName="SAC2DID" AliasName="SAC2DID" Desc="2D SA Connections HydroID" Type="1" FieldWidth="8" Decimals="0" AllowNull="1" />
+          </ApFields>
+        </ApLayer>
+      </ApLayers>
+    </TemplateView>
+    <ProgParams>
+      <Debug>0</Debug>
+      <Reload>1</Reload>
+      <Version>1.0</Version>
+      <Merge>1</Merge>
+      <LocationType Name="LocationType" TagName="LocationType">
+        <Vector Name="Vector" TagName="Vector">0</Vector>
+        <Raster Name="Raster" TagName="Raster">2</Raster>
+      </LocationType>
+      <RasterLocation>DefaultLocation</RasterLocation>
+      <VectorLocation>DefaultLocation</VectorLocation>
+      <TimeSeriesLocation>DefaultLocation</TimeSeriesLocation>
+      <SchemaDatabaseLocation>GeoRASTools.mdb</SchemaDatabaseLocation>
+      <HelpFileName>GeoRAS.HLP</HelpFileName>
+      <ApFunctions Name="ApFunctions" TagName="ApFunctions">
+        <ApFunction Name="CreateRASLayers" TagName="CreateRASLayers">
+          <HelpTopic>Create RAS Layers</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateStreamCenterline" TagName="CreateStreamCenterline">
+          <HelpTopic>Create Stream Centerline</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateBankLines" TagName="CreateBankLines">
+          <HelpTopic>Create Bank Lines</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateFlowPathCenterlines" TagName="CreateFlowPathCenterlines">
+          <HelpTopic>Create Flow Path Centerlines</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateXSCutLines" TagName="CreateXSCutLines">
+          <HelpTopic>Create XS Cut Lines</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateLeveeAlignment" TagName="CreateLeveeAlignment">
+          <HelpTopic>Create Levee Alignment</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateLeveePoints" TagName="CreateLeveePoints">
+          <HelpTopic>Create Levee Points</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateIneffectiveFlowAreas" TagName="CreateIneffectiveFlowAreas">
+          <HelpTopic>Create Ineffective Flow Areas</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateBlockedObstructions" TagName="CreateBlockedObstructions">
+          <HelpTopic>Create Blocked Obstructions</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateBridgesCulverts" TagName="CreateBridgesCulverts">
+          <HelpTopic>Create Bridges Culverts</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateInlineStructures" TagName="CreateInlineStructures">
+          <HelpTopic>Create Inline Structures</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateLateralStructures" TagName="CreateLateralStructures">
+          <HelpTopic>Create Lateral Structures</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateStorageAreas" TagName="CreateStorageAreas">
+          <HelpTopic>Create Storage Areas</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="RASGeometryLayerSetup" TagName="RASGeometryLayerSetup">
+          <HelpTopic>RAS Geometry Layer Setup</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StreamCenterlineTopology" TagName="StreamCenterlineTopology">
+          <HelpTopic>Stream Centerline Topology</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StreamCenterlineLengthStations" TagName="StreamCenterlineLengthStations">
+          <HelpTopic>Stream Centerline Length Stations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StreamCenterlineElevations" TagName="StreamCenterlineElevations">
+          <HelpTopic>Stream Centerline Elevations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StreamCenterlineAll" TagName="StreamCenterlineAll">
+          <HelpTopic>Stream Centerline All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesRiverReachNames" TagName="XSCutLinesRiverReachNames">
+          <HelpTopic>XS Cut Lines River Reach Names</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesStationing" TagName="XSCutLinesStationing">
+          <HelpTopic>XS Cut Lines Stationing</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesBankStations" TagName="XSCutLinesBankStations">
+          <HelpTopic>XS Cut Lines Bank Stations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesDownstreamReachLengths" TagName="XSCutLinesDownstreamReachLengths">
+          <HelpTopic>XS Cut Lines Downstream Reach Lengths</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesElevations" TagName="XSCutLinesElevations">
+          <HelpTopic>XS Cut Lines Elevations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="XSCutLinesAll" TagName="XSCutLinesAll">
+          <HelpTopic>XS Cut Lines All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateLUManningTable" TagName="CreateLUManningTable">
+          <HelpTopic>Create LU Manning Table</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="ExtractNValues" TagName="ExtractNValues">
+          <HelpTopic>Extract N Values</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LeveesProfileCompletion" TagName="LeveesProfileCompletion">
+          <HelpTopic>Levees Profile Completion</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LeveesPositions" TagName="LeveesPositions">
+          <HelpTopic>Levees Positions</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LeveesAll" TagName="LeveesAll">
+          <HelpTopic>Levees All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="IneffectiveFlowAreasPositions" TagName="IneffectiveFlowAreasPositions">
+          <HelpTopic>Ineffective Flow Areas Positions</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="BlockedObstructionsPositions" TagName="BlockedObstructionsPositions">
+          <HelpTopic>Blocked Obstructions Positions</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="BridgesCulvertsRiverReachNames" TagName="BridgesCulvertsRiverReachNames">
+          <HelpTopic>Bridges Culverts River Reach Names</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="BridgesCulvertsStationing" TagName="BridgesCulvertsStationing">
+          <HelpTopic>Bridges Culverts Stationing</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="BridgesCulvertsElevations" TagName="BridgesCulvertsElevations">
+          <HelpTopic>Bridges Culverts Elevations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="BridgesCulvertsAll" TagName="BridgesCulvertsAll">
+          <HelpTopic>Bridges Culverts All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="InlineStructuresRiverReachNames" TagName="InlineStructuresRiverReachNames">
+          <HelpTopic>Inline Structures River Reach Names</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="InlineStructuresStationing" TagName="InlineStructuresStationing">
+          <HelpTopic>Inline Structures Stationing</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="InlineStructuresElevations" TagName="InlineStructuresElevations">
+          <HelpTopic>Inline Structures Elevations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="InlineStructuresAll" TagName="InlineStructuresAll">
+          <HelpTopic>Inline Structures All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LateralStructuresRiverReachNames" TagName="LateralStructuresRiverReachNames">
+          <HelpTopic>Lateral Structures River Reach Names</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LateralStructuresStationing" TagName="LateralStructuresStationing">
+          <HelpTopic>Lateral Structures Stationing</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LateralStructuresElevations" TagName="LateralStructuresElevations">
+          <HelpTopic>Lateral Structures Elevations</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="LateralStructuresAll" TagName="LateralStructuresAll">
+          <HelpTopic>Lateral Structures All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StorageAreasElevationRange" TagName="StorageAreasElevationRange">
+          <HelpTopic>Storage Areas Elevation Range</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StorageAreasElevationVolumeData" TagName="StorageAreasElevationVolumeData">
+          <HelpTopic>Storage Areas Elevation Volume Data</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StorageAreasTerrainPointExtraction" TagName="StorageAreasTerrainPointExtraction">
+          <HelpTopic>Storage Areas Terrain Point Extraction</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="StorageAreasAll" TagName="StorageAreasAll">
+          <HelpTopic>Storage Areas All</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="ExportGISData" TagName="ExportGISData">
+          <HelpTopic>Export GIS Data</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="RASPreProcessSetup" TagName="RASPreProcessSetup">
+          <HelpTopic>RAS Geometry Layer Setup</HelpTopic>
+          <IsTerrainTiled>False</IsTerrainTiled>
+          <IsTIN>True</IsTIN>
+          <SliceCount>20</SliceCount>
+        </ApFunction>
+        <ApFunction Name="RASPostProcessSetup" TagName="RASPostProcessSetup">
+          <HelpTopic>Floodplain Mapping Layer Setup</HelpTopic>
+          <Analyses />
+          <SelectedAnalysis />
+        </ApFunction>
+        <ApFunction Name="FloodReadRAS" TagName="FloodReadRAS">
+          <HelpTopic>Read RAS GIS Export File</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="FloodWaterTIN" TagName="FloodWaterTIN">
+          <HelpTopic>Water Surface TIN Generation</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="FloodDelineation" TagName="FloodDelineation">
+          <HelpTopic>Floodplain Delineation By GRID Intersection</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="AssignLineType" TagName="AssignLineType">
+          <HelpTopic>Assign Line Type</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="AssignLeveeElevation" TagName="AssignLeveeElevation">
+          <HelpTopic>Assign Levee Elevation</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="AssignRiverReachID" TagName="AssignRiverReachID">
+          <HelpTopic>Assign River Reach ID</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="AssignRiverStation" TagName="AssignRiverStation">
+          <HelpTopic>Assign River Station</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="CreateCrossSection" TagName="CreateCrossSection">
+          <HelpTopic>Create Cross Section</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="PlotCrossSection" TagName="PlotCrossSection">
+          <HelpTopic>Plot Cross Section</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="ConvertRASGISOutputToXML" TagName="ConvertRASGISOutputToXML">
+          <HelpTopic>Convert RAS GIS Output To XML</HelpTopic>
+        </ApFunction>
+        <ApFunction Name="AboutHECGeoRAS" TagName="AboutHECGeoRAS">
+          <HelpTopic>About HECGeoRAS</HelpTopic>
+        </ApFunction>
+      </ApFunctions>
+      <DllPath>C:\Program Files (x86)\HEC\HEC-GeoRAS\bin\</DllPath>
+      <LoadedDateTime>2/26/2016 9:05:50 AM</LoadedDateTime>
+    </ProgParams>
+  </GeoRASConfig>
+  <ApUtilitiesConfig TagName="ApUtilitiesConfig" Name="ApUtilitiesConfig" AliasName="ApUtilitiesConfig" XmlLocation="file:///C:/Program Files (x86)/ESRI/WaterUtils/ApFramework/Bin/ApUtilitiesConfig.xml">
+    <TemplateView TagName="TemplateView">
+      <ApLayers TagName="ApLayers">
+        <ApLayer Name="SampleLayer" TagName="SampleLayer" AliasName="SampleLayer" Desc="SampleLayer" FeatureType="1" ShapeType="1" LayerType="1" CanCreate="0" AllowNull="1" />
+      </ApLayers>
+    </TemplateView>
+    <ProgParams>
+      <Debug>0</Debug>
+      <Reload>1</Reload>
+      <Version>1.0</Version>
+      <Merge>1</Merge>
+      <RasterLocation>DefaultLocation</RasterLocation>
+      <VectorLocation>DefaultLocation</VectorLocation>
+      <TimeSeriesLocation>DefaultLocation</TimeSeriesLocation>
+      <SchemaDatabaseLocation>ArcHydroSchema.mdb</SchemaDatabaseLocation>
+      <HelpFileName>ArcHydro.HLP</HelpFileName>
+      <LogFile>NOLOG</LogFile>
+      <ApFunctions Name="ApFunctions" TagName="ApFunctions">
+        <ApFunction Name="ExportToExcel" TagName="ExportToExcel">
+          <!-- 
+                          TARGETCONFIG=TARGETCONFIGuration NodeName, if ="",  use current node, if TARGETCONFIGNode is found,
+                            If ExportToExcel node is found, under TARGETCONFIGurationNodeName, used it, if not copy the current node
+                               to under TARGETCONFIGurationNodeName, and use it.
+                          EXCELFILELOCATION=Location of the template ExcelWorkbook, if ="", use a blank Excel doc.
+                          EXCELWORKSHEET=The Worksheet to export the info, if ="", use the first one.
+                          EXPORTFIELDNAME=0, don't export the fieldname, =1 export the fieldname.
+                          KEYFIELD=Name of the KEYFIELD, if not provided, use OID.
+                          SourceLayer=Name of the source layer.
+                          ApField's AdditionalParams=  
+                        -->
+          <TARGETCONFIG Name="TARGETCONFIG" TagName="TARGETCONFIG">HydroConfig</TARGETCONFIG>
+          <EXCELFILELOCATION Name="EXCELFILELOCATION" TagName="EXCELFILELOCATION">ExportFormat.xls</EXCELFILELOCATION>
+          <EXCELWORKSHEET Name="EXCELWORKSHEET" TagName="EXCELWORKSHEET">Data</EXCELWORKSHEET>
+          <EXPORTFIELDNAME Name="EXPORTFIELDNAME" TagName="EXPORTFIELDNAME">0</EXPORTFIELDNAME>
+          <EXCELVISIBLE Name="EXCELVISIBLE" TagName="EXCELVISIBLE">1</EXCELVISIBLE>
+          <DOSAVEAS Name="DOSAVEAS" TagName="DOSAVEAS">1</DOSAVEAS>
+          <CODE2RUN Name="CODE2RUN" TagName="CODE2RUN">DebrisFunctions.CopyColumns</CODE2RUN>
+          <FLDASROW Name="FLDASROW" TagName="FLDASROW">1</FLDASROW>
+          <ApLayers TagName="ApLayers" Name="ApLayers">
+            <ApLayer Name="SourceLayer" TagName="SourceLayer" AliasName="SourceLayer" Desc="Source Layer" FeatureType="1" LayerType="0" CanCreate="0" AllowNull="1" AdditionalParams="RECINDEX=5" ShapeType="7">
+              <ApFields TagName="ApFields">
+                <ApField Name="HYDROID" TagName="HYDROID" AliasName="BasinID" Desc="HYDROID" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="FLDINDEX=9" />
+                <ApField Name="SLPPCT30" TagName="SLPPCT30" AliasName="SLPPCT30" Desc="Percent of area with slope greater than 30%" Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=10;FORMAT=0.00" />
+                <ApField Name="AREA2M" TagName="AREA2M" AliasName="AREA2M" Desc="Area in square meters" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=11;FORMAT=0.00" />
+                <ApField Name="ElevMouth" TagName="ElevMouth" AliasName="ElevMouth" Desc="ElevMouth" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=12;FORMAT=0.00" />
+                <ApField Name="ELEVMAXM" TagName="ELEVMAXM" AliasName="ELEVMAXM" Desc="Maximum elevation in meters - requires 'DEM' grid with vertical units defined" Type="3" FieldWidth="14" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=13;FORMAT=0.00" />
+                <ApField Name="AVGCLAYPCT" TagName="AVGCLAYPCT" AliasName="AVGCLAYPCT" Desc="Average Clay Percentage (Grid of clay percentage - from rasterizing statsgo polygon based on the clay field)" Type="3" FieldWidth="10" Decimals="1" AllowNull="1" AdditionalParams="FLDINDEX=14;FORMAT=0.00" />
+                <ApField Name="AVGSOILLQLMT" TagName="AVGSOILLQLMT" AliasName="AVGSOILLQLMT" Desc="Average soil liquid limit " Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=15;FORMAT=0.00" />
+                <ApField Name="SLPPCT" TagName="SLPPCT" AliasName="SLPPCT" Desc="Average slope of the area." Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=16;FORMAT=0.00" />
+                <ApField Name="AREABRNHIGH" TagName="AREABRNHIGH" AliasName="AREABRNHIGH" Desc="Area covered by high burn severity - requires 'High burn' grid (0-no burn, 1-high burn)" Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=17;FORMAT=0.00" />
+                <ApField Name="AREABRNMOD" TagName="AREABRNMOD" AliasName="AREABRNMOD" Desc="Area covered by moderate burn severity - requires 'Moderate burn' grid (0-no burn, 1-moderate burn)" Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=18;FORMAT=0.00" />
+                <ApField Name="AREABRNLOW" TagName="AREABRNLOW" AliasName="AREABRNLOW" Desc="Area covered by moderate burn severity - requires 'Moderate burn' grid (0-no burn, 1-moderate burn)" Type="3" FieldWidth="10" Decimals="3" AllowNull="1" AdditionalParams="FLDINDEX=19;FORMAT=0.00" />
+                <ApField Name="AVGIACT" TagName="AVGIACT" AliasName="AVGIACT" Desc="Average actual rainfall intensity  (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=20;FORMAT=0.00" />
+                <ApField Name="AVGI2" TagName="AVGI2" AliasName="AVGI2" Desc="Average rainfall intensity with 2 yr recurrence (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=21;FORMAT=0.00" />
+                <ApField Name="AVGI5" TagName="AVGI5" AliasName="AVGI5" Desc="Average rainfall intensity with 5 yr recurrence (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=22;FORMAT=0.00" />
+                <ApField Name="AVGI10" TagName="AVGI10" AliasName="AVGI10" Desc="Average rainfall intensity with 10 yr recurrence (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=23;FORMAT=0.00" />
+                <ApField Name="AVGI25" TagName="AVGI25" AliasName="AVGI25" Desc="Average rainfall intensity with 25 yr recurrence (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=24;FORMAT=0.00" />
+                <ApField Name="AVGI50" TagName="AVGI50" AliasName="AVGI50" Desc="Average rainfall intensity with 50 yr recurrence  (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=25;FORMAT=0.00" />
+                <ApField Name="AVGI100" TagName="AVGI100" AliasName="AVGI100" Desc="Average rainfall intensity with 100 yr recurrence (in mm/hr)" Type="3" FieldWidth="12" Decimals="2" AllowNull="1" AdditionalParams="FLDINDEX=26;FORMAT=0.00" />
+                <ApField Name="RECCNT" TagName="RECCNT" AliasName="RecCnt" Desc="Record Count" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="ROW=2;COL=5" />
+                <ApField Name="MXDPATH" TagName="MXDPATH" AliasName="MXDPATH" Desc="MXDPATH" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="ROW=3;COL=5" />
+                <ApField Name="SAVEDFILE" TagName="SAVEDFILE" AliasName="SAVEDFILE" Desc="SAVEDFILE" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="ROW=4;COL=5" />
+                <ApField Name="LAYERNAME" TagName="LAYERNAME" AliasName="LAYERNAME" Desc="LAYERNAME" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="ROW=5;COL=5" />
+                <ApField Name="MDBPATH" TagName="MDBPATH" AliasName="MDBPATH" Desc="MDBPATH" Type="0" FieldWidth="8" Decimals="0" AllowNull="1" AdditionalParams="ROW=6;COL=5" />
+              </ApFields>
+            </ApLayer>
+          </ApLayers>
+        </ApFunction>
+        <ApFunction Name="CreateUniqueIDTable" TagName="CreateUniqueIDTable">
+          <!-- 
+                          TARGETCONFIG=TARGETCONFIGuration NodeName, if ="",  use current node, if TARGETCONFIGNode is found,
+                            If ExportToExcel node is found, under TARGETCONFIGurationNodeName, used it, if not copy the current node
+                               to under TARGETCONFIGurationNodeName, and use it.
+                          EXCELFILELOCATION=Location of the template ExcelWorkbook, if ="", use a blank Excel doc.
+                          EXCELWORKSHEET=The Worksheet to export the info, if ="", use the first one.
+                          EXPORTFIELDNAME=0, don't export the fieldname, =1 export the fieldname.
+                          KEYFIELD=Name of the KEYFIELD, if not provided, use OID.
+                          SourceLayer=Name of the source layer.
+                          ApField's AdditionalParams=  
+                        -->
+          <INIVALUES Name="INIVALUES" TagName="INIVALUES">HYDROID,1,0;MARINEID,2,0;GROUNDWATERID,3,0;OTHERS,100,0;TESTID,1000,0</INIVALUES>
+        </ApFunction>
+        <ApFunction Name="TransferFieldValues" TagName="TransferFieldValues">
+          <ApLayers TagName="ApLayers" Name="ApLayers">
+            <ApLayer Name="TargetLayer" TagName="TargetLayer" AliasName="SourceLayer" Desc="TargetLayer" FeatureType="1" LayerType="0" CanCreate="0" AllowNull="1" AdditionalParams="Counties;Admin_State,Admin_County;1|CityCivilDivisions;Admin_City;1|UrbanizedArea;Admin_UrbanArea;1|Congressional_Districts;Admin_Congressional;1" ShapeType="7" />
+          </ApLayers>
+        </ApFunction>
+      </ApFunctions>
+      <DllPath>C:\Program Files (x86)\ESRI\WaterUtils\ApFramework\Bin\</DllPath>
+      <LoadedDateTime>2/26/2016 9:05:54 AM</LoadedDateTime>
+    </ProgParams>
+  </ApUtilitiesConfig>
+</FrameworkConfig>

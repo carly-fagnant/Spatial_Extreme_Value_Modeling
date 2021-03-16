@@ -1,0 +1,230 @@
+Plan Title=Effective Floodway 2019 (Re-Study)
+Program Version=4.10
+Short Identifier=Eff+ReStudy FW                                                              
+Simulation Date=,,,
+Geom File=g01
+Flow File=f02
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Unsteady Bridges Friction Slope Method= 1 
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=U101-08-00      
+Encroach Reach=U101-08-00_0002 
+Encroach Node=11155.58
+       1   29.31  146.57
+Encroach Node=11053.56
+       1   79.13  196.39
+Encroach Node=10653.05
+       1  127.27   248.7
+Encroach Node=10351.71
+       1  162.84  291.31
+Encroach Node=10051.85
+       1  165.19  288.37
+Encroach Node=9850.69 
+       1  166.73   294.8
+Encroach Node=9295.705
+       1  170.77  290.19
+Encroach Node=8895.74 
+       1  173.95  291.61
+Encroach Node=8688.143
+       1  172.57  290.72
+Encroach Node=8485.234
+       1  174.99  293.19
+Encroach Node=8287.832
+       1   177.5  290.73
+Encroach Node=8092.732
+       1  177.73  296.21
+Encroach Node=7901.195
+       1    57.5   182.5
+Encroach Node=7750.004
+       1      50     175
+Encroach Node=7704.322
+       1    52.6  165.91
+Encroach Node=7691.996
+       1    52.3  164.14
+Encroach Node=7607.596
+       1  37.655 157.339
+Encroach Node=7589.07 
+       1  40.479  160.17
+Encroach Node=7525.309
+       1  40.479 167.208
+Encroach Node=7456.862
+       1  107.35  230.25
+Encroach Node=7295.447
+       1   137.4   264.8
+Encroach Node=6523.721
+       1    85.5  207.05
+Encroach Node=5714.47 
+       1   67.04  189.54
+Encroach Node=5309.224
+       1   62.84  179.96
+Encroach Node=5073.266
+       1   59.21  183.85
+Encroach Node=5058.191
+       1    64.2  183.85
+Encroach Node=4890.756
+       1   59.52  182.59
+Encroach Node=4872.718
+       1   59.52  177.67
+Encroach Node=4122.137
+       1  200.86  324.19
+Encroach Node=3440.281
+       1 1414.56 1539.56
+Encroach Node=3430.281
+       1 1417.59 1542.59
+Encroach Node=3335.073
+       1 1428.38 1551.33
+Encroach Node=3325.073
+       1 1430.96 1553.91
+Encroach Node=3176.741
+       1 1468.47 1588.08
+Encroach Node=3159.739
+       1 1462.76 1592.13
+Encroach Node=3101.097
+       1 1467.73 1592.13
+Encroach Node=3046.937
+       1 1446.72 1570.81
+Encroach Node=2535.291
+       1 1104.54 1224.02
+Encroach Node=2455.761
+       1   157.1  276.66
+Encroach Node=2335.474
+       1  154.61  274.17
+Encroach Node=2330.317
+       1  154.64  274.24
+Encroach Node=2017.84 
+       1   19.12  146.02
+Encroach Node=1526.611
+       1   54.87  144.65
+Encroach Node=1478.421
+       1   59.29  153.18
+Encroach Node=1287.94 
+       1   64.24  148.23
+Encroach Node=1278.983
+       1   64.55   158.9
+Encroach Node=1098.127
+       1    45.5   141.7
+Encroach Node=890.525 
+       1   44.35  131.66
+Encroach Node=688.6711
+       1   44.01  127.23
+Encroach Node=533.9202
+       1   31.46  111.46
+Encroach Node=521.9677
+       1   35.13  106.97
+Encroach Node=161.0575
+       1   50.81  129.29
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+Run WQNet= 0 
+UNET Theta= 1 
+UNET Theta Warmup= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.05 
+UNET QTol=
+UNET MxIter= 20 
+UNET MaxInSteps= 0 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET DSS MLevel= 4 
+UNET DZMax Abort= 100 
+UNET Convert EG Bridges= 0 
+UNET Use Existing IB Tables=-1 
+UNET Froude Reduction=False
+UNET Froude Limit= 1 
+UNET Froude Power= 10 
+UNET Time Slicing=0,0, 5 
+UNET Junction Losses=0
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=,,
+Write IC File Reoccurance=
+Write IC File at Sim End=0
+Echo Input=False
+Echo Parameters=False
+Echo Output=False
+Write Detailed= 0 
+WQ AD Non Conservative
+WQ ULTIMATE=-1
+WQ Max Comp Step=1HOUR
+WQ Output Interval=15MIN
+WQ Output Selected Increments= 0 
+WQ Output face flow=0
+WQ Output face velocity=0
+WQ Output face area=0
+WQ Output face dispersion=0
+WQ Output cell volume=0
+WQ Output cell surface area=0
+WQ Output cell continuity=0
+WQ Output cumulative cell continuity=0
+WQ Output face conc=0
+WQ Output face dconc_dx=0
+WQ Output face courant=0
+WQ Output face peclet=0
+WQ Output face adv mass=0
+WQ Output face disp mass=0
+WQ Output cell mass=0
+WQ Output cell source sink temp=0
+WQ Output cell source sink nsm=0
+WQ Output MaxMinRange=-1
+WQ Daily Max Min Mean=-1
+WQ Daily Range=0
+WQ Daily Time=0
+WQ Create Restart=0
+WQ Fixed Restart=0
+WQ Restart Simtime=
+WQ Restart Date=
+WQ Restart Hour=
+WQ System Summary=0
+WQ Use Fixed Temperature=0
+WQ Fixed Temperature=
+Sorting and Armoring Iterations= 10 
+XS Update Threshold= 0.02 
+Hydraulics Update Threshold= 0.02 
+Energy Slope Method= 1 
+Volume Change Method= 0 
+XS Weighting Method= 0 
+Number of US Weighted Cross Sections= 1 
+Number of DS Weighted Cross Sections= 1 
+Upstream XS Weight=0.25
+Main XS Weight=0.5
+Downstream XS Weight=0.25
+Number of DS XS's Weighted with US Boundary= 1 
+Upstream Boundary Weight= 1 
+Weight of XSs Associated with US Boundary= 0 
+Number of US XS's Weighted with DS Boundary= 1 
+Downstream Boundary Weight= 0.5 
+Weight of XSs Associated with DS Boundary= 0.5 
+Sediment Output Level= 4 
+Mass or Volume Output= 0 
+Output Increment Type= 1 
+Profile and TS Output Increment= 10 
+XS Output Flag= 0 
+XS Output Increment= 10 
+Disregard all LS=0
+Disregard all Conn=0
+Disregard all Breaches=0
+Disregard all Pumps=0

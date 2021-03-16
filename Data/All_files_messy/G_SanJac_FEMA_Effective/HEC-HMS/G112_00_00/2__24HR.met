@@ -1,0 +1,41 @@
+Meteorology: 2%_24HR
+     Description: 2% (50-YR) Frequency Storm - Region 3
+     Last Modified Date: 26 June 2007
+     Last Modified Time: 17:50:39
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: G112_basin
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 1.9000
+     Depth: 3.8000
+     Depth: 5.0000
+     Depth: 5.9000
+     Depth: 7.7000
+     Depth: 9.5000
+     Depth: 11.600
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: G112A
+End:
+
+Subbasin: G112B
+End:
+
+Subbasin: G112C
+End:

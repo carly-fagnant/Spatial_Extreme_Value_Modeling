@@ -1,0 +1,12 @@
+    -----DSS---ZOPEN:  Existing File Opened,  File: P:/Effective Models 6-18-2010/E100-00-00_Hydrology_Model/E100-00-00/E100_00_00.dss
+                       Unit:   71;  DSS Versions - Software: 6-QF, File: 6-QA
+ -----DSS--- ZREAD Unit   71; Vers.   12:  //E500-02-00/STORAGE-FLOW///TABLE/
+ -----DSS--- ZREAD Unit   71; Vers.   12:  //E500-02-00/STORAGE-FLOW///TABLE/
+ -----DSS--- ZREAD Unit   71; Vers.   12:  //E500-02-00/STORAGE-FLOW///TABLE/
+ -----DSS---ZWRITE Unit  71; Vers.   13:  //E500-02-00/STORAGE-FLOW///TABLE/
+    -----DSS---ZCLOSE Unit:   71,   File: P:/Effective Models 6-18-2010/E100-00-00_Hydrology_Model/E100-00
+               Pointer Utilization:  0.72
+               Number of Records:   5825
+               File Size: 235400.4  Kbytes
+               Percent Inactive:  46.0
+

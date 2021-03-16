@@ -1,0 +1,130 @@
+Meteorology: 0.2%_24HR
+     Last Modified Date: 12 June 2009
+     Last Modified Time: 20:05:07
+     Version: 3.3
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Use Basin Model: J1000000_02PCT
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 0.2
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.000000
+     Depth: 2.7
+     Depth: 5.5
+     Depth: 7.5
+     Depth: 9
+     Depth: 12.2
+     Depth: 14.7
+     Depth: 17.7
+End:
+
+Subbasin: 401
+End:
+
+Subbasin: 501a
+End:
+
+Subbasin: 402
+End:
+
+Subbasin: 501b
+End:
+
+Subbasin: 403
+End:
+
+Subbasin: 601b
+End:
+
+Subbasin: 601a
+End:
+
+Subbasin: j158
+End:
+
+Subbasin: j100b
+End:
+
+Subbasin: j100c
+End:
+
+Subbasin: 602
+End:
+
+Subbasin: 502a
+End:
+
+Subbasin: 502b
+End:
+
+Subbasin: 503b
+End:
+
+Subbasin: 301
+End:
+
+Subbasin: 101a
+End:
+
+Subbasin: 101b
+End:
+
+Subbasin: j100j
+End:
+
+Subbasin: j100k
+End:
+
+Subbasin: j100m
+End:
+
+Subbasin: j100i
+End:
+
+Subbasin: j100h
+End:
+
+Subbasin: j100g
+End:
+
+Subbasin: j100f
+End:
+
+Subbasin: j100e
+End:
+
+Subbasin: j100d
+End:
+
+Subbasin: 503a
+End:
+
+Subbasin: 504
+End:
+
+Subbasin: 201
+End:
+
+Subbasin: j100l
+End:
+
+Subbasin: j131
+End:
+
+Subbasin: j109
+End:
+
+Subbasin: j121
+End:
+
+Subbasin: J100A
+End:

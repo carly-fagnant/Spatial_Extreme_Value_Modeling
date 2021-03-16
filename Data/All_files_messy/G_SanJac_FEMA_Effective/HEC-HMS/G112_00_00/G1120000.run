@@ -1,0 +1,52 @@
+Run: G1120000_0.2%
+     Default Description: Yes
+     Log File: G1120000_0.2_.log
+     DSS File: G1120000.dss
+     Basin: G112_basin
+     Precip: 0.2 % _24HR
+     Control: Control_15min
+     Precip Last Execution Date: 5 August 2009
+     Precip Last Execution Time: 19:10:18
+     Basin Last Execution Date: 5 August 2009
+     Basin Last Execution Time: 19:10:19
+End:
+
+Run: G1120000_1%
+     Default Description: Yes
+     Log File: G1120000_1_.log
+     DSS File: G1120000.dss
+     Basin: G112_basin
+     Precip: 1%_24HR
+     Control: Control_15min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:10:24
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:10:24
+End:
+
+Run: G1120000_10%
+     Default Description: Yes
+     Log File: G1120000_10_.log
+     DSS File: G1120000.dss
+     Basin: G112_basin
+     Precip: 10%_24HR
+     Control: Control_15min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:09:46
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:09:46
+End:
+
+Run: G1120000_2%
+     Default Description: Yes
+     Log File: G1120000_2_.log
+     DSS File: G1120000.dss
+     Basin: G112_basin
+     Precip: 2%_24HR
+     Control: Control_15min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:10:11
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:10:11
+End:
+

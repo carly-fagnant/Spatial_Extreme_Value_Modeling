@@ -1,0 +1,50 @@
+Project: M100-00-00
+     Description: June 2007 Effective FEMA
+     Version: 3.3
+     DSS File Name: M100_00_00.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 
+End:
+
+Precipitation: 1% _24HR
+     FileName: 1___24HR.met
+     Description: 
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 
+End:
+
+Basin: M100-00-00
+     FileName: M100_00_00.basin
+     Description: 
+End:
+
+Control: Control15
+     FileName: Control15.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

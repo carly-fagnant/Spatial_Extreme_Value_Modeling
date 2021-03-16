@@ -1,0 +1,71 @@
+Meteorology: 10%_24HR
+     Description: Region 3 10% Flood
+     Last Modified Date: 23 August 2011
+     Last Modified Time: 16:04:00
+     Version: 3.3
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Use Basin Model: N100-00-00_COR_EFF
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 10
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.9
+     Depth: 1.5
+     Depth: 2.9
+     Depth: 3.7
+     Depth: 4.2
+     Depth: 5.3
+     Depth: 6.4
+     Depth: 7.8
+End:
+
+Subbasin: N100A
+End:
+
+Subbasin: N100B
+End:
+
+Subbasin: N100C
+End:
+
+Subbasin: N100D
+End:
+
+Subbasin: N100E
+End:
+
+Subbasin: N100F
+End:
+
+Subbasin: N100G
+End:
+
+Subbasin: N100I
+End:
+
+Subbasin: N100J
+End:
+
+Subbasin: N100L
+End:
+
+Subbasin: N100K
+End:
+
+Subbasin: N117
+End:
+
+Subbasin: N104
+End:
+
+Subbasin: N100H
+End:

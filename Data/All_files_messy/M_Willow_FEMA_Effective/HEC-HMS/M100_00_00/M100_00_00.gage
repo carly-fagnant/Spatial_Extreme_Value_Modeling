@@ -1,0 +1,951 @@
+Gage: Kuykendahl (Oct 98)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //KUYKENDAHL (OCT 98)/FLOW//30MIN/GAGE/
+End:
+
+Gage: FM 249 (Oct 98)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //FM 249 (OCT 98)/FLOW//30MIN/GAGE/
+End:
+
+Gage: Kuykendahl (Jun 01)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 14 June 2001,  00:00
+     DSS File: M100_00_00.dss
+     Pathname: //KUYKENDAHL (JUN 01)/FLOW//30MIN/GAGE/
+End:
+
+Gage: FM 249 (Jun 01)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 14 June 2001,  00:00
+     DSS File: M100_00_00.dss
+     Pathname: //FM 249 (JUN 01)/FLOW//30MIN/GAGE/
+End:
+
+Gage: Kuykendahl (Oct 94)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 25 October 1994,  00:00
+     DSS File: M100_00_00.dss
+     Pathname: //KUYKENDAHL (OCT 94)/FLOW//30MIN/GAGE/
+End:
+
+Gage: FM 249 (Oct 94)
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 25 October 1994,  00:00
+     DSS File: M100_00_00.dss
+     Pathname: //FM 249 (OCT 94)/FLOW//30MIN/GAGE/
+End:
+
+Gage: 2001 upper
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 15 January 1983,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //2001 upper/FLOW//15MIN/GAGE/
+End:
+
+Gage: 1994 Upper
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //1994 Upper/FLOW//15MIN/GAGE/
+End:
+
+Gage: 1998 upper
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //1998 upper/FLOW//15MIN/GAGE/
+End:
+
+Gage: Gage 1070
+     Description: Spring Creek at State Highway 249
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 21 October 1998,  13:00
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //GAGE 1070/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: Gage 1220
+     Description: Little Cypress Creek at Cypress-Rosehill Road
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 21 October 1998,  13:00
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //GAGE 1220/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: Gage 1320
+     Description: Willow Creek at Kuykendahl Road
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 21 October 1998,  13:00
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //GAGE 1320/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: Gage 1340
+     Description: Willow Creek at SH 249
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998,  12:00
+     End Time: 21 October 1998,  13:00
+     Start Time: 16 October 1998,  12:00
+     End Time: 24 October 1998,  13:00
+     DSS File: M100_00_00.dss
+     Pathname: //GAGE 1340/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M1000I - 0601
+     Description: June 2001 Rainfall Data for Subarea M1000I
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M1000I - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100A_B - 0601
+     Description: June 2001 Rainfall Data for Subarea M100A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100A_B - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100C - 0601
+     Description: June 2001 Rainfall Data for Subarea M100C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100C - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100D - 0601
+     Description: June 2001 Rainfall Data for Subarea M100D
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100D - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100E - 0601
+     Description: June 2001 Rainfall Data for Subarea M100E
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100E - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F1 - 0601
+     Description: June 2001 Rainfall Data for Subarea M100F1
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F1 - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F2 - 0601
+     Description: June 2001 Rainfall Data for Subarea M100F2
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F2 - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F3 - 0601
+     Description: June 2001 Rainfall Data for Subarea M100F3
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F3 - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100G - 0601
+     Description: June 2001 Rainfall Data for Subarea M100G
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100G - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100H - 0601
+     Description: June 2001 Rainfall Data for Subarea M100H
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100H - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100I - 0601
+     Description: June 2001 Rainfall Data for Subarea M100I
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100I - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100J - 0601
+     Description: June 2001 Rainfall Data for Subarea M100J
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100J - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100K - 0601
+     Description: June 2001 Rainfall Data for Subarea M100K
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100K - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M101A_B - 0601
+     Description: June 2001 Rainfall Data for Subarea M101A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M101A_B - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M104A - 0601
+     Description: June 2001 Rainfall Data for Subarea M104A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M104A - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M109A - 0601
+     Description: June 2001 Rainfall Data for Subarea M109A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M109A - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M108A_B - 0601
+     Description: June 2001 Rainfall Data for Subarea M108A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M108A_B - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M109B - 0601
+     Description: June 2001 Rainfall Data for Subarea M109B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M109B - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M112A - 0601
+     Description: June 2001 Rainfall Data for Subarea M112A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M112A - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M112B_C - 0601
+     Description: June 2001 Rainfall Data for Subarea M112B_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M112B_C - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M116A_C - 0601
+     Description: June 2001 Rainfall Data for Subarea M116A_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M116A_C - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M124A - 0601
+     Description: June 2001 Rainfall Data for Subarea M124A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M124A - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M124B_C - 0601
+     Description: June 2001 Rainfall Data for Subarea M124B_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M124B_C - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M128A - 0601
+     Description: June 2001 Rainfall Data for Subarea M128A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M128A - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M1000I - 1094
+     Description: October 1994 Rainfall Data for Subarea M1000I
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M1000I - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100A_B - 1094
+     Description: October 1994 Rainfall Data for Subarea M100A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100A_B - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100C - 1094
+     Description: October 1994 Rainfall Data for Subarea M100C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100C - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100D - 1094
+     Description: October 1994 Rainfall Data for Subarea M100D
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100D - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100E - 1094
+     Description: October 1994 Rainfall Data for Subarea M100E
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100E - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F1
+     Description: October 1994 Rainfall Data for Subarea M100F1
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F1/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F2
+     Description: October 1994 Rainfall Data for Subarea M100F2
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F2/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100F3
+     Description: October 1994 Rainfall Data for Subarea M100F3
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100F3/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100G - 1094
+     Description: October 1994 Rainfall Data for Subarea M100G
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100G - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100H - 1094
+     Description: October 1994 Rainfall Data for Subarea M100H
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100H - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100I - 1094
+     Description: October 1994 Rainfall Data for Subarea M100I
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100I - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100J - 1094
+     Description: October 1994 Rainfall Data for Subarea M100J
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100J - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M100K - 1094
+     Description: October 1994 Rainfall Data for Subarea M100K
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M100K - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M101A_B - 1094
+     Description: October 1994 Rainfall Data for Subarea M101A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M101A_B - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M104A - 1094
+     Description: October 1994 Rainfall Data for Subarea M104A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M104A - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M108A_B - 1094
+     Description: October 1994 Rainfall Data for Subarea M108A_B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M108A_B - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M109A - 1094
+     Description: October 1994 Rainfall Data for Subarea M109A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M109A - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M109B - 1094
+     Description: October 1994 Rainfall Data for Subarea M109B
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M109B - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M112A - 1094
+     Description: October 1994 Rainfall Data for Subarea M112A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M112A - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M112B_C - 1094
+     Description: October 1994 Rainfall Data for Subarea M112B_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M112B_C - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M116A_C - 1094
+     Description: October 1994 Rainfall Data for Subarea M116A_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M116A_C - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M124A - 1094
+     Description: October 1994 Rainfall Data for Subarea M124A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M124A - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M124B_C - 1094
+     Description: October 1994 Rainfall Data for Subarea M124B_C
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M124B_C - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M128A - 1094
+     Description: October 1994 Rainfall Data for Subarea M128A
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M128A - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M1000J - 0601
+     Description: June 2001 Rainfall Data for Subarea M1000J
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M1000J - 0601/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: M1000J - 1094
+     Description: October 1994 Rainfall Data for Subarea M1000J
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: M100_00_00.dss
+     Pathname: //M1000J - 1094/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: 1940 Storm Gage
+     Last Modified Date: 21 June 2007
+     Last Modified Time: 18:52:22
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 22 November 1940,  12:00
+     End Time: 1 December 1940,  00:00
+     DSS File: M100_00_00.dss
+     Pathname: //1940 STORM GAGE/PRECIP-INC//2HOUR/GAGE/
+End:
+

@@ -1,0 +1,6032 @@
+Gage Manager: K100 LOMR
+     Version: 3.4
+End:
+
+Gage: K150A2_K100_SC_0.2%
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:59:40
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A2_K100_SC_0.2%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A_K100_SC_1%
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:55:46
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A_K100_SC_1%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A2_K100_SC_1%
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:55:18
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A2_K100_SC_1%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A_K100_SC_0.2%
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:59:13
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A_K100_SC_0.2%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A_K100_SC_10%
+     Last Modified Date: 5 April 2010
+     Last Modified Time: 17:35:45
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A_K100_SC_10%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A_K100_SC_2%
+     Last Modified Date: 5 April 2010
+     Last Modified Time: 17:35:22
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A_K100_SC_2%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A2_K100_SC_10%
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 17:15:01
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A2_K100_SC_10%/FLOW//15MIN/GAGE/
+End:
+
+Gage: K150A2_K100_SC_2%
+     Last Modified Date: 5 April 2010
+     Last Modified Time: 17:37:34
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 21 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150A2_K100_SC_2%/FLOW//15MIN/GAGE/
+End:
+
+Gage: k100aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100BYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100BYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100cYR1998
+     Last Modified Date: 14 May 2014
+     Last Modified Time: 21:22:55
+     Units System: SI
+     Reference Height Units: Meters
+     Reference Height: 10.0
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: MM
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100CYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100CYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100dYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100DYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100dYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100DYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100dYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100DYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100DYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100DYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100dYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100DYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100fYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100FYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100fYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100FYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100fYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100FYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100FYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100FYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100fYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100FYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100gYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100GYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100gYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100GYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100gYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100GYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100GYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100GYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100gYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100GYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100hYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100HYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100hYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100HYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100hYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100HYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100HYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100HYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100hYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100HYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100iYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100IYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100iYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100IYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100iYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100IYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100IYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100IYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100iYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100IYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100jYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100JYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100jYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100JYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100jYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100JYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K100JYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100JYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100jYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100JYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100kYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100KYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100kYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100KYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100kYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100KYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100kYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100KYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100lYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100LYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100lYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100LYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100lYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100LYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100lYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100LYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100mYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100MYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100mYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100MYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100mYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100MYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100mYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100MYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100n2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100N2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100o2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100O2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100pYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100PYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100pYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100PYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100pYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100PYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100pYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100PYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100qYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100QYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100qYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100QYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100qYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100QYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100qYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100QYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100rYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100RYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100rYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100RYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100rYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100RYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100rYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100RYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100s2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100S2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100tYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100TYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100tYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100TYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100tYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100TYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100tYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100TYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100uYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100UYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100uYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100UYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100uYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100UYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100uYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100UYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100vYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100VYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100vYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100VYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100vYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100VYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100vYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100VYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100xYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100XYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100xYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100XYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100xYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K100XYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k100xYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K100XYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a3YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A3YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a3YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A3YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a3YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A3YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a3YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A3YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a4YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A4YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a4YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A4YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a4YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A4YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k111a4YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K111A4YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k112aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K112AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k112aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K112AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k112aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K112AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k112aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K112AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k116aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K116AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k116aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K116AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k116aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K116AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k116aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K116AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K120AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K120AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K120AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K120AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K120BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K120BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K120BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k120bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K120BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124cYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K124CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k124cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K124CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131a2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131A2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131cYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K131CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k131cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K131CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k133aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K133AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k133aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K133AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k133aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K133AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k133aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K133AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k140aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K140AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k140aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K140AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k140aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K140AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k140aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K140AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K142AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K142AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K142AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K142AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K142BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K142BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K142BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k142bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K142BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k145aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K145AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k145aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K145AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k145aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K145AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k145aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K145AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k150aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k150aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K150AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k150aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K150AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k150aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K150AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k152aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K152AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k152aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K152AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k152aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K152AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k152aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K152AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k155aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K155AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k155aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K155AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k155aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K155AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K155AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K155AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k155aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K155AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K157AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K157BYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157BYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K157BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157dYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157DYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k157iYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K157IYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k159aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K159AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k159aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K159AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k159aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K159AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k159aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K159AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K160AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K160BYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160BYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160cYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K160CYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160CYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160dYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160DYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160dYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160DYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160dYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K160DYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K160DYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160DYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k160dYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K160DYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166BYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166BYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166cYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166CYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166CYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166dYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166DYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166dYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166DYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166dYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166DYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166DYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166DYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166dYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166DYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166eYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166EYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166eYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166EYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166eYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166EYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166EYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166EYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166eYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166EYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166fYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166FYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166fYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166FYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166fYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166FYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166FYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166FYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166fYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166FYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166gYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166GYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166gYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166GYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166gYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166GYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166GYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166GYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166gYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166GYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166hYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166HYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166hYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166HYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166hYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K166HYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K166HYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166HYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k166hYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K166HYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k175aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K175AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k175aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K175AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k175aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //K175AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: K175AYR1998_11
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 12 November 1998, 00:00
+     End Time: 17 November 1998, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K175AYR1998_11/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: k175aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //K175AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a1YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A1YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a1YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A1YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a1YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A1YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a1YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A1YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a2YR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A2YR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a2YR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A2YR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a2YR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A2YR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100a2YR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100A2YR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100cYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100CYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100cYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100CYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100cYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100CYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100cYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100CYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100dYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100DYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100dYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100DYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100dYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100DYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100dYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100DYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100eYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100EYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100eYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100EYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100eYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100EYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100eYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100EYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100fYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100FYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100fYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100FYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100fYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L100FYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l100fYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L100FYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l112aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L112AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l112aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L112AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l112aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L112AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l112aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L112AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114aYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L114AYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114aYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L114AYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114aYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L114AYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114aYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L114AYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114bYR1989
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 May 1989, 12:00
+     End Time: 25 May 1989, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L114BYR1989/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114bYR1994
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L114BYR1994/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114bYR1998
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //L114BYR1998/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: l114bYR2001
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 11 June 2001, 23:45
+     DSS File: K100_LOMR.dss
+     Pathname: //L114BYR2001/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L100a1
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L100A1/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L100a2
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L100A2/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L100b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L100B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L100c
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L100C/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L100d
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L100D/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L112
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L112/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L114a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L114A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L114b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L114B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L120a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L120A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1994_L120b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 19 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1994_L120B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L100a1
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L100A1/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L100a2
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L100A2/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L100b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L100B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L100c
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L100C/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L100d
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L100D/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L112
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L112/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L114a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L114A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L114b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L114B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L120a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L120A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R_Oct1998_L120b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 17 October 1998, 00:00
+     End Time: 20 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R_OCT1998_L120B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R1994-L100e
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 20 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R1994-L100E/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R1994-L100f
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 20 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R1994-L100F/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R1998-L100e
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1998, 00:00
+     End Time: 28 October 1998, 00:00
+     Start Time: 16 October 1998, 09:00
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R1998-L100E/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R1998-L100f
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 16 October 1998, 09:30
+     End Time: 22 October 1998, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R1998-L100F/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001L100a1
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001L100A1/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001L100a2
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001L100A2/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L100b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L100B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L100c
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L100C/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L100d
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L100D/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001-L100e
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 3 June 2001, 00:00
+     End Time: 12 June 2001, 00:00
+     Start Time: 4 June 2001, 00:00
+     End Time: 12 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001-L100E/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001-L100f
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 12 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001-L100F/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L112a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L112A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L114a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L114A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L114b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L114B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L120a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L120A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2001 L120b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001, 00:00
+     End Time: 10 June 2001, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2001 L120B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L100a1
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L100A1/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L100a2
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L100A2/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L100b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L100B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L100c
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L100C/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L100d
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L100D/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L112a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L112A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L114a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L114A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L114b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L114B/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L120a
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L120A/PRECIP-INC//15MIN/GAGE/
+End:
+
+Gage: R2-1994-L120b
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994, 00:00
+     End Time: 31 October 1994, 00:00
+     DSS File: K100_LOMR.dss
+     Pathname: //R2-1994-L120B/PRECIP-INC//15MIN/GAGE/
+End:
+

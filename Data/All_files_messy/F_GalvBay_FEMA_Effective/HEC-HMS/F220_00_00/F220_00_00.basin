@@ -1,0 +1,302 @@
+Basin: F220-00-00
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:56:41
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: F22001A
+     Canvas X: 3242234.1
+     Canvas Y: 1.37872764E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.626
+     Downstream: F2200000_0015_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 16.737
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.552
+     Storage Coefficient: 3.36
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F22002A
+     Canvas X: 3234128.227118644
+     Canvas Y: 1.378066160190678E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.676
+     Downstream: F2200000_0043_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 14.276
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.248
+     Storage Coefficient: 2.917
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F220A
+     Canvas X: 3231606.4
+     Canvas Y: 1.3784154E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.78
+     Downstream: F2200000_0088_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 27.802
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.243
+     Storage Coefficient: 4.683
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F220B
+     Canvas X: 3236156.5
+     Canvas Y: 1.3785896E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.736
+     Downstream: F2200000_0066_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 15.647
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.447
+     Storage Coefficient: 4.741
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F220C
+     Canvas X: 3238391.781
+     Canvas Y: 1.3784286739E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.46
+     Downstream: F2200000_0024_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 7.886
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.437
+     Storage Coefficient: 8.169
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: F2200000_0088_J
+     Description: STA. 8818.841
+     Canvas X: 3233946.475
+     Canvas Y: 1.3782887726E7
+     Label X: -10.0
+     Label Y: 21.0
+     Downstream: F2200000_0066_R
+End:
+
+Junction: F2200000_0066_J
+     Description: STA. 6587.084
+     Canvas X: 3236476.97
+     Canvas Y: 1.3782978101E7
+     Label X: -25.0
+     Label Y: -26.0
+     Downstream: F2200000_0043_J
+End:
+
+Junction: F2200000_0024_J
+     Description: STA. 2426.825
+     Canvas X: 3240453.462
+     Canvas Y: 1.3784514473E7
+     Label X: -28.0
+     Label Y: 19.0
+     Downstream: F2200000_0015_J
+End:
+
+Junction: F2200000_0009_J
+     Description: STA. 938.947 (XS at the mouth - no flow change from RAS at this location)
+     Canvas X: 3240924.208
+     Canvas Y: 1.3784161997E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Junction: F2200000_0043_J
+     Description: STA. 4284.019
+     Canvas X: 3236958.969
+     Canvas Y: 1.3783128726E7
+     Label X: 5.0
+     Label Y: -27.0
+     Downstream: F2200000_0024_R
+End:
+
+Reach: F2200000_0066_R
+     Description: STA. 8818.841 TO STA. 6587.084
+     Canvas X: 3236476.97
+     Canvas Y: 1.3782978101E7
+     From Canvas X: 3233946.475
+     From Canvas Y: 1.3782887726E7
+     Label X: -25.0
+     Label Y: 10.0
+     Downstream: F2200000_0066_J
+
+     Route: Modified Puls
+     Number of Reaches: 7
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: F2200000_0066_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: F2200000_0024_R
+     Description: STA. 6587.084 TO STA. 2426.825
+     Canvas X: 3240453.462
+     Canvas Y: 1.3784514473E7
+     From Canvas X: 3236958.969
+     From Canvas Y: 1.3783128726E7
+     Label X: -27.0
+     Label Y: -14.0
+     Downstream: F2200000_0024_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: F2200000_0024_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: F2200000_0015_J
+     Description: STA. 1472.816
+     Canvas X: 3240592.142
+     Canvas Y: 1.3784423744E7
+     Label X: 21.0
+     Label Y: 16.0
+     Downstream: F2200000_0009_R
+End:
+
+Reach: F2200000_0009_R
+     Description: STA. 2426.825 TO STA. 938.947
+     Canvas X: 3240924.208
+     Canvas Y: 1.3784161997E7
+     From Canvas X: 3240592.142
+     From Canvas Y: 1.3784423744E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: F2200000_0009_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: F2200000_0009_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.37907205797027E7
+     Last View S: 1.37783091053291E7
+     Last View W: 3229271.49025869
+     Last View E: 3244556.06488917
+     Maximum View N: 1.37907205797027E7
+     Maximum View S: 1.37783091053291E7
+     Maximum View W: 3229271.49025869
+     Maximum View E: 3244556.06488917
+     Extent Method: Elements Maps
+     Buffer: 0
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Map: hms.map.MapGeoMap
+     Map File Name: F220-MAP.map
+     Map Shown: Yes
+End:

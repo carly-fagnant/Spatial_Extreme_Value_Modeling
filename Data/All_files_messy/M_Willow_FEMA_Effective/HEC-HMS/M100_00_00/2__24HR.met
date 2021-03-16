@@ -1,0 +1,105 @@
+Meteorology: 2%_24HR
+     Last Modified Date: 23 August 2007
+     Last Modified Time: 20:57:37
+     Version: 3.0.1
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Basin Model List: H100-00-00,M100-00-00
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 2.0000
+     Depth: 3.8000
+     Depth: 4.9000
+     Depth: 5.6000
+     Depth: 7.2000
+     Depth: 8.7000
+     Depth: 10.600
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: M100A_B
+End:
+
+Subbasin: M128A
+End:
+
+Subbasin: M100D
+End:
+
+Subbasin: M1000I
+End:
+
+Subbasin: M100E
+End:
+
+Subbasin: M124B_C
+End:
+
+Subbasin: M100F1
+End:
+
+Subbasin: M100G
+End:
+
+Subbasin: M116A_C
+End:
+
+Subbasin: M100H
+End:
+
+Subbasin: M112B_C
+End:
+
+Subbasin: M100I
+End:
+
+Subbasin: M109B
+End:
+
+Subbasin: M108A_B
+End:
+
+Subbasin: M100J
+End:
+
+Subbasin: M104A
+End:
+
+Subbasin: M100K
+End:
+
+Subbasin: M101A_B
+End:
+
+Subbasin: M100C
+End:
+
+Subbasin: M124A
+End:
+
+Subbasin: M100F3
+End:
+
+Subbasin: M100F2
+End:
+
+Subbasin: M112A
+End:
+
+Subbasin: M109A
+End:
+
+Subbasin: M1000J
+End:

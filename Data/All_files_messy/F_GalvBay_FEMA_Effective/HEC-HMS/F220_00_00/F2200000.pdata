@@ -1,0 +1,37 @@
+Paired Data Manager: F2200000
+     Version: 3.3
+End:
+
+Table: F2200000_0066_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:56:13
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: F2200000.dss
+     Pathname: //F2200000_0066_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: F2200000_0024_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:55:35
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: F2200000.dss
+     Pathname: //F2200000_0024_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: F2200000_0009_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:53:35
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: F2200000.dss
+     Pathname: //F2200000_0009_R/STORAGE-FLOW///TABLE/
+End:
+

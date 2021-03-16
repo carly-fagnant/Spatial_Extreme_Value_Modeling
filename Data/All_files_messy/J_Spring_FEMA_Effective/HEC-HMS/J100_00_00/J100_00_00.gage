@@ -1,0 +1,124 @@
+Gage Manager: J100-00-00
+     Version: 3.3
+End:
+
+Gage: 100 yr willow inflow
+     Description: Inflow from Willow Creek 1% Event
+     Last Modified Date: 24 February 2010
+     Last Modified Time: 14:05:15
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: J100_00_00.dss
+     Pathname: //100 YR WILLOW INFLOW/FLOW//15MIN/GAGE/
+End:
+
+Gage: 500 yr willow inflow
+     Description: Inflow from Willow Creek 0.2% Event
+     Last Modified Date: 24 February 2010
+     Last Modified Time: 14:09:07
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: J100_00_00.dss
+     Pathname: //500 YR WILLOW INFLOW/FLOW//15MIN/GAGE/
+End:
+
+Gage: 50 yr willow inflow
+     Description: Inflow from Willow Creek 2% Event
+     Last Modified Date: 24 February 2010
+     Last Modified Time: 14:09:40
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: J100_00_00.dss
+     Pathname: //50 YR WILLOW INFLOW/FLOW//15MIN/GAGE/
+End:
+
+Gage: 10 yr willow inflow
+     Description: Inflow from Willow Creek 10% Event
+     Last Modified Date: 22 February 2010
+     Last Modified Time: 15:02:07
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: J100_00_00.dss
+     Pathname: //10 YR WILLOW INFLOW/FLOW//15MIN/GAGE/
+End:
+
+Gage: 100yr Cypress Inflow
+     Description: Inflow from Cypress Creek 1% Event
+     Last Modified Date: 24 February 2010
+     Last Modified Time: 15:46:17
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: J100_00_00.dss
+     Pathname: //100YR CYPRESS INFLOW/FLOW//15MIN/GAGE/
+End:
+
+Gage: 500yr Cypress Inflow
+     Description: Inflow from Cypress Creek 0.2% Event
+     Last Modified Date: 27 July 2009
+     Last Modified Time: 15:21:33
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: j100_100_01.dss
+     Pathname: //500YR CYPRESS INFLOW/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: 50 yr Cypress Inflow
+     Description: Inflow from Cypress Creek 2% Event
+     Last Modified Date: 27 July 2009
+     Last Modified Time: 15:21:55
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: j100_100_01.dss
+     Pathname: //50 YR CYPRESS INFLOW/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: 10 yr Cypress Inflow
+     Description: Inflow from Cypress Creek 10% Event
+     Last Modified Date: 27 July 2009
+     Last Modified Time: 15:20:01
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 5 June 2007, 00:00
+     DSS File: j100_100_01.dss
+     Pathname: //10 YR CYPRESS INFLOW/FLOW/01MAY2007/15MIN/GAGE/
+End:
+

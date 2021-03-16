@@ -1,0 +1,275 @@
+Plan Title=FEMA Effective FW
+Version=Version 3.0.1  Mar 2001
+Short Identifier=Eff+LOMR FW 
+Simulation Date=,,,
+Geom File=g05
+Flow File=f03
+Subcritical Flow
+K Sum by GR= 0 
+Std Step Tol= 0.01 
+Critical Tol= 0.01 
+Num of Std Step Trials= 20 
+Max Error Tol= 0.3 
+Flow Tol Ratio= 0.001 
+Split Flow NTrial= 30 
+Split Flow Tol= 0.02 
+Split Flow Ratio= 0.02 
+Log Output Level= 0 
+Friction Slope Method= 1 
+Unsteady Friction Slope Method= 2 
+Parabolic Critical Depth
+Global Vel Dist= 0 , 0 , 0 
+Global Log Level= 0 
+CheckData=True
+Encroach Param=-1 ,0,0, 2 
+Encroach River=B100-00-00      
+Encroach Reach=B100-00-00_0022 
+Encroach Node=69793.57
+       1 2117.72  2186.8
+Encroach Node=69550.45
+       1 4964.07    5100
+Encroach Node=69497.74
+       1 4956.03    5200
+Encroach Node=69427   
+       1 4956.03    5460
+Encroach Node=69356.69
+       1 4956.03    5413
+Encroach Node=69160.34
+       1 4964.07    5400
+Encroach Node=68865.08
+       1 4947.01 5399.84
+Encroach Node=68815.08
+       1    4916    5370
+Encroach Node=68738   
+       1    4916    5500
+Encroach Node=68660.68
+       1    4850    5300
+Encroach Node=68556.15
+       1    4800    5250
+Encroach Node=68387.3 
+       1    4700    5300
+Encroach Node=68218.39
+       1    4750    5200
+Encroach Node=68168.29
+       1  4744.4    5200
+Encroach Node=68054.1 
+       1  4744.4    5200
+Encroach Node=67939.84
+       1  4744.4    5200
+Encroach Node=67739.81
+       1 4779.64 5165.89
+Encroach Node=67365.29
+       1 4732.39 5145.92
+Encroach Node=67350.22
+       1 4748.86 5169.19
+Encroach Node=67315.05
+       1 4724.41  5110.2
+Encroach Node=67284.87
+       1 4779.51 5160.97
+Encroach Node=66525.1 
+       1    4820    5100
+Encroach Node=66474.97
+       1 4862.73    5070
+Encroach Node=66409   
+       1 4862.73    5070
+Encroach Node=66343.05
+       1    4900    5070
+Encroach Node=66142.97
+       1 4920.75 5075.06
+Encroach Node=66054.98
+       1  4952.2 5087.59
+Encroach Node=66002.63
+       1 4945.36 5100.68
+Encroach Node=65912.83
+       1 4945.36 5097.73
+Encroach Node=65706.84
+       1 4927.35 5070.75
+Encroach Node=65138.53
+       1 4889.66 5026.34
+Encroach Node=65088.44
+       1 4891.66 5026.34
+Encroach Node=65006   
+       1    4903    5025
+Encroach Node=64924.23
+       1 4904.11  5027.1
+Encroach Node=64819.77
+       1 3973.57  4081.1
+Encroach Node=63842.05
+       1 4875.71 5060.08
+Encroach Node=62832.56
+       1 4886.38    5200
+Encroach Node=62041.88
+       1 4933.61 5122.56
+Encroach Node=61225.3 
+       1 4919.66 5169.65
+Encroach Node=60536.27
+       1 4842.37 5045.98
+Encroach Node=59178.74
+       1 4944.92 5074.72
+Encroach Node=58659.35
+       1 4899.44 5093.64
+Encroach Node=58560.23
+       1 4877.18 5091.52
+Encroach Node=58383.8 
+       1 4877.18 5091.52
+Encroach Node=58206.36
+       1 4877.18 5091.52
+Encroach Node=58023.52
+       1 4724.47 5046.51
+Encroach Node=57354.84
+       1    4840    5262
+Encroach Node=56229.95
+       1 4798.98 5287.52
+Encroach Node=55180.78
+       1    4840    5270
+Encroach Node=53558.74
+       1    4820    5594
+Encroach Node=52312.42
+       1    4321    5636
+Encroach Node=51320.59
+       1 4753.26    5959
+Encroach Node=50230.66
+       1 4107.54    5744
+Encroach Node=49430.51
+       1 4025.82    5531
+Encroach Node=49376.99
+       1 3712.16    5531
+Encroach Node=49319.8 
+       1 3712.16    5514
+Encroach Node=49262.58
+       1 3712.16    5496
+Encroach Node=49053.31
+       1 3749.51    5522
+Encroach Node=48377.63
+       1  3484.3    5330
+Encroach Node=47629   
+       1 3613.65 5230.15
+Encroach Node=47029.41
+       1    3824 5109.29
+Encroach Node=46118.78
+       1    4260 5211.69
+Encroach Node=45071   
+       1 4682.81  5095.2
+Encroach Node=44971.5 
+       1    4350  5154.9
+Encroach Node=43905.84
+       1 4329.91  5195.1
+Encroach Node=42907.14
+       1 4335.78 5309.92
+Encroach Node=42218.84
+       1    4700 5201.92
+Encroach Node=40786.98
+       1  4259.9 4962.73
+Encroach Node=39912.8 
+       1    4875 5127.76
+Encroach Node=39369.61
+       1 4637.17 5198.39
+Encroach Node=37500.83
+       1 4896.07 5167.19
+Encroach Node=36405.95
+       1 4873.15 5211.64
+Encroach Node=34186.11
+       1 4670.32 5223.11
+Encroach Node=32938.54
+       1 4610.29 5193.71
+Encroach Node=31668.25
+       1 4688.04 5419.54
+Encroach Node=31618.22
+       1 4688.04 5419.54
+Encroach Node=31568.19
+       1  4758.3  5289.3
+Encroach Node=30883.22
+       1 4536.65 5350.44
+Encroach Node=30033.6 
+       1 4661.11 5368.42
+Encroach Node=28982   
+       1 4775.82 5357.99
+Encroach Node=28745.12
+       1 4222.94 5548.32
+Encroach Node=26559.78
+       1 4649.41 5364.47
+Encroach Node=25539.14
+       1    4534 5542.28
+Encroach Node=23904.22
+       1 4862.83 5497.29
+Encroach Node=23422.08
+       1 4778.19 5448.53
+Encroach Node=22280.19
+       1  4512.3 5291.87
+Encroach Node=21228.02
+       1 4153.97 5353.78
+Encroach Node=20376.82
+       1 4481.43  5337.5
+Encroach Node=20263.27
+       1 4796.52 5216.15
+Encroach Node=20088.4 
+       1 4683.35 5305.28
+Encroach Node=19913.61
+       1 4683.35 5305.28
+Encroach Node=19510.59
+       1 4604.39 5460.28
+Encroach Node=18656.75
+       1 4253.53 5771.19
+Encroach Node=17405.65
+       1 3815.06 6703.16
+Encroach Node=16423.13
+       1 3967.12 5672.89
+Encroach Node=14933.72
+       1 4277.91 5748.67
+Encroach Node=13996.76
+       1 4340.87 5630.07
+Encroach Node=12866.58
+       1 4327.96 5642.71
+Encroach Node=11525.78
+       1 4132.43 5699.18
+Encroach Node=10503.88
+       1 3993.34 5921.95
+Encroach Node=9564.122
+       1 4264.93    5910
+Encroach Node=8322.608
+       1 4344.87 5590.84
+Encroach Node=6952.755
+       1 4136.05 5636.46
+Encroach Node=6043.869
+       1 4156.12 5824.46
+Encroach Node=4712.607
+       1 4155.18 6032.01
+Encroach Node=3785.66 
+       1 4039.56 5674.86
+Encroach Node=2904.979
+       1 3782.21 6378.65
+Encroach Node=2765.845
+       1 2604.81    5300
+Encroach Node=2572.18 
+       1 1715.63 4785.21
+Encroach Node=2378.514
+       1 1715.63 4785.21
+Encroach Node=2194.604
+       1 2535.73 7081.77
+BEGIN DESCRIPTION:
+FEMA Effective 2007 + LOMR 09-06-2867P
+END DESCRIPTION:
+Computation Interval=1HOUR
+Output Interval=1HOUR
+Run HTab= 0 
+Run UNet= 0 
+Run PostProcess= 0 
+UNET Theta= 1 
+UNET ZTol= 0.02 
+UNET ZSATol= 0.1 
+UNET MxIter= 20 
+UNET MaxInSteps= 20 
+UNET DtIC= 0 
+UNET DtMin= 0 
+UNET MaxCRTS= 20 
+UNET WFStab= 2 
+UNET SFStab= 1 
+UNET WFX= 1 
+UNET SFX= 1 
+UNET Convert EG Bridges=-1 
+UNET Use Existing IB Tables=-1 
+Instantaneous Interval=1HOUR
+Write IC File= 0 
+IC Time=
+Write Velocity= 0 
+Write Detailed= 0 

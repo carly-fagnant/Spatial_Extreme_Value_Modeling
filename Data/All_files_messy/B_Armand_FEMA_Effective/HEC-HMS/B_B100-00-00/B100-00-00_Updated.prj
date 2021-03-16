@@ -1,0 +1,36 @@
+Proj Title=B100-00-00
+Current Plan=p06
+Default Exp/Contr=.3,.1
+English Units
+Geom File=g05
+Flow File=f02
+Flow File=f03
+Plan File=p06
+Plan File=p07
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+Armand Bayou Watershed
+Armand Bayou
+HCFCD Unit B-100-00-00
+Flood Hazard Model
+10, 2, 1, 0.2% Event
+Filename B100_00_00.prj
+Prepared by: Christopher Moss Date: 6/15/2004
+Reviewed by:                             Date:                
+Status Final
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 

@@ -1,0 +1,87 @@
+Precip: 0.2%_24HR
+     Last Modified Date: 28 June 2007
+     Last Modified Time: 21:48:07
+     Version: 2.2.1
+     Default DSS File Name: C:\Projects\H100_00_00\H100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 0.2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 2.6000
+     Depth: 5.5000
+     Depth: 7.6000
+     Depth: 9.2000
+     Depth: 12.800
+     Depth: 15.500
+     Depth: 18.900
+End:
+
+Subbasin: H118A
+End:
+
+Subbasin: H100A
+End:
+
+Subbasin: H112A
+End:
+
+Subbasin: H108A
+End:
+
+Subbasin: H100B
+End:
+
+Subbasin: H110A
+End:
+
+Subbasin: H100C
+End:
+
+Subbasin: H119A
+End:
+
+Subbasin: H106A
+End:
+
+Subbasin: H100D
+End:
+
+Subbasin: H100E
+End:
+
+Subbasin: H103A
+End:
+
+Subbasin: H125A
+End:
+
+Subbasin: H100F
+End:
+
+Subbasin: H102A
+End:
+
+Subbasin: H100G
+End:
+
+Subbasin: H101A
+End:
+
+Subbasin: H100H
+End:
+
+Subbasin: H103B
+End:
+
+Subbasin: H118B
+End:

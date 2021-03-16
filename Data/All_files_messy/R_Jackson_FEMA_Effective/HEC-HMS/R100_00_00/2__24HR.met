@@ -1,0 +1,88 @@
+Precip: 2%_24HR
+     Description: 2% (50-YR) Frequency Storm - Region 3
+     Last Modified Date: 24 June 2007
+     Last Modified Time: 22:47:29
+     Version: 2.2.2
+     Default DSS File Name: C:\AARename\R-Jackson Bayou\Hydrology-HMS\R100_00_00\R100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 2
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 1.1
+     Depth: 1.9
+     Depth: 3.8
+     Depth: 5.0
+     Depth: 5.9
+     Depth: 7.7
+     Depth: 9.5
+     Depth: 11.6
+End:
+
+Subbasin: r100a
+End:
+
+Subbasin: r100b
+End:
+
+Subbasin: r100c
+End:
+
+Subbasin: r100d
+End:
+
+Subbasin: r100e
+End:
+
+Subbasin: r1020301a
+End:
+
+Subbasin: r1020301b
+End:
+
+Subbasin: r10203a
+End:
+
+Subbasin: r10206a
+End:
+
+Subbasin: r10209a
+End:
+
+Subbasin: r10213a
+End:
+
+Subbasin: r10213b
+End:
+
+Subbasin: r102a
+End:
+
+Subbasin: r102b
+End:
+
+Subbasin: r102c
+End:
+
+Subbasin: r102d
+End:
+
+Subbasin: r102e
+End:
+
+Subbasin: r103a
+End:
+
+Subbasin: r106a
+End:
+
+Subbasin: r106b
+End:

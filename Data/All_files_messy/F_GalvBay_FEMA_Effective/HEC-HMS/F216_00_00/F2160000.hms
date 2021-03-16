@@ -1,0 +1,50 @@
+Project: F2160000
+     Description: HCFCD Unit # F216-00-00
+     Version: 3.3
+     DSS File Name: F2160000.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% Exceedance Frequency Storm (500-Year) - Region 3
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% Exceedance Frequency Storm (100-Year) - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% Exceedance Frequency Storm (10-Year) - Region 3
+End:
+
+Precipitation: 2% _24HR
+     FileName: 2___24HR.met
+     Description: 2% Exceedance Frequency Storm (50-Year) - Region 3
+End:
+
+Basin: F216-00-00
+     FileName: F216_00_00.basin
+     Description: little cedar bayou (f216-00-00) watershed
+End:
+
+Control: Control 5 Min
+     FileName: Control_5_Min.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: None
+     Default Erosion Method: None
+     Default Route Method: Modified Puls
+     Default Gain Loss Method: None
+     Default Precip Method: Frequency Based Hypothetical
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

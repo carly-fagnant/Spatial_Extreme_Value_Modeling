@@ -1,0 +1,2018 @@
+<basin xmlns="http://www.hec.usace.army.mil/software/hec-hms" name="C100-00-00">
+  <header>
+    <description>C503 is not overwelmed by giving it an essentially infinite height</description>
+    <lastmodifieddate>4 March 2011</lastmodifieddate>
+    <lastmodifiedtime>23:13:05</lastmodifiedtime>
+    <version>3.3</version>
+    <unitsystem>English</unitsystem>
+    <missingflowtozero>No</missingflowtozero>
+    <enableflowratio>No</enableflowratio>
+    <allowblending>No</allowblending>
+    <computelocalflowatjunctions>No</computelocalflowatjunctions>
+    <sedimentgradescale>NONE</sedimentgradescale>
+    <enablesedimentrouting>No</enablesedimentrouting>
+    <enablequalityrouting>No</enablequalityrouting>
+  </header>
+  <junction name="C1000000_0001_J">
+    <description>RS 134.3</description>
+    <canvasx>3161600.31821015</canvasx>
+    <canvasy>1.3826382402065717E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+  </junction>
+  <subbasin name="C102B">
+    <canvasx>3154783.6510253423</canvasx>
+    <canvasy>1.3827218718469163E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.09</area>
+    <downstream>C1020000_0010_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>68.48</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.34</timeofconcentration>
+      <storagecoefficient>1.45</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0066_J">
+    <description>RS 6598.4</description>
+    <canvasx>3157785.85203485</canvasx>
+    <canvasy>1.3823963995879417E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0001_R</downstream>
+  </junction>
+  <subbasin name="C103">
+    <canvasx>3148845.344</canvasx>
+    <canvasy>1.3818356043E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.61</area>
+    <downstream>C1000000_0116_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>61.70</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.36</timeofconcentration>
+      <storagecoefficient>1.74</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0149_J">
+    <description>RS 14908.4</description>
+    <canvasx>3154373.099</canvasx>
+    <canvasy>1.3817293865E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0135_R</downstream>
+  </junction>
+  <subbasin name="C106G">
+    <canvasx>3161713.375</canvasx>
+    <canvasy>1.3817941731E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>3.07</area>
+    <downstream>C1060000_0003_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>45.67</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.77</timeofconcentration>
+      <storagecoefficient>3.11</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0274_J">
+    <description>RS 27367</description>
+    <canvasx>3146656.851</canvasx>
+    <canvasy>1.3811391467E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0209_R</downstream>
+  </junction>
+  <subbasin name="C100J">
+    <canvasx>3143391.137</canvasx>
+    <canvasy>1.3806292198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>6.27</area>
+    <downstream>C1000000_0274_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>44.77</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>1.64</timeofconcentration>
+      <storagecoefficient>15.58</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1060000_0078_J">
+    <description>RS 7825.3</description>
+    <canvasx>3159900.114</canvasx>
+    <canvasy>1.3816032284E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0003_R</downstream>
+  </junction>
+  <subbasin name="C106C">
+    <canvasx>3167757.45</canvasx>
+    <canvasy>1.380794951E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.89</area>
+    <downstream>C1060000_0138_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>52.28</percentimperviousarea>
+      <initialloss>0.370</initialloss>
+      <moisturedeficit>0.389</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.064</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.48</timeofconcentration>
+      <storagecoefficient>2.01</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0429_J">
+    <description>RS 42928.7</description>
+    <canvasx>3135860.563</canvasx>
+    <canvasy>1.3802530898E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0391_R</downstream>
+  </junction>
+  <subbasin name="C118">
+    <canvasx>3131511.911</canvasx>
+    <canvasy>1.3808892489E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>3.87</area>
+    <downstream>C1000000_0429_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>52.87</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.81</timeofconcentration>
+      <storagecoefficient>4.59</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100L">
+    <canvasx>3155555.2447427395</canvasx>
+    <canvasy>1.3815145869686048E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>3.38</area>
+    <downstream>C1000000_0149_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>53.81</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.76</timeofconcentration>
+      <storagecoefficient>2.95</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C106F">
+    <canvasx>3155421.137</canvasx>
+    <canvasy>1.3807987198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.02</area>
+    <downstream>C1060100_0008_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>53.24</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.85</timeofconcentration>
+      <storagecoefficient>5.27</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0755_J">
+    <description>RS 75516.2</description>
+    <canvasx>3110659.084618742</canvasx>
+    <canvasy>1.3794025398711488E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0696_R</downstream>
+  </junction>
+  <subbasin name="C137">
+    <canvasx>3107541.137</canvasx>
+    <canvasy>1.3797697198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.56</area>
+    <downstream>C1000000_0755_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>29.47</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.36</timeofconcentration>
+      <storagecoefficient>5.04</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C123">
+    <canvasx>3133093.167</canvasx>
+    <canvasy>1.3794043386E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.44</area>
+    <downstream>C1000000_0429_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>24.61</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.98</timeofconcentration>
+      <storagecoefficient>4.90</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1060000_0138_J">
+    <description>RS 13835.3</description>
+    <canvasx>3162292.608</canvasx>
+    <canvasy>1.3811640582E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0078_R</downstream>
+  </junction>
+  <subbasin name="C106D">
+    <canvasx>3161916.137</canvasx>
+    <canvasy>1.3801222198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.86</area>
+    <downstream>C1060000_0138_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>52.49</percentimperviousarea>
+      <initialloss>0.370</initialloss>
+      <moisturedeficit>0.389</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.064</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.71</timeofconcentration>
+      <storagecoefficient>4.63</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C120">
+    <canvasx>3139341.137</canvasx>
+    <canvasy>1.3794997198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.23</area>
+    <downstream>C1000000_0391_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>22.53</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.66</timeofconcentration>
+      <storagecoefficient>5.10</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0478_J">
+    <description>RS 47844.1</description>
+    <canvasx>3131808.945</canvasx>
+    <canvasy>1.3800300301E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0429_R</downstream>
+  </junction>
+  <subbasin name="C100I">
+    <canvasx>3128302.992</canvasx>
+    <canvasy>1.3797276755E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>3.79</area>
+    <downstream>C1000000_0478_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>40.43</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.60</timeofconcentration>
+      <storagecoefficient>4.02</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0696_J">
+    <description>RS 69618.1</description>
+    <canvasx>3114958.177402093</canvasx>
+    <canvasy>1.3795546982902091E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0623_R</downstream>
+  </junction>
+  <subbasin name="C100G">
+    <canvasx>3112266.137</canvasx>
+    <canvasy>1.3796482198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.23</area>
+    <downstream>C1000000_0696_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>10.25</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.53</timeofconcentration>
+      <storagecoefficient>7.01</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C132">
+    <canvasx>3118574.500964983</canvasx>
+    <canvasy>1.3800002639318312E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>4.07</area>
+    <downstream>C1000000_0623_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>22.35</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.79</timeofconcentration>
+      <storagecoefficient>11.92</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1060000_0210_J">
+    <description>RS 21050.3</description>
+    <canvasx>3165242.259</canvasx>
+    <canvasy>1.3806363985E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0138_R</downstream>
+  </junction>
+  <subbasin name="C106B">
+    <canvasx>3167826.137</canvasx>
+    <canvasy>1.3798972198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>3.02</area>
+    <downstream>C1060000_0210_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>48.52</percentimperviousarea>
+      <initialloss>0.370</initialloss>
+      <moisturedeficit>0.389</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.064</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.83</timeofconcentration>
+      <storagecoefficient>5.00</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C106A">
+    <canvasx>3173061.137</canvasx>
+    <canvasy>1.3800157198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.82</area>
+    <downstream>C1060800_0033_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>52.05</percentimperviousarea>
+      <initialloss>0.370</initialloss>
+      <moisturedeficit>0.389</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.064</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.52</timeofconcentration>
+      <storagecoefficient>3.60</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1060100_0166_J">
+    <description>RS 16613.5</description>
+    <canvasx>3155238.276</canvasx>
+    <canvasy>1.3802868525E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060100_0008_R</downstream>
+  </junction>
+  <subbasin name="C106E">
+    <canvasx>3156951.137</canvasx>
+    <canvasy>1.3798057198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.78</area>
+    <downstream>C1060100_0166_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>45.22</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.62</timeofconcentration>
+      <storagecoefficient>5.76</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100E">
+    <canvasx>3098783.535</canvasx>
+    <canvasy>1.3796438474E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.24</area>
+    <downstream>C1000000_0820_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>46.96</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>1.98</timeofconcentration>
+      <storagecoefficient>4.77</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100K">
+    <canvasx>3150081.137</canvasx>
+    <canvasy>1.3798117198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.76</area>
+    <downstream>C1650000_9901_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>38.93</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.85</timeofconcentration>
+      <storagecoefficient>3.93</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0820_J">
+    <description>RS 81974.9</description>
+    <canvasx>3105561.5570687726</canvasx>
+    <canvasy>1.3790508104702009E7</canvasy>
+    <labelx>18.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0755_R</downstream>
+  </junction>
+  <subbasin name="C161">
+    <canvasx>3103675.471875284</canvasx>
+    <canvasy>1.3800193407046951E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.39</area>
+    <downstream>C1000000_0820_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>20.46</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>1.35</timeofconcentration>
+      <storagecoefficient>7.86</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C134">
+    <canvasx>3121692.386759363</canvasx>
+    <canvasy>1.3796862482911116E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.03</area>
+    <downstream>C1000000_0623_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>15.40</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>2.76</timeofconcentration>
+      <storagecoefficient>11.47</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C143">
+    <canvasx>3102501.137</canvasx>
+    <canvasy>1.3785067198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.98</area>
+    <downstream>C1000000_0852_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>32.44</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.33</timeofconcentration>
+      <storagecoefficient>5.57</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C144">
+    <canvasx>3098256.137</canvasx>
+    <canvasy>1.3783327198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.02</area>
+    <downstream>C1000000_0889_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>28.57</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.35</timeofconcentration>
+      <storagecoefficient>5.25</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C147C">
+    <description>Sub-area C147C was moved from downstream of Reach C1470000_007_R to upstream of the same reach by URS Corporation on 05/08.</description>
+    <canvasx>3094108.326884591</canvasx>
+    <canvasy>1.3786939979721246E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.63</area>
+    <downstream>C1470000_0026_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>34.33</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.97</timeofconcentration>
+      <storagecoefficient>3.65</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100F">
+    <canvasx>3108501.137</canvasx>
+    <canvasy>1.3787512198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.58</area>
+    <downstream>C1000000_0755_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>29.90</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>1.26</timeofconcentration>
+      <storagecoefficient>4.64</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1470200_9901_J">
+    <description>Assumed US end of ditch C147-02-00 extended (no cap) junction for Subarea C147A. No xsec data.</description>
+    <canvasx>3080497.744</canvasx>
+    <canvasy>1.3783788821E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0033_J</downstream>
+  </junction>
+  <subbasin name="C147A">
+    <canvasx>3073890.4</canvasx>
+    <canvasy>1.3782554482E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.82</area>
+    <downstream>C1470200_9901_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>39.71</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.54</timeofconcentration>
+      <storagecoefficient>6.61</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1470000_9901_J">
+    <description>Assumed US end of ditch C147-00-00 extended (no cap) junction for Subarea C147B. No xsec data.</description>
+    <canvasx>3085798.141</canvasx>
+    <canvasy>1.3779650155E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0033_J</downstream>
+  </junction>
+  <subbasin name="C147B">
+    <canvasx>3080317.842808207</canvasx>
+    <canvasy>1.3778937080875114E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.71</area>
+    <downstream>C1470000_9901_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>29.35</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.76</timeofconcentration>
+      <storagecoefficient>6.72</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1020000_0094_J">
+    <description>RS 9385.8</description>
+    <canvasx>3148926.137</canvasx>
+    <canvasy>1.3821292198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1020000_0010_R</downstream>
+  </junction>
+  <subbasin name="C102A">
+    <canvasx>3142679.412</canvasx>
+    <canvasy>1.3821378081E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.90</area>
+    <downstream>C1020000_0094_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>63.06</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.86</timeofconcentration>
+      <storagecoefficient>11.53</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_1131_J">
+    <description>RS 113102.6</description>
+    <canvasx>3075682.1646969435</canvasx>
+    <canvasy>1.3792098878803631E7</canvasy>
+    <labelx>-85.0</labelx>
+    <labely>37.0</labely>
+    <downstream>C1000000_1090_R</downstream>
+  </junction>
+  <junction name="C1000000_1042_J">
+    <description>RS 104188.7</description>
+    <canvasx>3084149.281945429</canvasx>
+    <canvasy>1.3792726522931611E7</canvasy>
+    <labelx>-22.0</labelx>
+    <labely>33.0</labely>
+    <downstream>C1000000_1033_R</downstream>
+  </junction>
+  <subbasin name="C100B">
+    <canvasx>3082116.137</canvasx>
+    <canvasy>1.3793062198E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.84</area>
+    <downstream>C1000000_1042_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>36.37</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.19</timeofconcentration>
+      <storagecoefficient>3.65</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0907_J">
+    <description>RS 90687.2</description>
+    <canvasx>3097518.043</canvasx>
+    <canvasy>1.3789623538E7</canvasy>
+    <labelx>7.0</labelx>
+    <labely>-3.0</labely>
+    <downstream>C1000000_0889_R</downstream>
+  </junction>
+  <junction name="C1000000_0950_J">
+    <description>RS 94984.4</description>
+    <canvasx>3094015.988667084</canvasx>
+    <canvasy>1.3789677404358884E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>3.0</labely>
+    <downstream>C1000000_0927_R</downstream>
+  </junction>
+  <subbasin name="C100C">
+    <canvasx>3089729.1232124306</canvasx>
+    <canvasy>1.3793892262545729E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.84</area>
+    <downstream>C1000000_0975_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>26.17</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.47</timeofconcentration>
+      <storagecoefficient>6.67</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C145B">
+    <canvasx>3097467.220486643</canvasx>
+    <canvasy>1.3786916047559066E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.38</area>
+    <downstream>C1450000_9901_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>35.02</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.23</timeofconcentration>
+      <storagecoefficient>5.33</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0116_J">
+    <description>RS 11602.6</description>
+    <canvasx>3154625.434</canvasx>
+    <canvasy>1.3820570947E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0066_R</downstream>
+  </junction>
+  <junction name="C1000000_0391_J">
+    <description>RS 39118.6</description>
+    <canvasx>3138682.5203657458</canvasx>
+    <canvasy>1.3804155968857424E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0274_R</downstream>
+  </junction>
+  <junction name="C1000000_0551_J">
+    <description>RS 55076.1</description>
+    <canvasx>3127883.0909818714</canvasx>
+    <canvasy>1.3803814556537783E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0478_R</downstream>
+  </junction>
+  <junction name="C1000000_0580_J">
+    <description>RS 58003.4</description>
+    <canvasx>3123103.59</canvasx>
+    <canvasy>1.3800484441E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0551_R</downstream>
+  </junction>
+  <junction name="C1000000_0852_J">
+    <description>RS 85170.7</description>
+    <canvasx>3103277.418468217</canvasx>
+    <canvasy>1.3791195163757732E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0820_R</downstream>
+  </junction>
+  <junction name="C1000000_0975_J">
+    <description>RS 97461</description>
+    <canvasx>3091708.385614281</canvasx>
+    <canvasy>1.379288722566033E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0950_R</downstream>
+  </junction>
+  <reach name="C1000000_0001_R">
+    <description>FROM STA. 6598.4 TO 134.3</description>
+    <canvasx>3161600.31821015</canvasx>
+    <canvasy>1.3826382402065717E7</canvasy>
+    <fromcanvasx>3157785.85203485</fromcanvasx>
+    <fromcanvasy>1.3823963995879417E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0001_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0001_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0066_R">
+    <description>FROM STA.11602.6 TO STA. 6598.4</description>
+    <canvasx>3157785.85203485</canvasx>
+    <canvasy>1.3823963995879417E7</canvasy>
+    <fromcanvasx>3154625.434</fromcanvasx>
+    <fromcanvasy>1.3820570947E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0066_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0066_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1020000_0010_R">
+    <description>FROM STA. 9385.8 TO STA. 994.8</description>
+    <canvasx>3156411.012320216</canvasx>
+    <canvasy>1.3826040284428049E7</canvasy>
+    <fromcanvasx>3148926.137</fromcanvasx>
+    <fromcanvasy>1.3821292198E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1020000_0010_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>4</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1020000_0010_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1060000_0078_R">
+    <description>FROM STA. 13835.3 TO STA. 7825.3</description>
+    <canvasx>3159900.114</canvasx>
+    <canvasy>1.3816032284E7</canvasy>
+    <fromcanvasx>3162292.608</fromcanvasx>
+    <fromcanvasy>1.3811640582E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0078_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1060000_0078_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0209_R">
+    <description>FROM STA. 27367 TO STA. 20925.4</description>
+    <canvasx>3151478.355</canvasx>
+    <canvasy>1.3813423387E7</canvasy>
+    <fromcanvasx>3146656.851</fromcanvasx>
+    <fromcanvasy>1.3811391467E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0209_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0209_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1060000_0138_R">
+    <description>FROM STA. 21050.3 TO STA. 13835.3</description>
+    <canvasx>3162292.608</canvasx>
+    <canvasy>1.3811640582E7</canvasy>
+    <fromcanvasx>3165242.259</fromcanvasx>
+    <fromcanvasy>1.3806363985E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0138_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1060000_0138_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0274_R">
+    <description>FROM STA. 39118.6 TO STA. 27367</description>
+    <canvasx>3146656.851</canvasx>
+    <canvasy>1.3811391467E7</canvasy>
+    <fromcanvasx>3138682.5203657458</fromcanvasx>
+    <fromcanvasy>1.3804155968857424E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0274_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>3</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0274_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1060100_0008_R">
+    <description>FROM STA. 16613.5 TO STA. 820.3</description>
+    <canvasx>3159762.063</canvasx>
+    <canvasy>1.3815907677E7</canvasy>
+    <fromcanvasx>3155238.276</fromcanvasx>
+    <fromcanvasy>1.3802868525E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060100_0008_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>9</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1060100_0008_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0391_R">
+    <description>FROM STA. 42928.7 TO STA.39118.6</description>
+    <canvasx>3138682.5203657458</canvasx>
+    <canvasy>1.3804155968857424E7</canvasy>
+    <fromcanvasx>3135860.563</fromcanvasx>
+    <fromcanvasy>1.3802530898E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0391_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0391_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0429_R">
+    <description>FROM STA. 47844.1 TO STA. 42928.7</description>
+    <canvasx>3135860.563</canvasx>
+    <canvasy>1.3802530898E7</canvasy>
+    <fromcanvasx>3131808.945</fromcanvasx>
+    <fromcanvasy>1.3800300301E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0429_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0429_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0551_R">
+    <description>FROM STA. 58003.4 TO STA. 55076.1</description>
+    <canvasx>3127883.0909818714</canvasx>
+    <canvasy>1.3803814556537783E7</canvasy>
+    <fromcanvasx>3123103.59</fromcanvasx>
+    <fromcanvasy>1.3800484441E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0551_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0551_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0478_R">
+    <description>FROM STA. 55076.1 TO  STA. 47844.1</description>
+    <canvasx>3131808.945</canvasx>
+    <canvasy>1.3800300301E7</canvasy>
+    <fromcanvasx>3127883.0909818714</fromcanvasx>
+    <fromcanvasy>1.3803814556537783E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0478_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0478_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0580_R">
+    <description>FROM STA. 62266.4 TO STA. 58003.4</description>
+    <canvasx>3123103.59</canvasx>
+    <canvasy>1.3800484441E7</canvasy>
+    <fromcanvasx>3120190.741739549</fromcanvasx>
+    <fromcanvasy>1.379889888194358E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0580_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0580_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0623_R">
+    <description>FROM STA. 69618.1 TO STA. 62266.4</description>
+    <canvasx>3117054.321574457</canvasx>
+    <canvasy>1.3797191935543928E7</canvasy>
+    <fromcanvasx>3114958.177402093</fromcanvasx>
+    <fromcanvasy>1.3795546982902091E7</fromcanvasy>
+    <labelx>-115.0</labelx>
+    <labely>32.0</labely>
+    <downstream>C1000000_6454_D</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0623_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0696_R">
+    <description>FROM STA. 75516.2 TO STA. 69618.1</description>
+    <canvasx>3114958.177402093</canvasx>
+    <canvasy>1.3795546982902091E7</canvasy>
+    <fromcanvasx>3110659.084618742</fromcanvasx>
+    <fromcanvasy>1.3794025398711488E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0696_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0696_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0755_R">
+    <description>FROM STA. 81974.9 TO 75516.2</description>
+    <canvasx>3110659.084618742</canvasx>
+    <canvasy>1.3794025398711488E7</canvasy>
+    <fromcanvasx>3105561.5570687726</fromcanvasx>
+    <fromcanvasy>1.3790508104702009E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0755_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0755_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0820_R">
+    <description>FROM STA. 85170.7 TO STA. 81974.9</description>
+    <canvasx>3105561.5570687726</canvasx>
+    <canvasy>1.3790508104702009E7</canvasy>
+    <fromcanvasx>3103277.418468217</fromcanvasx>
+    <fromcanvasy>1.3791195163757732E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0820_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0820Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0950_R">
+    <description>FROM STA.97461 TO STA. 94984.4</description>
+    <canvasx>3094015.988667084</canvasx>
+    <canvasy>1.3789677404358884E7</canvasy>
+    <fromcanvasx>3091708.385614281</fromcanvasx>
+    <fromcanvasy>1.379288722566033E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0950_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0950Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_1033_R">
+    <description>FROM STA. 104188.7 TO STA. 103334.4</description>
+    <canvasx>3086532.3813764043</canvasx>
+    <canvasy>1.3792434255245948E7</canvasy>
+    <fromcanvasx>3084149.281945429</fromcanvasx>
+    <fromcanvasy>1.3792726522931611E7</fromcanvasy>
+    <labelx>-6.0</labelx>
+    <labely>13.0</labely>
+    <downstream>C1000000_1033_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>1033Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_1090_R">
+    <description>FROM STA. 113102.6 TO STA. 108993.1</description>
+    <canvasx>3081211.3383843894</canvasx>
+    <canvasy>1.3791634242359309E7</canvasy>
+    <fromcanvasx>3075682.1646969435</fromcanvasx>
+    <fromcanvasy>1.3792098878803631E7</fromcanvasy>
+    <labelx>-50.0</labelx>
+    <labely>22.0</labely>
+    <downstream>C1000000_1090_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>1090Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <subbasin name="C100A">
+    <canvasx>3074720.021135968</canvasx>
+    <canvasy>1.3789201055306297E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.26</area>
+    <downstream>C1000000_1131_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>24.34</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.54</timeofconcentration>
+      <storagecoefficient>6.99</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C145A">
+    <canvasx>3090969.562</canvasx>
+    <canvasy>1.3777846605E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.86</area>
+    <downstream>C1450000_9902_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>47.50</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.43</timeofconcentration>
+      <storagecoefficient>6.61</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100D">
+    <canvasx>3098133.9699596013</canvasx>
+    <canvasy>1.3788242445831928E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.42</area>
+    <downstream>C1000000_0907_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>36.90</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.79</timeofconcentration>
+      <storagecoefficient>4.97</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C127">
+    <canvasx>3124016.9714714284</canvasx>
+    <canvasy>1.3797958007477129E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>2.14</area>
+    <downstream>C1000000_0580_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>30.19</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.45</timeofconcentration>
+      <storagecoefficient>3.92</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C100H">
+    <canvasx>3123093.676</canvasx>
+    <canvasy>1.3805240421E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.98</area>
+    <downstream>C1000000_0551_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>41.19</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.54</timeofconcentration>
+      <storagecoefficient>2.89</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_0927_J">
+    <description>RS 92666.7</description>
+    <canvasx>3097547.1023705257</canvasx>
+    <canvasy>1.3792093429524397E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>-18.0</labely>
+    <downstream>C1000000_0907_R</downstream>
+  </junction>
+  <junction name="C1000000_0889_J">
+    <description>RS 88885</description>
+    <canvasx>3100226.4123297166</canvasx>
+    <canvasy>1.3789661917018078E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0852_R</downstream>
+  </junction>
+  <junction name="C1000000_0135_J">
+    <description>RS 13544.7</description>
+    <canvasx>3155262.467</canvasx>
+    <canvasy>1.3819270279E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0116_R</downstream>
+  </junction>
+  <junction name="C1650000_9901_J">
+    <description>US end of ditch C165-00-00 junction with Subarea C100K. No xsec data.</description>
+    <canvasx>3152601.598</canvasx>
+    <canvasy>1.3805703657E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0209_J</downstream>
+  </junction>
+  <junction name="C1450000_9902_J">
+    <description>US end of ditch C145-00-00 junction with Subarea C145A. No xsec data.</description>
+    <canvasx>3094372.194</canvasx>
+    <canvasy>1.3781639599E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1450000_9901_J</downstream>
+  </junction>
+  <reach name="C1000000_0927_R">
+    <description>FROM STA. 94984.4 TO STA. 92666.7</description>
+    <canvasx>3097547.1023705257</canvasx>
+    <canvasy>1.3792093429524397E7</canvasy>
+    <fromcanvasx>3094015.988667084</fromcanvasx>
+    <fromcanvasy>1.3789677404358884E7</fromcanvasy>
+    <labelx>-87.0</labelx>
+    <labely>-10.0</labely>
+    <downstream>C1000000_0927_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0927Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0907_R">
+    <description>FROM STA 92666.7 TO STA. 90687.2</description>
+    <canvasx>3097518.043</canvasx>
+    <canvasy>1.3789623538E7</canvasy>
+    <fromcanvasx>3097547.1023705257</fromcanvasx>
+    <fromcanvasy>1.3792093429524397E7</fromcanvasy>
+    <labelx>-14.0</labelx>
+    <labely>18.0</labely>
+    <downstream>C1000000_0907_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0907Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0889_R">
+    <description>FROM STA. 90687.2 TO STA. 88885</description>
+    <canvasx>3100226.4123297166</canvasx>
+    <canvasy>1.3789661917018078E7</canvasy>
+    <fromcanvasx>3097518.043</fromcanvasx>
+    <fromcanvasy>1.3789623538E7</fromcanvasy>
+    <labelx>-58.0</labelx>
+    <labely>25.0</labely>
+    <downstream>C1000000_0889_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0889Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0852_R">
+    <description>FROM STA. 88885 TO STA. 85170.7</description>
+    <canvasx>3103277.418468217</canvasx>
+    <canvasy>1.3791195163757732E7</canvasy>
+    <fromcanvasx>3100226.4123297166</fromcanvasx>
+    <fromcanvasy>1.3789661917018078E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0852_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0852Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0135_R">
+    <description>FROM STA. 14908.4 TO STA.13544.7</description>
+    <canvasx>3155262.467</canvasx>
+    <canvasy>1.3819270279E7</canvasy>
+    <fromcanvasx>3154373.099</fromcanvasx>
+    <fromcanvasy>1.3817293865E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0135_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0135_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0116_R">
+    <description>FROM STA.13544.7 TO STA. 11602.6</description>
+    <canvasx>3154625.434</canvasx>
+    <canvasy>1.3820570947E7</canvasy>
+    <fromcanvasx>3155262.467</fromcanvasx>
+    <fromcanvasy>1.3819270279E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0116_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0116_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1060000_0003_R">
+    <description>FROM STA. 7825.3 TO STA. 297.6</description>
+    <canvasx>3158005.9484262313</canvasx>
+    <canvasy>1.3818778198689355E7</canvasy>
+    <fromcanvasx>3159900.114</fromcanvasx>
+    <fromcanvasy>1.3816032284E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0003_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>4</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1060000_0003_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <junction name="C1060800_0033_J">
+    <description>RS 3287.4</description>
+    <canvasx>3167343.044</canvasx>
+    <canvasy>1.380421279E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0210_J</downstream>
+  </junction>
+  <junction name="C1020000_0010_J">
+    <description>RS 994.8</description>
+    <canvasx>3156411.012320216</canvasx>
+    <canvasy>1.3826040284428049E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0066_J</downstream>
+  </junction>
+  <junction name="C1060100_0008_J">
+    <description>RS 820.3</description>
+    <canvasx>3159762.063</canvasx>
+    <canvasy>1.3815907677E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1060000_0078_J</downstream>
+  </junction>
+  <junction name="C1060000_0003_J">
+    <description>RS 297.6</description>
+    <canvasx>3158005.9484262313</canvasx>
+    <canvasy>1.3818778198689355E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0135_J</downstream>
+  </junction>
+  <subbasin name="C100M">
+    <canvasx>3165569.9377214573</canvasx>
+    <canvasy>1.3825446247211294E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>1.76</area>
+    <downstream>C1000000_0001_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>59.93</percentimperviousarea>
+      <initialloss>0.319</initialloss>
+      <moisturedeficit>0.385</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.072</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>1.66</timeofconcentration>
+      <storagecoefficient>5.30</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <subbasin name="C162">
+    <canvasx>3078999.212</canvasx>
+    <canvasy>1.3787811333E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <area>0.97</area>
+    <downstream>C1000000_1090_J</downstream>
+    <canopy>None</canopy>
+    <surface>None</surface>
+    <lossrate method="Green and Ampt">
+      <percentimperviousarea>32.32</percentimperviousarea>
+      <initialloss>0.339</initialloss>
+      <moisturedeficit>0.382</moisturedeficit>
+      <wettingfrontsuction>12.450</wettingfrontsuction>
+      <hydraulicconductivity>0.052</hydraulicconductivity>
+    </lossrate>
+    <transform method="Clark">
+      <timeofconcentration>0.59</timeofconcentration>
+      <storagecoefficient>6.36</storagecoefficient>
+    </transform>
+    <baseflow method="None">
+      <waterquality>ZERO</waterquality>
+    </baseflow>
+    <erosion>None</erosion>
+  </subbasin>
+  <junction name="C1000000_1090_J">
+    <description>RS 108993.1</description>
+    <canvasx>3081211.3383843894</canvasx>
+    <canvasy>1.3791634242359309E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_1050_R</downstream>
+  </junction>
+  <reach name="C1000000_1050_R">
+    <description>FROM STA. 108993.1 TO STA. 104995.4</description>
+    <canvasx>3082460.8621125203</canvasx>
+    <canvasy>1.378897254769039E7</canvasy>
+    <fromcanvasx>3081211.3383843894</fromcanvasx>
+    <fromcanvasy>1.3791634242359309E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_1050_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>1050Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <junction name="C1470000_0007_J">
+    <description>RS 746.0</description>
+    <canvasx>3093818.2459935243</canvasx>
+    <canvasy>1.378897819746889E7</canvasy>
+    <labelx>-167.0</labelx>
+    <labely>5.0</labely>
+    <downstream>C1000000_0950_J</downstream>
+  </junction>
+  <junction name="C1450000_9901_J">
+    <description>DS end of ditch C145-00-00 near confluence with C100-00-00. No xsec data.</description>
+    <canvasx>3096001.629</canvasx>
+    <canvasy>1.3789329161E7</canvasy>
+    <labelx>14.0</labelx>
+    <labely>4.0</labely>
+    <downstream>C1000000_0927_J</downstream>
+  </junction>
+  <junction name="C1000000_0209_J">
+    <description>RS 20925.4</description>
+    <canvasx>3151478.355</canvasx>
+    <canvasy>1.3813423387E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0149_R</downstream>
+  </junction>
+  <reach name="C1000000_0149_R">
+    <description>FROM STA. 20925.4 TO STA. 14908.4</description>
+    <canvasx>3154373.099</canvasx>
+    <canvasy>1.3817293865E7</canvasy>
+    <fromcanvasx>3151478.355</fromcanvasx>
+    <fromcanvasy>1.3813423387E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0149_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1000000_0149_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <junction name="C1470000_0033_J">
+    <description>RS 3348.4</description>
+    <canvasx>3087327.5614948045</canvasx>
+    <canvasy>1.3785072908579724E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0026_R</downstream>
+  </junction>
+  <junction name="C1470000_0026_J">
+    <description>RS 2612.1</description>
+    <canvasx>3091149.856169734</canvasx>
+    <canvasy>1.3787622171986293E7</canvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0007_R</downstream>
+  </junction>
+  <reach name="C1470000_0026_R">
+    <description>FROMS STA. 3348.4 TO STA. 2612.1</description>
+    <canvasx>3091149.856169734</canvasx>
+    <canvasy>1.3787622171986293E7</canvasy>
+    <fromcanvasx>3087327.5614948045</fromcanvasx>
+    <fromcanvasy>1.3785072908579724E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0026_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1470000_0026_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1470000_0007_R">
+    <description>FROM STA. 2612.1 TO STA. 746.0</description>
+    <canvasx>3093818.2459935243</canvasx>
+    <canvasy>1.378897819746889E7</canvasy>
+    <fromcanvasx>3091149.856169734</fromcanvasx>
+    <fromcanvasy>1.3787622171986293E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1470000_0007_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>3</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>C1470000_0007_R</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <junction name="C1000000_1050_J">
+    <description>RS 104995.4</description>
+    <canvasx>3082460.8621125203</canvasx>
+    <canvasy>1.378897254769039E7</canvasy>
+    <labelx>10.0</labelx>
+    <labely>14.0</labely>
+    <downstream>C1000000_1042_R</downstream>
+  </junction>
+  <junction name="C1000000_1033_J">
+    <description>RS 103334.4</description>
+    <canvasx>3086532.3813764043</canvasx>
+    <canvasy>1.3792434255245948E7</canvasy>
+    <labelx>18.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_1033_D</downstream>
+  </junction>
+  <reach name="C1000000_1042_R">
+    <description>FROM STA. 104995.4 TO STA. 104188.7</description>
+    <canvasx>3084149.281945429</canvasx>
+    <canvasy>1.3792726522931611E7</canvasy>
+    <fromcanvasx>3082460.8621125203</fromcanvasx>
+    <fromcanvasy>1.378897254769039E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_1042_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>1</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>1042Ext</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <reach name="C1000000_0975_R">
+    <description>FROM STA. 103334.4 TO STA. 97461</description>
+    <canvasx>3091708.385614281</canvasx>
+    <canvasy>1.379288722566033E7</canvasy>
+    <fromcanvasx>3086856.928810722</fromcanvasx>
+    <fromcanvasy>1.3791149973798359E7</fromcanvasy>
+    <labelx>16.0</labelx>
+    <labely>0.0</labely>
+    <downstream>C1000000_0975_J</downstream>
+    <route method="Modified Puls">
+      <numberofreaches>2</numberofreaches>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <storageoutflowtablename>0975Ex</storageoutflowtablename>
+      <channelloss>None</channelloss>
+      <routesediment>No</routesediment>
+    </route>
+  </reach>
+  <diversion name="C1000000_1033_D">
+    <description>C500-01 Regional Basin Side Weir</description>
+    <canvasx>3086856.928810722</canvasx>
+    <canvasy>1.3791149973798359E7</canvasy>
+    <labelx>0.0</labelx>
+    <labely>1.0</labely>
+    <downstream>C1000000_0975_R</downstream>
+    <divertto>C500_01_00</divertto>
+    <diverter method="Inflow-Diversion Table">
+      <maximumdiversionvolume>470</maximumdiversionvolume>
+      <inflowdiversiontablename>Side Weir_1033_D</inflowdiversiontablename>
+    </diverter>
+  </diversion>
+  <diversion name="C1000000_6454_D">
+    <description>C500-03 Regional Basin Side Weir</description>
+    <canvasx>3117054.321574457</canvasx>
+    <canvasy>1.3797191935543928E7</canvasy>
+    <labelx>-107.0</labelx>
+    <labely>30.0</labely>
+    <downstream>C1000000_0623_J</downstream>
+    <divertto>C500_03_00</divertto>
+    <diverter method="Inflow-Diversion Table">
+      <inflowdiversiontablename>SideWeir_6454_D</inflowdiversiontablename>
+    </diverter>
+  </diversion>
+  <reservoir name="C500_01_00">
+    <description>Bretshire Detention Basin.</description>
+    <canvasx>3088091.439731701</canvasx>
+    <canvasy>1.3789419128166653E7</canvasy>
+    <labelx>-38.0</labelx>
+    <labely>-23.0</labely>
+    <downstream>C1000000_0975_J</downstream>
+    <route method="Controlled Outflow">
+      <routingcurve>Elevation-Storage</routingcurve>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <elevation-storagetable>1033Existing</elevation-storagetable>
+      <adaptivecontrol>On</adaptivecontrol>
+      <maintailwatercondition>None</maintailwatercondition>
+      <auxiliarytailwatercondition>None</auxiliarytailwatercondition>
+      <conduit type="Culvert">
+        <conduitoutlet>Main</conduitoutlet>
+        <culvertshape>Box</culvertshape>
+        <chartnumber>8</chartnumber>
+        <scalenumber>1</scalenumber>
+        <solutioncontrol>Automatic</solutioncontrol>
+        <rise>4</rise>
+        <span>4</span>
+        <numberbarrels>1</numberbarrels>
+        <culvertlength>200</culvertlength>
+        <entrancelosscoefficient>0.2</entrancelosscoefficient>
+        <exitlosscoefficient>1</exitlosscoefficient>
+        <topmanning_sn>0.013</topmanning_sn>
+        <bottommanning_sn />
+        <bottomdepth />
+        <filldepth />
+        <inletinvertelevation>51</inletinvertelevation>
+        <outletinvertelevation>50</outletinvertelevation>
+      </conduit>
+      <evaporationmethod>Zero Evaporation</evaporationmethod>
+    </route>
+  </reservoir>
+  <reservoir name="C500_03_00">
+    <description>Mid-Reach Detention Site.</description>
+    <canvasx>3119084.446600164</canvasx>
+    <canvasy>1.379600712632506E7</canvasy>
+    <labelx>-46.0</labelx>
+    <labely>-30.0</labely>
+    <downstream>C1000000_0623_J</downstream>
+    <route method="Controlled Outflow">
+      <routingcurve>Elevation-Storage</routingcurve>
+      <initialoutflowequalsinflow>Yes</initialoutflowequalsinflow>
+      <elevation-storagetable>C1000000_6454_D</elevation-storagetable>
+      <adaptivecontrol>On</adaptivecontrol>
+      <maintailwatercondition>None</maintailwatercondition>
+      <auxiliarytailwatercondition>None</auxiliarytailwatercondition>
+      <conduit type="Culvert">
+        <conduitoutlet>Main</conduitoutlet>
+        <culvertshape>Box</culvertshape>
+        <chartnumber>8</chartnumber>
+        <scalenumber>3</scalenumber>
+        <solutioncontrol>Automatic</solutioncontrol>
+        <rise>5</rise>
+        <span>4</span>
+        <numberbarrels>1</numberbarrels>
+        <culvertlength>301</culvertlength>
+        <entrancelosscoefficient>0.2</entrancelosscoefficient>
+        <exitlosscoefficient>1</exitlosscoefficient>
+        <topmanning_sn>0.013</topmanning_sn>
+        <bottommanning_sn />
+        <bottomdepth />
+        <filldepth />
+        <inletinvertelevation>16</inletinvertelevation>
+        <outletinvertelevation>16</outletinvertelevation>
+      </conduit>
+      <evaporationmethod>Zero Evaporation</evaporationmethod>
+    </route>
+  </reservoir>
+  <junction name="C1000000_0623_J">
+    <description>RS 62266.4</description>
+    <canvasx>3120190.741739549</canvasx>
+    <canvasy>1.379889888194358E7</canvasy>
+    <downstream>C1000000_0580_R</downstream>
+  </junction>
+  <basinschematicproperties>
+    <lastviewn>1.3794032629082084E7</lastviewn>
+    <lastviews>1.378721021364829E7</lastviews>
+    <lastvieww>3088016.6959411944</lastvieww>
+    <lastviewe>3099268.590052154</lastviewe>
+    <maximumviewn>1.383215592981608E7</maximumviewn>
+    <maximumviews>1.3772909393653084E7</maximumviews>
+    <maximumvieww>3063973.3263</maximumvieww>
+    <maximumviewe>3182978.2107</maximumviewe>
+    <extentmethod>Elements</extentmethod>
+    <buffer>20</buffer>
+    <drawicons>Yes</drawicons>
+    <drawiconlabels>Yes</drawiconlabels>
+    <drawmapobjects>No</drawmapobjects>
+    <drawgridlines>Yes</drawgridlines>
+    <drawflowdirection>No</drawflowdirection>
+    <fixelementlocations>No</fixelementlocations>
+  </basinschematicproperties>
+</basin>
+

@@ -1,0 +1,1034 @@
+Gage: 8075730-Jun1989
+     Description: USGS Discharge Gage on I100 @ Ellaine Street
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     DSS File: 
+     Pathname: //8075730-Jun1989/FLOW//15MIN/GAGE/
+End:
+
+Gage: 8075735-Jun1989
+     Description: USGS Discharge Gage on I101 @ Jackson St.
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     DSS File: 
+     Pathname: //8075735-Jun1989/FLOW//15MIN/GAGE/
+End:
+
+Gage: 8075735-Jun2001
+     Description: USGS Discharge Gage on I101 @ Jackson St.
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     Start Time: 5 June 2001,  00:00
+     End Time: 10 June 2001,  00:00
+     DSS File: 
+     Pathname: //8075735-Jun2001/FLOW//15MIN/GAGE/
+End:
+
+Gage: 8075730-Jun2001
+     Description: USGS Discharge Gage on I100 @ Ellaine St.
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: //8075730-Jun2001/FLOW//15MIN/GAGE/
+End:
+
+Gage: 0875730-Oct1994
+     Description: USGS Gage on I100@ W. Ellaine
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 21 October 1994,  00:00
+     DSS File: 
+     Pathname: //0875730-Oct1994/FLOW//15MIN/GAGE/
+End:
+
+Gage: 08075735-Oct1994
+     Description: USGS Discharge Gage on I101 @ Jackson St.
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  00:00
+     Start Time: 15 October 1994,  00:00
+     End Time: 20 October 1994,  00:00
+     Start Time: 15 October 1994,  12:00
+     End Time: 20 October 1994,  00:00
+     DSS File: 
+     Pathname: //08075735-Oct1994/FLOW//15MIN/GAGE/
+End:
+
+Gage: I10004Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I10004JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100B04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100B04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100A04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100A04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100D04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100D04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100F04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100F04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100E04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100E04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100G04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100G04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100H04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100H04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100I04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100I04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100J04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100J04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11004Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I11004JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11104Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I11104JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11304Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I11304JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101A04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I101/I101A04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101B04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I101/I101B04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I1010304Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I101/I1010304JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I1010204Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I101/I1010204JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101C04Jun2001
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I101/I101C04JUN2001/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: 14009Sep1998
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 9 September 1998,  00:00
+     End Time: 12 September 1998,  00:30
+     DSS File: 
+     Pathname: /I100/14009SEP1998/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 23009Sep1998
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/23009SEP1998/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 32009Sep1998
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/32009SEP1998/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 92009Sep1998
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/92009SEP1998/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 94009Sep1998
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/94009SEP1998/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 22026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/22026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 23026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/23026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 25026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/25026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 32026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/32026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 92026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/92026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 94026Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/94026JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: 405-R26Jun1989
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/405-R26JUN1989/PRECIP-INC//15MIN/RAINFALL GAGE/
+End:
+
+Gage: I10015Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: 
+     Pathname: /I100/I10015OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100B15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100B15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100J15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100J15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100A15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100A15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100D15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100D15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100F15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100F15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100E15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100E15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100G15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100G15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100H15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100H15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I100I15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I100I15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I10415Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I10415OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11015Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I11015OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11115Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I11115OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I11315Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 19 October 1994,  23:45
+     DSS File: 
+     Pathname: /I100/I11315OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101C15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 22 October 1994,  00:00
+     DSS File: 
+     Pathname: /I100/I101C15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101A15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I101A15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I101B15Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I101B15OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I1010215Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 1 January 1983,  00:00
+     End Time: 3 January 1983,  01:45
+     Start Time: 26 June 1989,  01:00
+     End Time: 28 June 1989,  00:00
+     Start Time: 15 October 1994,  00:15
+     End Time: 22 October 1994,  00:00
+     Start Time: 4 June 2001,  00:00
+     End Time: 11 June 2001,  23:45
+     DSS File: 
+     Pathname: /I100/I1010215OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+
+Gage: I1010315Oct1994
+     Last Modified Date: 31 May 2007
+     Last Modified Time: 23:40:59
+     Units System: English
+     Gage Type: Precipitation
+     Precipitation Type: Incremental
+     Units: INCHES
+     Local to Project: YES
+     Start Time: 15 October 1994,  00:00
+     End Time: 22 October 1994,  00:00
+     DSS File: 
+     Pathname: /I100/I1010315OCT1994/PRECIP-INC//15MIN/RAIN GAGE/
+End:
+

@@ -1,0 +1,180 @@
+Meteorology: 10%_24HR
+     Description: 10% (10-YR) Frequency Storm Event - Region 3
+     Last Modified Date: 4 October 2016
+     Last Modified Time: 18:29:57
+     Version: 3.3
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Use Basin Model: Q1000000_10PCT_Proposed
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 10
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 1.5000
+     Depth: 2.9000
+     Depth: 3.7000
+     Depth: 4.2000
+     Depth: 5.3000
+     Depth: 6.4000
+     Depth: 7.8000
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: hg100a
+End:
+
+Subbasin: q100a
+End:
+
+Subbasin: q100b
+End:
+
+Subbasin: q100c
+End:
+
+Subbasin: q100d
+End:
+
+Subbasin: q100e
+End:
+
+Subbasin: q100g
+End:
+
+Subbasin: q100h
+End:
+
+Subbasin: q100i
+End:
+
+Subbasin: q100j
+End:
+
+Subbasin: q100k
+End:
+
+Subbasin: q100l
+End:
+
+Subbasin: q100m
+End:
+
+Subbasin: q100n
+End:
+
+Subbasin: q100o
+End:
+
+Subbasin: q100p
+End:
+
+Subbasin: q100q
+End:
+
+Subbasin: q100r
+End:
+
+Subbasin: q101a
+End:
+
+Subbasin: q112a
+End:
+
+Subbasin: q112b
+End:
+
+Subbasin: q112c
+End:
+
+Subbasin: q114a
+End:
+
+Subbasin: q114c
+End:
+
+Subbasin: q128a
+End:
+
+Subbasin: q134a
+End:
+
+Subbasin: sm100a
+End:
+
+Subbasin: sp100a
+End:
+
+Subbasin: su100a
+End:
+
+Subbasin: q130a
+End:
+
+Subbasin: q130b
+End:
+
+Subbasin: q130c
+End:
+
+Subbasin: q12805a
+End:
+
+Subbasin: q128b
+End:
+
+Subbasin: q128c
+End:
+
+Subbasin: q128d
+End:
+
+Subbasin: q122a
+End:
+
+Subbasin: q122b
+End:
+
+Subbasin: q12201a
+End:
+
+Subbasin: q122c
+End:
+
+Subbasin: q100f1
+End:
+
+Subbasin: q100f2
+End:
+
+Subbasin: hp100a
+End:
+
+Subbasin: q114b4
+End:
+
+Subbasin: Q114b1
+End:
+
+Subbasin: Q114b2
+End:
+
+Subbasin: Q114b3
+End:
+
+Subbasin: Q114b5
+End:
+
+Subbasin: Detention Site
+End:

@@ -1,0 +1,121 @@
+Trial Name: l100#4_c1_Jun2001-R_1
+     Trial ID: Jun2001-R_1
+     Optimization Run: Jun2001-R
+     Location: l100#4_c1
+     Trial Number: 1
+     Description: Optimize all R values based on optimized and averaged Loss parameters
+     Last Optimization Date: 6 May 2005
+     Last Optimization Time: 12:40:34
+End: 
+
+Optimize Location: l100#4_c1
+     Search Method: Univariate Gradient
+     Objective Function: Peak-Weighted RMS Error
+     Start Time: 4 June 2001,  00:00
+     End Time: 21 June 2001,  00:00
+     Percent Missing Flow: 0.000000
+
+     Objective Function Value: 218.025
+
+     Simulated Peak Flow:    5918.2
+      Observed Peak Flow:    5893.0
+*             Difference:      25.2
+
+     Simulated Time of Peak: 9 June 2001,  09:15
+      Observed Time of Peak: 9 June 2001,  09:00
+*                Difference: 15 minutes
+
+     Simulated Volume:     11427
+      Observed Volume:     11911
+*          Difference:      -485
+
+     Component: l100a1
+     Parameter: Clark Storage Coefficient
+     Initial Value: 5.93821174813416
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 15.842954
+     Sensitivity: -0.00
+
+     Component: l100a2
+     Parameter: Clark Storage Coefficient
+     Initial Value: 5.96411830345552
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 0.749126
+     Sensitivity: -0.02
+
+     Component: l100b
+     Parameter: Clark Storage Coefficient
+     Initial Value: 9.70363739767861
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 19.499687
+     Sensitivity: -0.14
+
+     Component: l100c
+     Parameter: Clark Storage Coefficient
+     Initial Value: 6.92276741706717
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 8.388071
+     Sensitivity: -0.12
+
+     Component: l100d
+     Parameter: Clark Storage Coefficient
+     Initial Value: 6.97720993037706
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 6.846117
+     Sensitivity: -0.01
+
+     Component: l112a
+     Parameter: Clark Storage Coefficient
+     Initial Value: 5.8467359630664
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 2.644337
+     Sensitivity: 0.42
+
+     Component: l114a
+     Parameter: Clark Storage Coefficient
+     Initial Value: 5.73782439551242
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 3.512615
+     Sensitivity: -0.18
+
+     Component: l114b
+     Parameter: Clark Storage Coefficient
+     Initial Value: 14.7280937826243
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 20.276412
+     Sensitivity: -0.16
+
+     Component: l120a
+     Parameter: Clark Storage Coefficient
+     Initial Value: 4.21052487600545
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 14.130815
+     Sensitivity: 0.02
+
+     Component: l120b
+     Parameter: Clark Storage Coefficient
+     Initial Value: 12.227896656689
+     Minimum Constraint: 0.01
+     Maximum Constraint: 1000.000000
+     Locked: No
+     Optimized Value: 16.578024
+     Sensitivity: 0.01
+End:

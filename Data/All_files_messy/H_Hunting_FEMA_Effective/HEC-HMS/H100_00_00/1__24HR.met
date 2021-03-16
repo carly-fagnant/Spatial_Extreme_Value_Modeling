@@ -1,0 +1,91 @@
+Meteorology: 1%_24HR
+     Last Modified Date: 23 June 2007
+     Last Modified Time: 18:38:04
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: H1000000
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 2.1000
+     Depth: 4.3000
+     Depth: 5.7000
+     Depth: 6.7000
+     Depth: 8.9000
+     Depth: 10.800
+     Depth: 13.200
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: H118A
+End:
+
+Subbasin: H100A
+End:
+
+Subbasin: H112A
+End:
+
+Subbasin: H108A
+End:
+
+Subbasin: H100B
+End:
+
+Subbasin: H110A
+End:
+
+Subbasin: H100C
+End:
+
+Subbasin: H119A
+End:
+
+Subbasin: H106A
+End:
+
+Subbasin: H100D
+End:
+
+Subbasin: H100E
+End:
+
+Subbasin: H103A
+End:
+
+Subbasin: H125A
+End:
+
+Subbasin: H100F
+End:
+
+Subbasin: H102A
+End:
+
+Subbasin: H100G
+End:
+
+Subbasin: H101A
+End:
+
+Subbasin: H100H
+End:
+
+Subbasin: H103B
+End:
+
+Subbasin: H118B
+End:

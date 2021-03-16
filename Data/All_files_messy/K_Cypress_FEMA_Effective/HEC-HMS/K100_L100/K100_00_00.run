@@ -1,0 +1,52 @@
+Run: K1000000_0.2%
+     Default Description: Yes
+     Log File: K1000000_0.2_.log
+     DSS File: K100_00_00.dss
+     Basin: K100_0.2PCT
+     Precip: 0.2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 13:55:07
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 13:55:18
+End:
+
+Run: K1000000_1%
+     Default Description: Yes
+     Log File: K1000000_1_.log
+     DSS File: K100_00_00.dss
+     Basin: K100_1PCT
+     Precip: 1%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 22 July 2009
+     Precip Last Execution Time: 19:42:09
+     Basin Last Execution Date: 22 July 2009
+     Basin Last Execution Time: 19:42:20
+End:
+
+Run: K1000000_10%
+     Default Description: Yes
+     Log File: K1000000_10_.log
+     DSS File: K100_00_00.dss
+     Basin: K100_10PCT
+     Precip: 10%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 13:59:54
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:00:04
+End:
+
+Run: K1000000_2%
+     Default Description: Yes
+     Log File: K1000000_2_.log
+     DSS File: K100_00_00.dss
+     Basin: K100_2PCT
+     Precip: 2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 14:00:20
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 14:00:31
+End:
+

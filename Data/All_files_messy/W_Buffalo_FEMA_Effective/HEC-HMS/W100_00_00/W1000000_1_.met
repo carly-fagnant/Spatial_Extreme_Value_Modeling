@@ -1,0 +1,135 @@
+Precip: W1000000_1%
+     Last Modified Date: 28 June 2007
+     Last Modified Time: 20:00:29
+     Version: 2.2.1
+     Default DSS File Name: W100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.000000
+     Depth: 2.1
+     Depth: 4.3
+     Depth: 5.7
+     Depth: 6.7
+     Depth: 8.9
+     Depth: 10.8
+     Depth: 13.2
+End:
+
+Subbasin: W167B
+End:
+
+Subbasin: W167A
+End:
+
+Subbasin: W100F
+End:
+
+Subbasin: W139A
+End:
+
+Subbasin: W129A
+End:
+
+Subbasin: W190A
+End:
+
+Subbasin: W170A
+End:
+
+Subbasin: W138A
+End:
+
+Subbasin: W100B
+End:
+
+Subbasin: W100A
+End:
+
+Subbasin: W100D
+End:
+
+Subbasin: W100C
+End:
+
+Subbasin: W156B
+End:
+
+Subbasin: W100E
+End:
+
+Subbasin: W147A
+End:
+
+Subbasin: W145A
+End:
+
+Subbasin: W100I
+End:
+
+Subbasin: W151A
+End:
+
+Subbasin: W100H
+End:
+
+Subbasin: W140C
+End:
+
+Subbasin: W140B
+End:
+
+Subbasin: W140A
+End:
+
+Subbasin: W140E
+End:
+
+Subbasin: W100J
+End:
+
+Subbasin: W142A
+End:
+
+Subbasin: W100L
+End:
+
+Subbasin: W100M
+End:
+
+Subbasin: W100K
+End:
+
+Subbasin: W100N
+End:
+
+Subbasin: W100O
+End:
+
+Subbasin: W141A
+End:
+
+Subbasin: W140D
+End:
+
+Subbasin: W100G
+End:
+
+Subbasin: W156A
+End:
+
+Subbasin: W190B
+End:
+
+Subbasin: W190C
+End:

@@ -1,0 +1,1595 @@
+Basin: W100-00-00 (10%)
+     Last Modified Date: 28 June 2007
+     Last Modified Time: 17:14:41
+     Version: 2.2.1
+     Default DSS File Name: W100_00_00.dss
+     Unit System: English
+     Map File: mapfile.map
+End:
+
+Junction: W1000000_0809_J
+     Canvas X: 3144438.364
+     Canvas Y: 13838029.226
+     Label X: 16
+     Label Y: 0
+End:
+
+Junction: W1670000_0105_J
+     Canvas X: 3045496.453
+     Canvas Y: 13850376.458
+     Label X: 16
+     Label Y: 0
+     Downstream: W1670000_0020_R
+End:
+
+Junction: W1000000_2411_J
+     Canvas X: 3039561.137
+     Canvas Y: 13843957.198
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2400_R
+End:
+
+Junction: W1400000_0033_J
+     Canvas X: 3083483.730
+     Canvas Y: 13847740.533
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0007_R
+End:
+
+Junction: W1000000_2147_J
+     Canvas X: 3060332.704
+     Canvas Y: 13840788.609
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2116_R
+End:
+
+Junction: W1000000_1072_J
+     Canvas X: 3124211.032
+     Canvas Y: 13842411.224
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_0809_R
+End:
+
+Junction: W1000000_1646_J
+     Canvas X: 3085417.463
+     Canvas Y: 13845520.735
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1628_R
+End:
+
+Junction: W1000000_1628_J
+     Canvas X: 3086850.263
+     Canvas Y: 13845110.993
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1606_R
+End:
+
+Junction: W1000000_2340_J
+     Canvas X: 3040676.871
+     Canvas Y: 13843238.215
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2271_R
+End:
+
+Junction: W1000000_2486_J
+     Canvas X: 3033256.676
+     Canvas Y: 13842588.300
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2403_R
+End:
+
+Junction: W1000000_1559_J
+     Canvas X: 3092003.542
+     Canvas Y: 13842554.916
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1488_R
+End:
+
+Junction: W1000000_1985_J
+     Canvas X: 3069970.837
+     Canvas Y: 13835145.269
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1879_R
+End:
+
+Junction: W1000000_1757_J
+     Canvas X: 3080002.278
+     Canvas Y: 13841690.292
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1666_R
+End:
+
+Junction: W1000000_1766_J
+     Canvas X: 3079861.956
+     Canvas Y: 13841176.777
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1766_R
+End:
+
+Junction: W1000000_1488_J
+     Canvas X: 3095159.500
+     Canvas Y: 13839599.149
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1237_R
+End:
+
+Reach: W1400000_0007_R
+     Description: FROM STA. 3256.3 TO STA. 781.2
+     Canvas X: 3085174.652
+     Canvas Y: 13846049.612
+     From Canvas X: 3083483.730
+     From Canvas Y: 13847740.533
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0008_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W140E#2 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1628_R
+     Description: FROM STA. 165476.1 TO STA. 162811.9
+     Canvas X: 3086850.263
+     Canvas Y: 13845110.993
+     From Canvas X: 3085417.463
+     From Canvas Y: 13845520.735
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1628_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100J#1 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_2400_R
+     Description: FROM STA. 240254.3 TO STA. 239993.6
+     Canvas X: 3040676.871
+     Canvas Y: 13843238.215
+     From Canvas X: 3039561.137
+     From Canvas Y: 13843957.198
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2340_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100B#1 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1606_R
+     Description: FROM STA. 162811.9 TO STA. 160630.7
+     Canvas X: 3088713.956
+     Canvas Y: 13844657.662
+     From Canvas X: 3086850.263
+     From Canvas Y: 13845110.993
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1606_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100K REACH#2(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_2403_R
+     Description: FROM STA. 248414.4 TO STA. 240254.3
+     Canvas X: 3039561.137
+     Canvas Y: 13843957.198
+     From Canvas X: 3033256.676
+     From Canvas Y: 13842588.300
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2411_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100B#2 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_0809_R
+     Description: FROM STA. 110200.2 TO STA. 80863.1
+     Canvas X: 3144438.364
+     Canvas Y: 13838029.226
+     From Canvas X: 3124211.032
+     From Canvas Y: 13842411.224
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_0809_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100O REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1666_R
+     Description: FROM STA. 176644.1 TO STA. 166613.0
+     Canvas X: 3084548.881
+     Canvas Y: 13845085.088
+     From Canvas X: 3080002.278
+     From Canvas Y: 13841690.292
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1663_J
+
+     Route: Modified Puls
+     Number of Reaches: 7
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100J#3 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1766_R
+     Description: FROM STA. 177732.9 TO STA. 176644.1
+     Canvas X: 3080002.278
+     Canvas Y: 13841690.292
+     From Canvas X: 3079861.956
+     From Canvas Y: 13841176.777
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1757_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100J#4 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1488_R
+     Description: FROM STA. 155861.6 TO STA. 148795.4
+     Canvas X: 3095159.500
+     Canvas Y: 13839599.149
+     From Canvas X: 3092003.542
+     From Canvas Y: 13842554.916
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1488_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100L REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_2271_R
+     Description: FROM STA. 240254.3 TO STA. 227144.7
+     Canvas X: 3050673.747
+     Canvas Y: 13839589.355
+     From Canvas X: 3040676.871
+     From Canvas Y: 13843238.215
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2271_J
+
+     Route: Modified Puls
+     Number of Reaches: 10
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100C REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1237_R
+     Description: FROM STA. 148795.4 TO STA. 123658.2
+     Canvas X: 3111976.216
+     Canvas Y: 13842602.701
+     From Canvas X: 3095159.500
+     From Canvas Y: 13839599.149
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1237_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100M REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_2116_R
+     Description: FROM STA. 214968.0 TO STA. 211631.3
+     Canvas X: 3062173.730
+     Canvas Y: 13840269.784
+     From Canvas X: 3060332.704
+     From Canvas Y: 13840788.609
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2116_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100G#2 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1879_R
+     Description: FROM STA. 199440.6 TO STA. 187878.1
+     Canvas X: 3076481.738
+     Canvas Y: 13835390.374
+     From Canvas X: 3069970.837
+     From Canvas Y: 13835145.269
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1879_J
+
+     Route: Modified Puls
+     Number of Reaches: 8
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100H#2 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1000000_2271_J
+     Canvas X: 3050673.747
+     Canvas Y: 13839589.355
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2250_R
+End:
+
+Junction: W1000000_2250_J
+     Canvas X: 3051423.948
+     Canvas Y: 13841418.438
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2168_R
+End:
+
+Reach: W1000000_2250_R
+     Description: FROM STA. 227114.7 TP STA. 224981.6
+     Canvas X: 3051423.948
+     Canvas Y: 13841418.438
+     From Canvas X: 3050673.747
+     From Canvas Y: 13839589.355
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2250_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100D REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_2168_R
+     Description: FROM STA. 224981.6 TO STA 216802.9
+     Canvas X: 3058830.402
+     Canvas Y: 13840572.240
+     From Canvas X: 3051423.948
+     From Canvas Y: 13841418.438
+     Label X: 16
+     Label Y: 0
+     Downstream: W1570000_0001_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100E REACH#2(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1000000_2037_J
+     Canvas X: 3066402.956
+     Canvas Y: 13837205.348
+     Label X: 16
+     Label Y: 0
+     Downstream: W1510000_1994_R
+End:
+
+Reach: W1510000_1994_R
+     Description: FROM STA. 204620.0 TO STA. 199440.6
+     Canvas X: 3069970.837
+     Canvas Y: 13835145.269
+     From Canvas X: 3066402.956
+     From Canvas Y: 13837205.348
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1985_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W151 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1000000_1865_J
+     Canvas X: 3076436.434
+     Canvas Y: 13836267.590
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1777_R
+End:
+
+Junction: W1560000_0122_J
+     Canvas X: 3057830.648
+     Canvas Y: 13848526.808
+     Label X: 16
+     Label Y: 0
+     Downstream: W1560000_0000_R
+End:
+
+Junction: W1000000_2116_J
+     Canvas X: 3062173.730
+     Canvas Y: 13840269.784
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2046_R
+End:
+
+Reach: W1000000_2046_R
+     Description: FROM STA. 211631.3 TO STA. 204620.0
+     Canvas X: 3066402.956
+     Canvas Y: 13837205.348
+     From Canvas X: 3062173.730
+     From Canvas Y: 13840269.784
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2037_J
+
+     Route: Modified Puls
+     Number of Reaches: 5
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100G#1 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1000000_1879_J
+     Canvas X: 3076481.738
+     Canvas Y: 13835390.374
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1865_R
+End:
+
+Reach: W1000000_1865_R
+     Description: FROM STA. 187878.1 TO STA. 186536.1
+     Canvas X: 3076436.434
+     Canvas Y: 13836267.590
+     From Canvas X: 3076481.738
+     From Canvas Y: 13835390.374
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1865_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100H#1 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1000000_1777_R
+     Description: FROM STA. 186536.1 TO STA. 177732.9
+     Canvas X: 3079861.956
+     Canvas Y: 13841176.777
+     From Canvas X: 3076436.434
+     From Canvas Y: 13836267.590
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1766_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100I REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1400000_0134_J
+     Canvas X: 3077535.793
+     Canvas Y: 13853791.840
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0033_R
+End:
+
+Junction: W1400100_0106_J
+     Canvas X: 3074039.146
+     Canvas Y: 13851105.514
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0008_R
+End:
+
+Reach: W1400000_0033_R
+     Description: FROM STA. 13404.1 TO STA. 3256.3
+     Canvas X: 3083483.730
+     Canvas Y: 13847740.533
+     From Canvas X: 3077535.793
+     From Canvas Y: 13853791.840
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0033_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W140E#1 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1400000_0008_R
+     Description: FROM STA. 11002.1 TO STA. 821.4
+     Canvas X: 3082702.160
+     Canvas Y: 13847866.631
+     From Canvas X: 3074039.146
+     From Canvas Y: 13851105.514
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0001_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W140D REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1290000_0001_J
+     Canvas X: 3095708.643
+     Canvas Y: 13828932.134
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1488_J
+End:
+
+Junction: W1000000_1237_J
+     Canvas X: 3111976.216
+     Canvas Y: 13842602.701
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1102_R
+End:
+
+Reach: W1000000_1102_R
+     Description: FROM STA. 123658.2 TO STA. 110200.2
+     Canvas X: 3124211.032
+     Canvas Y: 13842411.224
+     From Canvas X: 3111976.216
+     From Canvas Y: 13842602.701
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1072_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100N REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Subbasin: W167B
+     Canvas X: 3055918.637
+     Canvas Y: 13865984.698
+     Label X: 16
+     Label Y: 0
+     Area: 5.49
+     Downstream: W1670000_0105_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 48.12
+     Initial Loss: 0.93
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 9.10
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 2.33
+     Storage Coefficient: 13.95
+
+     Baseflow: None
+End:
+
+Subbasin: W167A
+     Canvas X: 3042793.372
+     Canvas Y: 13848345.646
+     Label X: 16
+     Label Y: 0
+     Area: 1.28
+     Downstream: W1670000_0020_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.47
+     Initial Loss: 0.93
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 9.10
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.94
+     Storage Coefficient: 2.53
+
+     Baseflow: None
+End:
+
+Subbasin: W100F
+     Canvas X: 3062373.847
+     Canvas Y: 13845358.259
+     Label X: 16
+     Label Y: 0
+     Area: 1.16
+     Downstream: W1000000_2116_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 58.42
+     Initial Loss: 0.99
+     Moisture Deficit: 0.48
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.81
+
+     Transform: Clark
+     Time of Concentration: 0.27
+     Storage Coefficient: 4.88
+
+     Baseflow: None
+End:
+
+Subbasin: W139A
+     Canvas X: 3083862.797
+     Canvas Y: 13834913.282
+     Label X: 16
+     Label Y: 0
+     Area: 1.42
+     Downstream: W1390000_0001_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 56.17
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 1.09
+     Storage Coefficient: 12.43
+
+     Baseflow: None
+End:
+
+Subbasin: W129A
+     Canvas X: 3089799.449
+     Canvas Y: 13830390.119
+     Label X: 16
+     Label Y: 0
+     Area: 2.41
+     Downstream: W1290000_0001_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 66.16
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.97
+     Storage Coefficient: 14.79
+
+     Baseflow: None
+End:
+
+Junction: W1390000_0001_J
+     Canvas X: 3084695.245
+     Canvas Y: 13841257.952
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1663_J
+End:
+
+Junction: W1000000_1663_J
+     Canvas X: 3084548.881
+     Canvas Y: 13845085.088
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1655_R
+End:
+
+Reach: W1000000_1655_R
+     Description: FROM STA. 166613.0 TO STA. 165476.1
+     Canvas X: 3085417.463
+     Canvas Y: 13845520.735
+     From Canvas X: 3084548.881
+     From Canvas Y: 13845085.088
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1646_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100J#2 REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1400000_0001_J
+     Canvas X: 3082702.160
+     Canvas Y: 13847866.631
+     Label X: 16
+     Label Y: 0
+     Downstream: W1400000_0033_J
+End:
+
+Junction: W1400000_0008_J
+     Canvas X: 3085174.652
+     Canvas Y: 13846049.612
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1646_J
+End:
+
+Subbasin: W190A
+     Canvas X: 2997214.594
+     Canvas Y: 13813251.872
+     Label X: 16
+     Label Y: 0
+     Area: 4.01
+     Downstream: W1900000_0348_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 4.57
+     Initial Loss: 0.83
+     Moisture Deficit: 0.41
+     Wetting Front Suction: 3.31
+     Hydraulic Conductivity: 0.41
+
+     Transform: Clark
+     Time of Concentration: 0.66
+     Storage Coefficient: 10.50
+
+     Baseflow: None
+End:
+
+Subbasin: W170A
+     Canvas X: 3023153.174
+     Canvas Y: 13848525.729
+     Label X: 16
+     Label Y: 0
+     Area: 2.50
+     Downstream: W1000000_2486_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 43.26
+     Initial Loss: 0.81
+     Moisture Deficit: 0.42
+     Wetting Front Suction: 6.80
+     Hydraulic Conductivity: 0.34
+
+     Transform: Clark
+     Time of Concentration: 1.42
+     Storage Coefficient: 6.35
+
+     Baseflow: None
+End:
+
+Junction: W1670000_0020_J
+     Canvas X: 3040664.520
+     Canvas Y: 13843457.691
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2340_J
+End:
+
+Reach: W1670000_0020_R
+     Description: FROM STA. 10483.1 TO STA. 2000.0
+     Canvas X: 3040664.520
+     Canvas Y: 13843457.691
+     From Canvas X: 3045496.453
+     From Canvas Y: 13850376.458
+     Label X: 16
+     Label Y: 0
+     Downstream: W1670000_0020_J
+
+     Route: Modified Puls
+     Number of Reaches: 3
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W167A REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Reach: W1560000_0000_R
+     Description: FROM STA. 13422.0 TO STA 40.5
+     Canvas X: 3060246.660
+     Canvas Y: 13841031.982
+     From Canvas X: 3057830.648
+     From Canvas Y: 13848526.808
+     Label X: 16
+     Label Y: 0
+     Downstream: W1560000_0001_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W156B REACH(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1560000_0001_J
+     Canvas X: 3060246.660
+     Canvas Y: 13841031.982
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2147_J
+End:
+
+Subbasin: W138A
+     Canvas X: 3086106.137
+     Canvas Y: 13853744.698
+     Label X: 16
+     Label Y: 0
+     Area: 2.14
+     Downstream: W1000000_1628_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 55.65
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.52
+     Storage Coefficient: 6.88
+
+     Baseflow: None
+End:
+
+Subbasin: W100B
+     Canvas X: 3035510.270
+     Canvas Y: 13840266.323
+     Label X: 16
+     Label Y: 0
+     Area: 2.53
+     Downstream: W1000000_2340_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 39.22
+     Initial Loss: 0.92
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 9.52
+     Hydraulic Conductivity: 0.49
+
+     Transform: Clark
+     Time of Concentration: 0.30
+     Storage Coefficient: 2.58
+
+     Baseflow: None
+End:
+
+Subbasin: W100A
+     Canvas X: 3037180.083
+     Canvas Y: 13848719.486
+     Label X: 16
+     Label Y: 0
+     Area: 1.31
+     Downstream: W1000000_2411_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 37.77
+     Initial Loss: 0.90
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 10.45
+     Hydraulic Conductivity: 0.33
+
+     Transform: Clark
+     Time of Concentration: 0.21
+     Storage Coefficient: 4.88
+
+     Baseflow: None
+End:
+
+Subbasin: W100D
+     Canvas X: 3049477.845
+     Canvas Y: 13845245.095
+     Label X: 16
+     Label Y: 0
+     Area: 1.39
+     Downstream: W1000000_2250_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 58.14
+     Initial Loss: 0.99
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.74
+
+     Transform: Clark
+     Time of Concentration: 0.70
+     Storage Coefficient: 3.77
+
+     Baseflow: None
+End:
+
+Subbasin: W100C
+     Canvas X: 3046167.396
+     Canvas Y: 13836326.000
+     Label X: 16
+     Label Y: 0
+     Area: 5.24
+     Downstream: W1000000_2271_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.93
+     Initial Loss: 0.99
+     Moisture Deficit: 0.48
+     Wetting Front Suction: 8.30
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.27
+     Storage Coefficient: 4.09
+
+     Baseflow: None
+End:
+
+Subbasin: W156B
+     Canvas X: 3054734.180
+     Canvas Y: 13846612.213
+     Label X: 16
+     Label Y: 0
+     Area: 1.84
+     Downstream: W1560000_0001_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 59.38
+     Initial Loss: 0.99
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.74
+
+     Transform: Clark
+     Time of Concentration: 0.43
+     Storage Coefficient: 2.35
+
+     Baseflow: None
+End:
+
+Subbasin: W100E
+     Canvas X: 3057680.556
+     Canvas Y: 13836453.108
+     Label X: 16
+     Label Y: 0
+     Area: 2.83
+     Downstream: W1000000_2147_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 54.43
+     Initial Loss: 0.99
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.74
+
+     Transform: Clark
+     Time of Concentration: 0.83
+     Storage Coefficient: 7.75
+
+     Baseflow: None
+End:
+
+Subbasin: W147A
+     Canvas X: 3066591.137
+     Canvas Y: 13829969.698
+     Label X: 16
+     Label Y: 0
+     Area: 1.71
+     Downstream: W1000000_1985_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 57.79
+     Initial Loss: 0.99
+     Moisture Deficit: 0.48
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.81
+
+     Transform: Clark
+     Time of Concentration: 0.52
+     Storage Coefficient: 4.83
+
+     Baseflow: None
+End:
+
+Subbasin: W145A
+     Canvas X: 3074902.745
+     Canvas Y: 13829090.644
+     Label X: 16
+     Label Y: 0
+     Area: 2.13
+     Downstream: W1000000_1879_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 62.25
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.50
+     Storage Coefficient: 7.64
+
+     Baseflow: None
+End:
+
+Subbasin: W100I
+     Canvas X: 3075020.836
+     Canvas Y: 13839530.493
+     Label X: 16
+     Label Y: 0
+     Area: 1.84
+     Downstream: W1000000_1766_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 47.25
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.95
+     Storage Coefficient: 4.26
+
+     Baseflow: None
+End:
+
+Subbasin: W151A
+     Canvas X: 3066708.252
+     Canvas Y: 13840083.044
+     Label X: 16
+     Label Y: 0
+     Area: 2.43
+     Downstream: W1000000_1985_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 50.40
+     Initial Loss: 0.99
+     Moisture Deficit: 0.48
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.81
+
+     Transform: Clark
+     Time of Concentration: 1.50
+     Storage Coefficient: 6.40
+
+     Baseflow: None
+End:
+
+Subbasin: W100H
+     Canvas X: 3070623.390
+     Canvas Y: 13839589.519
+     Label X: 16
+     Label Y: 0
+     Area: 1.61
+     Downstream: W1000000_1879_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 43.87
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.79
+     Storage Coefficient: 3.61
+
+     Baseflow: None
+End:
+
+Subbasin: W140C
+     Canvas X: 3067544.399
+     Canvas Y: 13852952.981
+     Label X: 16
+     Label Y: 0
+     Area: 2.75
+     Downstream: W1400100_0106_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 58.20
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.55
+     Storage Coefficient: 9.93
+
+     Baseflow: None
+End:
+
+Subbasin: W140B
+     Canvas X: 3067130.809
+     Canvas Y: 13858565.980
+     Label X: 16
+     Label Y: 0
+     Area: 2.28
+     Downstream: W1400000_0134_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 57.65
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.61
+     Storage Coefficient: 2.72
+
+     Baseflow: None
+End:
+
+Subbasin: W140A
+     Canvas X: 3067769.189
+     Canvas Y: 13861555.442
+     Label X: 16
+     Label Y: 0
+     Area: 1.69
+     Downstream: W1400000_0134_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.18
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.92
+     Storage Coefficient: 8.63
+
+     Baseflow: None
+End:
+
+Subbasin: W140E
+     Canvas X: 3081237.728
+     Canvas Y: 13855474.882
+     Label X: 16
+     Label Y: 0
+     Area: 2.18
+     Downstream: W1400000_0033_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 53.04
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.43
+     Storage Coefficient: 2.42
+
+     Baseflow: None
+End:
+
+Subbasin: W100J
+     Canvas X: 3081996.948
+     Canvas Y: 13844250.197
+     Label X: 16
+     Label Y: 0
+     Area: 1.39
+     Downstream: W1000000_1646_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 44.98
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 1.21
+     Storage Coefficient: 4.01
+
+     Baseflow: None
+End:
+
+Subbasin: W142A
+     Canvas X: 3080046.137
+     Canvas Y: 13833344.698
+     Label X: 16
+     Label Y: 0
+     Area: 1.25
+     Downstream: W1000000_1766_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 63.97
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.35
+     Storage Coefficient: 5.58
+
+     Baseflow: None
+End:
+
+Subbasin: W100L
+     Canvas X: 3090168.135
+     Canvas Y: 13837389.874
+     Label X: 16
+     Label Y: 0
+     Area: 2.80
+     Downstream: W1000000_1488_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 52.52
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.87
+     Storage Coefficient: 4.20
+
+     Baseflow: None
+End:
+
+Subbasin: W100M
+     Canvas X: 3098650.233
+     Canvas Y: 13842835.172
+     Label X: 16
+     Label Y: 0
+     Area: 6.90
+     Downstream: W1000000_1237_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 49.16
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 2.89
+     Storage Coefficient: 9.15
+
+     Baseflow: None
+End:
+
+Subbasin: W100K
+     Canvas X: 3092522.175
+     Canvas Y: 13848786.419
+     Label X: 16
+     Label Y: 0
+     Area: 4.19
+     Downstream: W1000000_1559_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 51.64
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 1.41
+     Storage Coefficient: 4.69
+
+     Baseflow: None
+End:
+
+Subbasin: W100N
+     Canvas X: 3115741.590
+     Canvas Y: 13838596.968
+     Label X: 16
+     Label Y: 0
+     Area: 5.90
+     Downstream: W1000000_1072_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 62.79
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 1.18
+     Storage Coefficient: 7.13
+
+     Baseflow: None
+End:
+
+Subbasin: W100O
+     Canvas X: 3135096.429
+     Canvas Y: 13845151.807
+     Label X: 16
+     Label Y: 0
+     Area: 10.52
+     Downstream: W1000000_0809_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 56.24
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 2.19
+     Storage Coefficient: 7.06
+
+     Baseflow: None
+End:
+
+Subbasin: W141A
+     Canvas X: 3076173.535
+     Canvas Y: 13845266.770
+     Label X: 16
+     Label Y: 0
+     Area: 1.90
+     Downstream: W1000000_1757_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.23
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.33
+     Storage Coefficient: 6.72
+
+     Baseflow: None
+End:
+
+Subbasin: W140D
+     Canvas X: 3076300.634
+     Canvas Y: 13849295.527
+     Label X: 16
+     Label Y: 0
+     Area: 1.96
+     Downstream: W1400000_0001_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 56.03
+     Initial Loss: 0.93
+     Moisture Deficit: 0.43
+     Wetting Front Suction: 10.03
+     Hydraulic Conductivity: 0.37
+
+     Transform: Clark
+     Time of Concentration: 0.35
+     Storage Coefficient: 6.28
+
+     Baseflow: None
+End:
+
+Subbasin: W100G
+     Canvas X: 3062079.784
+     Canvas Y: 13835140.347
+     Label X: 16
+     Label Y: 0
+     Area: 1.47
+     Downstream: W1000000_2037_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 51.08
+     Initial Loss: 0.99
+     Moisture Deficit: 0.48
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.81
+
+     Transform: Clark
+     Time of Concentration: 0.52
+     Storage Coefficient: 5.99
+
+     Baseflow: None
+End:
+
+Subbasin: W156A
+     Canvas X: 3059466.246
+     Canvas Y: 13853770.344
+     Label X: 16
+     Label Y: 0
+     Area: 2.78
+     Downstream: W1560000_0122_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 61.67
+     Initial Loss: 0.99
+     Moisture Deficit: 0.45
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.74
+
+     Transform: Clark
+     Time of Concentration: 0.51
+     Storage Coefficient: 2.59
+
+     Baseflow: None
+End:
+
+Source: E100P_W100O_SC
+     Canvas X: 3123401.471
+     Canvas Y: 13845400.374
+     Label X: 16
+     Label Y: 0
+     Area: 110.066
+     Downstream: W1000000_1072_J
+
+     Flow Gage: WOB-10%
+End:
+
+Junction: W1570000_0001_J
+     Canvas X: 3058830.402
+     Canvas Y: 13840572.240
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2150_R
+End:
+
+Reach: W1000000_2150_R
+     Description: FROM STA. 216802.9 TO STA. 214968.0
+     Canvas X: 3060332.704
+     Canvas Y: 13840788.609
+     From Canvas X: 3058830.402
+     From Canvas Y: 13840572.240
+     Label X: 16
+     Label Y: -2
+     Downstream: W1000000_2147_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100E REACH#1(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1000000_1606_J
+     Canvas X: 3088713.956
+     Canvas Y: 13844657.662
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1559_R
+End:
+
+Reach: W1000000_1559_R
+     Description: FROM STA. 160630.7 TO STA. 155861.6
+     Canvas X: 3092003.542
+     Canvas Y: 13842554.916
+     From Canvas X: 3088713.956
+     From Canvas Y: 13844657.662
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_1559_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: W100K REACH#1(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Subbasin: W190B
+     Canvas X: 3006871.400
+     Canvas Y: 13813725.244
+     Label X: 16
+     Label Y: 0
+     Area: 4.66
+     Downstream: W1900000_0327_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 3.11
+     Initial Loss: 0.83
+     Moisture Deficit: 0.41
+     Wetting Front Suction: 3.31
+     Hydraulic Conductivity: 0.41
+
+     Transform: Clark
+     Time of Concentration: 1.62
+     Storage Coefficient: 13.01
+
+     Baseflow: None
+End:
+
+Subbasin: W190C
+     Canvas X: 3017096.252
+     Canvas Y: 13816754.830
+     Label X: 14
+     Label Y: 0
+     Area: 1.82
+     Downstream: W1900000_0017_J
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 16.43
+     Initial Loss: 0.83
+     Moisture Deficit: 0.41
+     Wetting Front Suction: 3.31
+     Hydraulic Conductivity: 0.41
+
+     Transform: Clark
+     Time of Concentration: 4.42
+     Storage Coefficient: 11.99
+
+     Baseflow: None
+End:
+
+Junction: W1900000_0348_J
+     Canvas X: 3002373.382
+     Canvas Y: 13815760.883
+     Label X: 16
+     Label Y: 0
+     Downstream: W1900000_0327_J
+End:
+
+Junction: W1900000_0327_J
+     Canvas X: 3015333.186
+     Canvas Y: 13819439.324
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_0007_R
+End:
+
+Reach: W1000000_0007_R
+     Description: FROM STA. 32651.2 TO STA. 732.5
+     Canvas X: 3032428.530
+     Canvas Y: 13841142.485
+     From Canvas X: 3015333.186
+     From Canvas Y: 13819439.324
+     Label X: 16
+     Label Y: 0
+     Downstream: W1900000_0017_J
+
+     Route: Modified Puls
+     Number of Reaches: 18
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: R_W190(W100-00-00 (1%))
+     Routing Table in DSS: Yes
+End:
+
+Junction: W1900000_0017_J
+     Canvas X: 3032428.530
+     Canvas Y: 13841142.485
+     Label X: 16
+     Label Y: 0
+     Downstream: W1000000_2486_J
+End:
+
+Default Attributes: 
+     Default Basin Unit System: English
+     Default Meteorology Unit System: SI
+     Default Loss Rate: Green and Ampt
+     Default Transform: Clark
+     Default Baseflow: None
+     Default Route: Modified Puls
+     Enable Flow Ratio: No
+     Enable Evapotranspiration: No
+     Compute Local Flow At Junctions: No
+     Missing Flow To Zero: No
+End: 

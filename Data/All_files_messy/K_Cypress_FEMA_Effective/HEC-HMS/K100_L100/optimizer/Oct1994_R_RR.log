@@ -1,0 +1,5 @@
+Begin execution of run: Oct1994-R-RR; 30 July 2004,  09:58:14
+     Basin Model: Oct 1994-R2; Meteorologic Model: Oct 1994 RR; Control Specifications: Oct 1994
+WARNING: Error in computing Clark Unit Hydrograph for l114a;
+     Clark storage parameter increased to 0.5 time interval: .125 hr
+End execution of run: Oct1994-R-RR;  30 July 2004,  09:59:14

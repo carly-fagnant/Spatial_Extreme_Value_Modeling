@@ -1,0 +1,40 @@
+NOTE 10184:  Began computing simulation run "1% (100-YR) Run" at time 27Jun2007, 18:43:01.
+NOTE 20364:  Found no parameter problems in meteorologic model "1%_24HR".
+WARNING 20044:  Control specifications time interval is greater than duration of maximum intensity.
+     Precipitation data will be accumulated.
+NOTE 40049:  Found no parameter problems in basin model "A100_1PCT".
+WARNING: Error in computing Clark Unit Hydrograph for B10404D;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104D;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104F;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104G;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B104H;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B106B;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B106C;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B111A;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B111B;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for B114A;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100E;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100F;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100G;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100H;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100I;
+     Time of Concentration increased to one time interval: .25 hr
+WARNING: Error in computing Clark Unit Hydrograph for MG100J;
+     Time of Concentration increased to one time interval: .25 hr
+NOTE 10172:  Meteorologic model "1%_24HR" needs to be computed.
+NOTE 41054:  Routing parameters for reach "A1009999_2147_R": Delta t (sec) 885.2  Delta x (ft) 2,443.8571
+NOTE 10185:  Finished computing simulation run "1% (100-YR) Run" at time 27Jun2007, 18:43:32.

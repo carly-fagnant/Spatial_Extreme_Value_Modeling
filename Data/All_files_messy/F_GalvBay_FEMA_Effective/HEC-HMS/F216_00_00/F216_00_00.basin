@@ -1,0 +1,235 @@
+Basin: F216-00-00
+     Description: little cedar bayou (f216-00-00) watershed
+     Last Modified Date: 16 December 2008
+     Last Modified Time: 16:46:12
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: F21601A
+     Canvas X: 3232947.3
+     Canvas Y: 1.38072887E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.569
+     Downstream: F2160000_0021_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 59.262
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.462
+     Storage Coefficient: 2.094
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F216A
+     Canvas X: 3224006.0792669496
+     Canvas Y: 1.38124525809618E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.637
+     Downstream: F2160000_0122_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 30.377
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.749
+     Storage Coefficient: 6.863
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F216B
+     Canvas X: 3229712.4
+     Canvas Y: 1.38067175E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.215
+     Downstream: F2160000_0015_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 45.81
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.754
+     Storage Coefficient: 3.155
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: F216C
+     Canvas X: 3233629.5
+     Canvas Y: 1.38028373E7
+     Label X: -12.0
+     Label Y: -27.0
+     Area: 0.066
+     Downstream: F2160000_0005_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 23.519
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.618
+     Storage Coefficient: 2.107
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Reach: F2160000_0021_R
+     Description: STA. 12213.19 to STA. 2123.56
+     Canvas X: 3232655.2156271175
+     Canvas Y: 1.38056147820593E7
+     From Canvas X: 3228228.065
+     From Canvas Y: 1.3810705862E7
+     Label X: -18.0
+     Label Y: 40.0
+     Downstream: F2160000_0015_J
+
+     Route: Modified Puls
+     Number of Reaches: 20
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: F2160000_0021_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: F2160000_0005_R
+     Description: STA. 2123.56 to STA. 538.68
+     Canvas X: 3233870.956830382
+     Canvas Y: 1.3803512905972326E7
+     From Canvas X: 3233695.357025974
+     From Canvas Y: 1.3804544554823224E7
+     Label X: 13.0
+     Label Y: 2.0
+     Downstream: F2160000_0005_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: F2160000_0005_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: F2160000_0122_J
+     Description: STA. 12213.19
+     Canvas X: 3228228.065
+     Canvas Y: 1.3810705862E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: F2160000_0021_R
+End:
+
+Junction: F2160000_0021_J
+     Description: STA. 2123.56
+     Canvas X: 3233695.357025974
+     Canvas Y: 1.3804544554823224E7
+     Label X: 16.0
+     Label Y: 4.0
+     Downstream: F2160000_0005_R
+End:
+
+Junction: F2160000_0005_J
+     Description: STA. 538.68 (XS at the mouth - no flow change from RAS at this location)
+     Canvas X: 3233870.956830382
+     Canvas Y: 1.3803512905972326E7
+     Label X: 17.0
+     Label Y: -8.0
+End:
+
+Junction: F2160000_0015_J
+     Description: STA. 1452.61
+     Canvas X: 3232655.2156271175
+     Canvas Y: 1.38056147820593E7
+     Label X: -59.0
+     Label Y: -16.0
+     Downstream: F2160000_0021_J
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.3817056040887276E7
+     Last View S: 1.3801230108515026E7
+     Last View W: 3215585.2451724126
+     Last View E: 3237120.935235936
+     Maximum View N: 1.3817056040887276E7
+     Maximum View S: 1.3801230108515026E7
+     Maximum View W: 3215585.2451724126
+     Maximum View E: 3237120.935235936
+     Extent Method: Elements Maps
+     Buffer: 10
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Map: hms.map.MapGeoMap
+     Map File Name: F216-MAP.map
+     Map Shown: Yes
+End:

@@ -1,0 +1,60 @@
+Gage Manager: W100-00-00
+     Version: 3.3
+End:
+
+Gage: E100-1%
+     Last Modified Date: 22 July 2009
+     Last Modified Time: 18:34:23
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 00:00
+     DSS File: E100_Inflows.dss
+     Pathname: //E100-1%/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: E100-10%
+     Last Modified Date: 22 July 2009
+     Last Modified Time: 18:34:33
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 00:00
+     DSS File: E100_Inflows.dss
+     Pathname: //E100-10%/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: E100-2%
+     Last Modified Date: 22 July 2009
+     Last Modified Time: 18:34:47
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 00:00
+     DSS File: E100_Inflows.dss
+     Pathname: //E100-2%/FLOW/01MAY2007/15MIN/GAGE/
+End:
+
+Gage: E100-0.2%
+     Last Modified Date: 22 July 2009
+     Last Modified Time: 18:34:12
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 June 2007, 00:00
+     End Time: 4 June 2007, 00:00
+     DSS File: E100_Inflows.dss
+     Pathname: //E100-0.2%/FLOW/01MAY2007/15MIN/GAGE/
+End:
+

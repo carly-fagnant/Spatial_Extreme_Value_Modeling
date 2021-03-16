@@ -1,0 +1,460 @@
+Gage Manager: Restudy_Proposed
+     Version: 3.4
+End:
+
+Gage: K100_2223_SC_010YR
+     Description: Diversion from K1000000_2223_D (10-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_010YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_050YR
+     Description: Diversion from K1000000_2223_D (50-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_050YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_100YR
+     Description: Diversion from K1000000_2223_D (100-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_100YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_500YR
+     Description: Diversion from K1000000_2223_D (500-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_500YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_010YR
+     Description: Diversion from K1000000_2309_D (10-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_010YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_050YR
+     Description: Diversion from K1000000_2309_D (50-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_050YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_100YR
+     Description: Diversion from K1000000_2309_D (100-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_100YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_500YR
+     Description: Diversion from K1000000_2309_D (500-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_500YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_010YR
+     Description: Diversion from K1000000_2446_D (10-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_010YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_050YR
+     Description: Diversion from K1000000_2446_D (50-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_050YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_100YR
+     Description: Diversion from K1000000_2446_D (100-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_100YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_500YR
+     Description: Diversion from K1000000_2446_D (500-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_500YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_002YR
+     Description: Diversion from K1000000_2223_D (2-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_002YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_005YR
+     Description: Diversion from K1000000_2223_D (5-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_005YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_025YR
+     Description: Diversion from K1000000_2223_D (25-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_025YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2223_SC_250YR
+     Description: Diversion from K1000000_2223_D (250-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2223_SC_250YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_002YR
+     Description: Diversion from K1000000_2309_D (2-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_002YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_005YR
+     Description: Diversion from K1000000_2309_D (5-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_005YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_025YR
+     Description: Diversion from K1000000_2309_D (25-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_025YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2309_SC_250YR
+     Description: Diversion from K1000000_2309_D (250-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2309_SC_250YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_002YR
+     Description: Diversion from K1000000_2446_D (2-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_002YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_005YR
+     Description: Diversion from K1000000_2446_D (5-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_005YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_025YR
+     Description: Diversion from K1000000_2446_D (25-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_025YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+
+Gage: K100_2446_SC_250YR
+     Description: Diversion from K1000000_2446_D (250-Yr)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     Units System: English
+     Reference Height Units: Feet
+     Reference Height: 33
+     Gage Type: Flow
+     Units: CFS
+     Data Type: INST-VAL
+     Local to Project: NO
+     Start Time: 1 January 2011, 00:00
+     End Time: 8 January 2011, 00:00
+     Start Time: 1 January 2011, 12:00
+     End Time: 8 January 2011, 12:00
+     DSS File: Restudy_Proposed_TimeSeries.dss
+     Pathname: //K100_2446_SC_250YR/FLOW/31DEC2010 - 07JAN2011/5MIN/GAGE/
+End:
+

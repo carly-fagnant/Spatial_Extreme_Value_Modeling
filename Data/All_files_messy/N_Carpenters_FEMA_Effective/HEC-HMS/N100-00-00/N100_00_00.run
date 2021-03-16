@@ -1,0 +1,52 @@
+Run: N1000000_0.2%
+     Default Description: Yes
+     Log File: N1000000_0.2_.log
+     DSS File: N100_00_00.dss
+     Basin: N100-00-00
+     Precip: 0.2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 28 October 2014
+     Precip Last Execution Time: 14:41:23
+     Basin Last Execution Date: 28 October 2014
+     Basin Last Execution Time: 14:41:23
+End:
+
+Run: N1000000_1%
+     Default Description: Yes
+     Log File: N1000000_1_.log
+     DSS File: N100_00_00.dss
+     Basin: N100-00-00
+     Precip: 1%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 28 October 2014
+     Precip Last Execution Time: 14:41:28
+     Basin Last Execution Date: 28 October 2014
+     Basin Last Execution Time: 14:41:28
+End:
+
+Run: N1000000_10%
+     Default Description: Yes
+     Log File: N1000000_10_.log
+     DSS File: N100_00_00.dss
+     Basin: N100-00-00
+     Precip: 10%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 28 October 2014
+     Precip Last Execution Time: 14:41:32
+     Basin Last Execution Date: 28 October 2014
+     Basin Last Execution Time: 14:41:33
+End:
+
+Run: N1000000_2%
+     Default Description: Yes
+     Log File: N1000000_2_.log
+     DSS File: N100_00_00.dss
+     Basin: N100-00-00
+     Precip: 2%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 28 October 2014
+     Precip Last Execution Time: 14:41:38
+     Basin Last Execution Date: 28 October 2014
+     Basin Last Execution Time: 14:41:39
+End:
+

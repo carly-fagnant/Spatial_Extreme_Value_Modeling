@@ -1,0 +1,899 @@
+Basin: G1000000_10%
+     Description: houston ship channel (10% event)
+     Last Modified Date: 31 July 2009
+     Last Modified Time: 14:17:54
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Junction: G1000000_0746_J
+     Description: upstream bray's bayou (d100-00-00) confluence
+     Canvas X: 3150393.762
+     Canvas Y: 1.3831404529E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0724_J
+End:
+
+Junction: G1000000_0633_J
+     Description: upstream sim's bayou (c100-00-00) confluence
+     Canvas X: 3159961.563
+     Canvas Y: 1.3828505768E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0602_J
+End:
+
+Junction: G1000000_0563_J
+     Description: upstream vince bayou & panther creek confluence
+     Canvas X: 3165257.541
+     Canvas Y: 1.3830238518E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0543_J
+End:
+
+Junction: G1000000_0485_J
+     Description: upstream hunting bayou & cotton patch bayou confluence
+     Canvas X: 3172597.816
+     Canvas Y: 1.383504865E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0446_J
+End:
+
+Junction: G1000000_0399_J
+     Description: upstream g109-00-00 confluence
+     Canvas X: 3178841.025
+     Canvas Y: 1.3838844521E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0379_J
+End:
+
+Junction: G1000000_0321_J
+     Description: upstream greens bayou & glenmore ditch confluence
+     Canvas X: 3183416.2
+     Canvas Y: 1.3837753722E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0306_J
+End:
+
+Junction: G1000000_0249_J
+     Description: upstream boggy bayou (g105-00-00) confluence
+     Canvas X: 3192875.757
+     Canvas Y: 1.3835148541E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0228_J
+End:
+
+Junction: G1000000_0140_J
+     Description: upstream patrick bayou (g104-00-00) confluence
+     Canvas X: 3201611.879
+     Canvas Y: 1.3837568618E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0113_J
+End:
+
+Junction: G1000000_0064_J
+     Description: upstream carpenter's bayou (n100-00-00) confluence
+     Canvas X: 3207609.729
+     Canvas Y: 1.3842740283E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0045_J
+End:
+
+Junction: G1000000_0007_J
+     Description: lower buffalo bayou (g100-00-00) outfall before san jacinto
+     Canvas X: 3211666.127
+     Canvas Y: 1.3845988493E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Junction: G1000000_0810_J
+     Description: upper buffalo bayou (w100-00-00) source
+     Canvas X: 3144450.849
+     Canvas Y: 1.3838007765E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0746_R
+End:
+
+Junction: G1000000_0724_J
+     Description: brays bayou (d100-00-00) confluence
+     Canvas X: 3150921.397
+     Canvas Y: 1.3830353757E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0533_R
+End:
+
+Junction: G1000000_0602_J
+     Description: sim's bayou (c100-00-00) confluence
+     Canvas X: 3161210.204
+     Canvas Y: 1.3827706637E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0563_R
+End:
+
+Reach: G1000000_0746_R
+     Description: RS 80959 to RS 74570
+     Canvas X: 3150393.762
+     Canvas Y: 1.3831404529E7
+     From Canvas X: 3144450.849
+     From Canvas Y: 1.3838007765E7
+     Label X: -31.0
+     Label Y: 2.0
+     Downstream: G1000000_0746_J
+
+     Route: Modified Puls
+     Number of Reaches: 34
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0746_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: G1000000_0533_R
+     Description: RS 72405 to RS 53323
+     Canvas X: 3159961.563
+     Canvas Y: 1.3828505768E7
+     From Canvas X: 3150921.397
+     From Canvas Y: 1.3830353757E7
+     Label X: -31.0
+     Label Y: 0.0
+     Downstream: G1000000_0633_J
+
+     Route: Modified Puls
+     Number of Reaches: 27
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0533_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: G1000000_0563_R
+     Description: RS 60208 to RS 56301
+     Canvas X: 3165257.541
+     Canvas Y: 1.3830238518E7
+     From Canvas X: 3161210.204
+     From Canvas Y: 1.3827706637E7
+     Label X: -30.0
+     Label Y: 0.0
+     Downstream: G1000000_0563_J
+
+     Route: Modified Puls
+     Number of Reaches: 22
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0563_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0543_J
+     Description: vince bayou & panther creek confluence
+     Canvas X: 3166867.942
+     Canvas Y: 1.3830719787E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0485_R
+End:
+
+Reach: G1000000_0485_R
+     Description: RS 54295 to RS 48487
+     Canvas X: 3172597.816
+     Canvas Y: 1.383504865E7
+     From Canvas X: 3166867.942
+     From Canvas Y: 1.3830719787E7
+     Label X: -30.0
+     Label Y: 0.0
+     Downstream: G1000000_0485_J
+
+     Route: Modified Puls
+     Number of Reaches: 19
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0485_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0446_J
+     Description: hunting bayou & cotton patch bayou confluence
+     Canvas X: 3173297.056
+     Canvas Y: 1.3836097509E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0399_R
+End:
+
+Reach: G1000000_0399_R
+     Description: RS 44553 to RS 39854
+     Canvas X: 3178841.025
+     Canvas Y: 1.3838844521E7
+     From Canvas X: 3173297.056
+     From Canvas Y: 1.3836097509E7
+     Label X: -39.0
+     Label Y: -4.0
+     Downstream: G1000000_0399_J
+
+     Route: Modified Puls
+     Number of Reaches: 10
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0399_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0379_J
+     Description: g109-00-00 confluence
+     Canvas X: 3180039.721
+     Canvas Y: 1.3838295118E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0321_R
+End:
+
+Reach: G1000000_0321_R
+     Description: RS 37927 to RS 32066
+     Canvas X: 3183416.2
+     Canvas Y: 1.3837753722E7
+     From Canvas X: 3180039.721
+     From Canvas Y: 1.3838295118E7
+     Label X: -46.0
+     Label Y: -5.0
+     Downstream: G1000000_0321_J
+
+     Route: Modified Puls
+     Number of Reaches: 15
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0321_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0306_J
+     Description: greens bayou & glenmore ditch confluence
+     Canvas X: 3185970.629
+     Canvas Y: 1.3837864784E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0249_R
+End:
+
+Reach: G1000000_0249_R
+     Description: RS 30587 to RS 24885
+     Canvas X: 3192875.757
+     Canvas Y: 1.3835148541E7
+     From Canvas X: 3185970.629
+     From Canvas Y: 1.3837864784E7
+     Label X: -46.0
+     Label Y: -5.0
+     Downstream: G1000000_0249_J
+
+     Route: Modified Puls
+     Number of Reaches: 17
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0249_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0228_J
+     Description: boggy bayou (g105-00-00) confluence
+     Canvas X: 3193974.562
+     Canvas Y: 1.3834449302E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0140_R
+End:
+
+Reach: G1000000_0140_R
+     Description: RS 22800 to RS 13955
+     Canvas X: 3201611.879
+     Canvas Y: 1.3837568618E7
+     From Canvas X: 3193974.562
+     From Canvas Y: 1.3834449302E7
+     Label X: -46.0
+     Label Y: -5.0
+     Downstream: G1000000_0140_J
+
+     Route: Modified Puls
+     Number of Reaches: 19
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0140_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0113_J
+     Description: patrick bayou (g104-00-00) confluence
+     Canvas X: 3203092.707
+     Canvas Y: 1.383716139E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0064_R
+End:
+
+Reach: G1000000_0064_R
+     Description: RS 11315 to RS 6352
+     Canvas X: 3207609.729
+     Canvas Y: 1.3842740283E7
+     From Canvas X: 3203092.707
+     From Canvas Y: 1.383716139E7
+     Label X: -46.0
+     Label Y: -5.0
+     Downstream: G1000000_0064_J
+
+     Route: Modified Puls
+     Number of Reaches: 15
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0064_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: G1000000_0045_J
+     Description: carpenter's bayou (n100-00-00) confluence
+     Canvas X: 3208159.132
+     Canvas Y: 1.3843489468E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: G1000000_0007_R
+End:
+
+Reach: G1000000_0007_R
+     Description: RS 4451 to RS 703;
+     Canvas X: 3211666.127
+     Canvas Y: 1.3845988493E7
+     From Canvas X: 3208159.132
+     From Canvas Y: 1.3843489468E7
+     Label X: -46.0
+     Label Y: -5.0
+     Downstream: G1000000_0007_J
+
+     Route: Modified Puls
+     Number of Reaches: 14
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: G1000000_0007_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Source: W100O_G100A_SC
+     Description: buffalo bayou (w100-00-00) 10% event discharge
+     Canvas X: 3139305.656
+     Canvas Y: 1.3840910066E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 211.776
+     Downstream: G1000000_0810_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: W100_10
+     End Flow Method:
+End:
+
+Source: D100R_G100B_SC
+     Description: bray's bayou (d100-00-00) 10% event discharge
+     Canvas X: 3144399.929
+     Canvas Y: 1.3828433061E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 128.74
+     Downstream: G1000000_0724_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: D100_10
+     End Flow Method:
+End:
+
+Source: C102B_C100M_SC
+     Description: sim's bayou (c100-00-00) 10% event discharge
+     Canvas X: 3156541.853
+     Canvas Y: 1.3824958589E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 93.51
+     Downstream: G1000000_0602_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: C100_10
+     End Flow Method:
+End:
+
+Source: G112B_G112C_SC
+     Description: panther creek (g112-00-00) 10% event discharge
+     Canvas X: 3163542.827
+     Canvas Y: 1.3833751155E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.962
+     Downstream: G1000000_0543_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G112_10
+     End Flow Method:
+End:
+
+Source: I100H_I100I_SC
+     Description: vince bayou (i100-00-00) 10% event discharge
+     Canvas X: 3167406.516
+     Canvas Y: 1.3825859365E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 15.276
+     Downstream: G1000000_0543_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: I100_10
+     End Flow Method:
+End:
+
+Source: H100H_G100D_SC
+     Description: hunting bayou (h100-00-00) 10% event discharge
+     Canvas X: 3167201.001
+     Canvas Y: 1.3837162711E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 30.98
+     Downstream: G1000000_0446_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: H100_10
+     End Flow Method:
+End:
+
+Source: G110B_G110C_SC
+     Description: cotton patch bayou (g110-00-00) 10% event discharge
+     Canvas X: 3175503.822
+     Canvas Y: 1.3831243868E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.686
+     Downstream: G1000000_0446_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G110_10
+     End Flow Method:
+End:
+
+Source: G109A_G110E_SC
+     Description: unstudied trib (g109-00-00) 10% event discharge
+     Canvas X: 3180559.501
+     Canvas Y: 1.3834162186E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.883
+     Downstream: G1000000_0379_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G109_10
+     End Flow Method:
+End:
+
+Source: P100W_G100F_SC
+     Description: green's bayou (p100-00-00) 10% event discharge
+     Canvas X: 3183683.335
+     Canvas Y: 1.3843451482E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 210.877
+     Downstream: G1000000_0306_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: P100_10
+     End Flow Method:
+End:
+
+Source: G108E_G108D_SC
+     Description: glenmore ditch (g108-00-00) 10% event discharge
+     Canvas X: 3185615.179
+     Canvas Y: 1.3833381228E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.028
+     Downstream: G1000000_0306_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G108_10
+     End Flow Method:
+End:
+
+Source: G105C_G100H_SC
+     Description: boggy bayou (g105-00-00) 10% event discharge
+     Canvas X: 3192520.496
+     Canvas Y: 1.3826640323E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.642
+     Downstream: G1000000_0228_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G105_10
+     End Flow Method:
+End:
+
+Source: G104F_G104E_SC
+     Description: patrick bayou (g104-00-00) 10% event discharge
+     Canvas X: 3201241.671
+     Canvas Y: 1.3833348257E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 4.876
+     Downstream: G1000000_0113_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: G104_10
+     End Flow Method:
+End:
+
+Source: N100L_G100I_SC
+     Description: carpenter's bayou (n100-00-00) 10% event discharge
+     Canvas X: 3204240.349
+     Canvas Y: 1.3844250856E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 31.14
+     Downstream: G1000000_0045_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: N100_10
+     End Flow Method:
+End:
+
+Subbasin: G100A
+     Canvas X: 3146476.21
+     Canvas Y: 1.3840628253E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.976
+     Downstream: G1000000_0746_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 65.48
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 3.9
+     Storage Coefficient: 6.75
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100B
+     Canvas X: 3155023.427
+     Canvas Y: 1.3834165723E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 5.378
+     Downstream: G1000000_0633_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 61.47
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 5.58
+     Storage Coefficient: 9.19
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100C
+     Canvas X: 3162279.88
+     Canvas Y: 1.3825493146E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.464
+     Downstream: G1000000_0563_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 76.47
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 2.01
+     Storage Coefficient: 5.37
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100D
+     Canvas X: 3171174.802
+     Canvas Y: 1.3829857735E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.441
+     Downstream: G1000000_0485_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 56.97
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.41
+     Storage Coefficient: 6.26
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100E
+     Canvas X: 3174489.68
+     Canvas Y: 1.3839857617E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.523
+     Downstream: G1000000_0399_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 65.79
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.24
+     Storage Coefficient: 6.32
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100F
+     Canvas X: 3182997.867
+     Canvas Y: 1.3830741703E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.596
+     Downstream: G1000000_0321_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 66.49
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 4.73
+     Storage Coefficient: 5.83
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100G
+     Canvas X: 3188356.92
+     Canvas Y: 1.3840465345E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.511
+     Downstream: G1000000_0249_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 35.5
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.49
+     Storage Coefficient: 12.24
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100H
+     Canvas X: 3195925.891
+     Canvas Y: 1.3837979187E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.684
+     Downstream: G1000000_0140_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 62.6
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 3.82
+     Storage Coefficient: 7.97
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100I
+     Canvas X: 3206920.237
+     Canvas Y: 1.3834774804E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 4.017
+     Downstream: G1000000_0064_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 65.34
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 4.62
+     Storage Coefficient: 5.91
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: G100J
+     Canvas X: 3208080.444
+     Canvas Y: 1.3847095101E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.616
+     Downstream: G1000000_0007_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 72.65
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.3
+     Storage Coefficient: 10.66
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.38490845077503E7
+     Last View S: 1.38232294377526E7
+     Last View W: 3139305.656
+     Last View E: 3212087.46171971
+     Maximum View N: 1.38490845077503E7
+     Maximum View S: 1.38232294377526E7
+     Maximum View W: 3139305.656
+     Maximum View E: 3212087.46171971
+     Extent Method: Elements Maps
+     Buffer: 0
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: Yes
+     Fix Element Locations: No
+     Map: hms.map.MapGeoMap
+     Map File Name: G100-MAP.map
+     Map Shown: Yes
+End:

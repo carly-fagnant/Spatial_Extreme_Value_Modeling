@@ -1,0 +1,50 @@
+Project: S1100000
+     Description: HCFCD Unit # S110-00-00
+     Version: 2.2.1
+     Default DSS File Name: J:\WR\Projects\461362.01 HCFCD MOMA\WR\HCFCD-FEMA Models\Task6-Final\Models-HECHMS-2.2.1\For Farah\S-Luce Bayou\Hydrology-HMS\S110-00-00\S1100000.dss
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% (100-Year) Frequency Storm - Region 2
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% (50-Year) Frequency Storm Event - Region 2
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% (10-Year) Frequency Storm Event - Region 2
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% (500-Year) Frequency Storm Event - Region 2
+End:
+
+Basin: S1100000
+     FileName: S1100000.basin
+     Description: Shook Gully (S110-00-00) watershed
+End:
+
+Control: Control15
+     FileName: Control15.control
+     Description: 
+End:
+
+
+Default Attributes: 
+     Default Basin Unit System: English
+     Default Meteorology Unit System: English
+     Default Loss Rate: Initial+Constant
+     Default Transform: Modified Clark
+     Default Baseflow: Recession
+     Default Route: Muskingum
+     Default Precip: Specified Average
+     Enable Flow Ratio: No
+     Enable Evapotranspiration: No
+     Compute Local Flow At Junctions: No
+     Missing Flow To Zero: No
+End: 

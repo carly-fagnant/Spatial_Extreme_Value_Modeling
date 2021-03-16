@@ -1,0 +1,145 @@
+Basin: S1100000
+     Description: Shook Gully (S110-00-00) watershed
+     Last Modified Date: 16 June 2009
+     Last Modified Time: 17:03:56
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: Yes
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Reach: S1100000_0006_R
+     Description: RS 11018 to RS 578
+     Canvas X: 3203300.394
+     Canvas Y: 1.3955820429E7
+     From Canvas X: 3209495.534
+     From Canvas Y: 1.395607856E7
+     Label X: -13.0
+     Label Y: -17.0
+     Downstream: S1100000_0006_J
+
+     Route: Modified Puls
+     Number of Reaches: 7
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: S1100000_0006_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Subbasin: S110B
+     Canvas X: 3209753.665
+     Canvas Y: 1.3959047065E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.332
+     Downstream: S1100000_0006_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 6.026
+     Initial Loss: 0.1
+     Moisture Deficit: 0.436
+     Wetting Front Suction: 3.5
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.84
+     Storage Coefficient: 4.93
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: S110A
+     Canvas X: 3215963.196
+     Canvas Y: 1.3959229342E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.92
+     Downstream: S1100000_0110_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.519
+     Initial Loss: 0.1
+     Moisture Deficit: 0.436
+     Wetting Front Suction: 3.5
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.12
+     Storage Coefficient: 6.9
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: S1100000_0110_J
+     Description: node s110#1
+     Canvas X: 3212334.973
+     Canvas Y: 1.39554655E7
+     Label X: 24.0
+     Label Y: -1.0
+     Downstream: S1100000_0083_D
+End:
+
+Junction: S1100000_0006_J
+     Description: node s110#2
+     Canvas X: 3203300.394
+     Canvas Y: 1.3955820429E7
+     Label X: -24.0
+     Label Y: 18.0
+End:
+
+Diversion: S1100000_0083_D
+     Canvas X: 3209495.534
+     Canvas Y: 1.395607856E7
+     Label X: -41.0
+     Label Y: -52.0
+     Downstream: S1100000_0006_R
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: S1100000_0083_D
+     End Diverter:
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.395932343805E7
+     Last View S: 1.395537140395E7
+     Last View W: 3202983.8239499996
+     Last View E: 3216279.76605
+     Maximum View N: 1.395932343805E7
+     Maximum View S: 1.395537140395E7
+     Maximum View W: 3202983.8239499996
+     Maximum View E: 3216279.76605
+     Extent Method: Elements
+     Buffer: 5
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+End:

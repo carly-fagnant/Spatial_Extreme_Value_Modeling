@@ -1,0 +1,167 @@
+Meteorology: Rain_100YR
+     Description: Region 1 Rainfall - 1% (100-Year)
+     Last Modified Date: 22 June 2012
+     Last Modified Time: 19:30:35
+     Version: 3.4
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+     Use Basin Model: U100_Basin_100YR
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1.00000
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67.000
+     Depth: 1.3000
+     Depth: 2.2000
+     Depth: 4.2000
+     Depth: 5.5000
+     Depth: 6.5000
+     Depth: 8.5000
+     Depth: 10.200
+     Depth: 12.400
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: U100A
+End:
+
+Subbasin: U100B
+End:
+
+Subbasin: U100C
+End:
+
+Subbasin: U120A
+End:
+
+Subbasin: U100D
+End:
+
+Subbasin: U100E
+End:
+
+Subbasin: U106C
+End:
+
+Subbasin: U106A
+End:
+
+Subbasin: U106B
+End:
+
+Subbasin: U106D
+End:
+
+Subbasin: U106E
+End:
+
+Subbasin: U100F
+End:
+
+Subbasin: U100G
+End:
+
+Subbasin: U102B
+End:
+
+Subbasin: U102A
+End:
+
+Subbasin: U102C
+End:
+
+Subbasin: U102D
+End:
+
+Subbasin: U102_01A
+End:
+
+Subbasin: U102E
+End:
+
+Subbasin: U101A
+End:
+
+Subbasin: U101_12A
+End:
+
+Subbasin: U101B
+End:
+
+Subbasin: U101C
+End:
+
+Subbasin: U101_08A
+End:
+
+Subbasin: U101_08B
+End:
+
+Subbasin: U101_08C
+End:
+
+Subbasin: U101_07B
+End:
+
+Subbasin: U101_08D
+End:
+
+Subbasin: U101_07D
+End:
+
+Subbasin: U101_08E
+End:
+
+Subbasin: U101D
+End:
+
+Subbasin: U101_07A
+End:
+
+Subbasin: U101_07C
+End:
+
+Subbasin: U101_07E
+End:
+
+Subbasin: U101E
+End:
+
+Subbasin: U101_03A
+End:
+
+Subbasin: U101F
+End:
+
+Subbasin: U101G
+End:
+
+Subbasin: W167_01B
+End:
+
+Subbasin: W167_01A
+End:
+
+Subbasin: W167D
+End:
+
+Subbasin: W167C
+End:
+
+Subbasin: T101_13A
+End:
+
+Subbasin: T101_13B
+End:

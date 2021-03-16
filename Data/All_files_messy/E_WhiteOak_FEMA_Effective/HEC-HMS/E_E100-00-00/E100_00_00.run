@@ -1,0 +1,40 @@
+Run: 100YR 1%
+     Default Description: Yes
+     Log File: 100YR_1_.log
+     DSS File: E100_00_00.dss
+     Basin: E100-00-00
+     Precip: 1%_24HR
+     Control: CONTROL15
+     Precip Last Execution Date: 5 April 2017
+     Precip Last Execution Time: 19:24:26
+     Basin Last Execution Date: 5 April 2017
+     Basin Last Execution Time: 19:24:28
+End:
+
+Run: 10YR 10%
+     Default Description: Yes
+     Log File: 10YR_10_.log
+     DSS File: E100_00_00.dss
+     Basin: E100-00-00
+     Precip: 10%_24HR
+     Control: CONTROL15
+End:
+
+Run: 500YR 0.2%
+     Default Description: Yes
+     Log File: 500YR_0.2_.log
+     DSS File: E100_00_00.dss
+     Basin: E100-00-00
+     Precip: 0.2%_24HR
+     Control: CONTROL15
+End:
+
+Run: 50YR 2%
+     Default Description: Yes
+     Log File: 50YR_2_.log
+     DSS File: E100_00_00.dss
+     Basin: E100-00-00
+     Precip: 2%_24HR
+     Control: CONTROL15
+End:
+

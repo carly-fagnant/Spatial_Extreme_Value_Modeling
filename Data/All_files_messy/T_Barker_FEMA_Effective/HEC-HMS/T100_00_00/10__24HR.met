@@ -1,0 +1,102 @@
+Precip: 10%_24HR
+     Last Modified Date: 18 June 2007
+     Last Modified Time: 16:48:14
+     Version: 2.2.2
+     Default DSS File Name: T100_00_00.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 10
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.000000
+     Depth: 1.5
+     Depth: 2.8
+     Depth: 3.5
+     Depth: 3.9
+     Depth: 4.9
+     Depth: 5.9
+     Depth: 7.1
+End:
+
+Subbasin: T101D
+End:
+
+Subbasin: T101F
+End:
+
+Subbasin: T101B
+End:
+
+Subbasin: T101E
+End:
+
+Subbasin: T101G
+End:
+
+Subbasin: T101H
+End:
+
+Subbasin: T101A
+End:
+
+Subbasin: T100A
+End:
+
+Subbasin: T100B
+End:
+
+Subbasin: T100C
+End:
+
+Subbasin: T100D4
+End:
+
+Subbasin: T100E
+End:
+
+Subbasin: T101C
+End:
+
+Subbasin: T103A
+End:
+
+Subbasin: T103B
+End:
+
+Subbasin: T100I
+End:
+
+Subbasin: T100D1
+End:
+
+Subbasin: T100D2
+End:
+
+Subbasin: T100D3
+End:
+
+Subbasin: T100D5
+End:
+
+Subbasin: T100D6
+End:
+
+Subbasin: T100F
+End:
+
+Subbasin: T100G
+End:
+
+Subbasin: T100H
+End:
+
+Subbasin: T109A
+End:

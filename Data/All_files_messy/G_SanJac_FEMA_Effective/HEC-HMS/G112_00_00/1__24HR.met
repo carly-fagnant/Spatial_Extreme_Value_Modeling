@@ -1,0 +1,37 @@
+Precip: 1%_24HR
+     Description: 1% (100-YR) Frequency Storm - Region 3
+     Last Modified Date: 27 June 2007
+     Last Modified Time: 23:14:03
+     Version: 2.2.1
+     Default DSS File Name: J:\WR\Projects\461362.01 HCFCD MOMA\WR\HCFCD-FEMA Models\Task6-Final\Models-HECHMS-2.2.1\For Farah\G-Ship Channel\Hydrology-HMS\G112-00-00\G1120000.dss
+     Unit System: English
+     Enable Evapotranspiration: No
+     Precipitation Method: Frequency Based Hypothetical
+End:
+
+Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 0.0
+     Depth: 2.1000
+     Depth: 4.3000
+     Depth: 5.7000
+     Depth: 6.8000
+     Depth: 9.1000
+     Depth: 11.100
+     Depth: 13.500
+End:
+
+Subbasin: G112A
+End:
+
+Subbasin: G112B
+End:
+
+Subbasin: G112C
+End:

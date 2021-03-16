@@ -1,0 +1,52 @@
+Run: .2PCT
+     Default Description: Yes
+     Log File: .2PCT.log
+     DSS File: D100_00_00.dss
+     Basin: D100_0.2PCT
+     Precip: 0.2%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 October 2015
+     Precip Last Execution Time: 19:20:09
+     Basin Last Execution Date: 8 October 2015
+     Basin Last Execution Time: 19:20:15
+End:
+
+Run: 10PCT
+     Default Description: Yes
+     Log File: 10PCT.log
+     DSS File: D100_00_00.dss
+     Basin: D100_10PCT
+     Precip: 10%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 October 2015
+     Precip Last Execution Time: 19:20:19
+     Basin Last Execution Date: 8 October 2015
+     Basin Last Execution Time: 19:20:25
+End:
+
+Run: 1PCT
+     Default Description: Yes
+     Log File: 1PCT.log
+     DSS File: D100_00_00.dss
+     Basin: D100_1PCT
+     Precip: 1%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 October 2015
+     Precip Last Execution Time: 19:20:29
+     Basin Last Execution Date: 8 October 2015
+     Basin Last Execution Time: 19:20:35
+End:
+
+Run: 2PCT
+     Default Description: Yes
+     Log File: 2PCT.log
+     DSS File: D100_00_00.dss
+     Basin: D100_2PCT
+     Precip: 2%_24HR
+     Control: Control 5
+     Precip Last Execution Date: 8 October 2015
+     Precip Last Execution Time: 19:20:39
+     Basin Last Execution Date: 8 October 2015
+     Basin Last Execution Time: 19:20:45
+End:
+

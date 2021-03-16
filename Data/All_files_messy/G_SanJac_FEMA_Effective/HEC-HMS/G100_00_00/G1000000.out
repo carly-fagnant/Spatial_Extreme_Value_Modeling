@@ -1,0 +1,112 @@
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G1000000.dss
+                       Unit:   71;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/C100_Inflow.dss
+                       Unit:   72;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/D100Inflow.dss
+                       Unit:   73;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G104Inflow.dss
+                       Unit:   74;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G105Inflow.dss
+                       Unit:   75;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G108Inflow.dss
+                       Unit:   76;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G109Inflow.dss
+                       Unit:   77;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G110Inflow.dss
+                       Unit:   78;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/G112Inflow.dss
+                       Unit:   79;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/H100Inflow.dss
+                       Unit:   80;  DSS Versions - Software: 6-QA, File: 6-MC
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/I100Inflow.dss
+                       Unit:   81;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/N100Inflow.dss
+                       Unit:   82;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/P100Inflow.dss
+                       Unit:   83;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZOPEN:  Existing File Opened,  File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_River/2007_G/2007_Effective_G/Hydrology/G100_00_00/W100Inflow.dss
+                       Unit:   84;  DSS Versions - Software: 6-QA, File: 6-ND
+    -----DSS---ZCLOSE Unit:   84,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.31
+               Number of Records:     32
+               File Size:    478.2  Kbytes
+               Percent Inactive:  44.6
+
+    -----DSS---ZCLOSE Unit:   83,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.37
+               Number of Records:     40
+               File Size:    120.4  Kbytes
+               Percent Inactive:  17.8
+
+    -----DSS---ZCLOSE Unit:   82,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.25
+               Number of Records:     16
+               File Size:    394.2  Kbytes
+               Percent Inactive:  24.1
+
+    -----DSS---ZCLOSE Unit:   81,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.37
+               Number of Records:     36
+               File Size:    110.7  Kbytes
+               Percent Inactive:  19.3
+
+    -----DSS---ZCLOSE Unit:   80,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.01
+               Number of Records:     16
+               File Size:  12369.1  Kbytes
+               Percent Inactive:  94.5
+
+    -----DSS---ZCLOSE Unit:   79,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.25
+               Number of Records:     16
+               File Size:    394.1  Kbytes
+               Percent Inactive:  24.1
+
+    -----DSS---ZCLOSE Unit:   78,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.36
+               Number of Records:     32
+               File Size:    100.0  Kbytes
+               Percent Inactive:  16.0
+
+    -----DSS---ZCLOSE Unit:   77,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.25
+               Number of Records:     16
+               File Size:    394.1  Kbytes
+               Percent Inactive:  24.1
+
+    -----DSS---ZCLOSE Unit:   76,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.36
+               Number of Records:     32
+               File Size:    100.0  Kbytes
+               Percent Inactive:  16.1
+
+    -----DSS---ZCLOSE Unit:   75,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.37
+               Number of Records:     36
+               File Size:    110.7  Kbytes
+               Percent Inactive:  19.3
+
+    -----DSS---ZCLOSE Unit:   74,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.33
+               Number of Records:     32
+               File Size:    123.0  Kbytes
+               Percent Inactive:  32.3
+
+    -----DSS---ZCLOSE Unit:   73,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.01
+               Number of Records:     40
+               File Size: 154843.4  Kbytes
+               Percent Inactive:  91.7
+
+    -----DSS---ZCLOSE Unit:   72,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  0.31
+               Number of Records:     25
+               File Size:    263.8  Kbytes
+               Percent Inactive:  71.5
+
+    -----DSS---ZCLOSE Unit:   71,   File: S:/Operations/M3 Models/M3 Directory Structure/G-SanJacinto_Rive
+               Pointer Utilization:  6.54
+               Number of Records:   3325
+               File Size:   9019.3  Kbytes
+               Percent Inactive:   0.0
+

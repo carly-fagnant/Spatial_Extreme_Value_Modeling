@@ -1,0 +1,599 @@
+Paired Data Manager: Restudy_Proposed
+     Version: 3.4
+End:
+
+Table: U501_00_01_SESV
+     Table Type: Elevation-Storage
+     Description: Elev-Stor Data for Upper U101
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U501_00_01_SESV/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: U502_00_01_SESV
+     Table Type: Elevation-Storage
+     Description: Elev-Stor Data for Upper U102
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U502_00_01_SESV/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: U506_05_00_SESV
+     Table Type: Elevation-Storage
+     Description: Elev-Stor Data for U506-05-00
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U506_05_00_SESV/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: U500_00_01_SESV
+     Table Type: Elevation-Storage
+     Description: Elev-Stor Data for Upper U100
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U500_00_01_SESV/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: U502_00_02_SESV
+     Table Type: Elevation-Storage
+     Description: Elev-Stor Data for AO (U102 to U101)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: FT
+     Y-Units: ACRE-FT
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U502_00_02_SESV/ELEVATION-STORAGE///TABLE/
+End:
+
+Table: K1000000_2223_D
+     Table Type: Inflow-Diversion
+     Description: Cypress Div (100% to U100A, No Diversion)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //K1000000_2223_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: K1000000_2309_D
+     Table Type: Inflow-Diversion
+     Description: Cypress Div (100% to U102A, No Diversion)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //K1000000_2309_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: K1000000_2446_D
+     Table Type: Inflow-Diversion
+     Description: Cypress Div (27% to U101A, 73% to U102A)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //K1000000_2446_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: T1011300_0000_D
+     Table Type: Inflow-Diversion
+     Description: T101-13-00 Diversion (RGME CLOMR)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //T1011300_0000_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U1010700_0090_D
+     Table Type: Inflow-Diversion
+     Description: U101-07 Div. to U201-07-01 (RGME CLOMR)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0090_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U1010800_0034_D
+     Table Type: Inflow-Diversion
+     Description: U101-08 HF Div. to U201-08-011 (RGME CLOMR)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010800_0034_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U1060000_0340_D
+     Table Type: Inflow-Diversion
+     Description: Diversion to U506-07-00
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1060000_0340_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U2010801_0000_D
+     Table Type: Inflow-Diversion
+     Description: U201-08-00 Div. to U101-07
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U2010801_0000_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U101_07E_SPLIT
+     Table Type: Inflow-Diversion
+     Description: Approx. Q split at Mason Rd (88% US, 22% DS)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U101_07E_SPLIT/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U1010700_0033_D
+     Table Type: Inflow-Diversion
+     Description: Diversion to 8'x4' RCB (Qmax=124.2 cfs)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0033_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: U1020000_0632_D
+     Table Type: Inflow-Diversion
+     Description: Overflow Diversion (U102 to U101)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1020000_0632_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: T1011300_0000_R
+     Table Type: Storage-Outflow
+     Description: T101-13-00 SV-SQ (RGME CLOMR)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //T1011300_0000_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0383_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1000000_0383_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0494_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1000000_0494_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0632_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1000000_0632_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0710_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1000000_0710_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0823_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:09
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: Restudy_Proposed.dss
+     Pathname: //U1000000_0823_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1000000_0995_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1000000_0995_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0193_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0193_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0348_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0348_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0469_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0469_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0509_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0509_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0639_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0639_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010000_0812_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010000_0812_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010700_0001_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0001_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010700_0035_R
+     Table Type: Storage-Outflow
+     Description: FROM STA. 3515.556 To STA. 5322.362
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0035_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010700_0053_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0053_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010700_0090_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010700_0090_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010800_0002_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010800_0002_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010800_0034_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010800_0034_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010800_0051_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010800_0051_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1010800_0112_R
+     Table Type: Storage-Outflow
+     Description: Morton Creek SV-SQ (RGME CLOMR)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1010800_0112_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1020000_0197_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1020000_0197_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1020000_0232_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1020000_0232_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1020000_0465_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1020000_0465_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1020000_0632_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1020000_0632_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1060000_0006_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1060000_0006_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1060000_0177_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1060000_0177_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1060000_0229_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1060000_0229_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U1060000_0301_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U1060000_0301_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U2010701_0000_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U2010701_0000_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U2010801_0000_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U2010801_0000_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U500_00_01_SVSQ
+     Table Type: Storage-Outflow
+     Description: Stor-Dis Data for Upper U100
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U500_00_01_SVSQ/STORAGE-FLOW///TABLE/
+End:
+
+Table: U501_00_01_SVSQ
+     Table Type: Storage-Outflow
+     Description: Stor-Dis Data for Upper U101
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U501_00_01_SVSQ/STORAGE-FLOW///TABLE/
+End:
+
+Table: U502_00_01_SVSQ
+     Table Type: Storage-Outflow
+     Description: Stor-Dis Data for Upper U102
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U502_00_01_SVSQ/STORAGE-FLOW///TABLE/
+End:
+
+Table: W1670100_0082_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //W1670100_0082_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: U502_00_02_SVSQ
+     Table Type: Storage-Outflow
+     Description: Stor-Dis Data for AO (U102 to U101)
+     Last Modified Date: 17 May 2017
+     Last Modified Time: 21:27:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: YES
+     DSS File: Restudy_Proposed_PairedData.dss
+     Pathname: //U502_00_02_SVSQ/STORAGE-FLOW///TABLE/
+End:
+

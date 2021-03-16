@@ -1,0 +1,34 @@
+Meteorology: Rain_005YR
+     Description: Region 1 Rainfall - 20% (5-Year)
+     Last Modified Date: 12 March 2012
+     Last Modified Time: 12:13:06
+     Version: 3.4
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 20.000
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67.000
+     Depth: 0.90000
+     Depth: 1.4000
+     Depth: 2.5000
+     Depth: 3.0000
+     Depth: 3.3000
+     Depth: 4.0000
+     Depth: 4.8000
+     Depth: 5.8000
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:

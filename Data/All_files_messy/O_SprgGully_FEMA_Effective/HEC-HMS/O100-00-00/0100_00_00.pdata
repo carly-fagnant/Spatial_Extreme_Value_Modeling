@@ -1,0 +1,147 @@
+Paired Data Manager: 0100_00_00
+     Version: 3.3
+End:
+
+Table: DI-DQ v
+     Table Type: Inflow-Diversion
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //DI-DQ V/FLOW-DIVERSION///TABLE/
+End:
+
+Table: Det
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //DET/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#1-o100#2(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#1-O100#2(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#2-o100#3(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#2-O100#3(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#3-o100#4(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#3-O100#4(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#3-o100#4u(O100_basi
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#3-O100#4U(O100_BASI/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#4-o100#5(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#4-O100#5(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#5-o100#6(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#5-O100#6(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#6-o100#7(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#6-O100#7(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o100#7-o100#8(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O100#7-O100#8(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o105#1-o105#2(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O105#1-O105#2(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: rt_o119#1-o119#2(O100_basin)
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //RT_O119#1-O119#2(O100_BASIN)/STORAGE-FLOW///TABLE/
+End:
+
+Table: Table 1
+     Table Type: Stage-Flow
+     Last Modified Date: 26 September 2014
+     Last Modified Time: 19:12:42
+     X-Units: FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: 0100_00_00.dss
+     Pathname: //TABLE 1/STAGE-FLOW///TABLE/
+End:
+

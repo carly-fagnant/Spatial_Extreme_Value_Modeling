@@ -1,0 +1,67 @@
+Project: E100_00_00
+     Description: Effective FEMA Study for watershed White Oak Bayou (E) (effective 06/09/2014 with LOMR 16-06-0527)
+     Version: 3.5
+     Filepath Separator: \
+     DSS File Name: E100_00_00.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 
+End:
+
+Precipitation: Jun 2001
+     FileName: Jun_2001.met
+     Description: 
+End:
+
+Precipitation: Mar 1992
+     FileName: Mar_1992.met
+     Description: 
+End:
+
+Precipitation: Sep 1998
+     FileName: Sep_1998.met
+     Description: 
+End:
+
+Basin: E100-00-00
+     FileName: E100_00_00.basin
+     Description: 
+End:
+
+Control: CONTROL15
+     FileName: CONTROL15.control
+     Description: Standard Control File (TS = 15min)
+End:
+
+Control: June 2001
+     FileName: June_2001.control
+     Description: 
+End:
+
+Control: March 1992
+     FileName: March_1992.control
+     Description: 
+End:
+
+Control: September 1998
+     FileName: September_1998.control
+     Description: 
+End:
+

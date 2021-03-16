@@ -1,0 +1,1343 @@
+Basin: T100_1PCT
+     Last Modified Date: 16 June 2009
+     Last Modified Time: 17:18:17
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Junction: T1000000_9907_J
+     Canvas X: 2975442.516
+     Canvas Y: 1.3840367473E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9906_R
+End:
+
+Subbasin: T100A
+     Canvas X: 2944395.321
+     Canvas Y: 1.3876705276E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 14.90
+     Downstream: T1000000_9910_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 3.37
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 4.29
+     Storage Coefficient: 35.79
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100B
+     Canvas X: 2944781.746
+     Canvas Y: 1.3857770477E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 6.76
+     Downstream: T1000000_0137_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.08
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 3.71
+     Storage Coefficient: 26.52
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100C
+     Canvas X: 2959079.451
+     Canvas Y: 1.3854485869E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 11.37
+     Downstream: T1000000_9911_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 5.24
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 2.38
+     Storage Coefficient: 25.10
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D4
+     Canvas X: 2972291.041
+     Canvas Y: 1.3855611872E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.45
+     Downstream: T1000000_0138_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.71
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 1.29
+     Storage Coefficient: 13.86
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1000000_9910_J
+     Canvas X: 2961566.674
+     Canvas Y: 1.386897569E7
+     Label X: 17.0
+     Label Y: 1.0
+     Downstream: T1000000_9909_J
+End:
+
+Junction: T1000000_0137_J
+     Description: 13730
+     Canvas X: 2949472.422
+     Canvas Y: 1.38476994E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9907_J
+End:
+
+Junction: T1000000_9911_J
+     Description: No existing cross sections
+     Canvas X: 2967721.354
+     Canvas Y: 1.3847285345E7
+     Label X: 19.0
+     Label Y: 0.0
+     Downstream: T1000000_9907_J
+End:
+
+Subbasin: T100E
+     Canvas X: 2958298.031
+     Canvas Y: 1.3839371872E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 9.28
+     Downstream: T1000000_9907_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 6.25
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 4.32
+     Storage Coefficient: 24.26
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T101D
+     Canvas X: 2992956.137
+     Canvas Y: 1.3852567198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.49
+     Downstream: T1010000_0247_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 25.54
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.93
+     Storage Coefficient: 5.48
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1010000_0160_J
+     Description: 16046.4
+     Canvas X: 3004877.73
+     Canvas Y: 1.3842925159E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0072_R
+End:
+
+Subbasin: T101F
+     Canvas X: 3002031.137
+     Canvas Y: 1.3848157198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.12
+     Downstream: T1010000_0160_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 27.15
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.74
+     Storage Coefficient: 5.48
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T101B
+     Canvas X: 2985273.259
+     Canvas Y: 1.384821767E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.89
+     Downstream: T1010000_0247_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.22
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 1.59
+     Storage Coefficient: 8.98
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T101E
+     Canvas X: 2996466.137
+     Canvas Y: 1.3844797198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.66
+     Downstream: T1010000_0160_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 48.42
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.56
+     Storage Coefficient: 7.46
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1010000_0072_J
+     Description: 7197.5
+     Canvas X: 3011241.137
+     Canvas Y: 1.3837102198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0055_R
+End:
+
+Subbasin: T101G
+     Canvas X: 3009366.137
+     Canvas Y: 1.3843672198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.71
+     Downstream: T1010000_0072_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 53.84
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.37
+     Storage Coefficient: 3.33
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1010000_9901_J
+     Description: No existing cross sections
+     Canvas X: 3016977.3380951243
+     Canvas Y: 1.383501072841085E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9903_J
+End:
+
+Subbasin: T101H
+     Canvas X: 3013392.8351865225
+     Canvas Y: 1.383447059783558E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.12
+     Downstream: T1010000_9901_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 5.37
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.36
+     Storage Coefficient: 5.37
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1010000_0352_J
+     Description: 35199
+     Canvas X: 2990480.817
+     Canvas Y: 1.3852134115E7
+     Label X: 15.0
+     Label Y: 5.0
+     Downstream: T1010000_0247_R
+End:
+
+Subbasin: T101A
+     Canvas X: 2983971.137
+     Canvas Y: 1.3854637198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 3.38
+     Downstream: T1010000_0352_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 19.76
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 1.64
+     Storage Coefficient: 9.46
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Reach: T1010000_0247_R
+     Description: FROM STA. 35199.0 TO STA. 24718.5
+     Canvas X: 2999154.386
+     Canvas Y: 1.3847829494E7
+     From Canvas X: 2990480.817
+     From Canvas Y: 1.3852134115E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0247_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1010000_0247_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1010000_0171_R
+     Description: FROM STA. 24718.5 TO STA. 17056.0
+     Canvas X: 3004877.73
+     Canvas Y: 1.3842925159E7
+     From Canvas X: 2999154.386
+     From Canvas Y: 1.3847829494E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0160_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1010000_0171_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1010000_0072_R
+     Description: FROM STA  17056.0 TO STA. 7197.6
+     Canvas X: 3011241.137
+     Canvas Y: 1.3837102198E7
+     From Canvas X: 3004877.73
+     From Canvas Y: 1.3842925159E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0072_J
+
+     Route: Modified Puls
+     Number of Reaches: 2
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1010000_0072_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1010000_0055_R
+     Description: FROM STA. 7197.6 TO STA. 5537.9
+     Canvas X: 3016977.3380951243
+     Canvas Y: 1.383501072841085E7
+     From Canvas X: 3011241.137
+     From Canvas Y: 1.3837102198E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_9901_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1010000_0055_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: T1010000_0247_J
+     Description: 24718.5
+     Canvas X: 2999154.386
+     Canvas Y: 1.3847829494E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_0171_R
+End:
+
+Junction: T1000000_9903_J
+     Canvas X: 3017566.571449963
+     Canvas Y: 1.3833292131125903E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1090000_9901_R
+End:
+
+Junction: T1000000_9902_J
+     Canvas X: 3020247.593
+     Canvas Y: 1.3837096326E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9901_R
+End:
+
+Junction: T1000000_9901_J
+     Canvas X: 3041046.5582258063
+     Canvas Y: 1.3845659525338711E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Junction: T1000000_9904_J
+     Canvas X: 3014025.864
+     Canvas Y: 1.3829844043E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1010000_9901_R
+End:
+
+Junction: T1000000_9906_J
+     Canvas X: 2987771.558
+     Canvas Y: 1.3828800185E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9905_R
+End:
+
+Junction: T1000000_9905_J
+     Canvas X: 2992950.059
+     Canvas Y: 1.382491561E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9904_R
+End:
+
+Junction: T1000000_0073_J
+     Description: 7348
+     Canvas X: 2975149.949
+     Canvas Y: 1.3846874934E7
+     Label X: 22.0
+     Label Y: 2.0
+     Downstream: T1000000_0045_R
+End:
+
+Junction: T1000000_0138_J
+     Description: 29093.4
+     Canvas X: 2973998.134
+     Canvas Y: 1.385219819E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0073_R
+End:
+
+Junction: T1000000_0291_J
+     Description: 29093.4
+     Canvas X: 2970198.536
+     Canvas Y: 1.3864737153E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0137_R
+End:
+
+Junction: T1000000_9909_J
+     Canvas X: 2964467.525
+     Canvas Y: 1.3868084972E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0291_J
+End:
+
+Junction: T1000000_9912_J
+     Description: No existing cross sections
+     Canvas X: 2970312.022
+     Canvas Y: 1.3852707702E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0073_J
+End:
+
+Reach: T1000000_0137_R
+     Description: FROM STA. 28943.8 TO STA. 13743.1
+     Canvas X: 2973998.134
+     Canvas Y: 1.385219819E7
+     From Canvas X: 2970198.536
+     From Canvas Y: 1.3864737153E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0138_J
+
+     Route: Modified Puls
+     Number of Reaches: 15
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1000000_0137_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_0073_R
+     Description: FROM STA. 13743.1 TO 7255.0
+     Canvas X: 2975149.949
+     Canvas Y: 1.3846874934E7
+     From Canvas X: 2973998.134
+     From Canvas Y: 1.385219819E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_0073_J
+
+     Route: Modified Puls
+     Number of Reaches: 5
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1000000_0073_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_0045_R
+     Description: FROM STA. 7255.0 TO STA. 449.4
+     Canvas X: 2975463.058
+     Canvas Y: 1.3841659308E7
+     From Canvas X: 2975149.949
+     From Canvas Y: 1.3846874934E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9908_J
+
+     Route: Modified Puls
+     Number of Reaches: 6
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1000000_0045_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_9906_R
+     Description: FROM STA. 9907 TO STA. 9906
+     Canvas X: 2987771.558
+     Canvas Y: 1.3828800185E7
+     From Canvas X: 2975442.516
+     From Canvas Y: 1.3840367473E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9906_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 23957.7
+     Energy Slope: 0.0003
+     Width: 50
+     Side Slope: 3
+     Mannings n: 0.035
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_9905_R
+     Description: FROM STA. 9906 TO STA. 9905
+     Canvas X: 2992950.059
+     Canvas Y: 1.382491561E7
+     From Canvas X: 2987771.558
+     From Canvas Y: 1.3828800185E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9905_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 6404.5
+     Energy Slope: 0.0009
+     Width: 10
+     Side Slope: 3
+     Mannings n: 0.04
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_9904_R
+     Description: FROM STA. 9905 TO STA. 9904
+     Canvas X: 3014025.864
+     Canvas Y: 1.3829844043E7
+     From Canvas X: 2992950.059
+     From Canvas Y: 1.382491561E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9904_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 30390.4
+     Energy Slope: 0.0007
+     Width: 50
+     Side Slope: 3
+     Mannings n: 0.05
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1010000_9901_R
+     Description: No existing cross sections
+     Canvas X: 3017566.571449963
+     Canvas Y: 1.3833292131125903E7
+     From Canvas X: 3014025.864
+     From Canvas Y: 1.3829844043E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9903_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 3835.9
+     Energy Slope: 0.00007
+     Width: 50
+     Side Slope: 3
+     Mannings n: 0.05
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1090000_9901_R
+     Description: No existing cross sections
+     Canvas X: 3020247.593
+     Canvas Y: 1.3837096326E7
+     From Canvas X: 3017566.571449963
+     From Canvas Y: 1.3833292131125903E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9902_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 6195.7
+     Energy Slope: 0.00007
+     Width: 50
+     Side Slope: 3
+     Mannings n: 0.05
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: T1000000_9901_R
+     Description: FROM STA. 9902 TO STA. 9901
+     Canvas X: 3041046.5582258063
+     Canvas Y: 1.3845659525338711E7
+     From Canvas X: 3020247.593
+     From Canvas Y: 1.3837096326E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9901_J
+
+     Route: Muskingum Cunge
+     Channel: Trapezoid
+     Length: 18140.4
+     Energy Slope: 0.0009
+     Width: 50
+     Side Slope: 3
+     Mannings n: 0.05
+     Use Variable Time Step: No
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Subbasin: T101C
+     Canvas X: 2987579.152
+     Canvas Y: 1.3844456041E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.49
+     Downstream: T1030000_9901_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 7.27
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 1.15
+     Storage Coefficient: 6.93
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1030000_9901_J
+     Description: No existing cross sections
+     Canvas X: 2991270.336
+     Canvas Y: 1.3840091462E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1030000_0064_J
+End:
+
+Subbasin: T103A
+     Canvas X: 2998548.392
+     Canvas Y: 1.383783629E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 5.69
+     Downstream: T1030000_0064_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 43.96
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.64
+     Storage Coefficient: 10.44
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T103B
+     Canvas X: 3008389.144
+     Canvas Y: 1.3833940992E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.42
+     Downstream: T1030000_9902_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 19.68
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.54
+     Storage Coefficient: 7.41
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: T1030000_0064_J
+     Description: 6359.1
+     Canvas X: 3006443.26
+     Canvas Y: 1.3831682092E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1030000_9901_R
+End:
+
+Junction: T1030000_9902_J
+     Canvas X: 3013789.333
+     Canvas Y: 1.3830191283E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9904_J
+End:
+
+Subbasin: T100I
+     Canvas X: 3024839.707
+     Canvas Y: 1.3832278959E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 11.08
+     Downstream: T1000000_9901_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 1.90
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 9.78
+     Storage Coefficient: 17.78
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D1
+     Canvas X: 2963239.057
+     Canvas Y: 1.3870917955E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.59
+     Downstream: T1000000_9909_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.53
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 8.89
+     Storage Coefficient: 60.07
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D2
+     Canvas X: 2968058.289
+     Canvas Y: 1.3869267476E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.94
+     Downstream: T1000000_0291_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.10
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 34.17
+     Storage Coefficient: 66.20
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D3
+     Canvas X: 2968176.503
+     Canvas Y: 1.3857290604E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.24
+     Downstream: T1000000_9912_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 5.52
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 7.33
+     Storage Coefficient: 47.49
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D5
+     Canvas X: 2973410.195
+     Canvas Y: 1.3850180682E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.59
+     Downstream: T1000000_0073_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 22.73
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.30
+     Storage Coefficient: 4.52
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100D6
+     Canvas X: 2977063.905
+     Canvas Y: 1.3845144487E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.01
+     Downstream: T1000000_9908_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 33.19
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.44
+     Storage Coefficient: 3.68
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100F
+     Canvas X: 2976824.472
+     Canvas Y: 1.383462319E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 12.97
+     Downstream: T1000000_9906_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 8.76
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 1.79
+     Storage Coefficient: 11.25
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100G
+     Canvas X: 2980511.791
+     Canvas Y: 1.3820795744E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 9.89
+     Downstream: T1000000_9905_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 0.86
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 2.97
+     Storage Coefficient: 24.56
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T100H
+     Canvas X: 3005401.194
+     Canvas Y: 1.3823253957E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 9.97
+     Downstream: T1000000_9904_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 6.88
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 3.02
+     Storage Coefficient: 14.82
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: T109A
+     Canvas X: 3017350.259
+     Canvas Y: 1.3842775417E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 2.34
+     Downstream: T1000000_9902_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 18.19
+     Initial Loss: 0.262
+     Moisture Deficit: 0.731
+     Wetting Front Suction: 6.182
+     Hydraulic Conductivity: 0.062
+
+     Transform: Clark
+     Time of Concentration: 0.52
+     Storage Coefficient: 7.78
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Source: U101E_T101A_SC
+     Canvas X: 2984453.908
+     Canvas Y: 1.3858403748E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0
+     Downstream: T1010000_0352_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: DIV1 (1%FLOOD)
+     End Flow Method:
+End:
+
+Source: U101E_T101D_SC
+     Canvas X: 2987454.4
+     Canvas Y: 1.3857647664E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0
+     Downstream: T1010000_0352_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: DIV2 (1%FLOOD)
+     End Flow Method:
+End:
+
+Source: U101A_T100D2_SC
+     Description: U101A_T100D2_SC
+     Canvas X: 2967854.113
+     Canvas Y: 1.3879361807E7
+     Label X: 16.0
+     Label Y: 2.0
+     Area: 0
+     Downstream: T1000000_0291_J
+
+     Flow Method: GAGE_FLOW
+     Flow Gage: T100 (1%)
+     End Flow Method:
+End:
+
+Reach: T1030000_9901_R
+     Description: No existing cross sections
+     Canvas X: 3013789.333
+     Canvas Y: 1.3830191283E7
+     From Canvas X: 3006443.26
+     From Canvas Y: 1.3831682092E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1030000_9902_J
+
+     Route: Modified Puls
+     Number of Reaches: 1
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: T1030000_9901_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: T1000000_9908_J
+     Canvas X: 2975463.058
+     Canvas Y: 1.3841659308E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: T1000000_9907_J
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.3879361807E7
+     Last View S: 1.3820795744E7
+     Last View W: 2934395.321
+     Last View E: 3062258.959
+     Maximum View N: 1.3879361807E7
+     Maximum View S: 1.3820795744E7
+     Maximum View W: 2934395.321
+     Maximum View E: 3062258.959
+     Extent Method: Manual
+     Buffer: 0
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+End:

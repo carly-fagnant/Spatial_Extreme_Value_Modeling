@@ -1,0 +1,52 @@
+Run: I000000_0.2%
+     Default Description: Yes
+     Log File: I000000_0.2_.log
+     DSS File: I1000000.dss
+     Basin: I100_00_00
+     Precip: 0.2%_24HR
+     Control: Control 5 min
+     Precip Last Execution Date: 7 August 2009
+     Precip Last Execution Time: 13:52:31
+     Basin Last Execution Date: 7 August 2009
+     Basin Last Execution Time: 13:52:33
+End:
+
+Run: I000000_1%
+     Default Description: Yes
+     Log File: I000000_1_.log
+     DSS File: I1000000.dss
+     Basin: I100_00_00
+     Precip: 1% _24HR
+     Control: Control 5 min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:48:17
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:48:17
+End:
+
+Run: I000000_10%
+     Default Description: Yes
+     Log File: I000000_10_.log
+     DSS File: I1000000.dss
+     Basin: I100_00_00
+     Precip: 10%_24HR
+     Control: Control 5 min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:47:37
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:47:38
+End:
+
+Run: I000000_2%
+     Default Description: Yes
+     Log File: I000000_2_.log
+     DSS File: I1000000.dss
+     Basin: I100_00_00
+     Precip: 2%_24HR
+     Control: Control 5 min
+     Precip Last Execution Date: 19 January 2010
+     Precip Last Execution Time: 16:47:56
+     Basin Last Execution Date: 19 January 2010
+     Basin Last Execution Time: 16:47:56
+End:
+

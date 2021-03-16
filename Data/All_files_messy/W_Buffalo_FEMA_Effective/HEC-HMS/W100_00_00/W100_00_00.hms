@@ -1,0 +1,65 @@
+Project: W100-00-00
+     Description: HCFCD Unit # W100-00-00                                                                                                                             10,2,1,0.2 % Events                                                                     Filename:W100-00-00.hms   Prepared by: S&B Infrastructure, Ltd. Date: 07-02-03   Reviewed by: Project Management Team Date: 7-22-03                              STATUS:(Approved)                                                          Tropical Storm Allsison Recovery Project
+     Version: 3.3
+     DSS File Name: W100_00_00.dss
+End:
+
+Precipitation: W1000000_0.2%
+     FileName: W1000000_0.2_.met
+     Description: Modified Date: 25 November 2002
+End:
+
+Precipitation: W1000000_1%
+     FileName: W1000000_1_.met
+     Description: 
+End:
+
+Precipitation: W1000000_10%
+     FileName: W1000000_10_.met
+     Description: 
+End:
+
+Precipitation: W1000000_2%
+     FileName: W1000000_2_.met
+     Description: 
+End:
+
+Basin: W100-00-00 (0.2%)
+     FileName: W100_00_00__0.2__.basin
+     Description: 
+End:
+
+Basin: W100-00-00 (1%)
+     FileName: W100_00_00__1__.basin
+     Description: 
+End:
+
+Basin: W100-00-00 (10%)
+     FileName: W100_00_00__10__.basin
+     Description: 
+End:
+
+Basin: W100-00-00 2%
+     FileName: W100_00_00_2_.basin
+     Description: 
+End:
+
+Control: Control_15
+     FileName: Control_15.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Modified Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

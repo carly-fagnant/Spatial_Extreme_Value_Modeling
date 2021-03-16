@@ -1,0 +1,422 @@
+Basin: O200-00-00
+     Description: Spring Gully (O200-00-00) watershed
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 19:31:02
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: No
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: O200A
+     Canvas X: 3224254.473
+     Canvas Y: 1.3878559723E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.215
+     Downstream: O2000000_9902_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 1.815
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.58
+     Storage Coefficient: 7.32
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: O200B
+     Canvas X: 3222413.961
+     Canvas Y: 1.3867400407E7
+     Label X: 17.0
+     Label Y: -2.0
+     Area: 0.986
+     Downstream: O2000000_0155_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 32.671
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.3
+     Storage Coefficient: 6.15
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: O200C
+     Canvas X: 3223518.268
+     Canvas Y: 1.3865211167E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.827
+     Downstream: O2000000_0131_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 24.359
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.24
+     Storage Coefficient: 4.6
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: O200D
+     Canvas X: 3222297.718
+     Canvas Y: 1.3861123292E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.629
+     Downstream: O2000000_0094_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 20.095
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.21
+     Storage Coefficient: 3.5
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Subbasin: O200F
+     Canvas X: 3225378.154
+     Canvas Y: 1.385577612E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 1.641
+     Downstream: O2000000_0017_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 22.262
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 1.03
+     Storage Coefficient: 5.56
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Reach: O2000000_0155_R
+     Description: Junction O2000000_9901_J to RS 15489
+     Canvas X: 3219766.118
+     Canvas Y: 1.3864584626E7
+     From Canvas X: 3222813.238
+     From Canvas Y: 1.3870841559E7
+     Label X: -90.0
+     Label Y: 12.0
+     Downstream: O2000000_0155_J
+
+     Route: Lag
+     Lag: 52.96
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: O2000000_0131_R
+     Description: RS 15489 to RS 13110
+     Canvas X: 3219706.847
+     Canvas Y: 1.3862480499E7
+     From Canvas X: 3219766.118
+     From Canvas Y: 1.3864584626E7
+     Label X: -97.0
+     Label Y: -5.0
+     Downstream: O2000000_0131_J
+
+     Route: Modified Puls
+     Number of Reaches: 5
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: O2000000_0131_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: O2000000_0070_R
+     Description: RS 9378 to RS 7047
+     Canvas X: 3222099.119
+     Canvas Y: 1.385735622E7
+     From Canvas X: 3220801.524
+     From Canvas Y: 1.3859302613E7
+     Label X: -95.0
+     Label Y: -6.0
+     Downstream: O2000000_0070_J
+
+     Route: Modified Puls
+     Number of Reaches: 6
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: O2000000_0070_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Reach: O2000000_0017_R
+     Description: RS 7047 to RS 1685
+     Canvas X: 3221686.4
+     Canvas Y: 1.38524377E7
+     From Canvas X: 3222099.119
+     From Canvas Y: 1.385735622E7
+     Label X: -96.0
+     Label Y: -2.0
+     Downstream: O2000000_0017_J
+
+     Route: Modified Puls
+     Number of Reaches: 12
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: O2000000_0017_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Junction: O2000000_0155_J
+     Description: RS 15489
+     Canvas X: 3219766.118
+     Canvas Y: 1.3864584626E7
+     Label X: -57.0
+     Label Y: 2.0
+     Downstream: O2000000_0131_R
+End:
+
+Junction: O2000000_0131_J
+     Description: RS 13110
+     Canvas X: 3219706.847
+     Canvas Y: 1.3862480499E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: O2000000_0094_R
+End:
+
+Junction: O2000000_0070_J
+     Description: RS 7047
+     Canvas X: 3222099.119
+     Canvas Y: 1.385735622E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: O2000000_0017_R
+End:
+
+Junction: O2000000_0017_J
+     Description: RS 1685
+     Canvas X: 3221686.4
+     Canvas Y: 1.38524377E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Junction: O2000000_9901_J
+     Description: No xsec data.
+     Canvas X: 3222813.238
+     Canvas Y: 1.3870841559E7
+     Label X: 19.0
+     Label Y: 0.0
+     Downstream: O2000000_0155_R
+End:
+
+Junction: O2000000_0094_J
+     Description: RS 9378
+     Canvas X: 3220685.356
+     Canvas Y: 1.3859550661E7
+     Label X: -56.0
+     Label Y: -3.0
+     Downstream: O2000000_0094_D
+End:
+
+Reach: O2000000_0094_R
+     Description: RS 13110 to RS 9378
+     Canvas X: 3220685.356
+     Canvas Y: 1.3859550661E7
+     From Canvas X: 3219706.847
+     From Canvas Y: 1.3862480499E7
+     Label X: -92.0
+     Label Y: -10.0
+     Downstream: O2000000_0094_J
+
+     Route: Modified Puls
+     Number of Reaches: 4
+     Initial Outflow Equals Inflow: Yes
+     Storage Outflow Table Name: O2000000_0094_R
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Subbasin: O200E
+     Canvas X: 3222004.505
+     Canvas Y: 1.385853139E7
+     Label X: -13.0
+     Label Y: 20.0
+     Area: 0.382
+     Downstream: O2000000_0070_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 11.662
+     Initial Loss: 0.1
+     Moisture Deficit: 0.385
+     Wetting Front Suction: 12.45
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.17
+     Storage Coefficient: 3.42
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: O2000000_9902_J
+     Description: No xsec data.
+     Canvas X: 3221042.082
+     Canvas Y: 1.3874475641E7
+     Label X: -62.0
+     Label Y: -2.0
+     Downstream: O2000000_9901_D
+End:
+
+Reach: O2000000_9901_R
+     Description: Junction O2000000_9902_J to O2000000_9901_J
+     Canvas X: 3222813.238
+     Canvas Y: 1.3870841559E7
+     From Canvas X: 3221037.255
+     From Canvas Y: 1.3873907348E7
+     Label X: 16.0
+     Label Y: 0.0
+     Downstream: O2000000_9901_J
+
+     Route: Lag
+     Lag: 43.68
+     Channel Loss: None
+
+     Route Sediment: No
+End:
+
+Diversion: O2000000_9901_D
+     Description: No xsec data.diversion to G103-03-00,Bluff Gully
+     Canvas X: 3221037.255
+     Canvas Y: 1.3873907348E7
+     Label X: -61.0
+     Label Y: -16.0
+     Downstream: O2000000_9901_R
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: O2000000_9901_D
+     End Diverter:
+End:
+
+Diversion: O2000000_0094_D
+     Description: diversion to o208-00-00 Spring Gully Diversion Channel, RS 9378
+     Canvas X: 3220801.524
+     Canvas Y: 1.3859302613E7
+     Label X: 20.0
+     Label Y: -1.0
+     Downstream: O2000000_0070_R
+
+     Diverter: Inflow-Diversion Table
+     Inflow Diversion Table Name: O2000000_0094_D
+     End Diverter:
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.3883921040846484E7
+     Last View S: 1.3848976601974616E7
+     Last View W: 3217396.179791263
+     Last View E: 3228477.999558897
+     Maximum View N: 1.3883921040846484E7
+     Maximum View S: 1.3848976601974616E7
+     Maximum View W: 3217396.179791263
+     Maximum View E: 3228477.999558897
+     Extent Method: Elements Maps
+     Buffer: 10
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+     Map: hms.map.MapGeoMap
+     Map File Name: O200-MAP.map
+     Map Shown: Yes
+End:

@@ -1,0 +1,10 @@
+NOTE 10184:  Began computing simulation run "010YR" at time 02Feb2021, 14:28:43.
+NOTE 20364:  Found no parameter problems in meteorologic model "Rain_010YR".
+NOTE 40040:  The basin model contains 2 outlets: U1000000_0069_J, T1011300_0000_OUT
+NOTE 40049:  Found no parameter problems in basin model "U100_Basin_010YR".
+NOTE 10172:  Meteorologic model "Rain_010YR" needs to be computed.
+WARNING 40946:  Total inflow to reach "U1000000_0995_R" is zero.
+WARNING 40946:  Total inflow to reach "U1010700_0090_R" is zero.
+WARNING 42803:  Computed diversion flow exceeded inflow for 877 time intervals at element "U2010801_0000_D"; diversion flow set to inflow.
+WARNING 42803:  Computed diversion flow exceeded inflow for 922 time intervals at element "U1010700_0033_D"; diversion flow set to inflow.
+NOTE 10185:  Finished computing simulation run "010YR" at time 02Feb2021, 14:28:48.

@@ -1,0 +1,38 @@
+Project: C100_00_00
+     Description: HCFCD Unit # C100-00-00; 10,2,1,0.2 % Events;  Filename:C100_00_00.hms;  Prepared by: S&B Infrastructure, Ltd. Date: 07-24-03; Reviewed by: Project Management Team Date: 08-29-03; STATUS:(Approved)-- APRIL 2014 REVIEWED URS REVISIONS BY WALTER P MOORE
+     Version: 4.0
+     Filepath Separator: \
+     DSS File Name: C100_00_00.dss
+     Time Zone ID: America/Chicago
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: Region 3 .2% Flood
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: Region 3 10% Flood
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: Region 3 1% Flood
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: Region 3 2% Flood
+End:
+
+Basin: 2015RiskMAP
+     FileName: 2015RiskMAP.basin
+     Description: UPDATED SV-SQ FOR UPPER BASIN AND GOLF COURSE
+End:
+
+Control: CONTROL15
+     FileName: CONTROL15.control
+     Description: 
+End:
+

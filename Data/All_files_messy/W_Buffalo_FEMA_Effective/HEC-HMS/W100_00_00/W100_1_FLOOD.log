@@ -1,0 +1,5 @@
+Begin execution of run: W100 1%FLOOD; 10 January 2003,  11:28:40
+     Basin Model: W100-00-00; Meteorologic Model: REGION2 1% FLOOD; Control Specifications: JAN03
+WARNING: Error in computing Clark Unit Hydrograph for W100A;
+     Time of Concentration increased to one time interval: .25 hr
+End execution of run: W100 1%FLOOD;  10 January 2003,  11:28:50

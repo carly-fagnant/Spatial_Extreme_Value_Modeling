@@ -1,0 +1,6 @@
+NOTE 10184:  Began computing simulation run "G1120000_0.2%" at time 19Jan2010, 10:10:35.
+NOTE 20364:  Found no parameter problems in meteorologic model "0.2 % _24HR".
+WARNING 20041:  NOAA criteria for storms with less than 1% exceedence frequency are only valid using data from Atlas 14.
+NOTE 40049:  Found no parameter problems in basin model "G112_basin".
+NOTE 41054:  Routing parameters for reach "G1120000_0028_R": Delta t (sec) 694  Delta x (ft) 6,600
+NOTE 10185:  Finished computing simulation run "G1120000_0.2%" at time 19Jan2010, 10:10:36.

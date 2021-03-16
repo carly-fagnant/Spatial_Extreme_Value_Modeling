@@ -1,0 +1,26 @@
+Paired Data Manager: S1100000
+     Version: 3.3
+End:
+
+Table: S1100000_0083_D
+     Table Type: Inflow-Diversion
+     Last Modified Date: 16 June 2009
+     Last Modified Time: 17:03:54
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: S1100000.dss
+     Pathname: //S1100000_0083_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: S1100000_0006_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 16 June 2009
+     Last Modified Time: 13:31:19
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: S1100000.dss
+     Pathname: //S1100000_0006_R/STORAGE-FLOW///TABLE/
+End:
+

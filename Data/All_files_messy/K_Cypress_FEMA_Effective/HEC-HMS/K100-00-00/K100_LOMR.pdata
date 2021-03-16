@@ -1,0 +1,800 @@
+Paired Data Manager: K100 LOMR
+     Version: 3.4
+End:
+
+Table: K1000000_2446_D
+     Table Type: Inflow-Diversion
+     Description: Revised Overflow at K1000000_2446_D
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:20:59
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1000000_2446_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: K1000000_2309_D
+     Table Type: Inflow-Diversion
+     Description: Revised Overflow at K1000000_2309_D
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:20:49
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1000000_2309_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: K1000000_2223_D
+     Table Type: Inflow-Diversion
+     Description: Revised Overflow at K1000000_2223_D
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:20:40
+     X-Units: CFS
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1000000_2223_D/FLOW-DIVERSION///TABLE/
+End:
+
+Table: 1%-K100#10_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:26
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#10_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1941_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:25:33
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1941_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#11_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:31
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#11_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1855_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:26:41
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1855_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#12_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:37
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#12_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1708_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:27:47
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1708_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#13_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:43
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#13_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1604_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:28:11
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1604_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#14_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:50
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#14_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1445_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:28:36
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1445_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#15_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:56
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#15_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1221_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:28:55
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1221_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#16_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:04
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#16_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_1118_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:29:15
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_1118_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#17_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:15
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#17_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0965_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:29:44
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0965_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#18_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:21
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#18_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0823_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:30:05
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0823_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#19_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#19_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0735_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:30:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0735_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#20_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:41
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#20_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0574_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:31:30
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0574_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#21_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:44
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#21_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0461_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:31:11
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0461_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#22_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:09:49
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#22_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0335_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:31:50
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0335_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#23_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 October 2008
+     Last Modified Time: 15:17:58
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#23_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0193_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:32:18
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0193_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#24_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 October 2008
+     Last Modified Time: 15:18:04
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#24_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0172_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:32:32
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0172_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K100#25_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:10:13
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K100#25_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_0040_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:32:59
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_0040_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#3_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:07:34
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#3_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2629_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:22:14
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2629_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#4_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:07:40
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#4_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2446_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:22:38
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2446_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#5_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:07:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#5_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2309_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:23:08
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2309_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#6_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:07:53
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#6_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2240_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:23:36
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2240_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#7_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:01
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#7_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2220_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:24:16
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2220_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#8_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:08
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#8_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2101_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:24:39
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2101_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-k100#9_r1
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 October 2008
+     Last Modified Time: 14:08:16
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-k100#9_r1/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1%-K1000000_2034_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:25:03
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1%-K1000000_2034_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1110000_0078_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:05:23
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1110000_0078_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1110000_0026_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:05:43
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1110000_0026_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1310000_0058_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:06:03
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1310000_0058_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1310000_0022_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:06:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1310000_0022_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1600000_0092_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:07:21
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1600000_0092_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1600000_0043_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:07:39
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1600000_0043_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1660000_0266_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:09:18
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1660000_0266_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: 1% K1660000_0008_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:09:30
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //1% K1660000_0008_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: K1240000_0017_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:52:15
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1240000_0017_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: K1420000_0018_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:52:49
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1420000_0018_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: k1570000_0039_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:08:17
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //k1570000_0039_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: K1590000_0004_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:16:36
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1590000_0004_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0984_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:01:07
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0984_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0781_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:01:29
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0781_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0602_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:01:52
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0602_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0408_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:02:14
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0408_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0200_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:02:35
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0200_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1000000_0013_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:03:01
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1000000_0013_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: L1200000_0001_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 16:00:23
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //L1200000_0001_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: K1450000_0012_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 26 March 2010
+     Last Modified Time: 15:54:04
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //K1450000_0012_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: Test
+     Table Type: Storage-Outflow
+     Last Modified Date: 14 May 2014
+     Last Modified Time: 21:08:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //Test/STORAGE-FLOW///TABLE/
+End:
+
+Table: VCL
+     Table Type: Storage-Outflow
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //VCL/STORAGE-FLOW///TABLE/
+End:
+
+Table: Warren Lake
+     Table Type: Storage-Outflow
+     Description: warren lake
+     Last Modified Date: 24 March 2008
+     Last Modified Time: 20:22:58
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: K100_LOMR.dss
+     Pathname: //Warren Lake/STORAGE-FLOW///TABLE/
+End:
+

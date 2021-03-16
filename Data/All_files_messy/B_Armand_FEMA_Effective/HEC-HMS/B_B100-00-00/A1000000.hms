@@ -1,0 +1,85 @@
+Project: A1000000
+     Description: HCFCD Unit # A100-00-00              Flows are distributed to the HEC-RAS model as follows: "A100_XXPCT_LOMR" from most upstream poin downstream to cross section 51320.59; and from "A100_XXPCT" downstream of cross section 51320.59 to confluence with A100-00-00 (Clear Creek).
+     Version: 3.3
+     DSS File Name: A1000000.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% Frequency Storm (500-YR) - Region 3
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% Frequency Storm (100-YR) - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% Frequency Storm (10-YR) - Region 3
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% Frequency Storm (50-YR) - Region 3
+End:
+
+Basin: A100_0.2PCT
+     FileName: A100_0.2PCT.basin
+     Description: 
+End:
+
+Basin: A100_0.2PCT_Revised
+     FileName: A100_0.2PCT_Revised.basin
+     Description: B113-00-00 Drainage Study Revision
+End:
+
+Basin: A100_10PCT
+     FileName: A100_10PCT.basin
+     Description: 
+End:
+
+Basin: A100_10PCT_Revised
+     FileName: A100_10PCT_Revised.basin
+     Description: B113-00-00 Drainage Study Revision
+End:
+
+Basin: A100_1PCT
+     FileName: A100_1PCT.basin
+     Description: 
+End:
+
+Basin: A100_1PCT_Revised
+     FileName: A100_1PCT_Revised.basin
+     Description: B113-00-00 Drainage Study Revision
+End:
+
+Basin: A100_2PCT
+     FileName: A100_2PCT.basin
+     Description: 
+End:
+
+Basin: A100_2PCT_Revised
+     FileName: A100_2PCT_Revised.basin
+     Description: B113-00-00 Drainage Study Revision
+End:
+
+Control: Control 5
+     FileName: Control_5.control
+     Description: 
+End:
+
+ProjectSettings:
+     Default Unit System: English
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: None
+     Default Erosion Method: None
+     Default Route Method: Modified Puls
+     Default Gain Loss Method: None
+     Default Precip Method: Frequency Based Hypothetical
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

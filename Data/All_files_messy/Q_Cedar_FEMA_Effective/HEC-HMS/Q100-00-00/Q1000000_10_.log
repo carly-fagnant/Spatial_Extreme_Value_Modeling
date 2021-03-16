@@ -1,0 +1,7 @@
+NOTE 10184:  Began computing simulation run "Q1000000_10%" at time 04Oct2016, 13:39:34.
+NOTE 20364:  Found no parameter problems in meteorologic model "10%_24HR".
+WARNING 20043:  Control specifications time interval is less than duration of maximum intensity.
+     Precipitation data will be interpolated.
+NOTE 40040:  The basin model contains 2 outlets: Q1000000_0018_J, Basin
+NOTE 40049:  Found no parameter problems in basin model "Q1000000_10PCT".
+NOTE 10185:  Finished computing simulation run "Q1000000_10%" at time 04Oct2016, 13:39:43.

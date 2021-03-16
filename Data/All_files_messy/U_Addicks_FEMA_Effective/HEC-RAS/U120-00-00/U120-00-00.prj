@@ -1,0 +1,41 @@
+Proj Title=U120-00-00 2019 (Re-Study)
+Current Plan=p02
+Default Exp/Contr=0.3,0.1
+English Units
+Geom File=g01
+Flow File=f01
+Flow File=f02
+Flow File=f03
+Plan File=p01
+Plan File=p02
+Plan File=p03
+Y Axis Title=Elevation
+X Axis Title(PF)=Main Channel Distance
+X Axis Title(XS)=Station
+BEGIN DESCRIPTION:
+Dinner Creek (U120-00-00)
+(Flood Hazard & Floodway) Model
+10-, 2-, 1-, and 0.2% Events
+Filename U120_00_00.prj
+Prepared by:  LAN                               Date: 10/29/2012
+Reviewed by: HCFCD                         Date: 10/18/2012
+STATUS: Final
+ADDICKS WATERSHED MODEL UPDATE
+HARRIS COUNTY, TEXAS
+END DESCRIPTION:
+DSS Start Date=
+DSS Start Time=
+DSS End Date=
+DSS End Time=
+DSS Export Filename=
+DSS Export Rating Curves= 0 
+DSS Export Rating Curve Sorted= 0 
+DSS Export Volume Flow Curves= 0 
+DXF Filename=
+DXF OffsetX= 0 
+DXF OffsetY= 0 
+DXF ScaleX= 1 
+DXF ScaleY= 10 
+GIS Export Reach=U120-00-00      ,U120-00-00_0003 
+GIS Export Profiles= 2 
+       1       2

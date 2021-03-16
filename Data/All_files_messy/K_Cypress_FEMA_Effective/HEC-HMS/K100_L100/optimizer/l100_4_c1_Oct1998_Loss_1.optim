@@ -1,0 +1,43 @@
+Trial Name: l100#4_c1_Oct1998-Loss_1
+     Trial ID: Oct1998-Loss_1
+     Optimization Run: Oct1998-Loss
+     Location: l100#4_c1
+     Trial Number: 1
+     Description: Optimize all loss parameters according to US of USGS gage at Cypress-RoseHill
+End: 
+
+Optimize Location: l100#4_c1
+     Search Method: Univariate Gradient
+     Objective Function: Percent Error in Volume
+     Start Time: 15 October 1998,  00:00
+     End Time: 28 October 1998,  00:00
+     Percent Missing Flow: 0.000000
+
+     Component: All Subbasins
+     Parameter: Init Loss Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+
+     Component: All Subbasins
+     Parameter: Moist Deficit Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+
+     Component: All Subbasins
+     Parameter: WetFront Suct Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+
+     Component: All Subbasins
+     Parameter: Hydr Cond Scale Factor
+     Initial Value: 1.00
+     Minimum Constraint: 0.01
+     Maximum Constraint: 100.00
+     Locked: No
+End:

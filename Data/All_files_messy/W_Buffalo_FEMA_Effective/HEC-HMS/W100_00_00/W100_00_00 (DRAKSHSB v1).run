@@ -1,0 +1,44 @@
+Run: W100-00-00 (1%)
+     Log File: W100_00_00__1__.log
+     Basin: W100-00-00 (1%)
+     Precip: REGION2 1% FLOOD
+     Control: JAN03
+     Precip Last Execution Date: 2 April 2003
+     Precip Last Execution Time: 15:51:22
+     Basin Last Execution Date: 2 April 2003
+     Basin Last Execution Time: 15:51:38
+End:
+
+Run: W100-00-00 (10%)
+     Log File: W100_00_00__10__.log
+     Basin: W100-00-00 (10%)
+     Precip: REGION2 10% FLOOD
+     Control: JAN03
+     Precip Last Execution Date: 10 March 2003
+     Precip Last Execution Time: 17:23:32
+     Basin Last Execution Date: 10 March 2003
+     Basin Last Execution Time: 17:23:38
+End:
+
+Run: W100-00-00 (2%)
+     Log File: W100_00_00__2__.log
+     Basin: W100-00-00 (2%)
+     Precip: REGION2 2% FLOOD
+     Control: JAN03
+     Precip Last Execution Date: 6 March 2003
+     Precip Last Execution Time: 21:53:44
+     Basin Last Execution Date: 6 March 2003
+     Basin Last Execution Time: 21:53:48
+End:
+
+Run: W100-00-00 (0.2%)
+     Log File: W100_00_00__0.2__.log
+     Basin: W100-00-00 (0.2%)
+     Precip: REGION2 0.2% FLOOD
+     Control: JAN03
+     Precip Last Execution Date: 6 March 2003
+     Precip Last Execution Time: 21:54:40
+     Basin Last Execution Date: 6 March 2003
+     Basin Last Execution Time: 21:54:44
+End:
+

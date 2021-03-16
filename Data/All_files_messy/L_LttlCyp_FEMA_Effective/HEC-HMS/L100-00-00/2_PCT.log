@@ -1,0 +1,86 @@
+NOTE 10184:  Began computing simulation run "2_PCT" at time 05Apr2010, 12:38:06.
+NOTE 20364:  Found no parameter problems in meteorologic model "2% Event".
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166D" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166E" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166F" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166G" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K166H" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100D" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100F" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100G" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100H" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K172A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K160C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K160A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K160B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100I" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K157A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K157B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K155A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100J" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100K" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K159A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100L" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K152A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100M" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100N1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100N2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100A1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100A2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L114B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L114A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L112A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100D" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100E" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100F" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L100B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K142A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K142B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100O2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100O1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K140A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100P" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100Q" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K133A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100R" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K131B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K131A1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K131A2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K131C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100S1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K124A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K124B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K124C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K120B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100T" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K120A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100U" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K116A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100V" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K112A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K111A1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K111A2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K111A3" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K111A4" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100X" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K160D" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K100S2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L120A" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "L120B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K145A1" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K145A2" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K145B" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K145C" may not be suitable for simulations longer than 14 days.
+WARNING 40902:  The selected loss method "Green and Ampt" in subbasin "K145D" may not be suitable for simulations longer than 14 days.
+NOTE 40049:  Found no parameter problems in basin model "K100_L100_2_PCT".
+NOTE 10172:  Meteorologic model "2% Event" needs to be computed.
+WARNING 41660:  5 negative inflows to reach "K1000000_1708_R" set to zero.
+     Equivalent volume (cu ft): -71,583.3727
+NOTE 10185:  Finished computing simulation run "2_PCT" at time 05Apr2010, 12:38:21.

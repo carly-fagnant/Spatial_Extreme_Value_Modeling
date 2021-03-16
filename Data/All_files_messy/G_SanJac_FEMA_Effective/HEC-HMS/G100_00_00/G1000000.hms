@@ -1,0 +1,65 @@
+Project: G1000000
+     Description: HCFCD Unit # G100-00-00
+     Version: 3.3
+     DSS File Name: G1000000.dss
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 0.2% (500-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: 1% (100-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 10% (10-YR) Frequency Storm Event - Region 3
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 2% (50-YR) Frequency Storm Event - Region 3
+End:
+
+Basin: G1000000_0.2%
+     FileName: G1000000_0.2_.basin
+     Description: houston ship channel (0.2% event)
+End:
+
+Basin: G1000000_1%
+     FileName: G1000000_1_.basin
+     Description: houston ship channel (1% event)
+End:
+
+Basin: G1000000_10%
+     FileName: G1000000_10_.basin
+     Description: houston ship channel (10% event)
+End:
+
+Basin: G1000000_2%
+     FileName: G1000000_2_.basin
+     Description: houston ship channel (2% event)
+End:
+
+Control: Control_5Min
+     FileName: Control_5Min.control
+     Description: June 2007 Control Specification
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Initial+Constant
+     Default Transform Method: Clark
+     Default Baseflow Method: None
+     Default Erosion Method: None
+     Default Route Method: Modified Puls
+     Default Gain Loss Method: None
+     Default Precip Method: Frequency Based Hypothetical
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

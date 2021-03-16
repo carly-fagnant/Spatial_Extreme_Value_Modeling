@@ -1,0 +1,52 @@
+Run: 0.2%_24HR
+     Default Description: Yes
+     Log File: 0.2__24HR.log
+     DSS File: P1000000.dss
+     Basin: P1000000
+     Precip: 0.2PCT_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 20 June 2014
+     Precip Last Execution Time: 16:29:43
+     Basin Last Execution Date: 20 June 2014
+     Basin Last Execution Time: 16:30:03
+End:
+
+Run: 1%_24HR
+     Default Description: Yes
+     Log File: 1__24HR.log
+     DSS File: P1000000.dss
+     Basin: P1000000
+     Precip: 1PCT_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 27 January 2017
+     Precip Last Execution Time: 15:03:38
+     Basin Last Execution Date: 27 January 2017
+     Basin Last Execution Time: 15:04:09
+End:
+
+Run: 10% _24HR
+     Default Description: Yes
+     Log File: 10___24HR.log
+     DSS File: P1000000.dss
+     Basin: P1000000
+     Precip: 10PCT_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 20 June 2014
+     Precip Last Execution Time: 16:40:56
+     Basin Last Execution Date: 20 June 2014
+     Basin Last Execution Time: 16:41:15
+End:
+
+Run: 2%_24HR
+     Default Description: Yes
+     Log File: 2__24HR.log
+     DSS File: P1000000.dss
+     Basin: P1000000
+     Precip: 2PCT_24HR
+     Control: Control 5 Min
+     Precip Last Execution Date: 20 June 2014
+     Precip Last Execution Time: 16:48:31
+     Basin Last Execution Date: 20 June 2014
+     Basin Last Execution Time: 16:48:52
+End:
+

@@ -1,0 +1,18 @@
+Gage Manager: C100_00_00
+     Version: 3.3
+End:
+
+Gage: C500_03_00
+     Description: Pond
+     Last Modified Date: 23 April 2014
+     Last Modified Time: 16:43:34
+     Units System: English
+     Gage Type: Flow
+     Units: CFS
+     Local to Project: YES
+     Start Time: 1 June 2007, 00:00
+     End Time: 3 June 2007, 00:00
+     DSS File: C100_00_00.dss
+     Pathname: //C500_03_00/FLOW//15MIN/GAGE/
+End:
+

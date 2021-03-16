@@ -1,0 +1,44 @@
+Meteorology: 1%_24HR
+     Description: 1% Exceedance Frequency Storm (100-Year) - Region 3
+     Last Modified Date: 26 June 2007
+     Last Modified Time: 16:34:27
+     Version: 3.1.0
+     Unit System: English
+     Precipitation Method: Frequency Based Hypothetical
+     Snowmelt Method: None
+     Basin Model List: F216-00-00
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 1
+     Single Hypothetical Storm Size: Yes
+     Convert to Annual Series: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 5
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 1.2000
+     Depth: 2.1000
+     Depth: 4.3000
+     Depth: 5.7000
+     Depth: 6.8000
+     Depth: 9.1000
+     Depth: 11.100
+     Depth: 13.500
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+     Depth: 0.0
+End:
+
+Subbasin: F21601A
+End:
+
+Subbasin: F216A
+End:
+
+Subbasin: F216B
+End:
+
+Subbasin: F216C
+End:

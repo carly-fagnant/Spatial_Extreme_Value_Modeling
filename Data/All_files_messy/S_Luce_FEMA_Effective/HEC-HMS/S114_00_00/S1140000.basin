@@ -1,0 +1,74 @@
+Basin: S1140000
+     Description: Mexican Gully (S114-00-00) watershed
+     Last Modified Date: 26 September 2007
+     Last Modified Time: 19:51:55
+     Version: 3.3
+     Unit System: English
+     Missing Flow To Zero: No
+     Enable Flow Ratio: No
+     Allow Blending: No
+     Compute Local Flow At Junctions: Yes
+
+     Sediment Grade Scale: NONE
+     Enable Sediment Routing: No
+
+     Enable Quality Routing: No
+End:
+
+Subbasin: S114A
+     Canvas X: 3207990.3099475894
+     Canvas Y: 1.39615404951802E7
+     Label X: 16.0
+     Label Y: 0.0
+     Area: 0.772
+     Downstream: S1140000_0001_J
+
+     Canopy: None
+
+     Surface: None
+
+     LossRate: Green and Ampt
+     Percent Impervious Area: 3.1
+     Initial Loss: 0.1
+     Moisture Deficit: 0.436
+     Wetting Front Suction: 3.5
+     Hydraulic Conductivity: 0.024
+
+     Transform: Clark
+     Time of Concentration: 0.73782
+     Storage Coefficient: 4.5511
+
+     Baseflow: None
+
+     Water Quality: ZERO
+     End Water Quality:
+
+     Erosion: None
+End:
+
+Junction: S1140000_0001_J
+     Description: RS 68, Mexican Gully
+     Canvas X: 3205448.7858280926
+     Canvas Y: 1.39607771069832E7
+     Label X: 16.0
+     Label Y: 0.0
+End:
+
+Basin Schematic Properties:
+     Last View N: 1.3961559579885125E7
+     Last View S: 1.3960758022278275E7
+     Last View W: 3205385.2477251054
+     Last View E: 3208053.8480505766
+     Maximum View N: 1.3961559579885125E7
+     Maximum View S: 1.3960758022278275E7
+     Maximum View W: 3205385.2477251054
+     Maximum View E: 3208053.8480505766
+     Extent Method: Elements
+     Buffer: 5
+     Draw Icons: Yes
+     Draw Icon Labels: Yes
+     Draw Map Objects: No
+     Draw Gridlines: Yes
+     Draw Flow Direction: No
+     Fix Element Locations: No
+End:

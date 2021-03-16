@@ -1,0 +1,274 @@
+Meteorology: Jun 2001
+     Last Modified Date: 26 September 2011
+     Last Modified Time: 18:22:32
+     Version: 3.5
+     Unit System: English
+     Precipitation Method: Specified Average
+     Short-Wave Radiation Method: None
+     Long-Wave Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+     Use Basin Model: E100-00-00
+End:
+
+Precip Method Parameters: Specified Average
+     Allow Depth Override: No
+     Set Missing Data to Zero: Yes
+End:
+
+Subbasin: E100A
+     Gage: E100A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100B
+     Gage: E100B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E132A
+     Gage: E132A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100C
+     Gage: E100C2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100D
+     Gage: E100D2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100E
+     Gage: E100E12001
+
+     Begin Snow: None
+End:
+
+Subbasin: E135A
+     Gage: E135A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E127A
+     Gage: E127A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100F
+     Gage: E100F2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E141A
+     Gage: E141A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E125A
+     Gage: E125A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E124A
+     Gage: E124A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E122A
+     Gage: E122A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E122B
+     Gage: E122B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100H
+     Gage: E100H2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E121A
+     Gage: E121A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E121B
+     Gage: E121B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100I
+     Gage: E100I2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E117A
+     Gage: E117A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E117B
+     Gage: E117B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E117C
+     Gage: E117C2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100J
+     Gage: E100J2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E115A
+     Gage: E115A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E115B
+     Gage: E115B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100L
+     Gage: E100L2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100K
+     Gage: E100K2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100M
+     Gage: E100M2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100N
+     Gage: E100N2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100O
+     Gage: E100O2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101A
+     Gage: E101A2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101B
+     Gage: E101B2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101C
+     Gage: E101C2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101D
+     Gage: E101D2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101E
+     Gage: E101E2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101F
+     Gage: E101F2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101G
+     Gage: E101G2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E101H
+     Gage: E101H2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100P
+     Gage: E100P2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100G1
+     Gage: E100G2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E100G2
+     Gage: E100G2001
+
+     Begin Snow: None
+End:
+
+Subbasin: E200A
+     Gage: E100E22001
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B1
+
+     Begin Snow: None
+End:
+
+Subbasin: E141B2
+     Gage: E141B2001
+
+     Begin Snow: None
+End:

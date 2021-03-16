@@ -1,0 +1,125 @@
+Paired Data Manager: R100-00-00
+     Version: 3.3
+End:
+
+Table: R1020000_0338_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:50:59
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020000_0338_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020000_0294_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:50:35
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020000_0294_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020000_0180_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:50:15
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020000_0180_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020000_0163_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:49:51
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020000_0163_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020000_0018_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:49:26
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020000_0018_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1000000_0136_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:49:01
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1000000_0136_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1000000_0118_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:48:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1000000_0118_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1000000_0013_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:48:05
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1000000_0013_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1021300_0011_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 18:05:19
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1021300_0011_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020300_0031_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:51:58
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020300_0031_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: R1020300_0001_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 15 June 2009
+     Last Modified Time: 17:51:33
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: R100_00_00.dss
+     Pathname: //R1020300_0001_R/STORAGE-FLOW///TABLE/
+End:
+

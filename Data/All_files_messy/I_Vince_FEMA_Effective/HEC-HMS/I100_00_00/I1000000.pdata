@@ -1,0 +1,136 @@
+Paired Data Manager: I1000000
+     Version: 3.3
+End:
+
+Table: I1000000_0263_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:04:05
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0263_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1010000_0067_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:04:58
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1010000_0067_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1010000_0008_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:04:29
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1010000_0008_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0008_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:01:24
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0008_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0235_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:02:59
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0235_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0204_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:03:43
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0204_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0171_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 10 July 2009
+     Last Modified Time: 15:53:48
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0171_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0126_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:02:33
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0126_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0087_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:02:09
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0087_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1000000_0030_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 10 July 2009
+     Last Modified Time: 15:53:46
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1000000_0030_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1010000_0156_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:05:27
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1010000_0156_R/STORAGE-FLOW///TABLE/
+End:
+
+Table: I1010000_0127_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 17 December 2008
+     Last Modified Time: 16:05:14
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: I1000000.dss
+     Pathname: //I1010000_0127_R/STORAGE-FLOW///TABLE/
+End:
+

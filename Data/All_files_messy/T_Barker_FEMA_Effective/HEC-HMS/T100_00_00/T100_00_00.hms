@@ -1,0 +1,65 @@
+Project: T100-00-00
+     Description: HCFCD Unit # T100-00-00                                                                                                                             10,2,1,0.2 % Events                                                                     Filename:T100-00-00.hms   Prepared by: S&B Infrastructure, Ltd. Date: 09-24-03   Reviewed by: Project Management Team Date: XX-XX-XX                              STATUS:(Final)
+     Version: 3.3
+     DSS File Name: T100_00_00.dss
+End:
+
+Precipitation: 1%_24HR
+     FileName: 1__24HR.met
+     Description: Modified Date: 7 October 2002
+End:
+
+Precipitation: 2%_24HR
+     FileName: 2__24HR.met
+     Description: 
+End:
+
+Precipitation: 10%_24HR
+     FileName: 10__24HR.met
+     Description: 
+End:
+
+Precipitation: 0.2%_24HR
+     FileName: 0.2__24HR.met
+     Description: 
+End:
+
+Basin: T100_0.2PCT
+     FileName: T100_0.2PCT.basin
+     Description: 
+End:
+
+Basin: T100_10PCT
+     FileName: T100_10PCT.basin
+     Description: 
+End:
+
+Basin: T100_1PCT
+     FileName: T100_1PCT.basin
+     Description: 
+End:
+
+Basin: T100_2PCT
+     FileName: T100_2PCT.basin
+     Description: 
+End:
+
+Control: CONTROL15
+     FileName: CONTROL15.control
+     Description: Standard Control File (TS = 15min)
+End:
+
+ProjectSettings:
+     Default Unit System: Metric
+     Default Canopy Method: None
+     Default Surface Method: None
+     Default Loss Method: Green and Ampt
+     Default Transform Method: Clark
+     Default Baseflow Method: Recession
+     Default Erosion Method: None
+     Default Route Method: Muskingum
+     Default Gain Loss Method: None
+     Default Precip Method: Specified Average
+     Default Evapotrans Method: Undefined Evapotranspiration
+     Default Snow Method: Undefined
+End:

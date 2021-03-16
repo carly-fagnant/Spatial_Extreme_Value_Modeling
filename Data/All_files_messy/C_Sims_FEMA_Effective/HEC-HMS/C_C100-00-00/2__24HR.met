@@ -1,0 +1,151 @@
+Meteorology: 2%_24HR
+     Description: Region 3 2% Flood
+     Last Modified Date: 19 June 2015
+     Last Modified Time: 18:51:53
+     Version: 4.0
+     Unit System: English
+     Set Missing Data to Default: No
+     Precipitation Method: Frequency Based Hypothetical
+     Short-Wave Radiation Method: None
+     Long-Wave Radiation Method: None
+     Snowmelt Method: None
+     Evapotranspiration Method: No Evapotranspiration
+     Use Basin Model: 2015RiskMAP
+End:
+
+Precip Method Parameters: Frequency Based Hypothetical
+     Exceedence Frequency: 2
+     Single Hypothetical Storm Size: Yes
+     Convert From Annual Series: No
+     Convert to Annual Series: Yes
+     Uniform Depth Duration Curve: Yes
+     Storm Size: 0.01
+     Total Duration: 1440
+     Time Interval: 15
+     Percent of Duration Before Peak Rainfall: 67
+     Depth: 
+     Depth: 1.9000
+     Depth: 3.8000
+     Depth: 5.0000
+     Depth: 5.9000
+     Depth: 7.7000
+     Depth: 9.5000
+     Depth: 11.600
+End:
+
+Subbasin: C102B
+End:
+
+Subbasin: C106G
+End:
+
+Subbasin: C100J
+End:
+
+Subbasin: C106C
+End:
+
+Subbasin: C100L
+End:
+
+Subbasin: C106F
+End:
+
+Subbasin: C106D
+End:
+
+Subbasin: C100I
+End:
+
+Subbasin: C100G
+End:
+
+Subbasin: C106B
+End:
+
+Subbasin: C106A
+End:
+
+Subbasin: C106E
+End:
+
+Subbasin: C100E
+End:
+
+Subbasin: C100K
+End:
+
+Subbasin: C161
+End:
+
+Subbasin: C147C
+End:
+
+Subbasin: C100F
+End:
+
+Subbasin: C147A
+End:
+
+Subbasin: C147B
+End:
+
+Subbasin: C102A
+End:
+
+Subbasin: C100B
+End:
+
+Subbasin: C100C
+End:
+
+Subbasin: C145B
+End:
+
+Subbasin: C100A
+End:
+
+Subbasin: C145A
+End:
+
+Subbasin: C100D
+End:
+
+Subbasin: C100H
+End:
+
+Subbasin: C100M
+End:
+
+Subbasin: C162
+End:
+
+Subbasin: C103A
+End:
+
+Subbasin: C118A
+End:
+
+Subbasin: C120A
+End:
+
+Subbasin: C123A
+End:
+
+Subbasin: C127A
+End:
+
+Subbasin: C132A
+End:
+
+Subbasin: C134A
+End:
+
+Subbasin: C137A
+End:
+
+Subbasin: C143A
+End:
+
+Subbasin: C144A
+End:

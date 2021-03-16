@@ -1,0 +1,26 @@
+Paired Data Manager: G1120000
+     Version: 3.3
+End:
+
+Table: G1120000_0028_R
+     Table Type: Distance-Elevation
+     Last Modified Date: 25 June 2009
+     Last Modified Time: 18:38:47
+     X-Units: FT
+     Y-Units: FT
+     Use External DSS File: NO
+     DSS File: G1120000.dss
+     Pathname: //G1120000_0028_R/DISTANCE-ELEVATION///TABLE/
+End:
+
+Table: G1120000_0006_R
+     Table Type: Storage-Outflow
+     Last Modified Date: 25 June 2009
+     Last Modified Time: 18:38:36
+     X-Units: ACRE-FT
+     Y-Units: CFS
+     Use External DSS File: NO
+     DSS File: G1120000.dss
+     Pathname: //G1120000_0006_R/STORAGE-FLOW///TABLE/
+End:
+
