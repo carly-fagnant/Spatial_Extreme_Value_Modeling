@@ -1,12 +1,13 @@
 source('./Test/function.R')
 
-shape <- readOGR('./watershed.shp')
+shape <- readOGR('./Test/watershed.shp')
 #plot(shape)
+### https://epsg.org/crs_2278/NAD83-Texas-South-Central-ftUS.html?sessionkey=m3t6ea1o8k
 ws <- spTransform(shape, CRS("+init=epsg:2278"))
-plot(ws[1,])
+plot(ws)
 
 #################### Matrix ######################
-hausMatrix <- hausMat(ws[1:3,], .5, ncores = (detectCores() -1), do.parallel = T)
+hausMatrix <- hausMat(ws, .5, ncores = (detectCores() -1), do.parallel = T)
 
 
 #################### ToPoint ######################
