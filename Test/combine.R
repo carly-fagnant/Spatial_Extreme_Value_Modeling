@@ -135,7 +135,7 @@ watershed <- rbind(watershed, add)
 # plot(catchment)
 plot(watershed)
 
-st_write(watershed, "~/Spatial_Extreme_Value_Modeling/Test/watershed_all.shp", delete_layer = T)
+st_write(watershed, "~/Spatial_Extreme_Value_Modeling/Test/watershed.shp", delete_layer = T)
 st_write(select(watershed, WTSHNAME, geometry), "~/Spatial_Extreme_Value_Modeling/Test/watershed_name.shp", delete_layer = T)
 
 regionall <- NULL
@@ -153,5 +153,5 @@ for (i in length(regionall[[2]][[3]][[2]]):2){
 
 st_write(regionall, "~/Spatial_Extreme_Value_Modeling/Test/watershed_region.shp", delete_layer = T)
 
-
+st_write(st_union(regionall), "~/Spatial_Extreme_Value_Modeling/Test/watershed_all.shp", delete_layer = T)
 

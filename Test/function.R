@@ -4,7 +4,7 @@ library(rgeos)
 library(spdep)
 library(raster)
 library(spatialreg)
-library(ggsn);
+library(ggsn)
 
 
 hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL, ncores = 1, timer = F, do.parallel = T){
@@ -112,8 +112,8 @@ directHaus<- function(A, B, f1, f2=f1, tol = NULL){
 }
 
 
-pointHaus<- function(p, B, f2, tol = NULL){
-  A_to_B <- gDistance(point, B, hausdorff = T)
+pointHaus<- function(point, B, f2, tol = NULL){
+  A_to_B <- gDistance(point, B, hausdorff = T, byid = T)
   if (f2 == 0){
     return(A_to_B)
   }else{
