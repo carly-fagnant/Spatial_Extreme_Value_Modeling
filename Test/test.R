@@ -56,6 +56,6 @@ for (i in 1:nrow(points)){
 }
 
 station_area$watershed <- as.factor(station_area$watershed)
-write.csv(station_area, './Data/station_area.csv')
+write.csv(station_area, './Data/station_area.csv', row.names = FALSE)
 
 
