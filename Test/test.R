@@ -31,3 +31,31 @@ for (i in 1:nrow(points)){
 
 write.csv(pointDist, file = './Data/station_dist.csv')
 
+
+#################### Stations in Area ######################
+watershed <- read.csv('./Data/watershed.csv')
+station_area <- data.frame(X = station_info$X, watershed = NA)
+for (i in 1:nrow(points)){
+  station <- station_info[i,]
+  # transforming - long becomes x coordinate and lat is y coordinate
+  coordinates(station)=~long+lat
+  proj4string(station) <- "+proj=longlat +datum=WGS84"
+  station <- spTransform(station, CRS("+init=epsg:2278")) #  projecting data
+  
+  if (st_intersects(st_as_sf(station), st_as_sf(outline), sparse = F)){
+    area <- st_as_sf(ws)
+    for (j in 1:nrow(area)){
+      a <- area[j,]
+      if (st_intersects(st_as_sf(station), st_as_sf(a), sparse = F)){
+        name <- a$WTSHNAME
+        station_area[i, 'watershed'] <- as.character(watershed[watershed$WTSHNAME == name,2])
+        break
+      }
+    }
+  }
+}
+
+station_area$watershed <- as.factor(station_area$watershed)
+write.csv(station_area, './Data/station_area.csv')
+
+
