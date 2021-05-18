@@ -55,8 +55,8 @@ watershed <- rbind(watershed, water)
 
 # crypress creek
 cyp <- st_read(paste0(wd, "/", folders[10], "/", folders[10], "_Watershed.shp"), stringsAsFactors = FALSE)
-cyp <- select(cyp, WTSHNAME, geometry)
-cyp <- st_union(cyp)
+cyp_sub <- select(cyp, WTSHNAME, geometry)
+cyp <- st_union(cyp_sub)
 cyp <- st_as_sf(data.frame("WTSHNAME" = "CYPRESS CREEK", cyp))
 
 # buffalo bayou
@@ -118,8 +118,8 @@ if (cyp$WTSHNAME[1] %in% one){
 } else if (cyp$WTSHNAME[1] %in% three){
   code <- 3
 }
-cyp$REGION <- code
-watershed <- rbind(watershed, cyp)
+cyp_sub$REGION <- code
+watershed <- rbind(watershed, cyp_sub)
 
 if (add$WTSHNAME[1] %in% one){
   code <- 1
