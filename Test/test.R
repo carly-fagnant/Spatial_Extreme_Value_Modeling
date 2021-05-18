@@ -33,7 +33,7 @@ write.csv(pointDist, file = './Data/station_dist.csv')
 
 
 #################### Stations in Area ######################
-watershed <- read.csv('./Data/watershed.csv')
+watershed <- read.csv('./Data/watershed_code.csv')
 station_area <- data.frame(X = station_info$X, watershed = NA)
 for (i in 1:nrow(points)){
   station <- station_info[i,]
@@ -56,6 +56,32 @@ for (i in 1:nrow(points)){
 }
 
 station_area$watershed <- as.factor(station_area$watershed)
-write.csv(station_area, './Data/station_area.csv', row.names = FALSE)
+write.csv(station_area, './Data/station_area.csv', na = "", row.names = FALSE)
+
+
+#################### AreaToPoint ######################
+region <- readOGR('./Test/watershed_region.shp')
+region <- spTransform(region, CRS("+init=epsg:2278"))
+station_info <- read.csv('./Data/station_info.csv')
+station_info <- station_info %>%
+  dplyr::mutate(long = LONGITUDE, lat = LATITUDE)
+#station_info <- station_info[,c('long', 'lat')]
+
+pointAreaDist <- NULL
+for (i in 1:nrow(station_info)){
+  station <- station_info[i,]
+  # transforming - long becomes x coordinate and lat is y coordinate
+  coordinates(station)=~long+lat
+  proj4string(station) <- "+proj=longlat +datum=WGS84"
+  station <- spTransform(station, CRS("+init=epsg:2278")) #  projecting data
+  pivot <- NULL
+  for (j in 1:3){
+    r <- region[j,]
+    pivot <- cbind(pivot, pointHaus(station, r, 0.5, tol = NULL))
+  }
+  pointAreaDist <- rbind(pointAreaDist, pivot)
+}
+colnames(pointAreaDist) <- c(1,2,3)
+write.csv(pointAreaDist, file = './Data/stationToArea_dist.csv')
 
 
