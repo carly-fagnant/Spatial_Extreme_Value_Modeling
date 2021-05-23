@@ -85,3 +85,37 @@ colnames(pointAreaDist) <- c(1,2,3)
 write.csv(pointAreaDist, file = './Data/stationToArea_dist.csv')
 
 
+#################### Zipcode ######################
+shape <- readOGR('./Data/Zip_Codes/Zip_Codes.shp')
+zip <- spTransform(shape, CRS("+init=epsg:2278"))
+plot(zip)
+plot(ws, add=T, col = 'red')
+zip <- st_as_sf(zip)
+### https://cohgis-mycity.opendata.arcgis.com/datasets/f392021d9d2344938b0958909d690cc7_0?geometry=-98.402%2C28.930%2C-92.409%2C30.599
+
+site_info <- read.csv('./Data/houston_sites.csv')
+site_info <- site_info %>%
+  dplyr::mutate(long = longitude, lat = latitude)
+
+site_zip <- data.frame(site_code = site_info$site_code, 
+                        Site_Name = site_info$Site_Name, 
+                        ZIP = NA)
+for (i in 1:nrow(site_zip)){
+  site <- site_info[i,]
+  # transforming - long becomes x coordinate and lat is y coordinate
+  coordinates(site)=~long+lat
+  proj4string(site) <- "+proj=longlat +datum=WGS84"
+  site <- spTransform(site, CRS("+init=epsg:2278")) #  projecting data
+  
+  for (j in 1:nrow(zip)){
+    z <- zip[j,]
+    if (st_intersects(st_as_sf(site), st_as_sf(z), sparse = F)){
+      site_zip[i, 'ZIP'] <- z$ZIP_CODE
+      break
+    }
+  }
+}
+
+#site_zip$ZIP <- as.factor(site_zip$ZIP)
+write.csv(site_zip, './Data/site_zip.csv', na = "", row.names = FALSE)
+
