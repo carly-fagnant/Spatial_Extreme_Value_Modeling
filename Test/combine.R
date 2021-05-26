@@ -68,11 +68,6 @@ bar <- st_read(paste0(wd, "/", folders[18], "/", folders[18], "_Watershed.shp"),
 bar <- select(bar, WTSHNAME, geometry)
 
 # addicks reservoir (filename does not match)
-# catch <- st_read(paste0(wd, "/", folders[19], "/Addicks_Modified_CAP.shp"), stringsAsFactors = FALSE)
-# names(catch)[8] <- "WTSHNAME"
-# catch$WTSHNAME <- rep("ADDICKS RESERVOIR", length(catch$WTSHNAME))
-# catch <- select(catch, WTSHNAME, geometry)
-# catchment <- rbind(catchment, catch)
 add <- st_read(paste0(wd, "/", folders[19], "/S_Subbasins.shp"), stringsAsFactors = FALSE)
 add <- st_union(add)
 add <- st_as_sf(data.frame("WTSHNAME" = "ADDICKS RESERVOIR", add))
@@ -134,6 +129,12 @@ watershed <- rbind(watershed, add)
 
 # plot(catchment)
 plot(watershed)
+
+# reorder
+watershed <- rbind(watershed[1:4,], watershed[19,], 
+                   watershed[5:9,], watershed[20:21,],
+                   watershed[10:17,], watershed[22,],
+                   watershed[18,])
 
 st_write(watershed, "~/Spatial_Extreme_Value_Modeling/Test/watershed.shp", delete_layer = T)
 st_write(select(watershed, WTSHNAME, geometry), "~/Spatial_Extreme_Value_Modeling/Test/watershed_name.shp", delete_layer = T)
