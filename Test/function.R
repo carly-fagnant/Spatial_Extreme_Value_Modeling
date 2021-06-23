@@ -136,8 +136,10 @@ directHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     }
     ## find desired quantile of distances
     epsilon <- as.numeric(quantile(dists[1,], f1)) #buffer width
-    buff <- buffer(B, width=epsilon, dissolve=T)
+    buff <- buffer(B, width=epsilon, dissolve=T) 
+    # raster package, should be point/line/polygon friendly: https://www.rdocumentation.org/packages/raster/versions/3.4-13/topics/buffer
     overlap.region <- gIntersection(buff, A) # overlap region of buffer+B with A
+    # should be spatialPolygon friendly https://cran.rstudio.com/web/packages/rgeos/rgeos.pdf
     overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]],"area") # calculate fraction of A in the overlap region
     eps_diff <- abs(f1 - overlap)
     i <- 2
