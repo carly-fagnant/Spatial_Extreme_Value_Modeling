@@ -22,14 +22,13 @@ library(ggsn)
 #'@return an nxn matrix of requested distances.
 hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
     if (timer) {
-      start <- Sys.time()
+        start <- Sys.time()
     }
     n <- nrow(shp@data)
     combs <- combn(1:n,2)
     n.combs <- ncol(combs);
     haus.dists <- matrix(0, nrow=n, ncol=n)
     if (do.parallel) {
-    
         #out <- matrix(-1, nrow = 20, ncol = 20)
         start <- Sys.time()
         print("Setting up parallelization")
@@ -122,7 +121,7 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     dists <- gDistance(a.coords, B, byid=T)
   
     if(is.null(tol)){
-        tol <- sd(dists[1,])/100
+        tol <- sd(dists[1,]) / 100
     }
     ## find desired quantile of distances
     eps <- as.numeric(quantile(dists[1,], f1))
@@ -176,7 +175,3 @@ pointHaus <- function(point, B, f2, tol=NULL) {
         return(max(A_to_B, B_to_A))
     }
 }
-  
-  
-  
-  
