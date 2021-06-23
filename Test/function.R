@@ -6,7 +6,20 @@ library(raster)
 library(spatialreg)
 library(ggsn)
 
-
+#' Creating a matrix of (extended) Hausdorff distances
+#' 
+#' This function takes a SpatialPolygons object 
+#'  
+#'@param shp a SpatialPolygons object.
+#'@param f1 The percentage (as a decimal) of region i to retain when calculating the directional Hausdorff distance from region i to region j.
+#'@param f2 The percentage (as a decimal) of region j to retain when calculating the directional Hausdorff distance from region j to i. Defaults to the value of f1. Note that specifying a different value will result in a non-symmetric matrix.
+#'@param fileout Should the resulting weight matrix be written to file? Defaults to FALSE 
+#'@param filename If \code{fileout} is TRUE, the name for the file to be outputted.
+#'@param ncores If \code{do.parallel} is true, the number of cores to be used for parallel computation. Default is 1. 
+#'@param timer If T, records \code{Sys.time()} when the function is called and outputs the elapsed time along with the matrix. Default is F.
+#'@param do.parallel If T, uses the number of cores specified using \code{ncores} to set up a cluster with the \code{foreach} package. 
+#'  
+#'@return an nxn matrix of requested distances.
 hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
     if (timer) {
       start <- Sys.time()
@@ -44,7 +57,18 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
     return(haus.dists)
 }
 
-
+#' Extended Hausdorff Distance
+#'
+#' Calculates the extended Hausdorff distance from A to B for given quantiles and precision
+#' 
+#'@author Julia Schedler
+#'
+#'@param A,B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param f1 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
+#'@param f2 the percentage of area in A you want captured as a decimal (eg 10\% = .1)
+#'@param tol value to be passed to \code{tol} in \code{\link{directHaus}}.
+#'
+#'@return haus.dist: the extended hausdorff distance (max of directional from A to B and B to A)
 extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
     if (!is.projected(A) | !is.projected(B)) {
         stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
@@ -71,7 +95,18 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
     return(haus.dist)
 }
 
-
+#' Calculate the directional extended Hausdorff Distance
+#' 
+#' This function takes a SpatialPolygons object 
+#'  
+#'@author Julia Schedler
+#'
+#'@param A,B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param f1 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
+#'@param f2 the percentage of area in A you want captured as a decimal (eg 10\% = .1); defaults to the value of f1
+#'@param tol tolerance for selecting the epsilon buffer to yield desired f1. Default is 1/10000th the sampled directional distances.
+#'
+#'@return The directional extended hausdorff distance from A to B
 directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     if (!is.projected(A) | !is.projected(B)) {
         stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
@@ -119,7 +154,18 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     return(out)
 }
 
-
+#' Calculate the extended Hausdorff Distance from a point to an area
+#' 
+#' This function takes a SpatialPolygons object 
+#'  
+#'@author ???
+#'
+#'@param point a point
+#'@param B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param f2 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
+#'@param tol tolerance for selecting the epsilon buffer to yield desired f2. Default is NULL.
+#'
+#'@return The directional extended hausdorff distance from point to B
 pointHaus <- function(point, B, f2, tol=NULL) {
     A_to_B <- gDistance(point, B, hausdorff=T, byid=T)
     if (f2 == 0) {
