@@ -25,7 +25,7 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
         start <- Sys.time()
     }
     n <- nrow(shp@data)
-    combs <- combn(1:n,2)
+    combs <- combn(1:n, 2) # n choose 2 combinations
     n.combs <- ncol(combs);
     haus.dists <- matrix(0, nrow=n, ncol=n)
     if (do.parallel) {
@@ -35,20 +35,24 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
         cl <- makeCluster(ncores)
         registerDoParallel(cl)
         print("Computing...")
+        # compute the extended hausdorff distance for every combination of regions (in parallel)
         out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
             extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
         }
         print("Completion time:")
         print(Sys.time() - start)
-        #save(out, file = "hausdorff_columbus")
+        # save(out, file = "hausdorff_columbus")
         stopCluster(cl)
-        #closeAllConnections()  
+        # closeAllConnections()  
         haus.dists[lower.tri(haus.dists, diag=F)] <- out
+        # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
         haus.dists <- haus.dists + t(haus.dists)
     } else {
+         # compute the extended hausdorff distance for every combination of regions (sequentially)
         for (i in 1:n.combs) {
             haus.dists[combs[1,i], combs[2,i]] <- extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
         }
+        # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
         haus.dists <- haus.dists + t(haus.dists)
     }
     ## add 0's to diagonal
@@ -77,17 +81,23 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
     } ## check if two regions are the same, if so return HD of zero.
   
     if (f1 == 1) {
+        # if f1 = 1 use the directed hausdorff distance from A to B
         A_to_B <- gDistance(A, B, hausdorff=T);
     } else if (f1 == 0) {
+        # if f1 = 0 use the minimum distance from A to B?
         A_to_B <- gDistance(A, B)
     } else {
+        # use the extended directed hausdorff distance from A to B
         A_to_B <- directHaus(A, B, f1, tol=tol)$direct.haus[1]
     }
     if (f2 == 1) {
+        # if f2 = 1 use the directed hausdorff distance from B to A
         B_to_A <- gDistance(A, B, hausdorff=T)
     } else if (f2 == 0) {
+        # if f2 = 0 use the minimum distance from B to A?
         B_to_A <- gDistance(A, B)
     } else {
+        # use the directed extended hausdorff distance from B to A
         B_to_A <- directHaus(B, A, f2, tol=tol)$direct.haus[1]
     }
     haus.dist <- max(A_to_B, B_to_A)
@@ -111,7 +121,7 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
         stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
     }
     if (f1 == 1 || f2 == 1) {
-        stop("f = 1 equivalent to Hausdorff distancce; Use gDistance with hausdorff = T.")
+        stop("f = 1 equivalent to Hausdorff distance; Use gDistance with hausdorff = T.")
     }
     #A.area = slot(A@polygons[[1]], "area")
     # generate points
@@ -131,7 +141,7 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     eps_diff <- abs(f1 - overlap)
     i <- 2
     k <- 1
-    while (eps_diff > tol){
+    while (eps_diff > tol) {
         if (abs(f1 - overlap) < 10^(-i) || k > 10) {
             i <- i + 1 
             k <- 1
