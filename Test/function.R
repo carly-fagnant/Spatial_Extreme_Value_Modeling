@@ -66,13 +66,13 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
 #' 
 #'@author Julia Schedler
 #'
-#'@param A,B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param A, B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
 #'@param f1 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
 #'@param f2 the percentage of area in A you want captured as a decimal (eg 10\% = .1)
 #'@param tol value to be passed to \code{tol} in \code{\link{directHaus}}.
 #'
 #'@return haus.dist: the extended hausdorff distance (max of directional from A to B and B to A)
-extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
+extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     if (!is.projected(A) | !is.projected(B)) {
         stop(paste("Spatial* object (inputs ", quote(A), ", ", quote(B), ") must be projected. Try running ?spTransform().", sep=""))
     }
@@ -110,7 +110,7 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
 #'  
 #'@author Julia Schedler
 #'
-#'@param A,B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param A, B regions used to calculate the directed extended Hausdorff distance: SpatialPolygons or SpatialPolygonsDataFrame
 #'@param f1 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
 #'@param f2 the percentage of area in A you want captured as a decimal (eg 10\% = .1); defaults to the value of f1
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f1. Default is 1/10000th the sampled directional distances.
@@ -126,29 +126,30 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     #A.area = slot(A@polygons[[1]], "area")
     # generate points
     n <- 10000
-    a.coords <- spsample(A, n=n, type="regular")
-    ## points from A to B
+    a.coords <- spsample(A, n=n, type="regular") # sample points within A
+    # compute minimum distance of points a.coords to a point in B
     dists <- gDistance(a.coords, B, byid=T)
   
     if(is.null(tol)){
         tol <- sd(dists[1,]) / 100
     }
     ## find desired quantile of distances
-    eps <- as.numeric(quantile(dists[1,], f1))
-    buff <- buffer(B, width=eps, dissolve=T)
-    overlap.region <- gIntersection(buff, A);
-    overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]],"area");
+    epsilon <- as.numeric(quantile(dists[1,], f1)) #buffer width
+    buff <- buffer(B, width=epsilon, dissolve=T)
+    overlap.region <- gIntersection(buff, A) # overlap region of buffer+B with A
+    overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]],"area") # calculate fraction of A in the overlap region
     eps_diff <- abs(f1 - overlap)
     i <- 2
     k <- 1
+    # expand the buffer width until |f1 - fraction of A in the overlap| is within the tolerance
     while (eps_diff > tol) {
         if (abs(f1 - overlap) < 10^(-i) || k > 10) {
             i <- i + 1 
             k <- 1
         }
-        eps <- eps * (1 + sign(f1 - overlap) * 10^(-i))
+        epsilon <- epsilon * (1 + sign(f1 - overlap) * 10^(-i))
     
-        buff <- buffer(B, width=eps, dissolve=T)
+        buff <- buffer(B, width=epsilon, dissolve=T)
         overlap.region <- gIntersection(buff, A);
         slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]], "area")
         overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]], "area");
@@ -156,10 +157,10 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
         k <- k + 1
     }
     buff.coords <- SpatialPoints(slot(overlap.region@polygons[[1]]@Polygons[[1]], "coords"), proj4string=CRS(proj4string(A)))
-    eps <- max(gDistance(buff.coords, B, byid=T))
+    epsilon <- max(gDistance(buff.coords, B, byid=T))
     ## visualize how much area was captured?
   
-    out <- list(eps)
+    out <- list(epsilon)
     names(out) <- c("direct.haus")
     return(out)
 }
@@ -170,18 +171,22 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
 #'  
 #'@author ???
 #'
-#'@param point a point
+#'@param point a SpatialPolygons object representing a point
 #'@param B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
 #'@param f2 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f2. Default is NULL.
 #'
 #'@return The directional extended hausdorff distance from point to B
 pointHaus <- function(point, B, f2, tol=NULL) {
-    A_to_B <- gDistance(point, B, hausdorff=T, byid=T)
+    # calculate the Hausdorff distance between A and B (needs updating?)
+    A_to_B <- gDistance(point, B, hausdorff=T, byid=T) # replace with gDistance(point, B, byid=T)?
     if (f2 == 0) {
         return(A_to_B)
     } else {
+        # calculate the extended directed Hausdorff distance from B to point using f2
         B_to_A <- directHaus(B, point, f2, tol=tol)$direct.haus[1]
         return(max(A_to_B, B_to_A))
     }
 }
+
+
