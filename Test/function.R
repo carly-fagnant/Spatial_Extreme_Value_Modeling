@@ -81,7 +81,7 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
     } ## check if two regions are the same, if so return HD of zero.
   
     if (f1 == 1) {
-        # if f1 = 1 use the directed hausdorff distance from A to B
+        # if f1 = 1 use the hausdorff distance between A and B (needs correcting?)
         A_to_B <- gDistance(A, B, hausdorff=T);
     } else if (f1 == 0) {
         # if f1 = 0 use the cartesian minimum distance between A and B
@@ -91,7 +91,7 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
         A_to_B <- directHaus(A, B, f1, tol=tol)$direct.haus[1]
     }
     if (f2 == 1) {
-        # if f2 = 1 use the directed hausdorff distance from B to A
+        # if f2 = 1 use the hausdorff distance between A and B (needs correcting?)
         B_to_A <- gDistance(A, B, hausdorff=T)
     } else if (f2 == 0) {
         # if f2 = 0 use the cartesian minimum distance between A and B
