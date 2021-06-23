@@ -116,7 +116,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f1. Default is 1/10000th the sampled directional distances.
 #'
 #'@return The directional extended hausdorff distance from A to B
-directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
+directHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     if (!is.projected(A) | !is.projected(B)) {
         stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
     }
@@ -127,6 +127,7 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     # generate points
     n <- 10000
     a.coords <- spsample(A, n=n, type="regular") # sample points within A
+    # should be able to work with both regions and lines: https://cran.r-project.org/web/packages/sp/sp.pdf
     # compute minimum distance of points a.coords to a point in B
     dists <- gDistance(a.coords, B, byid=T)
   
