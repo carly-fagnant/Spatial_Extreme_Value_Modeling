@@ -84,7 +84,7 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
         # if f1 = 1 use the directed hausdorff distance from A to B
         A_to_B <- gDistance(A, B, hausdorff=T);
     } else if (f1 == 0) {
-        # if f1 = 0 use the minimum distance from A to B?
+        # if f1 = 0 use the cartesian minimum distance between A and B
         A_to_B <- gDistance(A, B)
     } else {
         # use the extended directed hausdorff distance from A to B
@@ -94,7 +94,7 @@ extHaus <- function(A, B, f1, f2=f1, tol = NULL) {
         # if f2 = 1 use the directed hausdorff distance from B to A
         B_to_A <- gDistance(A, B, hausdorff=T)
     } else if (f2 == 0) {
-        # if f2 = 0 use the minimum distance from B to A?
+        # if f2 = 0 use the cartesian minimum distance between A and B
         B_to_A <- gDistance(A, B)
     } else {
         # use the directed extended hausdorff distance from B to A
