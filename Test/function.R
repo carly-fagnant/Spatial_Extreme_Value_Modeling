@@ -122,14 +122,14 @@ directHaus<- function(A, B, f1, f2=f1, tol=NULL) {
     dists <- gDistance(a.coords, B, byid=T)
   
     if(is.null(tol)){
-        tol = sd(dists[1,])/100
+        tol <- sd(dists[1,])/100
     }
     ## find desired quantile of distances
     eps <- as.numeric(quantile(dists[1,], f1))
-    buff<- buffer(B, width=eps, dissolve=T)
+    buff <- buffer(B, width=eps, dissolve=T)
     overlap.region = gIntersection(buff, A);
-    overlap = slot(overlap.region@polygons[[1]], "area")/slot(A@polygons[[1]],"area");
-    eps_diff = abs(f1 - overlap)
+    overlap <- slot(overlap.region@polygons[[1]], "area")/slot(A@polygons[[1]],"area");
+    eps_diff <- abs(f1 - overlap)
     i <- 2
     k <- 1
     while (eps_diff > tol){
