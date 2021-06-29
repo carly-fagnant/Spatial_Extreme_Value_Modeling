@@ -1,4 +1,32 @@
-hausMat -----------------------------------------------------------------
+# Libraries ---------------------------------------------------------------
+library(rgdal)
+library(doParallel)
+library(rgeos)
+library(spdep)
+library(raster)
+library(spatialreg)
+library(ggsn)
+
+# Notes on key changes ----------------------------------------------------
+
+# extHaus
+# Check the type of input A and B to determine how to perform the extended hausdorff distance calculations
+# Extended the function's capabilities to handle point-to-point, point-to-line, point-to-area, line-to-line, line-to-area, and area-to-area calculations
+
+# directHaus
+# Removed the mostly unused parameter f2
+# Allowed directHaus to perform computations when f1=1 instead of throwing an error
+# Added the ability to compute the directed extended hausdorff distance between lines and area regions or lines and lines
+
+# pointHaus
+# Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
+  # gDistance(point, B, hausdorff=T, byid=T) returns H(point, B) and not
+  # h(point, B) (as desired). Since point is a point, h(point, B) is equal to
+  # the minimum distance between point and B which can be found using
+  # gDistance(point, B)
+# Changed variable names to make them consistent with the input names
+
+# hausMat -----------------------------------------------------------------
 #' Creating a matrix of (extended) Hausdorff distances
 #' 
 #' This function takes a SpatialPolygons object 
@@ -63,8 +91,8 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
 #'@param A region/line/point used to calculate the extended Hausdorff distance: SpatialPolygons or SpatialLines or SpatialPoints
 #'@param B region/line/point used to calculate the extended Hausdorff distance: SpatialPolygons or SpatialLines or SpatialPoints
 #'@param f1 the percentage of area/length in B you want captured as a decimal (eg 10\% = .1)
-#'@param f2 the percentage of area/length in A you want captured as a decimal (eg 10\% = .1)
-#'@param tol value to be passed to \code{tol} in \code{\link{directHaus}}.#'
+#'@param f2 the percentage of area/length in A you want captured as a decimal (eg 10\% = .1). Defaults to the same value as f1.
+#'@param tol value to be passed to "tol" in "directHaus".
 #'@return the extended hausdorff distance (max of directional from A to B and B to A)
 #'
 #'Last Edited: June 28 2021
@@ -81,11 +109,11 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   type.of.B <- class(B)[1]
   
   if (type.of.A == "SpatialPoints" && type.of.B == "SpatialPoints") {
+    # if both A and B are points, return the minimum distance between them
     return (gDistance(A, B))
   } else if (type.of.A == "SpatialPoints") {
     A_to_B <- pointHaus(A, B, f2, tol=tol)
   } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons") {
-    # call directhaus
     if (f1 == 1) {
       # if f1 = 1 use the hausdorff distance between A and B (needs correcting?)
       A_to_B <- gDistance(A, B, hausdorff=T);
@@ -219,9 +247,8 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'
 #'Last Edited: June 28 2021
 pointHaus <- function(point, B, f2, tol=NULL) {
-    # calculate the Hausdorff distance between A and B
+    # calculate the directed Hausdorff distance between point and B (i.e. the min distance between point and B)
     point_to_B <- gDistance(point, B)
-    # revert to gDistance(point, B, hausdorff=T, byid=T)?
     if (f2 == 0) {
         # if f2=0, h(B, "point") equals the minimum distance between "point"
         # and B which equals the value above.
