@@ -11,15 +11,15 @@ library(ggsn)
 
 # extHaus
 # Check the type of input A and B to determine how to perform the extended hausdorff distance calculations
-# Extended the function's capabilities to handle point-to-point, point-to-line, point-to-area, line-to-line, line-to-area, and area-to-area calculations
+# Extended the function's capabilities to handle {point, point}, {point, line}, {point, area}, {line, line}, {line, area}, and {area, area} calculations
 # In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
-  # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) ( when f2 == 1)
+  # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) (when f2 == 1)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
 
 # directHaus
 # Removed the mostly unused parameter f2
 # Allowed directHaus to perform computations when f1=1 instead of throwing an error
-# Added the ability to compute the directed extended hausdorff distance between lines and area regions or lines and lines
+# Extended the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -27,7 +27,7 @@ library(ggsn)
   # h(point, B) (as desired). Since point is a point, h(point, B) is equal to
   # the minimum distance between point and B which can be found using
   # gDistance(point, B)
-# Changed variable names to make them consistent with the input names
+# Changed variable names to make them consistent with the input parameter names
 
 # hausMat -----------------------------------------------------------------
 #' Creating a matrix of (extended) Hausdorff distances
@@ -112,7 +112,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   type.of.B <- class(B)[1]
   
   if (type.of.A == "SpatialPoints" && type.of.B == "SpatialPoints") {
-    # if both A and B are points, return the minimum distance between them
+    # if both A and B are points, return the cartesian minimum distance between them
     return (gDistance(A, B))
   } else if (type.of.A == "SpatialPoints") {
     A_to_B <- pointHaus(A, B, f2, tol=tol)
@@ -241,8 +241,8 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'  
 #'@author ???
 #'
-#'@param point a SpatialPolygons object representing a point
-#'@param B region calculate the extended Hausdorff distance- SpatialPolygons or SpatialPolygonsDataFrame
+#'@param point a SpatialPolints object representing a point
+#'@param B region calculate the extended Hausdorff distance: SpatialPolygons or SpatialLines
 #'@param f2 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f2. Default is NULL.
 #'
