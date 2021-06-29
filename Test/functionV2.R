@@ -1,11 +1,11 @@
 # Libraries ---------------------------------------------------------------
-library(rgdal)
 library(doParallel)
-library(rgeos)
-library(spdep)
-library(raster)
-library(spatialreg)
 library(ggsn)
+library(raster)
+library(rgdal)
+library(rgeos)
+library(spatialreg)
+library(spdep)
 
 # Notes on key changes ----------------------------------------------------
 
