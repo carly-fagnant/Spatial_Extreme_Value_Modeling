@@ -12,6 +12,9 @@ library(ggsn)
 # extHaus
 # Check the type of input A and B to determine how to perform the extended hausdorff distance calculations
 # Extended the function's capabilities to handle point-to-point, point-to-line, point-to-area, line-to-line, line-to-area, and area-to-area calculations
+# In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
+  # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) ( when f2 == 1)
+  # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
 
 # directHaus
 # Removed the mostly unused parameter f2
@@ -115,8 +118,8 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     A_to_B <- pointHaus(A, B, f2, tol=tol)
   } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons") {
     if (f1 == 1) {
-      # if f1 = 1 use the hausdorff distance between A and B (needs correcting?)
-      A_to_B <- gDistance(A, B, hausdorff=T);
+      # if f1 = 1 use the directed hausdorff distance between A and B (i.e. h(A, B))
+      A_to_B <- directHaus(A, B, 1)$direct.haus[1]
     } else if (f1 == 0) {
       # if f1 = 0 use the cartesian minimum distance between A and B
       A_to_B <- gDistance(A, B)
@@ -132,8 +135,8 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     B_to_A <- pointHaus(B, A, f1, tol=tol)
   } else if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons") {
     if (f2 == 1) {
-      # if f2 = 1 use the hausdorff distance between A and B (needs correcting?)
-      B_to_A <- gDistance(A, B, hausdorff=T)
+      # if f2 = 1 use the directed hausdorff distance between B and A (i.e. h(B, A))
+      B_to_A <- directHaus(B, A, 1)$direct.haus[1]
     } else if (f2 == 0) {
       # if f2 = 0 use the cartesian minimum distance between A and B
       B_to_A <- gDistance(A, B)
