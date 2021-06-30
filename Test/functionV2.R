@@ -115,7 +115,9 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     # if both A and B are points, return the cartesian minimum distance between them
     return (gDistance(A, B))
   } else if (type.of.A == "SpatialPoints") {
-    A_to_B <- pointHaus(A, B, f2, tol=tol)
+    return(pointHaus(A, B, f2, tol=tol))
+  } else if (type.of.B == "SpatialPoints") {
+    return(pointHaus(B, A, f1, tol=tol))
   } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons") {
     if (f1 == 1) {
       # if f1 = 1 use the directed hausdorff distance between A and B (i.e. h(A, B))
@@ -131,9 +133,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     stop("A is not SpatialPoints, SpatialLines, or SpatialPolygons")
   }
   
-  if (type.of.B == "SpatialPoints") {
-    B_to_A <- pointHaus(B, A, f1, tol=tol)
-  } else if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons") {
+  if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons") {
     if (f2 == 1) {
       # if f2 = 1 use the directed hausdorff distance between B and A (i.e. h(B, A))
       B_to_A <- directHaus(B, A, 1)$direct.haus[1]
