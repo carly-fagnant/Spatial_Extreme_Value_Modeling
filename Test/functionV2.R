@@ -246,7 +246,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'@param f2 the percentage of area in B you want captured as a decimal (eg 10\% = .1)
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f2. Default is NULL.
 #'
-#'@return The directional extended hausdorff distance from point to B
+#'@return the extended hausdorff distance between point and B
 #'
 #'Last Edited: June 28 2021
 pointHaus <- function(point, B, f2, tol=NULL) {
