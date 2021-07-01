@@ -123,10 +123,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   } else if (type.of.B == "SpatialPoints") {
     return(pointHaus(B, A, f1, tol=tol))
   } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons" || type.of.A == "SpatialPolygonsDataFrame") {
-    if (f1 == 1) {
-      # if f1 = 1 use the directed hausdorff distance between A and B (i.e. h(A, B))
-      A_to_B <- directHaus(A, B, 1)
-    } else if (f1 == 0) {
+    if (f1 == 0) {
       # if f1 = 0 use the cartesian minimum distance between A and B
       A_to_B <- gDistance(A, B)
     } else {
@@ -138,10 +135,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   }
   
   if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons" || type.of.B == "SpatialPolygonsDataFrame") {
-    if (f2 == 1) {
-      # if f2 = 1 use the directed hausdorff distance between B and A (i.e. h(B, A))
-      B_to_A <- directHaus(B, A, 1)
-    } else if (f2 == 0) {
+    if (f2 == 0) {
       # if f2 = 0 use the cartesian minimum distance between A and B
       B_to_A <- gDistance(A, B)
     } else {
