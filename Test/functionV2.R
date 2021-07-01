@@ -17,11 +17,12 @@ library(spdep)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
 
 # directHaus
+# Removed the mostly unused parameter f2
 # Allowed directHaus to perform computations when f1=1 instead of throwing an error
-# Extended the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
+# Extendeded the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
 # The output was originally a list, of one number. It now directly outputs a numeric value so that it doesn't have to be accessed by $direct.haus[1] in the other functions.
 # Added check if the regions are the same - should 0 be returned?
-# !!! Potentially add a case for f1=0 or f2=0?
+# Added a case for f1=0 (simply return the minimum distance between A and B instead of performing the epsilon-buffer procedure)
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -168,13 +169,16 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'@return The directional extended hausdorff distance from A to B
 #'
 #'Last Edited: July 1 2021
-directHaus <- function(A, B, f1, f2=f1, tol=NULL) {
+directHaus <- function(A, B, f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
   }
   if(is.null(gDifference(A,B))) {
     return(0) ## check if two regions are the same, if so return HD of zero
-  } 
+  }
+  if (f1 == 0) {
+    return(gDistance(A, B))
+  }
   # generate points
   n <- 10000
   a.coords <- spsample(A, n=n, type="regular") # sample points within A
@@ -234,9 +238,6 @@ directHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   epsilon <- max(gDistance(buff.coords, B, byid=T))
   ## visualize how much area was captured?
   return(epsilon)
-  #out <- list(epsilon)
-  #names(out) <- c("direct.haus")
-  #return(out)
 }
 
 # pointHaus ---------------------------------------------------------------
