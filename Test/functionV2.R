@@ -9,6 +9,9 @@ library(spdep)
 
 # Notes on key changes ----------------------------------------------------
 
+#hausMat
+#To do: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
+
 # extHaus
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
 # Extended the function's capabilities to handle {point, point}, {point, line}, {point, area}, {line, line}, {line, area}, and {area, area} calculations
