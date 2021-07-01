@@ -55,8 +55,10 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
     start <- Sys.time()
   }
   n <- nrow(shp@data)
-  combs <- combn(1:n, 2) # n choose 2 combinations
-  n.combs <- ncol(combs);
+  if (f1 == f2) {
+    combs <- combn(1:n, 2) # n choose 2 combinations
+    n.combs <- ncol(combs);
+  }
   haus.dists <- matrix(0, nrow=n, ncol=n)
   if (do.parallel) {
     #out <- matrix(-1, nrow = 20, ncol = 20)
@@ -66,17 +68,29 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
     registerDoParallel(cl)
     print("Computing...")
     # compute the extended hausdorff distance for every combination of regions (in parallel)
-    out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-      extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
+    if (f1 == f2) {
+      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
+      }
+    } else {
+      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+          extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
+        }
+      }
     }
     print("Completion time:")
     print(Sys.time() - start)
     # save(out, file = "hausdorff_columbus")
     stopCluster(cl)
-    # closeAllConnections()  
-    haus.dists[lower.tri(haus.dists, diag=F)] <- out
-    # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
-    haus.dists <- haus.dists + t(haus.dists)
+    # closeAllConnections()
+    if (f1 == f2) {
+      haus.dists[lower.tri(haus.dists, diag=F)] <- out
+      # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
+      haus.dists <- haus.dists + t(haus.dists)
+    } else {
+      haus.dists <- out
+    }
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
     for (i in 1:n.combs) {
