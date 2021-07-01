@@ -101,7 +101,7 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
 #'@param tol value to be passed to "tol" in "directHaus".
 #'@return the extended hausdorff distance (max of directional from A to B and B to A)
 #'
-#'Last Edited: June 28 2021
+#'Last Edited: July 01 2021
 extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A), ", ", quote(B), ") must be projected. Try running ?spTransform().", sep=""))
@@ -163,7 +163,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'
 #'@return The directional extended hausdorff distance from A to B
 #'
-#'Last Edited: July 1 2021
+#'Last Edited: July 01 2021
 directHaus <- function(A, B, f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
@@ -249,7 +249,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'
 #'@return the extended hausdorff distance between point and B
 #'
-#'Last Edited: June 28 2021
+#'Last Edited: July 01 2021
 pointHaus <- function(point, B, f2, tol=NULL) {
     # calculate the directed Hausdorff distance between point and B (i.e. the min distance between point and B)
     point_to_B <- gDistance(point, B)
