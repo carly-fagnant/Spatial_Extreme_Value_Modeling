@@ -17,9 +17,11 @@ library(spdep)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
 
 # directHaus
-# Removed the mostly unused parameter f2
 # Allowed directHaus to perform computations when f1=1 instead of throwing an error
 # Extended the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
+# The output was originally a list, of one number. It now directly outputs a numeric value so that it doesn't have to be accessed by $direct.haus[1] in the other functions.
+# Added check if the regions are the same - should 0 be returned?
+# !!! Potentially add a case for f1=0 or f2=0?
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -118,34 +120,34 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     return(pointHaus(A, B, f2, tol=tol))
   } else if (type.of.B == "SpatialPoints") {
     return(pointHaus(B, A, f1, tol=tol))
-  } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons") {
+  } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons" || type.of.A == "SpatialPolygonsDataFrame") {
     if (f1 == 1) {
       # if f1 = 1 use the directed hausdorff distance between A and B (i.e. h(A, B))
-      A_to_B <- directHaus(A, B, 1)$direct.haus[1]
+      A_to_B <- directHaus(A, B, 1)
     } else if (f1 == 0) {
       # if f1 = 0 use the cartesian minimum distance between A and B
       A_to_B <- gDistance(A, B)
     } else {
       # use the extended directed hausdorff distance from A to B
-      A_to_B <- directHaus(A, B, f1, tol=tol)$direct.haus[1]
+      A_to_B <- directHaus(A, B, f1, tol=tol)
     }
   } else {
-    stop("A is not SpatialPoints, SpatialLines, or SpatialPolygons")
+    stop("A is not SpatialPoints, SpatialLines, SpatialPolygons, or SpatialPolygonsDataFrame")
   }
   
-  if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons") {
+  if (type.of.B == "SpatialLines" || type.of.B == "SpatialPolygons" || type.of.B == "SpatialPolygonsDataFrame") {
     if (f2 == 1) {
       # if f2 = 1 use the directed hausdorff distance between B and A (i.e. h(B, A))
-      B_to_A <- directHaus(B, A, 1)$direct.haus[1]
+      B_to_A <- directHaus(B, A, 1)
     } else if (f2 == 0) {
       # if f2 = 0 use the cartesian minimum distance between A and B
       B_to_A <- gDistance(A, B)
     } else {
       # use the directed extended hausdorff distance from B to A
-      B_to_A <- directHaus(B, A, f2, tol=tol)$direct.haus[1]
+      B_to_A <- directHaus(B, A, f2, tol=tol)
     }
   } else {
-    stop("B is not SpatialPoints, SpatialLines, or SpatialPolygons")
+    stop("B is not SpatialPoints, SpatialLines, SpatialPolygons, or SpatialPolygonsDataFrame")
   }
   haus.dist <- max(A_to_B, B_to_A)
   return(haus.dist)
@@ -165,11 +167,14 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'
 #'@return The directional extended hausdorff distance from A to B
 #'
-#'Last Edited: June 28 2021
-directHaus <- function(A, B, f1, tol=NULL) {
+#'Last Edited: July 1 2021
+directHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B), ") must be projected. Try running ?spTransform().", sep = ""))
   }
+  if(is.null(gDifference(A,B))) {
+    return(0) ## check if two regions are the same, if so return HD of zero
+  } 
   # generate points
   n <- 10000
   a.coords <- spsample(A, n=n, type="regular") # sample points within A
@@ -192,7 +197,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
   if (type.of.A == "SpatialLines") {
     #use length if A is a line
     overlap <- rgeos::gLength(overlap.region) / rgeos::gLength(A) 
-  } else if (type.of.A == "SpatialPolygons") {
+  } else if (type.of.A == "SpatialPolygons" | type.of.A == "SpatialPolygonsDataFrame") {
     # use area if A is a polygon
     overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]],"area")
   }
@@ -212,7 +217,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
     if (type.of.A == "SpatialLines") {
       #use length if A is a line
       overlap <- rgeos::gLength(overlap.region) / rgeos::gLength(A)  
-    } else if (type.of.A == "SpatialPolygons") {
+    } else if (type.of.A == "SpatialPolygons" | type.of.A == "SpatialPolygonsDataFrame") {
       # use area if A is a polygon
       overlap <- slot(overlap.region@polygons[[1]], "area") / slot(A@polygons[[1]],"area")
     }
@@ -223,15 +228,15 @@ directHaus <- function(A, B, f1, tol=NULL) {
   #Get buffer coordinates
   if (type.of.A == "SpatialLines") {
     buff.coords <- SpatialPoints(overlap.region@lines[[1]]@Lines[[1]]@coords, proj4string=CRS(proj4string(A))) 
-  } else if (type.of.A == "SpatialPolygons") {
+  } else if (type.of.A == "SpatialPolygons" | type.of.A == "SpatialPolygonsDataFrame") {
     buff.coords <- SpatialPoints(slot(overlap.region@polygons[[1]]@Polygons[[1]], "coords"), proj4string=CRS(proj4string(A)))
   }
   epsilon <- max(gDistance(buff.coords, B, byid=T))
   ## visualize how much area was captured?
-  
-  out <- list(epsilon)
-  names(out) <- c("direct.haus")
-  return(out)
+  return(epsilon)
+  #out <- list(epsilon)
+  #names(out) <- c("direct.haus")
+  #return(out)
 }
 
 # pointHaus ---------------------------------------------------------------
@@ -258,7 +263,7 @@ pointHaus <- function(point, B, f2, tol=NULL) {
         return(point_to_B)
     } else {
         # calculate the extended directed Hausdorff distance from B to "point"
-        B_to_point <- directHaus(B, point, f2, tol=tol)$direct.haus[1]
+        B_to_point <- directHaus(B, point, f2, tol=tol)
         return(max(point_to_B, B_to_point))
     }
 }
