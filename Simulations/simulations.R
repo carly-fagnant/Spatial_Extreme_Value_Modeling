@@ -3,6 +3,8 @@
 
 #Read in the function(s)
 source('./Test/function.R')
+#source('./Test/functionV2.R') #read in updated functions
+#All simulations will be done under the old function unless otherwise indicated (f1=0, f1=1 cases)
 
 #The following "simulate" function will be used to store simulation results.
 #The parameters aside from num are those of the directHaus function:
@@ -19,6 +21,14 @@ simulate <- function(num=1000, A, B, f1, f2=f1, tol=NULL) {
   return(results)
 }
 
+#Used to easily access summary statistics to paste into Excel
+results_summ <- function(results) {
+  summ <- rep(NA, 8)
+  summ[1] <- length(results)
+  summ[2] <- sd(results)
+  summ[3:8] <- summary(results)
+  cat(summ, sep="\n")
+}
 
 #### Test Cases ####
 #Read in Watershed data
@@ -92,8 +102,145 @@ summary(results8)
 sd(results8)
 cat(results8, sep="\n") #use to get results to paste into Excel column
 
-#9: same region that is split in two for A and B - DOES NOT WORK
+#9: same region that is split in two for A and B - USE FUNCTION V2
 results9 <- unlist(simulate(A=subset(ws, WTSHNAME=="SPRING GULLY & GOOSE CREEK"),
                             B=subset(ws, WTSHNAME=="SPRING GULLY & GOOSE CREEK"), f1=.90))
+results9 <- unlist(simulate(A=subset(ws, WTSHNAME=="LUCE BAYOU"),
+                            B=subset(ws, WTSHNAME=="LUCE BAYOU"), f1=.60))
+results_summ(results9)
+cat(results9, sep="\n")
 
-#10: 
+
+#10-20: different f1/f2 combinations for the same region
+plot(subset(ws, WTSHNAME=="GREENS BAYOU" | WTSHNAME=="JACKSON BAYOU"))
+results10 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.25))
+results_summ(results10)
+cat(results10, sep="\n")
+
+
+results11 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.50))
+results_summ(results11)
+cat(results11, sep="\n")
+
+
+results12 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.75))
+results_summ(results12)
+cat(results12, sep="\n")
+
+#run simulation 13 with updated function
+results13 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=1))
+results_summ(results13)
+cat(results13, sep="\n")
+
+
+#DOES NOT WORK WITH f=0 in old function: Error in slot(overlap.region@polygons[[1]], "area") : 
+#  trying to get slot "polygons" from an object of a basic class ("NULL") with no slots
+#results14 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+#                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=0))
+results14 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.99))
+results_summ(results14)
+cat(results14, sep="\n")
+
+
+results15 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.01))
+results_summ(results15)
+cat(results15, sep="\n")
+
+
+results16 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.3, f2=.7))
+results_summ(results16)
+cat(results16, sep="\n")
+
+
+results17 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.4, f2=.6))
+results_summ(results17)
+cat(results17, sep="\n")
+
+
+results18 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.7, f2=.3))
+results_summ(results18)
+cat(results18, sep="\n")
+
+
+results19 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.6, f2=.4))
+results_summ(results19)
+cat(results19, sep="\n")
+
+
+results20 <- unlist(simulate(A=subset(ws, WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="JACKSON BAYOU"), f1=.9, f2=.2))
+results_summ(results20)
+cat(results20, sep="\n")
+
+#21-24: changing tolerance
+plot(subset(ws, WTSHNAME=="ADDICKS RESERVOIR" | WTSHNAME=="BRAYS BAYOU"))
+results21 <- unlist(simulate(A=subset(ws, WTSHNAME=="ADDICKS RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="BRAYS BAYOU"), f1=.80, tol=1/1000))
+results_summ(results21)
+cat(results21, sep="\n")
+
+
+results22 <- unlist(simulate(A=subset(ws, WTSHNAME=="ADDICKS RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="BRAYS BAYOU"), f1=.80, tol=1/100))
+results_summ(results22)
+cat(results22, sep="\n")
+
+results23 <- unlist(simulate(A=subset(ws, WTSHNAME=="ADDICKS RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="BRAYS BAYOU"), f1=.80, tol=1/10))
+results_summ(results23)
+cat(results23, sep="\n")
+
+results24 <- unlist(simulate(A=subset(ws, WTSHNAME=="ADDICKS RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="BRAYS BAYOU"), f1=.50, f2=.75, tol=1/100))
+results_summ(results24)
+cat(results24, sep="\n")
+
+#25-30: maybe the furthest regions
+plot(subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="CLEAR CREEK"))
+results25 <- unlist(simulate(A=subset(ws, WTSHNAME=="SPRING CREEK"),
+                             B=subset(ws, WTSHNAME=="CLEAR CREEK"), f1=.50))
+results_summ(results25)
+cat(results25, sep="\n")
+
+#use updated function since f1=1
+results26 <- unlist(simulate(A=subset(ws, WTSHNAME=="SPRING CREEK"),
+                             B=subset(ws, WTSHNAME=="CLEAR CREEK"), f1=1))
+results_summ(results26)
+cat(results26, sep="\n")
+
+
+plot(subset(ws, WTSHNAME=="BARKER RESERVOIR" | WTSHNAME=="LUCE BAYOU"))
+results27 <- unlist(simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="LUCE BAYOU"), f1=.50))
+results_summ(results27)
+cat(results27, sep="\n")
+
+
+results28 <- unlist(simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="LUCE BAYOU"), f1=.30))
+results_summ(results28)
+cat(results28, sep="\n")
+
+
+plot(subset(ws, WTSHNAME=="BARKER RESERVOIR" | WTSHNAME=="CEDAR BAYOU"))
+results29 <- unlist(simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="CEDAR BAYOU"), f1=.50))
+results_summ(results29)
+cat(results29, sep="\n")
+
+
+#use updated function since f1=1
+results30 <- unlist(simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                             B=subset(ws, WTSHNAME=="CEDAR BAYOU"), f1=1))
+results_summ(results30)
+cat(results30, sep="\n")
