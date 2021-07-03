@@ -35,7 +35,7 @@ library(spdep)
   # gDistance(point, B)
 # Changed variable names to make them consistent with the input parameter names
 
-hausMat -----------------------------------------------------------------
+# hausMat -----------------------------------------------------------------
 #' Creating a matrix of (extended) Hausdorff distances
 #' 
 #' This function takes a SpatialPolygons object and a decimal in [0, 1].
@@ -152,7 +152,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
                ") must be projected. Try running ?spTransform().", sep=""))
   }
   if (is.null(gDifference(A, B))) {
-    return(0)
+    return (0)
   } # check if two regions are the same, if so return a hausdorff distance of zero.
   
   # get the class of A and B to perform calculations accordingly
@@ -164,9 +164,9 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     return (gDistance(A, B))
   } else if (type.of.A == "SpatialPoints") {
     # if one of A or B are points, delegate to pointHaus
-    return(pointHaus(A, B, f2, tol=tol))
+    return (pointHaus(A, B, f2, tol=tol))
   } else if (type.of.B == "SpatialPoints") {
-    return(pointHaus(B, A, f1, tol=tol))
+    return (pointHaus(B, A, f1, tol=tol))
   } else if (type.of.A == "SpatialLines" || type.of.A == "SpatialPolygons" ||
              type.of.A == "SpatialPolygonsDataFrame" || 
              type.of.A == "SpatialLinesDataFrame") {
@@ -195,7 +195,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
     stop("B is not SpatialPoints, SpatialLines, SpatialPolygons, or SpatialPolygonsDataFrame or SpatialLinesDataFrame")
   }
   haus.dist <- max(A_to_B, B_to_A)
-  return(haus.dist)
+  return (haus.dist)
 }
 
 # directHaus --------------------------------------------------------------
@@ -229,7 +229,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
     return(0) ## check if two regions are the same, if so return HD of zero
   }
   if (f1 == 0) {
-    return(gDistance(A, B))
+    return (gDistance(A, B))
   }
   # generate points
   n <- 10000
@@ -241,12 +241,22 @@ directHaus <- function(A, B, f1, tol=NULL) {
   if(is.null(tol)){
     tol <- sd(dists[1,]) / 100
   }
+  
   # find desired quantile of distances
   epsilon <- as.numeric(quantile(dists[1,], f1)) #buffer width
   buff <- buffer(B, width=epsilon, dissolve=T)
   # raster::buffer should be point/polgon/line friendly
   overlap.region <- gIntersection(buff, A) # overlap region of buffer+B with A
   # rgeos:gIntersection should be polygon/line friendly https://cran.rstudio.com/web/packages/rgeos/rgeos.pdf
+  
+  
+  # if the buffer isn't wide enough to create a region that overlaps with A
+  # increment epsilon until buff and A overlap
+  while (is.null(overlap.region)) {
+    epsilon <- epsilon * 1.1
+    buff <- buffer(B, width=epsilon, dissolve=T)
+    overlap.region <- gIntersection(buff, A)
+  }
   
   type.of.A <- class(A)[1]
   # calculate fraction of A in the overlap region
@@ -262,7 +272,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
   eps_diff <- abs(f1 - overlap)
   i <- 2
   k <- 1
-  # expand the buffer width until |f1 - fraction of A in the overlap| is 
+  # expand or contract the buffer width until |f1 - fraction of A in the overlap| is 
   # within the specified tolerance
   while (eps_diff > tol) {
     if (abs(f1 - overlap) < 10^(-i) || k > 10) {
@@ -298,7 +308,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
   }
   epsilon <- max(gDistance(buff.coords, B, byid=T))
   ## visualize how much area was captured?
-  return(epsilon)
+  return (epsilon)
 }
 
 # pointHaus ---------------------------------------------------------------
@@ -325,10 +335,10 @@ pointHaus <- function(point, B, f2, tol=NULL) {
   if (f2 == 0) {
     # if f2=0, h(B, "point") equals the minimum distance between "point"
     # and B which equals the value above.
-    return(point_to_B)
+    return (point_to_B)
   } else {
     # calculate the extended directed Hausdorff distance from B to "point"
     B_to_point <- directHaus(B, point, f2, tol=tol)
-    return(max(point_to_B, B_to_point))
+    return (max(point_to_B, B_to_point))
   }
 }
