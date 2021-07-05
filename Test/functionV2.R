@@ -26,6 +26,7 @@ library(spdep)
 # The output was originally a list, of one number. It now directly outputs a numeric value so that it doesn't have to be accessed by $direct.haus[1] in the other functions.
 # Added check if the regions are the same. At the moment 0 is returned but should 0 be returned?
 # Added a case for f1=0 (simply return the minimum distance between A and B instead of performing the epsilon-buffer procedure)
+# Ensured that the function does not fail for small values of f1 (e.g. f1 < 0.001) by adding a is.null check on the buffer + A overlap region.
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -161,7 +162,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   
   if (type.of.A == "SpatialPoints" && type.of.B == "SpatialPoints") {
     # if both A and B are points, return the cartesian minimum distance between them
-    return (gDistance(A, B))
+    return (rgeos::gDistance(A, B))
   } else if (type.of.A == "SpatialPoints") {
     # if one of A or B are points, delegate to pointHaus
     return (pointHaus(A, B, f2, tol=tol))
@@ -172,7 +173,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
              type.of.A == "SpatialLinesDataFrame") {
     if (f1 == 0) {
       # if f1 = 0 use the cartesian minimum distance between A and B
-      A_to_B <- gDistance(A, B)
+      A_to_B <- rgeos::gDistance(A, B)
     } else {
       # use the extended directed hausdorff distance from A to B
       A_to_B <- directHaus(A, B, f1, tol=tol)
@@ -186,7 +187,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
       type.of.B == "SpatialLinesDataFrame") {
     if (f2 == 0) {
       # if f2 = 0 use the cartesian minimum distance between A and B
-      B_to_A <- gDistance(A, B)
+      B_to_A <- rgeos::gDistance(A, B)
     } else {
       # use the directed extended hausdorff distance from B to A
       B_to_A <- directHaus(B, A, f2, tol=tol)
@@ -221,22 +222,21 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'
 #'Last Edited: July 01 2021
 directHaus <- function(A, B, f1, tol=NULL) {
-  if (!is.projected(A) | !is.projected(B)) {
+  if (!sp::is.projected(A) | !sp::is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B),
                ") must be projected. Try running ?spTransform().", sep = ""))
   }
-  if(is.null(gDifference(A,B))) {
+  if(is.null(rgeos::gDifference(A,B))) {
     return(0) ## check if two regions are the same, if so return HD of zero
   }
   if (f1 == 0) {
-    return (gDistance(A, B))
+    return (rgeos::gDistance(A, B))
   }
   # generate points
   n <- 10000
-  a.coords <- spsample(A, n=n, type="regular") # sample points within A
-  # sp::spsample should work with both polygons and lines: https://cran.r-project.org/web/packages/sp/sp.pdf
+  a.coords <- sp::spsample(A, n=n, type="regular") # sample points within A
   # compute minimum distance of points a.coords to a point in B
-  dists <- gDistance(a.coords, B, byid=T)
+  dists <- rgeos::gDistance(a.coords, B, byid=T)
   
   if(is.null(tol)){
     tol <- sd(dists[1,]) / 100
@@ -244,18 +244,16 @@ directHaus <- function(A, B, f1, tol=NULL) {
   
   # find desired quantile of distances
   epsilon <- as.numeric(quantile(dists[1,], f1)) #buffer width
-  buff <- buffer(B, width=epsilon, dissolve=T)
-  # raster::buffer should be point/polgon/line friendly
-  overlap.region <- gIntersection(buff, A) # overlap region of buffer+B with A
-  # rgeos:gIntersection should be polygon/line friendly https://cran.rstudio.com/web/packages/rgeos/rgeos.pdf
-  
+  buff <- raster::buffer(B, width=epsilon, dissolve=T)
+  overlap.region <- rgeos::gIntersection(buff, A) # overlap region of buffer+B with A
+  # returns null if buff and A do not intersect
   
   # if the buffer isn't wide enough to create a region that overlaps with A
   # increment epsilon until buff and A overlap
   while (is.null(overlap.region)) {
     epsilon <- epsilon * 1.1
     buff <- buffer(B, width=epsilon, dissolve=T)
-    overlap.region <- gIntersection(buff, A)
+    overlap.region <- rgeos::gIntersection(buff, A)
   }
   
   type.of.A <- class(A)[1]
@@ -281,8 +279,8 @@ directHaus <- function(A, B, f1, tol=NULL) {
     }
     epsilon <- epsilon * (1 + sign(f1 - overlap) * 10^(-i))
     
-    buff <- buffer(B, width=epsilon, dissolve=T)
-    overlap.region <- gIntersection(buff, A);
+    buff <- raster::buffer(B, width=epsilon, dissolve=T)
+    overlap.region <- rgeos::gIntersection(buff, A);
     if (type.of.A == "SpatialLines" || type.of.A == "SpatialLinesDataFrame") {
       #use length if A is a line
       overlap <- rgeos::gLength(overlap.region) / 
@@ -302,11 +300,11 @@ directHaus <- function(A, B, f1, tol=NULL) {
                                  proj4string=CRS(proj4string(A))) 
   } else if (type.of.A == "SpatialPolygons" || 
              type.of.A == "SpatialPolygonsDataFrame") {
-    buff.coords <- SpatialPoints(slot(overlap.region@polygons[[1]]@Polygons[[1]], 
+    buff.coords <- sp::SpatialPoints(slot(overlap.region@polygons[[1]]@Polygons[[1]], 
                                       "coords"),
                                  proj4string=CRS(proj4string(A)))
   }
-  epsilon <- max(gDistance(buff.coords, B, byid=T))
+  epsilon <- max(rgeos::gDistance(buff.coords, B, byid=T))
   ## visualize how much area was captured?
   return (epsilon)
 }
@@ -331,14 +329,14 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'Last Edited: July 01 2021
 pointHaus <- function(point, B, f2, tol=NULL) {
   # calculate the directed Hausdorff distance between point and B (i.e. the min distance between point and B)
-  point_to_B <- gDistance(point, B)
+  point_to_B <- rgeos::gDistance(point, B)
   if (f2 == 0) {
     # if f2=0, h(B, "point") equals the minimum distance between "point"
     # and B which equals the value above.
     return (point_to_B)
   } else {
     # calculate the extended directed Hausdorff distance from B to "point"
-    B_to_point <- directHaus(B, point, f2, tol=tol)
+    B_to_point <- rgeos::directHaus(B, point, f2, tol=tol)
     return (max(point_to_B, B_to_point))
   }
 }
