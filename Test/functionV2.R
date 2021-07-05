@@ -11,6 +11,7 @@ library(spdep)
 
 #hausMat
 #Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
+#Question: Should be using directHaus instead of extHaus anyways?
 
 # extHaus
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
@@ -18,15 +19,18 @@ library(spdep)
 # In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
   # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) (when f2 == 1)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
+# Question: Delegate to gDistance(A, B, hausdorff=T, byid=T) if f1 = f2 = 1?
 
 # directHaus
 # Removed the mostly unused parameter f2
 # Allowed directHaus to perform computations when f1=1 instead of throwing an error
 # Extendeded the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
 # The output was originally a list, of one number. It now directly outputs a numeric value so that it doesn't have to be accessed by $direct.haus[1] in the other functions.
-# Added check if the regions are the same. At the moment 0 is returned but should 0 be returned?
+# Added check if the regions are the same.
 # Added a case for f1=0 (simply return the minimum distance between A and B instead of performing the epsilon-buffer procedure)
 # Ensured that the function does not fail for small values of f1 (e.g. f1 < 0.001) by adding a is.null check on the buffer + A overlap region.
+# Question: at the moment, if both regions are the same, zero is returned. Should zero be returned?
+# Question: how to go about the case where f1 is very small and the buffer does not overlap with A? Is the current approach fine?
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -59,6 +63,8 @@ library(spdep)
 #'                   set up a cluster with the "foreach" package. 
 #'  
 #'@return an nxn matrix of requested distances.
+#'
+#' Last edited: July 5 2020
 hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
   if (timer) {
     start <- Sys.time()
@@ -126,6 +132,53 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
   return(haus.dists)
 }
 
+hausMat2 <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
+  if (timer) {
+    start <- Sys.time()
+  }
+  n <- nrow(shp@data)
+  haus.dists <- matrix(0, nrow=n, ncol=n)
+  if (do.parallel) {
+    #out <- matrix(-1, nrow = 20, ncol = 20)
+    start <- Sys.time()
+    print("Setting up parallelization")
+    cl <- makeCluster(ncores)
+    registerDoParallel(cl)
+    print("Computing...")
+    # compute the extended hausdorff distance for every combination of regions (in parallel)
+    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        if (i < j) {
+          directHaus(shp[i,], shp[j,], f1)
+        } else {
+          directHaus(shp[i,], shp[j,], f2)  
+        } 
+      }
+    }
+    print("Completion time:")
+    print(Sys.time() - start)
+    # save(out, file = "hausdorff_columbus")
+    stopCluster(cl)
+    # closeAllConnections()
+    haus.dists <- out
+  } else {
+    # compute the extended hausdorff distance for every combination of regions (sequentially)
+    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        if (i < j) {
+          directHaus(shp[i,], shp[j,], f1)
+        } else {
+          directHaus(shp[i,], shp[j,], f2)  
+        } 
+      }
+    }
+    haus.dists <- out
+  }
+  ## add 0's to diagonal
+  #if(fileout){save(haus.dists, file=filename)}
+  return(haus.dists)
+}
+
 # extHaus -----------------------------------------------------------------
 #' Extended Hausdorff Distance
 #'
@@ -146,7 +199,7 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
 #'
 #'@return the extended hausdorff distance (max of directional from A to B and B to A)
 #'
-#'Last Edited: July 01 2021
+#' Last Edited: July 5 2021
 extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A), ", ", quote(B),
@@ -220,7 +273,7 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
 #'
 #'@return The directional extended hausdorff distance from A to B
 #'
-#'Last Edited: July 01 2021
+#' Last Edited: July 5 2021
 directHaus <- function(A, B, f1, tol=NULL) {
   if (!sp::is.projected(A) | !sp::is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B),
@@ -326,7 +379,7 @@ directHaus <- function(A, B, f1, tol=NULL) {
 #'
 #'@return the extended hausdorff distance between point and B
 #'
-#'Last Edited: July 01 2021
+#' Last Edited: July 5 2021
 pointHaus <- function(point, B, f2, tol=NULL) {
   # calculate the directed Hausdorff distance between point and B (i.e. the min distance between point and B)
   point_to_B <- rgeos::gDistance(point, B)
