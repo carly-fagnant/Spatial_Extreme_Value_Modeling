@@ -114,12 +114,12 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
     if (f1 == f2) {
-      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
         extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
       }
     } else {
-      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
+        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
           extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
         }
       }
@@ -168,8 +168,8 @@ hausMat2 <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, tim
     haus.dists <- out
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
-    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
+      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
         if (i < j) {
           directHaus(shp[i,], shp[j,], f1)
         } else {
@@ -246,12 +246,12 @@ hausMatFastBoi <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
     if (f1 == f2) {
-      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
         extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
       }
     } else {
-      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
+        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
           extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
         }
       }
