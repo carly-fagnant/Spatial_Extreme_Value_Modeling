@@ -12,6 +12,7 @@ library(spdep)
 
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
+# Testing: compare running times of hausMat + hausMatFastBoi
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
 # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
 # From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
@@ -19,12 +20,12 @@ library(spdep)
 # make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
 
 # extHaus
+# Testing: is delegating to gDistance(A, B, hausdorff=T, byid=T) when f1 = f2 = 1 worth it?
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
 # Extended the function's capabilities to handle {point, point}, {point, line}, {point, area}, {line, line}, {line, area}, and {area, area} calculations
 # In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
   # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) (when f2 == 1)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
-# Question: Delegate to gDistance(A, B, hausdorff=T, byid=T) if f1 = f2 = 1? A: Try testing it
 
 # directHaus
 # Removed the mostly unused parameter f2
