@@ -203,7 +203,8 @@ hausMatFastBoi <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=
     print("Computing...")
     # compute the extended hausdorff distance for every combination of regions (in parallel)
     if (f1 == f2) {
-      iterPerCore <- ceiling(n.combs / ncores)
+      # calculate how many sequential iterations we need to do per core to avoid creating more parallel tasks than cores
+      iterPerCore <- ceiling(n.combs / ncores) 
       out <- foreach (k = 1:ncores, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
         for (iter in 1:iterPerCore) {
           i <- ((k - 1) * iterPerCore) + iter
@@ -215,13 +216,18 @@ hausMatFastBoi <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=
         }
       }
     } else {
-      iterPerCore <- n^2 / ncores
+      # calculate how many sequential iterations we need to do per core to avoid creating more parallel tasks than cores
+      iterPerCore <- ceiling(n^2 / ncores)
       out <- foreach (k = 1:ncores, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
         for (iter in 1:iterPerCore) {
           index <- ((k - 1) * iterPerCore) + iter
           i <- floor(index / n)
           j <- index %% n
-          extHaus(shp[i,], shp[j,], f1=f1, f2=f2)
+          if (i > n || j > n) {
+            break
+          } else {
+            extHaus(shp[i,], shp[j,], f1=f1, f2=f2)
+          }
         }
       }
     }
