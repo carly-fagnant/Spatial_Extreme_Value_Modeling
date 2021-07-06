@@ -417,7 +417,7 @@ pointHaus <- function(point, B, f2, tol=NULL) {
     return (point_to_B)
   } else {
     # calculate the extended directed Hausdorff distance from B to "point"
-    B_to_point <- rgeos::directHaus(B, point, f2, tol=tol)
+    B_to_point <- directHaus(B, point, f2, tol=tol)
     return (max(point_to_B, B_to_point))
   }
 }
