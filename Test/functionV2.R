@@ -113,26 +113,18 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
     if (f1 == f2) {
-      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-        extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
+      for (i in 1:n.combs) {
+        haus.dists[combs[1,i], combs[2,i]] <- extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
       }
+      haus.dists <- haus.dists + t(haus.dists)
     } else {
-      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-          extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
+      for (i in 1:n) {
+        for (j in 1:n) {
+          haus.dists[i, j] <- extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
         }
       }
     }
-    if (f1 == f2) {
-      haus.dists[lower.tri(haus.dists, diag=F)] <- out
-      # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
-      haus.dists <- haus.dists + t(haus.dists)
-    } else {
-      haus.dists <- out
-    }
   }
-  ## add 0's to diagonal
-  #if(fileout){save(haus.dists, file=filename)}
   return(haus.dists)
 }
 
@@ -200,26 +192,18 @@ hausMatFastBoi <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=
   } else {
     # compute the extended hausdorff distance for every combination of regions (sequentially)
     if (f1 == f2) {
-      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-        extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
+      for (i in 1:n.combs) {
+        haus.dists[combs[1,i], combs[2,i]] <- extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
       }
+      haus.dists <- haus.dists + t(haus.dists)
     } else {
-      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-          extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
+      for (i in 1:n) {
+        for (j in 1:n) {
+          haus.dists[i, j] <- extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
         }
       }
     }
-    if (f1 == f2) {
-      haus.dists[lower.tri(haus.dists, diag=F)] <- out
-      # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
-      haus.dists <- haus.dists + t(haus.dists)
-    } else {
-      haus.dists <- out
-    }
   }
-  ## add 0's to diagonal
-  #if(fileout){save(haus.dists, file=filename)}
   return(haus.dists)
 }
 
