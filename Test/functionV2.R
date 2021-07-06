@@ -1,5 +1,6 @@
 # Libraries ---------------------------------------------------------------
 library(doParallel)
+library(foreach)
 library(ggsn)
 library(raster)
 library(rgdal)
