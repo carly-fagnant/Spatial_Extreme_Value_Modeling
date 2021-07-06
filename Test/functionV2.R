@@ -12,6 +12,11 @@ library(spdep)
 #hausMat
 #Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
 #Question: Should be using directHaus instead of extHaus anyways?
+#Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
+#Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
+# From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
+# Running many tiny tasks in parallel will usually take more time to execute than running them sequentially, and if it already runs fast, there’s no motivation to 
+# make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
 
 # extHaus
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
