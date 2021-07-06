@@ -12,7 +12,6 @@ library(spdep)
 
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
-# Question: Should be using directHaus instead of extHaus?
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
 # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
 # From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
@@ -25,7 +24,7 @@ library(spdep)
 # In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
   # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) (when f2 == 1)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
-# Question: Delegate to gDistance(A, B, hausdorff=T, byid=T) if f1 = f2 = 1?
+# Question: Delegate to gDistance(A, B, hausdorff=T, byid=T) if f1 = f2 = 1? A: Try testing it
 
 # directHaus
 # Removed the mostly unused parameter f2
@@ -35,8 +34,6 @@ library(spdep)
 # Added check if the regions are the same.
 # Added a case for f1=0 (simply return the minimum distance between A and B instead of performing the epsilon-buffer procedure)
 # Ensured that the function does not fail for small values of f1 (e.g. f1 < 0.001) by adding a is.null check on the buffer + A overlap region.
-# Question: at the moment, if both regions are the same, zero is returned. Should zero be returned?
-# Question: how to go about the case where f1 is very small and the buffer does not overlap with A? Is the current approach fine?
 
 # pointHaus
 # Replaced gDistance(point, B, hausdorff=T, byid=T) with gDistance(point, B)
@@ -132,54 +129,6 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
     } else {
       haus.dists <- out
     }
-  }
-  ## add 0's to diagonal
-  #if(fileout){save(haus.dists, file=filename)}
-  return(haus.dists)
-}
-
-# Modified version of hausMat that uses directHaus instead
-hausMat2 <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
-  if (timer) {
-    start <- Sys.time()
-  }
-  n <- nrow(shp@data)
-  haus.dists <- matrix(0, nrow=n, ncol=n)
-  if (do.parallel) {
-    #out <- matrix(-1, nrow = 20, ncol = 20)
-    start <- Sys.time()
-    print("Setting up parallelization")
-    cl <- makeCluster(ncores)
-    registerDoParallel(cl)
-    print("Computing...")
-    # compute the extended hausdorff distance for every combination of regions (in parallel)
-    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
-        if (i < j) {
-          directHaus(shp[i,], shp[j,], f1)
-        } else {
-          directHaus(shp[i,], shp[j,], f2)  
-        } 
-      }
-    }
-    print("Completion time:")
-    print(Sys.time() - start)
-    # save(out, file = "hausdorff_columbus")
-    stopCluster(cl)
-    # closeAllConnections()
-    haus.dists <- out
-  } else {
-    # compute the extended hausdorff distance for every combination of regions (sequentially)
-    out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-      foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %do% {
-        if (i < j) {
-          directHaus(shp[i,], shp[j,], f1)
-        } else {
-          directHaus(shp[i,], shp[j,], f2)  
-        } 
-      }
-    }
-    haus.dists <- out
   }
   ## add 0's to diagonal
   #if(fileout){save(haus.dists, file=filename)}
