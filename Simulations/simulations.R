@@ -30,8 +30,9 @@ results_summ <- function(results) {
   cat(summ, sep="\n")
 }
 
-#### Test Cases ####
-#Read in Watershed data
+
+# Test Cases --------------------------------------------------------------
+#### Read in Watershed data ####
 shape <- readOGR('./Test/watershed.shp')
 ws <- spTransform(shape, CRS("+init=epsg:2278"))
 plot(ws)
@@ -244,3 +245,75 @@ results30 <- unlist(simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
                              B=subset(ws, WTSHNAME=="CEDAR BAYOU"), f1=1))
 results_summ(results30)
 cat(results30, sep="\n")
+
+
+#31-35: A and/or B are a few watershed regions instead of just 1
+plot(subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="GREENS BAYOU" | WTSHNAME=="BARKER RESERVOIR"))
+results31 <- unlist(simulate(A=subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="GREENS BAYOU"),
+                             B=subset(ws, WTSHNAME=="BARKER RESERVOIR"), f1=.5))
+results_summ(results31)
+cat(results31, sep="\n")
+
+plot(subset(ws, WTSHNAME=="WHITE OAK BAYOU" | WTSHNAME=="CARPENTERS BAYOU" | WTSHNAME=="GREENS BAYOU"))
+results32 <- unlist(simulate(A=subset(ws, WTSHNAME=="WHITE OAK BAYOU" | WTSHNAME=="CARPENTERS BAYOU"),
+                             B=subset(ws, WTSHNAME=="GREENS BAYOU"), f1=.5))
+results_summ(results32)
+cat(results32, sep="\n")
+
+plot(subset(ws, WTSHNAME=="WILLOW CREEK" | WTSHNAME=="JACKSON BAYOU" |
+              WTSHNAME=="SIMS BAYOU" | WTSHNAME=="ARMAND BAYOU"))
+results33 <- unlist(simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK" | WTSHNAME=="JACKSON BAYOU"),
+                             B=subset(ws, WTSHNAME=="SIMS BAYOU" | WTSHNAME=="ARMAND BAYOU"), f1=.5))
+results_summ(results33)
+cat(results33, sep="\n")
+
+results34 <- unlist(simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK" | WTSHNAME=="JACKSON BAYOU"),
+                             B=subset(ws, WTSHNAME=="SIMS BAYOU" | WTSHNAME=="ARMAND BAYOU"), f1=.85))
+results_summ(results34)
+cat(results34, sep="\n")
+
+plot(subset(ws, WTSHNAME=="CLEAR CREEK" |
+              WTSHNAME=="CYPRESS CREEK" | WTSHNAME=="WILLOW CREEK" | WTSHNAME=="SPRING CREEK"))
+results35 <- unlist(simulate(A=subset(ws, WTSHNAME=="CLEAR CREEK"),
+                             B=subset(ws, WTSHNAME=="CYPRESS CREEK" | WTSHNAME=="WILLOW CREEK" | WTSHNAME=="SPRING CREEK"), f1=.5))
+results_summ(results35)
+cat(results35, sep="\n")
+
+
+#### Watershed Regions ####
+region <- readOGR('./Test/watershed_region.shp')
+region <- spTransform(region, CRS("+init=epsg:2278"))
+#examine each region
+plot(region)
+plot(subset(region, region$REGION==1))
+plot(subset(region, region$REGION==2))
+plot(subset(region, region$REGION==3))
+
+region_results1 <- unlist(simulate(A=subset(region, region$REGION==1),
+                                   B=subset(region, region$REGION==2), f1=0.5))
+results_summ(region_results1)
+cat(region_results1, sep="\n")
+
+region_results2 <- unlist(simulate(A=subset(region, region$REGION==1),
+                                   B=subset(region, region$REGION==3), f1=0.5))
+
+region_results3 <- unlist(simulate(A=subset(region, region$REGION==2),
+                                   B=subset(region, region$REGION==3), f1=0.5))
+
+region_results4 <- unlist(simulate(A=subset(region, region$REGION==3),
+                                   B=subset(region, region$REGION==1), f1=0.5))
+
+#### Zip Codes ####
+shape <- readOGR('./Data/Zip_Codes/Zip_Codes.shp')
+zip <- spTransform(shape, CRS("+init=epsg:2278"))
+plot(zip)
+
+#Run this & record results for a number of times, change f parameter as needed
+zipcodes <- sample(1:length(zip$ZIP_CODE), 2, replace=FALSE)
+(a <- zip$ZIP_CODE[zipcodes[1]])
+(b <- zip$ZIP_CODE[zipcodes[2]])
+zip_results <- unlist(simulate(A=subset(zip, ZIP_CODE==a),
+                               B=subset(zip, ZIP_CODE==b), f1=0.5))
+
+results_summ(zip_results)
+cat(zip_results, sep="\n")
