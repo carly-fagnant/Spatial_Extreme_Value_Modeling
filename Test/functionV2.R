@@ -184,6 +184,85 @@ hausMat2 <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, tim
   return(haus.dists)
 }
 
+hausMatFastBoi <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, timer=F, do.parallel=T) {
+  if (timer) {
+    start <- Sys.time()
+  }
+  n <- nrow(shp@data)
+  if (f1 == f2) {
+    combs <- combn(1:n, 2) # n choose 2 combinations
+    n.combs <- ncol(combs)
+  }
+  haus.dists <- matrix(0, nrow=n, ncol=n)
+  if (do.parallel) {
+    #out <- matrix(-1, nrow = 20, ncol = 20)
+    start <- Sys.time()
+    print("Setting up parallelization")
+    cl <- makeCluster(ncores)
+    registerDoParallel(cl)
+    print("Computing...")
+    # compute the extended hausdorff distance for every combination of regions (in parallel)
+    if (f1 == f2) {
+      iterPerCore <- ceiling(n.combs / ncores)
+      out <- foreach (k = 1:ncores, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        for (iter in 1:iterPerCore) {
+          i <- ((k - 1) * iterPerCore) + iter
+          if (i > n.combs) {
+            break
+          } else {
+            extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)   
+          }
+        }
+      }
+    } else {
+      iterPerCore <- n^2 / ncores
+      out <- foreach (k = 1:ncores, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        for (iter in 1:iterPerCore) {
+          index <- ((k - 1) * iterPerCore) + iter
+          i <- floor(index / n)
+          j <- index %% n
+          extHaus(shp[i,], shp[j,], f1=f1, f2=f2)
+        }
+      }
+    }
+    print("Completion time:")
+    print(Sys.time() - start)
+    # save(out, file = "hausdorff_columbus")
+    stopCluster(cl)
+    # closeAllConnections()
+    if (f1 == f2) {
+      haus.dists[lower.tri(haus.dists, diag=F)] <- out
+      # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
+      haus.dists <- haus.dists + t(haus.dists)
+    } else {
+      haus.dists <- out
+    }
+  } else {
+    # compute the extended hausdorff distance for every combination of regions (sequentially)
+    if (f1 == f2) {
+      out <- foreach (i = 1:n.combs, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        extHaus(shp[combs[1,i],], shp[combs[2,i],], f1=f1)
+      }
+    } else {
+      out <- foreach (i = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+        foreach (j = 1:n, .packages=c("rgeos", "sp", "raster"), .combine=rbind, .export=c("directHaus", "extHaus")) %dopar% {
+          extHaus(shp[i,], shp[j,], f1=f1, f2=f2) 
+        }
+      }
+    }
+    if (f1 == f2) {
+      haus.dists[lower.tri(haus.dists, diag=F)] <- out
+      # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
+      haus.dists <- haus.dists + t(haus.dists)
+    } else {
+      haus.dists <- out
+    }
+  }
+  ## add 0's to diagonal
+  #if(fileout){save(haus.dists, file=filename)}
+  return(haus.dists)
+}
+
 # extHaus -----------------------------------------------------------------
 #' Extended Hausdorff Distance
 #'
