@@ -16,14 +16,6 @@ l2 <- raster::spLines(l2_coords, crs=crdref)
 p1 <- raster::spPolygons(p1_coords, crs=crdref)
 p2 <- raster::spPolygons(p2_coords, crs=crdref)
 
-#pt1 <- rgeos::readWKT("POINT(0.5 0.5)")
-#pt2 <- rgeos::readWKT("POINT(2 2)")
-#l1 <- rgeos::readWKT("LINESTRING(0 10, 1 1)")
-#l2 <- rgeos::readWKT("LINESTRING(3 2, 4 10)")
-#p1 <- rgeos::readWKT("POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))")
-#p2 <- rgeos::readWKT("POLYGON((2 0, 3 1, 4 0, 2 0))")
-
-
 inputs <- c(pt1, pt2, l1, l2, p1, p2)
 #specify CRS using the EPSG code but without using 
 # proj4strings like +init=epsg:????, +proj=longlat
