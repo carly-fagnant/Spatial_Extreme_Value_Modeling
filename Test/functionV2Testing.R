@@ -278,10 +278,10 @@ for (i in 1:10) {
 # Testing Hausdorff: hausMat vs hausMatFastBoi ----------------------------
 
 n <- 100
-coords <- matrix(c(1, 1), nrow=n, ncol=n, byrow=T)
-data <- as.data.frame(matrix(rep(0, n*n), nrow=n, ncol=n))
-for (i in 1:n) {
-  coords <- rbind(coords, matrix(runif(2), ncol=2, byrow=T))
+coords <- matrix(c(1, 1), nrow=1, ncol=2, byrow=T)
+data <- as.data.frame(matrix(rep(0, n*2), nrow=n, ncol=2))
+for (i in 2:n) {
+  coords <- rbind(coords, matrix(runif(2), ncol=2, nrow=1, byrow=T))
 }
 coords <- as.data.frame(coords)
 crdref <- sp::CRS("+init=epsg:2278")
@@ -290,7 +290,7 @@ spdf <- SpatialPointsDataFrame(coords=coords, data=data, proj4string=crdref)
 hmRunTime <- rep(0, n-1)
 fastBoiRunTime <- rep(0, n-1)
 diff <- rep(0, n-1)
-f1vec <- seq(from=0, to=1, length.out=n) 
+f1vec <- seq(from=0, to=1, length.out=n)
 
 #changing input size f1 does not equal f2
 maxN <- 100
