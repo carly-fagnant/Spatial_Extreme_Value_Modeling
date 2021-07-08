@@ -32,9 +32,9 @@ library(spdep)
 # directHaus
 # Removed the mostly unused parameter f2
 # Allowed directHaus to perform computations when f1=1 instead of throwing an error
-# Extendeded the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
+# Extended the function's capabilities to handle line-to-area, line-to-line, line-to-point, area-to-area, area-to-line, and area-to-point calculations
 # The output was originally a list, of one number. It now directly outputs a numeric value so that it doesn't have to be accessed by $direct.haus[1] in the other functions.
-# Added check if the regions are the same.
+# Added a check for the case where the two input regions are the same.
 # Added a case for f1=0 (simply return the minimum distance between A and B instead of performing the epsilon-buffer procedure)
 # Ensured that the function does not fail for small values of f1 (e.g. f1 < 0.001) by adding a is.null check on the buffer + A overlap region.
 
@@ -129,8 +129,8 @@ parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
     out <- foreach (i = 1:n.combs, .packages = c("rgeos", "sp", "raster"),
                     .combine = rbind,
                     .export = c("directHaus", "extHaus")) %dopar% {
-      extHaus(shp[combs[1,i],], shp[combs[2,i],], f1 = f1, tol = tol)
-    }
+      extHaus(shp[combs[1, i], ], shp[combs[2, i], ], f1 = f1, tol = tol)
+    } 
   } else {
     out <- foreach (i = 1:n,
                     .packages = c("rgeos", "sp", "raster", "doParallel",
@@ -140,7 +140,7 @@ parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
       foreach (j = 1:n,
                .packages = c("rgeos", "sp", "raster"), .combine = rbind,
                .export=c("directHaus", "extHaus")) %dopar% {
-        extHaus(shp[i,], shp[j,], f1 = f1, f2 = f2, tol = tol) 
+        extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2, tol = tol) 
       }
     }
   }
@@ -156,8 +156,8 @@ parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   return (haus.dists)
 }
 
-# Modified version of parHausMat that attempts to minimize the number of parallel tasks created by only creating 
-# "ncores" tasks and dividing the work evenly across tasks
+# Modified version of parHausMat that attempts to minimize the number of 
+# parallel tasks created by only creating  "ncores" tasks and dividing the work evenly across tasks
 parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   n <- nrow(shp@data)
   haus.dists <- matrix(0, nrow = n, ncol = n)
@@ -165,11 +165,13 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   cl <- makeCluster(ncores)
   registerDoParallel(cl)
   print("Computing...")
-  # compute the extended hausdorff distance for every combination of regions (in parallel)
+  # compute the extended hausdorff distance for every possible combination
+  # of regions (in parallel)
   if (f1 == f2) {
     combs <- combn(1:n, 2) # n choose 2 combinations
     n.combs <- ncol(combs)
-    # calculate how many sequential iterations we need to do per core to avoid creating more parallel tasks than cores
+    # calculate how many sequential iterations we need to do per core to
+    # avoid creating more parallel tasks than cores
     iterPerCore <- ceiling(n.combs / ncores)
     out <- foreach (k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
                     .combine = 'c',
@@ -187,9 +189,12 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
       val
     }
   } else {
-    # calculate how many sequential iterations we need to do per core to avoid creating more parallel tasks than cores
+    # calculate how many sequential iterations we need to do per core to 
+    # avoid creating more parallel tasks than cores
     iterPerCore <- ceiling(n^2 / ncores)
-    out <- foreach (k = 1:ncores, .packages=c("rgeos", "sp", "raster"), .combine='c', .export=c("directHaus", "extHaus")) %dopar% {
+    out <- foreach (k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
+                    .combine='c',
+                    .export = c("directHaus", "extHaus")) %dopar% {
       maxIter <- iterPerCore
       if (k == ncores) {
         maxIter <- n^2 - ((ncores - 1) * iterPerCore)
@@ -211,7 +216,8 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   
   if (f1 == f2) {
     haus.dists[lower.tri(haus.dists, diag = F)] <- out
-    # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
+    # use the fact that the Hausdorff distance matrix will be symmetrical to
+    # compute the upper triangular entries
     haus.dists <- haus.dists + t(haus.dists)
   } else {
     haus.dists <- matrix(out, nrow = n, byrow = T)
