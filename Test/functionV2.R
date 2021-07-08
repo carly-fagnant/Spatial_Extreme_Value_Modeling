@@ -223,7 +223,7 @@ parHausMatFastBoi <- function(shp, f1, f2=f1, ncores=1, tol=NULL) {
 #'
 #'@return the extended hausdorff distance (max of directional from A to B and B to A)
 #'
-#' Last Edited: July 5 2021
+#' Last Edited: July 7 2021
 extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   if (!is.projected(A) | !is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A), ", ", quote(B),
