@@ -1,3 +1,5 @@
+# A file for testing the functions in functionV2.R
+
 # Creating Spatial Objects ------------------------------------------------
 pt1_coords <- matrix(c(0.5, 0.5), ncol=2, byrow=T)
 pt2_coords <- matrix(c(2, 2), ncol=2, byrow=T)
