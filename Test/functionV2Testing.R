@@ -277,146 +277,67 @@ for (i in 1:10) {
 }
 # Testing Hausdorff: hausMat vs hausMatFastBoi ----------------------------
 
-n <- 10
-hmRunTime <- rep(0, n)
-fastBoiRunTime <- rep(0, n)
-diff <- rep(0, n)
+n <- 100
+coords <- matrix(c(1, 1), nrow=n, ncol=n, byrow=T)
+data <- as.data.frame(matrix(rep(0, n*n), nrow=n, ncol=n))
+for (i in 1:n) {
+  coords <- rbind(coords, matrix(runif(2), ncol=2, byrow=T))
+}
+coords <- as.data.frame(coords)
+crdref <- sp::CRS("+init=epsg:2278")
+spdf <- SpatialPointsDataFrame(coords=coords, data=data, proj4string=crdref)
+
+hmRunTime <- rep(0, n-1)
+fastBoiRunTime <- rep(0, n-1)
+diff <- rep(0, n-1)
 f1vec <- seq(from=0, to=1, length.out=n) 
 
-#f1=f2 case
-for (i in 1:n) {
-  start <- max(i %% (length(rivers) - 5), 1)
-  end <- start + 5
-  hmRunTime[i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                             ncores=detectCores()-1, tol=0.01)
-  fastBoiRunTime[i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                         ncores=detectCores()-1, tol=0.01)
-  diff[i] <- hmRunTime[i] - fastBoiRunTime[i]
-}
-hist(hmRunTime)
-hist(fastBoiRunTime)
-hist(diff)
-
-#f1 does not equal f2 case
-for (i in 1:n) {
-  start <- max(i %% (length(rivers) - 5), 1)
-  end <- start + 5
-  hmRunTime[i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                          f2=1-f1vec[i], ncores=detectCores()-1, tol=0.01)
-  fastBoiRunTime[i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                      f2=1-f1vec[i],
-                                   ncores=detectCores()-1, tol=0.01)
-  diff[i] <- hmRunTime[i] - fastBoiRunTime[i]
-}
-hist(hmRunTime)
-hist(fastBoiRunTime)
-hist(diff)
-
-#changing input size f1=f2
-for (size in 2:15) {
-  start <- 1
-  end <- start + size
-  hmRunTime[i] <- parHausMat(rivers[start:end,], f1=f1vec[i], f2=1-f1vec[i],
-                             ncores=detectCores()-1, tol=0.01)
-  fastBoiRunTime[i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                         f2=1-f1vec[i], ncores=detectCores()-1,
-                                         tol=0.01)
-  diff[i] <- hmRunTime[i] - fastBoiRunTime[i]
-  print(diff[i])
-}
-plot(x=c(2:15), y=hmRunTime)
-plot(x=c(2:15), y=fastBoiRunTime)
-plot(x=c(2:15), y=diff)
-
 #changing input size f1 does not equal f2
-for (size in 2:15) {
+maxN <- 100
+for (size in 2:maxN) {
   start <- 1
   end <- start + size
-  hmRunTime[i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                             ncores=detectCores()-1, tol=0.01)
-  fastBoiRunTime[i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                         ncores=detectCores()-1, tol=0.01)
-  diff[i] <- hmRunTime[i] - fastBoiRunTime[i]
-  print(diff[i])
+  hmRunTime[size - 1] <- parHausMat(spdf[start:end,], f1 = f1vec[size - 1],
+                                    f2 = 1 - f1vec[size - 1],
+                                    ncores = detectCores() - 1, tol = 0.01)
+  fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[start:end,],
+                                              f1 = f1vec[size - 1],
+                                              f2 = 1 - f1vec[size - 1],
+                                              ncores=detectCores() - 1,
+                                              tol = 0.01)
+  diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
 }
-plot(x=c(2:15), y=hmRunTime)
-plot(x=c(2:15), y=fastBoiRunTime)
-plot(x=c(2:15), y=diff)
+plot(hmRunTime[1:maxN - 1])
+plot(fastBoiRunTime[1:maxN - 1])
+plot(diff[1:maxN - 1])
+min(diff)
+mean(diff)
+max(diff)
+boxplot(hmRunTime[1:maxN - 1])
+boxplot(fastBoiRunTime[1:maxN - 1])
+boxplot(diff[1:maxN - 1])
+hist(diff[1:maxN - 1])
 
-#changing ncores
-maxcores <- detectCores() - 1
-hmRunTime <- matrix(rep(0, maxcores*n), nrow=maxcores)
-fastBoiRunTime <- matrix(rep(0, maxcores*n), nrow=maxcores)
-diff <- matrix(rep(0, maxcores*n), nrow=maxcores)
-for (core in 1:maxcores) {
-  for (i in 1:n) {
-    start <- max(i %% (length(rivers) - 5), 1)
-    end <- start + 5
-    hmRunTime[core,i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                                    ncores=core, tol=0.01)
-    fastBoiRunTime[core,i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                                ncores=core, tol=0.01)
-    diff[core,i] <- hmRunTime[core,i] - fastBoiRunTime[core,i]
-  }
-  hist(hmRunTime[core,])
-  hist(fastBoiRunTime[core,])
-  hist(diff[core,])
+#changing input size f1 = f2
+maxN <- 100
+for (size in 2:maxN) {
+  start <- 1
+  end <- start + size
+  hmRunTime[size - 1] <- parHausMat(spdf[start:end,], f1 = f1vec[size - 1],
+                                    ncores = detectCores() - 1, tol = 0.01)
+  fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[start:end,],
+                                                f1 = f1vec[size - 1],
+                                                ncores = detectCores() - 1,
+                                                tol = 0.01)
+  diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
 }
-
-#changing tolerance
-tolvec <- c(0.0001, 0.001, 0.01, 0.1, 1)
-hmRunTime <- matrix(rep(0, 5*n), nrow=5)
-fastBoiRunTime <- matrix(rep(0, 5*n), nrow=5)
-diff <- matrix(rep(0, 5*n), nrow=5)
-rownum <- 1
-for (tolval in tolvec) {
-  for (i in 1:n) {
-    start <- max(i %% (length(rivers) - 5), 1)
-    end <- start + 5
-    hmRunTime[rownum,i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                                      ncores=detectCores()-1, tol=tolval)
-    fastBoiRunTime[rownum,i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                                  ncores=detectCores()-1,
-                                                  tol=tolval)
-    diff[rownum,i] <- hmRunTime[rownum,i] - fastBoiRunTime[rownum,i]
-  }
-  hist(hmRunTime[rownum,])
-  hist(fastBoiRunTime[rownum,])
-  hist(diff[rownum,])
-  rownum <- rownum + 1
-}
-
-# Testing gDistance(hausdorff=T) vs. directHaus ---------------------------
-n <- length(tracts.harris) + length(rivers)
-time_gDist <- rep(0, n)
-time_dirHaus <- rep(0, n)
-time_diff <- rep(0, n)
-for (i in 1:n) {
-  if (i <= length(tracts.harris)) {
-   start1 <- Sys.time()
-   val1 <- gDistance(tracts.harris[1,], tracts.harris[i,], hausdorff=T)
-   time_gDist[i] <- Sys.time() - start1
-   
-   start2 <- Sys.time()
-   val2 <- max(directHaus(tracts.harris[1,], tracts.harris[i,], f1=1),
-               directHaus(tracts.harris[i,], tracts.harris[1,], f1=1))
-   time_dirHaus[i] <- Sys.time() - start2
-   time_diff[i] <- time_dirHaus[i] - time_gDist[i] 
-  } else {
-    start1 <- Sys.time()
-    val1 <- gDistance(tracts.harris[1,], rivers[i-length(tracts.harris),],
-                      hausdorff=T)
-    time_gDist[i] <- Sys.time() - start1
-    
-    start2 <- Sys.time()
-    val2 <- max(directHaus(tracts.harris[1,], rivers[i-length(tracts.harris),],
-                           f1=1),
-                directHaus(rivers[i-length(tracts.harris),],
-                           tracts.harris[1,], f1=1))
-    time_dirHaus[i] <- Sys.time() - start2
-    time_diff[i] <- time_dirHaus[i] - time_gDist[i]
-  }
-}
-hist(time_diff)
-min(time_diff)
-mean(time_diff)
+plot(hmRunTime[1:maxN - 1])
+plot(fastBoiRunTime[1:maxN - 1])
+plot(diff[1:maxN - 1])
+min(diff)
+mean(diff)
+max(diff)
+boxplot(hmRunTime[1:maxN - 1])
+boxplot(fastBoiRunTime[1:maxN - 1])
+boxplot(diff[1:maxN - 1])
+hist(diff[1:maxN - 1])
