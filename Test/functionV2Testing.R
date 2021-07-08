@@ -341,3 +341,35 @@ boxplot(hmRunTime[1:maxN - 1])
 boxplot(fastBoiRunTime[1:maxN - 1])
 boxplot(diff[1:maxN - 1])
 hist(diff[1:maxN - 1])
+
+# Testing gDistance(hausdorff=T) vs. directHaus ---------------------------
+n <- length(tracts.harris) + length(rivers)
+time_gDist <- rep(0, n)
+time_dirHaus <- rep(0, n)
+time_diff <- rep(0, n)
+for (i in 1:n) {
+  if (i <= length(tracts.harris)) {
+   start1 <- Sys.time()
+   val1 <- gDistance(tracts.harris[1,], tracts.harris[i,], hausdorff=T)
+   time_gDist[i] <- Sys.time() - start1
+   
+   start2 <- Sys.time()
+   val2 <- max(directHaus(tracts.harris[1,], tracts.harris[i,], f1=1),
+               directHaus(tracts.harris[i,], tracts.harris[1,], f1=1))
+   time_dirHaus[i] <- Sys.time() - start2
+   time_diff[i] <- time_dirHaus[i] - time_gDist[i] 
+  } else {
+    start1 <- Sys.time()
+    val1 <- gDistance(tracts.harris[1,], rivers[i-length(tracts.harris),],
+                      hausdorff=T)
+    time_gDist[i] <- Sys.time() - start1
+    
+    start2 <- Sys.time()
+    val2 <- max(directHaus(tracts.harris[1,], rivers[i-length(tracts.harris),],
+                           f1=1),
+                directHaus(rivers[i-length(tracts.harris),],
+                           tracts.harris[1,], f1=1))
+    time_dirHaus[i] <- Sys.time() - start2
+    time_diff[i] <- time_dirHaus[i] - time_gDist[i]
+  }
+}
