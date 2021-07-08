@@ -391,7 +391,7 @@ n <- length(tracts.harris) + length(rivers)
 time_gDist <- rep(0, n)
 time_dirHaus <- rep(0, n)
 time_diff <- rep(0, n)
-for (i in 787:n) {
+for (i in 1:n) {
   if (i <= length(tracts.harris)) {
    start1 <- Sys.time()
    val1 <- gDistance(tracts.harris[1,], tracts.harris[i,], hausdorff=T)
