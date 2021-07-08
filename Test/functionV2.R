@@ -110,7 +110,6 @@ seqHausMat <- function(shp, f1, f2=f1, tol=NULL) {
 }
 
 parHausMat <- function(shp, f1, f2=f1, ncores=1, tol=NULL) {
-  start <- Sys.time()
   n <- nrow(shp@data)
   haus.dists <- matrix(0, nrow=n, ncol=n)
   print("Setting up parallelization")
@@ -140,14 +139,12 @@ parHausMat <- function(shp, f1, f2=f1, ncores=1, tol=NULL) {
   } else {
     haus.dists <- matrix(out, nrow=n, byrow=T)
   }
-  #return (haus.dists)
-  return (Sys.time() - start)
+  return (haus.dists)
 }
 
 # Modified version of parHausMat that attempts to minimize the number of parallel tasks created by only creating 
 # "ncores" tasks and dividing the work evenly across tasks
 parHausMatFastBoi <- function(shp, f1, f2=f1, ncores=1, tol=NULL) {
-  start <- Sys.time()
   n <- nrow(shp@data)
   haus.dists <- matrix(0, nrow=n, ncol=n)
   print("Setting up parallelization")
@@ -202,8 +199,7 @@ parHausMatFastBoi <- function(shp, f1, f2=f1, ncores=1, tol=NULL) {
   } else {
     haus.dists <- matrix(out, nrow=n, byrow=T)
   }
-  #return (haus.dists)
-  return(Sys.time() - start)
+  return (haus.dists)
 }
 
 # extHaus -----------------------------------------------------------------
