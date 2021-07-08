@@ -21,12 +21,13 @@ library(spdep)
 # make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
 
 # extHaus
-# Testing: is delegating to gDistance(A, B, hausdorff=T, byid=T) when f1 = f2 = 1 worth it?
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
 # Extended the function's capabilities to handle {point, point}, {point, line}, {point, area}, {line, line}, {line, area}, and {area, area} calculations
-# In the cases where f1 == 1 or f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
+# In the cases where f1 == 1 xor f2 == 1, replaced the calls to gDistance(A, B, hausdorff=T) with calls to directHaus(A, B, 1) and directHaus(B, A, 1) (respectively)
   # gDistance(A, B, hausdorff=T) returns the value of H(A, B) whereas in the cases above we are actually interested in h(A, B) (when f1 == 1) and h(B, A) (when f2 == 1)
   # Since H(A, B) = max(h(A, B), h(B, A)), it can be incorrect to use gDistance(A, B, hausdorff=T) in either of these cases.
+# In the case where f1 == 1 and f2 == 1, replaced the two calls to directhaus with a single call to gDistance(A, B, hausdorff=T) 
+  # In this case we are interested in H(A, B) and gDistance can compute this value faster than two calls to directHaus.
 
 # directHaus
 # Removed the mostly unused parameter f2
@@ -239,6 +240,10 @@ extHaus <- function(A, B, f1, f2=f1, tol=NULL) {
   if (type.of.A == "SpatialPoints" && type.of.B == "SpatialPoints") {
     # if both A and B are points, return the cartesian minimum distance between them
     return (rgeos::gDistance(A, B))
+  } else if (f1 == 1 && f2 == 1) {
+    # if f1 = f2 = 1 then we are simply interested in the hausdorff distance
+    # between A and B. Delegate to gDistance as it is faster than directHaus
+    return (rgeos::gDistance(A, B, hausdorff=T))
   } else if (type.of.A == "SpatialPoints") {
     # if one of A or B are points, delegate to pointHaus
     return (pointHaus(A, B, f2, tol=tol))
