@@ -12,7 +12,7 @@ library(spdep)
 
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
-# Testing: compare running times of hausMat + hausMatFastBoi
+# Testing: compare running times of parHausMat to parHausMatFastBoi
 # Improved modularity and code readability by creating a sequential helper function and a parallel helper function
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
 # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
@@ -87,7 +87,7 @@ hausMat <- function(shp, f1, f2=f1, fileout=FALSE, filename=NULL, ncores=1, time
     print("Completion time:")
     print(Sys.time() - start)
   }
-  return(haus.dists)
+  return (haus.dists)
 }
 
 seqHausMat <- function(shp, f1, f2=f1, tol=NULL) {
