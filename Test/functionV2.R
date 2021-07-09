@@ -72,7 +72,7 @@ library(spdep)
 #'  
 #'@return an nxn matrix of extended hausdorff distances
 #'
-#' Last edited: July 7 2020
+#' Last edited: July 8 2020
 hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
                     ncores = 1, timer = F, do.parallel = T, tol = NULL) {
   if (timer) {
@@ -116,19 +116,20 @@ seqHausMat <- function(shp, f1, f2 = f1, tol = NULL) {
 }
 
 parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+  start <- Sys.time()
   n <- nrow(shp@data)
   haus.dists <- matrix(0, nrow = n, ncol = n)
-  print("Setting up parallelization")
+  #print("Setting up parallelization")
   cl <- makeCluster(ncores)
   registerDoParallel(cl)
-  print("Computing...")
+  #print("Computing...")
   # compute the extended hausdorff distance for every combination of regions (in parallel)
   if (f1 == f2) {
     combs <- combn(1:n, 2) # n choose 2 combinations
     n.combs <- ncol(combs)
-    out <- foreach (i = 1:n.combs, .packages = c("rgeos", "sp", "raster"),
-                    .combine = rbind,
-                    .export = c("directHaus", "extHaus")) %dopar% {
+    out <- foreach(i = 1:n.combs, .packages = c("rgeos", "sp", "raster"),
+                   .combine = rbind,
+                   .export = c("directHaus", "extHaus")) %dopar% {
       extHaus(shp[combs[1, i], ], shp[combs[2, i], ], f1 = f1, tol = tol)
     } 
   } else {
@@ -153,18 +154,21 @@ parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   } else {
     haus.dists <- matrix(out, nrow = n, byrow = T)
   }
-  return (haus.dists)
+  #return (haus.dists)
+  return (Sys.time() - start)
 }
 
 # Modified version of parHausMat that attempts to minimize the number of 
-# parallel tasks created by only creating  "ncores" tasks and dividing the work evenly across tasks
+# parallel tasks created by only creating  "ncores" tasks and dividing 
+# the work evenly across tasks
 parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+  start <- Sys.time()
   n <- nrow(shp@data)
   haus.dists <- matrix(0, nrow = n, ncol = n)
-  print("Setting up parallelization")
+  #print("Setting up parallelization")
   cl <- makeCluster(ncores)
   registerDoParallel(cl)
-  print("Computing...")
+  #print("Computing...")
   # compute the extended hausdorff distance for every possible combination
   # of regions (in parallel)
   if (f1 == f2) {
@@ -173,18 +177,17 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
     # calculate how many sequential iterations we need to do per core to
     # avoid creating more parallel tasks than cores
     iterPerCore <- ceiling(n.combs / ncores)
-    out <- foreach (k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
-                    .combine = 'c',
-                    .export = c("directHaus", "extHaus")) %dopar% {
-      maxIter <- iterPerCore
-      if (k == ncores) {
-        maxIter <- n.combs - ((ncores - 1) * iterPerCore)
-      }
-      val <- rep(-1, maxIter)
-      for (iter in 1:maxIter) {
-        i <- ((k - 1) * iterPerCore) + iter
-        val[iter] <- extHaus(shp[combs[1,i], ], shp[combs[2,i], ],
-                             f1 = f1, tol = tol)
+    out <- foreach(k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
+                   .combine = "c",
+                   .export = c("directHaus", "extHaus")) %dopar% {
+      val <- rep(-1, iterPerCore)
+      for (iter in 1:iterPerCore) {
+        remaining <- n.combs - ((k - 1) * iterPerCore) - (iter - 1)
+        if (remaining > 0) {
+          i <- ((k - 1) * iterPerCore) + iter
+          val[iter] <- extHaus(shp[combs[1, i], ], shp[combs[2, i], ],
+                               f1 = f1, tol = tol) 
+        }
       }
       val
     }
@@ -192,22 +195,21 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
     # calculate how many sequential iterations we need to do per core to 
     # avoid creating more parallel tasks than cores
     iterPerCore <- ceiling(n^2 / ncores)
-    out <- foreach (k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
-                    .combine='c',
-                    .export = c("directHaus", "extHaus")) %dopar% {
-      maxIter <- iterPerCore
-      if (k == ncores) {
-        maxIter <- n^2 - ((ncores - 1) * iterPerCore)
-      }
-      val <- rep(-1, maxIter)
-      for (iter in 1:maxIter) {
-        index <- ((k - 1) * iterPerCore) + iter
-        i <- ceiling(index / n)
-        j <- index %% n
-        if (index %% n == 0) {
-          j <- n
+    out <- foreach(k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
+                   .combine = "c",
+                   .export = c("directHaus", "extHaus")) %dopar% {
+      val <- rep(-1, iterPerCore)
+      for (iter in 1:iterPerCore) {
+        remaining <- n^2 - ((k - 1) * iterPerCore) - (iter - 1)
+        if (remaining > 0) {
+          index <- ((k - 1) * iterPerCore) + iter
+          i <- ceiling(index / n)
+          j <- index %% n
+          if (index %% n == 0) {
+            j <- n
+          }
+          val[iter] <- extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2, tol = tol) 
         }
-        val[iter] <- extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2, tol = tol)
       }
       val
     }
@@ -215,14 +217,15 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
   stopCluster(cl)
   
   if (f1 == f2) {
-    haus.dists[lower.tri(haus.dists, diag = F)] <- out
+    haus.dists[lower.tri(haus.dists, diag = F)] <- out[1:n.combs]
     # use the fact that the Hausdorff distance matrix will be symmetrical to
     # compute the upper triangular entries
     haus.dists <- haus.dists + t(haus.dists)
   } else {
-    haus.dists <- matrix(out, nrow = n, byrow = T)
+    haus.dists <- matrix(out[1:n^2], nrow = n, byrow = T)
   }
-  return (haus.dists)
+  #return (haus.dists)
+  return(Sys.time() - start)
 }
 
 # extHaus -----------------------------------------------------------------
@@ -247,9 +250,9 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
 #'
 #' Last Edited: July 5 2021
 extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
-  if (!is.projected(A) | !is.projected(B)) {
+  if (!sp::is.projected(A) | !sp::is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A), ", ", quote(B),
-               ") must be projected. Try running ?spTransform().", sep=""))
+               ") must be projected. Try running ?spTransform().", sep = ""))
   }
   if (is.null(gDifference(A, B))) {
     return (0)
@@ -330,7 +333,7 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
 #'
 #' Last Edited: July 5 2021
 directHaus <- function(A, B, f1, tol = NULL) {
-  if (!sp::is.projected(A) | !sp::is.projected(B)) {
+  if (!sp::is.projected(A) || !sp::is.projected(B)) {
     stop(paste("Spatial* object (inputs ", quote(A),", ", quote(B),
                ") must be projected. Try running ?spTransform().", sep = ""))
   }
@@ -347,11 +350,11 @@ directHaus <- function(A, B, f1, tol = NULL) {
   dists <- rgeos::gDistance(a.coords, B, byid = T)
   
   if (is.null(tol)) {
-    tol <- sd(dists[1,]) / 100
+    tol <- sd(dists[1, ]) / 100
   }
   
   # find desired quantile of distances
-  epsilon <- as.numeric(quantile(dists[1,], f1)) #buffer width
+  epsilon <- as.numeric(quantile(dists[1, ], f1)) #buffer width
   buff <- raster::buffer(B, width = epsilon, dissolve = T)
   overlap.region <- rgeos::gIntersection(buff, A) # overlap region of buffer+B with A
   # returns null if buff and A do not intersect
