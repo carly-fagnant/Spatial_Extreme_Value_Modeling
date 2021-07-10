@@ -440,6 +440,9 @@ boxplot(hmRunTime[1:maxN - 1])
 boxplot(fastBoiRunTime[1:maxN - 1])
 boxplot(diff[1:maxN - 1])
 hist(diff[1:maxN - 1])
+x <- 2:maxN
+summary(lm(diff[1:maxN-1] ~ maxN))
+# is there a statistically significant slope?
 
 #changing input size f1 = f2
 maxN <- 100
@@ -464,49 +467,28 @@ boxplot(hmRunTime[1:maxN - 1])
 boxplot(fastBoiRunTime[1:maxN - 1])
 boxplot(diff[1:maxN - 1])
 hist(diff[1:maxN - 1])
+x <- 2:maxN
+summary(lm(diff[1:maxN-1] ~ maxN))
 
 #changing ncores
+n <- 100
 maxcores <- detectCores() - 1
 hmRunTime <- matrix(rep(0, maxcores * n), nrow = maxcores)
 fastBoiRunTime <- matrix(rep(0, maxcores * n), nrow = maxcores)
 diff <- matrix(rep(0, maxcores*n), nrow=maxcores)
 for (core in 1:maxcores) {
   for (i in 1:n) {
-    start <- max(i %% (length(rivers) - 5), 1)
-    end <- start + 5
-    hmRunTime[core,i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                                    ncores=core, tol=0.01)
-    fastBoiRunTime[core,i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                                ncores=core, tol=0.01)
-    diff[core,i] <- hmRunTime[core,i] - fastBoiRunTime[core,i]
+    hmRunTime[core, i] <- parHausMat(spdf[1:50, ], f1 = 1,
+                                     ncores = core, tol = 0.01)
+    fastBoiRunTime[core, i] <- parHausMatFastBoi(spdf[1:50, ], f1 = 1,
+                                                 ncores = core, tol = 0.01)
+    diff[core,i] <- hmRunTime[core, i] - fastBoiRunTime[core, i]
   }
-  hist(hmRunTime[core,])
-  hist(fastBoiRunTime[core,])
-  hist(diff[core,])
 }
-
-#changing tolerance
-tolvec <- c(0.0001, 0.001, 0.01, 0.1, 1)
-hmRunTime <- matrix(rep(0, 5*n), nrow=5)
-fastBoiRunTime <- matrix(rep(0, 5*n), nrow=5)
-diff <- matrix(rep(0, 5*n), nrow=5)
-rownum <- 1
-for (tolval in tolvec) {
-  for (i in 1:n) {
-    start <- max(i %% (length(rivers) - 5), 1)
-    end <- start + 5
-    hmRunTime[rownum,i] <- parHausMat(rivers[start:end,], f1=f1vec[i],
-                                      ncores=detectCores()-1, tol=tolval)
-    fastBoiRunTime[rownum,i] <- parHausMatFastBoi(rivers[start:end,], f1=f1vec[i],
-                                                  ncores=detectCores()-1,
-                                                  tol=tolval)
-    diff[rownum,i] <- hmRunTime[rownum,i] - fastBoiRunTime[rownum,i]
-  }
-  hist(hmRunTime[rownum,])
-  hist(fastBoiRunTime[rownum,])
-  hist(diff[rownum,])
-  rownum <- rownum + 1
-}
+hmMeans <- apply(hmRunTime, 1, mean)
+fastBoiMeans <- apply(fastBoiRunTime, 1, mean)
+diff_means <- apply(diff, 1, mean)
+plot(diff_means)
 
 # Testing gDistance(hausdorff=T) vs. directHaus ---------------------------
 n <- length(tracts.harris) + length(rivers)
@@ -540,6 +522,20 @@ for (i in 1:n) {
   }
   abs_error <- val1 - val2
   pct_error <- 100 * abs_error / val2
-  print(paste0("Absolute error: ", abs_error))
-  print(paste0("Percentage error: ", pct_error, "%"))
+  if (pct_error > 1) {
+    print(paste0("Error at iteration", i))
+    print(paste0("Absolute error: ", abs_error))
+    print(paste0("Percentage error: ", pct_error, "%"))
+    print(paste0("gDistance: ", val1))
+    print(paste0("directHaus: ", val2))
+    print("------------------------------------------------------------------")
+  }
 }
+# do hypothesis testing to check if mean(time_dirHaus) > mean(time_gDist)
+# H0: mean(time_dirHaus) <= mean(time_gDist)
+# H1: mean(time_dirHaus) > mean(time_gDist)
+s1 <- sd(time_dirHaus)
+s2 <- sd(time_gDist)
+spool <- sqrt(s1^2/length(time_dirHaus) + s2^2/length(time_gDist))
+test_statistic <- mean(time_dirHaus) - mean(time_gDist) / spool
+pval <- 1 - pnorm(test_statistic)
