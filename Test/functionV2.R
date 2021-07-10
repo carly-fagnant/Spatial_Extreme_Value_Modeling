@@ -265,10 +265,6 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
   if (A.is.points && B.is.points) {
     # if A and B are points return the cartesian minimum distance between them
     return (rgeos::gDistance(A, B))
-  } else if (f1 == 1 && f2 == 1) {
-    # if f1 = f2 = 1 then we are simply interested in the hausdorff distance
-    # between A and B. Delegate to gDistance as it is faster than directHaus
-    return (rgeos::gDistance(A, B, hausdorff = T))
   } else if (A.is.points) {
     # if one of A or B are points, delegate to pointHaus
     return (pointHaus(A, B, f2, tol = tol))
