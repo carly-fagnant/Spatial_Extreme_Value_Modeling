@@ -403,6 +403,13 @@ for (i in 1:10) {
 
 # Testing Hausdorff: hausMat vs hausMatFastBoi ----------------------------
 
+# If parHausMatFastBoi is better than parHausMat then we would expect for
+# the time difference between parHausMat and parHausMatFastBOi to become
+# increasingly positive as the size of the input matrix grows. This is because
+# the number of parallel tasks created by parHausMat would grow whereas the
+# number of parallel tasks created by parHausMatFastBoi would remain constant
+# and equal to ncores.
+
 n <- 100
 coords <- matrix(c(1, 1), nrow = 1, ncol = 2, byrow = T)
 data <- as.data.frame(matrix(rep(0, n * 2), nrow = n, ncol = 2))
