@@ -421,13 +421,20 @@ f1vec <- seq(from = 0, to = 1, length.out = n)
 
 #changing input size f1 does not equal f2
 maxN <- 100
+num_obs <- 10
 for (size in 2:maxN) {
-  hmRunTime[size - 1] <- parHausMat(spdf[1:size,], f1 = 0.25, f2 = 0.75,
-                                    ncores = detectCores() - 1, tol = 0.01)
-  fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[1:size, ], f1 = 0.25,
-                                                f2 = 0.75,
-                                                ncores = detectCores() - 1,
-                                                tol = 0.01)
+  for (i in 1:num_obs) {
+    hmRunTime[size - 1] <- parHausMat(spdf[1:size,], f1 = 0.25, f2 = 0.75,
+                                      ncores = detectCores() - 1, tol = 0.01) +
+                           hmRunTime[size - 1]
+    fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[1:size, ], f1 = 0.25,
+                                                  f2 = 0.75,
+                                                  ncores = detectCores() - 1,
+                                                  tol = 0.01) +
+                                fastBoiRunTime[size - 1]
+  }
+  hmRunTime[size - 1] <- hmRunTime[size - 1] / num_obs
+  fastBoiRunTime[size - 1] <- fastBoiRunTime[size - 1] / num_obs
   diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
 }
 plot(hmRunTime[1:maxN - 1])
@@ -446,15 +453,20 @@ summary(lm(diff[1:maxN-1] ~ maxN))
 
 #changing input size f1 = f2
 maxN <- 100
+num_obs <- 10
 for (size in 2:maxN) {
-  start <- 1
-  end <- size
-  hmRunTime[size - 1] <- parHausMat(spdf[start:end, ], f1 = 0.5,
-                                    ncores = detectCores() - 1, tol = 0.01)
-  fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[start:end, ],
-                                                f1 = 0.5,
-                                                ncores = detectCores() - 1,
-                                                tol = 0.01)
+  for (i in 1:num_obs) {
+    hmRunTime[size - 1] <- parHausMat(spdf[start:end, ], f1 = 0.5,
+                                      ncores = detectCores() - 1, tol = 0.01) +
+                           hmRunTime[size - 1]
+    fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[start:end, ],
+                                                  f1 = 0.5,
+                                                  ncores = detectCores() - 1,
+                                                  tol = 0.01) +
+                                fastBoiRunTime[size - 1]
+  }
+  hmRunTime[size - 1] <- hmRunTime[size - 1] / num_obs
+  fastBoiRunTime[size - 1] <- fastBoiRunTime[size - 1] / num_obs
   diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
 }
 plot(hmRunTime[1:maxN - 1])
@@ -495,17 +507,29 @@ n <- length(tracts.harris) + length(rivers)
 time_gDist <- rep(0, n)
 time_dirHaus <- rep(0, n)
 time_diff <- rep(0, n)
+tol <- NULL
 for (i in 1:n) {
+  flag <- 0
+  npts <- 100000
+  a.coords <- spsample(tracts.harris[1, ], n = npts, type = "regular")
+  
   if (i <= length(tracts.harris)) {
    start1 <- Sys.time()
    val1 <- gDistance(tracts.harris[1, ], tracts.harris[i, ], hausdorff = T)
    time_gDist[i] <- Sys.time() - start1
    
    start2 <- Sys.time()
-   val2 <- max(directHaus(tracts.harris[1, ], tracts.harris[i, ], f1 = 1),
-               directHaus(tracts.harris[i, ], tracts.harris[1, ], f1 = 1))
+   val2 <- max(directHaus(tracts.harris[1, ], tracts.harris[i, ], f1 = 1,
+                          tol = tol),
+               directHaus(tracts.harris[i, ], tracts.harris[1, ], f1 = 1,
+                          tol = tol))
    time_dirHaus[i] <- Sys.time() - start2
-   time_diff[i] <- time_dirHaus[i] - time_gDist[i] 
+   time_diff[i] <- time_dirHaus[i] - time_gDist[i]
+   
+   distsf1 <- gDistance(a.coords, tracts.harris[i, ], byid = T)
+   b.coords <- spsample(tracts.harris[i, ], n = npts, type = "regular")
+   distsf2 <- gDistance(b.coords, tracts.harris[1, ], byid = T)
+   val3 <- max(max(distsf1), max(distsf2))
   } else {
     start1 <- Sys.time()
     val1 <- gDistance(tracts.harris[1, ], rivers[i - length(tracts.harris), ],
@@ -514,20 +538,70 @@ for (i in 1:n) {
     
     start2 <- Sys.time()
     val2 <- max(directHaus(tracts.harris[1, ],
-                           rivers[i - length(tracts.harris), ], f1 = 1),
+                           rivers[i - length(tracts.harris), ], f1 = 1,
+                           tol = tol),
                 directHaus(rivers[i - length(tracts.harris), ],
-                           tracts.harris[1, ], f1 = 1))
+                           tracts.harris[1, ], f1 = 1, tol = tol))
     time_dirHaus[i] <- Sys.time() - start2
     time_diff[i] <- time_dirHaus[i] - time_gDist[i]
+    
+    distsf1 <- gDistance(a.coords, rivers[i - length(tracts.harris), ],
+                         byid = T)
+    b.coords <- spsample(rivers[i - length(tracts.harris), ], n = npts,
+                         type = "regular")
+    distsf2 <- gDistance(b.coords, tracts.harris[1, ], byid = T)
+    val3 <- max(max(distsf1), max(distsf2))
   }
-  abs_error <- val1 - val2
-  pct_error <- 100 * abs_error / val2
-  if (pct_error > 1) {
-    print(paste0("Error at iteration", i))
-    print(paste0("Absolute error: ", abs_error))
-    print(paste0("Percentage error: ", pct_error, "%"))
+  abs_error_gDistance <- abs(val3 - val1)
+  pct_error_gDistance <- 100 * abs_error_gDistance / val3
+  abs_error_direct <- abs(val3 - val2)
+  pct_error_direct <- 100 * abs_error_direct / val3
+  
+  if (abs_error_direct > 0 && pct_error_direct > 2) {
+    print(paste0("Error at iteration ", i))
+    print(paste0("sampling method: ", val3))
+    print(paste0("Absolute gDistance error: ", abs_error_gDistance))
+    print(paste0("Percentage gDistance error: ", pct_error_gDistance, "%"))
     print(paste0("gDistance: ", val1))
+    print(paste0("Absolute directHaus error: ", abs_error_direct))
+    print(paste0("Percentage directHaus error: ", pct_error_direct, "%"))
     print(paste0("directHaus: ", val2))
+    flag <- 1
+  }
+  if (val2 > val1) {
+    print(paste0("Iteration: ", i))
+    print("directHaus distance > gDistance distance")
+    print(paste0("directHaus: ", val2))
+    print(paste0("gDistance: ", val1))
+    flag <- 1
+  }
+  if (val2 > val3) {
+    print(paste0("Iteration: ", i))
+    print("directHaus distance > sampling distance")
+    print(paste0("sampling method: ", val3))
+    print(paste0("directHaus: ", val2))
+    flag <- 1
+  }
+  if (val3 > val1) {
+    print(paste0("Iteration: ", i))
+    print("sampling distance > gDistance distance")
+    print(paste0("sampling method: ", val3))
+    print(paste0("gDistance: ", val1))
+    flag <- 1
+  }
+  if (abs_error_gDistance > abs_error_direct) {
+    print(paste0("Iteration: ", i))
+    print("gDistance has greater error than directHaus")
+    print(paste0("sampling method: ", val3))
+    print(paste0("Absolute gDistance error: ", abs_error_gDistance))
+    print(paste0("Percentage gDistance error: ", pct_error_gDistance, "%"))
+    print(paste0("gDistance: ", val1))
+    print(paste0("Absolute directHaus error: ", abs_error_direct))
+    print(paste0("Percentage directHaus error: ", pct_error_direct, "%"))
+    print(paste0("directHaus: ", val2))
+    flag <- 1
+  }
+  if (flag == 1) {
     print("------------------------------------------------------------------")
   }
 }
@@ -539,3 +613,15 @@ s2 <- sd(time_gDist)
 spool <- sqrt(s1^2/length(time_dirHaus) + s2^2/length(time_gDist))
 test_statistic <- mean(time_dirHaus) - mean(time_gDist) / spool
 pval <- 1 - pnorm(test_statistic)
+# pval: 0.4
+# not significant
+
+# Test observations using NULL tolerance:
+  # Distance computed by directHaus is smaller than distance computed by gDistance
+  # Most of the calculations between census tracts have less than 2% error
+    # Only 3 cases (iter: 199, 201, 748) have greater than 2% error
+    # These cases are still below 5% error
+  # A lot of calculations between census tract 1 and rivers have more than 2% error
+  # Distance computed by sampling method is generally (but not always) smaller than the distance computed by gDistance
+  # Distance computed by sampling method is generally (but not always) larger than the distance computed by directHaus
+  # The distance computed by the sampling method is generally (but not always) closer to the distance computed by gDistance than it is to the distance computed by directHaus
