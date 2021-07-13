@@ -612,16 +612,34 @@ for (i in 1:n) {
     print("------------------------------------------------------------------")
   }
 }
-# do hypothesis testing to check if mean(time_dirHaus) > mean(time_gDist)
-# H0: mean(time_dirHaus) <= mean(time_gDist)
-# H1: mean(time_dirHaus) > mean(time_gDist)
-s1 <- sd(time_dirHaus)
-s2 <- sd(time_gDist)
-spool <- sqrt(s1^2/length(time_dirHaus) + s2^2/length(time_gDist))
-test_statistic <- mean(time_dirHaus) - mean(time_gDist) / spool
+min(time_diff) # 0.00509
+mean(time_diff) # 0.7610596
+max(time_diff) # 10.00405
+hist(time_diff)
+
+# histograms look skewed
+hist(time_dirHaus)
+hist(time_gDist)
+
+# log transform looks better and more "normal"
+hist(log(time_dirHaus))
+hist(log(time_gDist))
+
+log_time_dirHaus <- log(time_dirHaus)
+log_time_gDist <- log(time_gDist)
+log_time_dirHaus <- log_time_dirHaus[is.finite(log_time_dirHaus)]
+log_time_gDist <- log_time_gDist[is.finite(log_time_gDist)]
+
+# do hypothesis testing to check if mean(log_time_dirHaus) > mean(log_time_gDist)
+# H0: mean(log_time_dirHaus) <= mean(log_time_gDist)
+# H1: mean(log_time_dirHaus) > mean(log_time_gDist)
+s1 <- sd(log_time_dirHaus)
+s2 <- sd(log_time_gDist)
+spool <- sqrt((s1^2/length(log_time_dirHaus)) + (s2^2/length(log_time_gDist)))
+test_statistic <- (mean(log_time_dirHaus) - mean(log_time_gDist)) / spool
 pval <- 1 - pnorm(test_statistic)
-# pval: 0.4
-# not significant
+# pval: 0 
+# statistically significant: reject null hypothesis
 
 # Test observations using NULL tolerance:
   # Distance computed by directHaus is smaller than distance computed by gDistance
@@ -632,3 +650,8 @@ pval <- 1 - pnorm(test_statistic)
   # Distance computed by sampling method is generally (but not always) smaller than the distance computed by gDistance
   # Distance computed by sampling method is generally (but not always) larger than the distance computed by directHaus
   # The distance computed by the sampling method is generally (but not always) closer to the distance computed by gDistance than it is to the distance computed by directHaus
+  # directHaus performed poorly on the tracts.harris[1,]-to-rivers[i - length(tracts.harris),] trials
+    # ~20 iterations with more than 2% error
+    # ~15 iterations with more than 20% error
+  # gDistance did not perform poorly on the tracts-to-rivers trials (no iteration with more than 2% error)
+  # should maybe increase the number of points sampled in directHaus to get better results
