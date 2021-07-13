@@ -450,12 +450,11 @@ plot(diff[1:maxN - 1])
 min(diff)
 mean(diff)
 max(diff)
-boxplot(hmRunTime[1:maxN - 1])
-boxplot(fastBoiRunTime[1:maxN - 1])
-boxplot(diff[1:maxN - 1])
+hist(hmRunTime[1:maxN - 1])
+hist(fastBoiRunTime[1:maxN - 1])
 hist(diff[1:maxN - 1])
 x <- 2:maxN
-summary(lm(diff[1:maxN-1] ~ maxN))
+summary(lm(diff[1:maxN-1] ~ x))
 # is there a statistically significant slope?
 
 #changing input size f1 = f2
@@ -482,14 +481,19 @@ plot(diff[1:maxN - 1])
 min(diff)
 mean(diff)
 max(diff)
-boxplot(hmRunTime[1:maxN - 1])
-boxplot(fastBoiRunTime[1:maxN - 1])
-boxplot(diff[1:maxN - 1])
+hist(hmRunTime[1:maxN - 1])
+hist(fastBoiRunTime[1:maxN - 1])
 hist(diff[1:maxN - 1])
 x <- 2:maxN
-summary(lm(diff[1:maxN-1] ~ maxN))
+summary(lm(diff[1:maxN-1] ~ x))
 
 #changing ncores
+
+# We would expect the performance gap between parHausMatFastBoi and parHausMat
+# to decrease as the number of cores increases. This is because as more cores
+# are used, the number of parallel tasks per core created by parHausMat will
+# decrease.
+
 n <- 100
 maxcores <- detectCores() - 1
 hmRunTime <- matrix(rep(0, maxcores * n), nrow = maxcores)
