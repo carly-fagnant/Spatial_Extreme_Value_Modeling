@@ -12,7 +12,7 @@ library(spdep)
 
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
-# Testing: compare running times of parHausMat to parHausMatFastBoi
+# Testing: compare running times of parHausMat to parHausMatFastBoi across different input sizes
 # Improved modularity and code readability by creating a sequential helper function and a parallel helper function
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
 # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
@@ -47,6 +47,11 @@ library(spdep)
   # the minimum distance between point and B which can be found using
   # gDistance(point, B)
 # Changed variable names to make them consistent with the input parameter names
+
+# Next steps:
+# Address directHaus questions and make modifications accordingly
+# Finish testing hausMat and make modifications accordingly
+# Re-run entire test suite (functionV2Testing.R)
 
 # hausMat -----------------------------------------------------------------
 #' Creating a matrix of (extended) Hausdorff distances
