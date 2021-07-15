@@ -1,6 +1,7 @@
 # A file for testing the functions in functionV2.R
 
 # Creating Spatial Objects ------------------------------------------------
+# Create spatial objects
 pt1_coords <- matrix(c(0.5, 0.5), ncol = 2, byrow = T)
 pt2_coords <- matrix(c(2, 2), ncol = 2, byrow = T)
 l1_coords <- matrix(c(0, 10, 1, 1), ncol = 2, byrow = T)
@@ -18,6 +19,7 @@ p2 <- raster::spPolygons(p2_coords, crs = crdref)
 
 inputs <- c(pt1, pt2, l1, l2, p1, p2)
 
+# Project the spatial objects with spTransform
 for (i in 1:6) {
   print(i)
   print(sp::is.projected(inputs[[i]]))
@@ -32,22 +34,24 @@ for (i in 1:6) {
 cases1 <- c(pt1, pt1, pt1, l1, l1, p1)
 cases2 <- c(pt2, l1, p1, l2, p1, p2)
 
-# Compute preliminary results
+# Compute preliminary results: sample points from each of the input areas and
+# get the distance quantiles. Use these to estimate the directed 
+# Hausdorff distance between the input areas
 f1_mat <- matrix(rep(-1, 6 * 4), nrow = 6)
 f2_mat <- matrix(rep(-1, 6 * 4), nrow = 6)
 for (input_case in 1:6) {
   input1 <- cases1[[input_case]]
   input2 <- cases2[[input_case]]
   n <- 100000
-  a.coords <- spsample(input1, n = n, type = "regular") # sample points within A
-  distsf1 <- gDistance(a.coords, input2, byid = T)
-  b.coords <- spsample(input2, n = n, type = "regular")
-  distsf2 <- gDistance(b.coords, input1, byid = T)
+  a_coords <- sp::spsample(input1, n = n, type = "regular")
+  distsf1 <- rgeos::gDistance(a_coords, input2, byid = T)
+  b_coords <- sp::spsample(input2, n = n, type = "regular")
+  distsf2 <- rgeos::gDistance(b_coords, input1, byid = T)
   f1_mat[input_case,] <- quantile(distsf1, probs = c(0.25, 0.5, 0.75, 1))
   f2_mat[input_case,] <- quantile(distsf2, probs = c(0.25, 0.5, 0.75, 1))
 }
 
-# Compute final answers
+# Compute final answers by getting results from f1_mat and f2_mat
 answers <- matrix(rep(-1, 6 * 11), nrow = 6)
 for (input_case in 1:6) {
   input1 <- cases1[[input_case]]
@@ -62,9 +66,9 @@ for (input_case in 1:6) {
   f2.100 <- f2_mat[input_case, 4]
   for (test_case in 1:11) {
     if (test_case == 1) {
-      val <- max(gDistance(input1, input2), f2.50)
+      val <- max(rgeos::gDistance(input1, input2), f2.50)
     } else if (test_case == 2) {
-      val <- max(f1.50, gDistance(input1, input2))
+      val <- max(f1.50, rgeos::gDistance(input1, input2))
     } else if (test_case == 3) {
       val <- gDistance(input1, input2)
     } else if (test_case == 4) {
@@ -82,13 +86,15 @@ for (input_case in 1:6) {
     } else if (test_case == 10) {
       val <- max(f1.50, f2.100)
     } else {
-      val <- gDistance(input1, input2, hausdorff = T)
+      val <- rgeos::gDistance(input1, input2, hausdorff = T)
     }
     answers[input_case, test_case] <- val
   }
 }
 answers[3, ] <- rep(0, 11)
 
+# Iterate through the input cases and see if the computed values match the
+# estimated final answers
 for (i in 1:6) {
   flag <- 0
   print(paste0("Testing input set ", i))
@@ -182,29 +188,29 @@ for (i in 1:6) {
   }
   
   print("--------------------------------------------------------------------")
-  
 }
 
 # Testing Hausdorff: SpatialDataFrames -----------------------------
 setwd("Data")
 ## Read shp file
-tracts.houston <- rgdal::readOGR("Census_2010_Tracts.shp")
+tracts_houston <- rgdal::readOGR("Census_2010_Tracts.shp")
 ## specifying projection information for SpatialPolygonsDataFrame object
-tracts.houston <- sp::spTransform(tracts.houston,
-                                  sp::CRS(sp::proj4string(tracts.houston)))
+tracts_houston <- sp::spTransform(
+  tracts_houston,
+  sp::CRS(sp::proj4string(tracts_houston))
+)
 ## extract tracts of Harris County
-tracts.harris <- tracts.houston[grepl(c("201"),
-                                      tracts.houston@data$COUNTY), ]
-tracts.harris@data <- tracts.harris@data[ ,c("OBJECTID", "STATE",
-                                             "COUNTY","TRACT", "SUM_TotPop")]
-tracts.harris <- sp::spTransform(tracts.harris, CRS("+init=epsg:2278"))
+tracts_harris <- tracts_houston[grepl(c("201"), tracts_houston@data$COUNTY), ]
+tracts_harris@data <- tracts_harris@data[, c("OBJECTID", "STATE",
+                                              "COUNTY","TRACT", "SUM_TotPop")]
+tracts_harris <- sp::spTransform(tracts_harris, CRS("+init=epsg:2278"))
 
 rivers <- rgdal::readOGR("Major_Rivers.gdb")
 rivers <- sp::spTransform(rivers, CRS("+init=epsg:2278"))
 
 set.seed(123)
-f1_vec <- rbeta(length(tracts.harris)^2, shape1 = 0.5, shape2 = 0.5)
-f2_vec <- rbeta(length(tracts.harris)^2, shape1 = 0.5, shape2 = 0.5)
+f1_vec <- rbeta(length(tracts_harris)^2, shape1 = 0.5, shape2 = 0.5)
+f2_vec <- rbeta(length(tracts_harris)^2, shape1 = 0.5, shape2 = 0.5)
 n_points <- 100
 coords <- matrix(c(1, 1), nrow = 1, ncol = 2, byrow = T)
 data <- as.data.frame(matrix(rep(0, n_points * 2), nrow = n_points, ncol = 2))
@@ -213,8 +219,11 @@ for (i in 2:n_points) {
 }
 coords <- as.data.frame(coords)
 crdref <- sp::CRS("+init=epsg:2278")
-spdf <- SpatialPointsDataFrame(coords = coords, data = data,
-                               proj4string = crdref)
+spdf <- SpatialPointsDataFrame(
+  coords = coords,
+  data = data,
+  proj4string = crdref
+)
 
 # Polygon to Polygon / Line / Point
 nPoly <- 10
@@ -227,15 +236,21 @@ for (i in 1:nPoly) {
     print(paste0("j: ", j))
     print(paste0("f1_vec: ", f1val))
     print(paste0("f2_vec: ", f2val))
-    val1 <- extHaus(tracts.harris[i, ], tracts.harris[j, ], f1val, f2val)
-    val2 <- extHaus(tracts.harris[i, ], rivers[j, ], f1val, f2val)
-    val3 <- extHaus(tracts.harris[i, ], spdf[j, ], f1val, f2val)
+    # compute distances using extHaus
+    val1 <- extHaus(tracts_harris[i, ], tracts_harris[j, ], f1val, f2val)
+    val2 <- extHaus(tracts_harris[i, ], rivers[j, ], f1val, f2val)
+    val3 <- extHaus(tracts_harris[i, ], spdf[j, ], f1val, f2val)
     
+    # compute "true" values by sampling points from the input areas and using
+    # the corresponding distance quantiles as an estimate for the directed
+    # Hausdorff distances between the two objects
     n <- 100000
-    a.coords <- spsample(tracts.harris[i, ], n = n, type = "regular")
-    distsf1.1 <- gDistance(a.coords, tracts.harris[j, ], byid = T)
-    b.coords <- spsample(tracts.harris[j, ], n = n, type = "regular")
-    distsf1.2 <- gDistance(b.coords, tracts.harris[i, ], byid = T)
+    a_coords <- sp::spsample(tracts_harris[i, ], n = n, type = "regular")
+    distsf1.1 <- rgeos::gDistance(a_coords, tracts_harris[j, ], byid = T)
+    b_coords <- sp::spsample(tracts_harris[j, ], n = n, type = "regular")
+    distsf1.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
+    # Extended Hausdorff distance is the max of the two directed Hausdorff 
+    # distance balues compute above
     ans1 <- max(quantile(distsf1.1, probs = f1val),
                 quantile(distsf1.2, probs = f2val))
     
@@ -245,9 +260,9 @@ for (i in 1:nPoly) {
       print(paste0("Expected ", ans1, " but computed ", val1))
     }
     
-    distsf2.1 <- gDistance(a.coords, rivers[j, ], byid = T)
-    b.coords <- spsample(rivers[j, ], n = n, type = "regular")
-    distsf2.2 <- gDistance(b.coords, tracts.harris[i, ], byid = T)
+    distsf2.1 <- rgeos::gDistance(a_coords, rivers[j, ], byid = T)
+    b_coords <- sp::spsample(rivers[j, ], n = n, type = "regular")
+    distsf2.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
     ans2 <- max(quantile(distsf2.1, probs = f1val),
                 quantile(distsf2.2, probs = f2val))
     
@@ -257,8 +272,8 @@ for (i in 1:nPoly) {
       print(paste0("Expected ", ans2, " but computed ", val2))
     }
     
-    distsf3.1 <- gDistance(a.coords, spdf[j, ], byid = T)
-    distsf3.2 <- gDistance(spdf[j, ], tracts.harris[i, ])
+    distsf3.1 <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
+    distsf3.2 <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
     ans3 <- max(quantile(distsf3.1, probs = f1val), distsf3.2)
     
     if (abs(val3 - ans3) > 0.01) {
@@ -282,16 +297,16 @@ for (i in 1:nLine) {
     print(paste0("j: ", j))
     print(paste0("f1_vec: ", f1val))
     print(paste0("f2_vec: ", f2val))
-    val1 <- extHaus(rivers[i, ], tracts.harris[j, ], f1val, f2val)
+    val1 <- extHaus(rivers[i, ], tracts_harris[j, ], f1val, f2val)
     val2 <- extHaus(rivers[i, ], rivers[j, ], f1val, f2val)
     val3 <- extHaus(rivers[i, ], spdf[j, ], f1val, f2val)
     
     n <- 100000
-    a.coords <- spsample(rivers[i, ], n = n, type = "regular")
+    a_coords <- sp::spsample(rivers[i, ], n = n, type = "regular")
     
-    distsf1.1 <- gDistance(a.coords, tracts.harris[j, ], byid = T)
-    b.coords <- spsample(tracts.harris[j, ], n = n, type = "regular")
-    distsf1.2 <- gDistance(b.coords, tracts.harris[i, ], byid = T)
+    distsf1.1 <- rgeos::gDistance(a_coords, tracts_harris[j, ], byid = T)
+    b_coords <- sp::spsample(tracts_harris[j, ], n = n, type = "regular")
+    distsf1.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
     ans1 <- max(quantile(distsf1.1, probs = f1val),
                 quantile(distsf1.2, probs = f2val))
     
@@ -301,9 +316,9 @@ for (i in 1:nLine) {
       print(paste0("Expected ", ans1, " but computed ", val1))
     }
     
-    distsf2.1 <- gDistance(a.coords, rivers[j, ], byid = T)
-    b.coords <- spsample(rivers[j, ], n = n, type = "regular")
-    distsf2.2 <- gDistance(b.coords, tracts.harris[i, ], byid = T)
+    distsf2.1 <- rgeos::gDistance(a_coords, rivers[j, ], byid = T)
+    b_coords <- sp::spsample(rivers[j, ], n = n, type = "regular")
+    distsf2.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
     ans2 <- max(quantile(distsf2.1, probs = f1val),
                 quantile(distsf2.2, probs = f2val))
     
@@ -313,8 +328,8 @@ for (i in 1:nLine) {
       print(paste0("Expected ", ans2, " but computed ", val2))
     }
     
-    distsf3.1 <- gDistance(a.coords, spdf[j, ], byid = T)
-    distsf3.2 <- gDistance(spdf[j, ], tracts.harris[i, ])
+    distsf3.1 <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
+    distsf3.2 <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
     ans3 <- max(quantile(distsf3.1, probs = f1val), distsf3.2)
     
     if (abs(val3 - ans3) > 0.01) {
@@ -339,7 +354,7 @@ for (i in 1:nPoint) {
     print(paste0("f1_vec: ", f1val))
     print(paste0("f2_vec: ", f2val))
     val <- extHaus(spdf[i, ], spdf[j, ], f1val, f2val)
-    error <- abs(val - gDistance(spdf[i, ], spdf[j, ]))
+    error <- abs(val - rgeos::gDistance(spdf[i, ], spdf[j, ]))
     if ( error > 0.01 ) {
       print(paste0("Error in iteration (", i, ", ", j, ")"))
     }
@@ -350,20 +365,34 @@ for (i in 1:nPoint) {
 
 # Testing Hausdorff: hausMat -----------------------------------------------
 
-# line-line
-mat1 <- hausMat(rivers[1:5, ], f1 = 0.5,
-                ncores = detectCores() - 1, tol = 0.001)
-mat2 <- hausMat(rivers[1:5, ], f1 = 0.75, f2 = 0.25,
-                ncores = detectCores()-1, tol = 0.001)
+# line-line testing
+mat1 <- hausMat(
+  rivers[1:5, ],
+  f1 = 0.5,
+  ncores = detectCores() - 1,
+  tol = 0.001
+)
+mat2 <- hausMat(
+  rivers[1:5, ],
+  f1 = 0.75,
+  f2 = 0.25,
+  ncores = detectCores() - 1,
+  tol = 0.001
+)
 for (i in 1:5) {
   for (j in 1:5) {
+    # test case 1: f1 = f2
     val1 <- extHaus(rivers[i, ], rivers[j, ], 0.5, tol = 0.001)
     quant1 <- abs(mat1[i, j] - val1)
+    # compare the value in the matrix to the value computed by extHaus to
+    # check for correctness
     if (quant1 > 0.001 * val1) {
       print(paste0("Error in mat1 iteration (", i, ", ", j, ")"))
       print(paste0("Absolute error: ", quant1))
       print(paste0("Fractional error: ", quant1 / val1))
     }
+    
+    # test case 2: f1 does not equal f2
     val2 <- extHaus(rivers[i, ], rivers[j, ], 0.75, 0.25, tol = 0.001)
     quant2 <- abs(mat2[i, j] - val2)
     if (quant2 > 0.001 * val2) {
@@ -375,22 +404,40 @@ for (i in 1:5) {
   }
 }
 
-# area-area
-mat1 <- hausMat(tracts.harris[1:10, ], f1 = 0.5,
-                ncores = detectCores() - 1, tol = 0.001)
-mat2 <- hausMat(tracts.harris[1:10, ], f1 = 0.75, f2=0.25,
-                ncores = detectCores()-1, tol = 0.001)
+# area-area testing
+mat1 <- hausMat(
+  tracts_harris[1:10, ],
+  f1 = 0.5,
+  ncores = detectCores() - 1,
+  tol = 0.001
+)
+mat2 <- hausMat(
+  tracts_harris[1:10, ],
+  f1 = 0.75,
+  f2=0.25,
+  ncores = detectCores() - 1,
+  tol = 0.001
+)
 for (i in 1:10) {
   for (j in 1:10) {
-    val1 <- extHaus(tracts.harris[i, ], tracts.harris[j, ], 0.5, tol = 0.001)
-    quant1 <- abs(mat1[i,j] - val1)
+    
+    # test case 1: f1 = f2
+    val1 <- extHaus(tracts_harris[i, ], tracts_harris[j, ], 0.5, tol = 0.001)
+    quant1 <- abs(mat1[i, j] - val1)
     if (quant1 > 0.001 * val1) {
       print(paste0("Error in mat1 iteration (", i, ", ", j, ")"))
       print(paste0("Absolute error: ", quant1))
       print(paste0("Fractional error: ", quant1 / val1))
     }
-    val2 <- extHaus(tracts.harris[i, ], tracts.harris[j, ], 0.75, 0.25,
-                    tol = 0.001)
+    
+    # test case 2: f1 does not equal f2
+    val2 <- extHaus(
+      tracts_harris[i, ],
+      tracts_harris[j, ],
+      0.75,
+      0.25,
+      tol = 0.001
+    )
     quant2 <- abs(mat2[i, j] - val2)
     if (quant2 > 0.001 * val2) {
       print(paste0("Error in mat2 iteration (", i, ", ", j, ")"))
@@ -401,7 +448,7 @@ for (i in 1:10) {
   }
 }
 
-# Testing Hausdorff: hausMat vs hausMatFastBoi ----------------------------
+# Testing Hausdorff: par_haus_mat vs par_haus_mat_fast ----------------------------
 
 # If parHausMatFastBoi is better than parHausMat then we would expect for
 # the time difference between parHausMat and parHausMatFastBOi to become
@@ -418,12 +465,15 @@ for (i in 2:n) {
 }
 coords <- as.data.frame(coords)
 crdref <- sp::CRS("+init=epsg:2278")
-spdf <- SpatialPointsDataFrame(coords = coords, data = data,
-                               proj4string = crdref)
+spdf <- SpatialPointsDataFrame(
+  coords = coords,
+  data = data,
+  proj4string = crdref
+)
 
-hmRunTime <- rep(0, n-1)
-fastBoiRunTime <- rep(0, n-1)
-diff <- rep(0, n-1)
+hm_run_time <- rep(0, n - 1)
+fast_run_time <- rep(0, n - 1)
+diff <- rep(0, n - 1)
 f1vec <- seq(from = 0, to = 1, length.out = n) 
 
 #changing input size f1 does not equal f2
@@ -431,27 +481,33 @@ maxN <- 100
 num_obs <- 10
 for (size in 2:maxN) {
   for (i in 1:num_obs) {
-    hmRunTime[size - 1] <- parHausMat(spdf[1:size,], f1 = 0.25, f2 = 0.75,
-                                      ncores = detectCores() - 1, tol = 0.01) +
-                           hmRunTime[size - 1]
-    fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[1:size, ], f1 = 0.25,
-                                                  f2 = 0.75,
-                                                  ncores = detectCores() - 1,
-                                                  tol = 0.01) +
-                                fastBoiRunTime[size - 1]
+    hm_run_time[size - 1] <- hm_run_time[size - 1] + par_haus_mat(
+      spdf[1:size,], 
+      f1 = 0.25,
+      f2 = 0.75,
+      ncores = detectCores() - 1,
+      tol = 0.01
+    )
+    fast_run_time[size - 1] <- fast_run_time[size - 1] + par_haus_mat_fast(
+      spdf[1:size, ],
+      f1 = 0.25,
+      f2 = 0.75,
+      ncores = detectCores() - 1,
+      tol = 0.01
+    )
   }
-  hmRunTime[size - 1] <- hmRunTime[size - 1] / num_obs
-  fastBoiRunTime[size - 1] <- fastBoiRunTime[size - 1] / num_obs
-  diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
+  hm_run_time[size - 1] <- hm_run_time[size - 1] / num_obs
+  fast_run_time[size - 1] <- fast_run_time[size - 1] / num_obs
+  diff[size - 1] <- hm_run_time[size - 1] - fast_run_time[size - 1]
 }
-plot(hmRunTime[1:maxN - 1])
-plot(fastBoiRunTime[1:maxN - 1])
+plot(hm_run_time[1:maxN - 1])
+plot(fast_run_time[1:maxN - 1])
 plot(diff[1:maxN - 1])
 min(diff)
 mean(diff)
 max(diff)
-hist(hmRunTime[1:maxN - 1])
-hist(fastBoiRunTime[1:maxN - 1])
+hist(hm_run_time[1:maxN - 1])
+hist(fast_run_time[1:maxN - 1])
 hist(diff[1:maxN - 1])
 x <- 2:maxN
 summary(lm(diff[1:maxN-1] ~ x))
@@ -462,30 +518,41 @@ maxN <- 100
 num_obs <- 10
 for (size in 2:maxN) {
   for (i in 1:num_obs) {
-    hmRunTime[size - 1] <- parHausMat(spdf[start:end, ], f1 = 0.5,
-                                      ncores = detectCores() - 1, tol = 0.01) +
-                           hmRunTime[size - 1]
-    fastBoiRunTime[size - 1] <- parHausMatFastBoi(spdf[start:end, ],
-                                                  f1 = 0.5,
-                                                  ncores = detectCores() - 1,
-                                                  tol = 0.01) +
-                                fastBoiRunTime[size - 1]
+    hm_run_time[size - 1] <- hm_run_time[size - 1] + par_haus_mat(
+      spdf[start:end, ],
+      f1 = 0.5,
+      ncores = detectCores() - 1,
+      tol = 0.01
+    )
+    fast_run_time[size - 1] <- fast_run_time[size - 1] + par_haus_mat_fast(
+      spdf[start:end, ],
+      f1 = 0.5,
+      ncores = detectCores() - 1,
+      tol = 0.01
+    )
   }
-  hmRunTime[size - 1] <- hmRunTime[size - 1] / num_obs
-  fastBoiRunTime[size - 1] <- fastBoiRunTime[size - 1] / num_obs
-  diff[size - 1] <- hmRunTime[size - 1] - fastBoiRunTime[size - 1]
+  hm_run_time[size - 1] <- hm_run_time[size - 1] / num_obs
+  fast_run_time[size - 1] <- fast_run_time[size - 1] / num_obs
+  diff[size - 1] <- hm_run_time[size - 1] - fast_run_time[size - 1]
 }
-plot(hmRunTime[1:maxN - 1])
-plot(fastBoiRunTime[1:maxN - 1])
+plot(hm_run_time[1:maxN - 1])
+plot(fast_run_time[1:maxN - 1])
 plot(diff[1:maxN - 1])
 min(diff)
 mean(diff)
 max(diff)
-hist(hmRunTime[1:maxN - 1])
-hist(fastBoiRunTime[1:maxN - 1])
+hist(hm_run_time[1:maxN - 1])
+hist(fast_run_time[1:maxN - 1])
 hist(diff[1:maxN - 1])
 x <- 2:maxN
 summary(lm(diff[1:maxN-1] ~ x))
+
+# using x = 2:61 and the first 60 entries of diff we get:
+# Coefficients:
+# Estimate Std. Error t value Pr(>|t|)    
+#(Intercept) -0.112486   0.142879  -0.787    0.434    
+# x            0.020592   0.003975   5.181 2.91e-06 ***
+# The slope is statistically significant and positive
 
 #changing ncores
 
@@ -496,73 +563,124 @@ summary(lm(diff[1:maxN-1] ~ x))
 
 n <- 100
 maxcores <- detectCores() - 1
-hmRunTime <- matrix(rep(0, maxcores * n), nrow = maxcores)
-fastBoiRunTime <- matrix(rep(0, maxcores * n), nrow = maxcores)
-diff <- matrix(rep(0, maxcores*n), nrow=maxcores)
+hm_run_time <- matrix(rep(0, maxcores * n), nrow = maxcores)
+fast_run_time <- matrix(rep(0, maxcores * n), nrow = maxcores)
+diff <- matrix(rep(0, maxcores * n), nrow = maxcores)
 for (core in 1:maxcores) {
   for (i in 1:n) {
-    hmRunTime[core, i] <- parHausMat(spdf[1:50, ], f1 = 1,
-                                     ncores = core, tol = 0.01)
-    fastBoiRunTime[core, i] <- parHausMatFastBoi(spdf[1:50, ], f1 = 1,
-                                                 ncores = core, tol = 0.01)
-    diff[core,i] <- hmRunTime[core, i] - fastBoiRunTime[core, i]
+    hm_run_time[core, i] <- par_haus_mat(
+      spdf[1:50, ],
+      f1 = 1,
+      ncores = core,
+      tol = 0.01
+    )
+    fast_run_time[core, i] <- par_haus_mat_fast(
+      spdf[1:50, ],
+      f1 = 1,
+      ncores = core,
+      tol = 0.01
+    )
+    diff[core,i] <- hm_run_Time[core, i] - fast_run_time[core, i]
   }
 }
-hmMeans <- apply(hmRunTime, 1, mean)
-fastBoiMeans <- apply(fastBoiRunTime, 1, mean)
+hm_means <- apply(hm_run_time, 1, mean)
+fast_means <- apply(fast_run_time, 1, mean)
 diff_means <- apply(diff, 1, mean)
 plot(diff_means)
 
 # Testing gDistance(hausdorff=T) vs. directHaus ---------------------------
-n <- length(tracts.harris) + length(rivers)
+
+# Initialize test parameters
+n <- length(tracts_harris) + length(rivers) # number of iterations
+test_tol <- NULL # tolerance
+npts <- 100000 
+# number of points that will be sampled from tracts/rivers to compute the 
+# "real" distance
+a_coords <- spsample(tracts_harris[1, ], n = npts, type = "regular")
+
+# Initialize data collection vectors
 time_gDist <- rep(0, n)
 time_dirHaus <- rep(0, n)
 time_diff <- rep(0, n)
-tol <- NULL
+
 for (i in 1:n) {
-  flag <- 0
-  npts <- 100000
-  a.coords <- spsample(tracts.harris[1, ], n = npts, type = "regular")
-  
-  if (i <= length(tracts.harris)) {
+  flag <- 0 # value is changed to 1 if an error or strange event occurs
+  if (i <= length(tracts_harris)) {
+   # Compute distance using gDistance
    start1 <- Sys.time()
-   val1 <- gDistance(tracts.harris[1, ], tracts.harris[i, ], hausdorff = T)
+   val1 <- rgeos::gDistance(
+     tracts_harris[1, ],
+     tracts_harris[i, ],
+     hausdorff = T
+   )
    time_gDist[i] <- Sys.time() - start1
    
+   # Compute distance using directHaus
    start2 <- Sys.time()
-   val2 <- max(directHaus(tracts.harris[1, ], tracts.harris[i, ], f1 = 1,
-                          tol = tol),
-               directHaus(tracts.harris[i, ], tracts.harris[1, ], f1 = 1,
-                          tol = tol))
+   A_to_B <- directHaus(
+     tracts_harris[1, ],
+     tracts_harris[i, ],
+     f1 = 1,
+     tol = tol)
+   B_to_A <- directHaus(
+     tracts_harris[i, ],
+     tracts_harris[1, ],
+     f1 = 1,
+     tol = tol
+   )
+   val2 <- max(A_to_B, B_to_A)
    time_dirHaus[i] <- Sys.time() - start2
    time_diff[i] <- time_dirHaus[i] - time_gDist[i]
    
-   distsf1 <- gDistance(a.coords, tracts.harris[i, ], byid = T)
-   b.coords <- spsample(tracts.harris[i, ], n = npts, type = "regular")
-   distsf2 <- gDistance(b.coords, tracts.harris[1, ], byid = T)
+   # Compute distance using sampling
+   distsf1 <- rgeos::gDistance(a_coords, tracts_harris[i, ], byid = T)
+   b_coords <- sp::spsample(tracts_harris[i, ], n = npts, type = "regular")
+   distsf2 <- rgeos::gDistance(b_coords, tracts_harris[1, ], byid = T)
    val3 <- max(max(distsf1), max(distsf2))
   } else {
+    # Compute distance using gDistance
     start1 <- Sys.time()
-    val1 <- gDistance(tracts.harris[1, ], rivers[i - length(tracts.harris), ],
-                      hausdorff = T)
+    val1 <- rgeos::gDistance(
+      tracts_harris[1, ],
+      rivers[i - length(tracts_harris), ],
+      hausdorff = T
+    )
     time_gDist[i] <- Sys.time() - start1
     
+    # Compute distance using directHaus
     start2 <- Sys.time()
-    val2 <- max(directHaus(tracts.harris[1, ],
-                           rivers[i - length(tracts.harris), ], f1 = 1,
-                           tol = tol),
-                directHaus(rivers[i - length(tracts.harris), ],
-                           tracts.harris[1, ], f1 = 1, tol = tol))
+    A_to_B <- directHaus(
+      tracts_harris[1, ],
+      rivers[i - length(tracts_harris), ],
+      f1 = 1,
+      tol = tol
+    )
+    B_to_A <- directHaus(
+      rivers[i - length(tracts_harris), ],
+      tracts_harris[1, ],
+      f1 = 1,
+      tol = tol
+    )
+    val2 <- max(A_to_B, B_to_A)
     time_dirHaus[i] <- Sys.time() - start2
     time_diff[i] <- time_dirHaus[i] - time_gDist[i]
     
-    distsf1 <- gDistance(a.coords, rivers[i - length(tracts.harris), ],
-                         byid = T)
-    b.coords <- spsample(rivers[i - length(tracts.harris), ], n = npts,
-                         type = "regular")
-    distsf2 <- gDistance(b.coords, tracts.harris[1, ], byid = T)
+    # Compute distance using sampling
+    distsf1 <- rgeos::gDistance(
+      a.coords,
+      rivers[i - length(tracts_harris), ],
+      byid = T
+    )
+    b_coords <- sp::spsample(
+      rivers[i - length(tracts_harris), ],
+      n = npts,
+      type = "regular"
+    )
+    distsf2 <- rgeos::gDistance(b_coords, tracts_harris[1, ], byid = T)
     val3 <- max(max(distsf1), max(distsf2))
   }
+  # Compute error using the distance computed using the sampling method as
+  # the "true" value
   abs_error_gDistance <- abs(val3 - val1)
   pct_error_gDistance <- 100 * abs_error_gDistance / val3
   abs_error_direct <- abs(val3 - val2)
@@ -625,7 +743,7 @@ hist(time_diff)
 hist(time_dirHaus)
 hist(time_gDist)
 
-# log transform looks better and more "normal"
+# log transform looks more normally distributed
 hist(log(time_dirHaus))
 hist(log(time_gDist))
 
