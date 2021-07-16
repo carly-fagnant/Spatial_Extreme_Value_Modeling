@@ -13,12 +13,14 @@ library(spdep)
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
 # Testing: compare running times of parHausMat to parHausMatFastBoi across different input sizes
+# Testing: ensure that file output feature works correctly
 # Improved modularity and code readability by creating a sequential helper function and a parallel helper function
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
 # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
 # From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
 # Running many tiny tasks in parallel will usually take more time to execute than running them sequentially, and if it already runs fast, there’s no motivation to 
 # make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
+# Added file output capabilities.
 
 # extHaus
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
@@ -53,9 +55,10 @@ library(spdep)
 # Address directHaus questions and make modifications accordingly
   # Test directHaus using a greater number of sampled points
   # Test directHaus using a different default tolerance
-# Add file I/O capabilities to hausMat
-# Finish testing hausMat and parhausMat subroutines and make modifications accordingly
-# Add file I/O tests to test suite
+# Test hausMat
+  # Finish testing hausMat correctness
+  # Finish testing hausMat and parhausMat subroutines and make modifications accordingly
+  # Finish testing file I/O capabilities
 # Re-run entire test suite (functionV2Testing.R)
 # Edit code style: refer to http://adv-r.had.co.nz/Style.html
 
