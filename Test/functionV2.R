@@ -12,7 +12,6 @@ library(spdep)
 
 #hausMat
 # Testing: ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
-# Testing: compare running times of parHausMat to parHausMatFastBoi across different input sizes
 # Testing: ensure that file output feature works correctly
 # Improved modularity and code readability by creating a sequential helper function and a parallel helper function
 # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
@@ -57,36 +56,36 @@ library(spdep)
   # Test directHaus using a different default tolerance
 # Test hausMat
   # Finish testing hausMat correctness
-  # Finish testing hausMat and parhausMat subroutines and make modifications accordingly
   # Finish testing file I/O capabilities
 # Re-run entire test suite (functionV2Testing.R)
 # Edit code style: refer to http://adv-r.had.co.nz/Style.html
 
 # hausMat -----------------------------------------------------------------
-#' Creating a matrix of (extended) Hausdorff distances
+#' Creates a matrix of (extended) Hausdorff distances
 #' 
-#' This function takes a SpatialPolygons object and a decimal in [0, 1].
-#'  
-#'@param shp a SpatialPolygons object with n rows
+#' This function computes a matrix of extended Hausdorff distances using the
+#' "shp" and the input decimal "f1".
+#'
+#'@param shp an nxn matrix of Spatial* objects or a Spatial*DataFrame object
+#'   with n rows.
 #'@param f1 The percentage (as a decimal) of region i to retain when
-#'          calculating the directional Hausdorff distance from region i to
-#'          region j.
+#'   calculating the directional Hausdorff distance from region i to region j.
 #'@param f2 The percentage (as a decimal) of region j to retain when
-#'          calculating the directional Hausdorff distance from region j to i. 
-#'          Defaults to the value of f1. Note that specifying a different 
-#'          value will result in a non-symmetric matrix.
+#'   calculating the directional Hausdorff distance from region j to i. 
+#'   Defaults to the value of f1. Note that specifying a different  value will
+#'   result in a non-symmetric matrix.
 #'@param fileout Should the resulting weight matrix be written to file? 
-#'               Defaults to FALSE 
+#'   Defaults to FALSE 
 #'@param filename If "fileout" is TRUE, the name for the file to be outputted.
-#'@param ncores If "do.parallel" is true, the number of cores to be used for 
-#'              parallel computation. Default is 1. 
+#'@param ncores If "do.parallel" is true, ncores is the number of cores to be
+#'   used for  parallel computation. Defaults to 1. 
 #'@param timer If T, records "Sys.time()" when the function is called and 
-#'             outputs the elapsed time along with the matrix. Default is F.
-#'@param do.parallel If T, uses the number of cores specified using "ncores"
-#'                   to set up a cluster with the "foreach" package.
+#'   outputs the elapsed time along with the matrix. Default is F.
+#'@param do.parallel If TRUE, uses the number of cores specified using "ncores"
+#'   to set up a cluster with the "foreach" package.
 #'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
 #'  
-#'@return an nxn matrix of extended hausdorff distances
+#'@return an nxn matrix of extended Hausdorff distances
 #'
 #' Last edited: July 8 2020
 hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
@@ -96,110 +95,141 @@ hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
   }
   if (do.parallel) {
     # compute the extended Hausdorff distance in parallel
-    haus.dists <- parHausMat(shp, f1 = f1, f2 = f2, ncores = ncores, tol = tol)
+    dists <- par_haus_mat(shp, f1 = f1, f2 = f2, ncores = ncores, tol = tol)
   } else {
     # compute the extended Hausdorff distance sequentially
-    haus.dists <- seqHausMat(shp, f1 = f1, f2 = f2, tol = tol)
+    dists <- seq_haus_mat(shp, f1 = f1, f2 = f2, tol = tol)
   }
   if (timer) {
     print("Completion time:")
     print(Sys.time() - start)
   }
-  return (haus.dists)
+  if (fileout) {
+    # write nxn matrix to filename
+    write(t(dists), file = filename)
+  }
+  return(dists)
 }
 
-seqHausMat <- function(shp, f1, f2 = f1, tol = NULL) {
+seq_haus_mat <- function(shp, f1, f2 = f1, tol = NULL) {
   n <- nrow(shp@data)
-  haus.dists <- matrix(0, nrow = n, ncol = n)
+  dists <- matrix(0, nrow = n, ncol = n)
   if (f1 == f2) {
     combs <- combn(1:n, 2) # n choose 2 combinations
-    n.combs <- ncol(combs)
-    for (i in 1:n.combs) {
-      haus.dists[combs[1, i], combs[2, i]] <- extHaus(shp[combs[1, i], ],
-                                                      shp[combs[2, i], ],
-                                                      f1 = f1, tol = tol)
+    n_combs <- ncol(combs)
+    for (i in 1:n_combs) {
+      # compute the extended Hausdorff distance for each possible combination
+      # of indices
+      index1 <- combs[1, i]
+      index2 <- combs[2, i] 
+      dists[index1, index2] <- extHaus(
+        shp[index1, ],
+        shp[index2, ],
+        f1 = f1,
+        tol = tol
+      )
     }
-    haus.dists <- haus.dists + t(haus.dists)
+    # since f1 = f2 the matrix is symmetric and so we can compute the missing
+    # entries of dist by adding its transpose to itself.
+    dists <- dists + t(dists)
   } else {
+    # since f1 does not equal f2 the matrix may not be symmetric and so we
+    # must compute the extended Hausdorff distance for each entry
     for (i in 1:n) {
       for (j in 1:n) {
-        haus.dists[i, j] <- extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2,
-                                    tol = tol) 
+        dists[i, j] <- extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2, tol = tol)
       }
     }
   }
-  return (haus.dists)
+  return(dists)
 }
 
-parHausMat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+par_haus_mat_slow <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+  #start <- Sys.time() used only for time testing
   n <- nrow(shp@data)
-  haus.dists <- matrix(0, nrow = n, ncol = n)
+  dists <- matrix(0, nrow = n, ncol = n)
   #print("Setting up parallelization")
   cl <- makeCluster(ncores)
   registerDoParallel(cl)
   #print("Computing...")
-  # compute the extended hausdorff distance for every combination of regions (in parallel)
+  # compute the extended Hausdorff distance for every combination of regions
   if (f1 == f2) {
     combs <- combn(1:n, 2) # n choose 2 combinations
-    n.combs <- ncol(combs)
-    out <- foreach(i = 1:n.combs, .packages = c("rgeos", "sp", "raster"),
-                   .combine = rbind,
-                   .export = c("directHaus", "extHaus")) %dopar% {
+    n_combs <- ncol(combs)
+    out <- foreach(
+      i = 1:n_combs,
+      .packages = c("rgeos", "sp", "raster"),
+      .combine = rbind,
+      .export = c("directHaus", "extHaus")
+    ) %dopar% {
       extHaus(shp[combs[1, i], ], shp[combs[2, i], ], f1 = f1, tol = tol)
     } 
   } else {
-    out <- foreach (i = 1:n,
-                    .packages = c("rgeos", "sp", "raster", "doParallel",
-                                  "foreach"),
-                    .combine = rbind,
-                    .export = c("directHaus", "extHaus")) %dopar% {
-      foreach (j = 1:n,
-               .packages = c("rgeos", "sp", "raster"), .combine = rbind,
-               .export=c("directHaus", "extHaus")) %dopar% {
+    out <- foreach (
+      i = 1:n,
+      .packages = c("rgeos", "sp", "raster", "doParallel", "foreach"),
+      .combine = rbind,
+      .export = c("directHaus", "extHaus")
+    ) %dopar% {
+      foreach (
+        j = 1:n,
+        .packages = c("rgeos", "sp", "raster"),
+        .combine = rbind,
+        .export=c("directHaus", "extHaus")
+      ) %dopar% {
         extHaus(shp[i, ], shp[j, ], f1 = f1, f2 = f2, tol = tol) 
       }
     }
   }
   stopCluster(cl)
-  
+  print("Parallel computation complete")
   if (f1 == f2) {
-    haus.dists[lower.tri(haus.dists, diag = F)] <- out
-    # use the fact that the Hausdorff distance matrix will be symmetrical to compute the upper triangular entries
-    haus.dists <- haus.dists + t(haus.dists)
+    dists[lower.tri(dists, diag = F)] <- out
+    # use the fact that the Hausdorff distance matrix will be symmetric to 
+    # compute the upper triangular entries
+    dists <- dists + t(dists)
   } else {
-    haus.dists <- matrix(out, nrow = n, byrow = T)
+    dists <- matrix(out, nrow = n, byrow = T)
   }
-  return (haus.dists)
+  return(dists)
+  #return(Sys.time() - start) used only for time testing
 }
 
-# Modified version of parHausMat that attempts to minimize the number of 
+# Modified version of parHausMat_slow that attempts to minimize the number of 
 # parallel tasks created by only creating  "ncores" tasks and dividing 
 # the work evenly across tasks
-parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+par_haus_mat <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
+  #start <- Sys.time() used only for time testing
   n <- nrow(shp@data)
-  haus.dists <- matrix(0, nrow = n, ncol = n)
-  #print("Setting up parallelization")
+  dists <- matrix(0, nrow = n, ncol = n)
+  print("Setting up parallelization")
   cl <- makeCluster(ncores)
   registerDoParallel(cl)
-  #print("Computing...")
-  # compute the extended hausdorff distance for every possible combination
-  # of regions (in parallel)
+  print("Computing...")
+  # compute the extended Hausdorff distance for every combination of regions
   if (f1 == f2) {
     combs <- combn(1:n, 2) # n choose 2 combinations
-    n.combs <- ncol(combs)
+    n_combs <- ncol(combs)
     # calculate how many sequential iterations we need to do per core to
     # avoid creating more parallel tasks than cores
-    iterPerCore <- ceiling(n.combs / ncores)
-    out <- foreach(k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
-                   .combine = "c",
-                   .export = c("directHaus", "extHaus")) %dopar% {
+    iterPerCore <- ceiling(n_combs / ncores)
+    out <- foreach(
+      k = 1:ncores,
+      .packages = c("rgeos", "sp", "raster"),
+      .combine = "c",
+      .export = c("directHaus", "extHaus")
+    ) %dopar% {
       val <- rep(-1, iterPerCore)
       for (iter in 1:iterPerCore) {
-        remaining <- n.combs - ((k - 1) * iterPerCore) - (iter - 1)
+        remaining <- n_combs - ((k - 1) * iterPerCore) - (iter - 1)
         if (remaining > 0) {
           i <- ((k - 1) * iterPerCore) + iter
-          val[iter] <- extHaus(shp[combs[1, i], ], shp[combs[2, i], ],
-                               f1 = f1, tol = tol) 
+          val[iter] <- extHaus(
+            shp[combs[1, i], ],
+            shp[combs[2, i], ],
+            f1 = f1,
+            tol = tol
+          ) 
         }
       }
       val
@@ -208,9 +238,12 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
     # calculate how many sequential iterations we need to do per core to 
     # avoid creating more parallel tasks than cores
     iterPerCore <- ceiling(n^2 / ncores)
-    out <- foreach(k = 1:ncores, .packages = c("rgeos", "sp", "raster"),
-                   .combine = "c",
-                   .export = c("directHaus", "extHaus")) %dopar% {
+    out <- foreach(
+      k = 1:ncores,
+      .packages = c("rgeos", "sp", "raster"),
+      .combine = "c",
+      .export = c("directHaus", "extHaus")
+    ) %dopar% {
       val <- rep(-1, iterPerCore)
       for (iter in 1:iterPerCore) {
         remaining <- n^2 - ((k - 1) * iterPerCore) - (iter - 1)
@@ -228,38 +261,39 @@ parHausMatFastBoi <- function(shp, f1, f2 = f1, ncores = 1, tol = NULL) {
     }
   }
   stopCluster(cl)
-  
+  print("Parallel computation complete")
   if (f1 == f2) {
-    haus.dists[lower.tri(haus.dists, diag = F)] <- out[1:n.combs]
-    # use the fact that the Hausdorff distance matrix will be symmetrical to
+    dists[lower.tri(dists, diag = F)] <- out[1:n_combs]
+    # use the fact that the Hausdorff distance matrix will be symmetric to
     # compute the upper triangular entries
-    haus.dists <- haus.dists + t(haus.dists)
+    dists <- dists + t(dists)
   } else {
-    haus.dists <- matrix(out[1:n^2], nrow = n, byrow = T)
+    dists <- matrix(out[1:n^2], nrow = n, byrow = T)
   }
-  return (haus.dists)
+  return(dists)
+  #return(Sys.time() - start) used only for time testing
 }
 
 # extHaus -----------------------------------------------------------------
-#' Extended Hausdorff Distance
+#' Calculates the extended Hausdorff distance between two spatial objects
 #'
-#' Calculates the extended Hausdorff distance from A to B for given 
-#' quantiles and precision
+#' Calculates the extended Hausdorff distance from "A" to "B" based on the
+#' input decimals "f1" and "f2"
 #' 
 #'@author Julia Schedler
 #'
-#'@param A region/line/point used to calculate the extended Hausdorff distance:
-#'         SpatialPolygons, SpatialLines, data frames thereof or SpatialPoints
-#'@param B region/line/point used to calculate the extended Hausdorff distance: 
-#'         SpatialPolygons, SpatialLines, data frames thereof or SpatialPoints
-#'@param f1 the percentage of area or length in B you want captured as a 
-#'          decimal. E.g. 10% = 0.1
-#'@param f2 the percentage of area or length in A you want captured as a 
-#'          decimal. E.g. 10% = 0.1. Defaults to the same value as f1.
-#'@param tol value to be passed to "tol" in "directHaus".
+#'@param A region/line/point used to calculate the extended Hausdorff distance.
+#'   Must be Spatial* or Spatial*DataFrame
+#'@param B region/line/point used to calculate the extended Hausdorff distance. 
+#'   Must be Spatial* or Spatial*DataFrame
+#'@param f1 the percentage of area or length in A you want captured as a 
+#'   decimal. E.g. 10% = 0.1
+#'@param f2 the percentage of area or length in B you want captured as a 
+#'   decimal. E.g. 10% = 0.1. Defaults to the same value as f1.
+#'@param tol value to be passed to the parameter "tol" in "directHaus".
 #'
 #'@return the extended Hausdorff distance (i.e. the max of the directional 
-#'        Hausdorff distance from A to B and from B to A)
+#'   Hausdorff distance from A to B and from B to A)
 #'
 #' Last Edited: July 14 2021
 extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
@@ -268,8 +302,9 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
                ") must be projected. Try running ?spTransform().", sep = ""))
   }
   if (is.null(gDifference(A, B))) {
-    return (0)
-  } # check if two regions are the same, if so return a hausdorff distance of zero.
+    # if two regions are the same return a Hausdorff distance of zero.
+    return(0) 
+  } 
   
   # get the class of A and B to perform calculations accordingly
   type_of_A <- class(A)[1]
@@ -288,31 +323,31 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
                    (type_of_B == "SpatialPolygonsDataFrame")
   
   if (f1 == 1 && f2 == 1) {
-    # if f1 = f2 = 1 then we are simply interested in the hausdorff distance
+    # if f1 = f2 = 1 then we are simply interested in the Hausdorff distance
     # between A and B. Delegate to gDistance as it is faster than directHaus
-    return (rgeos::gDistance(A, B, hausdorff = T))
+    return(rgeos::gDistance(A, B, hausdorff = T))
   }
   
   if (A_is_points || B_is_points) {
     if (A_is_points && B_is_points) {
-      # if both A and B are points, the extended hausdorff distance between
-      # them is the minimum cartesian distance between them
-      return (rgeos::gDistance(A, B)) 
-    } else if (A.is.points) {
+      # if both A and B are points, the extended Hausdorff distance between
+      # them is the minimum Cartesian distance between them
+      return(rgeos::gDistance(A, B)) 
+    } else if (A_is_points) {
       # if one of A or B are points, delegate to pointHaus
-      return (pointHaus(A, B, f2, tol = tol))
+      return(pointHaus(A, B, f2, tol = tol))
     } else {
       # if one of A or B are points, delegate to pointHaus
-      return (pointHaus(B, A, f1, tol = tol))
+      return(pointHaus(B, A, f1, tol = tol))
     }
   } 
   
   if (A_is_lines || A_is_polygons) {
     if (f1 == 0) {
-      # if f1 = 0 use the cartesian minimum distance between A and B
+      # if f1 = 0 use the Cartesian minimum distance between A and B
       A_to_B <- rgeos::gDistance(A, B)
     } else {
-      # use the extended directed hausdorff distance from A to B
+      # use the extended directed Hausdorff distance from A to B
       A_to_B <- directHaus(A, B, f1, tol = tol)
     }
   } else {
@@ -321,37 +356,36 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
   
   if (B_is_lines || B_is_polygons) {
     if (f2 == 0) {
-      # if f2 = 0 use the cartesian minimum distance between A and B
+      # if f2 = 0 use the Cartesian minimum distance between A and B
       B_to_A <- rgeos::gDistance(A, B)
     } else {
-      # use the directed extended hausdorff distance from B to A
+      # use the directed extended Hausdorff distance from B to A
       B_to_A <- directHaus(B, A, f2, tol = tol)
     }
   } else {
     stop("B is not SpatialPoints, SpatialLines, SpatialPolygons, SpatialPointsDataFrame, SpatialLinesDataFrame or SpatialPolygonsDataFrame")
   }
-  haus.dist <- max(A_to_B, B_to_A)
-  return (haus.dist)
+  dist <- max(A_to_B, B_to_A)
+  return(dist)
 }
 
 # directHaus --------------------------------------------------------------
-#' Calculate the directional extended Hausdorff Distance
+#' Calculates the directional extended Hausdorff distance
 #' 
-#' This function takes a SpatialPolygons/SpatialLines (or a data frame thereof)
-#' object, a SpatialPolygons/SpatialLines/SpatialPoints (or a data frame 
-#' thereof) object and a decimal in [0, 1]
-#'  
+#' This function calculates the directional extended Hausdorff distance from 
+#' "A" to "B" using the input decimal f1
+#' 
 #'@author Julia Schedler
 #'
 #'@param A region/line used to calculate the directed extended Hausdorff 
-#'         distance: SpatialPolygons, SpatialLines or data frames thereof
+#'   distance: SpatialPolygons, SpatialLines or SpatialLinesDataFrame or
+#'   SpatialPolygonsDataFrame
 #'@param B region/line/point used to calculate the directed extended Hausdorff 
-#'         distance: SpatialPolygons, SpatialLines, data frames thereof or 
-#'         SpatialPoints.
+#'   distance: Spatial* or Spatial*DataFrame
 #'@param f1 the percentage of area or length in A you want captured as a 
-#'          decimal. E.g. 10% = 0.1
+#'   decimal. E.g. 10% = 0.1
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f1. 
-#'           Default is 1/10000th the sampled directional distances.
+#'   Default is 1/10000th the sampled directional distances.
 #'
 #'@return The directional extended Hausdorff distance from A to B
 #'
@@ -369,14 +403,14 @@ directHaus <- function(A, B, f1, tol = NULL) {
 
   if (f1 == 0) {
     # if f1 = 0, return the minimum euclidean distance between A and B
-    return (rgeos::gDistance(A, B))
+    return(rgeos::gDistance(A, B))
   }
   
   # generate points
   n <- 10000
-  a.coords <- sp::spsample(A, n = n, type = "regular") # sample points within A
+  a_coords <- sp::spsample(A, n = n, type = "regular") # sample points within A
   # compute minimum distance of points a.coords to a point in B
-  dists <- rgeos::gDistance(a.coords, B, byid = T)
+  dists <- rgeos::gDistance(a_coords, B, byid = T)
   
   if (is.null(tol)) {
     # choose a default tolerance if none is specified
@@ -386,16 +420,16 @@ directHaus <- function(A, B, f1, tol = NULL) {
   # find desired quantile of distances
   epsilon <- as.numeric(quantile(dists[1, ], f1)) #buffer width
   buff <- raster::buffer(B, width = epsilon, dissolve = T)
-  overlap.region <- rgeos::gIntersection(buff, A) 
+  overlap_region <- rgeos::gIntersection(buff, A) 
   # gIntersection returns the overlap region of buffer+B with A
   # returns null if buff and A do not intersect
   
   # if the buffer isn't wide enough to create a region that overlaps with A
   # increment epsilon until buff and A overlap
-  while (is.null(overlap.region)) {
+  while (is.null(overlap_region)) {
     epsilon <- epsilon * 1.01
     buff <- buffer(B, width = epsilon, dissolve = T)
-    overlap.region <- rgeos::gIntersection(buff, A)
+    overlap_region <- rgeos::gIntersection(buff, A)
   }
   
   type_of_A <- class(A)[1]
@@ -407,10 +441,10 @@ directHaus <- function(A, B, f1, tol = NULL) {
   # calculate fraction of A in the overlap region
   if (A_is_lines) {
     #use length if A is a line
-    overlap <- rgeos::gLength(overlap.region) / rgeos::gLength(A) 
+    overlap <- rgeos::gLength(overlap_region) / rgeos::gLength(A) 
   } else if (A_is_polygons) {
     # use area if A is a polygon
-    overlap <- slot(overlap.region@polygons[[1]], "area") / 
+    overlap <- slot(overlap_region@polygons[[1]], "area") / 
       slot(A@polygons[[1]],"area")
   } else {
     stop("A is neither SpatialLines, SpatialLinesDataFrame, SpatialPolygons or SpatialPolygonsDataFrame")
@@ -430,73 +464,76 @@ directHaus <- function(A, B, f1, tol = NULL) {
     }
     epsilon <- epsilon * (1 + sign(f1 - overlap) * 10^(-i))
     buff <- raster::buffer(B, width = epsilon, dissolve = T)
-    overlap.region <- rgeos::gIntersection(buff, A)
+    overlap_region <- rgeos::gIntersection(buff, A)
     
     # if the buffer isn't wide enough to create a region that overlaps with A
     # increment epsilon until buff and A overlap
-    while (is.null(overlap.region)) {
+    while (is.null(overlap_region)) {
       epsilon <- epsilon * (1 + 10^(-i))
       buff <- buffer(B, width = epsilon, dissolve = T)
-      overlap.region <- rgeos::gIntersection(buff, A)
+      overlap_region <- rgeos::gIntersection(buff, A)
       k <- k + 1
     }
     
     # update eps_diff
     if (A_is_lines) {
       #use length if A is a line
-      overlap <- rgeos::gLength(overlap.region) / rgeos::gLength(A)  
+      overlap <- rgeos::gLength(overlap_region) / rgeos::gLength(A)  
     } else if (A_is_polygons) {
       # use area if A is a polygon
-      overlap <- slot(overlap.region@polygons[[1]], "area") / 
+      overlap <- slot(overlap_region@polygons[[1]], "area") / 
                  slot(A@polygons[[1]],"area")
     }
     eps_diff <- abs(f1 - overlap);
     k <- k + 1
   }
   
-  # Get buffer coordinates
+  #Get buffer coordinates
   if (A_is_lines) {
-    buff.coords <- SpatialPoints(overlap.region@lines[[1]]@Lines[[1]]@coords, 
-                                 proj4string = CRS(proj4string(A))) 
+    buff_coords <- SpatialPoints(
+      overlap_region@lines[[1]]@Lines[[1]]@coords, 
+      proj4string = CRS(proj4string(A))
+    ) 
   } else if (A_is_polygons) {
-    buff.coords <- sp::SpatialPoints(slot(overlap.region@polygons[[1]]@Polygons[[1]], 
-                                          "coords"),
-                                     proj4string = CRS(proj4string(A)))
+    buff_coords <- sp::SpatialPoints(
+      slot(overlap_region@polygons[[1]]@Polygons[[1]], "coords"),
+      proj4string = CRS(proj4string(A))
+    )
   }
-  epsilon <- max(rgeos::gDistance(buff.coords, B, byid = T))
-  
-  return (epsilon)
+  epsilon <- max(rgeos::gDistance(buff_coords, B, byid = T))
+  return(epsilon)
 }
 
 # pointHaus ---------------------------------------------------------------
-#' Calculate the extended Hausdorff Distance from a point to an area
-#' 
-#' This function takes a SpatialPoints object, a 
-#' SpatialLines/SpatialPolygons object, and a decimal in [0, 1].
+#' Calculate the extended Hausdorff distance from a point to an area or line
+#'  
+#' Calculate the extended Hausdorff distance from "point" to "B" using "f2"  
 #'  
 #'@author ???
 #'
 #'@param point a SpatialPolints object representing a point
-#'@param B region calculate the extended Hausdorff distance: SpatialPolygons,
-#'         SpatialLines, SpatialLinesDataFrame or SpatialPolygonsDataFrame
+#'@param B region used to calculate the extended Hausdorff distance. Must be a
+#'   SpatialPolygons, SpatialLines, SpatialLinesDataFrame or 
+#'   SpatialPolygonsDataFrame
 #'@param f2 the percentage of area or length in B you want captured as a 
-#'          decimal. E.g.10% = 0.1
+#'   decimal. E.g. 10% = 0.1
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f2.
-#'           Default is NULL.
+#'   Defaults to NULL.
 #'
 #'@return the extended Hausdorff distance between point and B
 #'
 #' Last Edited: July 5 2021
 pointHaus <- function(point, B, f2, tol = NULL) {
-  # calculate the directed Hausdorff distance between point and B (i.e. the min distance between point and B)
+  # The directed Hausdorff distance between "point" and B is the minimum
+  # cartesian distance between "point" and B
   point_to_B <- rgeos::gDistance(point, B)
   if (f2 == 0) {
-    # if f2=0, h(B, "point") equals the minimum distance between "point"
+    # if f2 = 0, h(B, "point") equals the minimum distance between "point"
     # and B which equals the value above.
-    return (point_to_B)
+    return(point_to_B)
   } else {
     # calculate the extended directed Hausdorff distance from B to "point"
     B_to_point <- directHaus(B, point, f2, tol = tol)
-    return (max(point_to_B, B_to_point))
+    return(max(point_to_B, B_to_point))
   }
 }
