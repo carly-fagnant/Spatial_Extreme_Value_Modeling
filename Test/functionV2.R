@@ -39,7 +39,6 @@ library(spdep)
 # Ensured that the function does not fail for small values of f1 (e.g. f1 < 0.001) by adding a is.null check on the buffer + A overlap region.
 # Question: inside the main while loop, should we increment k twice if we have to increase the buffer size to avoid zero overlap between the buffer and A? 
   # In other words, do we need the 'k <- k + 1' in line 396
-# Question: should the number of points sampled from A and B be proportional to their length or area? should the number of points sampled be increase to a larger arbitrary constant?
 # Question: should the default tolerance be sd(dists) / 100?
 
 # pointHaus
