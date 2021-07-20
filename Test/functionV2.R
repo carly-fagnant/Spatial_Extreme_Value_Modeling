@@ -54,7 +54,8 @@ library(spdep)
   # High % error when working on line (rivers) data (particularly at extreme values of max(f1, f2))
   # Is a different testing approach necessary or does the method used in directHaus need change?
   # Increasing number of points sampled did not fix the problem
-  # Decreasing the tolerance (by 1/2) did not fix the problem
+  # Decreasing the tolerance by 1/2 did not fix the problem
+  # Decreasing the tolerance by 1/10 resulted in very slow code (did not verify accuracy)
   # Could try changing the way the length is measured?
 # Address directHaus questions and make modifications accordingly
   # Test directHaus using a greater number of sampled points
