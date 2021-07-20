@@ -50,6 +50,11 @@ library(spdep)
 # Changed variable names to make them consistent with the input parameter names
 
 # Next steps:
+# Accuracy problems with extHaus
+  # High % error when working on line data (particularly at extreme values of max(f1, f2))
+  # Is a different testing approach necessary or does the method used in directHaus need change?
+    # Increasing number of points sampled did not fix problem
+    # Could try increasing the tolerance or changing the way the length is measured?
 # Address directHaus questions and make modifications accordingly
   # Test directHaus using a greater number of sampled points
   # Test directHaus using a different default tolerance
