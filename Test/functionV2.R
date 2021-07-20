@@ -51,7 +51,7 @@ library(spdep)
 
 # Next steps:
 # Accuracy problems with extHaus
-  # High % error when working on line data (particularly at extreme values of max(f1, f2))
+  # High % error when working on line (rivers) data (particularly at extreme values of max(f1, f2))
   # Is a different testing approach necessary or does the method used in directHaus need change?
   # Increasing number of points sampled did not fix the problem
   # Decreasing the tolerance (by 1/2) did not fix the problem
