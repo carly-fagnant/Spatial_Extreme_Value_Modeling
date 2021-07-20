@@ -58,11 +58,9 @@ library(spdep)
   # Decreasing the tolerance by 1/10 resulted in very slow code (did not verify accuracy)
   # Could try changing the way the length is measured?
 # Address directHaus questions and make modifications accordingly
-  # Test directHaus using a greater number of sampled points
-  # Test directHaus using a different default tolerance
 # Test hausMat
-  # Finish testing hausMat correctness
   # Finish testing file I/O capabilities
+  # Test hausMat correctness using lines/points and mixed calculations
 # Re-run entire test suite (functionV2Testing.R)
 # Edit code style: refer to http://adv-r.had.co.nz/Style.html
 
