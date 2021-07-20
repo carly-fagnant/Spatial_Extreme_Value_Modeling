@@ -44,8 +44,24 @@ plot(subset(region, region$REGION==2))
 plot(subset(region, region$REGION==3))
 
 
-#### Starting Point: Region 1 ####
-#end: region 2
+# Starting Point: Region 1 ------------------------------------------------
+##### end: region 1 (result is 0) #####
+region_results11a <- simulate(5, A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==1), f1=0.5)
+results_summ(region_results11a)
+cat(region_results11a, sep="\n")
+
+region_results11b <- simulate(5, A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==1), f1=0)
+results_summ(region_results11b)
+cat(region_results11b, sep="\n")
+
+region_results11c <- simulate(5, A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==1), f1=1.0)
+results_summ(region_results11c)
+cat(region_results11c, sep="\n")
+
+##### end: region 2 #####
 region_results12a <- simulate(A=subset(region, region$REGION==1),
                               B=subset(region, region$REGION==2), f1=0.5)
 results_summ(region_results12a)
@@ -56,7 +72,33 @@ region_results12b <- simulate(A=subset(region, region$REGION==1),
 results_summ(region_results12b)
 cat(region_results12b, sep="\n")
 
-#end: region 3
+region_results12c <- simulate(A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==2), f1=0.8)
+results_summ(region_results12c)
+cat(region_results12c, sep="\n")
+
+region_results12d <- simulate(A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==2), f1=0.6)
+results_summ(region_results12d)
+cat(region_results12d, sep="\n")
+
+region_results12e <- simulate(A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==2), f1=0.3)
+results_summ(region_results12e)
+cat(region_results12e, sep="\n")
+
+region_results12f <- simulate(A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==2), f1=0.1)
+results_summ(region_results12f)
+cat(region_results12f, sep="\n")
+
+region_results12g <- simulate(5, A=subset(region, region$REGION==1),
+                              B=subset(region, region$REGION==2), f1=0)
+results_summ(region_results12g)
+cat(region_results12g, sep="\n")
+
+
+##### end: region 3 #####
 region_results13a <- simulate(A=subset(region, region$REGION==1),
                               B=subset(region, region$REGION==3), f1=0.5)
 results_summ(region_results13a)
@@ -68,30 +110,49 @@ results_summ(region_results13b)
 cat(region_results13b, sep="\n")
 
 
-#### Starting Point: Region 2 ####
-#end: region 1
+# Starting Point: Region 2 ------------------------------------------------
+##### end: region 1 #####
 region_results21a <- simulate(A=subset(region, region$REGION==2),
                               B=subset(region, region$REGION==1), f1=0.5)
 results_summ(region_results21a)
 cat(region_results21a, sep="\n")
 
-#end: region 3
+region_results21b <- simulate(A=subset(region, region$REGION==2),
+                              B=subset(region, region$REGION==1), f1=1.0)
+results_summ(region_results21b)
+cat(region_results21b, sep="\n")
+
+##### end: region 3 #####
 region_results23a <- simulate(A=subset(region, region$REGION==2),
                               B=subset(region, region$REGION==3), f1=0.5)
 results_summ(region_results23a)
 cat(region_results23a, sep="\n")
 
+region_results23b <- simulate(A=subset(region, region$REGION==2),
+                              B=subset(region, region$REGION==3), f1=1.0)
+results_summ(region_results23b)
+cat(region_results23b, sep="\n")
 
-#### Starting Point: Region 3 ####
-#end: region 1
+
+# Starting Point: Region 3 ------------------------------------------------
+##### end: region 1 #####
 region_results31a <- simulate(A=subset(region, region$REGION==3),
                               B=subset(region, region$REGION==1), f1=0.5)
 results_summ(region_results31a)
 cat(region_results31a, sep="\n")
 
-#end: region 2
+region_results31b <- simulate(A=subset(region, region$REGION==3),
+                              B=subset(region, region$REGION==1), f1=1.0)
+results_summ(region_results31b)
+cat(region_results31b, sep="\n")
+
+##### end: region 2 #####
 region_results32a <- simulate(A=subset(region, region$REGION==3),
                               B=subset(region, region$REGION==2), f1=0.5)
 results_summ(region_results32a)
 cat(region_results32a, sep="\n")
 
+region_results32b <- simulate(A=subset(region, region$REGION==3),
+                              B=subset(region, region$REGION==2), f1=1)
+results_summ(region_results32b)
+cat(region_results32b, sep="\n")

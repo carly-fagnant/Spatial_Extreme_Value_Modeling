@@ -277,6 +277,36 @@ results30e <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
 results_summ(results30e)
 cat(results30e, sep="\n")
 
+results30f <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="CEDAR BAYOU"), f1=1, tol=1/100)
+results_summ(results30f)
+cat(results30f, sep="\n")
+
+results30g <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="CEDAR BAYOU"), f1=1, tol=1/1000)
+results_summ(results30g)
+cat(results30g, sep="\n")
+
+results30h <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="SAN JACINTO RIVER"), f1=1)
+results_summ(results30h)
+cat(results30h, sep="\n")
+
+results30i <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="LUCE BAYOU"), f1=1)
+results_summ(results30i)
+cat(results30i, sep="\n")
+
+results30j <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="LUCE BAYOU" | WTSHNAME=="CEDAR BAYOU"), f1=1)
+results_summ(results30j)
+cat(results30j, sep="\n")
+
+results30k <- simulate(A=subset(ws, WTSHNAME=="BARKER RESERVOIR"),
+                       B=subset(ws, WTSHNAME=="LUCE BAYOU" | WTSHNAME=="CEDAR BAYOU"), f1=0.5)
+results_summ(results30k)
+cat(results30k, sep="\n")
+
 #31-35: A and/or B are a few watershed regions instead of just 1
 plot(subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="GREENS BAYOU" | WTSHNAME=="BARKER RESERVOIR"))
 results31 <- unlist(simulate(A=subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="GREENS BAYOU"),
@@ -323,6 +353,22 @@ results33e <- simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK"),
                        B=subset(ws, WTSHNAME=="SIMS BAYOU" | WTSHNAME=="ARMAND BAYOU"), f1=1)
 results_summ(results33e)
 cat(results33e, sep="\n")
+
+results33f <- simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK"),
+                       B=subset(ws, WTSHNAME=="SIMS BAYOU"), f1=1)
+results_summ(results33f)
+cat(results33f, sep="\n")
+
+results33g <- simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK"),
+                       B=subset(ws, WTSHNAME=="ARMAND BAYOU"), f1=0.5)
+results_summ(results33g)
+cat(results33g, sep="\n")
+
+results33h <- simulate(A=subset(ws, WTSHNAME=="WILLOW CREEK"),
+                       B=subset(ws, WTSHNAME=="ARMAND BAYOU"), f1=1)
+results_summ(results33h)
+cat(results33h, sep="\n")
+
 ##
 plot(subset(ws, WTSHNAME=="SPRING CREEK" | WTSHNAME=="SAN JACINTO RIVER" |
               WTSHNAME=="SIMS BAYOU" | WTSHNAME=="CLEAR CREEK"))
@@ -359,6 +405,15 @@ results35d <- simulate(A=subset(ws, WTSHNAME=="CLEAR CREEK"),
 results_summ(results35d)
 cat(results35d, sep="\n")
 
+results35e <- simulate(A=subset(ws, WTSHNAME=="CLEAR CREEK"),
+                       B=subset(ws, WTSHNAME=="CYPRESS CREEK"), f1=0.5)
+results_summ(results35e)
+cat(results35e, sep="\n")
+
+results35f <- simulate(A=subset(ws, WTSHNAME=="CLEAR CREEK"),
+                       B=subset(ws, WTSHNAME=="SPRING CREEK"), f1=0.5)
+results_summ(results35f)
+cat(results35f, sep="\n")
 
 ## Run this & record results for a number of times, change f parameter as needed
 #use of updated function
