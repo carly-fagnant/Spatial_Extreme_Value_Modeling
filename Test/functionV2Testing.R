@@ -215,7 +215,6 @@ for (i in 1:6) {
 
 # Test observations:
 # All input sets passed all test cases!
-
 # Testing: SpatialDataFrames ----------------------------------------------
 
 setwd("Data")
@@ -232,7 +231,7 @@ tracts_houston <- sp::spTransform(
 # Extract tracts of Harris County
 tracts_harris <- tracts_houston[grepl(c("201"), tracts_houston@data$COUNTY), ]
 tracts_harris@data <- tracts_harris@data[, c("OBJECTID", "STATE",
-                                              "COUNTY","TRACT", "SUM_TotPop")]
+                                             "COUNTY","TRACT", "SUM_TotPop")]
 tracts_harris <- sp::spTransform(tracts_harris, CRS("+init=epsg:2278"))
 
 # Extract river data
@@ -243,6 +242,9 @@ rivers <- sp::spTransform(rivers, CRS("+init=epsg:2278"))
 set.seed(123)
 f1_vec <- rbeta(length(tracts_harris)^2, shape1 = 0.5, shape2 = 0.5)
 f2_vec <- rbeta(length(tracts_harris)^2, shape1 = 0.5, shape2 = 0.5)
+# using the specified shape parameters we should be able to sample
+# values of f1 and f2 close to 0 and 1 to verify the function's correctness
+# near the edge cases.
 
 # Generate a SpatialPointsDataFrame using random coordinates
 n_points <- 100
@@ -259,274 +261,310 @@ spdf <- SpatialPointsDataFrame(
   proj4string = crdref
 )
 
+test_extHaus <- function(A, B, a_coords, n_samp, f1, f2) {
+  flag <- 0
+  val <- extHaus(A, B, f1, f2)
+  distsf1.1 <- rgeos::gDistance(a_coords, B, byid = T)
+  b_coords <- sp::spsample(B, n = n_samp, type = "regular")
+  distsf1.2 <- rgeos::gDistance(b_coords, A, byid = T)
+  ans <- max(quantile(distsf1.1, probs = f1),
+              quantile(distsf1.2, probs = f2))
+  error <- abs(val - ans)
+  pct_error <- 100 * error / ans
+  if (error > 0.01 * ans) {
+    flag <- 1
+    print("Error")
+    print(paste0("Expected ", ans, " but computed ", val))
+    print(paste0("Percentage error: ", pct_error, "%"))
+    print(paste0("f1_vec: ", f1))
+    print(paste0("f2_vec: ", f2))
+    print(paste0("Type of A: ", class(A)[1]))
+    print(paste0("Type of B: ", class(B)[1]))
+  }
+  return(flag)
+}
+
 # Test polygon-to-(polygon / line / point) calculations
-nPoly <- 10
-nOther <- 10
-for (i in 1:nPoly) {
+n_poly <- 10
+n_other <- 10
+n_samp <- 1000000
+for (i in 1:n_poly) {
   print(paste0("Outer iteration: ", i))
-  for (j in 1:nOther) {
+  flag <- 0
+  a_coords <- sp::spsample(tracts_harris[i, ], n = n_samp, type = "regular")
+  for (j in 1:n_other) {
+    print(paste0("Iteration (", i, ", ", j, ")"))
     f1val <- f1_vec[i * j]
     f2val <- f2_vec[i * j]
     
+    flag1 <- test_extHaus(
+      A = tracts_harris[i, ],
+      B = tracts_harris[j, ],
+      a_coords = a_coords,
+      n_samp = n_samp,
+      f1 = f1val,
+      f2 = f2val
+    )
+    print("Finished flag 1---------------")
     
-    # compute distances using extHaus
-    val1 <- extHaus(tracts_harris[i, ], tracts_harris[j, ], f1val, f2val)
-    val2 <- extHaus(tracts_harris[i, ], rivers[j, ], f1val, f2val)
-    val3 <- extHaus(tracts_harris[i, ], spdf[j, ], f1val, f2val)
+    flag2 <- test_extHaus(
+      A = tracts_harris[i, ],
+      B = rivers[j, ],
+      a_coords = a_coords,
+      n_samp = n_samp,
+      f1 = f1val,
+      f2 = f2val
+    )
+    print("Finished flag 2---------------")
     
-    # compute "true" values by sampling points from the input areas and using
-    # the corresponding distance quantiles as an estimate for the directed
-    # Hausdorff distances between the two objects
-    n <- 100000
-    a_coords <- sp::spsample(tracts_harris[i, ], n = n, type = "regular")
-    distsf1.1 <- rgeos::gDistance(a_coords, tracts_harris[j, ], byid = T)
-    b_coords <- sp::spsample(tracts_harris[j, ], n = n, type = "regular")
-    distsf1.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
-    
-    # Extended Hausdorff distance is the max of the two directed Hausdorff 
-    # distance balues compute above
-    ans1 <- max(quantile(distsf1.1, probs = f1val),
-                quantile(distsf1.2, probs = f2val))
-    
-    if (abs(val1 - ans1) > 0.01 * ans1) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
+    flag3 <- 0
+    val <- extHaus(tracts_harris[i, ], spdf[j, ], f1val, f2val)
+    ans <- rgeos::gDistance(tracts_harris[i, ], spdf[j, ])
+    error <- abs(val - ans)
+    pct_error <- 100 * error / ans
+    if (error > 0.01 * ans) {
+      flag3 <- 1
+      print(paste0("Error"))
+      print(paste0("Expected ", ans, " but computed ", val))
+      print(paste0("Percentage error: ", pct_error, "%"))
       print(paste0("f1_vec: ", f1val))
       print(paste0("f2_vec: ", f2val))
-      print("Area to area calculation error")
-      print(paste0("Expected ", ans1, " but computed ", val1))
-      pct_error1 <- 100 * abs(val1 - ans1) / ans1
-      print(paste0("Percentage error: ", pct_error1, "%"))
     }
+    print("Finished flag 3---------------")
     
-    distsf2.1 <- rgeos::gDistance(a_coords, rivers[j, ], byid = T)
-    b_coords <- sp::spsample(rivers[j, ], n = n, type = "regular")
-    distsf2.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
-    ans2 <- max(quantile(distsf2.1, probs = f1val),
-                quantile(distsf2.2, probs = f2val))
-    
-    if (abs(val2 - ans2) > 0.01 * ans2) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
-      print(paste0("f1_vec: ", f1val))
-      print(paste0("f2_vec: ", f2val))
-      print("Area to line calculation error")
-      print(paste0("Expected ", ans2, " but computed ", val2))
-      pct_error2 <- 100 * abs(val2 - ans2) / ans2
-      print(paste0("Percentage error: ", pct_error2, "%"))
-    }
-    
-    distsf3.1 <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
-    distsf3.2 <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
-    ans3 <- max(quantile(distsf3.1, probs = f1val), distsf3.2)
-    
-    if (abs(val3 - ans3) > 0.01 * ans3) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
-      print(paste0("f1_vec: ", f1val))
-      print(paste0("f2_vec: ", f2val))
-      print("Area to point calculation error")
-      print(paste0("Expected ", ans3, " but computed ", val3))
-      pct_error3 <- 100 * abs(val3 - ans3) / ans3
-      print(paste0("Percentage error: ", pct_error3, "%"))
+    flag_mid <- max(flag1, flag2, flag3)
+    if (flag_mid == 1) {
+      flag <- flag_mid
     }
     print("------------------------------------------------------------------")
   }
+  if (flag == 0) {
+    print("Completed outer iteration without errors.")
+  }
   print("********************************************************************")
 }
-
-# Test observations: only kept errors above 2%
-# Error at iter (1, 2) | area-to-line | 3.1% error | f1 = 0.67 | f2 = 0.92
-# Error at iter (2, 10)| area-to-line | 95% error  | f1 = 0.99 | f2 = 0.63
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (3, 10)| area-to-line | 90% error  | f1 = 0.55 | f2 = 0.43
-# Error at iter (4, 10)| area-to-area | 94% error  | f1 = 0.57 | f2 = 0.97
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (5, 7) | area-to-line | 40% error  | f1 = 0.99 | f2 = 0.71
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (5, 8) | area-to-line | 6.8% error | f1 = 0.57 | f2 = 0.97
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (5, 10)| area-to-line | 9.5% error | f1 = 0.83 | f2 = 0.07
-# Error at iter (6, 10)| area-to-line | 73% error  | f1 = 0.90 | f2 = 0.30
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (7, 10)| area-to-line | 76% error  | f1 = 0.67 | f2 = 0.28
-# Error at iter (8, 7) | area-to-line | 59% error  | f1 = 0.83 | f2 = 0.79
-# Error at iter (8, 10)| area-to-line | 53% error  | f1 = 0.004| f2 = 0.13
-# Error at iter (9, 7) | area-to-line | 30% error  | f1 = 0.98 | f2 = 0.49
-# Same problem as gDist vs directHaus? (i.e. can't handle high f values)
-# Error at iter (10, 10)| area-to-line | 94% error | f1 = 0.32 | f2 = 0.86
+# Old version: 
+  # 13 / 100 iterations with more than 2% error
+  # 9 / 13 of those had more than 30% error
+  # Increasing the number of points sampled (by 10x) did not fix this
+  # Halving the tolerance also did not affect the error 
+# The percentage error did not even decrease a little bit in either case
+# New version:
+  # No iteration with more than 2% error
+  # Iterations with more than 1% error: (3, 2), (3, 6), (4, 10), (5, 4), (8, 2), (8, 10), (10, 4)
 
 # Test line-to-(polygon / line / point) calculations
-nLine <- 10
-nOther <- 10
-for (i in 1:nLine) {
+n_line <- 10
+n_other <- 10
+n_samp <- 1000000
+for (i in 1:n_line) {
   print(paste0("Outer iteration: ", i))
-  for (j in 1:nOther) {
+  flag <- 0
+  a_coords <- sp::spsample(rivers[i, ], n = n_samp, type = "regular")
+  for (j in 1:n_other) {
+    print(paste0("Iteration (", i, ", ", j, ")"))
     f1val <- f1_vec[i * j]
     f2val <- f2_vec[i * j]
-    val1 <- extHaus(rivers[i, ], tracts_harris[j, ], f1val, f2val)
-    val2 <- extHaus(rivers[i, ], rivers[j, ], f1val, f2val)
-    val3 <- extHaus(rivers[i, ], spdf[j, ], f1val, f2val)
     
-    n <- 100000
-    a_coords <- sp::spsample(rivers[i, ], n = n, type = "regular")
+    flag1 <- test_extHaus(
+      A = rivers[i, ],
+      B = tracts_harris[j, ],
+      a_coords = a_coords,
+      n_samp = n_samp,
+      f1 = f1val,
+      f2 = f2val
+    )
+    print("Finished flag 1---------------")
     
-    distsf1.1 <- rgeos::gDistance(a_coords, tracts_harris[j, ], byid = T)
-    b_coords <- sp::spsample(tracts_harris[j, ], n = n, type = "regular")
-    distsf1.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
-    ans1 <- max(quantile(distsf1.1, probs = f1val),
-                quantile(distsf1.2, probs = f2val))
+    flag2 <- test_extHaus(
+      A = rivers[i, ],
+      B = rivers[j, ],
+      a_coords = a_coords,
+      n_samp = n_samp,
+      f1 = f1val,
+      f2 = f2val
+    )
+    print("Finished flag 2---------------")
     
-    if (abs(val1 - ans1) > 0.02 * ans1) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
+    flag3 <- 0
+    val <- extHaus(rivers[i, ], spdf[j, ], f1val, f2val)
+    ans <- rgeos::gDistance(rivers[i, ], spdf[j, ])
+    error <- abs(val - ans)
+    pct_error <- 100 * error / ans
+    if (error > 0.01 * ans) {
+      flag3 <- 1
+      print(paste0("Error"))
+      print(paste0("Expected ", ans, " but computed ", val))
+      print(paste0("Percentage error: ", pct_error, "%"))
       print(paste0("f1_vec: ", f1val))
       print(paste0("f2_vec: ", f2val))
-      print("Line to area calculation error")
-      print(paste0("Expected ", ans1, " but computed ", val1))
-      pct_error1 <- 100 * abs(val1 - ans1) / ans1
-      print(paste0("Percentage error: ", pct_error1, "%"))
     }
+    print("Finished flag 3---------------")
     
-    distsf2.1 <- rgeos::gDistance(a_coords, rivers[j, ], byid = T)
-    b_coords <- sp::spsample(rivers[j, ], n = n, type = "regular")
-    distsf2.2 <- rgeos::gDistance(b_coords, tracts_harris[i, ], byid = T)
-    ans2 <- max(quantile(distsf2.1, probs = f1val),
-                quantile(distsf2.2, probs = f2val))
-    
-    if (abs(val2 - ans2) > 0.02 * ans2) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
-      print(paste0("f1_vec: ", f1val))
-      print(paste0("f2_vec: ", f2val))
-      print("Line to line calculation error")
-      print(paste0("Expected ", ans2, " but computed ", val2))
-      pct_error2 <- 100 * abs(val2 - ans2) / ans2
-      print(paste0("Percentage error: ", pct_error2, "%"))
-    }
-    
-    distsf3.1 <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
-    distsf3.2 <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
-    ans3 <- max(quantile(distsf3.1, probs = f1val), distsf3.2)
-    
-    if (abs(val3 - ans3) > 0.02 * ans3) {
-      print(paste0("Error at iteration (", i, ", ", j, ")"))
-      print(paste0("f1_vec: ", f1val))
-      print(paste0("f2_vec: ", f2val))
-      print("Line to point calculation error")
-      print(paste0("Expected ", ans3, " but computed ", val3))
-      pct_error3 <- 100 * abs(val3 - ans3) / ans3
-      print(paste0("Percentage error: ", pct_error3, "%"))
+    flag_mid <- max(flag1, flag2, flag3)
+    if (flag_mid == 1) {
+      flag <- flag_mid
     }
     print("------------------------------------------------------------------")
   }
+  if (flag == 0) {
+    print("Completed outer iteration without errors.")
+  }
   print("********************************************************************")
 }
+# Old version: a lot of iterations with big percentage errors (> 25%)
+# New version:
+  # Iterations with more than 2% error: (1, 1), (2, 2), ..., (10, 10) but 
+  # only because the  real value in those cases is zero but the results
+  # produced by the sampling technique are about 1e-09.
 
-# Test observations: a lot of errors!
 
 # Test point to point calculations
-nPoint <- 10
-nOther <- 10
-for (i in 1:nPoint) {
-  for (j in 1:nOther) {
+n_point <- 10
+n_other <- 10
+for (i in 1:n_point) {
+  print(paste0("Outer iteration: ", i))
+  flag <- 0
+  for (j in 1:n_other) {
+    print(paste0("Iteration (", i, ", ", j, ")"))
     f1val <- f1_vec[i * j]
     f2val <- f2_vec[i * j]
     val <- extHaus(spdf[i, ], spdf[j, ], f1val, f2val)
-    error <- abs(val - rgeos::gDistance(spdf[i, ], spdf[j, ]))
-    if ( error > 0.01 ) {
-      print(paste0("Error in iteration (", i, ", ", j, ")"))
+    ans <- rgeos::gDistance(spdf[i, ], spdf[j, ])
+    error <- abs(val - ans)
+    pct_error <- 100 * error / ans
+    if (error > 0.01 * ans) {
+      flag <- 1
+      print(paste0("Error"))
+      print(paste0("Expected ", ans, " but computed ", val))
+      print(paste0("Percentage error: ", pct_error, "%"))
       print(paste0("f1_vec: ", f1val))
       print(paste0("f2_vec: ", f2val))
-      print(paste0("Absolute error: ", error))
     }
     print("------------------------------------------------------------------")
   }
+  if (flag == 0) {
+    print("Completed outer iteration without errors.")
+  }
   print("********************************************************************")
 }
-
 # Test observations: no errors!
 
 # Testing: hausMat --------------------------------------------------------
 
-# Test line-line calculations
+test_haus <- function(mat, mat_size, type, f1, f2 = f1) {
+  if (type == "line") {
+    inputs <- rivers[1:mat_size, ]
+  } else if (type == "area") {
+    inputs <- tracts_harris[1:mat_size, ]
+  } else if (type == "point") {
+    inputs <- spdf[1:mat_size, ]
+  } else {
+    stop("type must be either 'line', 'area' or 'point'.")
+  }
+  
+  for (i in 1:mat_size) {
+    print(paste0("Outer iteration: ", i))
+    flag <- 0
+    for (j in 1: mat_size) {
+      # compute real value and absolute error
+      val1 <- extHaus(inputs[i, ], inputs[j, ], f1 = f1, f2 = f2)
+      error1 <- abs(mat[i, j] - val1)
+      
+      # compare the value in the matrix to the value computed by extHaus to
+      # check for correctness
+      if (error1 > 0.01 * val1) {
+        flag <- 1
+        print(paste0("Error in mat1 iteration (", i, ", ", j, ")"))
+        print(paste0("Expected ", val1, " but computed ", error1))
+        print(paste0("Percentage error: ", 100 * error1 / val1, "%"))
+        print("----------------------------------------------------------------")
+      }
+    }
+    if (flag == 0) {
+      print("Completed outer iteration without errors.")
+    }
+    print("********************************************************************")
+  }
+}
+
+# Test area-area calculations
+mat_size <- 5
 mat1 <- hausMat(
-  rivers[1:5, ],
+  tracts_harris[1:mat_size, ],
   f1 = 0.5,
-  ncores = detectCores() - 1,
-  tol = 0.001
+  ncores = detectCores() - 1
 )
 mat2 <- hausMat(
-  rivers[1:5, ],
+  tracts_harris[1:mat_size, ],
   f1 = 0.75,
   f2 = 0.25,
-  ncores = detectCores() - 1,
-  tol = 0.001
+  ncores = detectCores() - 1
 )
-for (i in 1:5) {
-  for (j in 1:5) {
-    # test case 1: f1 = f2
-    val1 <- extHaus(rivers[i, ], rivers[j, ], 0.5, tol = 0.001)
-    quant1 <- abs(mat1[i, j] - val1)
-    # compare the value in the matrix to the value computed by extHaus to
-    # check for correctness
-    if (quant1 > 0.001 * val1) {
-      print(paste0("Error in mat1 iteration (", i, ", ", j, ")"))
-      print(paste0("Absolute error: ", quant1))
-      print(paste0("Fractional error: ", quant1 / val1))
-    }
-    
-    # test case 2: f1 does not equal f2
-    val2 <- extHaus(rivers[i, ], rivers[j, ], 0.75, 0.25, tol = 0.001)
-    quant2 <- abs(mat2[i, j] - val2)
-    if (quant2 > 0.001 * val2) {
-      print(paste0("Error in mat2 iteration (", i, ", ", j, ")"))
-      print(paste0("Absolute error: ", quant2))
-      print(paste0("Fractional error: ", quant2 / val2))
-    }
-    print("---------------------------------------------------")
-  }
-}
+test_haus(mat1, mat_size, "area", f1 = 0.5)
+test_haus(mat2, mat_size, "area", f1 = 0.75, f2 = 0.25)
+# Test observations: no errors
 
-# area-area testing
+# Test line-to-line calculations
+mat_size <- 5
 mat1 <- hausMat(
-  tracts_harris[1:10, ],
+  rivers[1:mat_size, ],
   f1 = 0.5,
-  ncores = detectCores() - 1,
-  tol = 0.001
+  ncores = detectCores() - 1
 )
 mat2 <- hausMat(
-  tracts_harris[1:10, ],
+  rivers[1:mat_size, ],
   f1 = 0.75,
-  f2=0.25,
-  ncores = detectCores() - 1,
-  tol = 0.001
+  f2 = 0.25,
+  ncores = detectCores() - 1
 )
-for (i in 1:10) {
-  for (j in 1:10) {
-    
-    # test case 1: f1 = f2
-    val1 <- extHaus(tracts_harris[i, ], tracts_harris[j, ], 0.5, tol = 0.001)
-    quant1 <- abs(mat1[i, j] - val1)
-    if (quant1 > 0.001 * val1) {
-      print(paste0("Error in mat1 iteration (", i, ", ", j, ")"))
-      print(paste0("Absolute error: ", quant1))
-      print(paste0("Fractional error: ", quant1 / val1))
-    }
-    
-    # test case 2: f1 does not equal f2
-    val2 <- extHaus(
-      tracts_harris[i, ],
-      tracts_harris[j, ],
-      0.75,
-      0.25,
-      tol = 0.001
-    )
-    quant2 <- abs(mat2[i, j] - val2)
-    if (quant2 > 0.001 * val2) {
-      print(paste0("Error in mat2 iteration (", i, ", ", j, ")"))
-      print(paste0("Absolute error: ", quant2))
-      print(paste0("Fractional error: ", quant2 / val2))
-    }
-    print("---------------------------------------------------")
-  }
-}
+test_haus(mat1, mat_size, "line", f1 = 0.5)
+test_haus(mat2, mat_size, "line", f1 = 0.75, f2 = 0.25)
+# Test observations: no errors
 
+# Test point-to-point calculations
+mat_size <- 5
+mat1 <- hausMat(
+  spdf[1:mat_size, ],
+  f1 = 0.5,
+  ncores = detectCores() - 1
+)
+mat2 <- hausMat(
+  spdf[1:mat_size, ],
+  f1 = 0.75,
+  f2 = 0.25,
+  ncores = detectCores() - 1
+)
+test_haus(mat1, mat_size, "point", f1 = 0.5)
+test_haus(mat2, mat_size, "point", f1 = 0.75, f2 = 0.25)
+# Test observations: no errors
+
+# Testing: hausMat file I/O -----------------------------------------------
+
+# Case 1: f1 = f2
+mat <- hausMat(
+  spdf[1:5, ],
+  f1 = 0.5,
+  fileout = TRUE,
+  filename = "results.csv",
+  ncores = detectCores() - 1
+)
+file_data <- read.csv("results.csv")
+print(file_data)
+print(mat)
+
+# Case 2: f1 does not equal f2
+mat <- hausMat(
+  spdf[1:5, ],
+  f1 = 0.25,
+  f2 = 0.75,
+  fileout = TRUE,
+  filename =  "results.csv",
+  ncores = detectCores() - 1
+)
+file_data <- read.csv("results.csv")
+print(file_data)
+print(mat)
 # Testing: par_haus_mat_slow vs par_haus_mat ------------------------------
 
 # If par_haus_mat is better than par_haus_mat_slow then we would expect for
@@ -746,38 +784,38 @@ time_diff <- rep(0, n)
 for (i in 1:n) {
   flag <- 0 # value is changed to 1 if an error or strange event occurs
   if (i <= length(tracts_harris)) {
-   # Compute distance using gDistance
-   start1 <- Sys.time()
-   val1 <- rgeos::gDistance(
-     tracts_harris[1, ],
-     tracts_harris[i, ],
-     hausdorff = T
-   )
-   time_gDist[i] <- Sys.time() - start1
-   
-   # Compute distance using directHaus
-   start2 <- Sys.time()
-   A_to_B <- directHaus(
-     tracts_harris[1, ],
-     tracts_harris[i, ],
-     f1 = 1,
-     tol = tol
-   )
-   B_to_A <- directHaus(
-     tracts_harris[i, ],
-     tracts_harris[1, ],
-     f1 = 1,
-     tol = tol
-   )
-   val2 <- max(A_to_B, B_to_A)
-   time_dirHaus[i] <- Sys.time() - start2
-   time_diff[i] <- time_dirHaus[i] - time_gDist[i]
-   
-   # Compute distance using sampling
-   distsf1 <- rgeos::gDistance(a_coords, tracts_harris[i, ], byid = T)
-   b_coords <- sp::spsample(tracts_harris[i, ], n = npts, type = "regular")
-   distsf2 <- rgeos::gDistance(b_coords, tracts_harris[1, ], byid = T)
-   val3 <- max(max(distsf1), max(distsf2))
+    # Compute distance using gDistance
+    start1 <- Sys.time()
+    val1 <- rgeos::gDistance(
+      tracts_harris[1, ],
+      tracts_harris[i, ],
+      hausdorff = T
+    )
+    time_gDist[i] <- Sys.time() - start1
+    
+    # Compute distance using directHaus
+    start2 <- Sys.time()
+    A_to_B <- directHaus(
+      tracts_harris[1, ],
+      tracts_harris[i, ],
+      f1 = 1,
+      tol = tol
+    )
+    B_to_A <- directHaus(
+      tracts_harris[i, ],
+      tracts_harris[1, ],
+      f1 = 1,
+      tol = tol
+    )
+    val2 <- max(A_to_B, B_to_A)
+    time_dirHaus[i] <- Sys.time() - start2
+    time_diff[i] <- time_dirHaus[i] - time_gDist[i]
+    
+    # Compute distance using sampling
+    distsf1 <- rgeos::gDistance(a_coords, tracts_harris[i, ], byid = T)
+    b_coords <- sp::spsample(tracts_harris[i, ], n = npts, type = "regular")
+    distsf2 <- rgeos::gDistance(b_coords, tracts_harris[1, ], byid = T)
+    val3 <- max(max(distsf1), max(distsf2))
   } else {
     # Compute distance using gDistance
     start1 <- Sys.time()
@@ -894,7 +932,7 @@ log_time_gDist <- log(time_gDist)
 log_time_dirHaus <- log_time_dirHaus[is.finite(log_time_dirHaus)]
 log_time_gDist <- log_time_gDist[is.finite(log_time_gDist)]
 
-# do hypothesis testing to check if mean(log_time_dirHaus) > mean(log_time_gDist)
+# Do hypothesis testing
 # H0: mean(log_time_dirHaus) <= mean(log_time_gDist)
 # H1: mean(log_time_dirHaus) > mean(log_time_gDist)
 s1 <- sd(log_time_dirHaus)
@@ -908,41 +946,16 @@ pval <- 1 - pnorm(test_statistic)
 # statistically significant: reject null hypothesis
 
 # Test observations using NULL tolerance:
-  # Distance computed by directHaus is smaller than distance computed by gDistance
-  # Most of the calculations between census tracts have less than 2% error
-    # Only 3 cases (iter: 199, 201, 748) have greater than 2% error
-    # These cases are still below 5% error
-  # A lot of calculations between census tract 1 and rivers have more than 2% error
-  # Distance computed by sampling method is generally (but not always) smaller than the distance computed by gDistance
-  # Distance computed by sampling method is generally (but not always) larger than the distance computed by directHaus
-  # The distance computed by the sampling method is generally (but not always) closer to the distance computed by gDistance than it is to the distance computed by directHaus
-  # directHaus performed poorly on the tracts.harris[1,]-to-rivers[i - length(tracts.harris),] trials
-    # ~20 iterations with more than 2% error
-    # ~15 iterations with more than 20% error
-  # gDistance did not perform poorly on the tracts-to-rivers trials (no iteration with more than 2% error)
-  # should maybe increase the number of points sampled in directHaus to get better results
-
-# Testing: hausMat file I/O -----------------------------------------------
-
-# Case 1: f1 = f2
-mat <- hausMat(
-  spdf[1:5, ],
-  f1 = 0.5,
-  fileout = TRUE,
-  filename = "results.csv",
-  ncores = detectCores() - 1
-)
-file_data <- read.csv("results.csv")
-print(mat == file_data)
-
-# Case 2: f1 does not equal f2
-mat <- hausMat(
-  spdf[1:5, ],
-  f1 = 0.25,
-  f2 = 0.75,
-  fileout = TRUE,
-  filename =  "results.csv",
-  ncores = detectCores() - 1
-)
-file_data <- read.csv("results.csv")
-print(mat == file_data)
+# Distance computed by directHaus is smaller than distance computed by gDistance
+# Most of the calculations between census tracts have less than 2% error
+# Only 3 cases (iter: 199, 201, 748) have greater than 2% error
+# These cases are still below 5% error
+# A lot of calculations between census tract 1 and rivers have more than 2% error
+# Distance computed by sampling method is generally (but not always) smaller than the distance computed by gDistance
+# Distance computed by sampling method is generally (but not always) larger than the distance computed by directHaus
+# The distance computed by the sampling method is generally (but not always) closer to the distance computed by gDistance than it is to the distance computed by directHaus
+# directHaus performed poorly on the tracts.harris[1,]-to-rivers[i - length(tracts.harris),] trials
+# ~20 iterations with more than 2% error
+# ~15 iterations with more than 20% error
+# gDistance did not perform poorly on the tracts-to-rivers trials (no iteration with more than 2% error)
+# should maybe increase the number of points sampled in directHaus to get better results
