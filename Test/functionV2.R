@@ -12,14 +12,14 @@ library(spdep)
 
 #hausMat
 # Improved modularity and code readability by creating a sequential helper function and a parallel helper function
-# Ensure that it can correctly handle the asymmetric case where f1 is not equal to f2
+# Ensured that hausMat can correctly handle the asymmetric case where f1 is not equal to f2
 # Added file output capabilities
 # Improved speed by changing parallel implementation to minimize the number of parallel tasks created
-# Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
-# Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
-# From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
-# Running many tiny tasks in parallel will usually take more time to execute than running them sequentially, and if it already runs fast, there’s no motivation to 
-# make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
+  # Doing each operation in parallel is probably not worth it as the cost of creating a new thread is likely higher than the benefits of the additional parallelism.
+  # Its probably only worth creating as many tasks as there are cores (or rows): use a forallchunked equivalent.
+  # From the foreach package vignette: "But for the kinds of quick running operations that we’ve been doing, there wouldn’t be much point to executing them in parallel. 
+  # Running many tiny tasks in parallel will usually take more time to execute than running them sequentially, and if it already runs fast, there’s no motivation to 
+  # make it run faster anyway. But if the operation that we’re executing in parallel takes a minute or longer, there starts to be some motivation."
 
 # extHaus
 # Added checks to determine the type of A and B in order to decide how to perform the extended hausdorff distance calculations
@@ -50,36 +50,34 @@ library(spdep)
 # Edit code style: refer to http://adv-r.had.co.nz/Style.html
 
 # hausMat -----------------------------------------------------------------
-#' Creates a matrix of extended Hausdorff distances
-#' 
-#' This function computes a matrix of extended Hausdorff distances using the
-#' input of Spatial objects "shp" and the input decimal "f1".
+#' Computes a matrix of extended Hausdorff distances using the
+#' input Spatial objects "shp" and the input decimals "f1" and "f2".
 #'
-#'@param shp a Spatial*DataFrame object with n rows
+#'@param shp a Spatial*DataFrame object with n rows.
 #'@param f1 The percentage (as a decimal) of region i to retain when
 #'   calculating the directional Hausdorff distance from region i to region j.
-#'   E.g. 10% = 0.1
+#'   E.g. 10% = 0.1.
 #'@param f2 The percentage (as a decimal) of region j to retain when
 #'   calculating the directional Hausdorff distance from region j to i. 
-#'   Defaults to the value of f1. Note that specifying a different  value will
-#'   result in a non-symmetric matrix. E.g. 10% = 0.1
+#'   E.g. 10% = 0.1. Defaults to the value of f1. Note that specifying a 
+#'   value of f2 that does equal f1 will result in a non-symmetric matrix.
 #'@param fileout Should the resulting weight matrix be written to file? 
-#'   Defaults to FALSE 
+#'   Defaults to FALSE.
 #'@param filename If "fileout" is TRUE, the name for the file to be outputted.
-#'@param ncores If "do.parallel" is true, ncores is the number of cores to be
-#'   used for  parallel computation. Defaults to NULL, although this value
+#'@param ncores If "do.parallel" is true, "ncores" is the number of cores to
+#'   be used for  parallel computation. Defaults to NULL, although this value
 #'   is then updated to detectCores() - 1 if "do.parallel" is true.
-#'@param timer If T, records "Sys.time()" when the function is called and 
-#'   outputs the elapsed time along with the matrix. Default is F.
-#'@param do.parallel If TRUE, uses the number of cores specified using "ncores"
-#'   to set up a cluster with the "foreach" package.
+#'@param timer If TRUE, records "Sys.time()" when the function is called and 
+#'   outputs the elapsed time along with the matrix. Default is FALSE.
+#'@param do.parallel If TRUE, uses the number of cores specified by "ncores"
+#'   to set up a cluster with the "foreach" package. Defaults to TRUE.
 #'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
 #'  
-#'@return an nxn matrix of extended Hausdorff distances
+#'@return an nxn matrix of extended Hausdorff distances.
 #'
-#' Last edited: July 22 2020
+#' Last edited: July 24 2020
 hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
-                    ncores = NULL, timer = F, do.parallel = T, tol = NULL) {
+                    ncores = NULL, timer = FALSE, do.parallel = TRUE, tol = NULL) {
   if (timer) {
     start <- Sys.time()
   }
@@ -104,6 +102,23 @@ hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
   return(dists)
 }
 
+# seq_haus_mat
+#' Computes a matrix of extended Hausdorff distances using the
+#' input Spatial objects "shp" and the input decimals "f1" and "f2".
+#'
+#'@param shp a Spatial*DataFrame object with n rows.
+#'@param f1 The percentage (as a decimal) of region i to retain when
+#'   calculating the directional Hausdorff distance from region i to region j.
+#'   E.g. 10% = 0.1.
+#'@param f2 The percentage (as a decimal) of region j to retain when
+#'   calculating the directional Hausdorff distance from region j to i. 
+#'   E.g. 10% = 0.1. Defaults to the value of f1. Note that specifying a 
+#'   value of f2 that does equal f1 will result in a non-symmetric matrix.
+#'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
+#'  
+#'@return an nxn matrix of extended Hausdorff distances.
+#'
+#' Last edited: July 24 2020
 seq_haus_mat <- function(shp, f1, f2 = f1, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
@@ -138,6 +153,7 @@ seq_haus_mat <- function(shp, f1, f2 = f1, tol = NULL) {
   return(dists)
 }
 
+# Deprecated
 par_haus_mat_slow <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
@@ -191,6 +207,24 @@ par_haus_mat_slow <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
 # Modified version of par_haus_mat_slow that attempts to minimize the number 
 # of parallel tasks created by only creating  "ncores" tasks and dividing 
 # the work evenly across tasks
+# par_haus_mat
+#' Computes a matrix of extended Hausdorff distances using the
+#' input Spatial objects "shp" and the input decimals "f1" and "f2".
+#'
+#'@param shp a Spatial*DataFrame object with n rows.
+#'@param f1 The percentage (as a decimal) of region i to retain when
+#'   calculating the directional Hausdorff distance from region i to region j.
+#'   E.g. 10% = 0.1.
+#'@param f2 The percentage (as a decimal) of region j to retain when
+#'   calculating the directional Hausdorff distance from region j to i. 
+#'   E.g. 10% = 0.1. Defaults to the value of f1. Note that specifying a 
+#'   value of f2 that does equal f1 will result in a non-symmetric matrix.
+#'@param ncores The number of cores to be used for  parallel computation.
+#'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
+#'  
+#'@return an nxn matrix of extended Hausdorff distances.
+#'
+#' Last edited: July 24 2020
 par_haus_mat <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
@@ -273,18 +307,18 @@ par_haus_mat <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
 #'@author Julia Schedler
 #'
 #'@param A region/line/point used to calculate the extended Hausdorff distance.
-#'   Must be Spatial* or Spatial*DataFrame
+#'   Must be Spatial* or Spatial*DataFrame.
 #'@param B region/line/point used to calculate the extended Hausdorff distance. 
-#'   Must be Spatial* or Spatial*DataFrame
+#'   Must be Spatial* or Spatial*DataFrame.
 #'@param f1 the percentage of area or length in A you want captured as a 
-#'   decimal. E.g. 10% = 0.1
+#'   decimal. E.g. 10% = 0.1.
 #'@param f2 the percentage of area or length in B you want captured as a 
 #'   decimal. E.g. 10% = 0.1. Defaults to the same value as f1.
 #'@param tol value to be passed to the parameter "tol" in "directHaus".
 #'   Defaults to NULL.
 #'   
 #'@return the extended Hausdorff distance between "A" and "B" using the
-#'   specified decimal values for "f1" and "f2"
+#'   specified decimal values for "f1" and "f2".
 #'
 #' Last Edited: July 14 2021
 extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
@@ -362,22 +396,22 @@ extHaus <- function(A, B, f1, f2 = f1, tol = NULL) {
 
 # directHaus --------------------------------------------------------------
 #' This function calculates the directional extended Hausdorff distance from 
-#' "A" to "B" using the input decimal "f1"
+#' "A" to "B" using the input decimal "f1".
 #' 
 #'@author Julia Schedler
 #'
 #'@param A region/line used to calculate the directed extended Hausdorff 
 #'   distance: SpatialPolygons, SpatialLines or SpatialLinesDataFrame or
-#'   SpatialPolygonsDataFrame
+#'   SpatialPolygonsDataFrame.
 #'@param B region/line/point used to calculate the directed extended Hausdorff 
-#'   distance: Spatial* or Spatial*DataFrame
+#'   distance: Spatial* or Spatial*DataFrame.
 #'@param f1 the percentage of area or length in A you want captured as a 
-#'   decimal. E.g. 10% = 0.1
+#'   decimal. E.g. 10% = 0.1.
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f1. 
 #'   Default is NULL but this value is then updated to be 1/10000th of the 
 #'   sampled directional distances.
 #'
-#'@return The directional extended Hausdorff distance from A to B
+#'@return The directional extended Hausdorff distance from A to B.
 #'
 #' Last Edited: July 22 2021
 directHaus <- function(A, B, f1, tol = NULL) {
@@ -425,7 +459,7 @@ directHaus <- function(A, B, f1, tol = NULL) {
   epsilon <- as.numeric(quantile(dists[1, ], f1)) #buffer width
   buff <- raster::buffer(B, width = epsilon, dissolve = T)
   overlap_region <- rgeos::gIntersection(buff, A) 
-  # gIntersection returns the overlap region of buffer+B with A
+  # gIntersection returns the overlap region of buffer + B with A
   # returns null if buff and A do not intersect
   
   
@@ -507,16 +541,16 @@ directHaus <- function(A, B, f1, tol = NULL) {
 #'  
 #'@author ???
 #'
-#'@param point a SpatialPolints object representing a point
+#'@param point a SpatialPolints object representing a point.
 #'@param B region used to calculate the extended Hausdorff distance. Must be a
 #'   SpatialPolygons, SpatialLines, SpatialLinesDataFrame or 
-#'   SpatialPolygonsDataFrame
+#'   SpatialPolygonsDataFrame.
 #'@param f2 the percentage of area or length in B you want captured as a 
-#'   decimal. E.g. 10% = 0.1
+#'   decimal. E.g. 10% = 0.1.
 #'@param tol tolerance for selecting the epsilon buffer to yield desired f2.
 #'   Defaults to NULL.
 #'
-#'@return the extended Hausdorff distance between point and B
+#'@return the extended Hausdorff distance between point and B.
 #'
 #' Last Edited: July 5 2021
 pointHaus <- function(point, B, f2, tol = NULL) {
