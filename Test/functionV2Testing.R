@@ -35,186 +35,115 @@ for (i in 1:6) {
 cases1 <- c(pt1, pt1, pt1, l1, l1, p1)
 cases2 <- c(pt2, l1, p1, l2, p1, p2)
 
-# Compute preliminary results: sample points from each of the input areas and
-# get the distance quantiles. Use these to estimate the directed 
-# Hausdorff distance between the input areas
-f1_mat <- matrix(rep(-1, 6 * 4), nrow = 6)
-f2_mat <- matrix(rep(-1, 6 * 4), nrow = 6)
-for (input_case in 1:6) {
-  input1 <- cases1[[input_case]]
-  input2 <- cases2[[input_case]]
-  n <- 100000
-  a_coords <- sp::spsample(input1, n = n, type = "regular")
-  distsf1 <- rgeos::gDistance(a_coords, input2, byid = T)
-  b_coords <- sp::spsample(input2, n = n, type = "regular")
-  distsf2 <- rgeos::gDistance(b_coords, input1, byid = T)
-  f1_mat[input_case,] <- quantile(distsf1, probs = c(0.25, 0.5, 0.75, 1))
-  f2_mat[input_case,] <- quantile(distsf2, probs = c(0.25, 0.5, 0.75, 1))
-}
-
-# Compute final answers by getting results from f1_mat and f2_mat
-answers <- matrix(rep(-1, 6 * 11), nrow = 6)
-for (input_case in 1:6) {
-  input1 <- cases1[[input_case]]
-  input2 <- cases2[[input_case]]
-  f1.25 <- f1_mat[input_case, 1]
-  f1.50 <- f1_mat[input_case, 2]
-  f1.75 <- f1_mat[input_case, 3]
-  f1.100 <- f1_mat[input_case, 4]
-  f2.25 <- f2_mat[input_case, 1]
-  f2.50 <- f2_mat[input_case, 2]
-  f2.75 <- f2_mat[input_case, 3]
-  f2.100 <- f2_mat[input_case, 4]
-  for (test_case in 1:11) {
-    if (test_case == 1) {
-      val <- max(rgeos::gDistance(input1, input2), f2.50)
-    } else if (test_case == 2) {
-      val <- max(f1.50, rgeos::gDistance(input1, input2))
-    } else if (test_case == 3) {
-      val <- gDistance(input1, input2)
-    } else if (test_case == 4) {
-      val <- max(f1.25, f2.75)
-    } else if (test_case == 5) {
-      val <- max(f1.75, f2.25)
-    } else if (test_case == 6) {
-      val <- max(f1.25, f2.25)
-    } else if (test_case == 7) {
-      val <- max(f1.50, f2.50)
-    } else if (test_case == 8) {
-      val <- max(f1.75, f2.75)
-    } else if (test_case == 9) {
-      val <- max(f1.100, f2.50)
-    } else if (test_case == 10) {
-      val <- max(f1.50, f2.100)
-    } else {
-      val <- rgeos::gDistance(input1, input2, hausdorff = T)
-    }
-    answers[input_case, test_case] <- val
-  }
-}
-answers[3, ] <- rep(0, 11)
-
-# Iterate through the input cases and see if the computed values match the
-# estimated final answers
-for (i in 1:6) {
+test_extHaus <- function(A, B, n_samp, f1, f2 = f1) {
+  A_is_points <- (class(A)[1] == "SpatialPoints")
+  B_is_points <- (class(B)[1] == "SpatialPoints")
+  
   flag <- 0
+  val <- extHaus(A, B, f1, f2)
+  
+  if (is.null(gDifference(A, B))) {
+    ans <- 0
+  } else {
+    if (f1 == 0 || A_is_points) {
+      A_to_B <- rgeos::gDistance(A, B)
+    } else {
+      # sample points from A and get the desired distance quantile. 
+      # Use thus to estimate the directed Hausdorff distance from A to B.
+      a_coords <- sp::spsample(A, n = n_samp, type = "regular")
+      distsf1 <- rgeos::gDistance(a_coords, B, byid = T)
+      A_to_B <- quantile(distsf1, probs = f1)
+    }
+    if (f2 == 0 || B_is_points) {
+      B_to_A <- rgeos::gDistance(A, B)
+    } else {
+      # sample points from B and get the desired distance quantile. 
+      # Use thus to estimate the directed Hausdorff distance from B to A.
+      b_coords <- sp::spsample(B, n = n_samp, type = "regular")
+      distsf2 <- rgeos::gDistance(b_coords, A, byid = T) 
+      B_to_A <- quantile(distsf2, probs = f2)
+    }
+    ans <- max(A_to_B, B_to_A)  
+  }
+  
+  error <- abs(val - ans)
+  pct_error <- 100 * error / ans
+  if (error > 0.01 * ans) {
+    flag <- 1
+    print("  Error")
+    print(paste0("  Expected ", ans, " but computed ", val))
+    print(paste0("  Percentage error: ", pct_error, "%"))
+    print(paste0("  f1: ", f1))
+    print(paste0("  f2: ", f2))
+  }
+  return(flag)
+}
+
+for (i in 1:6) {
+  flag_main <- 0
   print(paste0("Testing input set ", i))
   print(paste0("Class of A: ",  class(cases1[[i]])[1]))
   print(paste0("Class of B: ",  class(cases2[[i]])[1]))
   
   ## Case 1: f1 = 0
-  test1.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0, f2 = 0.5)
-  error1.1 <- abs(test1.1 - answers[i, 1])
-  if (error1.1 > 0.01 * answers[i, 1]) {
-    flag <- 1
-    print(paste0("Test case 1 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 1], " but computed ", test1.1))
-    print(paste0("Percentage error: ", 100 * error1.1 / answers[i, 1], "%"))
-  }
-  
+  print("Test case 1: f1 = 0")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0, f2 = 0.5)
+  flag_main <- max(flag_main, flag)
+
   ## Case 2: f2 = 0
-  test2.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.5, f2 = 0)
-  error2.1 <- abs(test2.1 - answers[i, 2])
-  if (error2.1 > 0.01 * answers[i, 2]) {
-    flag <- 1
-    print(paste0("Test case 2 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 2], " but computed ", test2.1))
-    print(paste0("Percentage error: ", 100 * error2.1 / answers[i, 2], "%"))
-  }
+  print("Test case 2: f2 = 0")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.5, f2 = 0)
+  flag_main <- max(flag_main, flag)
   
   ## Case 3: f1 = f2 = 0
-  test3.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0)
-  error3.1 <- abs(test3.1 - answers[i, 3]) 
-  if (error3.1 > 0.01 * answers[i, 3]) {
-    flag <- 1
-    print(paste0("Test case 3 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 3], " but computed ", test3.1))
-    print(paste0("Percentage error: ", 100 * error3.1 / answers[i, 3], "%"))
-  }
+  print("Test case 3: f1 = f2 = 0")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0)
+  flag_main <- max(flag_main, flag)
   
   ## Case 4: 0 < f1, f2 < 1
-  test4.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.25, f2 = 0.75)
-  test4.2 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.75, f2 = 0.25)
-  error4.1 <- abs(test4.1 - answers[i, 4])
-  error4.2 <- abs(test4.2 - answers[i, 5])
-  if (error4.1 > 0.01 * answers[i, 4]) {
-    flag <- 1
-    print(paste0("Test case 4 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 4], " but computed ", test4.1))
-    print(paste0("Percentage error: ", 100 * error4.1 / answers[i, 4], "%"))
-  }
-  if (error4.2 > 0.01 * answers[i, 5]) {
-    flag <- 1
-    print(paste0("Test case 4 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 5], " but computed ", test4.2))
-    print(paste0("Percentage error: ", 100 * error4.2 / answers[i, 5], "%"))
-  }
+  print("Test case 4: 0 < f1, f2 < 1")
+  # Test case 4.1
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.25, f2 = 0.75)
+  flag_main <- max(flag_main, flag)
+  # Test case 4.2
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.75, f2 = 0.25)
+  flag_main <- max(flag_main, flag)
   
   ## Case 5: 0 < (f1 = f2) < 1
-  test5.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.25)
-  test5.2 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.5)
-  test5.3 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.75)
-  error5.1 <- abs(test5.1 - answers[i, 6])
-  error5.2 <- abs(test5.2 - answers[i, 7])
-  error5.3 <- abs(test5.3 - answers[i, 8])
-  if (error5.1 > 0.01 * answers[i, 6]) {
-    flag <- 1
-    print(paste0("Test case 5 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 6], " but computed ", test5.1))
-    print(paste0("Percentage error: ", 100 * error5.1 / answers[i, 6], "%"))
-  }
-  if (error5.2 > 0.01 * answers[i, 7]) {
-    flag <- 1
-    print(paste0("Test case 5 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 7], " but computed ", test5.2))
-    print(paste0("Percentage error: ", 100 * error5.2 / answers[i, 7], "%"))
-  }
-  if (error5.3 > 0.01 * answers[i, 8]) {
-    flag <- 1
-    print(paste0("Test case 5 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 8], " but computed ", test5.3))
-    print(paste0("Percentage error: ", 100 * error5.3 / answers[i, 8], "%"))
-  }
+  print("Test case 5: 0 < (f1 = f2) < 1")
+  # Test case 5.1
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.25)
+  flag_main <- max(flag_main, flag)
+  # Test case 5.2
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.5)
+  flag_main <- max(flag_main, flag)
+  # Test case 5.3
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.75)
+  flag_main <- max(flag_main, flag)
   
   ## Case 6: f1 = 1
-  test6.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 1, f2 = 0.5)
-  error6.1 <- abs(test6.1 - answers[i, 9])
-  if (error6.1 > 0.01 * answers[i, 9]) {
-    flag <- 1
-    print(paste0("Test case 6 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 9], " but computed ", test6.1))
-    print(paste0("Percentage error: ", 100 * error6.1 / answers[i, 9], "%"))
-  }
+  print("Test case 6: f1 = 1")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 1, f2 = 0.5)
+  flag_main <- max(flag_main, flag)
   
   ## Case 7: f2 = 1
-  test7.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 0.5, f2 = 1)
-  error7.1 <- abs(test7.1 - answers[i, 10])
-  if (error7.1 > 0.01 * answers[i, 10]) {
-    flag <- 1
-    print(paste0("Test case 6 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 10], " but computed ", test7.1))
-    print(paste0("Percentage error: ", 100 * error7.1 / answers[i, 10], "%"))
-  }
+  print("Test case 7: f2 = 1")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 0.5, f2 = 1)
+  flag_main <- max(flag_main, flag)
   
   ## Case 8: f1 = f2 = 1
-  test8.1 <- extHaus(cases1[[i]], cases2[[i]], f1 = 1)
-  error8.1 <- abs(test8.1 - answers[i, 11])
-  if (error8.1 > 0.01 * answers[i, 11]) {
-    flag <- 1
-    print(paste0("Test case 6 failed on input pair set: ", i))
-    print(paste0("Expected ", answers[i, 11], " but computed ", test8.1))
-    print(paste0("Percentage error: ", 100 * error8.1 / answers[i, 11], "%"))
-  }
+  print("Test case 8: f1 = f2 = 1")
+  flag <- test_extHaus(cases1[[i]], cases2[[i]], 1000000, f1 = 1)
+  flag_main <- max(flag_main, flag)
   
-  if (flag == 0) {
-    print(paste0("All tests for input set ", i, " passed!"))
+  if (flag_main == 0) {
+    print("All test cases passed!")
   }
-  
   print("--------------------------------------------------------------------")
 }
-
 # Test observations:
 # All input sets passed all test cases!
+
 # Testing: SpatialDataFrames ----------------------------------------------
 
 setwd("Data")
@@ -261,14 +190,19 @@ spdf <- SpatialPointsDataFrame(
   proj4string = crdref
 )
 
-test_extHaus <- function(A, B, a_coords, n_samp, f1, f2) {
+test_extHausv2 <- function(A, B, a_coords, n_samp, f1, f2) {
   flag <- 0
+  
   val <- extHaus(A, B, f1, f2)
-  distsf1.1 <- rgeos::gDistance(a_coords, B, byid = T)
-  b_coords <- sp::spsample(B, n = n_samp, type = "regular")
-  distsf1.2 <- rgeos::gDistance(b_coords, A, byid = T)
-  ans <- max(quantile(distsf1.1, probs = f1),
-              quantile(distsf1.2, probs = f2))
+  if (is.null(gDifference(A, B))) {
+    ans <- 0
+  } else {
+    distsf1 <- rgeos::gDistance(a_coords, B, byid = T)
+    b_coords <- sp::spsample(B, n = n_samp, type = "regular")
+    distsf2 <- rgeos::gDistance(b_coords, A, byid = T)
+    ans <- max(quantile(distsf1, probs = f1),
+               quantile(distsf2, probs = f2)) 
+  }
   error <- abs(val - ans)
   pct_error <- 100 * error / ans
   if (error > 0.01 * ans) {
@@ -297,7 +231,7 @@ for (i in 1:n_poly) {
     f1val <- f1_vec[i * j]
     f2val <- f2_vec[i * j]
     
-    flag1 <- test_extHaus(
+    flag1 <- test_extHausv2(
       A = tracts_harris[i, ],
       B = tracts_harris[j, ],
       a_coords = a_coords,
@@ -307,7 +241,7 @@ for (i in 1:n_poly) {
     )
     print("Finished flag 1---------------")
     
-    flag2 <- test_extHaus(
+    flag2 <- test_extHausv2(
       A = tracts_harris[i, ],
       B = rivers[j, ],
       a_coords = a_coords,
@@ -319,7 +253,9 @@ for (i in 1:n_poly) {
     
     flag3 <- 0
     val <- extHaus(tracts_harris[i, ], spdf[j, ], f1val, f2val)
-    ans <- rgeos::gDistance(tracts_harris[i, ], spdf[j, ])
+    dists <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
+    min_dist <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
+    ans <- max(quantile(dists, f1val), min_dist)
     error <- abs(val - ans)
     pct_error <- 100 * error / ans
     if (error > 0.01 * ans) {
@@ -366,7 +302,7 @@ for (i in 1:n_line) {
     f1val <- f1_vec[i * j]
     f2val <- f2_vec[i * j]
     
-    flag1 <- test_extHaus(
+    flag1 <- test_extHausv2(
       A = rivers[i, ],
       B = tracts_harris[j, ],
       a_coords = a_coords,
@@ -376,7 +312,7 @@ for (i in 1:n_line) {
     )
     print("Finished flag 1---------------")
     
-    flag2 <- test_extHaus(
+    flag2 <- test_extHausv2(
       A = rivers[i, ],
       B = rivers[j, ],
       a_coords = a_coords,
@@ -388,7 +324,9 @@ for (i in 1:n_line) {
     
     flag3 <- 0
     val <- extHaus(rivers[i, ], spdf[j, ], f1val, f2val)
-    ans <- rgeos::gDistance(rivers[i, ], spdf[j, ])
+    dists <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
+    min_dist <- rgeos::gDistance(spdf[j, ], rivers[i, ])
+    ans <- max(quantile(dists, f1val), min_dist)
     error <- abs(val - ans)
     pct_error <- 100 * error / ans
     if (error > 0.01 * ans) {
@@ -413,10 +351,7 @@ for (i in 1:n_line) {
   print("********************************************************************")
 }
 # Old version: a lot of iterations with big percentage errors (> 25%)
-# New version:
-  # Iterations with more than 2% error: (1, 1), (2, 2), ..., (10, 10) but 
-  # only because the  real value in those cases is zero but the results
-  # produced by the sampling technique are about 1e-09.
+# New version: no iterations with more than 2% error
 
 
 # Test point to point calculations
