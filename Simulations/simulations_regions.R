@@ -25,16 +25,23 @@ results_summ <- function(results) {
 
 #### Watershed Regions ####
 #old shapefiles
-region_orig <- readOGR('./Test/watershed_region.shp')
-region_orig <- spTransform(region_orig, CRS("+init=epsg:2278"))
-plot(region_orig)
-region_temp <- readOGR('./Test/watershed_region_temp.shp')
-region_temp <- spTransform(region_temp, CRS("+init=epsg:2278"))
-plot(region_temp)
+#region_orig <- readOGR('./Test/watershed_region.shp')
+#region_orig <- spTransform(region_orig, CRS("+init=epsg:2278"))
+#plot(region_orig)
+#region_temp <- readOGR('./Test/watershed_region_temp.shp')
+#region_temp <- spTransform(region_temp, CRS("+init=epsg:2278"))
+#plot(region_temp)
 
-#USE THIS UPDATED ONE!
+#USE THESE UPDATED ONES!
+# original hydrologic regions
 region <- readOGR('./Test/watershed_region_updated/watershed_region_updated.shp')
 proj4string(region) <- CRS("+init=epsg:2278")
+region <- spTransform(region, CRS("+init=epsg:2278"))
+plot(region)
+
+# alternative hydrologic regions (the difference is Sims Bayou is now in region 2)
+region <- readOGR('./Test/watershed_region_alt/watershed_region_alt.shp')
+#proj4string(region) <- CRS("+init=epsg:2278")
 region <- spTransform(region, CRS("+init=epsg:2278"))
 plot(region)
 
@@ -146,6 +153,11 @@ region_results31b <- simulate(A=subset(region, region$REGION==3),
 results_summ(region_results31b)
 cat(region_results31b, sep="\n")
 
+region_results31c <- simulate(A=subset(region, region$REGION==3),
+                              B=subset(region, region$REGION==1), f1=0.8)
+results_summ(region_results31c)
+cat(region_results31c, sep="\n")
+
 ##### end: region 2 #####
 region_results32a <- simulate(A=subset(region, region$REGION==3),
                               B=subset(region, region$REGION==2), f1=0.5)
@@ -156,3 +168,13 @@ region_results32b <- simulate(A=subset(region, region$REGION==3),
                               B=subset(region, region$REGION==2), f1=1)
 results_summ(region_results32b)
 cat(region_results32b, sep="\n")
+
+region_results32c <- simulate(A=subset(region, region$REGION==3),
+                              B=subset(region, region$REGION==2), f1=0.8)
+results_summ(region_results32c)
+cat(region_results32c, sep="\n")
+
+region_results32d <- simulate(A=subset(region, region$REGION==3),
+                              B=subset(region, region$REGION==2), f1=0.6)
+results_summ(region_results32d)
+cat(region_results32d, sep="\n")
