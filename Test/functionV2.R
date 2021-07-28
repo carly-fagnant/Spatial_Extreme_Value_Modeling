@@ -129,6 +129,23 @@ hausMat <- function(shp, f1, f2 = f1, fileout = FALSE, filename = NULL,
   return(dists)
 }
 
+# seq_haus_mat
+#' Computes a matrix of extended Hausdorff distances using the
+#' input Spatial objects "shp" and the input decimals "f1" and "f2".
+#'
+#'@param shp a Spatial*DataFrame object with n rows.
+#'@param f1 The percentage (as a decimal) of region i to retain when
+#'   calculating the directional Hausdorff distance from region i to region j.
+#'   E.g. 10% = 0.1.
+#'@param f2 The percentage (as a decimal) of region j to retain when
+#'   calculating the directional Hausdorff distance from region j to i. 
+#'   E.g. 10% = 0.1. Defaults to the value of f1. Note that specifying a 
+#'   value of f2 that does equal f1 will result in a non-symmetric matrix.
+#'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
+#'  
+#'@return an nxn matrix of extended Hausdorff distances.
+#'
+#' Last edited: July 24 2020
 seq_haus_mat <- function(shp, f1, f2 = f1, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
@@ -163,6 +180,7 @@ seq_haus_mat <- function(shp, f1, f2 = f1, tol = NULL) {
   return(dists)
 }
 
+# Deprecated: see par_haus_mat
 par_haus_mat_slow <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
@@ -213,9 +231,24 @@ par_haus_mat_slow <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
   return(dists)
 }
 
-# Modified version of par_haus_mat_slow that attempts to minimize the number 
-# of parallel tasks created by only creating  "ncores" tasks and dividing 
-# the work evenly across tasks
+# par_haus_mat
+#' Computes a matrix of extended Hausdorff distances using the
+#' input Spatial objects "shp" and the input decimals "f1" and "f2".
+#'
+#'@param shp a Spatial*DataFrame object with n rows.
+#'@param f1 The percentage (as a decimal) of region i to retain when
+#'   calculating the directional Hausdorff distance from region i to region j.
+#'   E.g. 10% = 0.1.
+#'@param f2 The percentage (as a decimal) of region j to retain when
+#'   calculating the directional Hausdorff distance from region j to i. 
+#'   E.g. 10% = 0.1. Defaults to the value of f1. Note that specifying a 
+#'   value of f2 that does equal f1 will result in a non-symmetric matrix.
+#'@param ncores The number of cores to be used for  parallel computation.
+#'@param tol a tolerance value to be passed onto extHaus. Defaults to NULL.  
+#'  
+#'@return an nxn matrix of extended Hausdorff distances.
+#'
+#' Last edited: July 24 2020
 par_haus_mat <- function(shp, f1, f2 = f1, ncores, tol = NULL) {
   n <- nrow(shp@data)
   dists <- matrix(0, nrow = n, ncol = n)
