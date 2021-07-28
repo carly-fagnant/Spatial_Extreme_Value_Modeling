@@ -500,6 +500,86 @@ mat <- hausMat(
 file_data <- read.csv("results.csv")
 print(file_data)
 print(mat)
+# Testing: different CRS --------------------------------------------------
+
+crs_vec <- c("+init=epsg:28992", "+init=epsg:26978", "+init=epsg:2163")
+
+for (i in 1:length(crs_vec)) {
+  print(crs_vec[i])
+  tracts_harris <- sp::spTransform(tracts_harris, CRS(crs_vec[i]))
+  rivers <- sp::spTransform(rivers, CRS(crs_vec[i]))
+  spdf <- SpatialPointsDataFrame(
+    coords = coords,
+    data = data,
+    proj4string = CRS(crs_vec[i])
+  )
+  
+  print(paste0("tracts_harris projected: ", sp::is.projected(tracts_harris)))
+  print(paste0("rivers projected: ", sp::is.projected(rivers)))
+  print(paste0("spdf projected: ", sp::is.projected(spdf)))
+  
+  n_poly <- 2
+  n_other <- 2
+  n_samp <- 1000000
+  for (i in 1:n_poly) {
+    print(paste0("Outer iteration: ", i))
+    flag <- 0
+    a_coords <- sp::spsample(tracts_harris[i, ], n = n_samp, type = "regular")
+    for (j in 1:n_other) {
+      print(paste0("Iteration (", i, ", ", j, ")"))
+      f1val <- f1_vec[i * j]
+      f2val <- f2_vec[i * j]
+      
+      flag1 <- test_extHausv2(
+        A = tracts_harris[i, ],
+        B = tracts_harris[j, ],
+        a_coords = a_coords,
+        n_samp = n_samp,
+        f1 = f1val,
+        f2 = f2val
+      )
+      print("Finished flag 1---------------")
+      
+      flag2 <- test_extHausv2(
+        A = tracts_harris[i, ],
+        B = rivers[j, ],
+        a_coords = a_coords,
+        n_samp = n_samp,
+        f1 = f1val,
+        f2 = f2val
+      )
+      print("Finished flag 2---------------")
+      
+      flag3 <- 0
+      val <- extHaus(tracts_harris[i, ], spdf[j, ], f1val, f2val)
+      dists <- rgeos::gDistance(a_coords, spdf[j, ], byid = T)
+      min_dist <- rgeos::gDistance(spdf[j, ], tracts_harris[i, ])
+      ans <- max(quantile(dists, f1val), min_dist)
+      error <- abs(val - ans)
+      pct_error <- 100 * error / ans
+      if (error > 0.01 * ans) {
+        flag3 <- 1
+        print(paste0("Error"))
+        print(paste0("Expected ", ans, " but computed ", val))
+        print(paste0("Percentage error: ", pct_error, "%"))
+        print(paste0("f1_vec: ", f1val))
+        print(paste0("f2_vec: ", f2val))
+      }
+      print("Finished flag 3---------------")
+      
+      flag_mid <- max(flag1, flag2, flag3)
+      if (flag_mid == 1) {
+        flag <- flag_mid
+      }
+      print("------------------------------------------------------------------")
+    }
+    if (flag == 0) {
+      print("Completed outer iteration without errors.")
+    }
+    print("********************************************************************")
+  }
+}
+
 # Testing: par_haus_mat_slow vs par_haus_mat ------------------------------
 
 # If par_haus_mat is better than par_haus_mat_slow then we would expect for
