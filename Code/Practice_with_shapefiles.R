@@ -198,3 +198,21 @@ identical(testU1L, testU2L)
 identical(testU1c, testU2c)
 plot(testU1c)
 plot(testU2c)
+
+
+
+
+# Hydroregions ------------------------------------------------------------
+
+library(rgdal)
+setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data")
+wd <- getwd()
+
+G_north <- rgdal::readOGR(dsn = paste0(wd,"/G_San_Jacinto_River_split"), layer = "G_San_Jacinto_River_Watershed_split_north")
+G_south <- rgdal::readOGR(dsn = paste0(wd,"/G_San_Jacinto_River_split"), layer = "G_San_Jacinto_River_Watershed_split_south")
+
+plot(G_north)
+plot(G_south, axes=T)
+plot(G_north, add=T)
+plot(testG, axes=T)
+plot(G_south, add=T)
