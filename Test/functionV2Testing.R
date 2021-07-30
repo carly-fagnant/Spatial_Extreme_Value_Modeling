@@ -502,7 +502,31 @@ print(file_data)
 print(mat)
 # Testing: different CRS --------------------------------------------------
 
-crs_vec <- c("+init=epsg:28992", "+init=epsg:26978", "+init=epsg:2163")
+# Test with different CRSs
+
+crs_vec <- c("+init=epsg:2002", "+init=epsg:2113", "+init=epsg:2256",
+             "+init=epsg:2372", "+init=epsg:2491", "+init=epsg:2544",
+             "+init=epsg:2631", "+init=epsg:2783", "+init=epsg:2997",
+             "+init=epsg:3116", "+init=epsg:3249", "+init=epsg:3307",
+             "+init=epsg:3422", "+init=epsg:3561", "+init=epsg:28992",
+             "+init=epsg:26978", "+init=epsg:27700")
+# got values from: https://spatialreference.org/ref/epsg/
+
+for (i in 1:length(crs_vec)) {
+  print(crs_vec[i])
+  tracts_harris <- sp::spTransform(tracts_harris, CRS(crs_vec[i]))
+  rivers <- sp::spTransform(rivers, CRS(crs_vec[i]))
+  spdf <- SpatialPointsDataFrame(
+    coords = coords,
+    data = data,
+    proj4string = CRS(crs_vec[i])
+  )
+  
+  print(paste0("tracts_harris projected: ", sp::is.projected(tracts_harris)))
+  print(paste0("rivers projected: ", sp::is.projected(rivers)))
+  print(paste0("spdf projected: ", sp::is.projected(spdf)))
+  print("--------------------------------------------------------------------")
+}
 
 for (i in 1:length(crs_vec)) {
   print(crs_vec[i])
@@ -518,8 +542,8 @@ for (i in 1:length(crs_vec)) {
   print(paste0("rivers projected: ", sp::is.projected(rivers)))
   print(paste0("spdf projected: ", sp::is.projected(spdf)))
   
-  n_poly <- 2
-  n_other <- 2
+  n_poly <- 3
+  n_other <- 3
   n_samp <- 1000000
   for (i in 1:n_poly) {
     print(paste0("Outer iteration: ", i))
