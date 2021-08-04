@@ -21,11 +21,12 @@ library(gnFit)
 # library(ggmap)
 
 
-setwd("~/Documents/GitHub/scrape-NOAA-data/Data")
-# precip <- read.csv("all_stations_precip_UDP_updated_2021.csv")  # new data you will use
+#setwd("~/Documents/GitHub/scrape-NOAA-data/Data")
+precip <- read.csv("~/Documents/GitHub/scrape-NOAA-data/Data/all_stations_precip_UDP_updated_2021.csv")  # new data you will use
 
-precip <- read.csv("all_stations_precip_UDP.csv", header = TRUE)
-precip <- precip[,-1]   # delete first column since is repeat of row names (numbers)
+##old data
+#precip <- read.csv("all_stations_precip_UDP.csv", header = TRUE)
+#precip <- precip[,-1]   # delete first column since is repeat of row names (numbers)
 
 ### Declustering
 precip_dclust = precip
@@ -53,7 +54,10 @@ thresh <- 253   # for 1-day
 # Distribution Fits -------------------------------------------------------
 
 numstat <- numrow <- 601 #stations
-numcol <- 79 #moving windows (this number will change with the new data since we have more years)
+#numcol <- 79 #moving windows (this number will change with the new data since we have more years, old data was 1900-2017)
+numcol <- (2020-39)-1900 +1 
+  #2020-39 will get the starting year for the last window
+  #1900 is the starting year but it is not counted in the math, hence the +1
 
 # GPD Fit function
 # Given a matrix of data, fits a GPD to each column of data and saves the fit objects in a list
@@ -423,33 +427,35 @@ for(h in c(1:numstat)){ # for some reason 481 was not working with gof fn, so us
 ### You can instead load the .rds file below to load a saved copy (see readRDS line below)
 
 # ### 40-YEAR MOVING WINDOWS ///////////////
-numcol <- 79 #windows of 40
-# startday <- "-01-01"
-# endday <- "-12-31"
-# window <- list()
-# labelyr <- NULL   # end year of window
-# 
-# # to access window j, gpdfit for station i, use window[[j]][[i]]
-# 
-# startyr <- 1900
-# for(j in 1:numcol){
-#   start <- paste0(startyr, startday)
-#   endyr <- startyr + 39
-#   end <- paste0(endyr, endday)
-#   labelyr[j] <- lubridate::year(as.Date(end)) 
-#   
-#   start <- which(data$Date==start)  #finding indexes corresponding to start & end dates
-#   end   <- which(data$Date==end)
-#   sub <- data[start:end, ]  #subset data to those 40 years
-#   window[[j]] <- fitgpdR(sub, thresh)   # GPD fit with extRemes package
-#   
-#   startyr <- startyr + 1
-# }
-# 
-# # saveRDS(window, file="window_1day_dclust.rds")
+#numcol <- 79 #windows of 40
+numcol <- (2020-39)-1900 +1 
+startday <- "-01-01"
+endday <- "-12-31"
+window <- list()
+labelyr <- NULL   # end year of window
 
-window <- readRDS(file="window_1day_dclust.rds") # get this file from Box, should be 1.67 GB .rds file when unzipped
+# to access window j, gpdfit for station i, use window[[j]][[i]]
 
+startyr <- 1900
+for(j in 1:numcol){
+  start <- paste0(startyr, startday)
+  endyr <- startyr + 39
+  end <- paste0(endyr, endday)
+  labelyr[j] <- lubridate::year(as.Date(end))
+
+  start <- which(data$Date==start)  #finding indexes corresponding to start & end dates
+  end   <- which(data$Date==end)
+  sub <- data[start:end, ]  #subset data to those 40 years
+  window[[j]] <- fitgpdR(sub, thresh)   # GPD fit with extRemes package
+
+  startyr <- startyr + 1
+}
+
+# saveRDS(window, file="window_1day_dclust.rds")
+saveRDS(window, file="Data/window_1day_dclust_updated.rds")
+
+# window <- readRDS(file="window_1day_dclust.rds") # get this file from Box, should be 1.67 GB .rds file when unzipped
+window <- readRDS(file="Data/window_1day_dclust_updated.rds")
 
 # Saving Return Levels for Easy Plotting ----------------------------------
 
