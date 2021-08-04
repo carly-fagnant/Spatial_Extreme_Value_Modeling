@@ -14,7 +14,7 @@ library(stats)
 library(dplyr)
 library(xts)
 library(gnFit)
-# library(ismev)
+library(ismev)
 # library(tseries)
 # library(trend)
 # library(astsa)
@@ -526,7 +526,12 @@ for(j in 1:numcol){
 }
 window_CVM <- as.data.frame(window_CVM)
 window_AD <- as.data.frame(window_AD)
-# saveRDS(window_CVM, file="window_CVM_updated.rds")
-# saveRDS(window_AD, file="window_AD_updated.rds")
+
+# saveRDS(window_CVM, file="Data/window_CVM_updated.rds")
+# saveRDS(window_AD, file="Data/window_AD_updated.rds")
+
+window_CVM <- readRDS("Data/window_CVM_updated.rds")
+window_AD <- readRDS("Data/window_AD_updated.rds")
+
 # window_CVM[i, j] gives CVM (Cramer Von Mises) p-value for station i, window j  (similar for AD is Anderson Darling)
 # window[[j]][[i]] gives gpd fit output for station i, window j
