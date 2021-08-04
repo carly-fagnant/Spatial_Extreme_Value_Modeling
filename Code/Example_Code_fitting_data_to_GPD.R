@@ -500,4 +500,33 @@ for(i in 1:numstat){
 }
 
 
-labelyr <- 1939:2017
+#labelyr <- 1939:2017
+labelyr <- 1939:2020
+
+
+# Goodness of Fit ---------------------------------------------------------
+# Now going to do GOF for ALL stations, for EACH WINDOW FIT
+### Should save RDS to access saved output instead of having to run again
+window_CVM <- matrix(nrow = numstat, ncol = numcol)
+window_AD <- matrix(nrow = numstat, ncol = numcol)
+for(j in 1:numcol){
+  CVMp <- ADp <- NULL
+  for(i in 1:numstat){
+    fit <- window[[j]][[i]]
+    if(!is.na(fit) == TRUE){
+      gof_h <- gof_fix_error(fit$x, dist="gpd", pr=fit$results$par, threshold=thresh)   # New gof function which corrects for errors by rounding
+      CVMp[i] <- gof_h$Wpval
+      ADp[i] <- gof_h$Apval
+    }else{
+      CVMp[i] <- ADp[i] <- NA
+    }
+  }
+  window_CVM[, j] <- CVMp
+  window_AD[, j] <- ADp
+}
+window_CVM <- as.data.frame(window_CVM)
+window_AD <- as.data.frame(window_AD)
+# saveRDS(window_CVM, file="window_CVM_updated.rds")
+# saveRDS(window_AD, file="window_AD_updated.rds")
+# window_CVM[i, j] gives CVM (Cramer Von Mises) p-value for station i, window j  (similar for AD is Anderson Darling)
+# window[[j]][[i]] gives gpd fit output for station i, window j
