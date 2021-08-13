@@ -94,6 +94,7 @@ stations <- stations %>%
 
 # subset to those 166 stations that fall within the 3 regions
 # ... but also remove stations with NAs if any
+# ends up being 149 stations
 stations_sub <- stations %>%
   dplyr::filter(STAT_NO %in% inds) %>%
   dplyr::filter(!is.na(scale))
@@ -154,6 +155,18 @@ cor(out$observed - out$residual, out$residual)
 
 meuse.cok <- predict(meuse.fit, newdata = meuse.grid) # cokriging?
 plot(meuse.cok)
+
+plot(meuse, axes=T)
+plot(meuse.grid, axes=T)
+gridm <- sp::makegrid(meuse, cellsize = 100) # cellsize in map units!
+gridm <- SpatialPoints(gridm, proj4string = CRS(proj4string(meuse)))
+plot(meuse)
+plot(gridm, pch = ".", add = T)
+gridded(gridm) = TRUE
+
+meuse.cok <- predict(meuse.fit, newdata = gridm) # cokriging?
+plot(meuse.cok)
+
 
 sims <- predict(meuse.fit, newdata = meuse.grid, nsim=1) ### this is the line that would not run for me...
 # sims <- krige(meuse.fit, newdata = meuse.grid, nsim=5)
@@ -229,6 +242,10 @@ v3.fit
 plot(v3)
 plot(v3, model=v3.fit, main="Log(rate)")
 
+v3 = variogram(rate~1, data = stations_sub)
+v3.fit = fit.variogram(v3, vgm(c("Exp", "Mat", "Sph", "Gau")))
+v3.fit
+plot(v3, model=v3.fit, main="Rate")
 
 ### Log(scale)
 # Gau
@@ -290,14 +307,72 @@ plot(variogram(g))
 vg <- variogram(g)
 ## "Sph", "Gau", "Exp", "Mat"
 cv.fit = fit.lmc(vg, g, vgm("Sph"))
+cv.fit1 = fit.lmc(vg, g, vgm("Sph"), correct.diagonal = 1.01)
 # cv.fit = fit.lmc(vg, g, vgm("Gau"))
 # cv.fit = fit.lmc(vg, g, vgm("Exp"))
 # cv.fit = fit.lmc(vg, g, vgm("Mat"))
 plot(vg, model = cv.fit)
+cv.fit
+
+try.cok <- predict(cv.fit, newdata = ws_regs) # cokriging?
+plot(try.cok)
+
+plot(vg, model = cv.fit1)
+cv.fit1
+try.cok <- predict(cv.fit1, newdata = ws_regs) # cokriging?
+plot(try.cok)
+
+### create a grid (of points)
+# library(raster)
+grid <- sp::makegrid(ws_regs, cellsize = 2000) # cellsize in map units
+grid <- SpatialPoints(grid, proj4string = CRS(proj4string(ws_regs)))
+grid <- grid[ws_regs, ] # grid points only within the polygon
+plot(ws_regs)
+plot(grid, pch = ".", add = T)
+try.cok <- predict(cv.fit1, newdata = grid) # cokriging?
+plot(try.cok)
+gridded(grid) = TRUE # turn into spatial pixels data frame
+
+### Removing stations with <5 yrs data
+stations_sub <- stations %>%
+  dplyr::filter(STAT_NO %in% inds) %>%
+  dplyr::filter(!is.na(scale))
+
+stations_sub_5_up <- stations_sub %>%
+  dplyr::filter(num_years >= 5)
+
+stations_sub_6_up <- stations_sub %>%
+  dplyr::filter(num_years > 5)
+
+### Function to project data given a data frame with data and coordinates
+project_data <- function(df){
+  coordinates(df)=~long+lat
+  proj4string(df) <- "+proj=longlat +datum=WGS84"
+  df <- spTransform(df, CRS("+init=epsg:2278")) # projecting data
+  is.projected(df)
+  return(df)
+}
 
 
+stations_sub_5_up <- project_data(stations_sub_5_up)
+stations_sub_6_up <- project_data(stations_sub_6_up)
+stations_sub <- project_data(stations_sub)
 
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub_5_up)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub_5_up)
+# examine variograms and cross variogram:
+vg <- variogram(g)
+## "Sph", "Gau", "Exp", "Mat"
+cv.fit = fit.lmc(vg, g, vgm("Sph"))
+plot(vg, model = cv.fit)
 
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub_6_up)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub_6_up)
+# examine variograms and cross variogram:
+vg <- variogram(g)
+## "Sph", "Gau", "Exp", "Mat"
+cv.fit = fit.lmc(vg, g, vgm("Sph"))
+plot(vg, model = cv.fit)
 
 ###### Model 1 - Change of Support ######
 # already created COS matrix H (it is h model matrix above)
