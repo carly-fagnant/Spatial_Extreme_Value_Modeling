@@ -108,6 +108,8 @@ mean_scale_shape_rate <- function(stations_subset, regions) {
   scale_avg <- rep(0, num_regions)
   shape_avg <- rep(0, num_regions)
   rate_avg <- rep(0, num_regions)
+  # For each region, look for the stations in the regions and note their
+  # parameter values to subsequently compute the region average.
   for (i in 1:num_regions) {
     print(paste0("Outer iteration: ", i))
     ws_reg <- regions[i, ]
@@ -133,7 +135,52 @@ mean_scale_shape_rate <- function(stations_subset, regions) {
 proj4string(ws_regs) <- proj4string(stations_sub)
 proj4string(ws_regs_alt) <- proj4string(stations_sub)
 
-ws_reg_avg <- mean_scale_shape_rate(stations_sub, ws_regs)
-saveRDS(ws_reg_avg, file = 'ws_reg_avg.rds')
-ws_reg_alt_avg <- mean_scale_shape_rate(stations_sub, ws_reg_alt)
-saveRDS(ws_reg_alt_avg, file = 'ws_reg_alt_avg.rds')
+# Compute averages and save the results
+# ws_reg_avg <- mean_scale_shape_rate(stations_sub, ws_regs)
+# saveRDS(ws_reg_avg, file = 'ws_reg_avg.rds')
+# ws_reg_alt_avg <- mean_scale_shape_rate(stations_sub, ws_reg_alt)
+# saveRDS(ws_reg_alt_avg, file = 'ws_reg_alt_avg.rds')
+# 
+ws_reg_avg <- readRDS("ws_reg_avg.rds")
+ws_reg_alt_avg <- readRDS("ws_reg_alt_avg.rds")
+
+beta0 <- ws_reg_avg[, 2]
+beta1 <- ws_reg_avg[, 1] - beta0
+beta2 <- ws_reg_avg[, 3] - beta0
+
+# let's do some manual fitting of two direct variograms and a cross variogram
+proj4string(stations_sub) <- proj4string(ws_regs)
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub)
+# examine variograms and cross variogram:
+vg <- variogram(g)
+plot(vg)
+## "Sph", "Gau", "Exp", "Mat"
+cv.fit <- fit.lmc(vg, g, vgm("Sph"))
+# cv.fit = fit.lmc(vg, g, vgm("Gau"))
+# cv.fit = fit.lmc(vg, g, vgm("Exp"))
+# cv.fit = fit.lmc(vg, g, vgm("Mat"))
+plot(vg, model = cv.fit)
+cok <- predict(g, newdata = stations_sub) # cokriging?
+plot(cok)
+cv.fit$set=list(nocheck=1)
+ws_reg_grid <- predict(cv.fit, newdata = ws_regs, nsim = 1)
+# If newdata is of class SpatialPolygons or SpatialPolygonsDataFrame, 
+# calculated, then the block average for each of the polygons or polygon sets 
+# is using spsample to discretize the polygon(s). Argument sps.args controls 
+# the  parameters used for spsample. The "location" with respect to which 
+# neighbourhood selection is done is for each polygon the SpatialPolygons 
+# polygon label point;
+
+# Compare the results:
+rbind(ws_reg_avg, log(ws_reg_avg[1, ]))
+ws_reg_grid@data
+
+# Ensure both stations_sub and ws_reg_alt have the same coordinate system
+proj4string(ws_reg_alt) <- proj4string(stations_sub)
+proj4string(stations_sub) <- proj4string(ws_reg_alt)
+ws_reg_alt_grid <- predict(cv.fit, newdata = ws_reg_alt, nsim = 1)
+
+# Compare the results:
+rbind(ws_reg_alt_avg, log(ws_reg_alt_avg[1, ]))
+ws_reg_alt_grid@data
