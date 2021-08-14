@@ -13,6 +13,8 @@
 
 library(RandomFields)
 library(gstat)
+library(geoR)
+library(CompRandFld)
 library(rgdal)
 library(sp)
 library(dplyr)
@@ -188,3 +190,61 @@ spplot(try.cok[5]) # covariance between variables. Does not look great, very con
 
 gridded(grid) = TRUE # turn into spatial pixels data frame
 
+
+
+# geoR --------------------------------------------------------------------
+
+### examples
+data(s100)
+# binned variogram
+vario.b <- variog(s100, max.dist=1)
+# variogram cloud
+vario.c <- variog(s100, max.dist=1, op="cloud")
+#binned variogram and stores the cloud
+vario.bc <- variog(s100, max.dist=1, bin.cloud=TRUE)
+# smoothed variogram
+vario.s <- variog(s100, max.dist=1, op="sm", band=0.2)
+
+#
+# plotting the variograms:
+par(mfrow=c(2,2))
+plot(vario.b, main="binned variogram")
+plot(vario.c, main="variogram cloud")
+plot(vario.bc, bin.cloud=TRUE, main="clouds for binned variogram")
+plot(vario.s, main="smoothed variogram")
+
+par(mfrow=c(1,1))
+# computing a directional variogram
+vario.0 <- variog(s100, max.dist=1, dir=0, tol=pi/8)
+plot(vario.b, type="l", lty=2)
+lines(vario.0)
+legend("topleft", legend=c("omnidirectional", expression(0 * degree)), lty=c(2,1))
+
+
+vario100 <- variog(s100, max.dist=1)
+ini.vals <- expand.grid(seq(0,1,l=5), seq(0,1,l=5))
+ols <- variofit(vario100, ini=ini.vals, fix.nug=TRUE, wei="equal", cov.model = "matern")
+summary(ols)
+wls <- variofit(vario100, ini=ini.vals, fix.nug=TRUE, cov.model = "spherical")
+summary(wls)
+plot(vario100)
+lines(wls)
+lines(ols, lty=2)
+
+
+
+# CompRandFld -------------------------------------------------------------
+
+stations_sub@data$shape
+log(stations_sub@data$scale)
+bivar <- rbind(stations_sub@data$shape, log(stations_sub@data$scale))
+stations_sub@coords
+
+fit <- CompRandFld::EVariogram(data = stations_sub@data$shape, coordx = stations_sub@coords)
+
+# Trying bivariate, but it is not correct. Considers it as 2 iid realizations of the same process
+fit <- CompRandFld::EVariogram(data = bivar, coordx = stations_sub@coords, replicates = 2)
+
+plot(fit$centers, fit$variograms, xlab='h', ylab=expression(gamma(h)),
+     ylim=c(0, max(fit$variograms)), xlim=c(0, fit$srange[2]), pch=20,
+     main="variogram")
