@@ -99,6 +99,8 @@ stations_sub <- stations %>%
   dplyr::filter(STAT_NO %in% inds) %>%
   dplyr::filter(!is.na(scale))
 
+stations_sub_df <- stations_sub # save data frame for future refence if needed
+
 # long becomes x coordinate and lat is y coordinate
 coordinates(stations_sub)=~long+lat
 proj4string(stations_sub) <- "+proj=longlat +datum=WGS84"
@@ -106,6 +108,9 @@ stations_sub <- spTransform(stations_sub, CRS("+init=epsg:2278")) # projecting d
 is.projected(stations_sub)
 # it should now be in the proper coordinates and in the same projection as the watersheds
 
+## saving for future easy reference
+# saveRDS(stations_sub, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub.rds")
+# saveRDS(stations_sub_df, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub_df.rds")
 
 # Plotting regions and the stations on top --------------------------------
 
@@ -321,6 +326,10 @@ plot(vg, model = cv.fit1)
 cv.fit1
 try.cok <- predict(cv.fit1, newdata = ws_regs) # cokriging?
 plot(try.cok)
+
+### Eduardo added the following line to make it work
+cv.fit$set=list(nocheck=1)
+ws_reg_grid <- predict(cv.fit, newdata = ws_regs, nsim = 1)
 
 ### create a grid (of points)
 # library(raster)
