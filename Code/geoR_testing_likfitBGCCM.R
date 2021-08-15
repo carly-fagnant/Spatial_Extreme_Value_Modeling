@@ -6,8 +6,10 @@ library(raster)
 library(sp)
 
 # Notes -----------------------------------------------------------------------
-# likfitBGCM: 
-# this is a new function and still in draft format and pretty much untested
+# A file for testing out the likfitBGCM and predict functions in geoR
+# From the geoR documentation regarding the current status of likfitBGCM: "this 
+# is a new function and still in draft format and pretty much untested"
+# Maybe we shouldn't use it?
 
 # Example code ----------------------------------------------------------------
 ## Testing code: Inference in the
