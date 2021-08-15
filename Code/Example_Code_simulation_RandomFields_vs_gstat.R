@@ -112,6 +112,7 @@ project_data <- function(df){
 sub_stat <- project_data(submore)
 extremesub <- project_data(extremesub)
 sub_shape <- project_data(sub_shape) # only got single variable to work to be able to see plot
+sub_ln.scale <- project_data(sub_ln.scale)
 
 RFstations <- sp2RF(sub_stat, param=list(n=1, vdim=4))
 RFstations <- sp2RF(extremesub, param=list(n=1, vdim=2))
@@ -153,9 +154,11 @@ cv.fit = fit.lmc(vg, g, vgm("Mat"))
 plot(vg, model = cv.fit)
 cv.fit
 
+proj4string(ws_regs) <- proj4string(stations_sub)
 cv.fit$set=list(nocheck=1) # added
 try.cok <- predict(cv.fit, newdata = ws_regs) # cokriging?
 plot(try.cok)
+ws_reg_grid <- predict(cv.fit, newdata = ws_regs, nsim = 1)
 
 plot(vg, model = cv.fit1)
 cv.fit1
@@ -230,6 +233,34 @@ summary(wls)
 plot(vario100)
 lines(wls)
 lines(ols, lty=2)
+
+
+##### BGCCM #####
+## Karen's try
+?likfitBGCCM
+stations_gd <- as.geodata(stations_sub) # I think might need to use subset data instead
+stations_gd$scale <- log(stations_sub$scale)
+# this leaves also an extra data vector of the station numbers. Not sure what data the model will go off of
+
+stations_gd2 <- as.geodata(stations_sub)
+stations_gd2$shape <- stations_sub$shape
+
+bg_model <- likfitBGCCM(stations_gd, stations_gd2)
+summary(bg_model)
+bg_model
+
+
+### My try
+# sub_shape <- project_data(sub_shape) # transform SpatialPointsDataFrame, then to geodata
+# sub_ln.scale <- project_data(sub_ln.scale) # this should have already been run above
+
+BGshape <- as.geodata(sub_shape, data.col = 1) # method for class 'SpatialPointsDataFrame'
+BGln.scale <- as.geodata(sub_ln.scale, data.col = 1)
+
+BGmodel <- likfitBGCCM(BGln.scale, BGshape)
+summary(BGmodel)
+BGmodel
+
 
 
 
