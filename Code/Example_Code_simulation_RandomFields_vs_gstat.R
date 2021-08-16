@@ -20,8 +20,84 @@ library(sp)
 library(dplyr)
 
 
+
+
+# Loading our data --------------------------------------------------------
+
+setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Test")
+wd <- getwd()
+
+ws_regs <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_updated"), layer = "watershed_region_updated")
+plot(ws_regs)
+
+# Alternate version of 3 regions
+ws_reg_alt <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_alt"), layer = "watershed_region_alt")
+plot(ws_reg_alt)
+
+# load pre-cleaned spatial points data frame
+stations_sub <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub.rds")
+stations_sub_df <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub_df.rds")
+
+hist(stations_sub_df$shape, breaks="Scott")
+hist(stations_sub_df$scale)
+hist(log(stations_sub_df$scale), breaks="Scott")
+plot(stations_sub_df$shape, log(stations_sub_df$scale))
+boxplot(stations_sub_df$shape)
+boxplot(log(stations_sub_df$scale))
+
+which(log(stations_sub_df$scale) < 2)
+which(stations_sub_df$shape > 3)
+hist(stations_sub_df$shape[-31], breaks="Scott")
+hist(log(stations_sub_df$scale[-31]), breaks="Scott")
+
+submore <- stations_sub_df %>%
+  dplyr::mutate(ln.scale = log(scale)) %>%
+  dplyr::select(STAT_NO, ln.scale, shape, rate, long, lat)
+
+extremesub <- submore %>%
+  dplyr::select(ln.scale, shape, long, lat)
+
+sub_ln.scale <- submore %>%
+  dplyr::select(ln.scale, long, lat)
+
+sub_shape <- submore %>%
+  dplyr::select(shape, long, lat)
+
+### Function to project data given a data frame with data and coordinates
+project_data <- function(df){
+  coordinates(df)=~long+lat
+  proj4string(df) <- "+proj=longlat +datum=WGS84"
+  df <- spTransform(df, CRS("+init=epsg:2278")) # projecting data
+  is.projected(df)
+  return(df)
+}
+
+
+# Trying different data to see what works for variogram
+sub_stat <- project_data(submore)
+extremesub <- project_data(extremesub)
+sub_shape <- project_data(sub_shape) # only got single variable to work to be able to see plot
+sub_ln.scale <- project_data(sub_ln.scale)
+
+
+
+# RandomFields ------------------------------------------------------------
+
 RFoptions(seed=0) ## *ANY* simulation will have the random seed 0; set
 ## RFoptions(seed=NA) to make them all random again
+
+
+
+RFstations <- sp2RF(sub_stat, param=list(n=1, vdim=4))
+RFstations <- sp2RF(extremesub, param=list(n=1, vdim=2))
+RFstations <- sp2RF(sub_shape, param=list(n=1, vdim=1))
+
+vario <- RandomFields::RFvariogram(data = RFstations)
+dev.new()
+plot(vario, model=RMmatern())
+plot(vario)
+# not working for me :(
+
 
 
 ### Examples for RandomFields
@@ -65,65 +141,6 @@ dev.new()
 plot(model)
 
 dev.off()
-
-# Loading our data --------------------------------------------------------
-
-setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Test")
-wd <- getwd()
-
-ws_regs <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_updated"), layer = "watershed_region_updated")
-plot(ws_regs)
-
-# Alternate version of 3 regions
-ws_reg_alt <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_alt"), layer = "watershed_region_alt")
-plot(ws_reg_alt)
-
-# load pre-cleaned spatial points data frame
-stations_sub <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub.rds")
-stations_sub_df <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub_df.rds")
-
-
-# RandomFields ------------------------------------------------------------
-
-submore <- stations_sub_df %>%
-  dplyr::mutate(ln.scale = log(scale)) %>%
-  dplyr::select(STAT_NO, ln.scale, shape, rate, long, lat)
-
-extremesub <- submore %>%
-  dplyr::select(ln.scale, shape, long, lat)
-
-sub_ln.scale <- submore %>%
-  dplyr::select(ln.scale, long, lat)
-
-sub_shape <- submore %>%
-  dplyr::select(shape, long, lat)
-
-### Function to project data given a data frame with data and coordinates
-project_data <- function(df){
-  coordinates(df)=~long+lat
-  proj4string(df) <- "+proj=longlat +datum=WGS84"
-  df <- spTransform(df, CRS("+init=epsg:2278")) # projecting data
-  is.projected(df)
-  return(df)
-}
-
-
-# Trying different data to see what works for variogram
-sub_stat <- project_data(submore)
-extremesub <- project_data(extremesub)
-sub_shape <- project_data(sub_shape) # only got single variable to work to be able to see plot
-sub_ln.scale <- project_data(sub_ln.scale)
-
-RFstations <- sp2RF(sub_stat, param=list(n=1, vdim=4))
-RFstations <- sp2RF(extremesub, param=list(n=1, vdim=2))
-RFstations <- sp2RF(sub_shape, param=list(n=1, vdim=1))
-
-vario <- RandomFields::RFvariogram(data = RFstations)
-dev.new()
-plot(vario, model=RMmatern())
-plot(vario)
-# not working for me :(
-
 
 
 # gstat -------------------------------------------------------------------
