@@ -27,9 +27,24 @@
 
 
 
-# setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Test")
-# wd <- getwd()
+# Loading our data --------------------------------------------------------
 
+setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Test")
+wd <- getwd()
+
+ws_regs <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_updated"), layer = "watershed_region_updated")
+plot(ws_regs)
+
+# Alternate version of 3 regions
+ws_reg_alt <- rgdal::readOGR(dsn = paste0(wd, "/watershed_region_alt"), layer = "watershed_region_alt")
+plot(ws_reg_alt)
+
+# load pre-cleaned spatial points data frame
+stations_sub <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub.rds")
+stations_sub_df <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub_df.rds")
+
+# avg parameter values by region
+ws_reg_avg <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ws_reg_avg.rds")
 
 
 # Testing Functions -------------------------------------------------------
@@ -44,7 +59,6 @@
 
 # NOTE: the avg rate of exceedance of the threshold is only 0.0543096, so about 95% of the data simulated should be under the threshold...
 
-ws_reg_avg <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ws_reg_avg.rds")
 avg_sc <- mean(ws_reg_avg[1,])
 avg_sh <- mean(ws_reg_avg[2,])
 avg_rt <- mean(ws_reg_avg[3,])
@@ -57,6 +71,42 @@ any(simtry < 253)
 # Step 1 ------------------------------------------------------------------
 # Step 1: use multivariate normal (separately for each region) to simulate (shape and scale) parameter values for stations within each region
 # But what covariance structure do we use here? Same for all regions? (yes, I believe so)
+
+Varlogsc <- var(log(stations_sub_df$scale))
+Varsh <- var(stations_sub_df$shape)
+Covar <- cov(log(stations_sub_df$scale), stations_sub_df$shape)
+cov_mat <- matrix(c(Varlogsc, Covar , Covar, Varsh), nrow = 2, ncol = 2, byrow = TRUE,
+                                   dimnames = list(c("ln.scale", "shape"),
+                                                   c("ln.scale", "shape")))
+
+reg1mvn <- MASS::mvrnorm(n=3, mu = c(log(ws_reg_avg[1,1]), ws_reg_avg[2,1]), Sigma = cov_mat)
+
+# Number of stations per region, from summary(region_intersect$REGION)
+stats_per_reg <- c(50, 52, 64)
+
+sim_from_mvn <- function(region){
+  i <- region
+  if(i %in% c(1,2,3)){
+    # simulates the 2 params for the number of stations in that region, using that region's avg values
+    sim_params <- MASS::mvrnorm(n = stats_per_reg[i], mu = c(log(ws_reg_avg[1,i]), ws_reg_avg[2,i]), Sigma = cov_mat)
+    return(sim_params)
+  }else{
+    print("Invalid entry of region, please input 1, 2, or 3")
+  }
+}
+
+reg1mvn <- sim_from_mvn(region = 1)
+reg2mvn <- sim_from_mvn(region = 2)
+reg3mvn <- sim_from_mvn(region = 3)
+
+
+
+# Step 2 ------------------------------------------------------------------
+# Step 2: fit a cross-variogram in gstat (to this simulated data?) and use the predict fn with nsim = 1 to simulate parameter values at all of the stations at once
+# This brings in more of the covariance structure?
+
+# Note: maybe if I can access covariance matrix from gstat cross-variogram, I can combine Steps 1 and 2 into just a multivariate normal. 
+#   However, I run into the issue of that I am doing it separately for each region
 
 
 
