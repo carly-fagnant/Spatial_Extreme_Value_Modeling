@@ -21,9 +21,9 @@
 # Note: maybe if I can access covariance matrix from gstat cross-variogram, I can combine Steps 1 and 2 into just a multivariate normal. 
 #   However, I run into the issue of that I am doing it separately for each region
 
-# Step ?: use the extRemes::revd fn to simulate daily rainfall data using the parameters given
-# NOTE: No input for rate here. Will outputs be all above the threshold? I think so...
-#       Will need to correct for this if so, by randomly removing observations at the rate estimated
+# Step ?: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transorm scale back using exp())
+# NOTE: No input for rate here. Will outputs be all above the threshold? Yes.
+#       Will need to correct for this, by randomly removing observations at the rate estimated
 
 
 
@@ -71,6 +71,7 @@ any(simtry < 253)
 # Step 1 ------------------------------------------------------------------
 # Step 1: use multivariate normal (separately for each region) to simulate (shape and scale) parameter values for stations within each region
 # But what covariance structure do we use here? Same for all regions? (yes, I believe so)
+# Note this covariance structure is strictly on the 2 parameter values, and has no spatial component
 
 Varlogsc <- var(log(stations_sub_df$scale))
 Varsh <- var(stations_sub_df$shape)
@@ -99,14 +100,100 @@ reg1mvn <- sim_from_mvn(region = 1)
 reg2mvn <- sim_from_mvn(region = 2)
 reg3mvn <- sim_from_mvn(region = 3)
 
+# Now assign these values to station locations?
 
+# load data
+station_info <- read.csv("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/station_info.csv")
+
+# add new location (long/lat) columns that we will transform to coordinates
+station_info <- station_info %>%
+  dplyr::mutate(long = LONGITUDE, lat = LATITUDE)
+
+# subset to those 166 stations that fall within the 3 regions
+# ... but also remove stations with NAs if any
+# ends up being 149 stations
+stations_sub_sim <- station_info %>%
+  dplyr::filter(STAT_NO %in% inds) 
+# %>%
+#   dplyr::filter(!is.na(scale))
+
+### Function to project data given a data frame with data and coordinates
+project_data <- function(df){
+  coordinates(df)=~long+lat
+  proj4string(df) <- "+proj=longlat +datum=WGS84"
+  df <- spTransform(df, CRS("+init=epsg:2278")) # projecting data
+  is.projected(df)
+  return(df)
+}
+
+station_info <- project_data(station_info)
+
+# set regions and points to have the same projection
+proj4string(ws_regs) <- proj4string(station_info)
+
+
+
+
+
+### Finding which stations fall within the 3 regions 
+region_intersect <- sp::over(station_info, ws_regs)
+# region_intersect lists the 601 stations in order and the integer of what region each station falls within (NA if not in any region)
+
+region_intersect$REGION <- as.factor(region_intersect$REGION) # need these to be factors in order for the model matrix and summary to work
+summary(region_intersect$REGION) # number of stations in each region (NAs are those not in any)
+
+h <- model.matrix( ~ REGION - 1, data=region_intersect)
+
+# this gives the numbers of the stations that fall within the 3 regions
+inds <- as.integer(rownames(h))
+
+# stations by region
+reg1stat_index <- which(h[,1]==1) # index of station in stations_sub_df
+reg1stat_no  <- as.integer(names(reg1stat_index)) # actual station number
+reg2stat_index <- which(h[,2]==1)
+reg2stat_no  <- as.integer(names(reg2stat_index))
+reg3stat_index <- which(h[,3]==1)
+reg3stat_no  <- as.integer(names(reg3stat_index))
+
+stations_sub_mvn <- stations_sub_sim %>% mutate(mvln.scale = NA, mvshape = NA)
+
+stations_sub_mvn$mvln.scale[reg1stat_index] <- reg1mvn[,1]
+stations_sub_mvn$mvshape[reg1stat_index] <- reg1mvn[,2]
+
+stations_sub_mvn$mvln.scale[reg2stat_index] <- reg2mvn[,1]
+stations_sub_mvn$mvshape[reg2stat_index] <- reg2mvn[,2]
+
+stations_sub_mvn$mvln.scale[reg3stat_index] <- reg3mvn[,1]
+stations_sub_mvn$mvshape[reg3stat_index] <- reg3mvn[,2]
 
 # Step 2 ------------------------------------------------------------------
 # Step 2: fit a cross-variogram in gstat (to this simulated data?) and use the predict fn with nsim = 1 to simulate parameter values at all of the stations at once
-# This brings in more of the covariance structure?
+# This brings in more of the covariance structure? - Yes, the spatial side of it
 
 # Note: maybe if I can access covariance matrix from gstat cross-variogram, I can combine Steps 1 and 2 into just a multivariate normal. 
 #   However, I run into the issue of that I am doing it separately for each region
+
+
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub)
+# examine variograms and cross variogram:
+vg <- variogram(g)
+## "Sph", "Gau", "Exp", "Mat"
+cv.fit1 = fit.lmc(vg, g, vgm("Sph"), correct.diagonal = 1.01)
+cv.fit = fit.lmc(vg, g, vgm("Mat"))
+plot(vg, model = cv.fit)
+cv.fit
+plot(vg, model = cv.fit1)
+cv.fit1
+
+cv.fit$set=list(nocheck=1)
+cv.fit1$set=list(nocheck=1)
+pred <- predict(cv.fit1, newdata = stations_sub, nsim = 1)
+pred <- predict(cv.fit, newdata = stations_sub, nsim = 1)
+plot(ws_regs)
+plot(pred, pch = "•", add = T)
+spplot(pred) 
+
 
 
 
