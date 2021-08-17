@@ -211,6 +211,14 @@ spplot(try.cok[5]) # covariance between variables. Does not look great, very con
 gridded(grid) = TRUE # turn into spatial pixels data frame
 
 
+# Trying vgmArea
+data(meuse)
+demo(meuse, ask = FALSE, echo = FALSE)
+vgmArea(meuse[1:5,], vgm = vgm(1, "Exp", 1000)) # point-point
+vgmArea(meuse[1:5,], meuse.area, vgm = vgm(1, "Exp", 1000)) # point-area
+# Don't know what data it is using...
+vgmArea(meuse.area, vgm = vgm(1, "Exp", 1000)) # attempted area-area
+
 
 # geoR --------------------------------------------------------------------
 
