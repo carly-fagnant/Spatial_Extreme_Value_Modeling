@@ -10,6 +10,10 @@
 
 # maybe gstat::vgmArea could provide covariance at the area level?
 
+
+# Updated Steps 1 & 2: regress our data parameter values against constant means for the region, and save the residuals
+# Then do variogram modeling and spatial simulations on the residuals. Add back in the mean afterwards
+
 # Step 1: use multivariate normal (separately for each region) to simulate (shape and scale) parameter values for stations within each region
 # But what covariance structure do we use here? Same for all regions? (yes, I believe so)
 
@@ -214,6 +218,7 @@ cv.fit$set=list(nocheck=1)
 cv.fit1$set=list(nocheck=1)
 pred <- predict(cv.fit1, newdata = stations_sub, nsim = 1)
 pred <- predict(cv.fit, newdata = stations_sub, nsim = 1)
+pred_orig <- pred
 plot(ws_regs)
 plot(pred, pch = "•", add = T)
 spplot(pred) 
@@ -256,6 +261,115 @@ sp::zerodist(stations_sub_mvn)
 
 
 
+# Updated Steps 1 & 2 -----------------------------------------------------
+# Updated Steps 1 & 2: regress our data parameter values against constant means for the region, and save the residuals
+# Then do variogram modeling and spatial simulations on the residuals. Add back in the means afterwards
+
+# Finding which region the subset stations fall within
+region_int <- sp::over(stations_sub, ws_regs)
+stations_regs <- stations_sub_df %>% mutate(REGION = region_int$REGION) # adding region information to the spatially referenced data
+
+region_int$REGION <- as.factor(region_int$REGION)
+summary(region_int$REGION)
+h0 <- model.matrix( ~ REGION - 1, data=region_int)
+stations_regs_cat <- stations_sub_df %>% mutate(REGION = region_int$REGION) # adding region information to the spatially referenced data
+class(stations_regs_cat$REGION)
+
+# shape
+model <- lm(shape ~ REGION, data = stations_regs_cat)
+summary(model)
+summary(model)$coef[1]
+summary(model)$coef[1] + summary(model)$coef[2]
+summary(model)$coef[1] + summary(model)$coef[3]
+shape.means <- c(summary(model)$coef[1],
+                 summary(model)$coef[1] + summary(model)$coef[2],
+                 summary(model)$coef[1] + summary(model)$coef[3])
+
+plot(model$residuals)
+hist(model$residuals)
+hist(log(model$residuals))
+qqnorm(model$residuals)
+qqnorm(log(model$residuals))
+
+# log(scale)
+model.sc <- lm(log(scale) ~ REGION, data = stations_regs_cat)
+summary(model.sc)
+summary(model.sc)$coef[1]
+summary(model.sc)$coef[1] + summary(model.sc)$coef[2]
+summary(model.sc)$coef[1] + summary(model.sc)$coef[3]
+ln.scale.means <- c(summary(model.sc)$coef[1],
+                    summary(model.sc)$coef[1] + summary(model.sc)$coef[2],
+                    summary(model.sc)$coef[1] + summary(model.sc)$coef[3])
+model.sc$residuals
+hist(model.sc$residuals)
+# hist(log(model.sc$residuals))
+qqnorm(model.sc$residuals)
+# qqnorm(log(model.sc$residuals))
+
+# stations_resids <- stations_regs_cat %>% mutate(ln.scale.resid = log(model.sc$residuals), shape.resid = model$residuals) # taking log after regressing for scale created NaNs
+stations_resids <- stations_regs_cat %>% mutate(ln.scale.resid = model.sc$residuals, shape.resid = model$residuals)
+stations_resids <- project_data(stations_resids)
+
+
+# To residuals:
+rg <- gstat(id = "ln.scale.resid", formula = ln.scale.resid~1, data = stations_resids)
+rg <- gstat(rg, id = "shape.resid", formula = shape.resid~1, data = stations_resids)
+# examine variograms and cross variogram:
+rvg <- variogram(rg)
+plot(rvg)
+## "Sph", "Gau", "Exp", "Mat"
+r.cv.fit1 = fit.lmc(rvg, rg, vgm("Sph")) #, correct.diagonal = 1.01)
+r.cv.fit = fit.lmc(rvg, rg, vgm("Mat"))
+plot(rvg, model = r.cv.fit)
+r.cv.fit
+plot(rvg, model = r.cv.fit1)
+r.cv.fit1
+
+r.cv.fit$set=list(nocheck=1)
+r.cv.fit1$set=list(nocheck=1)
+pred1 <- predict(r.cv.fit1, newdata = stations_sub, nsim = 1)
+pred <- predict(r.cv.fit, newdata = stations_sub, nsim = 1)
+
+
+station_locations <- stations_sub_df %>% dplyr::select(STAT_NO, long, lat)
+station_locations <- project_data(station_locations)
+
+pred_test <- predict(r.cv.fit, newdata = station_locations, nsim = 1)
+pred@data$ln.scale.resid.sim1 == pred_test@data$ln.scale.resid.sim1
+pred@data$ln.scale.resid.sim1 - pred_test@data$ln.scale.resid.sim1
+
+plot(ws_regs)
+plot(pred, pch = "•", add = T)
+spplot(pred) 
+spplot(pred[1]) 
+spplot(pred[2]) 
+
+spplot(pred_test)
+
+# Make sure to add back in the means!!
+
+ln.scale.resid <- pred@data$ln.scale.resid.sim1
+shape.resid <- pred@data$shape.resid.sim1
+# scale <- exp(pred@data$ln.scale.resid.sim1) # transforming it back from the log scale
+
+scale <- shape <- NULL
+for (i in 1:length(shape.resid)){
+  # value = residual + mean of region of station (index i)
+  scale[i] <- exp( ln.scale.resid[i] + ln.scale.means[stations_regs$REGION[i]] )  # transforming it back from the log scale
+  shape[i] <- shape.resid[i] + shape.means[stations_regs$REGION[i]]
+}
+
+# Strange... the shape and scale parameters are the same as in stations_sub...
+# Maybe in predict function we cannot let newdata = stations_sub? No, doesn't matter if we remove
+# They are just going to be REALLY close (almost zero difference)
+# I think this is because of the kriging nature and that we are going to the points that we worked off of.
+# They are going to be very precise unless we move to new points/grid/area
+
+shape - shape_orig
+scale - scale_orig
+shape - stations_sub@data$shape
+scale - stations_sub@data$scale
+
 # Step 3 ------------------------------------------------------------------
 # Step 3: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transorm scale back using exp())
 # NOTE: No input for rate here. Will outputs be all above the threshold? Yes.
@@ -267,10 +381,10 @@ sp::zerodist(stations_sub_mvn)
 # Save data as a matrix? with station numbers as the column titles and the data listed under each for the same number of days
 # 14610 is the number of days in 40 years
 
-# head(pred@data)
-# head(pred@coords)
-scale <- exp(pred@data$ln.scale.sim1) # transforming it back from the log scale
-shape <- pred@data$shape.sim1
+
+# # # Can ignore if did residuals version above
+# scale_orig <- exp(pred_orig@data$ln.scale.sim1) # transforming it back from the log scale
+# shape_orig <- pred_orig@data$shape.sim1
 
 # Haven't simulated the rate parameters yet, so let's just use the rates from stations_sub
 rate <- stations_sub@data$rate
@@ -292,11 +406,66 @@ colnames(sim_data) <- stations_sub@data$STAT_NO
 
 ## saving
 # setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data")
-# saveRDS(sim_data, file = "ex_sim_data.rds")
+# saveRDS(sim_data, file = "ex_sim_data.rds") # first example
+# saveRDS(sim_data, file = "reg_sim_data.rds") # example after simulating using the regression & residuals idea
 
 
 # Model 2 - Kriging and Aggregation ---------------------------------------
 
 # Note that one may take a shortcut in coding by setting the newdata argument in gstat::predict to be the regions of interest
-# this uses spsample 
+# this uses spsample to draw unifrom random locations across the polygon and average them
+# Not quite our gridded kriging, but very close
 
+sim_data <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ex_sim_data.rds")
+
+thresh <- 253
+
+# Testing out model 2 on example simulated data
+fits <- NULL
+sim_fit_df <- matrix(nrow = length(scale), ncol = 6)
+
+for (i in 1:length(scale)){
+  fit <- extRemes::fevd(sim_data[, i], threshold = thresh, type = "GP", method="MLE")
+  fits[[i]] <- fit # saving just in case
+  # Create new data frame with station and fit information
+  sim_fit_df[i, 2] <- fit$results$par[1] # scale
+  sim_fit_df[i, 3] <- fit$results$par[2] # shape
+  sim_fit_df[i, 4] <- fit$rate # rate
+}
+
+sim_fit_df[, 1] <- stations_sub@data$STAT_NO # 1st column is station numbers
+sim_fit_df[, 5] <- stations_sub_df$long # long lat
+sim_fit_df[, 6] <- stations_sub_df$lat # long lat
+sim_fit <- as_data_frame(sim_fit_df)
+colnames(sim_fit) <- c("STAT_NO", "scale", "shape", "rate", "long", "lat")
+
+sim_fit <- project_data(sim_fit)
+
+# Now try kriging these values
+sg <- gstat(id = "ln.scale", formula = log(scale)~1, data = sim_fit)
+sg <- gstat(sg, id = "shape", formula = shape~1, data = sim_fit)
+# examine variograms and cross variogram:
+svg <- variogram(sg)
+plot(svg)
+## "Sph", "Gau", "Exp", "Mat"
+s.cv.fit1 = fit.lmc(svg, sg, vgm("Sph")) #, correct.diagonal = 1.01)
+s.cv.fit = fit.lmc(svg, sg, vgm("Mat"))
+plot(svg, model = s.cv.fit)
+s.cv.fit
+plot(svg, model = s.cv.fit1)
+s.cv.fit1
+
+s.cv.fit$set=list(nocheck=1)
+# cv.fit1$set=list(nocheck=1)
+skrigws <- predict(s.cv.fit1, newdata = ws_regs)
+skrigws <- predict(s.cv.fit, newdata = ws_regs)
+
+skrig <- predict(s.cv.fit1, newdata = stations_sub)
+skrig <- predict(s.cv.fit, newdata = stations_sub)
+
+plot(ws_regs)
+plot(skrig, pch = "•", add = T)
+spplot(skrig) 
+spplot(skrigws[3]) 
+
+# Need to add in rate parameter somehow
