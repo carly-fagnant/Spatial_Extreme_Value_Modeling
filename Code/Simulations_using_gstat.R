@@ -116,6 +116,9 @@ stations_sub_sim <- station_info %>%
   dplyr::filter(STAT_NO %in% inds) 
 # %>%
 #   dplyr::filter(!is.na(scale))
+stations_sub_sim <- stations %>%
+  dplyr::filter(STAT_NO %in% inds) 
+
 
 ### Function to project data given a data frame with data and coordinates
 project_data <- function(df){
@@ -166,6 +169,16 @@ stations_sub_mvn$mvshape[reg2stat_index] <- reg2mvn[,2]
 stations_sub_mvn$mvln.scale[reg3stat_index] <- reg3mvn[,1]
 stations_sub_mvn$mvshape[reg3stat_index] <- reg3mvn[,2]
 
+# getting rid of those stations which were NA in actual data. Use same stations as in stations_sub
+stations_sub_mvn <- stations_sub_mvn %>% filter(X %in% stations_sub_df$X)
+
+# Project data but also save data frame version in case it's needed
+stations_sub_mvn_df <- stations_sub_mvn
+stations_sub_mvn <- project_data(stations_sub_mvn)
+
+# Have now created data set using mvrnorm data --> next run variograms and simulation
+
+
 # Step 2 ------------------------------------------------------------------
 # Step 2: fit a cross-variogram in gstat (to this simulated data?) and use the predict fn with nsim = 1 to simulate parameter values at all of the stations at once
 # This brings in more of the covariance structure? - Yes, the spatial side of it
@@ -174,10 +187,12 @@ stations_sub_mvn$mvshape[reg3stat_index] <- reg3mvn[,2]
 #   However, I run into the issue of that I am doing it separately for each region
 
 
+# To real data:
 g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub)
 g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub)
 # examine variograms and cross variogram:
 vg <- variogram(g)
+plot(vg)
 ## "Sph", "Gau", "Exp", "Mat"
 cv.fit1 = fit.lmc(vg, g, vgm("Sph"), correct.diagonal = 1.01)
 cv.fit = fit.lmc(vg, g, vgm("Mat"))
@@ -185,6 +200,15 @@ plot(vg, model = cv.fit)
 cv.fit
 plot(vg, model = cv.fit1)
 cv.fit1
+
+g.test <- gstat(g, model = vgm("Sph", range=37500), fill.all = TRUE)
+test.fit1 <- fit.lmc(vg, g.test) # Does not actually set it to my range... but is a constant range of 44941.16
+test.fit1
+test.fit2 <- fit.lmc(vg, g.test, fit.ranges = TRUE) # singular model, fitting different ranges
+test.fit2
+
+test.fit = fit.lmc(vg, g, vgm("Mat"), fit.ranges = TRUE) # no convergence
+test.fit = fit.lmc(vg, g, vgm("Sph"), fit.ranges = TRUE) # singular model - "a possible solution MIGHT be to scale semivariances and/or distances"
 
 cv.fit$set=list(nocheck=1)
 cv.fit1$set=list(nocheck=1)
@@ -195,7 +219,80 @@ plot(pred, pch = "•", add = T)
 spplot(pred) 
 
 
+# To parameters from simulated mvnorm:
+g1 <- gstat(id = "ln.scale", formula = mvln.scale~1, data = stations_sub_mvn)
+g1 <- gstat(g1, id = "shape", formula = mvshape~1, data = stations_sub_mvn)
+# examine variograms and cross variogram:
+vg1 <- variogram(g1)
+## "Sph", "Gau", "Exp", "Mat"
+cv.fit1s = fit.lmc(vg1, g1, vgm("Sph"), correct.diagonal = 1.01)
+cv.fit1m = fit.lmc(vg1, g1, vgm("Mat"))
+plot(vg1, model = cv.fit1s)
+cv.fit1s
+plot(vg1, model = cv.fit1m)
+cv.fit1m
 
+cv.fit1s$set=list(nocheck=1)
+cv.fit1m$set=list(nocheck=1)
+pred1s <- predict(cv.fit1s, newdata = stations_sub, nsim = 1)
+pred1m <- predict(cv.fit1m, newdata = stations_sub, nsim = 1)
+plot(ws_regs)
+plot(pred, pch = "•", add = T)
+spplot(pred1s)
+spplot(pred1m)
+
+### Reasons for some errors- 
+# Covariance matrix singular at location... from having multiple observations at the same location (distance=0 between pairs)
+sp::zerodist(stations_sub)
+sp::zerodist(stations_sub_mvn)
+# (444, 491)  (471, 492)  (481, 493, 502)  (489, 495)  (508, 496)
+# The stations with the same locations (were removed by removing NA values for regular stations_sub)
+# the first one listed in each pair has only ~1 yr of data so can be thrown out or absorbed into the other station
+
+# No Intrinsic Correlation or Linear Model of Coregionalization found
+# Reason: ranges differ
+# The strange thing is our ranges do not differ in the fit object... so add `set = list(nocheck = 1)' to ignore
+# See https://stat.ethz.ch/pipermail/r-sig-geo/2008-November/004562.html
+
+
+
+# Step 3 ------------------------------------------------------------------
+# Step 3: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transorm scale back using exp())
+# NOTE: No input for rate here. Will outputs be all above the threshold? Yes.
+#       Will need to correct for this, by randomly removing observations at the rate estimated
+
+# pred is a SpatialPointsDataFrame holding the parameter estimates for each station (ln.scale and shape)
+# be sure to transorm scale back using exp() fn
+
+# Save data as a matrix? with station numbers as the column titles and the data listed under each for the same number of days
+# 14610 is the number of days in 40 years
+
+# head(pred@data)
+# head(pred@coords)
+scale <- exp(pred@data$ln.scale.sim1) # transforming it back from the log scale
+shape <- pred@data$shape.sim1
+
+# Haven't simulated the rate parameters yet, so let's just use the rates from stations_sub
+rate <- stations_sub@data$rate
+
+# idea - use the rates to randomly select the data to remain above the threshold
+# Helpful note: it doesn't matter the order/placement of the data in the days, other than assuring they are independent/declustered
+
+sim_data <- matrix(nrow = 14610, ncol = length(scale))
+for(i in 1:length(scale)){
+  # stat_no <- stations_sub@data$STAT_NO[i]
+  dat <- extRemes::revd(n = 14610, type = "GP", scale = scale[i], shape = shape[i], threshold = 253)
+  n = round(rate[i]*length(dat)) # number of values to keep above threshold
+  sub_dat <- sample(dat, size = n) # taking a random sample of the generated values to keep according to rate
+  new_dat <- c(sub_dat, rep(0, 14610-n)) # appending on zeros for the rest of the data
+  sim_data[, i] <- new_dat
+}
+sim_data <- as.data.frame(sim_data)
+colnames(sim_data) <- stations_sub@data$STAT_NO
+
+## saving
+# setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data")
+# saveRDS(sim_data, file = "ex_sim_data.rds")
 
 
 # Model 2 - Kriging and Aggregation ---------------------------------------
