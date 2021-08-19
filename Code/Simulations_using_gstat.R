@@ -416,7 +416,9 @@ colnames(sim_data) <- stations_sub@data$STAT_NO
 # this uses spsample to draw unifrom random locations across the polygon and average them
 # Not quite our gridded kriging, but very close
 
-sim_data <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ex_sim_data.rds")
+ex_sim_data <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ex_sim_data.rds")
+# sim_data <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/reg_sim_data.rds")
+
 
 thresh <- 253
 
@@ -466,6 +468,122 @@ skrig <- predict(s.cv.fit, newdata = stations_sub)
 plot(ws_regs)
 plot(skrig, pch = "•", add = T)
 spplot(skrig) 
-spplot(skrigws[3]) 
+spplot(skrigws)
+spplot(skrigws[3]) # ln.scale.pred
+spplot(skrigws[5]) # shape.pred
 
 # Need to add in rate parameter somehow
+
+# skrigws_orig <- skrigws
+# skrig_orig <- skrig
+
+
+
+# Model 3 - Combined Data Series ------------------------------------------
+
+# Issue - we don't have dates for our simulated rainfall values, so cannot really take the max of each day
+# Idea - use rate from real data version of the consolidated series, and use random selection of maximum from that?
+# i.e. find number of exceedances and randomly select rows to take the maximum for 
+
+# find the rate of exceedance in 40-yr period (1981-2020) in consolidated data
+# load consolidated
+consol_data <- read.csv("max_precip_regions.csv")
+
+consol_data$Date <- lubridate::ymd(as.character(consol_data$Date)) #put Date column into date format
+thresh <- 253
+
+
+# 40-year period
+start <- "1981-01-01"
+end <- "2020-12-31"
+
+start <- which(consol_data$Date==start)  #finding indexes corresponding to start & end dates
+end   <- which(consol_data$Date==end)
+sub <- consol_data[start:end, ]  #subset data to those 40 years
+fitreg1 <- extRemes::fevd(sub$region1, threshold=thresh, type="GP", method="MLE")
+fitreg2 <- extRemes::fevd(sub$region2, threshold=thresh, type="GP", method="MLE")
+fitreg3 <- extRemes::fevd(sub$region3, threshold=thresh, type="GP", method="MLE")
+fitreg1$rate; fitreg2$rate; fitreg3$rate
+mean(c(fitreg1$rate, fitreg2$rate, fitreg3$rate))
+
+fitreg1_alt <- extRemes::fevd(sub$region1_alt, threshold=thresh, type="GP", method="MLE")
+fitreg2_alt <- extRemes::fevd(sub$region2_alt, threshold=thresh, type="GP", method="MLE")
+fitreg3_alt <- extRemes::fevd(sub$region3_alt, threshold=thresh, type="GP", method="MLE")
+fitreg1_alt$rate; fitreg2_alt$rate; fitreg3_alt$rate
+mean(c(fitreg1_alt$rate, fitreg2_alt$rate, fitreg3_alt$rate))
+
+mean_rate <- mean(c(fitreg1$rate, fitreg2$rate, fitreg3$rate, fitreg1_alt$rate, fitreg2_alt$rate, fitreg3_alt$rate))
+length(sub$Date)
+mean_exceed <- round(mean_rate*length(sub$Date)) # 1898
+
+# number of exceedances per station
+num_excess <- NULL
+for (i in 1:length(sim_data)){
+  num_excess[i] <- length(which(sim_data[,i] > 0))
+}
+
+max(num_excess)
+quantile(num_excess, 0.95) # 2200
+quantile(num_excess, 0.99) # 3990
+quantile(num_excess, 1)
+head(sort(num_excess, decreasing = T), 20)
+# stations 169, 128, 201, ...
+
+which(num_excess==6096)
+colnames(sim_data)[31]
+length(which(num_excess > 2200)) / length(num_excess) # only ~5% of stations have more than 2200 exceedances, we are disregarding their "later" values
+
+# Looking at the first 2200 (1898?) rows of data in sim_data, randomly sample 1898 of them and take the max value for those days
+sub_sim_data <- sim_data[1:2200, ]
+x <- 1:2200
+rows_to_use <- sample(x, size = mean_exceed) # sample 1898 row numbers randomly out of 1:2200
+
+# For those rows, take the maximum value across all the stations (THAT FALL WITHIN EACH REGION)
+# region_int from earlier gives the regions that each station falls within, by index
+
+reg1_inds <- which(region_int$REGION==1)
+reg2_inds <- which(region_int$REGION==2)
+reg3_inds <- which(region_int$REGION==3)
+
+#create function that will take in a row from each region subset and find the max value
+get_max_value <- function(values_vector) {
+  if (all(is.na(values_vector))) {
+    return(NA)
+  }
+  else {
+    return(max(values_vector, na.rm=TRUE))
+  }
+}
+
+reg1_max <- reg2_max <- reg3_max <- NULL
+i = 1
+for (r in rows_to_use){
+  reg1_max[i] <- get_max_value(sub_sim_data[r, reg1_inds]) # taking max value over a row (of only those stations in region 1)
+  reg2_max[i] <- get_max_value(sub_sim_data[r, reg2_inds])
+  reg3_max[i] <- get_max_value(sub_sim_data[r, reg3_inds])
+  i = i+1
+}
+# subsetting to region columns each time - could improve code run time by subsetting beforehand
+
+# max_precip_regions <- data.frame(matrix(ncol=3, nrow=length()))
+regions_max <- as.data.frame(cbind(reg1_max, reg2_max, reg3_max))
+# appending on zeroes
+consol_test_data <- rbind(cbind(reg1_max, reg2_max, reg3_max), matrix(data=0, nrow = 14610 - mean_exceed, ncol = 3))
+consol_test_data <- as.data.frame(consol_test_data)
+colnames(consol_test_data) <- c("region1", "region2", "region3")
+
+fit.scale <- fit.shape <- NULL
+fit.reg <- list()
+# rate = 1898/14610 = 0.129911
+for (reg in 1:3){
+  fit <- fit.reg[[reg]] <- extRemes::fevd(consol_test_data[, reg], threshold=thresh, type="GP", method="MLE")
+  fit.scale[reg] <- fit$results$par[1]
+  fit.shape[reg] <- fit$results$par[2]
+}
+
+fit.scale; fit.shape
+# getting some outrageous values... may have to remove unrealistic values over a certain amount.
+# Maybe look back at all daily raw data I had and set the max value to be the limit
+
+range(stations_sub_df$scale)
+range(stations_sub_df$shape)
