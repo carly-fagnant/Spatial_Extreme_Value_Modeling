@@ -595,14 +595,108 @@ range(stations_sub_df$shape)
 
 # Model 1 - Change of Support and CAR -----------------------------------------------------------------
 
-# from spatial short course
-car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
-                               data=data.frame(dt.trans),
-                               family="CAR", listw=kn4nb_W,
-                               zero.policy=T)
+library(spatialreg)
+
+source('~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Test/functionV2.R') # read in updated functions
+# this houses the hausMat function to get a matrix of extended Hausdorff distances
+
+## function to normalize the distance matrix from hausMat()
+normalizeMatrix <- function(mat, method="row") {
+  if (method == "row") {
+    #row standardized, the weights of a row should add up to 1
+    for (i in 1:nrow(mat)) {
+      mat[i,] <- mat[i,] / sum(mat[i,])
+    }
+    return(mat)
+  }
+  else if (method == "scalar") {
+    alpha <- 1 / max(mat)
+    mat <- alpha * mat
+    return(mat)
+  }
+  else if (method == "inverse") {
+    for (i in 1:nrow(mat)) {
+      for (j in 1:ncol(mat)) {
+        if (i != j) {
+          mat[i, j] <- mat[i, j]^(-1)
+        }
+      }
+    }
+    return(mat)
+  }
+  else if (method == "exp") {
+    for (i in 1:nrow(mat)) {
+      for (j in 1:ncol(mat)) {
+        if (i != j) {
+          mat[i, j] <- exp(-0.1*mat[i, j])
+        }
+      }
+    }
+    return(mat)
+  }
+  else {
+    stop(paste("Method of normalization does not match any of the options."))
+  }
+}
+
+# getting weight matrix
+distMat <- hausMat(ws_regs, 0.5)
+distMat
+
+#take the inverse first, and then scalar/row normalize
+(W <- normalizeMatrix(distMat, "inverse"))
+isSymmetric.matrix(W) #symmetric
+(W_scalar <- normalizeMatrix(W, "scalar"))
+isSymmetric.matrix(W_scalar) #symmetric
+
+hausW <- mat2listw(W_scalar)
+
+
+car.ml <- spatialreg::spautolm(scale_avg ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                               listw=mat2listw(W_scalar))
+summary(car.ml)$Coef
+summary(car.ml)
+spdep::moran.test(residuals(car.ml), hausW, zero.policy=T)
+spdep::geary.test(residuals(car.ml), hausW, zero.policy=T)
+
+
+car.ml.lnscale <- spatialreg::spautolm(log(scale_avg) ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                               listw=hausW)
+summary(car.ml.lnscale)
+spdep::moran.test(residuals(car.ml.lnscale), hausW, randomisation = F)
+spdep::geary.test(residuals(car.ml.lnscale), hausW)
+
+car.ml.sh <- spatialreg::spautolm(shape_avg ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                     listw=hausW)
+summary(car.ml.sh)
+spdep::moran.test(residuals(car.ml.sh), hausW)
+spdep::geary.test(residuals(car.ml.sh), hausW)
+
+car.ml.rt <- spatialreg::spautolm(rate_avg ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                     listw=hausW)
+summary(car.ml.rt)
+spdep::moran.test(residuals(car.ml.rt), hausW)
+spdep::geary.test(residuals(car.ml.rt), hausW)
+
 
 car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
                                data=stations_sub_df, # need to have data frame at area level...
                                family="CAR", listw=kn4nb_W, # need to set W matrix my own way, using Hausdorff dist
                                zero.policy=T)
 
+library(CARBayes)
+S.CARleroux(t(ws_reg_avg[1,])~1, family="gaussian", W=W_scalar, burnin=20, n.sample=50)
+
+
+
+# Example from spatial short course
+car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
+                               data=data.frame(dt.trans),
+                               family="CAR", listw=kn4nb_W,
+                               zero.policy=T)
+
+
+### Need to think this through...
+# we have observations at the station level, and fit rainfall to GPD distribution to get parameter estimates 
+# These parameter estimates now become our Z(s)
+# these estimates follow the mean distribution of the values for the 3 regions (which one it falls within) + a spatial error and measurement error
