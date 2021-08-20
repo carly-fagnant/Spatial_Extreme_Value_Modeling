@@ -392,6 +392,8 @@ rate <- stations_sub@data$rate
 # idea - use the rates to randomly select the data to remain above the threshold
 # Helpful note: it doesn't matter the order/placement of the data in the days, other than assuring they are independent/declustered
 
+
+# only generate as many as I need instad of randomly subsetting
 sim_data <- matrix(nrow = 14610, ncol = length(scale))
 for(i in 1:length(scale)){
   # stat_no <- stations_sub@data$STAT_NO[i]
@@ -587,3 +589,20 @@ fit.scale; fit.shape
 
 range(stations_sub_df$scale)
 range(stations_sub_df$shape)
+
+
+
+
+# Model 1 - Change of Support and CAR -----------------------------------------------------------------
+
+# from spatial short course
+car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
+                               data=data.frame(dt.trans),
+                               family="CAR", listw=kn4nb_W,
+                               zero.policy=T)
+
+car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
+                               data=stations_sub_df, # need to have data frame at area level...
+                               family="CAR", listw=kn4nb_W, # need to set W matrix my own way, using Hausdorff dist
+                               zero.policy=T)
+
