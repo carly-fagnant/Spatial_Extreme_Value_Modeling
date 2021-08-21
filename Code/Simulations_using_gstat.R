@@ -660,6 +660,30 @@ spdep::moran.test(residuals(car.ml), hausW, zero.policy=T)
 spdep::geary.test(residuals(car.ml), hausW, zero.policy=T)
 
 
+# NOTE:
+# we want to get updated estimates of the parameters for the 3 regions using the CAR model. 
+# Issue- we don't know how to get that from just modeling the 3 values against an intercept.
+# Idea- instead find weight matrix for point-to-area (of one point to each area) and then creating a large block diagonal matrix of distances/weights
+
+# Then do CAR modeling where the covariates are indicator variables of the 3 regions (i.e. is a point in that region)
+# then the coefficients should make more sense and give the values for the 3 regions
+
+
+# to do from point to area, need to use extHaus fn instead of hausMat I believe
+# hausMat only takes in one type of spatial object at a time, so I don't think it can mix points and polygons
+# extHaus can handle any combination!
+# but this means I'll have to create my own distance matrix
+
+
+stations_sub[1, ] # to subset Spatial*DataFrame just add [index, ] to the end
+extHaus(stations_sub[1, ], ws_regs[1,], f1=0.5)
+class(ws_regs[1,])
+
+extHaus(stations_sub, ws_regs[1,], f1=0.5)
+extHaus(stations_sub, ws_regs[2,], f1=0.5)
+extHaus(stations_sub, ws_regs[3,], f1=0.5)
+
+
 car.ml.lnscale <- spatialreg::spautolm(log(scale_avg) ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
                                listw=hausW)
 summary(car.ml.lnscale)
