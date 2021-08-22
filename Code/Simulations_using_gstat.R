@@ -671,7 +671,7 @@ test_mat <- matrix(data = c(1, .7, .2,
                             .2, .8, 1), byrow = T, nrow = 3, ncol = 3)
 # if doing KNN approach, some functions (knn2nb, knnHaus) have an argument sym = T to force a matrix to be symmetric
 
-# What if the matrix is not square?
+# What if the matrix is not square? - It must be square
 test_mat <- matrix(data = c(1, .7, .2,
                             .9, 1, .75), byrow = T, nrow = 2, ncol = 3)
 # Error in mat2listw(test_mat) : x must be a square matrix
@@ -725,8 +725,8 @@ D_alt <- matrix(data = c(.001, .001,  1.6, 1.6,  2.1, 2.1,
                           2.3,  2.3,  1.6, 1.6, .001, .001,
                           2.1,  2.1,  1.5, 1.5, .001, .001), byrow = T, nrow = 6, ncol = 6)
                   
-invD <- 1/D_alt
-W_alt <- invD/max(invD)
+invD <- 1/D_alt  # inverse distance
+W_alt <- invD/max(invD)  # scalar normalize
 
 # make new data
 test_dat <- cbind(stations_resids@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,0,0,1,1))
