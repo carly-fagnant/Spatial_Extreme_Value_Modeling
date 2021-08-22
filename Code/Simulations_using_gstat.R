@@ -660,6 +660,27 @@ spdep::moran.test(residuals(car.ml), hausW, zero.policy=T)
 spdep::geary.test(residuals(car.ml), hausW, zero.policy=T)
 
 
+# Test - Can weight matrices have non-zero values on the diagonal? Yes. Not advised, but no error is given
+test_mat <- matrix(data = c(1, .9, .2,
+                            .9, 1, .75,
+                            .2, .75, 1), byrow = T, nrow = 3, ncol = 3)
+
+# If matrix not symmetric?  It will run, but will give warning message
+test_mat <- matrix(data = c(1, .7, .2,
+                            .9, 1, .75,
+                            .2, .8, 1), byrow = T, nrow = 3, ncol = 3)
+# if doing KNN approach, some functions (knn2nb, knnHaus) have an argument sym = T to force a matrix to be symmetric
+
+# What if the matrix is not square?
+test_mat <- matrix(data = c(1, .7, .2,
+                            .9, 1, .75), byrow = T, nrow = 2, ncol = 3)
+# Error in mat2listw(test_mat) : x must be a square matrix
+
+car.ml <- spatialreg::spautolm(scale_avg ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                               listw=mat2listw(test_mat))
+car.ml <- spatialreg::spautolm(scale_avg ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
+                               listw=mat2listw(test_mat), )
+
 # NOTE:
 # we want to get updated estimates of the parameters for the 3 regions using the CAR model. 
 # Issue- we don't know how to get that from just modeling the 3 values against an intercept.
@@ -682,6 +703,42 @@ class(ws_regs[1,])
 extHaus(stations_sub, ws_regs[1,], f1=0.5)
 extHaus(stations_sub, ws_regs[2,], f1=0.5)
 extHaus(stations_sub, ws_regs[3,], f1=0.5)
+
+
+extHaus(stations_sub[30,], ws_regs[1,], f1=0.5)
+extHaus(stations_sub[30,], ws_regs[2,], f1=0.5)
+extHaus(stations_sub[30,], ws_regs[3,], f1=0.5)
+
+######################################
+# Practicing possible solution
+D <- matrix(data = c(0,   0,  1.6, 1.6,  2.1, 2.1,
+                     0,   0,  1.8, 1.8,  2.2, 2.2,
+                    1.3, 1.3,  0,   0,   1.8, 1.8,
+                    1.8, 1.8,  0,   0,   1.2, 1.2,
+                    2.3, 2.3, 1.6, 1.6,   0,   0,
+                    2.1, 2.1, 1.5, 1.5,   0,   0), byrow = T, nrow = 6, ncol = 6)
+
+D_alt <- matrix(data = c(.001, .001,  1.6, 1.6,  2.1, 2.1,
+                         .001, .001,  1.8, 1.8,  2.2, 2.2,
+                          1.3,  1.3, .001, .001, 1.8, 1.8,
+                          1.8,  1.8, .001, .001, 1.2, 1.2,
+                          2.3,  2.3,  1.6, 1.6, .001, .001,
+                          2.1,  2.1,  1.5, 1.5, .001, .001), byrow = T, nrow = 6, ncol = 6)
+                  
+invD <- 1/D_alt
+W_alt <- invD/max(invD)
+
+# make new data
+test_dat <- cbind(stations_resids@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,0,0,1,1))
+test_dat <- as.data.frame(test_dat)
+colnames(test_dat) <- c("shape", "Reg1", "Reg3")
+
+
+car_test <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                               listw=mat2listw(W_alt))
+
+
+######################################
 
 
 car.ml.lnscale <- spatialreg::spautolm(log(scale_avg) ~1, data=data.frame(t(ws_reg_avg)), family="CAR",
@@ -710,6 +767,8 @@ car.ml <- spatialreg::spautolm(logHV ~ logHHI + TTW + MNR + sqBDH + sqESR,
 
 library(CARBayes)
 S.CARleroux(t(ws_reg_avg[1,])~1, family="gaussian", W=W_scalar, burnin=20, n.sample=50)
+
+S.CARleroux(t(ws_reg_avg[1,])~1, family="gaussian", W=test_mat, burnin=20, n.sample=50)
 
 
 
