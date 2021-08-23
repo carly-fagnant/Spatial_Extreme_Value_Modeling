@@ -722,7 +722,7 @@ D_all_jit <- D_all + matrix(rnorm(nrow(D_all) * ncol(D_all), sd = 0.1), ncol = n
 # Make symmetric
 D_all_jit_sym <- D_all_jit
 D_all_jit_sym[upper.tri(D_all_jit_sym)] <- t(D_all_jit_sym)[upper.tri(D_all_jit_sym)]
-
+isSymmetric(D_all_jit_sym)
 
 # car_test6 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat6, family="CAR",
 #                                   listw=mat2listw(1/D_jit_sym))
