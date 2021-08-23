@@ -3,6 +3,13 @@
 #
 # by Carly Fagnant
 #######################
+library(rgdal)
+library(sp)
+library(gstat)
+library(dplyr)
+library(spdep)
+library(spatialreg)
+library(foreach)
 
 # Using the data we have, capture the mean and covariance structure.
 # The mean structure will come in at the region level - we will assume the same mean value for all points that fall within a region
@@ -640,8 +647,94 @@ normalizeMatrix <- function(mat, method="row") {
 }
 
 # getting weight matrix
-distMat <- hausMat(ws_regs, 0.5)
-distMat
+# (make sure ws_regs is projected first)
+# proj4string(ws_regs) <- proj4string(station_info)
+distMat <- hausMat(ws_regs, f1 = 0.5)
+distMat/5280
+
+distMat_alt <- hausMat(ws_reg_alt, f1 = 0.5)
+
+# # save for future reference!
+# saveRDS(distMat, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/hMat_med.rds")
+# saveRDS(distMat_alt, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/hMat_med_alt.rds")
+## So can access the same distances for future testing (Note: in feet, convert to miles if needed)
+
+
+### Clean up data frame first to work with
+## From above:
+# # Finding which region the subset stations fall within
+# region_int <- sp::over(stations_sub, ws_regs)
+# stations_regs <- stations_sub_df %>% mutate(REGION = region_int$REGION) # adding region information to the spatially referenced data
+# 
+# region_int$REGION <- as.factor(region_int$REGION)
+# summary(region_int$REGION)
+# h0 <- model.matrix( ~ REGION - 1, data=region_int)
+
+# Using stations_sub_df and h0 is indicator of regions
+stations_sub_by_reg <- stations_sub_df %>% dplyr::mutate(Reg1 = h0[,1], Reg2 = h0[,2], Reg3 = h0[,3])
+sort_dat <- stations_sub_by_reg %>% dplyr::arrange(Reg3, Reg2) # put stations in order of which regions they fall within
+
+# test1 <- filter(stations_sub_by_reg, Reg1 == 1)
+# test1sort <- filter(sort_dat, Reg1 == 1)
+# identical(test1, test1sort) # Testing they are the same stations every time, YES!
+
+test_dat <- sort_dat %>% dplyr::select(STAT_NO, scale, shape, rate, Reg1, Reg2, Reg3)
+n1 <- length(which(test_dat$Reg1 == 1)) # 46
+n2 <- length(which(test_dat$Reg2 == 1)) # 44
+n3 <- length(which(test_dat$Reg3 == 1)) # 59
+
+
+# car_test<- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+#                                        listw=mat2listw(1/D_mat))
+  
+hMat <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/hMat_med.rds")
+hMat_miles <- hMat/5280
+
+# example  
+D_alt <- matrix(c(rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                  rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                  rep(hMat_miles[1,2], 2), rep(1,2), rep(hMat_miles[2,3], 2),
+                  rep(hMat_miles[1,2], 2), rep(1,2), rep(hMat_miles[2,3], 2),
+                  rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2),
+                  rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2)), byrow = T, nrow = 6, ncol = 6)
+
+
+one_to_one <- matrix(data = rep(1, n1^2), nrow = n1, ncol = n1)
+two_to_two <- matrix(data = rep(1, n2^2), nrow = n2, ncol = n2)
+three_to_three <- matrix(data = rep(1, n3^2), nrow = n3, ncol = n3)
+
+one_to_two <- matrix(data = rep(hMat_miles[1,2], n1*n2), nrow = n1, ncol = n2)
+one_to_three <- matrix(data = rep(hMat_miles[1,3], n1*n3), nrow = n1, ncol = n3)
+
+two_to_one <- matrix(data = rep(hMat_miles[1,2], n1*n2), nrow = n2, ncol = n1)
+three_to_one <- matrix(data = rep(hMat_miles[1,3], n1*n3), nrow = n3, ncol = n1)
+
+two_to_three <- matrix(data = rep(hMat_miles[2,3], n2*n3), nrow = n2, ncol = n3)
+three_to_two <- matrix(data = rep(hMat_miles[2,3], n2*n3), nrow = n3, ncol = n2)
+
+one <- cbind(one_to_one, one_to_two, one_to_three)
+two <- cbind(two_to_one, two_to_two, two_to_three)
+three <- cbind(three_to_one, three_to_two, three_to_three)
+D_all <- rbind(one, two, three) # 149 x 149 matrix!
+
+# adding rnorm to jitter values
+D_all_jit <- D_all + matrix(rnorm(nrow(D_all) * ncol(D_all), sd = 0.1), ncol = ncol(D_all))
+# Make symmetric
+D_all_jit_sym <- D_all_jit
+D_all_jit_sym[upper.tri(D_all_jit_sym)] <- t(D_all_jit_sym)[upper.tri(D_all_jit_sym)]
+
+
+# car_test6 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat6, family="CAR",
+#                                   listw=mat2listw(1/D_jit_sym))
+
+
+ptm <- proc.time()
+car_test_all <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+                                       listw=mat2listw(1/D_all_jit_sym))
+proc.time() - ptm
+
+
+
 
 #take the inverse first, and then scalar/row normalize
 (W <- normalizeMatrix(distMat, "inverse"))
@@ -783,6 +876,9 @@ D_small_jit <- D_alt + matrix(rnorm(nrow(D) * ncol(D), sd = 0.01), ncol = ncol(D
 solve(D_small_jit)
 1/D_small_jit
 
+D_jit_sym <- D_jit
+D_jit_sym[upper.tri(D_jit_sym)] <- t(D_jit_sym)[upper.tri(D_jit_sym)]
+
 D.5_jit <- D.5 + matrix(rnorm(nrow(D) * ncol(D), sd = 0.1), ncol = ncol(D))
 D.5_sym <- D.5_jit 
 D.5_sym[lower.tri(D.5_sym)] <- t(D.5_sym)[lower.tri(D.5_sym)]
@@ -857,10 +953,16 @@ solve(W_alt)
 det(D_alt)
 
 # make new data
-test_dat <- cbind(stations_resids@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,0,0,1,1))
-test_dat <- as.data.frame(test_dat)
-colnames(test_dat) <- c("shape", "Reg1", "Reg3")
+# test_dat <- cbind(stations_resids@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,0,0,1,1))
+test_dat6 <- cbind(stations_sub@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,1,1,0,0), c(0,0,0,0,1,1))
+test_dat6 <- as.data.frame(test_dat6)
+# colnames(test_dat) <- c("shape", "Reg1", "Reg3")
+colnames(test_dat6) <- c("shape", "Reg1", "Reg2", "Reg3")
 
+ptm <- proc.time()
+car_test6 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat6, family="CAR",
+                                      listw=mat2listw(1/D_jit_sym))
+proc.time() - ptm
 
 car_test <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
                                listw=mat2listw(invJ))
