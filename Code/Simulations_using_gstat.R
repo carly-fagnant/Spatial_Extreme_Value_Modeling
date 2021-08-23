@@ -747,6 +747,13 @@ D <- matrix(c(rep(0,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
               rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0,2),
               rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0,2)), byrow = T, nrow = 6, ncol = 6)
 
+D.5 <- matrix(c(rep(0.5,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                rep(0.5,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                rep(hMat_miles[1,2], 2), rep(0.5,2), rep(hMat_miles[2,3], 2),
+                rep(hMat_miles[1,2], 2), rep(0.5,2), rep(hMat_miles[2,3], 2),
+                rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0.5,2),
+                rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0.5,2)), byrow = T, nrow = 6, ncol = 6)
+
 D_alt <- matrix(c(rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
                   rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
                   rep(hMat_miles[1,2], 2), rep(1,2), rep(hMat_miles[2,3], 2),
@@ -769,6 +776,30 @@ fix_D_alt[1,1] <- fix_D_alt[1,2] <- fix_D_alt[2,1] <- fix_D_alt[2,2] <-
 solve(fix_D_alt)
 inv_fix_D_alt <- 1/fix_D_alt  # inverse distance
 # When run on CAR model, it produces NaNs, including log likelihood. Also Lambda is outrageous 
+
+# Trying adding rnorm instead of using jitter. That way can change standard deviation
+D_jit <- D_alt + matrix(rnorm(nrow(D) * ncol(D), sd = 0.1), ncol = ncol(D))
+D_small_jit <- D_alt + matrix(rnorm(nrow(D) * ncol(D), sd = 0.01), ncol = ncol(D))
+solve(D_small_jit)
+1/D_small_jit
+
+D.5_jit <- D.5 + matrix(rnorm(nrow(D) * ncol(D), sd = 0.1), ncol = ncol(D))
+D.5_sym <- D.5_jit 
+D.5_sym[lower.tri(D.5_sym)] <- t(D.5_sym)[lower.tri(D.5_sym)]
+
+# Try making symmetric
+lower.tri(D_jit)
+df <- D_jit
+df[lower.tri(df)] <- t(df)[lower.tri(df)] # replacing lower.tri with upper.tri to make symmetric
+solve(1/df)
+
+car_test_jit <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                                      listw=mat2listw(1/D.5_jit))
+car_test_sym <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                                     listw=mat2listw(1/D.5_sym))
+summary(car_test_jit)
+summary(car_test_sym)
+summary(car_test_area)
 
 extHaus(stations_sub[29,], ws_regs[1,], f1=0.5)
 extHaus(stations_sub[30,], ws_regs[2,], f1=0.5)
@@ -835,6 +866,22 @@ car_test <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="C
                                listw=mat2listw(invJ))
 car_test_area <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
                                  listw=mat2listw(inv_fix_D_alt))
+car_test_area <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                                      listw=mat2listw(1/df))
+
+# Method= "Matrix" will not work with non-symmetric matrix
+car_test_mat <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                                      listw=mat2listw(1/df), method = "Matrix")
+
+summary(car_test_area)
+summary(car_test_mat)
+
+# coefficient estimates are similar to mean of parameters
+mean(test_dat$shape[1:2]);  mean(test_dat$shape[3:4]);  mean(test_dat$shape[5:6])
+car_test_area$fit$coef[1] + car_test_area$fit$coef[2]
+car_test_area$fit$coef[1]
+car_test_area$fit$coef[1] + car_test_area$fit$coef[3]
+
 invD_alt; inv_fix_D_alt
 
 listver <- mat2listw(W_alt)
