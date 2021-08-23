@@ -733,7 +733,7 @@ car_test_all <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = tes
                                        listw=mat2listw(1/D_all_jit_sym))
 proc.time() - ptm
 
-
+summary(car_test_all)
 
 
 #take the inverse first, and then scalar/row normalize
