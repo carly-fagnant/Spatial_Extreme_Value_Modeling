@@ -664,6 +664,11 @@ spdep::geary.test(residuals(car.ml), hausW, zero.policy=T)
 test_mat <- matrix(data = c(1, .9, .2,
                             .9, 1, .75,
                             .2, .75, 1), byrow = T, nrow = 3, ncol = 3)
+test_mat <- matrix(data = c(1, 1, .2,
+                            1, 1, .75,
+                            .2, .75, 1), byrow = T, nrow = 3, ncol = 3)
+
+solve(test_mat)
 
 # If matrix not symmetric?  It will run, but will give warning message
 test_mat <- matrix(data = c(1, .7, .2,
@@ -718,15 +723,107 @@ D <- matrix(data = c(0,   0,  1.6, 1.6,  2.1, 2.1,
                     2.3, 2.3, 1.6, 1.6,   0,   0,
                     2.1, 2.1, 1.5, 1.5,   0,   0), byrow = T, nrow = 6, ncol = 6)
 
-D_alt <- matrix(data = c(.001, .001,  1.6, 1.6,  2.1, 2.1,
+D_alt_0 <- matrix(data = c(.001, .001,  1.6, 1.6,  2.1, 2.1,
                          .001, .001,  1.8, 1.8,  2.2, 2.2,
-                          1.3,  1.3, .001, .001, 1.8, 1.8,
-                          1.8,  1.8, .001, .001, 1.2, 1.2,
-                          2.3,  2.3,  1.6, 1.6, .001, .001,
-                          2.1,  2.1,  1.5, 1.5, .001, .001), byrow = T, nrow = 6, ncol = 6)
+                         1.3,  1.3, .001, .001, 1.8, 1.8,
+                         1.8,  1.8, .001, .001, 1.2, 1.2,
+                         2.3,  2.3,  1.6, 1.6, .001, .001,
+                         2.1,  2.1,  1.5, 1.5, .001, .001), byrow = T, nrow = 6, ncol = 6)
+
+D_alt <- matrix(data = c(1, 1,  1.6, 1.6,  2.1, 2.1,
+                         1, 1,  1.8, 1.8,  2.2, 2.2,
+                          1.3,  1.3, 1, 1, 1.8, 1.8,
+                          1.8,  1.8, 1, 1, 1.2, 1.2,
+                          2.3,  2.3,  1.6, 1.6, 1, 1,
+                          2.1,  2.1,  1.5, 1.5, 1, 1), byrow = T, nrow = 6, ncol = 6)
                   
+# hMat <- hausMat(ws_regs, f1=0.5)
+hMat_miles <- hMat/5280 # convert to miles
+
+D <- matrix(c(rep(0,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+              rep(0,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+              rep(hMat_miles[1,2], 2), rep(0,2), rep(hMat_miles[2,3], 2),
+              rep(hMat_miles[1,2], 2), rep(0,2), rep(hMat_miles[2,3], 2),
+              rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0,2),
+              rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(0,2)), byrow = T, nrow = 6, ncol = 6)
+
+D_alt <- matrix(c(rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                  rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
+                  rep(hMat_miles[1,2], 2), rep(1,2), rep(hMat_miles[2,3], 2),
+                  rep(hMat_miles[1,2], 2), rep(1,2), rep(hMat_miles[2,3], 2),
+                  rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2),
+                  rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2)), byrow = T, nrow = 6, ncol = 6)
+
+D_alt_jitter  <- apply(D_alt, 2, jitter)
+D_alt_jitter2 <- apply(D_alt, 1, jitter)
+
+solve(D_alt_jitter)
+invD_alt <- 1/D_alt_jitter  # inverse distance
+# W_alt <- invD/max(invD)  # scalar normalize
+
+# setting 1's back to 1
+fix_D_alt <- D_alt_jitter
+fix_D_alt[1,1] <- fix_D_alt[1,2] <- fix_D_alt[2,1] <- fix_D_alt[2,2] <- 
+  fix_D_alt[3,3] <- fix_D_alt[3,4] <- fix_D_alt[4,3] <- fix_D_alt[4,4] <- 
+  fix_D_alt[5,5] <- fix_D_alt[5,6] <- fix_D_alt[6,5] <- fix_D_alt[6,6] <- 1
+solve(fix_D_alt)
+inv_fix_D_alt <- 1/fix_D_alt  # inverse distance
+# When run on CAR model, it produces NaNs, including log likelihood. Also Lambda is outrageous 
+
+extHaus(stations_sub[29,], ws_regs[1,], f1=0.5)
+extHaus(stations_sub[30,], ws_regs[2,], f1=0.5)
+extHaus(stations_sub[30,], ws_regs[3,], f1=0.5)
+
+point_to_area <- matrix(nrow=6, ncol=3)
+index <- c(4,5, 29,30, 1,2)
+for(i in 1:6){
+  point_to_area[i, 1] <- extHaus(stations_sub[index[i], ], ws_regs[1, ], f1=0.5)
+  point_to_area[i, 2] <- extHaus(stations_sub[index[i], ], ws_regs[2, ], f1=0.5)
+  point_to_area[i, 3] <- extHaus(stations_sub[index[i], ], ws_regs[3, ], f1=0.5)
+}
+point_to_area <- as.data.frame(point_to_area)
+point_to_area <- point_to_area/5280 # convert to miles
+
+
+# D_pa <- matrix(nrow=6, ncol=6)
+# for(r in 1:6){
+#   for(c in 1:6){
+#     D_pa[r, c] <- point_to_area[r, c]
+#   }
+# }
+
+D_pa <- matrix(c(rep(1,2), rep(point_to_area[1,2], 2), rep(point_to_area[1,3], 2),
+                  rep(1,2), rep(point_to_area[2,2], 2), rep(point_to_area[2,3], 2),
+                  rep(point_to_area[3,1], 2), rep(1,2), rep(point_to_area[3,3], 2),
+                  rep(point_to_area[4,1], 2), rep(1,2), rep(point_to_area[4,3], 2),
+                  rep(point_to_area[5,1], 2), rep(point_to_area[5,2], 2), rep(1,2),
+                  rep(point_to_area[6,1], 2), rep(point_to_area[6,2], 2), rep(1,2)), byrow = T, nrow = 6, ncol = 6)
+
+D_jitter <- as.data.frame(matrix(lapply(D_pa, jitter), nrow = 6, ncol = 6))
+D_jitter2 <- as.data.frame(matrix(apply(D_pa, 2, jitter), nrow = 6, ncol = 6))
+D_jitter3 <- apply(D_pa, 2, jitter)
+D_jitter4 <- apply(D_pa, 1, jitter)
+
+ex <- extent(ws_regs[1,])
+ex
+(ex[2]-ex[1] + ex[4]-ex[3])/2  # [1] 235897.4
+235897.4/5280  # [1] 44.67754
+
+(ex[2]-ex[1] + ex[4]-ex[3])/4 / 5280
+
+sqrt(((ex[2]-ex[1])/2)^2 + ((ex[4]-ex[3])/2)^2) / 5280 /2
+
 invD <- 1/D_alt  # inverse distance
 W_alt <- invD/max(invD)  # scalar normalize
+
+invJ <- 1/D_jitter3  # inverse distance
+W_alt <- invD/max(invD)  # scalar normalize
+
+solve(D)
+solve(D_alt)
+solve(D_jitter3)
+solve(W_alt)
+det(D_alt)
 
 # make new data
 test_dat <- cbind(stations_resids@data$shape[c(4,5, 29,30, 1,2)], c(1,1,0,0,0,0), c(0,0,0,0,1,1))
@@ -735,7 +832,17 @@ colnames(test_dat) <- c("shape", "Reg1", "Reg3")
 
 
 car_test <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
-                               listw=mat2listw(W_alt))
+                               listw=mat2listw(invJ))
+car_test_area <- spatialreg::spautolm(shape ~ Reg1 + Reg3, data = test_dat, family="CAR",
+                                 listw=mat2listw(inv_fix_D_alt))
+invD_alt; inv_fix_D_alt
+
+listver <- mat2listw(W_alt)
+
+# Jittered version of our distance matrices works, even though not symmetric
+# For weight matrix, I just did inverse distance. Could go another step further to normalize?
+# I said a distance of 1 for the stations within regions. Try different values
+# Should also try for area-to-area version to make it symmetric - Ensor said try Cholesky option to make symmetric
 
 
 ######################################
