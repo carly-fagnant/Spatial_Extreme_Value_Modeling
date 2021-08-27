@@ -698,7 +698,7 @@ D_alt <- matrix(c(rep(1,2), rep(hMat_miles[1,2], 2), rep(hMat_miles[1,3], 2),
                   rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2),
                   rep(hMat_miles[1,3], 2), rep(hMat_miles[2,3], 2), rep(1,2)), byrow = T, nrow = 6, ncol = 6)
 
-
+# Creating blocks for block matrix
 one_to_one <- matrix(data = rep(1, n1^2), nrow = n1, ncol = n1)
 two_to_two <- matrix(data = rep(1, n2^2), nrow = n2, ncol = n2)
 three_to_three <- matrix(data = rep(1, n3^2), nrow = n3, ncol = n3)
@@ -734,6 +734,21 @@ car_test_all <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = tes
 proc.time() - ptm
 
 summary(car_test_all)
+summary(car_test_all)$fit$coef
+
+car_test_ln.scale <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+                                     listw=mat2listw(1/D_all_jit_sym))
+car_test_rate <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+                                     listw=mat2listw(1/D_all_jit_sym))
+summary(car_test_ln.scale)$fit$coef
+exp(summary(car_test_ln.scale)$fit$coef)
+summary(car_test_rate)$fit$coef
+
+car_fit <- rbind(exp(summary(car_test_ln.scale)$fit$coef),
+                  summary(car_test_all)$fit$coef,
+                  summary(car_test_rate)$fit$coef)
+rownames(car_fit) <- c("scale", "shape", "rate")
+# saveRDS(car_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/car_fit.rds")
 
 
 #take the inverse first, and then scalar/row normalize
