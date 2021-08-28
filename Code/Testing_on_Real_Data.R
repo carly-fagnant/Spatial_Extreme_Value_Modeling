@@ -3,6 +3,7 @@
 #
 # by Carly Fagnant
 #######################
+library(extRemes)
 library(rgeos)
 library(rgdal)
 library(sp)
@@ -51,8 +52,9 @@ proj4string(ws_regs) <- proj4string(stations_sub)
 
 ## stations_sub is already using data fits from last 40-year window (1981-2020)
 ## but if want raccess to all fits - load the following window.rds file
-# setwd("~/Documents/HCFCD Watershed Data") # wherever you have the following file saved 
 ## (access "window_1day_dclust_updated.rds" from zipped file in Box - should be 1.67 GB unzipped)
+
+# setwd("~/Documents/HCFCD Watershed Data") # wherever you have the following file saved 
 # window <- readRDS("window_1day_dclust_updated.rds")  # list of lists (82 x 601) of GPD fits
 
 
@@ -315,6 +317,185 @@ pars_to_rl(consol_fit, 25)/254
 pars_to_rl(consol_fit, 100)/254
 pars_to_rl(consol_fit, 500)/254
 
+
+
+
+# Saving Model Fits -------------------------------------------------------
+
+# saveRDS(car_test_shape, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_shape.rds")
+# saveRDS(car_test_ln.scale, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_ln.scale.rds")
+# saveRDS(car_test_rate, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_rate.rds")
+# saveRDS(car_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_fit.rds")
+# 
+# saveRDS(krig_regs, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs.rds")
+# saveRDS(krig_regs_rate, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_rate.rds")
+# saveRDS(krig_grid, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_grid.rds")
+# saveRDS(krig_grid_rate, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_grid_rate.rds")
+# saveRDS(krig_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_fit.rds")
+# 
+# saveRDS(fitreg1, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg1.rds")
+# saveRDS(fitreg2, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg2.rds")
+# saveRDS(fitreg3, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg3.rds")
+# saveRDS(consol_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fit.rds")
+
+
+# Extra Code - Finding CIs ------------------------------------------------
+
+fit <- window[[79]][[588]]
+
+# confidence intervals
+extRemes::return.level(fit, return.period = 100, do.ci = T)  # same as  extRemes::ci.fevd(fit, type="return.level", return.period = 100)
+extRemes::ci.fevd(fit, type="parameter")
+
+
+z = qnorm(0.975) # for 95% CI (default)
+
+# saving estimates
+scale_est <- fit$results$par[1]
+shape_est <- fit$results$par[2]
+
+#saving standard errors
+cov_mat <- extRemes::parcov.fevd(fit)
+scale_se <- sqrt(extRemes::parcov.fevd(fit)[1,1])
+shape_se <- sqrt(extRemes::parcov.fevd(fit)[2,2])
+
+# Hand-calculated CIs, matches ci.fevd function with type="parameter"
+# scale
+scale_est - z*scale_se;   scale_est;    scale_est + z*scale_se
+# shape
+shape_est - z*shape_se;   shape_est;    shape_est + z*shape_se
+
+
+# Return levels:
+# from extRemes::rlevd
+calc_rl <- function(threshold, scale, shape, rate, period){
+  npy = 365.25
+  m <- period * npy * rate
+  if (shape == 0) 
+    res <- threshold + scale * log(m)
+  else res <- threshold + (scale/shape) * (m^shape - 1)
+  return(res)
+}
+
+# Reference CI:
+extRemes::return.level(fit, return.period = 100, do.ci = T)
+
+calc_rl(threshold = 253, scale=scale_est, shape=shape_est, rate=fit$rate, period = 100)
+calc_rl(threshold = 253, scale=scale_est - z*scale_se, shape=shape_est - z*shape_se, rate=fit$rate, period = 100)
+calc_rl(threshold = 253, scale=scale_est + z*scale_se, shape=shape_est + z*shape_se, rate=fit$rate, period = 100)
+
+
+### HOW TO: Find standard error (SE) of parameter estimates and return levels
+window[[79]][[588]]
+extRemes::parcov.fevd(window[[79]][[588]])
+sqrt(extRemes::parcov.fevd(window[[79]][[588]])[1,1])
+sqrt(extRemes::parcov.fevd(window[[79]][[588]])[2,2])
+# Gives same output, but is messier output (still gives all of the summary)
+# summary(window[[79]][[588]])$se.theta[1]
+# summary(window[[79]][[588]])$se.theta[2]
+
+### CI of parameter estimates
+# extRemes::ci.fevd(window[[79]][[588]], type="parameter")
+#Trying to figure out CI for return level
+
+# from extRemes::ci.fevd.mle
+cov.theta <- parcov.fevd(x)
+var.theta <- diag(cov.theta)
+
+if (is.element(x$type, c("PP", "GP", "Beta", "Pareto", 
+                         "Exponential"))) 
+  lam <- mean(c(datagrabber(x)[, 1]) > x$threshold)
+# else lam <- 1
+loc <- 0
+theta.hat <- x$results$par
+scale <- theta.hat["scale"]
+shape <- theta.hat["shape"]
+# if (x$type == "PP") 
+#   mod <- "GEV"
+else mod <- x$type
+p <- rlevd(period = return.period, loc = loc, scale = scale, 
+           shape = shape, threshold = x$threshold, type = mod, 
+           npy = x$npy, rate = lam)
+# p gives the basic return level!
+
+else if (type == "return.level") {
+  grads <- rlgrad.fevd(x, period = return.period)
+  grads <- t(grads)
+  if (is.element(x$type, c("GP", "Beta", "Pareto", 
+                           "Exponential"))) {
+    # if (x$type == "Exponential") 
+    #   cov.theta <- diag(c(lam * (1 - lam)/x$n, var.theta))
+    else cov.theta <- rbind(c(lam * (1 - lam)/x$n, 
+                              0, 0), cbind(0, cov.theta))
+  }
+  # else lam <- 1
+  var.theta <- t(grads) %*% cov.theta %*% grads
+}
+else stop("ci: invalid type argument.  Must be return.level or parameter.")
+if (length(p) > 1) {
+  if (type == "return.level") 
+    se.theta <- sqrt(diag(var.theta))
+  out <- cbind(p - z.alpha * se.theta, p, p + z.alpha * 
+                 se.theta)
+  rownames(out) <- par.name
+  conf.level <- paste(round((1 - alpha) * 100, digits = 2), 
+                      "%", sep = "")
+  colnames(out) <- c(paste(conf.level, " lower CI", 
+                           sep = ""), "Estimate", paste(conf.level, " upper CI", 
+                                                        sep = ""))
+  attr(out, "data.name") <- x$call
+  attr(out, "method") <- method.name
+  attr(out, "conf.level") <- (1 - alpha) * 100
+  class(out) <- "ci"
+  return(out)
+}
+else out <- c(p - z.alpha * sqrt(var.theta[which.par]), 
+              p, p + z.alpha * sqrt(var.theta[which.par]))
+
+
+
+## Aside - rlgrad.fevd()
+p <- x$results$par
+if (is.element("log.scale", names(p))) {
+  id <- names(p) == "log.scale"
+  p[id] <- exp(p[id])
+  names(p)[id] <- "scale"
+}
+# if (p["shape"] == 0)
+#   if (is.element(type, c("gp", "exponential"))) 
+#     type <- "exponential"
+
+else if (is.element(type, c("gp", "beta", "pareto"))) {
+  lam <- mean(c(datagrabber(x)[, 1]) > x$threshold)
+  m <- period * x$npy
+  mlam <- m * lam
+  res <- cbind(p["scale"] * m^(-p["shape"]) * lam^(-p["shape"] - 1), 
+               (p["shape"])^(-1) * ((mlam)^(p["shape"]) - 1), 
+               -p["scale"] * (p["shape"])^(-2) * ((mlam)^(p["shape"]) - 1) + (p["scale"]/p["shape"]) * (mlam)^(p["shape"]) * log(mlam))
+}
+# else if (type == "exponential") {
+#   lam <- mean(c(datagrabber(x)[, 1]) > x$threshold)
+#   m <- period * x$npy
+#   mlam <- m * lam
+#   res <- cbind(p["scale"]/mlam, log(mlam))
+# }
+
+rlgrad.fevd(fit, period=100)
+fit$n
+fit$rate
+
+
+
+## Find SE of Return Level by using Conf Int
+z = qnorm(0.975) # for 95% CI (default)
+## Same return level CI Output from these 2 functions:
+# extRemes::ci.fevd(window[[79]][[588]], alpha = 0.05, type = "return.level", return.period = 100)
+# extRemes::return.level(window[[79]][[588]], return.period=100, do.ci=T)
+test_rl <- extRemes::return.level(window[[79]][[588]], return.period=100)/10
+((extRemes::return.level(window[[79]][[588]], return.period=100, do.ci=T)/10)[3] - test_rl)/z
+## Examples from earlier code:
+# ((extRemes::return.level(window[[79]][[588]], return.period=100, do.ci=T)/10)[3] - trend_RL[[588]][79])/z
+## new_se_100[i] <- ((extRemes::return.level(window[[79]][[i]], return.period=100, do.ci=T)/10)[3] - new_rl_100[i])/z
 
 
 # Extra Kriging/Variogram Code --------------------------------------------
