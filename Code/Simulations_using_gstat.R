@@ -380,7 +380,7 @@ scale - stations_sub@data$scale
 # Step 3 ------------------------------------------------------------------
 # Step 3: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transorm scale back using exp())
 # NOTE: No input for rate here. Will outputs be all above the threshold? Yes.
-#       Will need to correct for this, by randomly removing observations at the rate estimated
+#       Will need to correct for this, by only generating as many observations as rate entails, NOT by randomly removing observations at the rate estimated
 
 # pred is a SpatialPointsDataFrame holding the parameter estimates for each station (ln.scale and shape)
 # be sure to transorm scale back using exp() fn
@@ -396,11 +396,12 @@ scale - stations_sub@data$scale
 # Haven't simulated the rate parameters yet, so let's just use the rates from stations_sub
 rate <- stations_sub@data$rate
 
-# idea - use the rates to randomly select the data to remain above the threshold
+# idea - use the rates to randomly select the data to remain above the threshold - NOPE, don't introduce more steps
 # Helpful note: it doesn't matter the order/placement of the data in the days, other than assuring they are independent/declustered
 
 
-# only generate as many as I need instad of randomly subsetting
+# only generate as many as I need instad of randomly subsetting!
+# just use a constant rate, something close to 0.055 - maybe take the mean
 sim_data <- matrix(nrow = 14610, ncol = length(scale))
 for(i in 1:length(scale)){
   # stat_no <- stations_sub@data$STAT_NO[i]
@@ -736,6 +737,8 @@ proc.time() - ptm
 summary(car_test_all)
 summary(car_test_all)$fit$coef
 
+car_test_shape <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+                                     listw=mat2listw(1/D_all_jit_sym))
 car_test_ln.scale <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
                                      listw=mat2listw(1/D_all_jit_sym))
 car_test_rate <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
