@@ -747,6 +747,10 @@ summary(car_test_ln.scale)$fit$coef
 exp(summary(car_test_ln.scale)$fit$coef)
 summary(car_test_rate)$fit$coef
 
+sar_test_shape <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="SAR",
+                                       listw=mat2listw(1/test_D))
+summary(sar_test_shape)
+
 car_fit <- rbind(exp(summary(car_test_ln.scale)$fit$coef),
                   summary(car_test_all)$fit$coef,
                   summary(car_test_rate)$fit$coef)
