@@ -35,7 +35,8 @@ stations_sub_df <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Mode
 ws_reg_avg <- readRDS("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/ws_reg_avg.rds")
 
 
-### Function to project data given a data frame with data and coordinates
+# Function to project data given...
+#     df: a data frame with data and coordinates
 project_data <- function(df){
   coordinates(df)=~long+lat
   proj4string(df) <- "+proj=longlat +datum=WGS84"
@@ -58,7 +59,8 @@ proj4string(ws_regs) <- proj4string(stations_sub)
 # window <- readRDS("window_1day_dclust_updated.rds")  # list of lists (82 x 601) of GPD fits
 
 
-# Model 1 - Random Effects Model using CAR and median Hausdorff distance --------
+
+# Model 1 - Random Effects Model using CAR and median Hausdorff distance --------------------------------
 
 ## this was already run in "Simulations_using_gstat.R", we will bring in the saved estimates here
 # car_fit <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/car_fit.rds")
@@ -69,6 +71,9 @@ car_fit
 # extRemes::return.level - calculates return levels given an fevd object
 # extRemes::rlevd() - calculates return levels given a distribution and parameter estimates
 
+# Function to calculate a vector of return levels by region, given...
+#   parmat: the parameter matrix for the regions
+#   return_period: a return period
 pars_to_rl <- function(par_mat, return_period){
   RL_vec <- NULL
   for(reg in 1:3){
@@ -87,15 +92,181 @@ pars_to_rl(car_fit, 500)/254
 # issue - extRemes::rlevd function cannot calculate confidence intervals
 
 
-# for(reg in 1:3){
-#   scale <- 
-#   shape <- 
-#   rate <- 
-# }
+
+# Function to calculate a vector of return levels by region, given...
+#   n_vec: a vector of the number of stations in each region
+#   hMat: the extended Hausdorff distance matrix you want to use (make sure to convert to miles first)
+#   c: the constant to define the distance between points within the same region (defaults to 1)
+create_mat <- function(n_vec, hMat, c = 1){
+  n1 = n_vec[1]
+  n2 = n_vec[2]
+  n3 = n_vec[3]
+  # Creating blocks for block matrix
+  one_to_one <- matrix(data = rep(c, n1^2), nrow = n1, ncol = n1)
+  two_to_two <- matrix(data = rep(c, n2^2), nrow = n2, ncol = n2)
+  three_to_three <- matrix(data = rep(c, n3^2), nrow = n3, ncol = n3)
+  one_to_two <- matrix(data = rep(hMat[1,2], n1*n2), nrow = n1, ncol = n2)
+  one_to_three <- matrix(data = rep(hMat[1,3], n1*n3), nrow = n1, ncol = n3)
+  two_to_one <- matrix(data = rep(hMat[1,2], n1*n2), nrow = n2, ncol = n1)
+  three_to_one <- matrix(data = rep(hMat[1,3], n1*n3), nrow = n3, ncol = n1)
+  two_to_three <- matrix(data = rep(hMat[2,3], n2*n3), nrow = n2, ncol = n3)
+  three_to_two <- matrix(data = rep(hMat[2,3], n2*n3), nrow = n3, ncol = n2)
+  # putting blocks together
+  one <- cbind(one_to_one, one_to_two, one_to_three)
+  two <- cbind(two_to_one, two_to_two, two_to_three)
+  three <- cbind(three_to_one, three_to_two, three_to_three)
+  D_all <- rbind(one, two, three) # n x n matrix, where n = n1 + n2 + n3
+  return(D_all)
+}
 
 
 
-# Model 2 - Kriging and Aggregation ---------------------------------------
+# Function to create a symmetric matrix usable in the CAR model, given...
+#   mat: a square (preferably symmetric) matrix
+jitter_n_sym <- function(mat){
+  # adding rnorm to jitter values
+  mat_jit <- mat + matrix(rnorm(nrow(mat) * ncol(mat), sd = 0.1), ncol = ncol(mat))
+  # Make symmetric
+  mat_jit_sym <- mat_jit
+  mat_jit_sym[upper.tri(mat_jit_sym)] <- t(mat_jit_sym)[upper.tri(mat_jit_sym)]
+  return(mat_jit_sym)
+}
+
+hMat <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/hMat_med.rds")
+hMat_miles <- hMat/5280
+
+
+### Trying CAR-type model on a different window!
+# startyear = 1900 + window - 1
+# endyear = 1900 + window + 39 - 1 = startyear + 39
+# ex: 1900 + 82 - 1 = 1981
+# ex: 1900 + 82 + 39 - 1 = 1981 + 39 = 2020
+
+# NEVERMIND, window 2 only has 3 stations
+# Let's do windows: 2, 42, and 82
+# (1901-1940), (1941-1980), (1981-2020)
+
+# Let's do windows: 22, 52, and 82
+# (1921-1960), (1951-1990), (1981-2020)
+
+# 1. load in window and turn into stations_sub format with columns Reg1, Reg2, Reg3
+# 2. order data by columns using: 
+      # # Using stations_sub_df and h0 is indicator of regions
+      # stations_sub_by_reg <- stations_sub_df %>% dplyr::mutate(Reg1 = h0[,1], Reg2 = h0[,2], Reg3 = h0[,3])
+      # sort_dat <- stations_sub_by_reg %>% dplyr::arrange(Reg3, Reg2) # put stations in order of which regions they fall within
+# 3. Make big distance matrix using functions above
+
+## Testing
+# window_test <- window[[82]]
+# identical(window_test[[3]], window[[82]][[3]])
+stations <- read.csv("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/station_info.csv")
+stat_nos <- stations[,1]
+
+# Function to format data to stations within the regions, given...
+#   window_fit: the window list subset to the moving window of choice (e.g. input window[[82]] for the final 40-yr window)
+#   reg_polygons: the SpatialPolygonsDataFrame for the regions of interest
+format_data <- function(window_fit, reg_polygons){
+  # Accessing Model Fits and saving the parameter values (scale, shape, rate) for each station
+  ws_scale <- NULL
+  ws_shape <- NULL
+  ws_rate  <- NULL
+  j = 1
+  for(i in stat_nos){
+    fit <- window_fit[[i]] 
+    if(is.na(fit)){
+      ws_scale[j] <- ws_shape[j] <- ws_rate[j]  <- NA
+    }else{
+      ws_scale[j] <- fit$results$par[1]
+      ws_shape[j] <- fit$results$par[2]
+      ws_rate[j]  <- fit$rate
+    }
+    j = j+1
+  }
+  # add new location (long/lat) columns that we will transform to coordinates, as well as parameter values
+  stations_df <- stations %>%
+    dplyr::mutate(scale = ws_scale, shape = ws_shape, rate = ws_rate, long = LONGITUDE, lat = LATITUDE)
+  
+  stations <- project_data(stations_df)
+  region_int <- sp::over(stations, reg_polygons)
+  region_int$REGION <- as.factor(region_int$REGION)
+  h <- model.matrix( ~ REGION - 1, data=region_int)
+  inds <- as.integer(rownames(h))
+  
+  stations_sub_df <- stations_df %>%
+    dplyr::filter(STAT_NO %in% inds) %>%
+    dplyr::filter(!is.na(scale))
+  
+  stations_sub <- project_data(stations_sub_df)
+  
+  ## Have to redo intersect, because now NAs are removed. 
+  ## If remove them before the intersect, the station indicies get messed up. So have to do intersect both before and after
+  region_int <- sp::over(stations_sub, reg_polygons)
+  region_int$REGION <- as.factor(region_int$REGION)
+  h0 <- model.matrix( ~ REGION - 1, data=region_int)
+  
+  # Using stations_sub_df and h0 is indicator of regions
+  stations_sub_by_reg <- stations_sub_df %>% dplyr::mutate(Reg_fac = region_int$REGION, Reg1 = h0[,1], Reg2 = h0[,2], Reg3 = h0[,3])
+  sort_dat <- stations_sub_by_reg %>% dplyr::arrange(Reg3, Reg2) # put stations in order of which regions they fall within
+  
+  return(sort_dat)
+}
+
+
+test_format_data <- format_data(window[[82]], ws_regs)
+
+test_num <- summary(test_format_data$Reg_fac) # taking summary of factors gives the number of stations in each factor
+test_D <- create_mat(test_num, hMat_miles)
+test_D_sym <- jitter_n_sym(test_D)
+
+# Shortcut function to call other functions to get to the symmetrical distance matrix 
+# (still make sure to take reciprocal of distance matrix for weight matrix - a.k.a. inverse of each entry, NOT inverse of matrix)
+get_sym_car_mat <- function(data, hMat, c=1){
+  test_num <- summary(data$Reg_fac) # taking summary of factors gives the number of stations in each factor
+  test_D <- create_mat(test_num, hMat, c)
+  test_D_sym <- jitter_n_sym(test_D)
+  return(test_D_sym)
+}
+
+
+car_shape <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = test_format_data, family="CAR",
+                                       listw=mat2listw(1/test_D_sym))
+car_ln.scale <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = test_format_data, family="CAR",
+                                          listw=mat2listw(1/test_D_sym))
+car_rate <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = test_format_data, family="CAR",
+                                      listw=mat2listw(1/test_D_sym))
+
+
+# dat_win_2 <- format_data(window[[2]], ws_regs) # only 3 stations...
+dat_win_42 <- format_data(window[[42]], ws_regs) # 35
+dat_win_62 <- format_data(window[[62]], ws_regs) # 26
+dat_win_82 <- format_data(window[[82]], ws_regs) # 149
+
+dat_win_22 <- format_data(window[[22]], ws_regs) # 34
+dat_win_52 <- format_data(window[[52]], ws_regs) # 28
+dat_win_82 <- format_data(window[[82]], ws_regs) # 149
+
+
+D_22 <- get_sym_car_mat(dat_win_22, hMat_miles)
+D_52 <- get_sym_car_mat(dat_win_52, hMat_miles)
+D_82 <- get_sym_car_mat(dat_win_82, hMat_miles)
+
+car_shape_22 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                  listw=mat2listw(1/D_22))
+ptm <- proc.time()
+car_ln.scale_22 <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                     listw=mat2listw(1/D_22))
+proc.time() - ptm
+ptm <- proc.time()
+car_rate_22 <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                 listw=mat2listw(1/D_22))
+proc.time() - ptm
+
+summary(car_shape_22)
+
+
+
+
+# Model 2 - Kriging and Aggregation ---------------------------------------------------------------
 
 # Fitting cross-variogram to real data (log(scale) and shape):
 g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub)
@@ -253,13 +424,371 @@ rownames(krig_fit) <- c("scale", "shape", "rate")
 colnames(krig_fit) <- colnames(car_fit)
 # saveRDS(krig_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/krig_fit.rds")
 
+
+# Function to generate a list of varcov matrices for each region, given...
+#   ln.scale.var: the vector of log(scale) variances
+#   shape.var: the vector of shape variances
+#   cov.ln.scale.shape: the vector of covariances between log(scale) and shape
+make_varcov_mats <- function(ln.scale.var, shape.var, cov.ln.scale.shape){      # still returns log(scale)...
+  varcov_list <- list()
+  # reg1 <- reg2 <- reg3 <- matrix(data=NA, nrow=2, ncol=2)
+  for(i in 1:length(ln.scale.var)){
+    mat <- matrix(data=NA, nrow=2, ncol=2)
+    mat[1,1] <- ln.scale.var[i]
+    mat[2,2] <- shape.var[i]
+    mat[1,2] <- mat[2,1] <- cov.ln.scale.shape[i]
+    varcov_list[[i]] <- mat
+  }
+  return(varcov_list)
+}
+
+
+# Function to get SE's from a list of varcov matrices (useful for kriging model)
+give_se <- function(varcov_list){
+  se_vec <- NULL
+  for (i in 1:length(varcov_list)){
+    se_vec <- cbind(se_vec, sqrt(diag(varcov_list[[i]])))
+  }
+  rownames(se_vec) <- c("ln.scale", "shape")
+  colnames(se_vec) <- c("Reg1", "Reg2", "Reg3")
+  return(se_vec)
+}
+# krig_fit <- rbind(exp(krig_regs$ln.scale.pred),
+#                   krig_regs$shape.pred,
+#                   krig_regs_rate$var1.pred)
+# rownames(krig_fit) <- c("scale", "shape", "rate")
+# colnames(krig_fit) <- colnames(car_fit)
+
+# cbind(se_vec, sqrt(diag(krig_varcov[[1]])))
+
+
+krig_varcov <- make_varcov_mats(krig_regs$ln.scale.var, krig_regs$shape.var, krig_regs$cov.ln.scale.shape)
+give_se(krig_varcov)
+
 pars_to_rl(krig_fit, 25)/254
 pars_to_rl(krig_fit, 100)/254
 pars_to_rl(krig_fit, 500)/254
 
 
+# Function to generate a list of varcov matrices for each region, given...
+#   ln.scale.fit: the CAR fit object for ln.scale
+#   shape.fit: the CAR fit object for shape
+make_varcov_mats_car <- function(ln.scale.fit, shape.fit){
+  varcov_list <- list()
+  # reg1 <- reg2 <- reg3 <- matrix(data=NA, nrow=2, ncol=2)
+  shape_vcov <- shape.fit$fit$imat * shape.fit$fit$s2
+  shape.var <- diag(shape_vcov)
+  ln.scale_vcov <- ln.scale.fit$fit$imat * ln.scale.fit$fit$s2
+  ln.scale.var <- diag(ln.scale_vcov)
+  ln.scale.pred <- ln.scale.fit$fit$coefficients
+  
+  for(i in 1:length(shape.fit$fit$coefficients)){
+    mat <- matrix(data=NA, nrow=2, ncol=2)
+    mat[1,1] <- exp(ln.scale.pred[i])^2 * ln.scale.var[i] # doing transformation
+    mat[2,2] <- shape.var[i]
+    mat[1,2] <- mat[2,1] <- 0 # setting cov to 0 since we model separately... a simplifying assumption that will make our CIs wider
+    varcov_list[[i]] <- mat
+  }
+  return(varcov_list)
+}
 
-# Model 3 - Consolidated Series -------------------------------------------
+car_varcov <- make_varcov_mats_car(car_test_ln.scale, car_test_shape)
+car_varcov[[3]]
+
+summary(car_test_ln.scale)
+
+car_test_ln.scale$fit$coefficients # param_ests
+sqrt(diag((car_test_ln.scale$fit$imat * car_test_ln.scale$fit$s2))) # standard errors
+diag((car_test_ln.scale$fit$imat * car_test_ln.scale$fit$s2)) # variances
+
+car_test_ln.scale$fit$coefficients[1]
+sqrt(diag((car_test_ln.scale$fit$imat * car_test_ln.scale$fit$s2)))[1]
+
+exp(car_test_ln.scale$fit$coefficients[1])
+exp(car_test_ln.scale$fit$coefficients[1]) * sqrt(diag((car_test_ln.scale$fit$imat * car_test_ln.scale$fit$s2)))[1]
+# > mean(y)
+# [1] 10
+# > sd(y)
+# [1] 0.03
+# > lm=mean(log(y))
+# > ls=sd(log(y))
+# > exp(lm)*ls
+# [1] 0.0300104 
+
+sd(car_test_ln.scale$fit$fitted.values[ind1])
+mean(car_test_ln.scale$fit$fitted.values[ind2])
+mean(car_test_ln.scale$fit$fitted.values[ind3])
+car_test_ln.scale$fit$signal_trend
+car_test_ln.scale$fit$signal_stochastic
+sd(car_test_ln.scale$fit$signal_stochastic[ind1])
+sd(car_test_ln.scale$fit$fitted.values[ind1])
+sd(car_test_ln.scale$fit$residuals[ind1])
+# sd(test_dat$scale[ind1])
+# sd(log(test_dat$scale[ind1]))
+mean(test_dat$scale)
+mean(log(test_dat$scale))
+
+# Function to get parameter estimates from CAR model fits, given...
+#   ln.scale.fit: the CAR fit object for ln.scale
+#   shape.fit: the CAR fit object for shape
+#   rate.fit: the CAR fit object for rate
+get_par_car <- function(ln.scale.fit, shape.fit, rate.fit){
+  car_fit <- rbind(exp(summary(ln.scale.fit)$fit$coef),
+                   summary(shape.fit)$fit$coef,
+                   summary(rate.fit)$fit$coef)
+  rownames(car_fit) <- c("scale", "shape", "rate")
+  return(car_fit)
+}
+
+# Function to get SE's from CAR model fits
+get_se <- function(ln.scale.fit, shape.fit, rate.fit){  # still returns log(scale)...
+  mat <- NULL
+  ln.scale_vcov <- ln.scale.fit$fit$imat * ln.scale.fit$fit$s2
+  mat <- rbind(mat, sqrt(diag(ln.scale_vcov)))
+  shape_vcov <- shape.fit$fit$imat * shape.fit$fit$s2
+  mat <- rbind(mat, sqrt(diag(shape_vcov)))
+  rate_vcov <- rate.fit$fit$imat * rate.fit$fit$s2
+  mat <- rbind(mat, sqrt(diag(rate_vcov)))
+  rownames(mat) <- c("ln.scale", "shape", "rate")
+  colnames(mat) <- c("Reg1", "Reg2", "Reg3")
+  return(mat)
+}
+
+car_fit
+car_varcov[[1]]
+car_fit[3,1]
+
+# pars_to_rl <- function(par_mat, return_period){
+#   RL_vec <- NULL
+#   for(reg in 1:3){
+#     scale <- par_mat[1, reg]
+#     shape <- par_mat[2, reg]
+#     rate  <- par_mat[3, reg]
+#     RL_vec[reg] <- extRemes::rlevd(period=return_period, type="GP", scale=scale, shape=shape, rate=rate, threshold=thresh)
+#   }
+#   return(RL_vec)
+# }
+
+
+# Function to calculate return level CIs given parameter estimates and varcov matrix...
+# using code pulled from functions in extRemes package
+rl_with_ci <- function(par_mat, varcov_list, return_period, type = "ci", alpha = 0.05){
+  out_ci <- out_se <- NULL
+  for(i in 1:length(varcov_list)){  # for Region i
+    cov.theta <- varcov_list[[i]]
+    scale <- car_fit[1,i]
+    shape <- car_fit[2,i]
+    rate <- car_fit[3,i]
+    p <- extRemes::rlevd(period=return_period, type="GP", scale=scale, shape=shape, rate=rate, threshold=thresh)
+    # p <- rlevd(period = return.period, loc = loc, scale = scale, 
+    #            shape = shape, threshold = x$threshold, type = mod, 
+    #            npy = x$npy, rate = lam)
+    # p gives the basic return level!
+    
+    z.alpha <- qnorm(alpha/2, lower.tail = FALSE)
+
+    # grads <- rlgrad.fevd(x, period = return.period)
+    lam <- rate
+    n = 14610 # while working with 40-year windows
+    npy = 365.25
+      m <- return_period * npy
+      mlam <- m * lam
+      grads <- cbind(scale * m^(-shape) * lam^(-shape - 1), 
+                   (shape)^(-1) * ((mlam)^(shape) - 1), 
+                   -scale * (shape)^(-2) * ((mlam)^(shape) - 1) + (scale/shape) * (mlam)^(shape) * log(mlam))
+      grads <- t(grads)
+      cov.theta <- rbind(c(lam * (1 - lam)/n, 0, 0), 
+                                cbind(0, cov.theta))
+      var.theta <- t(grads) %*% cov.theta %*% grads
+      
+      # return(var.theta)
+      which.par = 1
+
+    # now make it work for all 3 regions!
+
+    if(type=="se"){  # if type="se", give return level and standard error of RL
+      rl_se <- sqrt(var.theta)
+      out_se <- rbind(out_se, c(p, rl_se))
+    }else{          # if type="ci" (default), give return level with CI
+      out <- c(p, p - z.alpha * sqrt(var.theta),
+                p + z.alpha * sqrt(var.theta))
+      out_ci <- rbind(out_ci, out)
+    }
+  }
+  if(type=="se"){  # if type="se", give return level and standard error of RL
+    rownames(out_se) <- c("Reg1", "Reg2", "Reg3")
+    colnames(out_se) <- c(paste0(return_period, "-yr RL"), "SE")
+    return(out_se)
+  }else{          # if type="ci" (default), give return level with CI
+    rownames(out_ci) <- c("Reg1", "Reg2", "Reg3")
+    colnames(out_ci) <- c(paste0(return_period, "-yr RL"), "LB", "UB")
+    return(out_ci)
+  }
+}
+
+rl_with_ci(car_fit, car_varcov, 100, "se")/254
+rl_with_ci(car_fit, car_varcov, 100)/254
+
+rl_with_ci(car_fit, car_varcov, 25, "se")/254
+rl_with_ci(car_fit, car_varcov, 100, "se")/254
+rl_with_ci(car_fit, car_varcov, 500, "se")/254
+
+# Testing if transformed varcov is on same scale as if modeled scale instead of log(scale) -- for CAR model --
+test_not_log_scale <- spatialreg::spautolm(scale ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
+                                                                listw=mat2listw(1/D_all_jit_sym))
+# param ests somewhat different, but SE is on the same sacle, around 3 or 4
+summary(test_not_log_scale)
+sqrt(car_varcov[[1]])
+sqrt(car_varcov[[2]])
+sqrt(car_varcov[[3]])
+car_fit
+
+# Testing if transformed varcov is on same scale as if modeled scale instead of log(scale) -- for krige model --
+# Fitting cross-variogram to real data (log(scale) and shape):
+gt <- gstat(id = "scale", formula = scale~1, data = stations_sub)
+gt <- gstat(gt, id = "shape", formula = shape~1, data = stations_sub)
+vgt <- variogram(gt)
+cv.fit2 = fit.lmc(vgt, gt, vgm("Mat"))
+plot(vgt, model = cv.fit2)
+cv.fit2
+# cokriging
+cv.fit2$set=list(nocheck=1)
+krig_regs_not_log <- predict(cv.fit2, newdata = ws_regs)
+### estimates:
+krig_regs_not_log$scale.pred
+krig_regs_not_log$shape.pred
+krig_regs_not_log$scale.var
+krig_regs_not_log$shape.var
+krig_regs_not_log$cov.scale.shape
+
+
+
+# # Can get varcov matrix between the coefficient estimates... but need varcov between scale and shape
+# coef_vcov <- car_shape_22$fit$imat * car_shape_22$fit$s2
+# sqrt(diag(coef_vcov))
+
+
+# Trying jointly:
+cbind(TOT, AMI)
+lm_combo <- lm(cbind(shape, log(scale)) ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22)
+# Doesn't work with CAR fn
+# car_combo_22 <- spatialreg::spautolm(cbind(shape, scale) ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+#                                      listw=mat2listw(1/D_22))
+
+# Can get varcov matrix between the coefficient estimates... but need varcov between scale and shape
+coef_vcov <- car_test_shape$fit$imat * car_test_shape$fit$s2
+#               Reg1          Reg2          Reg3
+# Reg1  2.669983e-04 -3.232997e-05 -4.191154e-06
+# Reg2 -3.232997e-05  2.946188e-04 -2.505771e-05
+# Reg3 -4.191154e-06 -2.505771e-05  1.661473e-04
+sqrt(2.669983e-04)  # 0.01634008
+sqrt(diag(coef_vcov))
+
+car_shape_22$fdHess # Numerical Hessian-based variance-covariance matrix... 
+# is the same as matrix above, but with lambda added
+car_shape_22$lambda.se; sqrt(car_shape_22$fdHess[1,1]) # first variable is lambda
+sqrt(diag(car_shape_22$fdHess))
+# sqrt(car_shape_22$fdHess[2,2]); sqrt(car_shape_22$fdHess[3,3]); sqrt(car_shape_22$fdHess[4,4])
+
+summary(car_test_shape)
+# car_test_shape$fit$signal_trend
+# car_test_shape$fit$signal_stochastic
+
+identical(car_test_shape$fit$fitted.values, car_test_shape$fit$signal_trend + car_test_shape$fit$signal_stochastic)
+
+ind1 <- which(test_dat$Reg1==1)
+ind2 <- which(test_dat$Reg2==1)
+ind3 <- which(test_dat$Reg3==1)
+sqrt(var(car_test_shape$fit$fitted.values[ind1]))
+sqrt(var(car_test_shape$fit$signal_trend[ind1]))
+sqrt(var(car_test_shape$fit$signal_stochastic[ind1]))
+sqrt(var(car_test_shape$fit$residuals[ind1]))
+
+car_test_shape$fit$fitted.values
+car_test_ln.scale$fit$fitted.values
+var(car_test_shape$fit$fitted.values)
+var(car_test_ln.scale$fit$fitted.values)
+cov(car_test_shape$fit$fitted.values,
+    car_test_ln.scale$fit$fitted.values)
+plot(car_test_shape$fit$fitted.values, car_test_ln.scale$fit$fitted.values)
+
+# plot(car_test_shape$fit$fitted.values, car_test_shape$fit$residuals)
+# plot(car_test_ln.scale$fit$fitted.values, car_test_ln.scale$fit$residuals)
+plot(car_test_shape$fit$residuals, car_test_ln.scale$fit$residuals)
+
+# get_se(car_ln.scale_22, car_shape_22, car_rate_22)
+get_se(car_test_ln.scale, car_test_shape, car_test_rate)
+get_par_car(car_test_ln.scale, car_test_shape, car_test_rate) # check! same as car_fit
+# car_fit 
+
+
+library(matrixcalc)
+is.positive.definite(1/D_all_jit_sym)
+
+
+
+# Moving Windows ----------------------------------------------------------
+
+# dat_win_22 <- format_data(window[[22]], ws_regs) # 34
+# dat_win_52 <- format_data(window[[52]], ws_regs) # 28
+# dat_win_82 <- format_data(window[[82]], ws_regs) # 149
+# 
+# D_22 <- get_sym_car_mat(dat_win_22, hMat_miles)
+# D_52 <- get_sym_car_mat(dat_win_52, hMat_miles)
+# D_82 <- get_sym_car_mat(dat_win_82, hMat_miles)
+
+car_shape_22 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                     listw=mat2listw(1/D_22))
+ptm <- proc.time()
+car_ln.scale_22 <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                        listw=mat2listw(1/D_22))
+proc.time() - ptm
+ptm <- proc.time()
+car_rate_22 <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_22, family="CAR",
+                                    listw=mat2listw(1/D_22))
+proc.time() - ptm
+
+par_22 <- get_par_car(car_ln.scale_22, car_shape_22, car_rate_22)
+se_22 <- get_se(car_ln.scale_22, car_shape_22, car_rate_22)
+
+
+ptm <- proc.time()
+car_ln.scale_52 <- spatialreg::spautolm(log(scale) ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_52, family="CAR",
+                                        listw=mat2listw(1/D_52))
+proc.time() - ptm
+ptm <- proc.time()
+car_shape_52 <- spatialreg::spautolm(shape ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_52, family="CAR",
+                                     listw=mat2listw(1/D_52))
+proc.time() - ptm
+ptm <- proc.time()
+car_rate_52 <- spatialreg::spautolm(rate ~ -1 + Reg1 + Reg2 + Reg3, data = dat_win_52, family="CAR",
+                                    listw=mat2listw(1/D_52))
+proc.time() - ptm
+
+par_52 <- get_par_car(car_ln.scale_52, car_shape_52, car_rate_52)
+se_52 <- get_se(car_ln.scale_52, car_shape_52, car_rate_52)
+
+
+## Window 82 is already found through car_fit! (car_test_shape...)
+get_se(car_test_ln.scale, car_test_shape, car_test_rate)
+get_par_car(car_test_ln.scale, car_test_shape, car_test_rate) # check! same as car_fit
+# car_fit 
+
+pars_to_rl(par_22, 25)/254
+pars_to_rl(par_22, 100)/254
+pars_to_rl(par_22, 500)/254
+
+pars_to_rl(par_52, 25)/254
+pars_to_rl(par_52, 100)/254
+pars_to_rl(par_52, 500)/254
+
+pars_to_rl(car_fit, 25)/254
+pars_to_rl(car_fit, 100)/254
+pars_to_rl(car_fit, 500)/254
+
+
+
+# Model 3 - Consolidated Series -------------------------------------------------------------------
 
 # load consolidated series and subset to same 40-year window (1981-2020)
 setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data")
@@ -320,7 +849,7 @@ pars_to_rl(consol_fit, 500)/254
 
 
 
-# Saving Model Fits -------------------------------------------------------
+# Saving Model Fits -------------------------------------------------------------------------------
 
 # saveRDS(car_test_shape, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_shape.rds")
 # saveRDS(car_test_ln.scale, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_ln.scale.rds")
@@ -339,7 +868,7 @@ pars_to_rl(consol_fit, 500)/254
 # saveRDS(consol_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fit.rds")
 
 
-# Extra Code - Finding CIs ------------------------------------------------
+# Extra Code - Finding CIs ------------------------------------------------------------------------
 
 fit <- window[[79]][[588]]
 
@@ -498,8 +1027,8 @@ test_rl <- extRemes::return.level(window[[79]][[588]], return.period=100)/10
 ## new_se_100[i] <- ((extRemes::return.level(window[[79]][[i]], return.period=100, do.ci=T)/10)[3] - new_rl_100[i])/z
 
 
-# Extra Kriging/Variogram Code --------------------------------------------
-
+# Extra Kriging/Variogram Code --------------------------------------------------------------------
+#--------
 # To real data:
 g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub)
 g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub)
