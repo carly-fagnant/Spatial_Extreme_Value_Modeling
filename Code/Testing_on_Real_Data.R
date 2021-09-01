@@ -528,7 +528,7 @@ sd(car_test_ln.scale$fit$residuals[ind1])
 mean(test_dat$scale)
 mean(log(test_dat$scale))
 
-# Function to get parameter estimates from CAR model fits, given...
+# Function to get parameter estimate matrix from CAR model fits, given...
 #   ln.scale.fit: the CAR fit object for ln.scale
 #   shape.fit: the CAR fit object for shape
 #   rate.fit: the CAR fit object for rate
@@ -576,9 +576,9 @@ rl_with_ci <- function(par_mat, varcov_list, return_period, type = "ci", alpha =
   out_ci <- out_se <- NULL
   for(i in 1:length(varcov_list)){  # for Region i
     cov.theta <- varcov_list[[i]]
-    scale <- car_fit[1,i]
-    shape <- car_fit[2,i]
-    rate <- car_fit[3,i]
+    scale <- par_mat[1,i]
+    shape <- par_mat[2,i]
+    rate  <- par_mat[3,i]
     p <- extRemes::rlevd(period=return_period, type="GP", scale=scale, shape=shape, rate=rate, threshold=thresh)
     # p <- rlevd(period = return.period, loc = loc, scale = scale, 
     #            shape = shape, threshold = x$threshold, type = mod, 
@@ -602,7 +602,7 @@ rl_with_ci <- function(par_mat, varcov_list, return_period, type = "ci", alpha =
       var.theta <- t(grads) %*% cov.theta %*% grads
       
       # return(var.theta)
-      which.par = 1
+      # which.par = 1
 
     # now make it work for all 3 regions!
 
@@ -633,10 +633,25 @@ rl_with_ci(car_fit, car_varcov, 25, "se")/254
 rl_with_ci(car_fit, car_varcov, 100, "se")/254
 rl_with_ci(car_fit, car_varcov, 500, "se")/254
 
+car_varcov_22 <- make_varcov_mats_car(car_ln.scale_22, car_shape_22)  # se of scale 8.5, 4, 9.25
+# test_not_log_22 <- spatialreg::spautolm(scale ~ -1 + Reg1 + Reg2 + Reg3,  # se of scale 9.2, 5, 11.5
+#                                         data = dat_win_22, family="CAR", listw=mat2listw(1/D_22)) 
+rl_with_ci(par_22, car_varcov_22, 25, "se")/254
+rl_with_ci(par_22, car_varcov_22, 100, "se")/254
+rl_with_ci(par_22, car_varcov_22, 500, "se")/254
+
+car_varcov_52 <- make_varcov_mats_car(car_ln.scale_52, car_shape_52)  # se of scale 5.5, 3.2, 7.8
+# test_not_log_52 <- spatialreg::spautolm(scale ~ -1 + Reg1 + Reg2 + Reg3,  # se of scale 5, 2.5, 5.9
+#                                         data = dat_win_52, family="CAR", listw=mat2listw(1/D_52))
+rl_with_ci(par_52, car_varcov_52, 25, "se")/254
+rl_with_ci(par_52, car_varcov_52, 100, "se")/254
+rl_with_ci(par_52, car_varcov_52, 500, "se")/254
+
+
 # Testing if transformed varcov is on same scale as if modeled scale instead of log(scale) -- for CAR model --
 test_not_log_scale <- spatialreg::spautolm(scale ~ -1 + Reg1 + Reg2 + Reg3, data = test_dat, family="CAR",
                                                                 listw=mat2listw(1/D_all_jit_sym))
-# param ests somewhat different, but SE is on the same sacle, around 3 or 4
+# param ests somewhat different, but SE (of scale) is on the same scale, around 3 or 4
 summary(test_not_log_scale)
 sqrt(car_varcov[[1]])
 sqrt(car_varcov[[2]])
@@ -718,7 +733,7 @@ plot(car_test_shape$fit$residuals, car_test_ln.scale$fit$residuals)
 
 # get_se(car_ln.scale_22, car_shape_22, car_rate_22)
 get_se(car_test_ln.scale, car_test_shape, car_test_rate)
-get_par_car(car_test_ln.scale, car_test_shape, car_test_rate) # check! same as car_fit
+get_par_car(car_test_ln.scale, car_test_shape, car_test_rate) # check, same as car_fit - yes!
 # car_fit 
 
 
@@ -817,7 +832,7 @@ for ( i in seq(from=2, to=length(precip[1,]))){
 consol_data <- precip_dclust
 consol_data$Date <- lubridate::ymd(as.character(consol_data$Date)) #put Date column into date format
 
-###############
+# # # # # # # # # # # # # # #
 
 # 40-year period
 start <- "1981-01-01"
@@ -848,6 +863,242 @@ pars_to_rl(consol_fit, 500)/254
 
 
 
+# Function to get parameter estimate matrix from consolidated data fits, given...
+#   fitreg1: GPD fit object for Region 1
+#   fitreg2: GPD fit object for Region 2
+#   fitreg3: GPD fit object for Region 3
+get_par_consol <- function(fitreg1, fitreg2, fitreg3){
+  consol_fit <- rbind(c(fitreg1$results$par[1], fitreg2$results$par[1], fitreg3$results$par[1]), # scale
+                      c(fitreg1$results$par[2], fitreg2$results$par[2], fitreg3$results$par[2]), # shape
+                      c(fitreg1$rate, fitreg2$rate, fitreg3$rate)) # rate
+  rownames(consol_fit) <- c("scale", "shape", "rate")
+  colnames(consol_fit) <- colnames(car_fit)
+  return(consol_fit)
+}
+
+
+# Function to generate a list of varcov matrices for each region, given...
+#   fitreg1: GPD fit object for Region 1
+#   fitreg2: GPD fit object for Region 2
+#   fitreg3: GPD fit object for Region 3
+make_varcov_mats_consol <- function(fitreg1, fitreg2, fitreg3){
+  varcov_list <- list()
+  varcov_list[[1]] <- extRemes::parcov.fevd(fitreg1)
+  varcov_list[[2]] <- extRemes::parcov.fevd(fitreg2)
+  varcov_list[[3]] <- extRemes::parcov.fevd(fitreg3)
+  return(varcov_list)
+}
+
+consol_varcov <- make_varcov_mats_consol(fitreg1, fitreg2, fitreg3)
+rl_with_ci(consol_fit, consol_varcov, 25, "se")/254
+rl_with_ci(consol_fit, consol_varcov, 100, "se")/254
+rl_with_ci(consol_fit, consol_varcov, 500, "se")/254
+
+# See if matches built-in return.level function - YES!
+extRemes::return.level(fitreg1, return.period = c(25, 100, 500), do.ci=T)/254
+
+# Need to fit data for this - subset to the years of the windows
+# 22: 1921-1960
+# 52: 1951-1990
+#last 1981-2020
+
+# 40-year period
+start <- "1921-01-01"
+end <- "1960-12-31"
+start <- which(consol_data$Date==start)  #finding indexes corresponding to start & end dates
+end   <- which(consol_data$Date==end)
+sub <- consol_data[start:end, ]  #subset data to those 40 years
+# there are NAs... need to remove
+# fitreg1_22_comp <- extRemes::fevd(na.omit(sub$region1), threshold=thresh, type="GP", method="MLE")
+fitreg1_22 <- extRemes::fevd(sub$region1, threshold=thresh, type="GP", method="MLE", na.action = na.exclude)
+fitreg2_22 <- extRemes::fevd(sub$region2, threshold=thresh, type="GP", method="MLE")
+fitreg3_22 <- extRemes::fevd(sub$region3, threshold=thresh, type="GP", method="MLE", na.action = na.exclude)
+
+par_consol_22 <- get_par_consol(fitreg1_22, fitreg2_22, fitreg3_22)
+consol_varcov_22 <- make_varcov_mats_consol(fitreg1_22, fitreg2_22, fitreg3_22)
+rl_with_ci(par_consol_22, consol_varcov_22, 25, "se")/254
+rl_with_ci(par_consol_22, consol_varcov_22, 100, "se")/254
+rl_with_ci(par_consol_22, consol_varcov_22, 500, "se")/254
+
+# 40-year period
+start <- "1951-01-01"
+end <- "1990-12-31"
+start <- which(consol_data$Date==start)  #finding indexes corresponding to start & end dates
+end   <- which(consol_data$Date==end)
+sub <- consol_data[start:end, ]  #subset data to those 40 years
+fitreg1_52 <- extRemes::fevd(sub$region1, threshold=thresh, type="GP", method="MLE")
+fitreg2_52 <- extRemes::fevd(sub$region2, threshold=thresh, type="GP", method="MLE")
+fitreg3_52 <- extRemes::fevd(sub$region3, threshold=thresh, type="GP", method="MLE")
+
+par_consol_52 <- get_par_consol(fitreg1_52, fitreg2_52, fitreg3_52)
+consol_varcov_52 <- make_varcov_mats_consol(fitreg1_52, fitreg2_52, fitreg3_52)
+rl_with_ci(par_consol_52, consol_varcov_52, 25, "se")/254
+rl_with_ci(par_consol_52, consol_varcov_52, 100, "se")/254
+rl_with_ci(par_consol_52, consol_varcov_52, 500, "se")/254
+
+
+
+# Plot Moving Window Results ----------------------------------------------
+library(ggplot2)
+
+# test_25 <- rl_with_ci(par_consol_52, consol_varcov_52, 25, "ci")/254
+# test_100 <- rl_with_ci(par_consol_52, consol_varcov_52, 100, "ci")/254
+# test_500 <- rl_with_ci(par_consol_52, consol_varcov_52, 500, "ci")/254
+# dim(test_500)[1]
+# test_500[1,]
+
+# Function to convert return level CI matrices into vectors for easy plotting
+
+# separate by region! For each region, will have matrix made of diff RL values (25, 100, 500 and bounds)
+rl_ci_to_plot_vec <- function(rl_mat_25, rl_mat_100, rl_mat_500){
+  reg <- list()
+  for ( i in 1:dim(rl_mat_25)[1]){ #i.e. 1:3
+    vec_25  <- rl_mat_25[i, ]
+    vec_100 <- rl_mat_100[i, ]
+    vec_500 <- rl_mat_500[i, ]
+    mat <- rbind(vec_25, vec_100, vec_500)
+    rownames(mat) <- c("25-yr", "100-yr", "500-yr")
+    colnames(mat)[1] <- "RL"
+    reg[[i]] <- mat
+  }
+  return(reg)
+}
+
+# win_2 <- rl_ci_to_plot_vec(test_25, test_100, test_500)
+# win_2[[3]]
+
+
+# Function to create dataset for plotting, given...
+#   win_1, win_2, win_3: the list of RLs and CIs by region for each window
+# currently only for 3 windows
+win_rl_to_plot_dat <- function(win_1, win_2, win_3){
+  reg <- list()
+  for(i in 1:3){ # by region
+    # win_1[[i]] # is region i values from window 1
+    dat_25 <- rbind(win_1[[i]][1, ], win_2[[i]][1, ], win_3[[i]][1, ])
+    dat_100 <- rbind(win_1[[i]][2, ], win_2[[i]][2, ], win_3[[i]][2, ])
+    dat_500 <- rbind(win_1[[i]][3, ], win_2[[i]][3, ], win_3[[i]][3, ])
+    dat <- cbind(dat_25, dat_100, dat_500)
+    colnames(dat) <- c("RL_25", "LB_25", "UB_25", "RL_100", "LB_100", "UB_100","RL_500", "LB_500", "UB_500")
+    reg[[i]] <- as.data.frame(dat)
+  }
+  return(reg)
+}
+
+
+### Fitting to Model 1 ###
+car_rl_25_22  <- rl_with_ci(par_22, car_varcov_22, 25, "ci")/254
+car_rl_100_22 <- rl_with_ci(par_22, car_varcov_22, 100, "ci")/254
+car_rl_500_22 <- rl_with_ci(par_22, car_varcov_22, 500, "ci")/254
+
+car_rl_25_52  <- rl_with_ci(par_52, car_varcov_52, 25, "ci")/254
+car_rl_100_52 <- rl_with_ci(par_52, car_varcov_52, 100, "ci")/254
+car_rl_500_52 <- rl_with_ci(par_52, car_varcov_52, 500, "ci")/254
+
+car_rl_25_82  <- rl_with_ci(car_fit, car_varcov, 25, "ci")/254
+car_rl_100_82 <- rl_with_ci(car_fit, car_varcov, 100, "ci")/254
+car_rl_500_82 <- rl_with_ci(car_fit, car_varcov, 500, "ci")/254
+
+win_1 <- rl_ci_to_plot_vec(car_rl_25_22, car_rl_100_22, car_rl_500_22)
+win_2 <- rl_ci_to_plot_vec(car_rl_25_52, car_rl_100_52, car_rl_500_52)
+win_3 <- rl_ci_to_plot_vec(car_rl_25_82, car_rl_100_82, car_rl_500_82)
+
+plot_dat <- win_rl_to_plot_dat(win_1, win_2, win_3)
+reg1 <- plot_dat[[1]] # Region 1 data frame for plotting
+reg2 <- plot_dat[[2]] 
+reg3 <- plot_dat[[3]] 
+
+## Plotting
+# Fixed the colors from old Richmond code
+# started with ylim = c(5,30)... maybe c(5,33)?
+ggplot(data=reg1, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 1 - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg2, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 1 - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg3, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 1 - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+
+### Fitting to Model 3 ###
+consol_rl_25_22  <- rl_with_ci(par_consol_22, consol_varcov_22, 25, "ci")/254
+consol_rl_100_22 <- rl_with_ci(par_consol_22, consol_varcov_22, 100, "ci")/254
+consol_rl_500_22 <- rl_with_ci(par_consol_22, consol_varcov_22, 500, "ci")/254
+
+consol_rl_25_52  <- rl_with_ci(par_consol_52, consol_varcov_52, 25, "ci")/254
+consol_rl_100_52 <- rl_with_ci(par_consol_52, consol_varcov_52, 100, "ci")/254
+consol_rl_500_52 <- rl_with_ci(par_consol_52, consol_varcov_52, 500, "ci")/254
+
+consol_rl_25_82  <- rl_with_ci(consol_fit, consol_varcov, 25, "ci")/254
+consol_rl_100_82 <- rl_with_ci(consol_fit, consol_varcov, 100, "ci")/254
+consol_rl_500_82 <- rl_with_ci(consol_fit, consol_varcov, 500, "ci")/254
+
+consol_win_1 <- rl_ci_to_plot_vec(consol_rl_25_22, consol_rl_100_22, consol_rl_500_22)
+consol_win_2 <- rl_ci_to_plot_vec(consol_rl_25_52, consol_rl_100_52, consol_rl_500_52)
+consol_win_3 <- rl_ci_to_plot_vec(consol_rl_25_82, consol_rl_100_82, consol_rl_500_82)
+
+consol_plot_dat <- win_rl_to_plot_dat(consol_win_1, consol_win_2, consol_win_3)
+reg1_consol <- consol_plot_dat[[1]] # Region 1 data frame for plotting
+reg2_consol <- consol_plot_dat[[2]] 
+reg3_consol <- consol_plot_dat[[3]] 
+
+## Plotting
+ggplot(data=reg1_consol, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 3 - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg2_consol, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 3 - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), linetype=2, alpha=0.07, fill="red") +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 3 - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+
+### Fitting to Model 2 ###
+# consol_rl_25_22  <- rl_with_ci(par_consol_22, consol_varcov_22, 25, "ci")/254
+# consol_rl_100_22 <- rl_with_ci(par_consol_22, consol_varcov_22, 100, "ci")/254
+# consol_rl_500_22 <- rl_with_ci(par_consol_22, consol_varcov_22, 500, "ci")/254
+# 
+# consol_rl_25_52  <- rl_with_ci(par_consol_52, consol_varcov_52, 25, "ci")/254
+# consol_rl_100_52 <- rl_with_ci(par_consol_52, consol_varcov_52, 100, "ci")/254
+# consol_rl_500_52 <- rl_with_ci(par_consol_52, consol_varcov_52, 500, "ci")/254
+# 
+# consol_rl_25_82  <- rl_with_ci(consol_fit, consol_varcov, 25, "ci")/254
+# consol_rl_100_82 <- rl_with_ci(consol_fit, consol_varcov, 100, "ci")/254
+# consol_rl_500_82 <- rl_with_ci(consol_fit, consol_varcov, 500, "ci")/254
+
+
+
 
 # Saving Model Fits -------------------------------------------------------------------------------
 
@@ -866,6 +1117,44 @@ pars_to_rl(consol_fit, 500)/254
 # saveRDS(fitreg2, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg2.rds")
 # saveRDS(fitreg3, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg3.rds")
 # saveRDS(consol_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fit.rds")
+
+
+# saveRDS(car_varcov, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_varcov.rds")
+# saveRDS(D_all_jit_sym, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/D_82.rds")
+# saveRDS(D_all_jit_sym, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/D_all_jit_sym.rds")
+# 
+# saveRDS(car_shape_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_shape_22.rds")
+# saveRDS(car_ln.scale_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_ln.scale_22.rds")
+# saveRDS(car_rate_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_rate_22.rds")
+# saveRDS(par_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_par_22.rds")
+# # se not quite right yet
+# saveRDS(car_varcov_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_varcov_22.rds")
+# saveRDS(D_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/D_22.rds")
+# 
+# saveRDS(car_shape_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_shape_52.rds")
+# saveRDS(car_ln.scale_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_ln.scale_52.rds")
+# saveRDS(car_rate_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_rate_52.rds")
+# saveRDS(par_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_par_52.rds")
+# # se not quite right yet
+# saveRDS(car_varcov_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_varcov_52.rds")
+# saveRDS(D_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/D_52.rds")
+
+# saveRDS(consol_data, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_data.rds")
+# saveRDS(consol_varcov, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_varcov.rds")
+
+# saveRDS(fitreg1_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg1_22.rds")
+# saveRDS(fitreg2_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg2_22.rds")
+# saveRDS(fitreg3_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg3_22.rds")
+# saveRDS(par_consol_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_consol_22.rds")
+# saveRDS(consol_varcov_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_varcov_22.rds")
+# 
+# saveRDS(fitreg1_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg1_52.rds")
+# saveRDS(fitreg2_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg2_52.rds")
+# saveRDS(fitreg3_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_fitreg3_52.rds")
+# saveRDS(par_consol_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_consol_52.rds")
+# saveRDS(consol_varcov_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_varcov_52.rds")
+
+### Fits from kriging model
 
 
 # Extra Code - Finding CIs ------------------------------------------------------------------------
