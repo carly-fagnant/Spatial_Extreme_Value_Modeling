@@ -425,18 +425,37 @@ colnames(krig_fit) <- colnames(car_fit)
 # saveRDS(krig_fit, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/krig_fit.rds")
 
 
-# Function to generate a list of varcov matrices for each region, given...
+# # Function to generate a list of varcov matrices for each region, given...
+# #   ln.scale.var: the vector of log(scale) variances
+# #   shape.var: the vector of shape variances
+# #   cov.ln.scale.shape: the vector of covariances between log(scale) and shape
+# make_varcov_mats <- function(ln.scale.var, shape.var, cov.ln.scale.shape){      # still returns log(scale)...
+#   varcov_list <- list()
+#   # reg1 <- reg2 <- reg3 <- matrix(data=NA, nrow=2, ncol=2)
+#   for(i in 1:length(ln.scale.var)){
+#     mat <- matrix(data=NA, nrow=2, ncol=2)
+#     mat[1,1] <- ln.scale.var[i]
+#     mat[2,2] <- shape.var[i]
+#     mat[1,2] <- mat[2,1] <- cov.ln.scale.shape[i]
+#     varcov_list[[i]] <- mat
+#   }
+#   return(varcov_list)
+# }
+
+
+
+# Function to generate a list of varcov matrices for each region, given...  (useful for kriging model)
 #   ln.scale.var: the vector of log(scale) variances
+#   ln.scale.pred: the vector of log(scale) estimates
 #   shape.var: the vector of shape variances
 #   cov.ln.scale.shape: the vector of covariances between log(scale) and shape
-make_varcov_mats <- function(ln.scale.var, shape.var, cov.ln.scale.shape){      # still returns log(scale)...
+make_varcov_mats_krig <- function(ln.scale.var, ln.scale.pred, shape.var, cov.ln.scale.shape){      # still returns cov log(scale)...
   varcov_list <- list()
-  # reg1 <- reg2 <- reg3 <- matrix(data=NA, nrow=2, ncol=2)
   for(i in 1:length(ln.scale.var)){
     mat <- matrix(data=NA, nrow=2, ncol=2)
-    mat[1,1] <- ln.scale.var[i]
+    mat[1,1] <- exp(ln.scale.pred[i])^2 * ln.scale.var[i] # doing transformation  
     mat[2,2] <- shape.var[i]
-    mat[1,2] <- mat[2,1] <- cov.ln.scale.shape[i]
+    mat[1,2] <- mat[2,1] <- cov.ln.scale.shape[i] # still need to transform the covariance!
     varcov_list[[i]] <- mat
   }
   return(varcov_list)
@@ -444,12 +463,12 @@ make_varcov_mats <- function(ln.scale.var, shape.var, cov.ln.scale.shape){      
 
 
 # Function to get SE's from a list of varcov matrices (useful for kriging model)
-give_se <- function(varcov_list){
+give_se <- function(varcov_list){ 
   se_vec <- NULL
   for (i in 1:length(varcov_list)){
     se_vec <- cbind(se_vec, sqrt(diag(varcov_list[[i]])))
   }
-  rownames(se_vec) <- c("ln.scale", "shape")
+  rownames(se_vec) <- c("scale", "shape")
   colnames(se_vec) <- c("Reg1", "Reg2", "Reg3")
   return(se_vec)
 }
@@ -462,12 +481,194 @@ give_se <- function(varcov_list){
 # cbind(se_vec, sqrt(diag(krig_varcov[[1]])))
 
 
-krig_varcov <- make_varcov_mats(krig_regs$ln.scale.var, krig_regs$shape.var, krig_regs$cov.ln.scale.shape)
+# krig_varcov <- make_varcov_mats(krig_regs$ln.scale.var, krig_regs$shape.var, krig_regs$cov.ln.scale.shape)
+# give_se(krig_varcov)
+krig_varcov <- make_varcov_mats_krig(krig_regs$ln.scale.var, krig_regs$ln.scale.pred, krig_regs$shape.var, krig_regs$cov.ln.scale.shape)
 give_se(krig_varcov)
+get_se_consol(krig_varcov)
+
 
 pars_to_rl(krig_fit, 25)/254
 pars_to_rl(krig_fit, 100)/254
 pars_to_rl(krig_fit, 500)/254
+
+
+### Fitting Model 2 to other windows 
+
+# Already formatted data using format_data function, but this also changes order by region
+# dat_win_22 and dat_win_52
+
+# Function to format data (a stations_sub data frame) to stations within the regions, given...
+#   window_fit: the window list subset to the moving window of choice (e.g. input window[[82]] for the final 40-yr window)
+#   reg_polygons: the SpatialPolygonsDataFrame for the regions of interest
+format_data_sub <- function(window_fit, reg_polygons){
+  # Accessing Model Fits and saving the parameter values (scale, shape, rate) for each station
+  ws_scale <- NULL
+  ws_shape <- NULL
+  ws_rate  <- NULL
+  j = 1
+  for(i in stat_nos){
+    fit <- window_fit[[i]] 
+    if(is.na(fit)){
+      ws_scale[j] <- ws_shape[j] <- ws_rate[j]  <- NA
+    }else{
+      ws_scale[j] <- fit$results$par[1]
+      ws_shape[j] <- fit$results$par[2]
+      ws_rate[j]  <- fit$rate
+    }
+    j = j+1
+  }
+  # add new location (long/lat) columns that we will transform to coordinates, as well as parameter values
+  stations_df <- stations %>%
+    dplyr::mutate(scale = ws_scale, shape = ws_shape, rate = ws_rate, long = LONGITUDE, lat = LATITUDE)
+  
+  stations <- project_data(stations_df)
+  region_int <- sp::over(stations, reg_polygons)
+  region_int$REGION <- as.factor(region_int$REGION)
+  h <- model.matrix( ~ REGION - 1, data=region_int)
+  inds <- as.integer(rownames(h))
+  
+  stations_sub_df <- stations_df %>%
+    dplyr::filter(STAT_NO %in% inds) %>%
+    dplyr::filter(!is.na(scale))
+  
+  # stations_sub <- project_data(stations_sub_df)
+  
+  return(stations_sub_df)
+}
+
+# test_format_data <- format_data(window[[82]], ws_regs)
+# testing_format_data_82 <- format_data_sub(window[[82]], ws_regs)
+# identical(testing_format_data_82, stations_sub_df)
+
+stations_sub_22_df <- format_data_sub(window[[22]], ws_regs)
+stations_sub_52_df <- format_data_sub(window[[52]], ws_regs)
+
+stations_sub_22 <- project_data(stations_sub_22_df)
+stations_sub_52 <- project_data(stations_sub_52_df)
+
+# # Could also just use data formatted for CAR model - just reorders the data by region
+# stations_sub_22 <- project_data(dat_win_22)
+# test_df <- stations_sub_22@data
+# sp::zerodist(stations_sub_22) # (11, 15, 22)  (13, 16)  (17, 24)  # same hing as before, but out of order
+# stations_sub_52 <- project_data(dat_win_52)
+
+# singular results because mulitple observations at same location
+sp::zerodist(stations_sub_52) # (8, 15) - remove station 8
+stations_sub_52_df <- stations_sub_52_df[-8, ]
+stations_sub_52 <- project_data(stations_sub_52_df)
+
+sp::zerodist(stations_sub_22) # (4, 12, 20)  (8, 14)  (15, 22)  # keep 12, 14, 15
+# remove 4, 8, 20, 22 
+stations_sub_22_df <- stations_sub_22_df[-c(4, 8, 20, 22), ]
+stations_sub_22 <- project_data(stations_sub_22_df)
+
+### Window 22
+# Fitting cross-variogram to real data (log(scale) and shape):
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub_22)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub_22)
+vg <- variogram(g)
+cv.fit_22 = fit.lmc(vg, g, vgm("Mat"))
+# cv.fit_22 = fit.lmc(vg, g, vgm(NA, "Mat", nugget = 0))
+# cv.fit_22 = fit.lmc(vg, g, vgm("Sph")) # new
+plot(vg, model = cv.fit_22)
+cv.fit_22
+
+# cokriging
+# cv.fit_22$set=list(nocheck=1)
+krig_regs_22 <- predict(cv.fit_22, newdata = ws_regs)
+krig_regs_22$ln.scale.pred
+### estimates:
+exp(krig_regs_22$ln.scale.pred)
+krig_regs_22$shape.pred
+sqrt(krig_regs_22$shape.var)
+
+## Need to bring in rate parameter
+# Fitting variogram to real data (rate)
+g3 <- gstat(id = "rate", formula = rate~1, data = stations_sub_22)
+vg3 <- variogram(g3)
+var.fit_22 <- fit.variogram(vg3, vgm("Sph")) # singular model
+# var.fit_22 <- fit.variogram(vg3, vgm("Mat")) # no convergence
+var.fit_22
+plot(vg3, model = var.fit_22, main = "rate")
+# kriging
+krig_regs_rate_22 <- krige(rate~1, stations_sub_22, ws_regs, model = var.fit_22)
+krig_regs_rate_22$var1.pred  # estimate
+sqrt(krig_regs_rate_22$var1.var) # se
+
+
+### Window 52
+# Fitting cross-variogram to real data (log(scale) and shape):
+g <- gstat(id = "ln.scale", formula = log(scale)~1, data = stations_sub_52)
+g <- gstat(g, id = "shape", formula = shape~1, data = stations_sub_52)
+vg <- variogram(g)
+cv.fit_52 = fit.lmc(vg, g, vgm("Mat"))
+# cv.fit_52 = fit.lmc(vg, g, vgm(NA, "Mat", nugget = 0))
+# cv.fit_52 = fit.lmc(vg, g, vgm("Sph")) # new
+plot(vg, model = cv.fit_52)
+cv.fit_52
+
+# cokriging
+cv.fit_52$set=list(nocheck=1)
+krig_regs_52 <- predict(cv.fit_52, newdata = ws_regs)
+### estimates:
+exp(krig_regs_52$ln.scale.pred)
+krig_regs_52$shape.pred
+sqrt(krig_regs_52$shape.var)
+
+## Need to bring in rate parameter
+# Fitting variogram to real data (rate)
+g3 <- gstat(id = "rate", formula = rate~1, data = stations_sub_52)
+vg3 <- variogram(g3)
+var.fit_52 <- fit.variogram(vg3, vgm("Sph"))
+# var.fit_52 <- fit.variogram(vg3, vgm("Mat"))
+var.fit_52
+plot(vg3, model = var.fit_52, main = "rate")
+# kriging
+krig_regs_rate_52 <- krige(rate~1, stations_sub_52, ws_regs, model = var.fit_52)
+krig_regs_rate_52$var1.pred  # estimate
+sqrt(krig_regs_rate_52$var1.var) # se
+
+
+# Function to get parameter estimate matrix from kriging model fits, given...
+#   krig_regs: the co-krige fit object for ln.scale and shape
+#   krig_regs_rate: the krige fit object for rate
+get_par_krig <- function(krig_regs, krig_regs_rate){
+  krig_fit <- rbind(exp(krig_regs$ln.scale.pred),
+                    krig_regs$shape.pred,
+                    krig_regs_rate$var1.pred)
+  rownames(krig_fit) <- c("scale", "shape", "rate")
+  colnames(krig_fit) <- c("Reg1", "Reg2", "Reg3")
+  return(krig_fit)
+}
+
+par_krig_22 <- get_par_krig(krig_regs_22, krig_regs_rate_22)
+par_krig_52 <- get_par_krig(krig_regs_52, krig_regs_rate_52)
+
+pars_to_rl(krig_fit, 25)/254
+pars_to_rl(krig_fit, 100)/254
+pars_to_rl(krig_fit, 500)/254
+
+pars_to_rl(par_krig_22, 25)/254
+pars_to_rl(par_krig_22, 100)/254
+pars_to_rl(par_krig_22, 500)/254
+
+pars_to_rl(par_krig_52, 25)/254
+pars_to_rl(par_krig_52, 100)/254
+pars_to_rl(par_krig_52, 500)/254
+
+
+
+krig_varcov_22 <- make_varcov_mats_krig(krig_regs_22$ln.scale.var, krig_regs_22$ln.scale.pred, krig_regs_22$shape.var, krig_regs_22$cov.ln.scale.shape)
+give_se(krig_varcov_22)
+get_se_consol(krig_varcov_22)
+
+krig_varcov_52 <- make_varcov_mats_krig(krig_regs_52$ln.scale.var, krig_regs_52$ln.scale.pred, krig_regs_52$shape.var, krig_regs_52$cov.ln.scale.shape)
+give_se(krig_varcov_52)
+get_se_consol(krig_varcov_52)
+
+
+# Additional Functions and testing on the CAR model -----------------------
 
 
 # Function to generate a list of varcov matrices for each region, given...
@@ -889,6 +1090,17 @@ make_varcov_mats_consol <- function(fitreg1, fitreg2, fitreg3){
   return(varcov_list)
 }
 
+# Function to get SE's from a list of varcov matrices (useful for model 3)
+get_se_consol <- function(varcov_list){
+  se_vec <- NULL
+  for (i in 1:length(varcov_list)){
+    se_vec <- cbind(se_vec, sqrt(diag(varcov_list[[i]])))
+  }
+  rownames(se_vec) <- c("scale", "shape")
+  colnames(se_vec) <- c("Reg1", "Reg2", "Reg3")
+  return(se_vec)
+}
+
 consol_varcov <- make_varcov_mats_consol(fitreg1, fitreg2, fitreg3)
 rl_with_ci(consol_fit, consol_varcov, 25, "se")/254
 rl_with_ci(consol_fit, consol_varcov, 100, "se")/254
@@ -936,6 +1148,13 @@ rl_with_ci(par_consol_52, consol_varcov_52, 25, "se")/254
 rl_with_ci(par_consol_52, consol_varcov_52, 100, "se")/254
 rl_with_ci(par_consol_52, consol_varcov_52, 500, "se")/254
 
+### To put in tables
+consol_fit
+get_se_consol(consol_varcov)
+par_consol_22
+get_se_consol(consol_varcov_22)
+par_consol_52
+get_se_consol(consol_varcov_52)
 
 
 # Plot Moving Window Results ----------------------------------------------
@@ -986,6 +1205,35 @@ win_rl_to_plot_dat <- function(win_1, win_2, win_3){
 }
 
 
+# Function to create dataset for plotting, given...  (useful for RLs with no CI)
+#   par_krig_22, par_krig_52, krig_fit: the parameter matrices for each window
+#  Note: this does not have CIs, just RLs
+pars_to_plot_dat <- function(par_krig_22, par_krig_52, krig_fit){
+  mat_25 <- rbind(pars_to_rl(par_krig_22, 25)/254,
+                  pars_to_rl(par_krig_52, 25)/254,
+                  pars_to_rl(krig_fit, 25)/254)
+  mat_100 <-rbind(pars_to_rl(par_krig_22, 100)/254,
+                  pars_to_rl(par_krig_52, 100)/254,
+                  pars_to_rl(krig_fit, 100)/254)
+  mat_500 <-rbind(pars_to_rl(par_krig_22, 500)/254,
+                  pars_to_rl(par_krig_52, 500)/254,
+                  pars_to_rl(krig_fit, 500)/254)
+  colnames(mat_25) <- colnames(mat_100) <- colnames(mat_500) <- c("Reg1", "Reg2", "Reg3")
+  reg <- list()
+  for(i in 1:dim(mat_25)[1]){ #i.e. 1:3
+    dat_25 <- mat_25[, i]
+    dat_100 <- mat_100[, i]
+    dat_500 <- mat_500[, i]
+    dat <- cbind(dat_25, dat_100, dat_500)
+    colnames(dat) <- c("RL_25", "RL_100", "RL_500")
+    reg[[i]] <- as.data.frame(dat)
+  }
+  return(reg)
+}
+
+
+
+
 ### Fitting to Model 1 ###
 car_rl_25_22  <- rl_with_ci(par_22, car_varcov_22, 25, "ci")/254
 car_rl_100_22 <- rl_with_ci(par_22, car_varcov_22, 100, "ci")/254
@@ -1033,6 +1281,38 @@ ggplot(data=reg3, aes(x=c(1960, 1990, 2020))) +
   geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), linetype=2, alpha=0.07, fill="blue") +
   geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), linetype=2, alpha=0.15, fill="green") +
   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 1 - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+
+### Fitting to Model 2 ###
+krig_plot_dat <- pars_to_plot_dat(par_krig_22, par_krig_52, krig_fit)
+reg1_krig <- krig_plot_dat[[1]] # Region 1 data frame for plotting
+reg2_krig <- krig_plot_dat[[2]] 
+reg3_krig <- krig_plot_dat[[3]] 
+
+## Plotting - no CIs
+ggplot(data=reg1_krig, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ 
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + 
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 2 - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg2_krig, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ 
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + 
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 2 - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
+
+ggplot(data=reg3_krig, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(5, 35)) +
+  geom_line(aes(y=RL_500, color="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) +
+  geom_line(aes(y=RL_100, color="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ 
+  geom_line(aes(y=RL_25, color="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + 
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Model 2 - Region 3") +
   scale_colour_manual(name = "Return Period", values = c('500-Year' = "red", '100-Year' = "blue", '25-Year' = "green"))
 
 
@@ -1155,6 +1435,14 @@ ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) +
 # saveRDS(consol_varcov_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_varcov_52.rds")
 
 ### Fits from kriging model
+# saveRDS(krig_regs_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_22.rds")
+# saveRDS(krig_regs_rate_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_rate_22.rds")
+# saveRDS(krig_regs_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_52.rds")
+# saveRDS(krig_regs_rate_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_rate_52.rds")
+# saveRDS(par_krig_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_krig_22.rds")
+# saveRDS(par_krig_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_krig_52.rds")
+
+
 
 
 # Extra Code - Finding CIs ------------------------------------------------------------------------
