@@ -144,6 +144,11 @@ plot(ws_regs, main = "3-mile grid")
 plot(grid3m, pch = ".", add = T)
 plot(pred_at_stat, pch = "•", add = T)
 
+# saveRDS(grid3m, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/grid3m.rds")
+plot(ws_regs, main = "3-mile grid")
+plot(grid3m, pch = "+", add = T, cex = 0.7)
+plot(pred_at_stat, pch = "•", col = "blue", add = T)
+
 pred <- predict(r.cv.fit, newdata = grid3m, nsim = 1)
 
 spplot(pred) 
