@@ -1442,6 +1442,8 @@ ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) +
 # saveRDS(par_krig_22, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_krig_22.rds")
 # saveRDS(par_krig_52, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_krig_52.rds")
 
+### Just in case
+# saveRDS(test_dat, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/test_dat.rds")
 
 
 
