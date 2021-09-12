@@ -84,11 +84,11 @@ hist(model.sc$residuals)
 qqnorm(model.sc$residuals)
 
 # # scale - Issue, can't take log of negative numbers, so taking log of residuals won't work. Use log of scale parameters, then find residuals
-# model.sc <- lm(scale ~ REGION - 1, data = stations_regs_cat)
+model.scale <- lm(scale ~ REGION - 1, data = stations_regs_cat)
 # summary(model.sc)
-# scale.means <- c(summary(model.sc)$coef[1],
-#                  summary(model.sc)$coef[2],
-#                  summary(model.sc)$coef[3])
+scale.means <- c(summary(model.scale)$coef[1],
+                 summary(model.scale)$coef[2],
+                 summary(model.scale)$coef[3])
 # plot(model.sc$residuals)
 # hist(model.sc$residuals)
 # hist(log(model.sc$residuals))
@@ -100,6 +100,21 @@ stations_resids_df <- stations_regs_cat %>% mutate(ln.scale.resid = model.sc$res
 stations_resids <- project_data(stations_resids_df)
 
 
+# Testing the means
+region1_test <- stations_regs %>% filter(REGION == 1)
+region2_test <- stations_regs %>% filter(REGION == 2)
+region3_test <- stations_regs %>% filter(REGION == 3)
+
+mean(region1_test$scale)
+
+scale.means
+exp(ln.scale.means)
+exp(mean(log(region1_test$scale))) * (1 + var(log(region1_test$scale))/2)
+exp(mean(log(region2_test$scale))) * (1 + var(log(region2_test$scale))/2)
+exp(mean(log(region3_test$scale))) * (1 + var(log(region3_test$scale))/2)
+
+# same as exp(ln.scale.means)
+exp(mean(log(region1_test$scale))); exp(mean(log(region2_test$scale))); exp(mean(log(region3_test$scale)))
 
 # Step 2 ------------------------------------------------------------------
 # Perform variogram modeling and spatial simulations on the residuals. Add back in the means afterwards
@@ -125,13 +140,14 @@ r.cv.fit$set=list(nocheck=1)
 r.cv.fit1$set=list(nocheck=1)
 pred1 <- predict(r.cv.fit1, newdata = stations_sub, nsim = 1)
 pred_at_stat <- predict(r.cv.fit, newdata = stations_sub, nsim = 1)
-# Because of kriging structure, we are going to get very precise (the same vlaues we already have) unless we move to new points/grid/area
+# Because of kriging structure, we are going to get very precise (the same values we already have) unless we move to new points/grid/area
 
 ### create a grid (of points)
-grid <- sp::makegrid(ws_regs, cellsize = 20000) # cellsize in map units
+grid <- sp::makegrid(ws_regs, cellsize = 10000) # cellsize in map units
 grid <- SpatialPoints(grid, proj4string = CRS(proj4string(ws_regs)))
 grid <- grid[ws_regs, ] # grid points only within the polygon
 plot(ws_regs)
+plot(grid, pch = "+", add = T, cex = 0.7)
 plot(grid, pch = ".", add = T)
 plot(pred_at_stat, pch = "•", add = T)
 # gridded(grid) = TRUE # turn into spatial pixels data frame
@@ -145,7 +161,7 @@ plot(grid3m, pch = ".", add = T)
 plot(pred_at_stat, pch = "•", add = T)
 
 # saveRDS(grid3m, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/grid3m.rds")
-plot(ws_regs, main = "3-mile grid")
+plot(ws_regs, main = "3-Mile Grid for Simulations")
 plot(grid3m, pch = "+", add = T, cex = 0.7)
 plot(pred_at_stat, pch = "•", col = "blue", add = T)
 
@@ -189,10 +205,85 @@ for (i in 1:length(shape.resid)){
 # range(stations_sub_df$scale)
 # range(stations_sub_df$shape)
 
+# saveRDS(grid_regs_df, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/grid_regs_df.rds")
 
+
+### Testing the means and variances
+region1_df <- grid_regs_df %>% filter(REGION == 1)
+region2_df <- grid_regs_df %>% filter(REGION == 2)
+region3_df <- grid_regs_df %>% filter(REGION == 3)
+
+mean(region1_test$scale)
+summary(region1_df$ln.scale.resid.sim1); range(region1_df$ln.scale.resid.sim1)[2] - range(region1_df$ln.scale.resid.sim1)[1]
+summary(region2_df$ln.scale.resid.sim1); range(region2_df$ln.scale.resid.sim1)[2] - range(region2_df$ln.scale.resid.sim1)[1]
+summary(region3_df$ln.scale.resid.sim1); range(region3_df$ln.scale.resid.sim1)[2] - range(region3_df$ln.scale.resid.sim1)[1]
+
+var(region1_df$ln.scale.resid.sim1)
+var(region2_df$ln.scale.resid.sim1)
+var(region3_df$ln.scale.resid.sim1)
+
+scale.means
+exp(ln.scale.means)
+exp(mean(log(region1_test$scale))) * (1 + var(log(region1_test$scale))/2)
+exp(mean(log(region2_test$scale))) * (1 + var(log(region2_test$scale))/2)
+exp(mean(log(region3_test$scale))) * (1 + var(log(region3_test$scale))/2)
+
+exp(mean(log(region1_test$scale)))
+
+## Testing different variances for transformation
+scale.var.real <- NULL
+for (i in 1:length(ln.scale.resid)){
+  # value = residual + mean of region of station (index i)
+  reg <- grid_regs_df$REGION[i]
+  if(reg==1){
+    var.ln.sc = var(log(region1_test$scale))
+  }else if(reg==2){
+    var.ln.sc = var(log(region2_test$scale))
+  }else if(reg==3){
+    var.ln.sc = var(log(region3_test$scale))
+  }
+  scale.var.real[i] <- exp( ln.scale.resid[i] + ln.scale.means[grid_regs_df$REGION[i]] ) * (1 + var.ln.sc/2)
+}
+
+scale.var.resid <- NULL
+for (i in 1:length(ln.scale.resid)){
+  # value = residual + mean of region of station (index i)
+  reg <- grid_regs_df$REGION[i]
+  if(reg==1){
+    var.ln.sc = var(region1_df$ln.scale.resid.sim1)
+  }else if(reg==2){
+    var.ln.sc = var(region2_df$ln.scale.resid.sim1)
+  }else if(reg==3){
+    var.ln.sc = var(region3_df$ln.scale.resid.sim1)
+  }
+  scale.var.resid[i] <- exp( ln.scale.resid[i] + ln.scale.means[grid_regs_df$REGION[i]] ) * (1 + var.ln.sc/2)
+}
+
+compare <- cbind(scale, scale.var.real, scale.var.resid)
+
+ind_reg1 <- which(grid_regs_df$REGION==1)
+ind_reg2 <- which(grid_regs_df$REGION==2)
+ind_reg3 <- which(grid_regs_df$REGION==3)
+apply(compare[ind_reg1, ], 2, mean)
+apply(compare[ind_reg2, ], 2, mean)
+apply(compare[ind_reg3, ], 2, mean)
+
+
+
+### Holding the parameters constant within regions
+constant_scale <- constant_shape <- NULL
+round.scale.means <- round(scale.means, 2)
+round.shape.means <- round(shape.means, 4)
+for (i in 1:length(shape.resid)){
+  # value = residual + mean of region of station (index i)
+  constant_scale[i] <- round.scale.means[grid_regs_df$REGION[i]]
+  constant_shape[i] <- round.shape.means[grid_regs_df$REGION[i]]
+}
+
+compare2 <- cbind(grid_regs_df, constant_scale, constant_shape)
 
 # Step 3 ------------------------------------------------------------------
-# Step 3: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transorm scale back using exp())
+# Step 3: use the extRemes::revd fn to simulate daily rainfall data using the parameters given (be sure to transform scale back using exp())
 # NOTE: No input for rate here. Will outputs be all above the threshold? Yes.
 #       Will need to correct for this, by only generating as many observations as rate entails
 
@@ -235,15 +326,17 @@ test_sim_data <- sim_data
 # saveRDS(test_sim_data, file = "test_sim_data.rds") # example using 3-mile grid and constant rate
 
 
+
+## Updated to use constant shape and scale by region!
 simulate_data <- function(nsim){  # , scale, shape, rate
   # only generate as many as I need instad of randomly subsetting!
   # just use a constant rate,  0.0544
   sim_dat_list <- list()
   ngen <- round(14610 * rate)
   for (j in 1:nsim){
-    sim_data <- matrix(nrow = 14610, ncol = length(scale))
-    for(i in 1:length(scale)){
-      sub_dat <- extRemes::revd(n = ngen, type = "GP", scale = scale[i], shape = shape[i], threshold = 253) # only generate as much data as rate says
+    sim_data <- matrix(nrow = 14610, ncol = length(constant_scale))
+    for(i in 1:length(constant_scale)){
+      sub_dat <- extRemes::revd(n = ngen, type = "GP", scale = constant_scale[i], shape = constant_shape[i], threshold = 253) # only generate as much data as rate says
       new_dat <- c(sub_dat, rep(0, 14610-ngen)) # appending on zeros for the rest of the data
       sim_data[, i] <- new_dat
     }
@@ -259,5 +352,5 @@ simulate_data <- function(nsim){  # , scale, shape, rate
 }
 
 ptm <- proc.time()
-test_sims <- simulate_data(nsim = 100)
+test_sims_constant <- simulate_data(nsim = 50)
 proc.time() - ptm
