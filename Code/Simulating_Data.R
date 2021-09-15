@@ -354,3 +354,121 @@ simulate_data <- function(nsim){  # , scale, shape, rate
 ptm <- proc.time()
 test_sims_constant <- simulate_data(nsim = 50)
 proc.time() - ptm
+
+# setwd("~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data")
+# saveRDS(test_sims_constant, file = "test_sims_constant.rds")
+# saveRDS(test_sims_constant, file = "~/Documents/HCFCD Watershed Data/test_sims_constant.rds")
+
+
+
+# Step 4 ------------------------------------------------------------------
+# Ordering the data in a way that makes evaualtion on Model 3 (Regional Max) possible
+
+# Structure of rainfall data is:
+# - 314 columns are the 314 grid points we are simulating to
+# - 14610 rows are the 40 years of data simulated for each station/point
+# - Only 795 of these rows have non-zero values - we will only work with these
+# - grid_regs_df gives the coordinates and Region for each station/point
+
+## Idea: to time-reference, rank each observation within a station (column) from least to greatest
+# To avoid a correlation of 1 between all stations rankings, 
+#   we add a random uniform from 0-10 to each ranking and re-rank off of this.
+# We will use these rankings to re-order the rainfall values within each station (column)
+
+# This makes it so that days with less rainfall for one station means it is more likely for the 
+#   other stations to have less rainfall as well. However, we avoid the perfect correlation (1)
+#   of the ranking of the rainfall values by adding the random noise in rank
+
+# Note: this re-ordering does not change the rainfall values used, 
+#       so the PARE and Block Kriging fits are the same evaluated on this data as it would be on the data before it was re-ordered
+
+
+practice_dat <- test_sims_constant[[1]]
+
+# first, subset to only the first 795 values
+sub_dat <- practice_dat[1:795,]
+rank_mat <- new_rank_mat <- order_dat <- matrix(NA, nrow = nrow(sub_dat), ncol = ncol(sub_dat))
+# first ranking
+for(i in 1:ncol(sub_dat)){
+  rank_mat[, i] <- rank(sub_dat[, i], ties.method = "random")
+}
+# add in noise
+noise_mat <- matrix(data = runif(n = nrow(sub_dat)*ncol(sub_dat), min = 0, max = 10), 
+                    nrow = nrow(sub_dat), ncol = ncol(sub_dat))
+rank_mat <- rank_mat + noise_mat
+# re-rank
+for(i in 1:ncol(sub_dat)){
+  new_rank_mat[, i] <- rank(rank_mat[, i], ties.method = "random")
+}
+# re-order data
+# for(i in 1:ncol(sub_dat)){
+### This way incorrect!!!!!
+#   order_dat[, i] <- sub_dat[new_rank_mat[, i], i]
+#   # for example, new_rank_mat[, i] is 188, 102, 556,...
+#   # this will take the data from the 188th row of sub_dat and set it as the 1st observation in order_dat
+#   # Instead, what we want to do is take the 1st row of sub_dat and assign it to the 188th row of order_dat
+# }
+for(i in 1:ncol(sub_dat)){
+  order_dat[new_rank_mat[, i], i] <- sub_dat[, i] 
+  # for example, new_rank_mat[, i] is 188, 102, 556,...
+  # this takes the 1st row of sub_dat and assigns it to the 188th row of order_dat
+}
+
+# be sure to "add" back in the zeroes on the end to get back to 14610
+new_dat <- rbind(order_dat, matrix(data = 0, nrow = 14610-nrow(order_dat), ncol = ncol(order_dat))) # appending on zeros for the rest of the data
+
+
+# Testing functions
+rank(sub_dat[,1])
+dplyr::row_number(sub_dat[,1])
+runif(n=10, min=0, max=10)
+matrix(data = 0, nrow = 3, ncol = 3)
+
+# "Instead, what we want to do is take the 1st row of sub_dat and assign it to the 188th row of order_dat"
+test_vec <- NULL
+test_vec[c(4,3,5,2,1)] <- c(1,2,3,4,5)  # The value of 1 goes in the 4th position; the value of 4 goes in the 2nd position
+test_vec
+
+
+
+# Function to reorder simulated data so Model 3 (Regional Max) can be run, given...
+#   sim_data_list: list of matrices of simulated rainfall data (each column is the data for a location on the grid)
+reorder_sim_data <- function(sim_data_list){
+  reordered_sim_data_list <- list()
+  
+  for(j in 1:length(sim_data_list)){
+    # load data for jth item in list
+      practice_dat <- sim_data_list[[j]]
+    # first, subset to only the first 795 values (those with nonzero values)
+      sub_dat <- practice_dat[1:795,]
+      rank_mat <- new_rank_mat <- order_dat <- matrix(NA, nrow = nrow(sub_dat), ncol = ncol(sub_dat))
+    # first ranking
+      for(i in 1:ncol(sub_dat)){
+        rank_mat[, i] <- rank(sub_dat[, i], ties.method = "random")
+      }
+    # add in noise
+      noise_mat <- matrix(data = runif(n = nrow(sub_dat)*ncol(sub_dat), min = 0, max = 10), 
+                          nrow = nrow(sub_dat), ncol = ncol(sub_dat))
+      rank_mat <- rank_mat + noise_mat
+    # re-rank
+      for(i in 1:ncol(sub_dat)){
+        new_rank_mat[, i] <- rank(rank_mat[, i], ties.method = "random")
+      }
+    # re-order data
+      for(i in 1:ncol(sub_dat)){
+        order_dat[new_rank_mat[, i], i] <- sub_dat[, i] 
+      }
+    # appending on zeros for the rest of the data to get back to 14610
+      new_dat <- rbind(order_dat, matrix(data = 0, nrow = 14610-nrow(order_dat), ncol = ncol(order_dat)))
+    # saving re-ordered data to a list
+      reordered_sim_data_list[[j]] <- new_dat
+  }
+  return(reordered_sim_data_list)
+}
+
+
+test_sims_constant_ordered <- reorder_sim_data(test_sims_constant)
+
+# saveRDS(test_sims_constant_ordered, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/test_sims_constant_ordered.rds")
+
+
