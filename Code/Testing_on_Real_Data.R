@@ -290,7 +290,7 @@ krig_regs_timetest <- predict(cv.fit, newdata = ws_regs)
 (timer_krig_to_pol <- proc.time() - ptm)
 
 
-krig_points <- predict(cv.fit, newdata = stations_sub)
+# krig_points <- predict(cv.fit, newdata = stations_sub)
 
 ### create a grid (of points)
 # library(raster)
@@ -1180,6 +1180,20 @@ par_consol_22
 get_se_consol(consol_varcov_22)
 par_consol_52
 get_se_consol(consol_varcov_52)
+
+# To get SE for rate
+fitreg1_22$rate; fitreg2_22$rate; fitreg3_22$rate
+fitreg1_22$n; fitreg2_22$n; fitreg3_22$n
+sqrt(fitreg1_22$rate*(1-fitreg1_22$rate)/fitreg1_22$n)
+sqrt(fitreg2_22$rate*(1-fitreg2_22$rate)/fitreg2_22$n)
+sqrt(fitreg3_22$rate*(1-fitreg3_22$rate)/fitreg3_22$n)
+
+fitreg1_52$rate; fitreg2_52$rate; fitreg3_52$rate
+fitreg1_52$n; fitreg2_52$n; fitreg3_52$n
+sqrt(fitreg1_52$rate*(1-fitreg1_52$rate)/fitreg1_52$n)
+sqrt(fitreg2_52$rate*(1-fitreg2_52$rate)/fitreg2_52$n)
+sqrt(fitreg3_52$rate*(1-fitreg3_52$rate)/fitreg3_52$n)
+
 
 
 # Plot Moving Window Results ----------------------------------------------
