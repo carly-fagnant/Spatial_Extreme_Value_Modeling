@@ -247,6 +247,20 @@ get_par_car_sim <- function(ln.scale.fit, shape.fit){   # }, rate_sim){
 par_car_sim <- get_par_car_sim(car_ln.scale_sim, car_shape_sim)
 par_krig_sim <- get_par_krig_sim(krig_regs_sim)
 
+# Function to get parameter estimate matrix from consolidated data fits, given...
+#   fitreg1: GPD fit object for Region 1
+#   fitreg2: GPD fit object for Region 2
+#   fitreg3: GPD fit object for Region 3
+###   rate_sim: constant rate set by simulation (0.05441478)
+get_par_consol_sim <- function(fitreg1, fitreg2, fitreg3){
+  consol_fit <- rbind(c(fitreg1$results$par[1], fitreg2$results$par[1], fitreg3$results$par[1]), # scale
+                      c(fitreg1$results$par[2], fitreg2$results$par[2], fitreg3$results$par[2])) # shape
+                      # , c(fitreg1$rate, fitreg2$rate, fitreg3$rate)) # rate
+  rownames(consol_fit) <- c("scale", "shape") #, "rate")
+  colnames(consol_fit) <- c("Reg1", "Reg2", "Reg3")
+  return(consol_fit)
+}
+
 
 # Function to generate a list of varcov matrices for each region, given...
 #   ln.scale.fit: the CAR fit object for ln.scale
@@ -461,6 +475,10 @@ proc.time() - ptm
 # saveRDS(round.shape.means, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/true_shape.rds")
 # saveRDS(par_car_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_car_sim_list_50.rds")
 # saveRDS(par_krig_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_krig_sim_list_50.rds")
+# saveRDS(car_ln.scale_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_ln.scale_sim_list_50.rds")
+# saveRDS(car_shape_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_shape_sim_list_50.rds")
+# saveRDS(krig_regs_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/krig_regs_sim_list_50.rds")
+
 
 
 
@@ -470,6 +488,12 @@ mse <- function(data, truth){
   return(out)
 }
 
+### Function to calculate RMSE
+rmse <- function(data, truth){
+  out = mse(data, truth)
+  return(sqrt(out))
+}
+
 ### Function to calculate MAE
 mae <- function(data, truth){
   out = mean(abs(data-truth))
@@ -477,30 +501,38 @@ mae <- function(data, truth){
 }
 
 mse(c(4,2,4,5,4), 4)
+rmse(c(4,2,4,5,4), 4)
 mae(c(4,2,4,5,4), 4)
 
 ### Function to create simulation output table
 
-create_sim_table_scale <- function(par_car_sim_list, par_krig_sim_list, length){
+create_sim_table_scale <- function(par_car_sim_list, par_krig_sim_list, par_consol_sim_list, length){
   car_reg1 <- car_reg2 <- car_reg3 <- NULL
   krig_reg1 <- krig_reg2 <- krig_reg3 <- NULL
+  consol_reg1 <- consol_reg2 <- consol_reg3 <- NULL
   for (i in 1:length){
-    car_reg1 <- par_car_sim_list[[i]][1,1]
-    car_reg2 <- par_car_sim_list[[i]][1,2]
-    car_reg3 <- par_car_sim_list[[i]][1,3]
-    krig_reg1 <- par_krig_sim_list[[i]][1,1]
-    krig_reg2 <- par_krig_sim_list[[i]][1,2]
-    krig_reg3 <- par_krig_sim_list[[i]][1,3]
+    car_reg1[i] <- par_car_sim_list[[i]][1,1]
+    car_reg2[i] <- par_car_sim_list[[i]][1,2]
+    car_reg3[i] <- par_car_sim_list[[i]][1,3]
+    krig_reg1[i] <- par_krig_sim_list[[i]][1,1]
+    krig_reg2[i] <- par_krig_sim_list[[i]][1,2]
+    krig_reg3[i] <- par_krig_sim_list[[i]][1,3]
+    consol_reg1[i] <- par_consol_sim_list[[i]][1,1]
+    consol_reg2[i] <- par_consol_sim_list[[i]][1,2]
+    consol_reg3[i] <- par_consol_sim_list[[i]][1,3]
   }
   # plus the truth as the first column
-  scale_car <- rbind( c(round.scale.means[1], mean(car_reg1), mse(car_reg1, round.scale.means[1]), mae(car_reg1, round.scale.means[1])),
-                      c(round.scale.means[2], mean(car_reg2), mse(car_reg2, round.scale.means[2]), mae(car_reg2, round.scale.means[2])),
-                      c(round.scale.means[3], mean(car_reg3), mse(car_reg3, round.scale.means[3]), mae(car_reg3, round.scale.means[3])) )
-  scale_krig <- rbind(c(mean(krig_reg1), mse(krig_reg1, round.scale.means[1]), mae(krig_reg1, round.scale.means[1])),
-                      c(mean(krig_reg2), mse(krig_reg2, round.scale.means[2]), mae(krig_reg2, round.scale.means[2])),
-                      c(mean(krig_reg3), mse(krig_reg3, round.scale.means[3]), mae(krig_reg3, round.scale.means[3])) )
-  scale_out <- cbind(scale_car, scale_krig)
-  colnames(scale_out) <- c("Truth", rep(c("Mean", "MSE", "MAE"), 2))
+  scale_car <- rbind( c(round.scale.means[1], mean(car_reg1), rmse(car_reg1, round.scale.means[1]), mae(car_reg1, round.scale.means[1])),
+                      c(round.scale.means[2], mean(car_reg2), rmse(car_reg2, round.scale.means[2]), mae(car_reg2, round.scale.means[2])),
+                      c(round.scale.means[3], mean(car_reg3), rmse(car_reg3, round.scale.means[3]), mae(car_reg3, round.scale.means[3])) )
+  scale_krig <- rbind(c(mean(krig_reg1), rmse(krig_reg1, round.scale.means[1]), mae(krig_reg1, round.scale.means[1])),
+                      c(mean(krig_reg2), rmse(krig_reg2, round.scale.means[2]), mae(krig_reg2, round.scale.means[2])),
+                      c(mean(krig_reg3), rmse(krig_reg3, round.scale.means[3]), mae(krig_reg3, round.scale.means[3])) )
+  scale_consol <- rbind( c(mean(consol_reg1), rmse(consol_reg1, round.scale.means[1]), mae(consol_reg1, round.scale.means[1])),
+                         c(mean(consol_reg2), rmse(consol_reg2, round.scale.means[2]), mae(consol_reg2, round.scale.means[2])),
+                         c(mean(consol_reg3), rmse(consol_reg3, round.scale.means[3]), mae(consol_reg3, round.scale.means[3])) )
+  scale_out <- cbind(scale_car, scale_krig, scale_consol)
+  colnames(scale_out) <- c("Truth", rep(c("Mean", "RMSE", "MAE"), 3))
   rownames(scale_out) <- c("Reg1", "Reg2", "Reg3")
   return(scale_out)
 }
@@ -510,34 +542,183 @@ round.scale.means
 round.shape.means
 
 # Shape
-create_sim_table_shape <- function(par_car_sim_list, par_krig_sim_list, length){
+create_sim_table_shape <- function(par_car_sim_list, par_krig_sim_list, par_consol_sim_list, length){
   car_reg1 <- car_reg2 <- car_reg3 <- NULL
   krig_reg1 <- krig_reg2 <- krig_reg3 <- NULL
+  consol_reg1 <- consol_reg2 <- consol_reg3 <- NULL
   for (i in 1:length){
-    car_reg1 <- par_car_sim_list[[i]][2,1]
-    car_reg2 <- par_car_sim_list[[i]][2,2]
-    car_reg3 <- par_car_sim_list[[i]][2,3]
-    krig_reg1 <- par_krig_sim_list[[i]][2,1]
-    krig_reg2 <- par_krig_sim_list[[i]][2,2]
-    krig_reg3 <- par_krig_sim_list[[i]][2,3]
+    car_reg1[i] <- par_car_sim_list[[i]][2,1]
+    car_reg2[i] <- par_car_sim_list[[i]][2,2]
+    car_reg3[i] <- par_car_sim_list[[i]][2,3]
+    krig_reg1[i] <- par_krig_sim_list[[i]][2,1]
+    krig_reg2[i] <- par_krig_sim_list[[i]][2,2]
+    krig_reg3[i] <- par_krig_sim_list[[i]][2,3]
+    consol_reg1[i] <- par_consol_sim_list[[i]][2,1]
+    consol_reg2[i] <- par_consol_sim_list[[i]][2,2]
+    consol_reg3[i] <- par_consol_sim_list[[i]][2,3]
   }
   # plus the truth as the first column
-  shape_car <- rbind( c(round.shape.means[1], mean(car_reg1), mse(car_reg1, round.shape.means[1]), mae(car_reg1, round.shape.means[1])),
-                      c(round.shape.means[2], mean(car_reg2), mse(car_reg2, round.shape.means[2]), mae(car_reg2, round.shape.means[2])),
-                      c(round.shape.means[3], mean(car_reg3), mse(car_reg3, round.shape.means[3]), mae(car_reg3, round.shape.means[3])) )
-  shape_krig <- rbind(c(mean(krig_reg1), mse(krig_reg1, round.shape.means[1]), mae(krig_reg1, round.shape.means[1])),
-                      c(mean(krig_reg2), mse(krig_reg2, round.shape.means[2]), mae(krig_reg2, round.shape.means[2])),
-                      c(mean(krig_reg3), mse(krig_reg3, round.shape.means[3]), mae(krig_reg3, round.shape.means[3])) )
-  shape_out <- cbind(shape_car, shape_krig)
-  colnames(shape_out) <- c("Truth", rep(c("Mean", "MSE", "MAE"), 2))
+  shape_car <- rbind( c(round.shape.means[1], mean(car_reg1), rmse(car_reg1, round.shape.means[1]), mae(car_reg1, round.shape.means[1])),
+                      c(round.shape.means[2], mean(car_reg2), rmse(car_reg2, round.shape.means[2]), mae(car_reg2, round.shape.means[2])),
+                      c(round.shape.means[3], mean(car_reg3), rmse(car_reg3, round.shape.means[3]), mae(car_reg3, round.shape.means[3])) )
+  shape_krig <- rbind(c(mean(krig_reg1), rmse(krig_reg1, round.shape.means[1]), mae(krig_reg1, round.shape.means[1])),
+                      c(mean(krig_reg2), rmse(krig_reg2, round.shape.means[2]), mae(krig_reg2, round.shape.means[2])),
+                      c(mean(krig_reg3), rmse(krig_reg3, round.shape.means[3]), mae(krig_reg3, round.shape.means[3])) )
+  shape_consol <- rbind( c(mean(consol_reg1), rmse(consol_reg1, round.shape.means[1]), mae(consol_reg1, round.shape.means[1])),
+                         c(mean(consol_reg2), rmse(consol_reg2, round.shape.means[2]), mae(consol_reg2, round.shape.means[2])),
+                         c(mean(consol_reg3), rmse(consol_reg3, round.shape.means[3]), mae(consol_reg3, round.shape.means[3])) )
+  shape_out <- cbind(shape_car, shape_krig, shape_consol)
+  colnames(shape_out) <- c("Truth", rep(c("Mean", "RMSE", "MAE"), 3))
   rownames(shape_out) <- c("Reg1", "Reg2", "Reg3")
   return(shape_out)
 }
 
-sim_scale_table_10 <- create_sim_table_scale(par_car_sim_list, par_krig_sim_list, length=10)
-sim_shape_table_10 <- create_sim_table_shape(par_car_sim_list, par_krig_sim_list, length=10)
-sim_scale_table <- create_sim_table_scale(par_car_sim_list, par_krig_sim_list, length=50)
-sim_shape_table <- create_sim_table_shape(par_car_sim_list, par_krig_sim_list, length=50)
+# sim_scale_table_10 <- create_sim_table_scale(par_car_sim_list, par_krig_sim_list, length=10)
+# sim_shape_table_10 <- create_sim_table_shape(par_car_sim_list, par_krig_sim_list, length=10)
+# sim_scale_table <- create_sim_table_scale(par_car_sim_list, par_krig_sim_list, length=50)
+# sim_shape_table <- create_sim_table_shape(par_car_sim_list, par_krig_sim_list, length=50)
+
+sim_scale_table <- create_sim_table_scale(par_car_sim_list, par_krig_sim_list, par_consol_sim_list, length=50)
+sim_shape_table <- create_sim_table_shape(par_car_sim_list, par_krig_sim_list, par_consol_sim_list, length=50)
+
 
 # saveRDS(sim_scale_table, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/sim_scale_table.rds")
 # saveRDS(sim_shape_table, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/sim_shape_table.rds")
+
+
+
+# Model 3 -----------------------------------------------------------------
+
+
+
+# #### Code from Karen Yuan
+# ## Finding intersection of points and regions
+# # sp::over will let us get what region each station falls within (or NA if none) in order of the 601 stations
+# region_intersect <- sp::over(station_info, regions)
+# class(region_intersect$REGION)
+# 
+# ## Aggregate station info into data by each region
+# #create function that will retrieve relevant stations' columns for subsetting purposes, given a region
+# num_stations <- 601
+# get_columns_index <- function(intersect_vector, region) {
+#   stations <- seq(1, num_stations, 1)[intersect_vector == region] #get station number for those in "region", there will be NA's
+#   col_nums <- stations[!is.na(stations)] + 1 #add 1 to column indices since column 1 is Date
+#   col_nums <- c(1, col_nums) #include Date column
+#   return(col_nums)
+# }
+# #make 6 subsets of the data to easily collect a max value from each date for each region subset (region1_alt technically a duplicate)
+# rain_region1 <- rain_data[, get_columns_index(region_intersect, 1)]
+# rain_region2 <- rain_data[, get_columns_index(region_intersect, 2)]
+# rain_region3 <- rain_data[, get_columns_index(region_intersect, 3)]
+# rain_region1_alt <- rain_data[, get_columns_index(region_intersect_alt, 1)]
+# rain_region2_alt <- rain_data[, get_columns_index(region_intersect_alt, 2)]
+# rain_region3_alt <- rain_data[, get_columns_index(region_intersect_alt, 3)]
+# 
+# ## Populate consolidated time series
+# #create final data frame to populate
+# max_precip_regions <- data.frame(matrix(ncol=7, nrow=nrow(rain_data)))
+# colnames(max_precip_regions) <- c("Date", "region1", "region2", "region3", "region1_alt", "region2_alt", "region3_alt")
+# max_precip_regions$Date <- rain_data$Date
+# 
+# #create function that will take in a row from each region subset and find the max value
+# get_max_value <- function(values_vector) {
+#   if (all(is.na(values_vector))) {
+#     return(NA)
+#   }
+#   else {
+#     return(max(values_vector, na.rm=TRUE))
+#   }
+# }
+# #loop through every date in the data set and get the max value for each region subset for that day
+# for (i in 1:nrow(rain_data)) {
+#   max_precip_regions$region1[i] <- get_max_value(rain_region1[i, -1]) 
+#   max_precip_regions$region2[i] <- get_max_value(rain_region2[i, -1]) 
+#   max_precip_regions$region3[i] <- get_max_value(rain_region3[i, -1]) 
+#   max_precip_regions$region1_alt[i] <- get_max_value(rain_region1_alt[i, -1]) 
+#   max_precip_regions$region2_alt[i] <- get_max_value(rain_region2_alt[i, -1]) 
+#   max_precip_regions$region3_alt[i] <- get_max_value(rain_region3_alt[i, -1]) 
+# }
+
+
+
+#### Fitting Model 3 (Regional Max)
+
+# Edit code below to run Model 3
+
+get_columns_index <- function(grid_regs_df, region) {
+  col_nums <- which(grid_regs_df$REGION == region)
+  return(col_nums)
+}
+# These are the column indicies of which stations are in each region
+reg1_col <- get_columns_index(grid_regs_df, 1)
+reg2_col <- get_columns_index(grid_regs_df, 2)
+reg3_col <- get_columns_index(grid_regs_df, 3)
+# Run this once before looping beacuse it will be the same for all
+
+#create function that will take in a row from each region subset and find the max value
+get_max_value <- function(values_vector) {
+  if (all(is.na(values_vector))) {
+    return(NA)
+  }
+  else {
+    return(max(values_vector, na.rm=TRUE))
+  }
+}
+
+
+### create lists ONLY IF you have not already saved some data to it
+consol_data_sim_list <- list()
+fitreg1_sim_list <- list()
+fitreg2_sim_list <- list()
+fitreg3_sim_list <- list()
+par_consol_sim_list <- list()
+
+### Set up in a loop - change indicies as needed
+ptm <- proc.time()
+for (i in 31:50){
+  ### Model 3
+  data_i <- test_sims_constant_ordered[[i]]
+  rain_reg1 <- data_i[, reg1_col]
+  rain_reg2 <- data_i[, reg2_col]
+  rain_reg3 <- data_i[, reg3_col]
+  
+  consol_data_sim_i <- data.frame(matrix(ncol=3, nrow=nrow(data_i)))
+  colnames(consol_data_sim_i) <- c("region1", "region2", "region3")
+  # max_precip_regions <- data.frame(matrix(ncol=3, nrow=nrow(data_i)))
+  # colnames(max_precip_regions) <- c("region1", "region2", "region3")
+  
+  #loop through every date in the data set and get the max value for each region subset for that day
+  for (j in 1:nrow(data_i)) {
+    consol_data_sim_i$region1[j] <- get_max_value(rain_reg1[j, ]) 
+    consol_data_sim_i$region2[j] <- get_max_value(rain_reg2[j, ]) 
+    consol_data_sim_i$region3[j] <- get_max_value(rain_reg3[j, ]) 
+  }
+  
+  fitreg1_sim_i <- extRemes::fevd(consol_data_sim_i$region1, threshold=thresh, type="GP", method="MLE")
+  fitreg2_sim_i <- extRemes::fevd(consol_data_sim_i$region2, threshold=thresh, type="GP", method="MLE")
+  fitreg3_sim_i <- extRemes::fevd(consol_data_sim_i$region3, threshold=thresh, type="GP", method="MLE")
+  
+  ## Calculating parameters
+  par_consol_sim_i <- get_par_consol_sim(fitreg1_sim_i, fitreg2_sim_i, fitreg3_sim_i)
+  
+  ## Saving fits to list
+  consol_data_sim_list[[i]] <- consol_data_sim_i
+  fitreg1_sim_list[[i]] <- fitreg1_sim_i
+  fitreg2_sim_list[[i]] <- fitreg2_sim_i
+  fitreg3_sim_list[[i]] <- fitreg3_sim_i
+  par_consol_sim_list[[i]] <- par_consol_sim_i
+}
+proc.time() - ptm
+
+
+# saveRDS(par_consol_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/par_consol_sim_list_50.rds")
+# saveRDS(consol_data_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/consol_data_sim_list_50.rds")
+# saveRDS(fitreg1_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/fitreg1_sim_list_50.rds")
+# saveRDS(fitreg2_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/fitreg2_sim_list_50.rds")
+# saveRDS(fitreg3_sim_list, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/fitreg3_sim_list_50.rds")
+
+
+
+## save to compare
+# test_par <- par_consol_sim_i
+# View(par_consol_sim_list[[1]])
