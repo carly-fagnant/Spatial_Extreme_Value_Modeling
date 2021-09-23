@@ -1509,6 +1509,311 @@ ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) +
 
 
 
+# Playing around with different colors and lines --------------------------
+
+library(RColorBrewer)
+display.brewer.pal(n = 9, name = 'Blues')
+display.brewer.pal(n = 9, name = 'Reds')
+display.brewer.pal(n = 9, name = 'Greens')
+region_cols <- c(brewer.pal(n = 9, name = 'Blues')[7], 
+                 brewer.pal(n = 9, name = 'Reds')[7], 
+                 brewer.pal(n = 9, name = 'Greens')[7])
+
+# blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(4,6,8)]
+# blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+# blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(6,7,8)]
+
+# ggplot(data=reg1, aes(x=c(1960, 1990, 2020))) + 
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year"), linetype=4) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.07, fill=blue_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year"), linetype=2) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.07, fill=blue_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year"), linetype=1) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.15, fill=blue_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 1") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) 
+
+# blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+# ggplot(data=reg1, aes(x=c(1960, 1990, 2020))) + 
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=blue_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.13, fill=blue_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.18, fill=blue_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 1") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# red_cols <- brewer.pal(n = 9, name = 'Reds')[c(5,7,9)]
+# # red_cols <- brewer.pal(n = 9, name = 'Reds')[c(6,7,8)]
+# ggplot(data=reg2, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=red_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.13, fill=red_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.18, fill=red_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 2") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# green_cols <- brewer.pal(n = 9, name = 'Greens')[c(5,7,9)]
+# # green_cols <- brewer.pal(n = 9, name = 'Greens')[c(6,7,8)]
+# ggplot(data=reg3, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=green_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.13, fill=green_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.18, fill=green_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 3") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+
+##############################################
+
+
+# blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+# ggplot(data=reg1_krig, aes(x=c(1960, 1990, 2020))) + 
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=blue_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=blue_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=blue_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 1") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# red_cols <- brewer.pal(n = 9, name = 'Reds')[c(5,7,9)]
+# # red_cols <- brewer.pal(n = 9, name = 'Reds')[c(6,7,8)]
+# ggplot(data=reg2_krig, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=red_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=red_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=red_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 2") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# green_cols <- brewer.pal(n = 9, name = 'Greens')[c(5,7,9)]
+# # green_cols <- brewer.pal(n = 9, name = 'Greens')[c(6,7,8)]
+# ggplot(data=reg3_krig, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=green_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=green_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=green_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 3") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+##############################################
+# PARE Model
+blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+red_cols <- brewer.pal(n = 9, name = 'Reds')[c(5,7,9)]
+green_cols <- brewer.pal(n = 9, name = 'Greens')[c(5,7,9)]
+
+ggplot(data=reg1, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=blue_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=blue_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=blue_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+ggplot(data=reg2, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=red_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=red_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=red_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+ggplot(data=reg3, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=green_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=green_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=green_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - PARE Model - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+##############################################
+# Block Kriging
+blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+red_cols <- brewer.pal(n = 9, name = 'Reds')[c(5,7,9)]
+green_cols <- brewer.pal(n = 9, name = 'Greens')[c(5,7,9)]
+
+ggplot(data=reg1_krig, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=blue_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=blue_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=blue_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+ggplot(data=reg2_krig, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=red_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=red_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=red_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+ggplot(data=reg3_krig, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=green_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=green_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=green_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Block Kriging - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+##############################################
+# Regional Max
+blue_cols <- brewer.pal(n = 9, name = 'Blues')[c(5,7,9)]
+red_cols <- brewer.pal(n = 9, name = 'Reds')[c(5,7,9)]
+green_cols <- brewer.pal(n = 9, name = 'Greens')[c(5,7,9)]
+
+# ggplot(data=reg1_consol, aes(x=c(1960, 1990, 2020))) + 
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=blue_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=blue_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=blue_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 1") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# ggplot(data=reg2_consol, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=red_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=red_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=red_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 2") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+# 
+# 
+# ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) +
+#   coord_cartesian(ylim = c(3, 41.5)) +
+#   geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.1, fill=green_cols[3]) +
+#   geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.15, fill=green_cols[2]) +
+#   geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=green_cols[1]) +
+#   labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 3") +
+#   scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+#   scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+#   guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+#          colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+######
+ggplot(data=reg1_consol, aes(x=c(1960, 1990, 2020))) + 
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=blue_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=blue_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=blue_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 1") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = blue_cols[3], '100-Year' = blue_cols[2], '25-Year' = blue_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+ggplot(data=reg2_consol, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=red_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=red_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.2, fill=red_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 2") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = red_cols[3], '100-Year' = red_cols[2], '25-Year' = red_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+ggplot(data=reg3_consol, aes(x=c(1960, 1990, 2020))) +
+  coord_cartesian(ylim = c(3, 41.5)) +
+  geom_line(aes(y=RL_500, color="500-Year", linetype="500-Year")) + geom_point(aes(y=RL_500, color="500-Year")) + geom_ribbon(aes(ymin=LB_500, ymax=UB_500), alpha=0.2, fill=green_cols[3]) +
+  geom_line(aes(y=RL_100, color="100-Year", linetype="100-Year")) + geom_point(aes(y=RL_100, color="100-Year"))+ geom_ribbon(aes(ymin=LB_100, ymax=UB_100), alpha=0.2, fill=green_cols[2]) +
+  geom_line(aes(y=RL_25, color="25-Year", linetype="25-Year")) + geom_point(aes(y=RL_25, color="25-Year")) + geom_ribbon(aes(ymin=LB_25, ymax=UB_25), alpha=0.25, fill=green_cols[1]) +
+  labs(x="Last Year of 40-Year Window", y="Return Level (in)", title="Estimated Return Levels - Regional Max - Region 3") +
+  scale_colour_manual(name = "Return Period", values = c('500-Year' = green_cols[3], '100-Year' = green_cols[2], '25-Year' = green_cols[1])) +
+  scale_linetype_manual(name = "Return Period", values = c('500-Year' = 4, '100-Year' = 2, '25-Year' = 1)) + 
+  guides(linetype=guide_legend(keywidth = 3.5, keyheight = 1),
+         colour=guide_legend(keywidth = 3.5, keyheight = 1))
+
+
+
+# Plot the data on a map --------------------------------------------------
+library(leaflet)
+region_cols
+stations_sub_load <- readRDS(file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/stations_sub.rds")
+
+
+## create numerical labels to overlay directly upon the regions
+region_labels <- data.frame(x = c(-95.8, -95.3, -95),
+                            y = c(29.9, 29.85, 29.8),
+                            num = c(1, 2, 3))
+region_labels <- region_labels %>%
+  dplyr::mutate(long = x, lat = y)
+coordinates(region_labels) <- ~long+lat
+proj4string(region_labels) <- "+proj=longlat +datum=WGS84"
+region_labels <- spTransform(region_labels, CRS(proj4string(region_labels)))
+
+regions_to_plot <- spTransform(ws_regs, CRS("+proj=longlat +datum=WGS84")) #Leaflet uses this projection
+stations_to_plot <- spTransform(stations_sub, CRS("+proj=longlat +datum=WGS84")) # projecting data
+stations_to_plot <- spTransform(stations_sub_load, CRS("+proj=longlat +datum=WGS84")) # projecting data
+
+
+## original hydroregions
+leaflet(options = leafletOptions(zoomControl = FALSE, attributionControl=FALSE)) %>%
+  addTiles() %>% 
+  setView(lng = -95.45, lat = 29.9, zoom = 9) %>%
+  addPolygons(data = regions_to_plot, opacity = .8, weight = 1.5, fillOpacity = 0.7, 
+              fillColor = region_cols, color = "black") %>%
+  addCircleMarkers(data = stations_to_plot, lat = ~ LATITUDE, lng = ~ LONGITUDE, opacity = 1,
+                   radius = 2.5, weight = 1, color = "black", fillColor = "gold", fillOpacity = 0.8) %>%
+  addLegend(colors = region_cols, labels = c("1", "2", "3"), title = "REGION",
+            opacity = 0.7, position = "bottomleft") #%>%
+# addLabelOnlyMarkers(data = region_labels, lng = ~x, lat = ~y, label =  ~as.character(num), labelOptions = 
+#                       labelOptions(noHide = T, direction = 'top', textOnly = T,textsize = "20px", opacity = 1,
+#                                    style = list('color' = 'white')))
+
+
+
 # Saving Model Fits -------------------------------------------------------------------------------
 
 # saveRDS(car_test_shape, file = "~/Documents/GitHub/Spatial_Extreme_Value_Modeling/Data/Saved_Fit_Objects/car_test_shape.rds")
